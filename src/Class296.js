@@ -121,7 +121,8 @@ export var Class296 = function () {
     var b = function () {
         var y = navigator.getGamepads();
         var x = y[0];
-        if (x !== undefined) {
+        // Note: "&& x !== null" is an addition.
+        if (x !== undefined && x !== null) {
             for (var u = 0; u < x.buttons.length; u++) {
                 var v = x.buttons[u].value;
                 if (u === m.member3512) {
@@ -130,7 +131,7 @@ export var Class296 = function () {
                     n[m.member3503] = v * m.member3505;
                 } else if (v !== j[u]) {
                     h(g(u), v);
-                    j[u] = v;
+                    j[u] = v;so
                 }
             }
             for (var t = 0; t < x.axes.length; t++) {

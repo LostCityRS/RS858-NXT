@@ -656,8 +656,9 @@ export var Class815 = function () {
             }
         }
         if (A !== undefined) {
-            window.onbeforeunload = null;
-            window.location = A;
+            // Note: The 2 lines below were commented to prevent redirection when an error occurs.
+            // window.onbeforeunload = null;
+            // window.location = A;
         }
     };
     return n;

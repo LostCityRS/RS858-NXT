@@ -252,6 +252,10 @@ export var Class159 = function (m) {
                                 ae.member1664 = ac.member608();
                             }
                             ae.member1651 = ac.member1078() - 1;
+                            // Note: The below check and its content is an addition.
+                            if (ae.member1661) {
+                                ac.member1078()
+                            }
                             if (ae.member1651 !== -1) {
                                 var Z = ac.member609();
                                 ae.member1598 = Class128.getByID(Z >> 2);

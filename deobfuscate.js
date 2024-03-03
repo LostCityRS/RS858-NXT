@@ -72,6 +72,29 @@ function compare(a, b, classNamesA, classNamesB, matches) {
     return true
 }
 
+// replace rsa key
+for (let scriptName of scripts.keys()) {
+    estraverse.traverse(scripts.get(scriptName), {
+        leave: node => {
+            if (node.type === "Literal" && node.value === "d5a49df7082f4b86850cbf20fee32bf72011ebf3361dd89a7d5714ac40dcfb2e4eef47f09a5e5c9bd84c204656ca4f4e392d37418f341ed20ae43f2e125bcaf4222b08ac7353a75ad57ecce3ae2f43238f95b6f89e13b582b039c9cbc7c1bfab35f397581b9ede95d6c1aa910968ac55b820a1c73101dbfff7fdff0d19142d65") {
+                node.value = "9213f2a0dfb05a12aad1c715e47bf8a6dbcd7fa8ccb510c7c6bb297e7f1b0e85ec557a1eec69748e8cd0657191c4e451c710d0af84dbf11c9df9b06bb48337342625953f8eff3991bb8a80e9d416933087fca0bf53d3693a26c8f0b0dad4b7b67a20e65240e1c93dfafe6033a78ea0c450d220372dc499a95b65dca5c6db060b";
+            }
+        }
+    })
+}
+
+// replace script opcodes
+let opcodeIndex = 0
+let opcodes = JSON.parse(fs.readFileSync("opcodes.json", {encoding: "utf8", flag: "r"}))
+
+estraverse.traverse(scripts.get("bootstrap"), {
+    leave: node => {
+        if (node.type === "Property" && node.key.type === "Identifier" && node.key.name === "_qwe") {
+            node.value.value = opcodes[opcodeIndex++]
+        }
+    }
+})
+
 // collect class names
 let allClassNames = new Map()
 
@@ -325,17 +348,6 @@ if (false) for (let scriptName of scripts.keys()) {
                 if (mapping.has(name)) {
                     node.name = mapping.get(name)
                 }
-            }
-        }
-    })
-}
-
-// replace rsa key
-for (let scriptName of scripts.keys()) {
-    estraverse.traverse(scripts.get(scriptName), {
-        leave: node => {
-            if (node.type === "Literal" && node.value === "d5a49df7082f4b86850cbf20fee32bf72011ebf3361dd89a7d5714ac40dcfb2e4eef47f09a5e5c9bd84c204656ca4f4e392d37418f341ed20ae43f2e125bcaf4222b08ac7353a75ad57ecce3ae2f43238f95b6f89e13b582b039c9cbc7c1bfab35f397581b9ede95d6c1aa910968ac55b820a1c73101dbfff7fdff0d19142d65") {
-                node.value = "9213f2a0dfb05a12aad1c715e47bf8a6dbcd7fa8ccb510c7c6bb297e7f1b0e85ec557a1eec69748e8cd0657191c4e451c710d0af84dbf11c9df9b06bb48337342625953f8eff3991bb8a80e9d416933087fca0bf53d3693a26c8f0b0dad4b7b67a20e65240e1c93dfafe6033a78ea0c450d220372dc499a95b65dca5c6db060b";
             }
         }
     })

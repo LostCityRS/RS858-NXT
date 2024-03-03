@@ -18,30 +18,41 @@ for (let [script, names] of Object.entries(obfToInt)) {
 
 let result = {}
 
-function generate(obfScriptName, obfClassName, obf, named) {
+function generate(obfScriptName, obfClassName, obf, named, declarationCounts) {
     if (obf instanceof acorn.Node && named instanceof acorn.Node) {
         if (obf.type === named.type && lodash.isEqual(Object.keys(obf), Object.keys(named))) {
             if (obf.type === "Identifier") {
-
                 if (obf.name.startsWith("member") && !named.name.startsWith("member")) {
                     result[intToObf.get(obf.name)] = named.name
                 } else if (obf.name.startsWith("Class") && !named.name.startsWith("Class")) {
                     result[intToObf.get(obf.name)] = named.name
                 } else if (obf.name.length <= 2 && named.name.length > 2) {
-                    result[`${obfClassName}.${obf.name}`] = named.name
+                    result[`${obfClassName}.${obf.name}.${declarationCounts.get(obf.name) ?? 0}`] = named.name
+                }
+            }
+
+            if (obf.type === "VariableDeclaration") {
+                for (let declaration of obf.declarations) {
+                    declarationCounts.set(declaration.id.name, (declarationCounts.get(declaration.id.name) ?? 0) + 1)
+                }
+            }
+
+            if (obf.type === "FunctionDeclaration" || obf.type === "FunctionExpression") {
+                for (let param of obf.params) {
+                    declarationCounts.set(param.name, (declarationCounts.get(param.name) ?? 0) + 1)
                 }
             }
 
             for (let key in obf) {
                 if (key !== "start" && key !== "end") {
-                    generate(obfScriptName, obfClassName, obf[key], named[key], result)
+                    generate(obfScriptName, obfClassName, obf[key], named[key], declarationCounts)
                 }
             }
         }
     } else if (obf instanceof Array && named instanceof Array) {
         if (obf.length === named.length) {
             for (let i in obf) {
-                generate(obfScriptName, obfClassName, obf[i], named[i], result)
+                generate(obfScriptName, obfClassName, obf[i], named[i], declarationCounts)
             }
         }
     }
@@ -66,7 +77,7 @@ for (let scriptName of fs.readdirSync("src")) {
 }
 
 for (let scriptName of obfScripts.keys()) {
-    generate(intToObfScript.get(scriptName), intToObf.get(scriptName), obfScripts.get(scriptName), namedScripts.get(scriptName))
+    generate(intToObfScript.get(scriptName), intToObf.get(scriptName), obfScripts.get(scriptName), namedScripts.get(scriptName), new Map())
 }
 
-fs.writeFileSync("mappings.json", JSON.stringify(result, Object.keys(result).sort(), 2), { encoding: "utf8", flag: "w" });
+fs.writeFileSync("mappings.json", JSON.stringify(result, Object.keys(result).sort(), 2), {encoding: "utf8", flag: "w"});

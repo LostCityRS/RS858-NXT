@@ -379,8 +379,23 @@ for (let [script, names] of Object.entries(obfToInt)) {
 let names = JSON.parse(fs.readFileSync(`mappings.json`, {encoding: 'utf8', flag: 'r'}))
 
 for (let scriptName of scripts.keys()) {
+    let declarationCounts = new Map()
+
     estraverse.traverse(scripts.get(scriptName), {
-        leave: node => {
+        enter: node => {
+            if (node.type === "VariableDeclaration") {
+                for (let declaration of node.declarations) {
+                    let name = declaration.id.name
+                    declarationCounts.set(name, (declarationCounts.get(name) ?? 0) + 1)
+                }
+            }
+
+            if (node.type === "FunctionDeclaration" || node.type === "FunctionExpression") {
+                for (let param of node.params) {
+                    declarationCounts.set(param.name, (declarationCounts.get(param.name) ?? 0) + 1)
+                }
+            }
+
             if (node.type === "Identifier") {
                 let rename = null
 
@@ -389,7 +404,7 @@ for (let scriptName of scripts.keys()) {
                 } else if (node.name.startsWith("Class")) {
                     rename = names[intToObf.get(node.name)]
                 } else if (node.name.length <= 2) {
-                    rename = names[`${intToObf.get(scriptName)}.${node.name}`]
+                    rename = names[`${intToObf.get(scriptName)}.${node.name}.${declarationCounts.get(node.name) ?? 0}`]
                 }
 
                 if (rename !== null && rename !== undefined) {

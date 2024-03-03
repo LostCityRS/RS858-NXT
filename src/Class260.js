@@ -53,10 +53,10 @@ export var Class260 = function () {
             g = t;
         };
         var n;
-        h.member3018 = function () {
+        h.getTeam = function () {
             return n;
         };
-        h.member3019 = function (t) {
+        h.setTeam = function (t) {
             n = t;
         };
         var m;
@@ -79,12 +79,12 @@ export var Class260 = function () {
             m = Class251();
         };
         var c = function (y, A) {
-            r = y.member1089();
-            var u = y.member609();
+            r = y.gjstr();
+            var u = y.g1();
             q = (u & a) !== 0;
             j = (u & b) !== 0;
             k = new Array(A.member3024().member2995());
-            var v = y.member609();
+            var v = y.g1();
             if (v > k.length) {
                 throw new Error('1585 ' + v + '1585 ' + k.length);
             }
@@ -95,27 +95,27 @@ export var Class260 = function () {
                 });
                 k[t] = z;
                 if (t < v) {
-                    z.member3002(y.member1073());
+                    z.member3002(y.g4());
                 } else {
                     z.member3002(0);
                 }
                 z.member3005(z.member3006());
             }
             o = Class251();
-            var B = y.member608();
+            var B = y.g2();
             if (B !== 0) {
                 for (var t = 0; t < B; t++) {
-                    var x = A.member3025().member3026(y);
+                    var x = A.getVarPlayerTypeList().member3026(y);
                     o.member2947(x.id, x.id);
                 }
             }
-            i = y.member608();
+            i = y.g2();
             if (i === 65535) {
                 i = -1;
             }
-            e = y.member609();
-            g = y.member609();
-            n = y.member609();
+            e = y.g1();
+            g = y.g1();
+            n = y.g1();
         };
         if (d !== undefined && s !== undefined) {
             c(d, s);

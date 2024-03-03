@@ -17,7 +17,7 @@ export var Class403 = function () {
     a.prototype.member992 = function () {
         return this.member4129;
     };
-    a.prototype.member993 = function () {
+    a.prototype.getDamageColour = function () {
         return this.member4639;
     };
     a.prototype.member4646 = function () {

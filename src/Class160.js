@@ -33,7 +33,7 @@ export var Class160 = function () {
     a.prototype.member682 = function () {
         return this.member625;
     };
-    a.prototype.member701 = function () {
+    a.prototype.getMaterial = function () {
         return this.member651;
     };
     a.prototype.member1680 = function () {

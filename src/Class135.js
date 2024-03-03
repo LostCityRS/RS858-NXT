@@ -9,7 +9,7 @@ export var Class135 = function () {
         var c = 15000;
         var i;
         var s;
-        t.member444 = function () {
+        t.getID = function () {
             return s;
         };
         var o = {};

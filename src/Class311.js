@@ -88,11 +88,11 @@ export var Class311 = function () {
         var i = 3000;
         var h = 0;
         var d = 1;
-        B.member2703 = function () {
+        B.getPriority = function () {
             var M = -1;
             for (var J = 0; J < n.length; J++) {
                 var L = n[J];
-                var K = L.member2703();
+                var K = L.getPriority();
                 if (K > M) {
                     M = K;
                 }

@@ -11,11 +11,11 @@ export var Class336 = function () {
         var o = {};
         var s;
         var k;
-        var u = member47;
+        var u = NULL;
         var n = '1.0';
         var r = 'RuneScape Cache';
         var v = false;
-        o.member3590 = function () {
+        o.readyanim = function () {
             return v;
         };
         var m = 'WebSQL';

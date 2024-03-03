@@ -1,7 +1,7 @@
 export var Class482 = function (d) {
     var e = {};
     var h;
-    e.member444 = function () {
+    e.getID = function () {
         return h;
     };
     var g;

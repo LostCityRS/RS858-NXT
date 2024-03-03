@@ -12,11 +12,11 @@ export var Class523 = function () {
     b.member25 = function (e) {
         a = e;
         c = {
-            member3025: function () {
-                return a.member2970.member3025();
+            getVarPlayerTypeList: function () {
+                return a.member2970.getVarPlayerTypeList();
             },
-            member8433: function () {
-                return a.member2970.member8433();
+            getVarPlayerGroupTypeList: function () {
+                return a.member2970.getVarPlayerGroupTypeList();
             },
             member3024: function () {
                 return a.member6116.member3024();
@@ -51,18 +51,18 @@ export var Class523 = function () {
     };
     Class433.member6407.member6428 = function (k, n) {
         a.member7187.member8447();
-        var g = k.member1047();
-        var e = k.member608();
-        var m = k.member609() === 1;
+        var g = k.getPos();
+        var e = k.g2();
+        var m = k.g1() === 1;
         var h = d.member8419(e);
         var i = h.member3020();
         if (i === undefined || m) {
             h.member3023();
             i = h.member3020();
         }
-        while (n - (k.member1047() - g) > 0) {
-            var j = a.member2970.member3025().member3026(k);
-            if (j === member47) {
+        while (n - (k.getPos() - g) > 0) {
+            var j = a.member2970.getVarPlayerTypeList().member3026(k);
+            if (j === NULL) {
                 return true;
             }
             i.member2947(j.id, j.value);

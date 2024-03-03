@@ -6,7 +6,7 @@ export var Class600 = function () {
     };
     member45(Class598, a);
     a.prototype.member6811 = function (e, c, b, d) {
-        Class599.member9091(b, d, this, this.member993() % Class599.member9089(), c.member433.member3640);
+        Class599.member9091(b, d, this, this.getDamageColour() % Class599.member9089(), c.member433.member3640);
     };
     return a;
 }();

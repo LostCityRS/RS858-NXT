@@ -1,10 +1,10 @@
-export var Class759 = function (h) {
+export var WaterType = function (h) {
     var I = {};
     var a;
     var c = -1;
-    if (h.member625 !== undefined && h.member2896 !== undefined) {
+    if (h.member625 !== undefined && h.myList !== undefined) {
         c = h.member625;
-        a = h.member2896;
+        a = h.myList;
     } else {
         throw new Error('1706 ');
     }
@@ -169,7 +169,7 @@ export var Class759 = function (h) {
     I.member681 = P;
     var b = function (R) {
         while (true) {
-            var Q = R.member609();
+            var Q = R.g1();
             if (Q === undefined) {
                 throw new Error('1707 ');
                 break;
@@ -183,70 +183,70 @@ export var Class759 = function (h) {
     I.decode = b;
     var m = function (R, Q) {
         if (Q === 1) {
-            O = R.member608();
+            O = R.g2();
         } else if (Q === 2) {
-            L = R.member608() / 256;
+            L = R.g2() / 256;
         } else if (Q === 3) {
-            K = R.member608();
+            K = R.g2();
         } else if (Q === 4) {
-            H = R.member608() / 256;
+            H = R.g2() / 256;
         } else if (Q === 5) {
-            o = R.member608() / 256;
+            o = R.g2() / 256;
         } else if (Q === 6) {
             E = R.g3();
         } else if (Q === 7) {
-            D = R.member608();
-            y = R.member608();
+            D = R.g2();
+            y = R.g2();
         } else if (Q === 8) {
-            B = R.member608();
+            B = R.g2();
         } else if (Q === 9) {
-            F = R.member608();
+            F = R.g2();
         } else if (Q === 10) {
-            g = R.member608() / 256;
+            g = R.g2() / 256;
         } else if (Q === 11) {
-            z = R.member608();
+            z = R.g2();
         } else if (Q === 12) {
-            C = R.member1073();
+            C = R.g4();
         } else if (Q === 13) {
-            x = R.member608();
+            x = R.g2();
         } else if (Q === 14) {
-            u = R.member608();
+            u = R.g2();
         } else if (Q === 15) {
-            t = R.member1073();
+            t = R.g4();
         } else if (Q === 16) {
-            A = R.member608();
+            A = R.g2();
         } else if (Q === 17) {
-            v = R.member608();
+            v = R.g2();
         } else if (Q === 18) {
-            n = R.member609() / 32;
+            n = R.g1() / 32;
         } else if (Q === 19) {
-            k = R.member609() / 32;
+            k = R.g1() / 32;
         } else if (Q === 20) {
-            j = R.member608() / 256;
+            j = R.g2() / 256;
         } else if (Q === 21) {
-            G = R.member608();
+            G = R.g2();
         } else if (Q === 22) {
-            M = R.member608();
+            M = R.g2();
         } else if (Q === 23) {
-            e = R.member609();
+            e = R.g1();
         } else if (Q === 24) {
-            d = R.member609() / 100;
+            d = R.g1() / 100;
         } else if (Q === 25) {
-            r = R.member608() / 256;
+            r = R.g2() / 256;
         } else if (Q === 26) {
             i = [
-                R.member608() / 256,
-                R.member608() / 256,
-                R.member608() / 256
+                R.g2() / 256,
+                R.g2() / 256,
+                R.g2() / 256
             ];
         } else if (Q === 27) {
-            q = R.member608();
+            q = R.g2();
         } else if (Q === 28) {
-            s = R.member1071();
+            s = R.g2s();
         } else if (Q === 29) {
-            N = R.member608();
+            N = R.g2();
         } else if (Q === 30) {
-            J = R.member608();
+            J = R.g2();
         } else if (false) {
         }
     };

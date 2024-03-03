@@ -42,11 +42,11 @@ export var Class138 = function () {
     };
     var n = function (v, u, x, y) {
         if (y !== undefined) {
-            this.member1315 = y.member608();
-            this.member1316 = y.member608();
-            this.member745 = y.member608();
+            this.member1315 = y.g2();
+            this.member1316 = y.g2();
+            this.member745 = y.g2();
             this.member1282 = 0;
-            this.member1317 = y.member609() === 1;
+            this.member1317 = y.g1() === 1;
         } else {
             this.member1315 = v;
             this.member1316 = u;
@@ -56,12 +56,12 @@ export var Class138 = function () {
         }
     };
     n.prototype.member1318 = function (u) {
-        u.member1054(this.member1315);
-        u.member1054(this.member1316);
-        u.member1054(this.member745);
-        u.member1051(this.member1317 ? 1 : 0);
+        u.p2(this.member1315);
+        u.p2(this.member1316);
+        u.p2(this.member745);
+        u.p1(this.member1317 ? 1 : 0);
     };
-    n.prototype.member1319 = function () {
+    n.prototype.clone = function () {
         return {
             member1315: this.member1315,
             member1316: this.member1316,
@@ -84,7 +84,7 @@ export var Class138 = function () {
             return ad;
         };
         var ac;
-        ai.member444 = function () {
+        ai.getID = function () {
             return ac;
         };
         var x = false;
@@ -113,52 +113,52 @@ export var Class138 = function () {
                 var av = {};
                 for (var at = 0; at < ax.length; at++) {
                     var aw = X[ax[at].member1325];
-                    av[ax[at].member1325] = aw.member1319();
+                    av[ax[at].member1325] = aw.clone();
                 }
                 if (X[-1] !== undefined) {
-                    av[-1] = X[-1].member1319();
+                    av[-1] = X[-1].clone();
                 }
                 au.member1324 = av;
             }
             return au;
         };
         ai.member1326 = function (av, az) {
-            av.member1054(ac);
-            av.member1051(x ? 1 : 0);
-            var ay = av.member1047();
-            av.member607(ay + 8);
+            av.p2(ac);
+            av.p1(x ? 1 : 0);
+            var ay = av.getPos();
+            av.setPos(ay + 8);
             var ax = 0, aB = 0;
             if (az === undefined) {
                 for (var aA = 0; aA < Z; aA++) {
                     var au = aA * t;
                     if (Y[au + b] !== c) {
-                        av.member1056(aA);
-                        av.member1056(Y[au + b]);
-                        av.member1054(Y[au + q]);
-                        av.member1051(Y[au + m]);
+                        av.p4(aA);
+                        av.p4(Y[au + b]);
+                        av.p2(Y[au + q]);
+                        av.p1(Y[au + m]);
                         ax++;
                     }
                 }
                 for (var aC in X) {
-                    av.member1056(aC);
+                    av.p4(aC);
                     X[aC].member1318(av);
                     aB++;
                 }
             } else {
                 for (var aw = 0; aw < az.length; aw++) {
-                    av.member1056(az[aw].member1325);
+                    av.p4(az[aw].member1325);
                     X[az[aw].member1325].member1318(av);
                     aB++;
                 }
-                av.member1056(-1);
+                av.p4(-1);
                 X[-1].member1318(av);
                 aB++;
             }
-            var at = av.member1047();
-            av.member607(ay);
-            av.member1056(ax);
-            av.member1056(aB);
-            av.member607(at);
+            var at = av.getPos();
+            av.setPos(ay);
+            av.p4(ax);
+            av.p4(aB);
+            av.setPos(at);
         };
         ai.member1327 = function (ax, au) {
             if (au) {
@@ -392,7 +392,7 @@ export var Class138 = function () {
             }
             X[aE].member1317 = false;
             var au = an.member1345(aE, ax, x);
-            if (au === member47) {
+            if (au === NULL) {
                 if (aA && aB !== Class133.member1268) {
                     D();
                     ah(az.member1315, az.member1316, av, 1, 1, 1, 0);
@@ -525,7 +525,7 @@ export var Class138 = function () {
                 for (var ax in W) {
                     var aB = parseInt(ax);
                     var au = an.member1345(aB, X[aB].member745, x);
-                    if (au === member47) {
+                    if (au === NULL) {
                         ay = false;
                     } else if (au !== undefined) {
                         var at = X[aB];
@@ -658,19 +658,19 @@ export var Class138 = function () {
             X = B.member1348.member1324;
             C();
         } else if (B.member1349 !== undefined) {
-            ac = B.member1349.member608();
-            x = B.member1349.member609() === 1;
+            ac = B.member1349.g2();
+            x = B.member1349.g1() === 1;
             C();
-            var y = B.member1349.member1073();
-            var M = B.member1349.member1073();
+            var y = B.member1349.g4();
+            var M = B.member1349.g4();
             for (var ab = 0; ab < y; y++) {
-                var ab = B.member1349.member1073();
-                Y[ab * t + b] = B.member1349.member1074();
-                Y[ab * t + q] = B.member1349.member608();
-                Y[ab * t + m] = B.member1349.member609();
+                var ab = B.member1349.g4();
+                Y[ab * t + b] = B.member1349.g4s();
+                Y[ab * t + q] = B.member1349.g2();
+                Y[ab * t + m] = B.member1349.g1();
             }
             for (var E = 0; E < M; E++) {
-                var ae = B.member1349.member1074();
+                var ae = B.member1349.g4s();
                 X[ae] = new n(undefined, undefined, undefined, B.member1349);
             }
         } else {

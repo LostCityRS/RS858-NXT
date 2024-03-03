@@ -34,7 +34,7 @@ export var Class248 = function () {
     b.prototype.member2877 = function (d) {
         this.priority = d;
     };
-    b.prototype.member2703 = function () {
+    b.prototype.getPriority = function () {
         return this.priority;
     };
     b.prototype.member2878 = function (e, d) {

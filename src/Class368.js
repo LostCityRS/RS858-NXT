@@ -4,7 +4,7 @@ import { Class367 } from 'Class367.js';
 import { Class230 } from 'Class230.js';
 import { Class293 } from 'Class293.js';
 import { Class342 } from 'Class342.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class365 } from 'Class365.js';
 import { Class275 } from 'Class275.js';
 import { Class295 } from 'Class295.js';
@@ -14,7 +14,7 @@ import { Class343 } from 'Class343.js';
 import { Class336 } from 'Class336.js';
 import { Class355 } from 'Class355.js';
 import { Class366 } from 'Class366.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 export var Class368 = function () {
     var aa = {};
     var ai = false;
@@ -61,9 +61,9 @@ export var Class368 = function () {
         return F + (D === undefined ? '' : ', ' + D.member3266() + ', ' + P.member3266() + ', ' + af.member3266());
     };
     var z = false;
-    var v = member47;
+    var v = NULL;
     var O = false;
-    var j = member47;
+    var j = NULL;
     var L = false;
     var e = 0;
     var B;
@@ -73,8 +73,8 @@ export var Class368 = function () {
     var c = 1;
     var Q = 2;
     var U = 3;
-    var i = member47;
-    var M = member47;
+    var i = NULL;
+    var M = NULL;
     var N = function (an) {
         try {
             var aw = an.data;
@@ -137,7 +137,7 @@ export var Class368 = function () {
                         member2774: ap.member2774,
                         member3877: ap.member3877,
                         member3878: ap.member3878,
-                        member2698: Class124(undefined, aw.member2782)
+                        packet: Packet(undefined, aw.member2782)
                     });
                     D.member3256(n.getByID(aw.member2693), J, aw.member2782, ap.member2774, ap.member3878);
                     i[aw.member2693] = U;
@@ -149,7 +149,7 @@ export var Class368 = function () {
                     v = Class365({
                         member3983: null,
                         member3984: null,
-                        member2698: Class124(undefined, aw.member2780)
+                        packet: Packet(undefined, aw.member2780)
                     });
                     try {
                         aj();
@@ -157,7 +157,7 @@ export var Class368 = function () {
                         if (++e === u) {
                             throw ay;
                         }
-                        v = member47;
+                        v = NULL;
                         z = false;
                         if (false) {
                         }
@@ -170,7 +170,7 @@ export var Class368 = function () {
                     j = Class365({
                         member3983: null,
                         member3984: null,
-                        member2698: Class124(undefined, aw.member2780)
+                        packet: Packet(undefined, aw.member2780)
                     });
                     try {
                         K();
@@ -178,7 +178,7 @@ export var Class368 = function () {
                         if (++e === u) {
                             throw ay;
                         }
-                        j = member47;
+                        j = NULL;
                         O = false;
                         if (false) {
                         }
@@ -200,7 +200,7 @@ export var Class368 = function () {
     };
     var o = function () {
         for (var ao = n.member776(); ao !== undefined; ao = n.member777()) {
-            var ap = ao.member444();
+            var ap = ao.getID();
             if (ao.member783() && j.member3982(ap) !== undefined && v.member3982(ap) !== undefined) {
                 var aq = v.member3982(ap);
                 var an = j.member3982(ap);
@@ -217,7 +217,7 @@ export var Class368 = function () {
         if (false) {
         }
         for (var aq = n.member776(); aq !== undefined; aq = n.member777()) {
-            var at = aq.member444();
+            var at = aq.getID();
             if (v.member3982(at) !== undefined) {
                 aq.member786(v.member3982(at).member3985);
                 aq.member788(v.member3982(at).member3986);
@@ -229,7 +229,7 @@ export var Class368 = function () {
             M = new Array(ar);
             for (var an = 0; an < ar; an++) {
                 i[an] = S;
-                M[an] = member47;
+                M[an] = NULL;
             }
             P = Class275({
                 member895: ag,
@@ -264,24 +264,24 @@ export var Class368 = function () {
             });
         } else {
             for (var an = 0; an < ar; an++) {
-                if (M[an] !== member47) {
+                if (M[an] !== NULL) {
                     var ao = v.member3982(an);
                     if (M[an].member3895() !== ao.member3878 || M[an].member3897() !== ao.member2774) {
-                        M[an] = member47;
+                        M[an] = NULL;
                         i[an] = S;
                     }
                 }
             }
             q();
         }
-        j = member47;
+        j = NULL;
         O = false;
     };
     var I = function () {
         throw new Error('1630 ', arguments);
     };
     var m = function (an) {
-        if (n.getByID(an.member444()) !== an) {
+        if (n.getByID(an.getID()) !== an) {
             throw new Error('1631 ');
         }
     };
@@ -330,15 +330,15 @@ export var Class368 = function () {
     };
     var q = aa.member773;
     aa.member1437 = function (ao) {
-        if (v === member47) {
+        if (v === NULL) {
             return false;
         } else {
             if (ao === undefined) {
                 return true;
             }
             m(ao);
-            var aq = ao.member444();
-            if (M[aq] !== member47) {
+            var aq = ao.getID();
+            if (M[aq] !== NULL) {
                 return true;
             } else {
                 var an = i[aq];
@@ -360,9 +360,9 @@ export var Class368 = function () {
     var G = aa.member1437;
     aa.member1439 = function (an) {
         if (!G(an)) {
-            return member47;
+            return NULL;
         } else {
-            return M[an.member444()];
+            return M[an.getID()];
         }
     };
     aa.member4001 = function () {
@@ -372,7 +372,7 @@ export var Class368 = function () {
         if (!G(ap)) {
             return false;
         }
-        var au = ap.member444();
+        var au = ap.getID();
         var aq = M[au];
         if (!aq.member3903(at)) {
             return undefined;
@@ -392,28 +392,28 @@ export var Class368 = function () {
     var C = aa.member1551;
     aa.member4002 = function (ao, aq) {
         if (!G(ao)) {
-            return member47;
+            return NULL;
         }
-        var ar = ao.member444();
+        var ar = ao.getID();
         var ap = M[ar];
         if (!ap.member3903(aq)) {
             return undefined;
         }
         if (!s()) {
-            return member47;
+            return NULL;
         }
         var an = D.member3994(ao, aq, ap);
         if (an === Class366.member3990) {
-            return member47;
+            return NULL;
         }
         if (an === Class366.member3988) {
             return true;
         }
         if (A(ao, aq, Class93.member797)) {
-            return member47;
+            return NULL;
         }
         ac(ao, aq, 0, Class93.member797, false);
-        return member47;
+        return NULL;
     };
     aa.member1438 = function (ao, aq, an, ap) {
         return C(ao, aq, 0, an, ap);
@@ -421,9 +421,9 @@ export var Class368 = function () {
     var y = aa.member1438;
     aa.getFile = function (ao, aw, at, av, au, an) {
         if (!G(ao)) {
-            return member47;
+            return NULL;
         }
-        var ap = ao.member444();
+        var ap = ao.getID();
         var aq = M[ap];
         if (!aq.member3903(aw)) {
             return undefined;
@@ -433,24 +433,24 @@ export var Class368 = function () {
         }
         var ar = ae(ao).getFile(ap, aw, at, aq);
         if (ar !== undefined) {
-            if (av === Class96.member840) {
+            if (av === Priority.member840) {
                 return ar;
-            } else if (av === Class96.member2828 || av === Class96.member841) {
-                ar = Class124(undefined, ar.getData().slice(0));
+            } else if (av === Priority.member2828 || av === Priority.member841) {
+                ar = Packet(undefined, ar.getData().slice(0));
                 return ar;
             } else {
                 throw new Error('1633 ');
             }
         }
         if (A(ao, aw, au)) {
-            return member47;
+            return NULL;
         }
         ac(ao, aw, at, au, an);
-        return member47;
+        return NULL;
     };
     var ad = aa.getFile;
     var r = function (ao, aw, an) {
-        var ap = ao.member444();
+        var ap = ao.getID();
         if (aw === J) {
             for (var au in an) {
                 var ax = parseInt(au);
@@ -461,7 +461,7 @@ export var Class368 = function () {
                         member2774: aq.member2774,
                         member3877: aq.member3877,
                         member3878: aq.member3878,
-                        member2698: Class124(undefined, av.data)
+                        packet: Packet(undefined, av.data)
                     });
                     i[ap] = U;
                     break;
@@ -482,7 +482,7 @@ export var Class368 = function () {
         delete ah[ap][aw];
     };
     var T = function (an, ao) {
-        var ap = an.member444();
+        var ap = an.getID();
         if (ao === J) {
             i[ap] = Q;
             g.postMessage({
@@ -500,7 +500,7 @@ export var Class368 = function () {
         if (!s()) {
             return true;
         }
-        var at = ap.member444();
+        var at = ap.getID();
         var av;
         if (aw === J) {
             av = {
@@ -558,7 +558,7 @@ export var Class368 = function () {
         if (ap.member783() && !ap.member790()) {
             return;
         }
-        var aq = ap.member444();
+        var aq = ap.getID();
         var au = h[aq][ax];
         if (au !== undefined) {
             if (au.member4003) {
@@ -593,11 +593,11 @@ export var Class368 = function () {
             throw B;
         }
         E++;
-        if (v === member47 && !z) {
+        if (v === NULL && !z) {
             z = true;
             g.postMessage({ member59: Class230.member2765 });
         }
-        if (L && v !== member47 && j === member47 && !O) {
+        if (L && v !== NULL && j === NULL && !O) {
             O = true;
             g.postMessage({ member59: Class230.member2768 });
         }
@@ -627,11 +627,11 @@ export var Class368 = function () {
     };
     var x = aa.member78;
     aa.member4005 = function () {
-        v = member47;
+        v = NULL;
         z = false;
     };
     aa.member4006 = function () {
-        j = member47;
+        j = NULL;
         O = false;
     };
     aa.member4007 = function () {
@@ -644,7 +644,7 @@ export var Class368 = function () {
         if (D === undefined) {
             return false;
         } else {
-            return D.member3590();
+            return D.readyanim();
         }
     };
     var s = aa.member4008;

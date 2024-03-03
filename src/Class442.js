@@ -10,7 +10,7 @@ export var Class442 = function () {
     });
     var c = function (h, g, o, q, i, j, k, d, n, e, m) {
         this.member6674();
-        this.member2896 = h;
+        this.myList = h;
         if (g !== undefined && o !== undefined && k !== undefined && j !== undefined && d !== undefined) {
             this.member6675 = g;
             this.member6676 = o;
@@ -28,14 +28,14 @@ export var Class442 = function () {
         }
     };
     c.prototype.member6680 = function (d, g, i, h, e) {
-        this.member2896 = d;
+        this.myList = d;
         this.member6675 = g;
         this.member6676 = i;
         this.member6678 = h;
         this.member6679 = e;
     };
     c.prototype.member6681 = function () {
-        this.member2896 = undefined;
+        this.myList = undefined;
         this.member6675 = -1;
         this.member6676 = -1;
         this.member6678 = -1;
@@ -43,10 +43,10 @@ export var Class442 = function () {
         this.member6674();
     };
     c.prototype.member6682 = function () {
-        return this.member2896;
+        return this.myList;
     };
     c.prototype.member6674 = function () {
-        this.member2896 = undefined;
+        this.myList = undefined;
         this.member6675 = -1;
         this.member6676 = -1;
         this.member6679 = -1;
@@ -240,10 +240,10 @@ export var Class442 = function () {
     c.prototype.member6764 = function (d) {
         this.member6702 = d;
     };
-    c.prototype.member993 = function () {
+    c.prototype.getDamageColour = function () {
         return this.member4638;
     };
-    c.prototype.member600 = function () {
+    c.prototype.getColour = function () {
         return this.member4638 << 8 | this.alpha;
     };
     c.prototype.member4647 = function (d) {
@@ -384,23 +384,23 @@ export var Class442 = function () {
     };
     c.prototype.member6677 = function (I, h, g, d) {
         if (d === undefined) {
-            this.member6683 = I.member608();
+            this.member6683 = I.g2();
         } else {
             this.member6683 = d;
         }
-        this.member6689 = I.member1071();
-        this.member6690 = I.member1071();
-        this.member6691 = I.member608();
-        this.member6692 = I.member608();
-        this.member6687 = I.member1070();
-        this.member6688 = I.member1070();
-        this.member6685 = I.member1070();
-        this.member6686 = I.member1070();
-        this.member6678 = I.member608();
+        this.member6689 = I.g2s();
+        this.member6690 = I.g2s();
+        this.member6691 = I.g2();
+        this.member6692 = I.g2();
+        this.member6687 = I.g1s();
+        this.member6688 = I.g1s();
+        this.member6685 = I.g1s();
+        this.member6686 = I.g1s();
+        this.member6678 = I.g2();
         if (this.member6678 === 65535) {
             this.member6678 = -1;
         }
-        var j = I.member609();
+        var j = I.g1();
         this.member4149 = (j & 1) !== 0;
         if (h >= 0) {
             this.member6702 = (j & 2) !== 0;
@@ -412,7 +412,7 @@ export var Class442 = function () {
             this.member6702 = D.member6702;
         }
         var t = I.g3();
-        var F = I.member609();
+        var F = I.g1();
         if (F !== 0) {
             var E = false;
             var m = Class439();
@@ -422,72 +422,72 @@ export var Class442 = function () {
             var i = m.member6655();
             while (F !== 0) {
                 var q = (F >> 4) - 1;
-                F = F << 8 | I.member609();
+                F = F << 8 | I.g1();
                 F &= 4095;
                 if (F === 4095) {
                     F = -1;
                 }
-                var J = I.member1070();
+                var J = I.g1s();
                 if (J !== 0) {
                     E = true;
                 }
-                var k = I.member1070();
+                var k = I.g1s();
                 o[q] = F;
                 s[q] = [J];
                 r[q] = [k];
-                F = I.member609();
+                F = I.g1();
             }
             if (E) {
                 m.member6646(true);
                 this.member6704 = m;
             }
         }
-        this.member6705 = I.member1089();
-        var C = I.member609();
+        this.member6705 = I.gjstr();
+        var C = I.g1();
         var u = C & 15, H = C >> 4;
         if (u > 0) {
             this.member6706 = new Array(u);
             for (var z = 0; z < u; z++) {
-                this.member6706[z] = I.member1089();
+                this.member6706[z] = I.gjstr();
             }
         }
         if (H > 0) {
-            var G = I.member609();
+            var G = I.g1();
             this.member6708 = new Int32Array(G + 1);
             for (z = 0; z < this.member6708.length; z++) {
                 this.member6708[z] = -1;
             }
-            this.member6708[G] = I.member608();
+            this.member6708[G] = I.g2();
         }
         if (H > 1) {
-            var G = I.member609();
-            this.member6708[G] = I.member608();
+            var G = I.g1();
+            this.member6708[G] = I.g2();
         }
-        this.member6707 = I.member1089();
+        this.member6707 = I.gjstr();
         if (this.member6707 === '') {
             this.member6707 = null;
         }
-        this.member6711 = I.member609();
-        this.member6712 = I.member609();
-        this.member6713 = I.member609();
-        this.member6715 = I.member1089();
+        this.member6711 = I.g1();
+        this.member6712 = I.g1();
+        this.member6713 = I.g1();
+        this.member6715 = I.gjstr();
         var x = -1;
         if ((t >> 11 & 127) !== 0) {
-            this.member6798 = I.member608();
+            this.member6798 = I.g2();
             if (this.member6798 === 65535) {
                 this.member6798 = -1;
             }
-            this.member6700 = I.member608();
+            this.member6700 = I.g2();
             if (this.member6700 === 65535) {
                 this.member6700 = -1;
             }
-            this.member6701 = I.member608();
+            this.member6701 = I.g2();
             if (this.member6701 === 65535) {
                 this.member6701 = -1;
             }
         }
         if (h >= 0) {
-            this.member6699 = I.member608();
+            this.member6699 = I.g2();
             if (this.member6699 == 65535) {
                 this.member6699 = -1;
             }
@@ -499,14 +499,14 @@ export var Class442 = function () {
             });
         }
         if (h >= 0) {
-            var B = I.member609();
+            var B = I.g1();
             for (var v = 0; v < B; v++) {
-                var e = I.g3(), A = I.member1074();
+                var e = I.g3(), A = I.g4s();
                 this.params[e] = A;
             }
-            var y = I.member609();
+            var y = I.g1();
             for (v = 0; v < y; v++) {
-                var e = I.g3(), A = I.member1089(true);
+                var e = I.g3(), A = I.gjstr(true);
                 this.params[e] = A;
             }
         }
@@ -545,19 +545,19 @@ export var Class442 = function () {
         }
     };
     c.prototype.member6799 = function (j, d, i, h) {
-        var o = j.member609();
+        var o = j.g1();
         if (o === 0) {
             return null;
         }
         var m = {};
         m.member6801 = new Array(o - 1);
         for (var e = 0; e < o; e++) {
-            var g = j.member609();
+            var g = j.g1();
             var k;
             if (g === 0) {
-                k = j.member1074();
+                k = j.g4s();
             } else if (g === 1) {
-                k = j.member1089();
+                k = j.gjstr();
             }
             if (e === 0) {
                 m.scriptID = k;
@@ -577,13 +577,13 @@ export var Class442 = function () {
         return m;
     };
     c.prototype.member6800 = function (g) {
-        var d = g.member609();
+        var d = g.g1();
         if (d === 0) {
             return null;
         }
         var e = new Int32Array(d);
         for (var h = 0; h < d; h++) {
-            e[h] = g.member1074();
+            e[h] = g.g4s();
         }
         return e;
     };

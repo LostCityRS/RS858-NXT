@@ -1,6 +1,6 @@
 import { Class421 } from 'Class421.js';
 import { Class654 } from 'Class654.js';
-import { Class462 } from 'Class462.js';
+import { BaseVarType } from 'Class462.js';
 export var Class656 = function () {
     var b = {};
     var a;
@@ -15,14 +15,14 @@ export var Class656 = function () {
                 var j = Class654[i];
                 var e = [];
                 for (var d = j.params.length - 1; d > -1; d--) {
-                    switch (j.params[d].member7287) {
-                    case Class462.member7281:
+                    switch (j.params[d].baseVarType) {
+                    case BaseVarType.INTEGER:
                         e.push(h.member6100[--h.member6099]);
                         break;
-                    case Class462.member7282:
+                    case BaseVarType.LONG:
                         e.push(h.member8877[--h.member8878]);
                         break;
-                    case Class462.member7283:
+                    case BaseVarType.STRING:
                         e.push(h.member6142[--h.member6143]);
                         break;
                     default:

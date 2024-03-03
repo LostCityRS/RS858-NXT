@@ -30,7 +30,7 @@ export var Class375 = function () {
         }
     };
     member45(Class372, c);
-    c.prototype.member444 = function () {
+    c.prototype.getID = function () {
         return this.member4148.member682();
     };
     c.prototype.member4151 = function () {
@@ -80,12 +80,12 @@ export var Class375 = function () {
         } else if (e === d) {
             g = this.member4085().member4114().member4163;
         }
-        g(this.member4110(), this.member4147.x, this.member4147.member756, this.member4148.member4164(this.member2520), this.member4148.member4165(this.member2520), this.member2518);
+        g(this.member4110(), this.member4147.x, this.member4147.member756, this.member4148.getWidth(this.member2520), this.member4148.getLength(this.member2520), this.member2518);
         return true;
     };
     c.prototype.member3437 = function (e, k, m, n, j) {
         if (this.member4103(e)) {
-            if (!this.member4149 && this.member4148.member2985()) {
+            if (!this.member4149 && this.member4148.getActive()) {
                 var i = this.member4095();
                 var h = this.member4085().member4166();
                 var g = this.member3320().member4167().member1812(n, m, h.width, h.height, i);

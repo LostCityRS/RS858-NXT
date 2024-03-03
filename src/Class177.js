@@ -440,11 +440,11 @@ export var Class177 = function () {
         this.member1955 = o;
         this.member1957 = new Array(P.member1982());
         P.member1983();
-        this.member1956 = N.member1078();
-        var O = N.member1078();
+        this.member1956 = N.gSmart1or2();
+        var O = N.gSmart1or2();
         var R = -1;
         if (O > 0) {
-            R = N.member1078();
+            R = N.gSmart1or2();
         }
         var Q = 0;
         for (var M = 0; M < this.member1957.length; M++) {
@@ -452,7 +452,7 @@ export var Class177 = function () {
                 H.call(this, P, M, N);
                 Q++;
                 if (Q < O) {
-                    R = N.member1078();
+                    R = N.gSmart1or2();
                 } else {
                     R = -1;
                 }
@@ -462,37 +462,37 @@ export var Class177 = function () {
         }
     };
     var H = function (O, M, T) {
-        var R = T.member1078();
+        var R = T.gSmart1or2();
         var U = new Float32Array(3);
         var P = new Float32Array(3);
         var N = new Float32Array(3);
         N[0] = N[1] = N[2] = 1;
         if ((R & d) !== 0) {
-            U[0] = T.member1080();
+            U[0] = T.gSmart1or2s();
         }
         if ((R & b) !== 0) {
-            U[1] = T.member1080();
+            U[1] = T.gSmart1or2s();
         }
         if ((R & L) !== 0) {
-            U[2] = T.member1080();
+            U[2] = T.gSmart1or2s();
         }
         if ((R & F) !== 0) {
-            P[0] = T.member1080() / (16383 / (Math.PI * 2));
+            P[0] = T.gSmart1or2s() / (16383 / (Math.PI * 2));
         }
         if ((R & D) !== 0) {
-            P[1] = T.member1080() / (16383 / (Math.PI * 2));
+            P[1] = T.gSmart1or2s() / (16383 / (Math.PI * 2));
         }
         if ((R & C) !== 0) {
-            P[2] = T.member1080() / (16383 / (Math.PI * 2));
+            P[2] = T.gSmart1or2s() / (16383 / (Math.PI * 2));
         }
         if ((R & a) !== 0) {
-            N[0] = T.member1080() / 4095;
+            N[0] = T.gSmart1or2s() / 4095;
         }
         if ((R & K) !== 0) {
-            N[1] = T.member1080() / 4095;
+            N[1] = T.gSmart1or2s() / 4095;
         }
         if ((R & I) !== 0) {
-            N[2] = T.member1080() / 4095;
+            N[2] = T.gSmart1or2s() / 4095;
         }
         var Q = O.member1984(M);
         var S = Class140.create();

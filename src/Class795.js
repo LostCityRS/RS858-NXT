@@ -1,28 +1,28 @@
-export var Class795 = function (j) {
-    var d = {};
+export var CursorType = function (j) {
+    var CursorType = {};
     var c;
     var g = -1;
-    if (j.member625 !== undefined && j.member2896 !== undefined) {
+    if (j.member625 !== undefined && j.myList !== undefined) {
         g = j.member625;
-        c = j.member2896;
+        c = j.myList;
     } else {
         throw new Error('911 ');
     }
-    var e = 0;
-    d.member8561 = function () {
-        return e;
+    var graphic = 0;
+    CursorType.getGraphic = function () {
+        return graphic;
     };
-    var i = 0;
-    d.member9256 = function () {
-        return i;
+    var hotspot_x = 0;
+    CursorType.getHotspotX = function () {
+        return hotspot_x;
     };
-    var h = 0;
-    d.member9257 = function () {
-        return h;
+    var hotspot_y = 0;
+    CursorType.getHotspotY = function () {
+        return hotspot_y;
     };
-    var b = function (m) {
+    var decode = function (m) {
         while (true) {
-            var k = m.member609();
+            var k = m.g1();
             if (k === undefined) {
                 throw new Error('912 ');
                 break;
@@ -33,16 +33,16 @@ export var Class795 = function (j) {
             a(m, k);
         }
     };
-    d.decode = b;
+    CursorType.decode = decode;
     var a = function (m, k) {
         if (k === 1) {
-            e = m.member1086();
+            graphic = m.gSmart2or4null();
         } else if (k === 2) {
-            i = m.member609();
-            h = m.member609();
+            hotspot_x = m.g1();
+            hotspot_y = m.g1();
         } else if (false) {
         }
     };
     j = undefined;
-    return d;
+    return CursorType;
 };

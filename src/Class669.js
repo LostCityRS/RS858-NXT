@@ -43,7 +43,7 @@ import { Class653 } from 'Class653.js';
 import { Class564 } from 'Class564.js';
 import { Class467 } from 'Class467.js';
 import { Class574 } from 'Class574.js';
-import { Class465 } from 'Class465.js';
+import { VarDomainType } from 'Class465.js';
 import { Class374 } from 'Class374.js';
 import { Class421 } from 'Class421.js';
 export var Class669 = function () {
@@ -227,7 +227,7 @@ export var Class669 = function () {
         if (Z === undefined) {
             return;
         }
-        if (Z === member47) {
+        if (Z === NULL) {
             K[h++] = {
                 member9756: Y,
                 member9757: U,
@@ -253,7 +253,7 @@ export var Class669 = function () {
         if (Z === undefined) {
             return;
         }
-        if (Z === member47 || L > 0) {
+        if (Z === NULL || L > 0) {
             return;
         }
         var W = e(Z);
@@ -272,11 +272,11 @@ export var Class669 = function () {
             }
             return;
         }
-        if (Y === member47 || L > 0) {
+        if (Y === NULL || L > 0) {
             return;
         }
         var W = e(Y);
-        W.member9759 = V.member444();
+        W.member9759 = V.getID();
         W.member8884 = V;
         J(Y, D, W);
     };
@@ -288,7 +288,7 @@ export var Class669 = function () {
             }
             return;
         }
-        if (X === member47 || L > 0) {
+        if (X === NULL || L > 0) {
             return;
         }
         var V = e(X);
@@ -304,7 +304,7 @@ export var Class669 = function () {
             }
             return;
         }
-        if (X === member47) {
+        if (X === NULL) {
             k[y++] = {
                 member9756: W,
                 member9757: U,
@@ -325,7 +325,7 @@ export var Class669 = function () {
             }
             return;
         }
-        if (ab === member47 || L > 0) {
+        if (ab === NULL || L > 0) {
             i[R++] = {
                 hook: ad,
                 member9755: ac
@@ -439,18 +439,18 @@ export var Class669 = function () {
         T.member7384 = U.member7399();
         T.member8879 = 0;
         T.member8888.length = 0;
-        T.member8888[Class465.member4134.serialID] = Q.member8687();
-        T.member8888[Class465.member7379.serialID] = Q.member6116.member9766();
-        T.member8888[Class465.member7380.serialID] = Q.member6116.member9605();
-        T.member8888[Class465.member7360.serialID] = Q.member8846.member8445();
+        T.member8888[VarDomainType.PLAYER.serialID] = Q.getVarValueProvider();
+        T.member8888[VarDomainType.CLIENT.serialID] = Q.member6116.member9766();
+        T.member8888[VarDomainType.CLAN.serialID] = Q.member6116.member9605();
+        T.member8888[VarDomainType.PLAYER_GROUP.serialID] = Q.member8846.member8445();
         if (T.member8882 !== undefined) {
-            T.member8888[Class465.member7381.serialID] = T.member8882;
+            T.member8888[VarDomainType.CLAN_SETTING.serialID] = T.member8882;
         }
         if (T.member8883 !== undefined) {
-            if (T.member8883.member87() === Class374.member4133) {
-                T.member8888[Class465.member4133.serialID] = T.member8883.member7792();
-            } else if (T.member8883.member87() === Class374.member4134) {
-                T.member8889[Class465.member4134.serialID] = T.member8883.member7792();
+            if (T.member8883.member87() === Class374.NPC) {
+                T.member8888[VarDomainType.NPC.serialID] = T.member8883.member7792();
+            } else if (T.member8883.member87() === Class374.PLAYER) {
+                T.member8889[VarDomainType.PLAYER.serialID] = T.member8883.member7792();
             }
         }
         if (true) {

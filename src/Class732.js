@@ -2,9 +2,9 @@ import { Class148 } from 'Class148.js';
 import { Class298 } from 'Class298.js';
 export var Class732 = function () {
     var a = function (d) {
-        if (d.position !== undefined && d.member7004 !== undefined) {
+        if (d.position !== undefined && d.graphic !== undefined) {
             this.position = d.position;
-            this.member7004 = d.member7004;
+            this.graphic = d.graphic;
             this.member3615;
         } else {
             throw new Error('1565 ');
@@ -18,7 +18,7 @@ export var Class732 = function () {
         return this.position;
     };
     a.prototype.member10118 = function () {
-        this.member3615 = Class148.member1491(this.member7004);
+        this.member3615 = Class148.member1491(this.graphic);
         return this.member3615.member1540();
     };
     a.prototype.member10119 = function () {

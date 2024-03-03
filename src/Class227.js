@@ -1,4 +1,4 @@
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class217 } from 'Class217.js';
 import { Class219 } from 'Class219.js';
 export var Class227 = function () {
@@ -13,17 +13,17 @@ export var Class227 = function () {
     var g = 3;
     d.member2749 = g;
     var b = function (m) {
-        m.member607(0);
-        var n = m.member609();
-        var k = m.member1074();
+        m.setPos(0);
+        var n = m.g1();
+        var k = m.g4s();
         if (n === c) {
             if (false) {
             }
-            var i = Class124(k);
-            i.member1067(m.getData(), m.member1047(), k);
+            var i = Packet(k);
+            i.member1067(m.getData(), m.getPos(), k);
             return i;
         } else {
-            var j = m.member1074();
+            var j = m.g4s();
             var i = new ArrayBuffer(j);
             if (n === a) {
                 if (false) {
@@ -38,7 +38,7 @@ export var Class227 = function () {
                 }
                 throw new Error('980 ');
             }
-            return Class124(undefined, i);
+            return Packet(undefined, i);
         }
     };
     d.member2691 = b;

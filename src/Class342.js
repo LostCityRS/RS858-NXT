@@ -24,18 +24,18 @@ export var Class342 = function () {
         this.member25(c);
     };
     a.prototype.member25 = function (n) {
-        if (n.member2774 !== undefined && n.member3877 !== undefined && n.member3878 !== undefined && n.member2698 !== undefined) {
+        if (n.member2774 !== undefined && n.member3877 !== undefined && n.member3878 !== undefined && n.packet !== undefined) {
             this.member2774 = n.member2774;
             this.member3877 = n.member3877;
             this.member3878 = n.member3878;
-            var e = n.member2698;
-            e.member607(0);
-            var g = e.member609();
+            var e = n.packet;
+            e.setPos(0);
+            var g = e.g1();
             if (g < b || g > b) {
                 throw new Error('1398 ' + g);
             }
-            this.member3878 = e.member1074();
-            var v = e.member609();
+            this.member3878 = e.g4s();
+            var v = e.g1();
             var h = false;
             if ((v & 1) === 1) {
                 h = true;
@@ -52,11 +52,11 @@ export var Class342 = function () {
             if ((v & 8) === 8) {
                 r = true;
             }
-            this.member3879 = e.member1085();
+            this.member3879 = e.gSmart2or4();
             var u = 0, z = 0, t = 0;
             this.member3880 = new Uint32Array(this.member3879);
             for (z = 0; z < this.member3879; z++) {
-                u += e.member1085();
+                u += e.gSmart2or4();
                 this.member3880[z] = u;
                 if (u > this.member3882) {
                     this.member3882 = u;
@@ -76,16 +76,16 @@ export var Class342 = function () {
             if (h) {
                 this.member3881 = {};
                 for (z = 0; z < this.member3879; z++) {
-                    var c = e.member1074();
+                    var c = e.g4s();
                     this.member3881[c.toString()] = this.member3880[z];
                 }
             }
             for (z = 0; z < this.member3879; z++) {
-                this.member3883[this.member3880[z]] = e.member1074();
+                this.member3883[this.member3880[z]] = e.g4s();
             }
             if (r) {
                 for (z = 0; z < this.member3879; z++) {
-                    this.member3884[this.member3880[z]] = e.member1074();
+                    this.member3884[this.member3880[z]] = e.g4s();
                 }
             }
             if (k) {
@@ -95,18 +95,18 @@ export var Class342 = function () {
                 this.member3887 = new Int32Array(o);
                 this.member3888 = new Int32Array(o);
                 for (z = 0; z < this.member3879; z++) {
-                    this.member3887[this.member3880[z]] = e.member1074();
-                    this.member3888[this.member3880[z]] = e.member1074();
+                    this.member3887[this.member3880[z]] = e.g4s();
+                    this.member3888[this.member3880[z]] = e.g4s();
                 }
             }
             for (var z = 0; z < o; z++) {
                 this.member3886[z] = -1;
             }
             for (z = 0; z < this.member3879; z++) {
-                this.member3886[this.member3880[z]] = e.member1074();
+                this.member3886[this.member3880[z]] = e.g4s();
             }
             for (z = 0; z < this.member3879; z++) {
-                this.member3889[this.member3880[z]] = e.member1085();
+                this.member3889[this.member3880[z]] = e.gSmart2or4();
             }
             for (z = 0; z < this.member3879; z++) {
                 var q = this.member3880[z], y = this.member3889[q];
@@ -114,7 +114,7 @@ export var Class342 = function () {
                 var d = new Int32Array(y);
                 var m = new Array(y);
                 for (t = 0; t < y; t++) {
-                    x += e.member1085();
+                    x += e.gSmart2or4();
                     d[t] = x;
                     m[x] = 1;
                     if (x > i) {

@@ -8,7 +8,7 @@ export var Class580 = function () {
             d = e;
             c = g;
         };
-        b.member3590 = function () {
+        b.readyanim = function () {
             return d !== undefined;
         };
         b.member4224 = function () {

@@ -29,7 +29,7 @@ export var Class546 = function () {
                 return;
             }
             var u = Class423.member6130(Class423.member6115.member325);
-            if (u === member47) {
+            if (u === NULL) {
                 return;
             }
             var x = Math.floor(g / (e * a));
@@ -37,7 +37,7 @@ export var Class546 = function () {
                 x = x + b;
             }
             var t = u[x];
-            if (t === undefined || t === member47) {
+            if (t === undefined || t === NULL) {
                 return;
             }
             var s = t.member3606.member1539();

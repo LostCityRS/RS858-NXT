@@ -8,7 +8,7 @@ import { Class470 } from 'Class470.js';
 import { Class445 } from 'Class445.js';
 import { Class474 } from 'Class474.js';
 import { Class93 } from 'Class93.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class560 } from 'Class560.js';
 export var Class561 = function () {
     var a = function (s) {
@@ -22,7 +22,7 @@ export var Class561 = function () {
             return n;
         };
         var q = null;
-        e.member7539 = function () {
+        e.getVarTypeProvider = function () {
             return q;
         };
         var c = Class105({
@@ -73,7 +73,7 @@ export var Class561 = function () {
             case Class438.member402:
                 x = Class472;
                 break;
-            case Class438.member6636:
+            case Class438.MODEL:
                 x = Class471;
                 break;
             case Class438.member6633:
@@ -108,20 +108,20 @@ export var Class561 = function () {
                     var B = {};
                     var C = new Array(z);
                     for (var F = 0; F < z; F++) {
-                        var K = t.getFile(Class95.member808, D, F, Class96.member841, Class93.member795);
+                        var K = t.getFile(Class95.member808, D, F, Priority.member841, Class93.member795);
                         if (K === undefined) {
                             continue;
                         }
-                        var E = K.member609();
+                        var E = K.g1();
                         if (E === 255) {
                             E = -1;
                         }
-                        var G = K.member609();
+                        var G = K.g1();
                         if ((G & 128) != 0) {
                             G &= 127;
-                            var u = K.member1089();
+                            var u = K.gjstr();
                         }
-                        var I = K.member608();
+                        var I = K.g2();
                         var H = e.member8796(G, I);
                         var J = new H(e, D, F, undefined, undefined, G, E, K, u, x, I);
                         var y = e.member8797(G, I);
@@ -148,7 +148,7 @@ export var Class561 = function () {
                     });
                     return k[D];
                 } else {
-                    return member47;
+                    return NULL;
                 }
             } else {
                 return k[D];
@@ -167,7 +167,7 @@ export var Class561 = function () {
             var v = u >> 16;
             var x = h(v, false);
             if (x === null) {
-                return member47;
+                return NULL;
             } else {
                 return x.member7438(u & 65535);
             }
@@ -176,7 +176,7 @@ export var Class561 = function () {
         e.member7634 = function (x, u) {
             var y = i(x);
             if (y === null) {
-                return member47;
+                return NULL;
             } else {
                 var v = y.member7445();
                 if (v === null || u >= v.length) {

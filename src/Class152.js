@@ -8,8 +8,8 @@ export var Class152 = function () {
         if (b !== undefined && c !== undefined) {
             this.member1536 = b;
             this.member1280 = c;
-            if (this.member1536 !== member47) {
-                this.member1503 = b.member444();
+            if (this.member1536 !== NULL) {
+                this.member1503 = b.getID();
                 this.member1279();
                 this.member1537 = true;
             }
@@ -30,7 +30,7 @@ export var Class152 = function () {
         this.member1536.member1279(this);
     };
     a.prototype.member1540 = function () {
-        if (this.member1536 === undefined || this.member1536 === member47 || this.member1280 === undefined) {
+        if (this.member1536 === undefined || this.member1536 === NULL || this.member1280 === undefined) {
             return false;
         }
         return true;
@@ -53,7 +53,7 @@ export var Class152 = function () {
     };
     a.prototype.member1496 = function (b) {
         this.member1536 = b;
-        this.member1503 = b.member444();
+        this.member1503 = b.getID();
         this.member1536.member1279(this);
         this.member1537 = true;
     };

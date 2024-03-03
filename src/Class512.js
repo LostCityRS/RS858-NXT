@@ -95,7 +95,7 @@ export var Class512 = function (t) {
         }
         if (!A) {
             var z = m[v - k][u - g];
-            if (z === undefined || z.member4830() === undefined || z.member4830() !== member47 && z.member4830().member4767()) {
+            if (z === undefined || z.member4830() === undefined || z.member4830() !== NULL && z.member4830().member4767()) {
                 if (y === 0) {
                     v--;
                     y = Class86.member730;

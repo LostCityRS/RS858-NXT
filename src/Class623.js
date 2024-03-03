@@ -1,7 +1,7 @@
 import { Class105 } from 'Class105.js';
 import { Class95 } from 'Class95.js';
 import { Class93 } from 'Class93.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class80 } from 'Class80.js';
 import { Class555 } from 'Class555.js';
 import { Class566 } from 'Class566.js';
@@ -27,11 +27,11 @@ export var Class623 = function () {
             return undefined;
         }
         if (!k || !r) {
-            return member47;
+            return NULL;
         }
-        var j = d.getFile(Class95.member811, m, 0, Class96.member841, Class93.member796);
+        var j = d.getFile(Class95.member811, m, 0, Priority.member841, Class93.member796);
         var q = Class80.member606(j);
-        var o = d.getFile(Class95.member814, m, 0, Class96.member841, Class93.member795);
+        var o = d.getFile(Class95.member814, m, 0, Priority.member841, Class93.member795);
         var n = Class555.load(o);
         var i = Class566({
             member9302: 16,

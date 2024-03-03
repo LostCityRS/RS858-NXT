@@ -59,7 +59,7 @@ export var Class449 = function () {
         } else if (this.member7064() !== -1) {
             A = this.member7066();
             if (A === undefined) {
-                A = member47;
+                A = NULL;
                 this.member7067(A);
                 var D = Class297.get(K.member7140.member7141().member7142() + '/img/image_' + this.member7064() + '.png', undefined, false, 5000, 'arraybuffer');
                 D(this.member7133(K));
@@ -67,7 +67,7 @@ export var Class449 = function () {
         } else {
             o = this.member7068(K.member433, K.member995);
         }
-        if (o !== undefined && o !== member47 || A !== undefined && A !== member47) {
+        if (o !== undefined && o !== NULL || A !== undefined && A !== NULL) {
             var i = this.member6765();
             if (this === Class448.member7105() && Class448.member7119() && Class448.member7105().member6787() === Class440.member6658) {
                 i = Math.floor(i * b);
@@ -75,7 +75,7 @@ export var Class449 = function () {
             if (i === 0) {
                 return;
             }
-            var B = this.member993();
+            var B = this.getDamageColour();
             if (B === 0) {
                 B = 16777215;
             }
@@ -83,7 +83,7 @@ export var Class449 = function () {
             var u = 0, s = 0, r = 0, n = 0;
             var q, m, j, h;
             var C;
-            if (o !== undefined && o !== member47) {
+            if (o !== undefined && o !== NULL) {
                 var x = o.member1539();
                 var v = x.member1285(o.member1494());
                 q = v.member493;
@@ -95,7 +95,7 @@ export var Class449 = function () {
                 r = v.member1295.top;
                 n = v.member1295.member597;
                 C = x.member1277();
-            } else if (A !== undefined && A !== member47) {
+            } else if (A !== undefined && A !== NULL) {
                 u = A.member1295.left;
                 s = A.member1295.member596;
                 r = A.member1295.top;

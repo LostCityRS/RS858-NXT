@@ -1,7 +1,7 @@
 import { Class449 } from 'Class449.js';
 import { Class95 } from 'Class95.js';
 import { Class423 } from 'Class423.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class80 } from 'Class80.js';
 import { Class76 } from 'Class76.js';
 import { Class596 } from 'Class596.js';
@@ -13,12 +13,12 @@ export var Class612 = function () {
     member45(Class449, a);
     a.prototype.member9192 = function (c, h, g) {
         if (this.member9191 === undefined) {
-            var k = c.member995.getFile(Class95.member811, Class423.member6115.member6108.member1204, 0, Class96.member841);
+            var k = c.member995.getFile(Class95.member811, Class423.member6115.member6108.member1204, 0, Priority.member841);
             if (k === null) {
                 return;
             }
             var d = Class80.member606(k);
-            var i = d[0].member600();
+            var i = d[0].getColour();
             this.member9191 = Class76(c.member433, d[0].member556(), d[0].member557(), i, false);
             this.member9191.member563();
         }

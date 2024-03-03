@@ -1,9 +1,9 @@
 import { Class95 } from 'Class95.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class105 } from 'Class105.js';
-import { Class96 } from 'Class96.js';
-import { Class729 } from 'Class729.js';
-export var Class786 = function (k) {
+import { Priority } from 'Class96.js';
+import { EffectAnimType } from 'Class729.js';
+export var EffectAnimTypeList = function (k) {
     var d = {};
     var m = null;
     d.member7535 = function () {
@@ -17,7 +17,7 @@ export var Class786 = function (k) {
     if (k.member995 !== undefined) {
         m = k.member995;
         var b = m.member1439(Class95.member821).member3896();
-        i = b * Class131.member1262(Class131.member1217.member1210) + m.member1439(Class95.member821).member1440(b);
+        i = b * Js5ConfigGroup.getFileBits(Js5ConfigGroup.SPOTTYPE.fileBits) + m.member1439(Class95.member821).member1440(b);
     } else {
         throw new Error('979 ');
     }
@@ -41,13 +41,13 @@ export var Class786 = function (k) {
     d.list = function (q) {
         var n = c.find(q);
         if (n === null) {
-            var o = m.getFile(Class95.member821, Class131.member1263(q, Class131.member1217.member1210), Class131.member1264(q, Class131.member1217.member1210), Class96.member840, Class131.member1217.priority);
+            var o = m.getFile(Class95.member821, Js5ConfigGroup.getGroupID(q, Js5ConfigGroup.SPOTTYPE.fileBits), Js5ConfigGroup.getFileID(q, Js5ConfigGroup.SPOTTYPE.fileBits), Priority.member840, Js5ConfigGroup.SPOTTYPE.priority);
             if (o === null) {
                 return null;
             }
-            n = Class729({
+            n = EffectAnimType({
                 member625: q,
-                member2896: d
+                myList: d
             });
             if (o !== undefined) {
                 n.decode(o);

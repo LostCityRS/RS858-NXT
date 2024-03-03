@@ -1,9 +1,9 @@
 import { Class105 } from 'Class105.js';
 import { Class95 } from 'Class95.js';
-import { Class131 } from 'Class131.js';
-import { Class758 } from 'Class758.js';
-import { Class96 } from 'Class96.js';
-export var Class799 = function (k) {
+import { Js5ConfigGroup } from 'Class131.js';
+import { BASType } from 'Class758.js';
+import { Priority } from 'Class96.js';
+export var BASTypeList = function (k) {
     var b = {};
     var j = null;
     var i = null;
@@ -18,19 +18,19 @@ export var Class799 = function (k) {
         j = k.member2739;
         i = k.member3992;
         m = k.member995;
-        h = m.member1439(Class95.member807).member1440(Class131.member1226.member1204);
-        d = Class758(-1, b);
+        h = m.member1439(Class95.member807).member1440(Js5ConfigGroup.BASTYPE.member1204);
+        d = BASType(-1, b);
     } else {
         throw new Error('1058 ');
     }
     var g = function (q) {
         var n = a.find(q);
         if (n === null) {
-            var o = m.getFile(Class95.member807, Class131.member1226.member1204, q, Class96.member840, Class131.member1226.priority);
+            var o = m.getFile(Class95.member807, Js5ConfigGroup.BASTYPE.member1204, q, Priority.member840, Js5ConfigGroup.BASTYPE.priority);
             if (o === null) {
                 return null;
             }
-            n = Class758(q, b);
+            n = BASType(q, b);
             if (o !== undefined) {
                 n.decode(o);
             }

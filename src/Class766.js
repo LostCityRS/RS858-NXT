@@ -2,7 +2,7 @@ import { Class765 } from 'Class765.js';
 import { Class315 } from 'Class315.js';
 import { Class454 } from 'Class454.js';
 import { Class316 } from 'Class316.js';
-export var Class766 = function () {
+export var ClientParameters = function () {
     var a = {};
     a.member10325 = {
         id: Class765.member10296,
@@ -64,7 +64,7 @@ export var Class766 = function () {
         id: Class765.member10278,
         name: false ? {} : ''
     };
-    a.member8273 = {
+    a.affiliate = {
         id: Class765.member10279,
         name: false ? {} : ''
     };
@@ -144,7 +144,7 @@ export var Class766 = function () {
         id: Class765.member10300,
         name: false ? {} : ''
     };
-    a.member8272 = {
+    a.clientToken = {
         id: Class765.member10301,
         name: false ? {} : ''
     };

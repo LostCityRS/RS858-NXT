@@ -26,7 +26,7 @@ export var Class381 = function () {
     b.prototype.member2723 = function () {
         return this.status;
     };
-    b.prototype.member2703 = function () {
+    b.prototype.getPriority = function () {
         return this.priority;
     };
     b.prototype.member4239 = function () {

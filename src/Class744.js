@@ -1,4 +1,4 @@
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class223 } from 'Class223.js';
 import { Class504 } from 'Class504.js';
 export var Class744 = function (j) {
@@ -22,7 +22,7 @@ export var Class744 = function (j) {
         return i;
     };
     var r = undefined;
-    var v = Class124(15000);
+    var v = Packet(15000);
     F.member8284 = function () {
         return v;
     };
@@ -85,12 +85,12 @@ export var Class744 = function (j) {
     };
     F.member8281 = y;
     var x = function (M) {
-        v.member607(0);
+        v.setPos(0);
         var L = I.read(v, M);
         if (L < M) {
             throw new Error('973 ');
         } else {
-            v.member607(0);
+            v.setPos(0);
             return v;
         }
     };
@@ -105,40 +105,40 @@ export var Class744 = function (j) {
                     if (I.member2718() < 1) {
                         return null;
                     }
-                    v.member607(0);
+                    v.setPos(0);
                     I.read(v, 1);
                     q++;
                     n = 0;
                     m = false;
                 }
-                v.member607(0);
+                v.setPos(0);
                 var L;
                 if (r !== undefined) {
-                    if (v.member1083()) {
+                    if (v.checkSmart1or2enc()) {
                         if (I.member2718() < 1) {
                             return null;
                         }
-                        v.member607(1);
+                        v.setPos(1);
                         I.read(v, 1);
                         q++;
                         n = 0;
                     }
                     m = true;
-                    v.member607(0);
-                    L = v.member1082();
+                    v.setPos(0);
+                    L = v.gSmart1or2enc();
                 } else {
-                    if (v.member1079()) {
+                    if (v.checkSmart1or2()) {
                         if (I.member2718() < 1) {
                             return null;
                         }
-                        v.member607(1);
+                        v.setPos(1);
                         I.read(v, 1);
                         q++;
                         n = 0;
                     }
                     m = true;
-                    v.member607(0);
-                    L = v.member1078();
+                    v.setPos(0);
+                    L = v.gSmart1or2();
                 }
                 C = E.member6097[L];
                 if (C === undefined) {
@@ -150,10 +150,10 @@ export var Class744 = function (j) {
                 if (I.member2718() < 1) {
                     return null;
                 }
-                v.member607(0);
+                v.setPos(0);
                 I.read(v, 1);
-                v.member607(0);
-                J = v.member609();
+                v.setPos(0);
+                J = v.g1();
                 q++;
                 n = 0;
             }
@@ -161,10 +161,10 @@ export var Class744 = function (j) {
                 if (I.member2718() < 2) {
                     return null;
                 }
-                v.member607(0);
+                v.setPos(0);
                 I.read(v, 2);
-                v.member607(0);
-                J = v.member608();
+                v.setPos(0);
+                J = v.g2();
                 q++;
                 n = 0;
             }
@@ -172,15 +172,15 @@ export var Class744 = function (j) {
                 if (I.member2718() < J) {
                     return null;
                 }
-                v.member607(0);
+                v.setPos(0);
                 I.read(v, J);
-                v.member607(0);
+                v.setPos(0);
                 q += J;
                 n = 0;
                 H = true;
             }
         } else {
-            v.member607(0);
+            v.setPos(0);
         }
         return {
             member2818: C,
@@ -219,9 +219,9 @@ export var Class744 = function (j) {
     F.member8260 = h;
     var g = function (L) {
         a[D++] = L;
-        var M = L.member2698.member1047();
+        var M = L.packet.getPos();
         L.member4869(M);
-        L.member2698.member607(0);
+        L.packet.setPos(0);
         i += M;
     };
     F.member8261 = g;
@@ -229,7 +229,7 @@ export var Class744 = function (j) {
         if (I !== undefined && D > 0) {
             for (var L = 0; L < D; L++) {
                 var M = a[L];
-                I.member2724(M.member2698.getData(), M.member4868());
+                I.member2724(M.packet.getData(), M.member4868());
                 M.member1816();
             }
             I.member2601();

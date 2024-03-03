@@ -1,7 +1,7 @@
 import { Class49 } from 'Class49.js';
 import { Class372 } from 'Class372.js';
 import { Class374 } from 'Class374.js';
-import { Class166 } from 'Class166.js';
+import { Cuboid } from 'Class166.js';
 import { Class86 } from 'Class86.js';
 import { Class376 } from 'Class376.js';
 import { Class99 } from 'Class99.js';
@@ -29,7 +29,7 @@ export var Class408 = function () {
             this.member4070 = g;
             this.member1643 = h;
             this.member1642 = e;
-            this.member4093(Class166(new Float32Array([
+            this.member4093(Cuboid(new Float32Array([
                 0,
                 -5,
                 0
@@ -60,7 +60,7 @@ export var Class408 = function () {
     };
     a.prototype.member4694 = function () {
         var g = this.member4070.member4695().member4696(this.member433);
-        if (g === undefined || g === member47) {
+        if (g === undefined || g === NULL) {
             return;
         }
         this.texture = g.texture;

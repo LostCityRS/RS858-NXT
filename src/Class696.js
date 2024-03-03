@@ -5,7 +5,7 @@ import { Class37 } from 'Class37.js';
 import { Class385 } from 'Class385.js';
 import { Class372 } from 'Class372.js';
 import { Class374 } from 'Class374.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class288 } from 'Class288.js';
 import { Class386 } from 'Class386.js';
 import { Class50 } from 'Class50.js';
@@ -107,8 +107,8 @@ export var Class696 = function () {
         };
         N.member4380 = function (aa) {
             if (K === null) {
-                K = X.member2970.member3227(Class131.member1217.member1204, U);
-                if (K === member47) {
+                K = X.member2970.getConfigType(Js5ConfigGroup.SPOTTYPE.member1204, U);
+                if (K === NULL) {
                     return false;
                 }
             }

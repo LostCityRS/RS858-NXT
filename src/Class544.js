@@ -1,10 +1,10 @@
 import { Class105 } from 'Class105.js';
 import { Class95 } from 'Class95.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class443 } from 'Class443.js';
-import { Class96 } from 'Class96.js';
-import { Class543 } from 'Class543.js';
-export var Class544 = function () {
+import { Priority } from 'Class96.js';
+import { NPCType } from 'Class543.js';
+export var NPCTypeList = function () {
     var a = function (g) {
         var s = {};
         var x = null;
@@ -47,7 +47,7 @@ export var Class544 = function () {
             d = g.member2970;
             m = g.member8694;
             var z = o.member1439(Class95.member818).member3896();
-            e = z * Class131.member1262(Class131.member1213.member1210) + o.member1439(Class95.member818).member1440(z);
+            e = z * Js5ConfigGroup.getFileBits(Js5ConfigGroup.NPCTYPE.fileBits) + o.member1439(Class95.member818).member1440(z);
             B = [
                 null,
                 null,
@@ -62,36 +62,36 @@ export var Class544 = function () {
         s.list = function (I) {
             var G = j.find(I);
             if (G === null) {
-                var H = o.getFile(Class95.member818, Class131.member1263(I, Class131.member1213.member1210), Class131.member1264(I, Class131.member1213.member1210), Class96.member840, Class131.member1213.priority);
+                var H = o.getFile(Class95.member818, Js5ConfigGroup.getGroupID(I, Js5ConfigGroup.NPCTYPE.fileBits), Js5ConfigGroup.getFileID(I, Js5ConfigGroup.NPCTYPE.fileBits), Priority.member840, Js5ConfigGroup.NPCTYPE.priority);
                 if (H === null) {
                     return null;
                 }
-                G = Class543(I, s, B.slice(0));
+                G = NPCType(I, s, B.slice(0));
                 if (H !== undefined) {
                     G.decode(H);
                 }
-                G.member2934();
+                G.postDecode();
                 j.put(G, 1, I);
             }
             return G;
         };
         var C = s.list;
-        s.member8682 = function () {
+        s.getAllowMembers = function () {
             return r;
         };
         s.member8695 = function (G) {
             r = G;
         };
-        var E = s.member8682;
+        var E = s.getAllowMembers;
         s.member7535 = function () {
             return o;
         };
         var i = s.member7535;
-        s.member7539 = function () {
+        s.getVarTypeProvider = function () {
             return d;
         };
-        var D = s.member7539;
-        s.member8687 = function () {
+        var D = s.getVarTypeProvider;
+        s.getVarValueProvider = function () {
             return m;
         };
         s.member8689 = function () {

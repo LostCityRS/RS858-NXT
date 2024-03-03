@@ -1,9 +1,9 @@
 import { Class95 } from 'Class95.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class105 } from 'Class105.js';
-import { Class96 } from 'Class96.js';
-import { Class789 } from 'Class789.js';
-export var Class797 = function (m) {
+import { Priority } from 'Class96.js';
+import { QuestType } from 'Class789.js';
+export var QuestTypeList = function (m) {
     var c = {};
     var j = null;
     var i = null;
@@ -16,7 +16,7 @@ export var Class797 = function (m) {
         return h;
     };
     var k = null;
-    c.member7539 = function () {
+    c.getVarTypeProvider = function () {
         return k;
     };
     var b;
@@ -25,7 +25,7 @@ export var Class797 = function (m) {
         i = m.member3992;
         n = m.member995;
         k = m.member2970;
-        h = n.member1439(Class95.member807, Class131.member1229.member1204).member3896();
+        h = n.member1439(Class95.member807, Js5ConfigGroup.QUESTTYPE.member1204).member3896();
         b = Class105({ member895: h });
     } else {
         throw new Error('1679 ');
@@ -33,15 +33,15 @@ export var Class797 = function (m) {
     var g = function (r) {
         var o = b.find(r);
         if (o === null) {
-            var q = n.getFile(Class95.member807, Class131.member1229.member1204, r, Class96.member840, Class131.member1229.priority);
+            var q = n.getFile(Class95.member807, Js5ConfigGroup.QUESTTYPE.member1204, r, Priority.member840, Js5ConfigGroup.QUESTTYPE.priority);
             if (q === null) {
                 return null;
             }
-            o = Class789(r, c);
+            o = QuestType(r, c);
             if (q !== undefined) {
                 o.decode(q);
             }
-            o.member2934();
+            o.postDecode();
             b.put(o, 1, r);
         }
         return o;
@@ -50,7 +50,7 @@ export var Class797 = function (m) {
     var a = function () {
         return member8693;
     };
-    c.member8682 = a;
+    c.getAllowMembers = a;
     var e = function () {
         b.member301();
     };

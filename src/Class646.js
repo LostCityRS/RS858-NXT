@@ -1,9 +1,9 @@
 import { Class421 } from 'Class421.js';
-import { Class462 } from 'Class462.js';
-import { Class465 } from 'Class465.js';
+import { BaseVarType } from 'Class462.js';
+import { VarDomainType } from 'Class465.js';
 import { Class468 } from 'Class468.js';
 import { Class464 } from 'Class464.js';
-import { Class463 } from 'Class463.js';
+import { ScriptVarType } from 'Class463.js';
 export var Class646 = function () {
     var b = {};
     var a;
@@ -21,14 +21,14 @@ export var Class646 = function () {
         } else {
             i = e.member8889[g.member9621().serialID];
         }
-        var d = g.member8041().member7287;
-        if (d === Class462.member7281) {
-            e.member6100[e.member6099++] = i.member2943(g);
-        } else if (d === Class462.member7282) {
-            var h = i.member2943(g);
-            e.member8877[e.member8878++] = i.member2943(g);
-        } else if (d === Class462.member7283) {
-            var c = i.member2943(g);
+        var d = g.member8041().baseVarType;
+        if (d === BaseVarType.INTEGER) {
+            e.member6100[e.member6099++] = i.getVarInt(g);
+        } else if (d === BaseVarType.LONG) {
+            var h = i.getVarInt(g);
+            e.member8877[e.member8878++] = i.getVarInt(g);
+        } else if (d === BaseVarType.STRING) {
+            var c = i.getVarInt(g);
             if (c === null) {
                 c = 'null';
             }
@@ -45,17 +45,17 @@ export var Class646 = function () {
         } else {
             g = d.member8889[e.member9621().serialID];
         }
-        var c = e.member8041().member7287;
-        if (c === Class462.member7281) {
-            if (e.member9621() === Class465.member7379) {
-                a.member7620.member9622(false, e);
+        var c = e.member8041().baseVarType;
+        if (c === BaseVarType.INTEGER) {
+            if (e.member9621() === VarDomainType.CLIENT) {
+                a.delayedStateChange.member9622(false, e);
             }
             g.member2945(e, d.member6100[--d.member6099]);
-        } else if (c === Class462.member7282) {
+        } else if (c === BaseVarType.LONG) {
             g.member2945(e, d.member8877[--d.member8878]);
-        } else if (c === Class462.member7283) {
-            if (e.member9621() === Class465.member7379) {
-                a.member7620.member9623(false, e);
+        } else if (c === BaseVarType.STRING) {
+            if (e.member9621() === VarDomainType.CLIENT) {
+                a.delayedStateChange.member9623(false, e);
             }
             g.member2945(e, d.member6142[--d.member6143]);
         } else {
@@ -114,7 +114,7 @@ export var Class646 = function () {
         } else {
             e = c.member8889[d.member2949().member9621().serialID];
         }
-        c.member6100[c.member6099++] = e.member2950(d);
+        c.member6100[c.member6099++] = e.getVarBit(d);
     };
     Class421.member4876.member867 = function (c) {
         var d = c.member7384[c.member7370];
@@ -233,7 +233,7 @@ export var Class646 = function () {
         }
         d.arraySize[g] = c;
         var h = -1;
-        if (e === Class463.member7285.serialID) {
+        if (e === ScriptVarType.INT.serialID) {
             h = 0;
         }
         for (var i = 0; i < c; i++) {

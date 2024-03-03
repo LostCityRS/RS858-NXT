@@ -1,5 +1,5 @@
 import { Class291 } from 'Class291.js';
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 import { Class41 } from 'Class41.js';
 import { Class140 } from 'Class140.js';
 import { Class372 } from 'Class372.js';
@@ -16,13 +16,13 @@ import { Class459 } from 'Class459.js';
 import { Class244 } from 'Class244.js';
 import { Class373 } from 'Class373.js';
 import { Class486 } from 'Class486.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class86 } from 'Class86.js';
 import { Class371 } from 'Class371.js';
 import { Class332 } from 'Class332.js';
 import { Class347 } from 'Class347.js';
 import { Class351 } from 'Class351.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class132 } from 'Class132.js';
 import { Class72 } from 'Class72.js';
 import { Class376 } from 'Class376.js';
@@ -41,7 +41,7 @@ export var Class489 = function () {
         0
     ]);
     var b = Class291();
-    var i = Class290();
+    var i = CoordFine();
     var g = Class41.create();
     var h = Class41.create();
     var c = Class140.create();
@@ -63,7 +63,7 @@ export var Class489 = function () {
         this.member7748 = undefined;
         this.member7749 = Class488({ member4179: this });
         this.member3397 = 0;
-        this.member1561 = 1;
+        this.size = 1;
         this.member7750 = 0;
         this.member7751 = 0;
         this.member7752 = new Float32Array(4);
@@ -71,7 +71,7 @@ export var Class489 = function () {
         this.member7754 = 10;
         this.member7755 = 0;
         this.member7756 = new Array();
-        this.member7757;
+        this.turnspeed;
         this.member7758 = [
             0,
             0,
@@ -98,7 +98,7 @@ export var Class489 = function () {
         this.member7770 = true;
         this.member4211 = Class304(undefined, Class32.member310);
         this.member7771 = -1;
-        this.member7772 = member47;
+        this.member7772 = NULL;
         this.member7773 = null;
         this.member7774 = undefined;
         this.member7775 = 0;
@@ -109,9 +109,9 @@ export var Class489 = function () {
         this.member7778 = new Array(Class459.member7269);
         this.member7732(Class244.member2849 * Class244.member2850);
         this.member4096(Class373({ empty: true }));
-        this.member7779(Class290(0, 0, 0, 0));
+        this.member7779(CoordFine(0, 0, 0, 0));
         this.member7780 = true;
-        this.member7781 = member47;
+        this.member7781 = NULL;
         this.member7782;
         this.member7783;
         this.member4208 = false;
@@ -128,16 +128,16 @@ export var Class489 = function () {
         return undefined;
     };
     j.prototype.member7545 = function () {
-        return member47;
+        return NULL;
     };
     j.prototype.member7546 = function () {
-        return member47;
+        return NULL;
     };
     j.prototype.member7543 = function () {
-        return member47;
+        return NULL;
     };
     j.prototype.member7544 = function () {
-        return member47;
+        return NULL;
     };
     j.prototype.member7548 = function (m) {
     };
@@ -189,7 +189,7 @@ export var Class489 = function () {
         this.member3397 = m;
     };
     j.prototype.member7795 = function () {
-        return this.member1561;
+        return this.size;
     };
     j.prototype.member7796 = function (m) {
         this.member7752[3] = 1;
@@ -215,19 +215,19 @@ export var Class489 = function () {
         if (o === 0) {
             return;
         }
-        var s = q.member1047();
+        var s = q.getPos();
         var r = undefined;
         var n = 0;
         if (this.member7753.member890() === 0) {
             r = this.member7786(q, undefined);
-            n = q.member1047() - s;
+            n = q.getPos() - s;
         }
         if (r !== undefined || this.member7753.member890() !== 0) {
-            var m = Class124(undefined, q.getData().slice(s, s + o));
+            var m = Packet(undefined, q.getData().slice(s, s + o));
             m.state = r;
-            m.member607(n);
+            m.setPos(n);
             this.member7753.member2715(m);
-            q.member607(s + o);
+            q.setPos(s + o);
         }
     };
     j.prototype.member7803 = function (m) {
@@ -242,7 +242,7 @@ export var Class489 = function () {
             }
         }
         this.member7756[this.member7755 - 1] = {
-            member3455: Class290(n),
+            member3455: CoordFine(n),
             member7804: o
         };
         this.member4451();
@@ -255,7 +255,7 @@ export var Class489 = function () {
         }
     };
     j.prototype.member7732 = function (m) {
-        this.member7757 = m;
+        this.turnspeed = m;
         this.member7777.member7732(m);
     };
     j.prototype.member7806 = function (n, r, m, q, t, s, u) {
@@ -335,7 +335,7 @@ export var Class489 = function () {
     };
     j.prototype.member7818 = function (m) {
         this.member7771 = m;
-        this.member7772 = member47;
+        this.member7772 = NULL;
     };
     j.prototype.member7819 = function () {
         return this.member7771;
@@ -371,9 +371,9 @@ export var Class489 = function () {
         this.member7778[n] = m;
     };
     j.prototype.member7823 = function () {
-        this.member7772 = member47;
+        this.member7772 = NULL;
         this.member7774 = undefined;
-        this.member4466.member4440();
+        this.member4466.getID0();
     };
     j.prototype.member7824 = function (n) {
         for (var m = 0; m < this.member7778.length; m++) {
@@ -409,7 +409,7 @@ export var Class489 = function () {
         if (u === undefined) {
             return true;
         }
-        if (u === member47) {
+        if (u === NULL) {
             return false;
         }
         var q = this.member4466.member4429();
@@ -418,9 +418,9 @@ export var Class489 = function () {
             this.member7548(q);
         }
         var t = this.member4466.member4430();
-        if (this.member7772 === member47 && this.member7819() !== -1) {
-            this.member7772 = this.member7710.member2970.member3227(Class131.member1226.member1204, this.member7819());
-            if (this.member7772 === member47) {
+        if (this.member7772 === NULL && this.member7819() !== -1) {
+            this.member7772 = this.member7710.member2970.getConfigType(Js5ConfigGroup.BASTYPE.member1204, this.member7819());
+            if (this.member7772 === NULL) {
                 return false;
             }
             this.member7826();
@@ -443,7 +443,7 @@ export var Class489 = function () {
     };
     j.prototype.member512 = function () {
         this.member4123();
-        this.member4440();
+        this.getID0();
         this.member4466.member512();
         this.member1728 = null;
         for (var m = 0; m < this.member7778.length; m++) {
@@ -456,11 +456,11 @@ export var Class489 = function () {
     };
     j.prototype.member7826 = function () {
         var m = this.member4466.member4425();
-        if (this.member7772 !== member47 && this.member7772.member7828() !== -1 && (m === null || m.member4372() !== this.member7772.member7828())) {
+        if (this.member7772 !== NULL && this.member7772.member7828() !== -1 && (m === null || m.member4372() !== this.member7772.member7828())) {
             this.member4466.member4439(this.member7772.member7828(), true);
         }
-        if (this.member7772 !== member47 && this.member7772.member7828() === -1) {
-            this.member4466.member4411 = member47;
+        if (this.member7772 !== NULL && this.member7772.member7828() === -1) {
+            this.member4466.member4411 = NULL;
         }
     };
     j.prototype.member7829 = function (m) {
@@ -469,7 +469,7 @@ export var Class489 = function () {
     j.prototype.member7830 = function (q, C, z, m, B) {
         if (q !== null && (q === undefined || this.member4103(q))) {
             var o = this.member4466.member4437();
-            if (o === member47 || o === undefined || this.member7831 !== undefined && this.member7831() === true) {
+            if (o === NULL || o === undefined || this.member7831 !== undefined && this.member7831() === true) {
                 this.member4105(false);
                 return;
             }
@@ -489,12 +489,12 @@ export var Class489 = function () {
             }
             var v = this.member7763 ? this.member4462 : C;
             Class49.member334(v, this.member1611);
-            this.member1728 = this.member7832() ? this.member4466.member4445(B, this.member7775) : null;
+            this.member1728 = this.member7832() ? this.member4466.getID5(B, this.member7775) : null;
             if (this.member4466.member4429() === null && !this.member4466.member4431() && !this.member7829(B)) {
                 this.member7773 = null;
                 this.member7774 = undefined;
             }
-            this.member4466.member4448(v);
+            this.member4466.getID8(v);
             var x = this.member4095();
             if (x !== undefined) {
                 var A = this.member4085().member4166();
@@ -558,7 +558,7 @@ export var Class489 = function () {
             return;
         }
         var n = this.member4466.member4437();
-        if (n !== member47 && n !== undefined) {
+        if (n !== NULL && n !== undefined) {
             if (n.member2121()) {
                 m |= Class376.member4171;
             }
@@ -570,7 +570,7 @@ export var Class489 = function () {
     };
     j.prototype.member952 = function (m, r, x, v, u) {
         var o = Class132.member1266();
-        var t = o.member941(Class72.member498);
+        var t = o.member941(Class72.POINTLIGHT);
         var q = o.member522(Class72.member499);
         var s = this.member4211.member989() > 0 && !q && t.member291();
         if (s) {
@@ -592,7 +592,7 @@ export var Class489 = function () {
     };
     j.prototype.member486 = function (q, x, v, u) {
         var n = Class132.member1266();
-        var r = n.member941(Class72.member498);
+        var r = n.member941(Class72.POINTLIGHT);
         var o = n.member522(Class72.member499);
         var s = this.member4211.member989() > 0 && !o && r.member291();
         if (s) {
@@ -605,24 +605,24 @@ export var Class489 = function () {
         }
         t.member1630(v, q, this.member7763 ? this.member4462 : x, this.member1611, this.member1728, false, u, m);
         if (!o && !n.member522(Class72.member96) && (u === undefined || u === Class133.member1270)) {
-            this.member4466.member4449(q);
+            this.member4466.getID9(q);
         }
         if (s) {
             r.member991();
         }
     };
     j.prototype.member7795 = function () {
-        return this.member1561;
+        return this.size;
     };
     j.prototype.member7835 = function (m) {
-        var o = m - this.member1561;
+        var o = m - this.size;
         if (o !== 0) {
             var n = this.member3320();
             n.member344(g);
             g[0] += o * Class86.member718 / 2;
             g[2] += o * Class86.member718 / 2;
             n.member4193(g);
-            this.member1561 = m;
+            this.size = m;
             this.member7780 = true;
         }
     };
@@ -630,7 +630,7 @@ export var Class489 = function () {
         this.member3320().member344(g);
         var n = 0;
         if (!o) {
-            n = this.member1561 / 2;
+            n = this.size / 2;
         }
         m.level = this.member4081();
         m.x = Math.floor(g[0] / Class86.member718 - n);
@@ -640,7 +640,7 @@ export var Class489 = function () {
         if (this.member7755 < 1) {
             this.member7836(m, false);
         } else {
-            var o = this.member1561 / 2;
+            var o = this.size / 2;
             var n = this.member7803(this.member7755 - 1);
             m.level = n.member3455.level;
             m.x = Math.floor(n.member3455.member3454[0] / Class86.member718 - o);
@@ -740,8 +740,8 @@ export var Class489 = function () {
             var m = Class86.member718 / 32;
             var C = false;
             var v = true;
-            if (this.member7613 !== undefined && this.member7613 !== member47) {
-                v = this.member7613.member7850;
+            if (this.member7613 !== undefined && this.member7613 !== NULL) {
+                v = this.member7613.walksmoothing;
             }
             if (v) {
                 if (!C) {
@@ -798,7 +798,7 @@ export var Class489 = function () {
         } else {
             this.member7776 = 0;
         }
-        if (this.member7772 !== member47) {
+        if (this.member7772 !== NULL) {
             this.member7851(s, x);
         }
         if (this.member7773 !== null && !this.member4466.member4431()) {
@@ -814,9 +814,9 @@ export var Class489 = function () {
         return true;
     };
     j.prototype.member7853 = function () {
-        if (this.member7772 !== member47) {
-            if (this.member7772.member7854() !== 0 || this.member7772.member7855() !== 0) {
-                this.member7856(this.member7772.member7854(), this.member7772.member7855(), this.member7772.member7857(), this.member7772.member7858());
+        if (this.member7772 !== NULL) {
+            if (this.member7772.getOffsetX() !== 0 || this.member7772.getOffsetY() !== 0) {
+                this.member7856(this.member7772.getOffsetX(), this.member7772.getOffsetY(), this.member7772.member7857(), this.member7772.member7858());
                 return;
             }
         }
@@ -936,13 +936,13 @@ export var Class489 = function () {
         if (n === Class432.member6227) {
             if (!this.member7777.member1999()) {
                 if (this.member7777.member7694()) {
-                    var r = this.member7772.member7859();
+                    var r = this.member7772.getReadyAnimL();
                     if (r !== -1) {
                         this.member4466.member4439(r);
                         return;
                     }
                 } else {
-                    var v = this.member7772.member7860();
+                    var v = this.member7772.getReadyAnimR();
                     if (v !== -1) {
                         this.member4466.member4439(v);
                         return;
@@ -973,20 +973,20 @@ export var Class489 = function () {
             s = Class394.member4544(A - o);
             if (this.member7777.member7733() && s <= Math.PI / 4 && s >= -Math.PI / 4) {
                 var y = Class394.member4544(u - o);
-                var q = this.member7772.member7861;
-                var z = this.member7772.member7862;
-                var m = this.member7772.member7863;
-                var t = this.member7772.member7864;
-                if (n === Class432.member6230 && this.member7772.member7865() !== -1) {
-                    q = this.member7772.member7865;
-                    z = this.member7772.member7866;
-                    m = this.member7772.member7867;
-                    t = this.member7772.member7868;
-                } else if (n === Class432.member6228 && this.member7772.member7869() !== -1) {
-                    q = this.member7772.member7869;
-                    z = this.member7772.member7870;
-                    m = this.member7772.member7871;
-                    t = this.member7772.member7872;
+                var q = this.member7772.getWalkAnim;
+                var z = this.member7772.getWalkAnimB;
+                var m = this.member7772.getWalkAnimL;
+                var t = this.member7772.getWalkAnimR;
+                if (n === Class432.member6230 && this.member7772.getRunAnim() !== -1) {
+                    q = this.member7772.getRunAnim;
+                    z = this.member7772.getRunAnimB;
+                    m = this.member7772.getRunAnimL;
+                    t = this.member7772.getRunAnimR;
+                } else if (n === Class432.member6228 && this.member7772.getCrawlAnim() !== -1) {
+                    q = this.member7772.getCrawlAnim;
+                    z = this.member7772.getCrawlAnimB;
+                    m = this.member7772.getCrawlAnimL;
+                    t = this.member7772.getCrawlAnimR;
                 }
                 if (y >= Math.PI / 4 && y <= 3 * Math.PI / 4 && t.call(this.member7772) !== -1) {
                     this.member4466.member4439(t.call(this.member7772));
@@ -1000,15 +1000,15 @@ export var Class489 = function () {
                 return;
             }
             if (!this.member7777.member1999()) {
-                var q = this.member7772.member7861;
+                var q = this.member7772.getWalkAnim;
                 var m = this.member7772.member7873;
                 var t = this.member7772.member7874;
-                if (n === Class432.member6230 && this.member7772.member7865() !== -1) {
-                    q = this.member7772.member7865;
+                if (n === Class432.member6230 && this.member7772.getRunAnim() !== -1) {
+                    q = this.member7772.getRunAnim;
                     m = this.member7772.member7875;
                     t = this.member7772.member7876;
-                } else if (n === Class432.member6228 && this.member7772.member7869() !== -1) {
-                    q = this.member7772.member7869;
+                } else if (n === Class432.member6228 && this.member7772.getCrawlAnim() !== -1) {
+                    q = this.member7772.getCrawlAnim;
                     m = this.member7772.member7877;
                     t = this.member7772.member7878;
                 }
@@ -1021,12 +1021,12 @@ export var Class489 = function () {
                 }
                 return;
             }
-            if (n === Class432.member6230 && this.member7772.member7865() !== -1) {
-                this.member4466.member4439(this.member7772.member7865());
-            } else if (n === Class432.member6228 && this.member7772.member7869() !== -1) {
-                this.member4466.member4439(this.member7772.member7869());
+            if (n === Class432.member6230 && this.member7772.getRunAnim() !== -1) {
+                this.member4466.member4439(this.member7772.getRunAnim());
+            } else if (n === Class432.member6228 && this.member7772.getCrawlAnim() !== -1) {
+                this.member4466.member4439(this.member7772.getCrawlAnim());
             } else {
-                this.member4466.member4439(this.member7772.member7861());
+                this.member4466.member4439(this.member7772.getWalkAnim());
             }
         }
     };
@@ -1055,7 +1055,7 @@ export var Class489 = function () {
                     if ((s & Class129.member1176) !== 0) {
                         return o;
                     } else if (s === -1) {
-                        return member47;
+                        return NULL;
                     }
                 }
             }
@@ -1068,8 +1068,8 @@ export var Class489 = function () {
             return;
         }
         this.member3320().member344(g);
-        var m = d(n.member4111(), this.member4081(), Math.floor(g[0] / Class86.member718), Math.floor(g[2] / Class86.member718), this.member1561);
-        if (m === member47) {
+        var m = d(n.member4111(), this.member4081(), Math.floor(g[0] / Class86.member718), Math.floor(g[2] / Class86.member718), this.size);
+        if (m === NULL) {
             return;
         } else {
             this.member4084(m);
@@ -1110,16 +1110,16 @@ export var Class489 = function () {
         var n = this.member7755 > 0 && this.member7776 === 0;
         m.member4197(this.member7777.member7739(g, h, c, n));
     };
-    j.prototype.member4121 = function () {
+    j.prototype.getOverlayHeight = function () {
         return this.member7880();
     };
     j.prototype.member7880 = function () {
         var m = 0;
-        if (this.member7772 !== member47) {
-            m = this.member7772.member4121();
+        if (this.member7772 !== NULL) {
+            m = this.member7772.getOverlayHeight();
         }
         var o = this.member4466.member4437();
-        if (o !== member47 && o !== undefined) {
+        if (o !== NULL && o !== undefined) {
             var n = o.member2098();
             m += n.member557();
         }
@@ -1168,9 +1168,9 @@ export var Class489 = function () {
             if (n) {
                 continue;
             }
-            r = this.member7773 !== null && this.member7773[q] !== -1 ? this.member7710.member2970.member3227(Class131.member1216.member1204, this.member7773[q]) : member47;
-            v = m[q] !== -1 ? this.member7710.member2970.member3227(Class131.member1216.member1204, m[q]) : member47;
-            if (r === member47 || v === member47 || r.member2703() <= v.member2703()) {
+            r = this.member7773 !== null && this.member7773[q] !== -1 ? this.member7710.member2970.getConfigType(Js5ConfigGroup.SEQTYPE.member1204, this.member7773[q]) : NULL;
+            v = m[q] !== -1 ? this.member7710.member2970.getConfigType(Js5ConfigGroup.SEQTYPE.member1204, m[q]) : NULL;
+            if (r === NULL || v === NULL || r.getPriority() <= v.getPriority()) {
                 n = true;
             }
         }
@@ -1217,7 +1217,7 @@ export var Class489 = function () {
     j.prototype.member7884 = function () {
         if (this.member7782 !== undefined) {
             this.member7710.member7619.member7745().member7885(this.member7782);
-            this.member7781 = member47;
+            this.member7781 = NULL;
             this.member7782 = undefined;
         }
     };
@@ -1229,7 +1229,7 @@ export var Class489 = function () {
             return true;
         }
         this.member7781 = this.member7744.member7439(this.member7783, true, this.member7710.member7619.member7440);
-        if (this.member7781 === member47) {
+        if (this.member7781 === NULL) {
             return false;
         }
         this.member7782 = this.member7783;

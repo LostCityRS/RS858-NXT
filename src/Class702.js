@@ -1,6 +1,6 @@
 import { Class254 } from 'Class254.js';
-import { Class465 } from 'Class465.js';
-export var Class702 = function (k) {
+import { VarDomainType } from 'Class465.js';
+export var VarBitType = function (k) {
     var h = {};
     var j;
     var g;
@@ -10,32 +10,32 @@ export var Class702 = function (k) {
     };
     var c;
     var m;
-    if (k.member625 !== undefined && k.member2896 !== undefined) {
+    if (k.member625 !== undefined && k.myList !== undefined) {
         j = k.member625;
-        g = k.member2896;
+        g = k.myList;
     } else {
         throw new Error('861 ');
     }
     var a = function (s, q) {
         while (true) {
-            var t = s.member609();
+            var t = s.g1();
             if (t == 0) {
                 break;
             }
             if (t === Class254.member2979.serialID) {
-                var r = s.member609();
-                var o = Class465.getByID(r);
+                var r = s.g1();
+                var o = VarDomainType.getByID(r);
                 if (o === null) {
                     throw new Error('862 ' + r);
                 }
-                var n = s.member1086();
-                i = q.member7393(o, n);
-                if (i === member47) {
+                var n = s.gSmart2or4null();
+                i = q.getVarType(o, n);
+                if (i === NULL) {
                     return false;
                 }
             } else if (t === Class254.member2980.serialID) {
-                c = s.member609();
-                m = s.member609();
+                c = s.g1();
+                m = s.g1();
             } else {
                 throw new Error('863 ' + t);
             }

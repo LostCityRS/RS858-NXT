@@ -17,7 +17,7 @@ export var Class2 = function () {
     a.member46 = function (c, b) {
         b.apply(c, Array.prototype.slice.call(arguments, 2));
     };
-    a.member47 = null;
+    a.NULL = null;
     a.member48 = false;
     a.member49 = true;
     a.member50 = true;

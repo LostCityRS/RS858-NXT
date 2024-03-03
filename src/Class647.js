@@ -1,6 +1,6 @@
 import { Class421 } from 'Class421.js';
 import { Class501 } from 'Class501.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 export var Class647 = function () {
     var c = {};
     var a;
@@ -25,10 +25,10 @@ export var Class647 = function () {
         if (a.member8252.member8259() !== undefined) {
             var h = a.member8252.member8259();
             var e = h.member8260(Class501.member8147);
-            e.member2698.member1054(1 + Class124.member1152(j, true) + Class124.member1152(g, true));
-            e.member2698.member1065(g, true);
-            e.member2698.member1065(j, true);
-            e.member2698.member1106(i);
+            e.packet.p2(1 + Packet.member1152(j, true) + Packet.member1152(g, true));
+            e.packet.pjstr(g, true);
+            e.packet.pjstr(j, true);
+            e.packet.p1_alt3(i);
             h.member8261(e);
         }
     };

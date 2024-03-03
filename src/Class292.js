@@ -18,7 +18,7 @@ export var Class292 = function () {
         }
         c.member469(Class7.member142, this.member3463);
         c.member469(Class7.member143, this.member1624);
-        switch (c.member444()) {
+        switch (c.getID()) {
         case Class63.member390.id:
         case Class63.member391.id:
         case Class63.member401.id:

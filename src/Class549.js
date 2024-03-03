@@ -2,7 +2,7 @@ import { Class433 } from 'Class433.js';
 import { Class537 } from 'Class537.js';
 import { Class423 } from 'Class423.js';
 import { Class86 } from 'Class86.js';
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 export var Class549 = function () {
     var b = {};
     var a;
@@ -11,7 +11,7 @@ export var Class549 = function () {
     };
     b.member25 = c;
     Class433.member2867.member6428 = function (i, n) {
-        var q = i.member609();
+        var q = i.g1();
         var s = q >> 5;
         var k = q & 31;
         if (a.member8733.member8734(s)) {
@@ -21,10 +21,10 @@ export var Class549 = function () {
             return false;
         }
         var o = Class423.member6130(Class423.member6115.member6112);
-        if (o === member47) {
+        if (o === NULL) {
             return true;
         }
-        var t = i.member609();
+        var t = i.g1();
         if (t >= 0 && t < Class423.member6115.member6112.member1288.length) {
             var h = undefined;
             var e = undefined;
@@ -32,11 +32,11 @@ export var Class549 = function () {
             var d = undefined;
             var j = undefined;
             if (k === Class537.member8571 || k === Class537.member8573) {
-                h = i.member608();
-                r = i.member608();
-                i.member1045 += 4;
+                h = i.g2();
+                r = i.g2();
+                i.pos += 4;
             } else if (k >= 2 && k <= 6) {
-                var g = i.member609();
+                var g = i.g1();
                 var v = 0, u = 0;
                 if (k === 2) {
                     v = Class86.member718 / 2;
@@ -59,19 +59,19 @@ export var Class549 = function () {
                     u = Class86.member718;
                 }
                 k = Class537.member8572;
-                v += i.member608() * Class86.member718;
-                u += i.member608() * Class86.member718;
-                var m = i.member609() << Class86.member719;
+                v += i.g2() * Class86.member718;
+                u += i.g2() * Class86.member718;
+                var m = i.g1() << Class86.member719;
                 m *= 2;
-                e = Class290({
+                e = CoordFine({
                     level: g,
                     x: v,
                     y: m,
                     member756: u
                 });
-                d = i.member608();
+                d = i.g2();
             }
-            j = i.member1074();
+            j = i.g4s();
             if (!a.member8733.add(s, k, t, j, h, r, e, d)) {
                 return true;
             }
@@ -79,8 +79,8 @@ export var Class549 = function () {
         return false;
     };
     Class433.member6263.member6428 = function (e, g) {
-        var d = e.member609();
-        var h = e.member1086();
+        var d = e.g1();
+        var h = e.gSmart2or4null();
         if (h !== -1) {
             return a.member8735.add(e, d, h);
         } else if (a.member8735.member8734(d)) {

@@ -5,7 +5,7 @@ import { Class307 } from 'Class307.js';
 import { Class594 } from 'Class594.js';
 import { Class595 } from 'Class595.js';
 import { Class496 } from 'Class496.js';
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 import { Class120 } from 'Class120.js';
 import { Class72 } from 'Class72.js';
 import { Class453 } from 'Class453.js';
@@ -128,7 +128,7 @@ export var Class596 = function () {
         if (S) {
             return;
         }
-        if (!i.member3590() || !D.member3590()) {
+        if (!i.readyanim() || !D.readyanim()) {
             return;
         }
         i.member3650(K);
@@ -160,7 +160,7 @@ export var Class596 = function () {
     O.member9075 = function (Y) {
         x = Y;
     };
-    var q = Class290();
+    var q = CoordFine();
     var k = undefined;
     O.member8787 = function (Y) {
         k = Y;
@@ -228,7 +228,7 @@ export var Class596 = function () {
         } else {
             Y.level = 0;
         }
-        if (!c().member3590()) {
+        if (!c().readyanim()) {
             return null;
         }
         c().member9025(Y.member3454);
@@ -265,7 +265,7 @@ export var Class596 = function () {
         X.member8733.member487();
         if (X.member7135() !== undefined) {
             var Z = X.member7135().member6453();
-            if (!i.member3590() && Z !== undefined) {
+            if (!i.readyanim() && Z !== undefined) {
                 i.member9052(Z);
             }
         }
@@ -302,7 +302,7 @@ export var Class596 = function () {
         X.member8733.member486();
         X.member8735.member486();
         var ag = c();
-        if (!ag.member3590()) {
+        if (!ag.readyanim()) {
             return;
         }
         ag.member9025(q.member3454);
@@ -415,7 +415,7 @@ export var Class596 = function () {
     };
     O.member9085 = function (ab, aa) {
         var Z = c();
-        if (!Z.member3590()) {
+        if (!Z.readyanim()) {
             return false;
         }
         var Y = X.member6444.member6445();

@@ -9,7 +9,7 @@ export var Class475 = function () {
             d = r;
         };
         var n = undefined;
-        g.member4486 = function () {
+        g.getModels = function () {
             return n;
         };
         var m = undefined;
@@ -25,11 +25,11 @@ export var Class475 = function () {
             return e;
         };
         var j = undefined;
-        g.member7607 = function () {
+        g.getRecolD = function () {
             return j;
         };
         var i = undefined;
-        g.member7608 = function () {
+        g.getRetexD = function () {
             return i;
         };
         if (q.member4249 !== undefined) {
@@ -38,19 +38,19 @@ export var Class475 = function () {
             m = q.member7610;
             h = q.member7611;
             e = q.member7612;
-            j = q.member2616;
+            j = q.recol_d;
             i = q.member2618;
         } else if (q.member7613 !== undefined && q.member7614 !== undefined) {
             if (q.member7614) {
-                n = q.member7613.member7615().slice(0);
+                n = q.member7613.getModels().slice(0);
             } else {
-                n = q.member7613.member7616().slice(0);
+                n = q.member7613.getHeadModels().slice(0);
             }
-            var k = q.member7613.member7607();
+            var k = q.member7613.getRecolD();
             if (k !== null) {
                 j = k.slice(0);
             }
-            var o = q.member7613.member7608();
+            var o = q.member7613.getRetexD();
             if (o !== null) {
                 i = o.slice(0);
             }

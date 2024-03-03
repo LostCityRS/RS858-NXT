@@ -1,5 +1,5 @@
 import { Class105 } from 'Class105.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class214 } from 'Class214.js';
 export var Class275 = function () {
     var c = false;
@@ -41,7 +41,7 @@ export var Class275 = function () {
             }
             return undefined;
         }
-        var o = Class124(undefined, j.groupData);
+        var o = Packet(undefined, j.groupData);
         if (k.member3261(q) === 1) {
             return j.groupData.slice(0);
         }
@@ -68,7 +68,7 @@ export var Class275 = function () {
         if (g === undefined) {
             return undefined;
         }
-        return Class124(undefined, g);
+        return Packet(undefined, g);
     };
     b.prototype.member3264 = function (j, i, e, h) {
         var g = this.member3257(j, i, e, h);
@@ -91,7 +91,7 @@ export var Class275 = function () {
         this.member3255.member905(this.member3254);
     };
     b.prototype.member3266 = function () {
-        return 'Mem:' + Math.floor(this.member3255.member906() / (1024 * 1024)) + 'M';
+        return 'Mem:' + Math.floor(this.member3255.getRemaining() / (1024 * 1024)) + 'M';
     };
     return function (e) {
         return new b(e);

@@ -1,5 +1,5 @@
-export var Class122 = function () {
-    var k = {};
+export var CP1252 = function () {
+    var CP1252 = {};
     var i = '?'.charCodeAt(0);
     var m = 'A'.charCodeAt(0);
     var n = 'a'.charCodeAt(0);
@@ -9,35 +9,35 @@ export var Class122 = function () {
     var h = 'z'.charCodeAt(0);
     var j = '0'.charCodeAt(0);
     var e = '9'.charCodeAt(0);
-    var u = {};
-    u['\u20AC'.charCodeAt(0)] = 128;
-    u['\u201A'.charCodeAt(0)] = 130;
-    u['ƒ'.charCodeAt(0)] = 131;
-    u['\u201E'.charCodeAt(0)] = 132;
-    u['\u2026'.charCodeAt(0)] = 133;
-    u['\u2020'.charCodeAt(0)] = 134;
-    u['\u2021'.charCodeAt(0)] = 135;
-    u['ˆ'.charCodeAt(0)] = 136;
-    u['\u2030'.charCodeAt(0)] = 137;
-    u['Š'.charCodeAt(0)] = 138;
-    u['\u2039'.charCodeAt(0)] = 139;
-    u['Œ'.charCodeAt(0)] = 140;
-    u['Ž'.charCodeAt(0)] = 142;
-    u['\u2018'.charCodeAt(0)] = 145;
-    u['\u2019'.charCodeAt(0)] = 146;
-    u['\u201C'.charCodeAt(0)] = 147;
-    u['\u201D'.charCodeAt(0)] = 148;
-    u['\u2022'.charCodeAt(0)] = 149;
-    u['\u2013'.charCodeAt(0)] = 150;
-    u['\u2014'.charCodeAt(0)] = 151;
-    u['\u02DC'.charCodeAt(0)] = 152;
-    u['\u2122'.charCodeAt(0)] = 153;
-    u['š'.charCodeAt(0)] = 154;
-    u['\u203A'.charCodeAt(0)] = 155;
-    u['œ'.charCodeAt(0)] = 156;
-    u['ž'.charCodeAt(0)] = 158;
-    u['Ÿ'.charCodeAt(0)] = 159;
-    var s = [
+    var CHAR_TO_CODE = {};
+    CHAR_TO_CODE['\u20AC'.charCodeAt(0)] = 128;
+    CHAR_TO_CODE['\u201A'.charCodeAt(0)] = 130;
+    CHAR_TO_CODE['ƒ'.charCodeAt(0)] = 131;
+    CHAR_TO_CODE['\u201E'.charCodeAt(0)] = 132;
+    CHAR_TO_CODE['\u2026'.charCodeAt(0)] = 133;
+    CHAR_TO_CODE['\u2020'.charCodeAt(0)] = 134;
+    CHAR_TO_CODE['\u2021'.charCodeAt(0)] = 135;
+    CHAR_TO_CODE['ˆ'.charCodeAt(0)] = 136;
+    CHAR_TO_CODE['\u2030'.charCodeAt(0)] = 137;
+    CHAR_TO_CODE['Š'.charCodeAt(0)] = 138;
+    CHAR_TO_CODE['\u2039'.charCodeAt(0)] = 139;
+    CHAR_TO_CODE['Œ'.charCodeAt(0)] = 140;
+    CHAR_TO_CODE['Ž'.charCodeAt(0)] = 142;
+    CHAR_TO_CODE['\u2018'.charCodeAt(0)] = 145;
+    CHAR_TO_CODE['\u2019'.charCodeAt(0)] = 146;
+    CHAR_TO_CODE['\u201C'.charCodeAt(0)] = 147;
+    CHAR_TO_CODE['\u201D'.charCodeAt(0)] = 148;
+    CHAR_TO_CODE['\u2022'.charCodeAt(0)] = 149;
+    CHAR_TO_CODE['\u2013'.charCodeAt(0)] = 150;
+    CHAR_TO_CODE['\u2014'.charCodeAt(0)] = 151;
+    CHAR_TO_CODE['\u02DC'.charCodeAt(0)] = 152;
+    CHAR_TO_CODE['\u2122'.charCodeAt(0)] = 153;
+    CHAR_TO_CODE['š'.charCodeAt(0)] = 154;
+    CHAR_TO_CODE['\u203A'.charCodeAt(0)] = 155;
+    CHAR_TO_CODE['œ'.charCodeAt(0)] = 156;
+    CHAR_TO_CODE['ž'.charCodeAt(0)] = 158;
+    CHAR_TO_CODE['Ÿ'.charCodeAt(0)] = 159;
+    var CODE_TO_CHAR = [
         '\u20AC'.charCodeAt(0),
         0,
         '\u201A'.charCodeAt(0),
@@ -74,33 +74,33 @@ export var Class122 = function () {
     var c = function (x) {
         x = x & 255;
         if (x >= 128 && x < 160) {
-            if (s[x - 128] === 0) {
+            if (CODE_TO_CHAR[x - 128] === 0) {
                 return false;
             }
         }
         return true;
     };
-    k.member1034 = c;
+    CP1252.member1034 = c;
     var b = function (x) {
         var y;
         if (x > 0 && x < 128 || x >= 160 && x <= 255) {
             y = x;
         } else {
-            y = u[x];
+            y = CHAR_TO_CODE[x];
         }
         if (y === undefined) {
             y = i;
         }
         return y;
     };
-    k.member1035 = b;
+    CP1252.member1035 = b;
     var a = function (x) {
         var y = x & 255;
         if (y === 0) {
             throw new Error('963 ' + x);
         }
         if (y >= 128 && y < 160) {
-            var z = s[y - 128];
+            var z = CODE_TO_CHAR[y - 128];
             if (z === 0) {
                 z = i;
             }
@@ -108,8 +108,8 @@ export var Class122 = function () {
         }
         return y;
     };
-    k.member1036 = a;
-    k.member1037 = function (y) {
+    CP1252.decodeChar = a;
+    CP1252.member1037 = function (y) {
         var z = y.length;
         var A = new Array(z);
         for (var x = 0; x < z; x++) {
@@ -118,15 +118,15 @@ export var Class122 = function () {
                 A[x] = B;
                 continue;
             }
-            A[x] = u[B];
+            A[x] = CHAR_TO_CODE[B];
             if (A[x] === undefined) {
                 A[x] = i;
             }
         }
         return A;
     };
-    var t = k.member1037;
-    k.member1038 = function (y) {
+    var t = CP1252.member1037;
+    CP1252.member1038 = function (y) {
         var z = y.length;
         var A = new Uint16Array(z);
         var C = 0;
@@ -136,7 +136,7 @@ export var Class122 = function () {
                 continue;
             }
             if (B >= 128 && B < 160) {
-                var D = s[B - 128];
+                var D = CODE_TO_CHAR[B - 128];
                 if (D === 0) {
                     D = i;
                 }
@@ -146,8 +146,8 @@ export var Class122 = function () {
         }
         return String.fromCharCode.apply(undefined, A.subarray(0, C));
     };
-    var r = k.member1038;
-    k.member1039 = function (C) {
+    var r = CP1252.member1038;
+    CP1252.member1039 = function (C) {
         var A = '';
         var z;
         var B;
@@ -179,8 +179,8 @@ export var Class122 = function () {
         }
         return A;
     };
-    var q = k.member1039;
-    k.member1040 = function (D) {
+    var q = CP1252.member1039;
+    CP1252.member1040 = function (D) {
         var z = '';
         var y;
         var C;
@@ -226,6 +226,6 @@ export var Class122 = function () {
         }
         return z;
     };
-    var o = k.member1040;
-    return k;
+    var o = CP1252.member1040;
+    return CP1252;
 }();

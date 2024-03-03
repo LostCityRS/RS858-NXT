@@ -25,7 +25,7 @@ export var Class67 = function () {
             throw new Error('1670 ');
         }
     };
-    a.prototype.member444 = function () {
+    a.prototype.getID = function () {
         return this.member439;
     };
     a.prototype.member445 = function () {

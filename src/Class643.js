@@ -2,7 +2,7 @@ import { Class421 } from 'Class421.js';
 import { Class642 } from 'Class642.js';
 import { Class453 } from 'Class453.js';
 import { Class501 } from 'Class501.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 export var Class643 = function () {
     var b = {};
     var a;
@@ -76,8 +76,8 @@ export var Class643 = function () {
         }
         var e = a.member8252.member8253();
         var d = e.member8260(Class501.member8159);
-        d.member2698.member1051(Class124.member1152(h));
-        d.member2698.member1065(h);
+        d.packet.p1(Packet.member1152(h));
+        d.packet.pjstr(h);
         e.member8261(d);
     };
     Class421.member5205.member867 = function (g) {
@@ -88,9 +88,9 @@ export var Class643 = function () {
         }
         var e = a.member8252.member8253();
         var d = e.member8260(Class501.member8160);
-        d.member2698.member1054(Class124.member1152(i) + Class124.member1152(h));
-        d.member2698.member1065(i);
-        d.member2698.member1065(h);
+        d.packet.p2(Packet.member1152(i) + Packet.member1152(h));
+        d.packet.pjstr(i);
+        d.packet.pjstr(h);
         e.member8261(d);
     };
     Class421.member5206.member867 = function (j) {
@@ -105,8 +105,8 @@ export var Class643 = function () {
         }
         var i = a.member8252.member8253();
         var g = i.member8260(Class501.member8161);
-        g.member2698.member1054(Class124.member1152(k) + 1);
-        g.member2698.member1065(k);
+        g.packet.p2(Packet.member1152(k) + 1);
+        g.packet.pjstr(k);
         var d = 0;
         if (m) {
             d |= 1;
@@ -117,7 +117,7 @@ export var Class643 = function () {
         if (h) {
             d |= 4;
         }
-        g.member2698.member1051(d);
+        g.packet.p1(d);
         i.member8261(g);
     };
     return b;

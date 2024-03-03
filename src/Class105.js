@@ -83,7 +83,7 @@ export var Class105 = function () {
         this.member899.member301();
         this.member896 = this.member895;
     };
-    a.prototype.member906 = function () {
+    a.prototype.getRemaining = function () {
         return this.member896;
     };
     a.prototype.member907 = function () {

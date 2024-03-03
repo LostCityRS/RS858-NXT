@@ -40,10 +40,10 @@ export var Class579 = function () {
             e.push(t);
             i.push(s);
         };
-        b.member3590 = function () {
+        b.readyanim = function () {
             return j && n[0] !== undefined;
         };
-        var r = b.member3590;
+        var r = b.readyanim;
         b.member8918 = function () {
             return g;
         };
@@ -113,22 +113,22 @@ export var Class579 = function () {
         };
         b.member6219 = function (v, t) {
             o();
-            var u = v.member609();
+            var u = v.g1();
             for (var s = 0; s < u; s++) {
                 n.push(Class577({ member3456: v }));
-                d.push(v.member320());
+                d.push(v.gFloat());
             }
             if (k === Class578.member8911) {
                 for (var s = 0; s < u; s++) {
-                    e.push(v.member320());
-                    i.push(v.member320());
-                    h.push(v.member320());
+                    e.push(v.gFloat());
+                    i.push(v.gFloat());
+                    h.push(v.gFloat());
                 }
             }
             if (k === Class578.member8913) {
                 for (var s = 0; s < u; s++) {
-                    e.push(v.member320());
-                    i.push(v.member320());
+                    e.push(v.gFloat());
+                    i.push(v.gFloat());
                 }
             }
             j = true;

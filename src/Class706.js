@@ -1,12 +1,12 @@
 import { Class105 } from 'Class105.js';
 import { Class95 } from 'Class95.js';
 import { Class93 } from 'Class93.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class443 } from 'Class443.js';
-import { Class96 } from 'Class96.js';
-import { Class705 } from 'Class705.js';
+import { Priority } from 'Class96.js';
+import { ObjType } from 'Class705.js';
 import { Class704 } from 'Class704.js';
-export var Class706 = function (j) {
+export var ObjTypeList = function (j) {
     var q = {};
     var t = null;
     var r = null;
@@ -25,7 +25,7 @@ export var Class706 = function (j) {
         return g;
     };
     var e = null;
-    q.member7539 = function () {
+    q.getVarTypeProvider = function () {
         return e;
     };
     var k = Class105({ member895: 64 });
@@ -78,15 +78,15 @@ export var Class706 = function (j) {
             for (var F = s, G = 0; F < g && G++ < 200; F++) {
                 if (i[F] === undefined) {
                     var E = B(F);
-                    if (E === member47) {
+                    if (E === NULL) {
                         continue;
                     }
                     if (E !== undefined) {
-                        if (E.member7083() === -1 && E.member7087() === -1 && E.member7089() === -1 && E.member9972() === 0) {
+                        if (E.getCertTemplate() === -1 && E.getLentTemplate() === -1 && E.getBoughtTemplate() === -1 && E.getDummyItem() === 0) {
                             i[F] = {
-                                id: E.member444(),
+                                id: E.getID(),
                                 name: E.getName(),
-                                member9596: E.member9596()
+                                getStockMarket: E.getStockMarket()
                             };
                         }
                     }
@@ -119,7 +119,7 @@ export var Class706 = function (j) {
         o = j.member995;
         e = j.member2970;
         var v = o.member1439(Class95.member819).member3896();
-        g = v * Class131.member1262(Class131.member1214.member1210) + o.member1439(Class95.member819).member1440(v);
+        g = v * Js5ConfigGroup.getFileBits(Js5ConfigGroup.OBJTYPE.fileBits) + o.member1439(Class95.member819).member1440(v);
         z = [
             null,
             null,
@@ -144,63 +144,63 @@ export var Class706 = function (j) {
     var B = function (F) {
         var H = k.find(F);
         if (H === null) {
-            var K = o.getFile(Class95.member819, Class131.member1263(F, Class131.member1214.member1210), Class131.member1264(F, Class131.member1214.member1210), Class96.member840, Class131.member1214.priority);
+            var K = o.getFile(Class95.member819, Js5ConfigGroup.getGroupID(F, Js5ConfigGroup.OBJTYPE.fileBits), Js5ConfigGroup.getFileID(F, Js5ConfigGroup.OBJTYPE.fileBits), Priority.member840, Js5ConfigGroup.OBJTYPE.priority);
             if (K === null) {
                 return null;
             }
-            H = Class705(F, q, z.slice(0), b.slice(0), r.id);
+            H = ObjType(F, q, z.slice(0), b.slice(0), r.id);
             if (K !== undefined) {
                 H.decode(K);
             }
-            H.member2934();
-            if (H.member7083() !== -1) {
-                var L = B(H.member7083());
-                var M = B(H.member7084());
+            H.postDecode();
+            if (H.getCertTemplate() !== -1) {
+                var L = B(H.getCertTemplate());
+                var M = B(H.getCertLink());
                 if (L === null || M === null) {
                     return null;
                 }
                 H.member9982(Class704.member9931, L, M, undefined);
             }
-            if (H.member7085() !== -1) {
-                var L = B(H.member7085());
-                var M = B(H.member7086());
+            if (H.getShardTemplate() !== -1) {
+                var L = B(H.getShardTemplate());
+                var M = B(H.getShardLink());
                 if (L === null || M === null) {
                     return null;
                 }
                 H.member9982(Class704.member9934, L, M, q.member6827);
             }
-            if (H.member7087() !== -1) {
-                var L = B(H.member7087());
-                var M = B(H.member7088());
+            if (H.getLentTemplate() !== -1) {
+                var L = B(H.getLentTemplate());
+                var M = B(H.getLentLink());
                 if (L === null || M === null) {
                     return null;
                 }
                 H.member9982(Class704.member9932, L, M, q.member6821);
             }
-            if (H.member7089() !== -1) {
-                var L = B(H.member7089());
-                var M = B(H.member7090());
+            if (H.getBoughtTemplate() !== -1) {
+                var L = B(H.getBoughtTemplate());
+                var M = B(H.getBoughtLink());
                 if (L === null || M === null) {
                     return null;
                 }
                 H.member9982(Class704.member9933, L, M, q.member6822);
             }
-            if (!m && H.member8376) {
-                H.member3019(0);
+            if (!m && H.members) {
+                H.setTeam(0);
                 H.member9968(z);
                 H.member9969(b);
-                H.member9971(false);
-                H.member9970(null);
-                var I = H.member9344();
+                H.setStockMarket(false);
+                H.setQuests(null);
+                var I = H.getParams();
                 if (I !== null) {
                     var G = true;
                     for (var J in I) {
                         if (I[J] === undefined) {
                             continue;
                         }
-                        var E = e.member3227(Class131.member1215.member1204, parseInt(J));
-                        if (E === member47) {
-                            return member47;
+                        var E = e.getConfigType(Js5ConfigGroup.PARAMTYPE.member1204, parseInt(J));
+                        if (E === NULL) {
+                            return NULL;
                         }
                         if (E.member9779()) {
                             delete I[J];
@@ -209,7 +209,7 @@ export var Class706 = function (j) {
                         }
                     }
                     if (G) {
-                        H.member9974(null);
+                        H.setParams(null);
                     }
                 }
             }
@@ -221,7 +221,7 @@ export var Class706 = function (j) {
     var D = function () {
         return member8693;
     };
-    q.member8682 = D;
+    q.getAllowMembers = D;
     q.member9978 = function () {
         return n;
     };

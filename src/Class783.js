@@ -1,79 +1,79 @@
 import { Class484 } from 'Class484.js';
-import { Class465 } from 'Class465.js';
+import { VarDomainType } from 'Class465.js';
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class80 } from 'Class80.js';
 import { Class76 } from 'Class76.js';
-export var Class783 = function (q) {
-    var A = {};
-    var G;
+export var HitmarkType = function (q) {
+    var HitmarkType = {};
+    var myList;
     var b;
-    if (q.member625 !== undefined && q.member2896 !== undefined) {
+    if (q.member625 !== undefined && q.myList !== undefined) {
         b = q.member625;
-        G = q.member2896;
+        myList = q.myList;
     } else {
         throw new Error('1008 ');
     }
-    var o = false;
-    A.member10430 = function () {
-        return o;
+    var damagecolour_set = false;
+    HitmarkType.member10430 = function () {
+        return damagecolour_set;
     };
-    A.member7624 = function (N) {
-        o = N;
+    HitmarkType.member7624 = function (N) {
+        damagecolour_set = N;
     };
-    var I = -1;
-    A.member9787 = function () {
-        return I;
+    var damagefont = -1;
+    HitmarkType.getDamageFont = function () {
+        return damagefont;
     };
-    var v = Class484.member7705;
-    A.member993 = function () {
-        return v;
+    var damagecolour = Class484.member7705;
+    HitmarkType.getDamageColour = function () {
+        return damagecolour;
     };
-    var c = Class484.member7706;
-    A.member7682 = function () {
-        return c;
+    var sticktime = Class484.member7706;
+    HitmarkType.getStickTime = function () {
+        return sticktime;
     };
-    var C = -1;
-    var y = -1;
-    var E = -1;
-    var K = -1;
-    var n = 0;
-    A.member10431 = function () {
-        return n;
+    var classgraphic = -1;
+    var middlegraphic = -1;
+    var leftgraphic = -1;
+    var rightgraphic = -1;
+    var scrolltooffsetx = 0;
+    HitmarkType.getScrollToOffsetX = function () {
+        return scrolltooffsetx;
     };
-    var m = 0;
-    A.member10432 = function () {
-        return m;
+    var scrolltooffsety = 0;
+    HitmarkType.getScrollToOffsetY = function () {
+        return scrolltooffsety;
     };
-    var e = -1;
-    A.member9987 = function () {
-        return e;
+    var fadeout = -1;
+    HitmarkType.getFadeOut = function () {
+        return fadeout;
     };
-    var u = '';
-    var s = Class484.member7702;
-    A.member7721 = function () {
-        return s;
+    var damageformat = '';
+    var replacemode = Class484.member7702;
+    HitmarkType.getReplaceMode = function () {
+        return replacemode;
     };
-    var h = 0;
-    A.member10433 = function () {
-        return h;
+    var damageyof = 0;
+    HitmarkType.getDamageOffsetY = function () {
+        return damageyof;
     };
-    var B = 0;
-    var z = 0;
-    A.member10434 = function () {
-        return B;
+    var graphicof_x = 0;
+    var graphicof_y = 0;
+    HitmarkType.getGraphicOffsetX = function () {
+        return graphicof_x;
     };
-    A.member10435 = function () {
-        return z;
+    HitmarkType.getGraphicOffsetY = function () {
+        return graphicof_y;
     };
-    var k = null;
-    var j = -1;
-    var g = -1;
-    var r = 1;
-    var D = 1;
-    A.decode = function (O) {
+    var multimark = null;
+    var multivar = -1;
+    var multivarbit = -1;
+    var damagescaleto = 1;
+    var damagescalefrom = 1;
+    HitmarkType.decode = function (O) {
         while (true) {
-            var N = O.member609();
+            var N = O.g1();
             if (N === undefined) {
                 throw new Error('1009 ');
                 break;
@@ -81,78 +81,78 @@ export var Class783 = function (q) {
             if (N === 0) {
                 break;
             }
-            t(O, N);
+            decodeNext(O, N);
         }
     };
-    var x = A.decode;
-    var t = function (R, N) {
+    var x = HitmarkType.decode;
+    var decodeNext = function (packet, N) {
         if (N === 1) {
-            I = R.member1086();
+            damagefont = packet.gSmart2or4null();
         } else if (N === 2) {
-            v = R.g3();
-            o = true;
+            damagecolour = packet.g3();
+            damagecolour_set = true;
         } else if (N === 3) {
-            C = R.member1086();
+            classgraphic = packet.gSmart2or4null();
         } else if (N === 4) {
-            E = R.member1086();
+            leftgraphic = packet.gSmart2or4null();
         } else if (N === 5) {
-            y = R.member1086();
+            middlegraphic = packet.gSmart2or4null();
         } else if (N === 6) {
-            K = R.member1086();
+            rightgraphic = packet.gSmart2or4null();
         } else if (N === 7) {
-            n = R.member1071();
+            scrolltooffsetx = packet.g2s();
         } else if (N === 8) {
-            u = R.member1089(true);
+            damageformat = packet.gjstr(true);
         } else if (N === 9) {
-            c = R.member608();
+            sticktime = packet.g2();
         } else if (N === 10) {
-            m = R.member1071();
+            scrolltooffsety = packet.g2s();
         } else if (N === 11) {
-            e = 0;
+            fadeout = 0;
         } else if (N === 12) {
-            s = R.member609();
+            replacemode = packet.g1();
         } else if (N === 13) {
-            h = R.member1071();
+            damageyof = packet.g2s();
         } else if (N === 14) {
-            e = R.member608();
+            fadeout = packet.g2();
         } else if (N === 16) {
-            B = R.member1071();
-            z = R.member1071();
+            graphicof_x = packet.g2s();
+            graphicof_y = packet.g2s();
         } else if (N === 17 || N === 18) {
-            g = R.member608();
-            if (g === 65535) {
-                g = -1;
+            multivarbit = packet.g2();
+            if (multivarbit === 65535) {
+                multivarbit = -1;
             }
-            j = R.member608();
-            if (j === 65535) {
-                j = -1;
+            multivar = packet.g2();
+            if (multivar === 65535) {
+                multivar = -1;
             }
-            var O = -1;
+            var multidefault = -1;
             if (N === 18) {
-                O = R.member608();
-                if (O === 65535) {
-                    O = -1;
+                multidefault = packet.g2();
+                if (multidefault === 65535) {
+                    multidefault = -1;
                 }
             }
-            var Q = R.member609();
-            k = new Array(Q + 2);
-            for (var P = 0; P <= Q; P++) {
-                k[P] = R.member608();
-                if (k[P] === 65535) {
-                    k[P] = -1;
+            var count = packet.g1();
+            multimark = new Array(count + 2);
+            for (var i = 0; i <= count; i++) {
+                multimark[i] = packet.g2();
+                if (multimark[i] === 65535) {
+                    multimark[i] = -1;
                 }
             }
-            k[Q + 1] = O;
+            multimark[count + 1] = multidefault;
         } else if (N === 19) {
-            r = R.member1071();
+            damagescaleto = packet.g2s();
         } else if (N === 20) {
-            D = R.member1071();
+            damagescalefrom = packet.g2s();
         } else if (false) {
         }
     };
-    A.member3637 = function (P) {
-        var O = u;
-        P = Math.floor(P * r / D);
+    HitmarkType.member3637 = function (P) {
+        var O = damageformat;
+        P = Math.floor(P * damagescaleto / damagescalefrom);
         while (true) {
             var N = O.indexOf('%1');
             if (N < 0) {
@@ -162,132 +162,132 @@ export var Class783 = function (q) {
         }
         return O;
     };
-    var d = A.member3637;
-    A.member10436 = function (O) {
-        if (C < 0) {
+    var d = HitmarkType.member3637;
+    HitmarkType.member10436 = function (O) {
+        if (classgraphic < 0) {
             return null;
         }
-        var N = G.member8753(C);
+        var N = myList.member8753(classgraphic);
         if (N === null) {
             i(O);
-            var N = G.member8753(C);
+            var N = myList.member8753(classgraphic);
         }
         return N;
     };
-    var a = A.member10436;
-    A.member10437 = function (O) {
-        if (y < 0) {
+    var a = HitmarkType.member10436;
+    HitmarkType.member10437 = function (O) {
+        if (middlegraphic < 0) {
             return null;
         }
-        var N = G.member8753(y);
+        var N = myList.member8753(middlegraphic);
         if (N === null) {
             i(O);
-            var N = G.member8753(y);
+            var N = myList.member8753(middlegraphic);
         }
         return N;
     };
-    var M = A.member10437;
-    A.member10438 = function (O) {
-        if (E < 0) {
+    var M = HitmarkType.member10437;
+    HitmarkType.member10438 = function (O) {
+        if (leftgraphic < 0) {
             return null;
         }
-        var N = G.member8753(E);
+        var N = myList.member8753(leftgraphic);
         if (N === null) {
             i(O);
-            var N = G.member8753(E);
+            var N = myList.member8753(leftgraphic);
         }
         return N;
     };
-    var L = A.member10438;
-    A.member10439 = function (O) {
-        if (K < 0) {
+    var L = HitmarkType.member10438;
+    HitmarkType.member10439 = function (O) {
+        if (rightgraphic < 0) {
             return null;
         }
-        var N = G.member8753(K);
+        var N = myList.member8753(rightgraphic);
         if (N === null) {
             i(O);
-            var N = G.member8753(K);
+            var N = myList.member8753(rightgraphic);
         }
         return N;
     };
-    var J = A.member10439;
-    A.member10440 = function () {
-        return k !== null;
+    var J = HitmarkType.member10439;
+    HitmarkType.isMultiMark = function () {
+        return multimark !== null;
     };
-    var H = A.member10440;
-    A.member10441 = function () {
-        if (k === null || G.member8687() === null) {
+    var H = HitmarkType.isMultiMark;
+    HitmarkType.getMultiMark = function () {
+        if (multimark === null || myList.getVarValueProvider() === null) {
             return this;
         }
         var Q = -1;
-        if (g !== -1) {
-            var P = G.member7539().member7394(g);
-            if (P !== member47 && P !== undefined) {
-                Q = G.member8687().member2950(P);
+        if (multivarbit !== -1) {
+            var P = myList.getVarTypeProvider().getVarBitType(multivarbit);
+            if (P !== NULL && P !== undefined) {
+                Q = myList.getVarValueProvider().getVarBit(P);
             }
-        } else if (j !== -1) {
-            var N = G.member7539().member7393(Class465.member4134, j);
-            if (N !== member47 && N !== undefined) {
-                Q = G.member8687().member2943(N);
+        } else if (multivar !== -1) {
+            var N = myList.getVarTypeProvider().getVarType(VarDomainType.PLAYER, multivar);
+            if (N !== NULL && N !== undefined) {
+                Q = myList.getVarValueProvider().getVarInt(N);
             }
         }
-        if (Q < 0 || Q >= k.length - 1) {
-            var O = k[k.length - 1];
+        if (Q < 0 || Q >= multimark.length - 1) {
+            var O = multimark[multimark.length - 1];
             if (O !== -1) {
-                return G.list(O);
+                return myList.list(O);
             } else {
                 return undefined;
             }
         }
-        if (k[Q] === -1) {
+        if (multimark[Q] === -1) {
             return undefined;
         }
-        return G.list(k[Q]);
+        return myList.list(multimark[Q]);
     };
-    var F = A.member10441;
+    var F = HitmarkType.getMultiMark;
     var i = function (O) {
-        var T = G.member7535();
-        if (C >= 0 && G.member8753(C) === null) {
-            var U = T.getFile(Class95.member811, C, 0, Class96.member840);
+        var T = myList.member7535();
+        if (classgraphic >= 0 && myList.member8753(classgraphic) === null) {
+            var U = T.getFile(Class95.member811, classgraphic, 0, Priority.member840);
             if (U !== null) {
                 var W = Class80.member606(U);
-                var V = W[0].member600();
+                var V = W[0].getColour();
                 var Y = Class76(O, W[0].member556(), W[0].member557(), V, false);
                 Y.member563();
-                G.member8754(Y, C);
+                myList.member8754(Y, classgraphic);
             }
         }
-        if (y >= 0 && G.member8753(y) === null) {
-            var P = T.getFile(Class95.member811, y, 0, Class96.member840);
+        if (middlegraphic >= 0 && myList.member8753(middlegraphic) === null) {
+            var P = T.getFile(Class95.member811, middlegraphic, 0, Priority.member840);
             if (P !== null) {
                 var X = Class80.member606(P);
-                var V = X[0].member600();
+                var V = X[0].getColour();
                 var Y = Class76(O, X[0].member556(), X[0].member557(), V, false);
                 Y.member563();
-                G.member8754(Y, y);
+                myList.member8754(Y, middlegraphic);
             }
         }
-        if (E >= 0 && G.member8753(E) === null) {
-            var N = T.getFile(Class95.member811, E, 0, Class96.member840);
+        if (leftgraphic >= 0 && myList.member8753(leftgraphic) === null) {
+            var N = T.getFile(Class95.member811, leftgraphic, 0, Priority.member840);
             if (N !== null) {
                 var Q = Class80.member606(N);
-                var V = Q[0].member600();
+                var V = Q[0].getColour();
                 var Y = Class76(O, Q[0].member556(), Q[0].member557(), V, false);
                 Y.member563();
-                G.member8754(Y, E);
+                myList.member8754(Y, leftgraphic);
             }
         }
-        if (K >= 0 && G.member8753(K) === null) {
-            var R = T.getFile(Class95.member811, K, 0, Class96.member840);
+        if (rightgraphic >= 0 && myList.member8753(rightgraphic) === null) {
+            var R = T.getFile(Class95.member811, rightgraphic, 0, Priority.member840);
             if (R !== null) {
                 var S = Class80.member606(R);
-                var V = S[0].member600();
+                var V = S[0].getColour();
                 var Y = Class76(O, S[0].member556(), S[0].member557(), V, false);
                 Y.member563();
-                G.member8754(Y, K);
+                myList.member8754(Y, rightgraphic);
             }
         }
     };
     q = undefined;
-    return A;
+    return HitmarkType;
 };

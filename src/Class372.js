@@ -221,7 +221,7 @@ export var Class372 = function () {
         a[2] = e[2] + c;
         return this.member4118(a);
     };
-    b.prototype.member4121 = function () {
+    b.prototype.getOverlayHeight = function () {
         var c = this.member2098();
         if (c !== undefined) {
             return c.member557();

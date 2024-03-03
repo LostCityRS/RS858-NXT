@@ -29,30 +29,30 @@ export var Class186 = function (b) {
         a = b.member1596;
         c = b.member1704;
     } else if (b.member1524 !== undefined) {
-        e = b.member1524.member608();
+        e = b.member1524.g2();
         i = {
             member2069: new Float32Array([
-                b.member1524.member320(),
-                b.member1524.member320(),
-                b.member1524.member320()
+                b.member1524.gFloat(),
+                b.member1524.gFloat(),
+                b.member1524.gFloat()
             ]),
-            member2011: b.member1524.member1071()
+            member2011: b.member1524.g2s()
         };
         g = {
             member2069: new Float32Array([
-                b.member1524.member320(),
-                b.member1524.member320(),
-                b.member1524.member320()
+                b.member1524.gFloat(),
+                b.member1524.gFloat(),
+                b.member1524.gFloat()
             ]),
-            member2011: b.member1524.member1071()
+            member2011: b.member1524.g2s()
         };
         a = {
             member2069: new Float32Array([
-                b.member1524.member320(),
-                b.member1524.member320(),
-                b.member1524.member320()
+                b.member1524.gFloat(),
+                b.member1524.gFloat(),
+                b.member1524.gFloat()
             ]),
-            member2011: b.member1524.member1071()
+            member2011: b.member1524.g2s()
         };
         if (i.member2011 === -1) {
             i.member2011 = undefined;
@@ -63,7 +63,7 @@ export var Class186 = function (b) {
         if (a.member2011 === -1) {
             a.member2011 = undefined;
         }
-        c = b.member1524.member1073();
+        c = b.member1524.g4();
     } else {
         throw new Error('1492 ');
     }
@@ -86,20 +86,20 @@ export var Class186 = function (b) {
         };
     };
     d.member1318 = function (j) {
-        j.member1054(e);
-        j.member1063(i.member2069[0]);
-        j.member1063(i.member2069[1]);
-        j.member1063(i.member2069[2]);
-        j.member1054(i.member2011 === undefined ? -1 : i.member2011);
-        j.member1063(g.member2069[0]);
-        j.member1063(g.member2069[1]);
-        j.member1063(g.member2069[2]);
-        j.member1054(g.member2011 === undefined ? -1 : g.member2011);
-        j.member1063(a.member2069[0]);
-        j.member1063(a.member2069[1]);
-        j.member1063(a.member2069[2]);
-        j.member1054(a.member2011 === undefined ? -1 : a.member2011);
-        j.member1056(c);
+        j.p2(e);
+        j.pFloat(i.member2069[0]);
+        j.pFloat(i.member2069[1]);
+        j.pFloat(i.member2069[2]);
+        j.p2(i.member2011 === undefined ? -1 : i.member2011);
+        j.pFloat(g.member2069[0]);
+        j.pFloat(g.member2069[1]);
+        j.pFloat(g.member2069[2]);
+        j.p2(g.member2011 === undefined ? -1 : g.member2011);
+        j.pFloat(a.member2069[0]);
+        j.pFloat(a.member2069[1]);
+        j.pFloat(a.member2069[2]);
+        j.p2(a.member2011 === undefined ? -1 : a.member2011);
+        j.p4(c);
     };
     d.transform = function (j) {
         Class49.member318(j, i.member2069);

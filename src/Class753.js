@@ -7,21 +7,21 @@ export var Class753 = function () {
     };
     b.member25 = c;
     Class433.member6240.member6428 = function (g, j) {
-        var k = g.member608();
-        var e = g.member609();
+        var k = g.g2();
+        var e = g.g1();
         var i = (e & 1) === 1;
         var d = a.member9208.member7552(k, i);
         if (d === null) {
             d = a.member9208.member8478(k, i);
         }
-        while (g.member1047() < j) {
-            var m = g.member1078();
-            var n = g.member608();
+        while (g.getPos() < j) {
+            var m = g.gSmart1or2();
+            var n = g.g2();
             var h = 0;
             if (n !== 0) {
-                h = g.member609();
+                h = g.g1();
                 if (h === 255) {
-                    h = g.member1073();
+                    h = g.g4();
                 }
             }
             d.member8477(m, n - 1, h);
@@ -29,24 +29,24 @@ export var Class753 = function () {
         a.member7187.member9146(k);
     };
     Class433.member6241.member6428 = function (g, j) {
-        var k = g.member608();
-        var e = g.member609();
+        var k = g.g2();
+        var e = g.g1();
         var i = (e & 1) === 1;
         var d = a.member9208.member8478(k, i);
-        var n = g.member608();
+        var n = g.g2();
         for (var m = 0; m < n; m++) {
-            var o = g.member1118();
-            var h = g.member1107();
+            var o = g.g2_alt3();
+            var h = g.g1_alt1();
             if (h === 255) {
-                h = g.member1134();
+                h = g.g4_alt1();
             }
             d.member8477(m, o - 1, h);
         }
         a.member7187.member9146(k);
     };
     Class433.member6269.member6428 = function (g, i) {
-        var e = g.member608();
-        var d = g.member609();
+        var e = g.g2();
+        var d = g.g1();
         var h = (d & 1) === 1;
         a.member9208.member8479(e, h);
         a.member7187.member9146(e);

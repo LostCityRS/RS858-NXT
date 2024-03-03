@@ -1,6 +1,6 @@
 import { Class421 } from 'Class421.js';
 import { Class501 } from 'Class501.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class443 } from 'Class443.js';
 import { Class450 } from 'Class450.js';
 import { Class430 } from 'Class430.js';
@@ -87,9 +87,9 @@ export var Class631 = function () {
     var b = function (k, n) {
         var o = a.member8252.member8259();
         var m = o.member8260(Class501.member8125);
-        m.member2698.member1051(1 + Class124.member1152(k));
-        m.member2698.member1106(n);
-        m.member2698.member1065(k);
+        m.packet.p1(1 + Packet.member1152(k));
+        m.packet.p1_alt3(n);
+        m.packet.pjstr(k);
         o.member8261(m);
     };
     e.member9443 = b;
@@ -139,8 +139,8 @@ export var Class631 = function () {
         }
         var s = a.member8252.member8259();
         var q = s.member8260(Class501.member8135);
-        q.member2698.member1051(o.length + 1);
-        q.member2698.member1065(o);
+        q.packet.p1(o.length + 1);
+        q.packet.pjstr(o);
         s.member8261(q);
     };
     e.member9444 = j;
@@ -174,8 +174,8 @@ export var Class631 = function () {
                 g.member7255();
                 var s = a.member8252.member8259();
                 var o = s.member8260(Class501.member8134);
-                o.member2698.member1051(n.length + 1);
-                o.member2698.member1065(n);
+                o.packet.p1(n.length + 1);
+                o.packet.pjstr(n);
                 s.member8261(o);
                 return;
             }
@@ -263,9 +263,9 @@ export var Class631 = function () {
         if (k.length > 30) {
             k = k.substring(0, 30);
         }
-        n.member2698.member1051(Class124.member1152(m) + Class124.member1152(k));
-        n.member2698.member1065(k);
-        n.member2698.member1065(m);
+        n.packet.p1(Packet.member1152(m) + Packet.member1152(k));
+        n.packet.pjstr(k);
+        n.packet.pjstr(m);
         q.member8261(n);
     };
     return e;

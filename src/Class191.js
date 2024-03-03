@@ -1,6 +1,6 @@
 import { Class178 } from 'Class178.js';
 import { Class50 } from 'Class50.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class93 } from 'Class93.js';
 import { Class190 } from 'Class190.js';
 export var Class191 = function () {
@@ -56,17 +56,17 @@ export var Class191 = function () {
         }
     };
     c.member2142 = function (o, n) {
-        var m = i.getFile(b, o, 0, Class96.member841, Class93.member797);
-        if (m === member47) {
-            return member47;
+        var m = i.getFile(b, o, 0, Priority.member841, Class93.member797);
+        if (m === NULL) {
+            return NULL;
         }
         var k = Class178(c, undefined, undefined, undefined, m, n);
         return k;
     };
     c.member2143 = function (m) {
-        var k = i.getFile(d, m, 0, Class96.member841, Class93.member797);
-        if (k === member47) {
-            return member47;
+        var k = i.getFile(d, m, 0, Priority.member841, Class93.member797);
+        if (k === NULL) {
+            return NULL;
         }
         var n = Class190({ data: k });
         return n;

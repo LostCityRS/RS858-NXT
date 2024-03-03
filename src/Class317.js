@@ -199,10 +199,10 @@ export var Class317 = function () {
     };
     s.member3726 = a;
     var y = function (C) {
-        if (C.member1058 === undefined || C.member1059 === undefined) {
+        if (C.high === undefined || C.low === undefined) {
             throw new Error();
         }
-        var E = C.member1058, D = C.member1059;
+        var E = C.high, D = C.low;
         var B = '';
         while (E !== 0 || D !== 0) {
             var A = E % 36 * Math.pow(2, 32) + D;

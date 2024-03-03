@@ -161,7 +161,7 @@ export var Class146 = function () {
         return d.member21[this.member679.member31 + d.member31];
     };
     b.prototype.member25 = function (d) {
-        this.set(c.member1360, d.member444());
+        this.set(c.member1360, d.getID());
         this.set(c.size, d.getSize());
         this.set(c.member1361, d.member1398() ? 1 : 0);
         this.set(c.member1362, d.member1399() ? 1 : 0);
@@ -199,7 +199,7 @@ export var Class146 = function () {
     b.prototype.member681 = function () {
         return new Uint32Array(member53.member21.slice(this.member679.member31 * 4, this.member679.member31 * 4 + this.member679.member30));
     };
-    b.prototype.member444 = function () {
+    b.prototype.getID = function () {
         return this.get(c.member1360);
     };
     b.prototype.getSize = function () {

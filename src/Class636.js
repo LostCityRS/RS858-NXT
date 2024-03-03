@@ -20,17 +20,17 @@ export var Class636 = function () {
             } else {
                 var o = n(q.member9529(), q.member9530(), q.member9531());
                 if (q.member9531() === 1) {
-                    o.member2698.member1051(-1);
-                    o.member2698.member1051(-1);
-                    o.member2698.member1054(0);
-                    o.member2698.member1051(57);
-                    o.member2698.member1051(0);
-                    o.member2698.member1051(0);
-                    o.member2698.member1051(89);
+                    o.packet.p1(-1);
+                    o.packet.p1(-1);
+                    o.packet.p2(0);
+                    o.packet.p1(57);
+                    o.packet.p1(0);
+                    o.packet.p1(0);
+                    o.packet.p1(89);
                     r.member2026(i);
-                    o.member2698.member1054(i[0]);
-                    o.member2698.member1054(i[1]);
-                    o.member2698.member1051(63);
+                    o.packet.p2(i[0]);
+                    o.packet.p2(i[1]);
+                    o.packet.p1(63);
                 }
                 b.member8252.member9083().member8261(o);
             }
@@ -44,11 +44,11 @@ export var Class636 = function () {
         } else if (s === 1) {
             q = r.member8260(Class501.member8129);
         }
-        q.member2698.member1115(t);
-        q.member2698.member1051(Class264.member3132() ? 1 : 0);
-        q.member2698.member1114(o);
+        q.packet.p2_alt3(t);
+        q.packet.p1(Class264.member3132() ? 1 : 0);
+        q.packet.p2_alt2(o);
         b.member9171.member9532(o * Class86.member718, t * Class86.member718, false);
-        b.member7620.member9533(false);
+        b.delayedStateChange.member9533(false);
         return q;
     };
     g.member9534 = n;
@@ -77,22 +77,22 @@ export var Class636 = function () {
         var s = b.member8252.member9083();
         var o = s.member8260(r);
         if (r === Class501.member8096) {
-            o.member2698.member1113(b.member7619.member9249());
-            o.member2698.member1114(q.member9530());
-            o.member2698.member1056(q.member9531());
-            o.member2698.member1114(q.member9529());
-            o.member2698.member1115(b.member7619.member9248());
-            o.member2698.member1131(b.member7619.member9247());
-            o.member2698.member1106(Class264.member3132() ? 1 : 0);
+            o.packet.p2_alt1(b.member7619.member9249());
+            o.packet.p2_alt2(q.member9530());
+            o.packet.p4(q.member9531());
+            o.packet.p2_alt2(q.member9529());
+            o.packet.p2_alt3(b.member7619.member9248());
+            o.packet.p4_alt1(b.member7619.member9247());
+            o.packet.p1_alt3(Class264.member3132() ? 1 : 0);
         } else {
-            o.member2698.member1051(Class264.member3132() ? 1 : 0);
-            o.member2698.member1115(q.member9529());
-            o.member2698.member1115(q.member9530());
-            o.member2698.member1131(q.member9531());
+            o.packet.p1(Class264.member3132() ? 1 : 0);
+            o.packet.p2_alt3(q.member9529());
+            o.packet.p2_alt3(q.member9530());
+            o.packet.p4_alt1(q.member9531());
         }
         b.member8252.member9083().member8261(o);
         b.member9171.member9532(q.member9529() * Class86.member718, q.member9530() * Class86.member718, false);
-        b.member7620.member9533(false);
+        b.delayedStateChange.member9533(false);
     };
     Class635.member9475.member867 = Class635.member9512.member867 = function (o) {
         e(Class501.member8083, o);
@@ -119,18 +119,18 @@ export var Class636 = function () {
         var s = b.member8252.member9083();
         var o = s.member8260(r);
         if (r === Class501.member8089) {
-            o.member2698.member1051(Class264.member3132() ? 1 : 0);
-            o.member2698.member1054(b.member7619.member9248());
-            o.member2698.member1115(b.member7619.member9249());
-            o.member2698.member1115(q.member9531());
-            o.member2698.member1056(b.member7619.member9247());
+            o.packet.p1(Class264.member3132() ? 1 : 0);
+            o.packet.p2(b.member7619.member9248());
+            o.packet.p2_alt3(b.member7619.member9249());
+            o.packet.p2_alt3(q.member9531());
+            o.packet.p4(b.member7619.member9247());
         } else {
-            o.member2698.member1114(q.member9531());
-            o.member2698.member1051(Class264.member3132() ? 1 : 0);
+            o.packet.p2_alt2(q.member9531());
+            o.packet.p1(Class264.member3132() ? 1 : 0);
         }
         b.member8252.member9083().member8261(o);
         b.member9171.member9532(q.member9529() * Class86.member718, q.member9530() * Class86.member718, false);
-        b.member7620.member9533(false);
+        b.delayedStateChange.member9533(false);
     };
     Class635.member9483.member867 = function (o) {
         k(Class501.member8076, o);
@@ -157,22 +157,22 @@ export var Class636 = function () {
         var s = b.member8252.member9083();
         var o = s.member8260(r);
         if (r === Class501.member8082) {
-            o.member2698.member1115(q.member9531());
-            o.member2698.member1104((b.member9179.isOpen() ? 2 : 0) | (Class264.member3132() ? 1 : 0));
-            o.member2698.member1114(b.member7619.member9249());
-            o.member2698.member1131(b.member7619.member9247());
-            o.member2698.member1114(b.member7619.member9248());
-            o.member2698.member1114(q.member9530());
-            o.member2698.member1113(q.member9529());
+            o.packet.p2_alt3(q.member9531());
+            o.packet.p1_alt1((b.member9179.isOpen() ? 2 : 0) | (Class264.member3132() ? 1 : 0));
+            o.packet.p2_alt2(b.member7619.member9249());
+            o.packet.p4_alt1(b.member7619.member9247());
+            o.packet.p2_alt2(b.member7619.member9248());
+            o.packet.p2_alt2(q.member9530());
+            o.packet.p2_alt1(q.member9529());
         } else {
-            o.member2698.member1054(q.member9530());
-            o.member2698.member1104((b.member9179.isOpen() ? 2 : 0) | (Class264.member3132() ? 1 : 0));
-            o.member2698.member1113(q.member9531());
-            o.member2698.member1113(q.member9529());
+            o.packet.p2(q.member9530());
+            o.packet.p1_alt1((b.member9179.isOpen() ? 2 : 0) | (Class264.member3132() ? 1 : 0));
+            o.packet.p2_alt1(q.member9531());
+            o.packet.p2_alt1(q.member9529());
         }
         b.member8252.member9083().member8261(o);
         b.member9171.member9532(q.member9529() * Class86.member718, q.member9530() * Class86.member718, false);
-        b.member7620.member9533(false);
+        b.delayedStateChange.member9533(false);
     };
     Class635.member9490.member867 = function (o) {
         j(Class501.member8097, o);
@@ -237,8 +237,8 @@ export var Class636 = function () {
     var j = function (r, q) {
         var s = b.member8252.member9083();
         var o = s.member8260(r);
-        o.member2698.member1114(q.member9531());
-        o.member2698.member1051(Class264.member3132() ? 1 : 0);
+        o.packet.p2_alt2(q.member9531());
+        o.packet.p1(Class264.member3132() ? 1 : 0);
         b.member8252.member9083().member8261(o);
     };
     g.member9535 = function (u, q) {
@@ -281,8 +281,8 @@ export var Class636 = function () {
             }
             var t = b.member8252.member9083();
             var o = t.member8260(s);
-            o.member2698.member1114(r.member7649());
-            o.member2698.member1051(Class264.member3132() ? 1 : 0);
+            o.packet.p2_alt2(r.member7649());
+            o.packet.p1(Class264.member3132() ? 1 : 0);
             b.member8252.member9083().member8261(o);
         }
     };
@@ -295,21 +295,21 @@ export var Class636 = function () {
     var h = function (o) {
         var s = b.member8252.member9083();
         var q = s.member8260(Class501.member8107);
-        q.member2698.member1054(b.member7619.member9249());
-        q.member2698.member1104(Class264.member3132() ? 1 : 0);
-        q.member2698.member1131(b.member7619.member9247());
-        q.member2698.member1114(b.member7619.member9248());
-        q.member2698.member1114(o);
+        q.packet.p2(b.member7619.member9249());
+        q.packet.p1_alt1(Class264.member3132() ? 1 : 0);
+        q.packet.p4_alt1(b.member7619.member9247());
+        q.packet.p2_alt2(b.member7619.member9248());
+        q.packet.p2_alt2(o);
         b.member8252.member9083().member8261(q);
         if (b.member7135().member7649() !== o) {
             var r = b.member6452.member6453(o);
             r.member2026(i);
             b.member9171.member9532(i[0], i[2], false);
-            b.member7620.member9533(false);
+            b.delayedStateChange.member9533(false);
         }
     };
     g.member9537 = function (o) {
-        if (!b.member7619.member8851() || (b.member7619.member9180() & (Class604.member4134 | Class604.member6961)) === 0) {
+        if (!b.member7619.member8851() || (b.member7619.member9180() & (Class604.PLAYER | Class604.member6961)) === 0) {
             return;
         }
         var q = b.member6452.member8450(a, { member9536: o });
@@ -320,7 +320,7 @@ export var Class636 = function () {
             if ((b.member7619.member9180() & Class604.member6961) === 0) {
                 return;
             }
-        } else if ((b.member7619.member9180() & Class604.member4134) === 0) {
+        } else if ((b.member7619.member9180() & Class604.PLAYER) === 0) {
             return;
         }
         h(q.member7649());

@@ -1,11 +1,11 @@
 import { Class531 } from 'Class531.js';
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 import { Class86 } from 'Class86.js';
 export var Class764 = function () {
     var a = function (e) {
         var g = Class531({ member7710: e });
         var b = e;
-        var c = Class290();
+        var c = CoordFine();
         var d = [];
         g.member487 = function () {
             var k = b.member6444.member6445();

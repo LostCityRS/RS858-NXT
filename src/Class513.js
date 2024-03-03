@@ -1,5 +1,5 @@
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class427 } from 'Class427.js';
 export var Class513 = function () {
     var d = {};
@@ -12,7 +12,7 @@ export var Class513 = function () {
     var e = function () {
         if (j.member1437(Class95.member823)) {
             var r = j.member1439(Class95.member823);
-            if (r === member47) {
+            if (r === NULL) {
                 return false;
             }
             var x = true;
@@ -40,8 +40,8 @@ export var Class513 = function () {
             }
             k = new Array(n.length);
             for (var q = 0; q < n.length; q++) {
-                var m = j.getFile(Class95.member823, u, n[q], Class96.member840);
-                var s = j.getFile(Class95.member823, t, o[q], Class96.member840);
+                var m = j.getFile(Class95.member823, u, n[q], Priority.member840);
+                var s = j.getFile(Class95.member823, t, o[q], Priority.member840);
                 if (m !== undefined && s !== undefined) {
                     k[q] = Class427({
                         member6168: m,
@@ -58,14 +58,14 @@ export var Class513 = function () {
     };
     var b = function () {
         if (k === null && !e()) {
-            return member47;
+            return NULL;
         }
         return k;
     };
     d.member8329 = b;
     var a = function (o) {
         if (k === null && !e()) {
-            return member47;
+            return NULL;
         }
         var n = new Array(0);
         for (var m = 0; m < k.length; m++) {
@@ -78,7 +78,7 @@ export var Class513 = function () {
     d.member8330 = a;
     var i = function (n) {
         if (k === null && !e()) {
-            return member47;
+            return NULL;
         }
         for (var m = 0; m < k.length; m++) {
             if (k[m].member6196() && k[m].member6201(n)) {
@@ -90,7 +90,7 @@ export var Class513 = function () {
     d.member8331 = i;
     var h = function (m) {
         if (k === null && !e()) {
-            return member47;
+            return NULL;
         }
         for (var n = 0; n < k.length; n++) {
             if (k[n].member6192() === m) {
@@ -102,7 +102,7 @@ export var Class513 = function () {
     d.member8332 = h;
     var g = function (m) {
         if (k === null && !e()) {
-            return member47;
+            return NULL;
         }
         for (var n = 0; n < k.length; n++) {
             if (k[n].member6191() === m) {

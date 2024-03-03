@@ -1,7 +1,7 @@
 import { Class309 } from 'Class309.js';
 import { Class311 } from 'Class311.js';
 import { Class262 } from 'Class262.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class93 } from 'Class93.js';
 export var Class330 = function () {
     var a = function (q, b, o, h, c) {
@@ -47,12 +47,12 @@ export var Class330 = function () {
         };
         var m = function () {
             if (e === Class309.member3660) {
-                j = q.getFile(b, o, 0, Class96.member841, Class93.member797);
+                j = q.getFile(b, o, 0, Priority.member841, Class93.member797);
                 if (j === undefined) {
                     e = Class309.member3304;
                     return;
                 }
-                if (j !== member47) {
+                if (j !== NULL) {
                     d();
                     e = Class309.member3661;
                     if (c !== undefined) {

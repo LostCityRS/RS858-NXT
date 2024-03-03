@@ -14,23 +14,23 @@ export var Class172 = function () {
     };
     var b = function (d) {
         while (true) {
-            var c = d.member609();
+            var c = d.g1();
             if (c === 0) {
                 break;
             } else if (c === 1) {
-                this.member651 = d.member608();
+                this.member651 = d.g2();
                 if (this.member651 === 65535) {
                     this.member651 = -1;
                 }
             } else if (c === 2) {
-                this.member1676 = d.member608() + 1;
-                this.member1677 = d.member608() + 1;
+                this.member1676 = d.g2() + 1;
+                this.member1677 = d.g2() + 1;
             } else if (c === 3) {
-                d.member1070();
+                d.g1s();
             } else if (c === 4) {
-                this.member1380 = d.member609();
+                this.member1380 = d.g1();
             } else if (c === 5) {
-                this.member1678 = d.member609();
+                this.member1678 = d.g1();
             } else if (c === 6) {
                 this.member1679 = true;
             } else if (c === 7) {
@@ -40,7 +40,7 @@ export var Class172 = function () {
             }
         }
     };
-    a.prototype.member701 = function () {
+    a.prototype.getMaterial = function () {
         return this.member651;
     };
     a.prototype.member1680 = function () {

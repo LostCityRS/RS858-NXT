@@ -7,11 +7,11 @@ export var Class779 = function (a) {
     if (a.data !== undefined) {
         var e = a.data;
         while (true) {
-            var c = e.member609();
+            var c = e.g1();
             if (c === 0) {
                 break;
             } else if (c === 1) {
-                b = e.member608();
+                b = e.g2();
             } else {
                 throw new Error('1715 ' + c);
             }

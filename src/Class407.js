@@ -1,10 +1,10 @@
 import { Class86 } from 'Class86.js';
 import { Class158 } from 'Class158.js';
 import { Class195 } from 'Class195.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class95 } from 'Class95.js';
 import { Class271 } from 'Class271.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class37 } from 'Class37.js';
 import { Class140 } from 'Class140.js';
 import { Class41 } from 'Class41.js';
@@ -109,8 +109,8 @@ export var Class407 = function () {
             }
             var G = true;
             for (var x = 0; x < P.length; x++) {
-                var V = y.member3227(Class131.member1258.member1204, P[x].member4661);
-                if (V === member47) {
+                var V = y.getConfigType(Js5ConfigGroup.WATERTYPE.member1204, P[x].member4661);
+                if (V === NULL) {
                     G = false;
                 } else {
                     P[x].member1591 = V.member4662();
@@ -167,26 +167,26 @@ export var Class407 = function () {
             if (M === undefined) {
                 return new Array(0);
             } else if (M === false) {
-                return member47;
+                return NULL;
             } else {
-                var v = I.getFile(Class95.member809, A, Class271.member3214, Class96.member841);
-                var z = v.member609();
+                var v = I.getFile(Class95.member809, A, Class271.member3214, Priority.member841);
+                var z = v.g1();
                 var J = new Array(z);
                 for (var C = 0; C < z; C++) {
-                    var D = v.member1070();
-                    var y = v.member1070();
-                    var H = v.member1070();
-                    var B = v.member1070();
-                    var F = v.member1071();
+                    var D = v.g1s();
+                    var y = v.g1s();
+                    var H = v.g1s();
+                    var B = v.g1s();
+                    var F = v.g2s();
                     var x = new Float32Array(4);
                     var P = Class37.create();
-                    v.member1088(n);
-                    Class140.member1353(n, v.member320() * 2 * Math.PI, x);
+                    v.gFloatArray(n);
+                    Class140.member1353(n, v.gFloat() * 2 * Math.PI, x);
                     Class140.normalize(x);
-                    var O = v.member608();
-                    var u = v.member1070() / 50;
-                    var t = v.member1070() / 50;
-                    var L = v.member608();
+                    var O = v.g2();
+                    var u = v.g1s() / 50;
+                    var t = v.g1s() / 50;
+                    var L = v.g2();
                     var E = J[C] = Class195();
                     E.member1593 = new Float32Array([
                         D * Class86.member718 + Class86.member718 / 2,

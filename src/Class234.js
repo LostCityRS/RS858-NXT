@@ -5,7 +5,7 @@ export var Class234 = function () {
         }
         var i = {};
         var c;
-        i.member444 = function () {
+        i.getID = function () {
             return c;
         };
         var e;

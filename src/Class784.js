@@ -1,103 +1,103 @@
-import { Class122 } from 'Class122.js';
-import { Class463 } from 'Class463.js';
-export var Class784 = function (g) {
-    var t = {};
+import { CP1252 } from 'Class122.js';
+import { ScriptVarType } from 'Class463.js';
+export var EnumType = function (g) {
+    var EnumType = {};
     var x;
     var a = -1;
-    if (g.member625 !== undefined && g.member2896 !== undefined) {
+    if (g.member625 !== undefined && g.myList !== undefined) {
         a = g.member625;
-        x = g.member2896;
+        x = g.myList;
     } else {
         throw new Error('1790 ');
     }
-    var q;
-    t.member9451 = function () {
-        return q;
+    var inputtype;
+    EnumType.getInputType = function () {
+        return inputtype;
     };
-    var m;
-    t.member10442 = function () {
-        return m;
+    var inputtype_legacy;
+    EnumType.getLegacyInputType = function () {
+        return inputtype_legacy;
     };
-    var d;
-    t.member9449 = function () {
-        return d;
+    var outputtype;
+    EnumType.getOutputType = function () {
+        return outputtype;
     };
-    var v;
-    t.member10443 = function () {
-        return v;
+    var outputtype_legacy;
+    EnumType.getLegacyOutputType = function () {
+        return outputtype_legacy;
     };
-    var z = 0;
-    var y = 'null';
-    var u = null;
-    var A = null;
-    var c = 0;
-    t.member9454 = function () {
-        return c;
+    var defaultint = 0;
+    var defaultstr = 'null';
+    var val_sparse = null;
+    var val_dense = null;
+    var val_count = 0;
+    EnumType.getOutputCount = function () {
+        return val_count;
     };
     var r = null;
-    var o = function (C) {
+    var decode = function (packet) {
         while (true) {
-            var B = C.member609();
-            if (B === undefined) {
+            var opcode = packet.g1();
+            if (opcode === undefined) {
                 throw new Error('1791 ');
                 break;
             }
-            if (B === 0) {
+            if (opcode === 0) {
                 break;
             }
-            n(C, B);
+            decodeNext(packet, opcode);
         }
     };
-    t.decode = o;
-    var n = function (H, D) {
-        if (D === 1) {
-            m = Class122.member1036(H.member609());
-        } else if (D === 2) {
-            v = Class122.member1036(H.member609());
-        } else if (D === 3) {
-            y = H.member1089();
-        } else if (D === 4) {
-            z = H.member1074();
-        } else if (D === 5 || D === 6) {
-            c = H.member608();
-            u = {};
-            for (var G = 0; G < c; G++) {
-                var F = H.member1074();
-                var E;
-                if (D === 5) {
-                    E = H.member1089();
+    EnumType.decode = decode;
+    var decodeNext = function (packet, opcode) {
+        if (opcode === 1) {
+            inputtype_legacy = CP1252.decodeChar(packet.g1());
+        } else if (opcode === 2) {
+            outputtype_legacy = CP1252.decodeChar(packet.g1());
+        } else if (opcode === 3) {
+            defaultstr = packet.gjstr();
+        } else if (opcode === 4) {
+            defaultint = packet.g4s();
+        } else if (opcode === 5 || opcode === 6) {
+            val_count = packet.g2();
+            val_sparse = {};
+            for (var i = 0; i < val_count; i++) {
+                var key = packet.g4s();
+                var value;
+                if (opcode === 5) {
+                    value = packet.gjstr();
                 } else {
-                    E = H.member1074();
+                    value = packet.g4s();
                 }
-                u[F] = E;
+                val_sparse[key] = value;
             }
-        } else if (D === 7 || D === 8) {
-            var B = H.member608();
-            c = H.member608();
-            A = new Array(B);
-            for (var G = 0; G < c; G++) {
-                var F = H.member608();
-                if (D === 7) {
-                    A[F] = H.member1089();
+        } else if (opcode === 7 || opcode === 8) {
+            var capacity = packet.g2();
+            val_count = packet.g2();
+            val_dense = new Array(capacity);
+            for (var i = 0; i < val_count; i++) {
+                var F = packet.g2();
+                if (opcode === 7) {
+                    val_dense[F] = packet.gjstr();
                 } else {
-                    A[F] = H.member1074();
+                    val_dense[F] = packet.g4s();
                 }
             }
-        } else if (D === 101) {
-            var C = H.member1078();
-            q = Class463.getByID(C);
-            if (q !== null) {
-                m = q.member7286.charCodeAt(0);
+        } else if (opcode === 101) {
+            var typeCode = packet.gSmart1or2();
+            inputtype = ScriptVarType.getByID(typeCode);
+            if (inputtype !== null) {
+                inputtype_legacy = inputtype.legacyChar.charCodeAt(0);
             } else {
-                console.log('Null input type: ' + C);
+                console.log('Null input type: ' + typeCode);
             }
-        } else if (D === 102) {
-            var C = H.member1078();
-            d = Class463.getByID(C);
-            if (d !== null) {
-                v = d.member7286.charCodeAt(0);
+        } else if (opcode === 102) {
+            var typeCode = packet.gSmart1or2();
+            outputtype = ScriptVarType.getByID(typeCode);
+            if (outputtype !== null) {
+                outputtype_legacy = outputtype.legacyChar.charCodeAt(0);
             } else {
-                console.log('Null output type: ' + C);
+                console.log('Null output type: ' + typeCode);
             }
         } else if (false) {
         }
@@ -105,36 +105,36 @@ export var Class784 = function (g) {
     var i = function (C) {
         var B = k(C);
         if (B === undefined) {
-            return z;
+            return defaultint;
         } else {
             return B;
         }
     };
-    t.member9452 = i;
+    EnumType.member9452 = i;
     var h = function (C) {
         var B = k(C);
         if (B === undefined) {
-            return y;
+            return defaultstr;
         } else {
             return B;
         }
     };
-    t.member9450 = h;
+    EnumType.member9450 = h;
     var k = function (B) {
-        if (A !== null) {
-            if (B < 0 || B >= A.length) {
+        if (val_dense !== null) {
+            if (B < 0 || B >= val_dense.length) {
                 return undefined;
             } else {
-                return A[B];
+                return val_dense[B];
             }
-        } else if (u !== null) {
-            return u[B];
+        } else if (val_sparse !== null) {
+            return val_sparse[B];
         } else {
             return undefined;
         }
     };
     var e = function (B) {
-        if (c === 0) {
+        if (val_count === 0) {
             return false;
         }
         if (r === null) {
@@ -142,9 +142,9 @@ export var Class784 = function (g) {
         }
         return r[B] !== undefined;
     };
-    t.member9453 = e;
+    EnumType.member9453 = e;
     var b = function (B) {
-        if (c === 0) {
+        if (val_count === 0) {
             return undefined;
         }
         if (r === null) {
@@ -152,19 +152,19 @@ export var Class784 = function (g) {
         }
         return r[B];
     };
-    t.member9455 = b;
-    var j = function () {
-        return c;
+    EnumType.member9455 = b;
+    var getOutputCount = function () {
+        return val_count;
     };
-    t.member9454 = j;
+    EnumType.getOutputCount = getOutputCount;
     var s = function () {
         r = {};
-        if (A !== null) {
-            for (var E = 0; E < A.length; E++) {
-                if (A[E] === undefined) {
+        if (val_dense !== null) {
+            for (var E = 0; E < val_dense.length; E++) {
+                if (val_dense[E] === undefined) {
                     continue;
                 }
-                var C = A[E];
+                var C = val_dense[E];
                 var D = r[C];
                 if (D === undefined) {
                     D = new Array(0);
@@ -172,9 +172,9 @@ export var Class784 = function (g) {
                 }
                 D[D.length] = E;
             }
-        } else if (u !== null) {
-            for (var B in u) {
-                var C = u[B];
+        } else if (val_sparse !== null) {
+            for (var B in val_sparse) {
+                var C = val_sparse[B];
                 var D = r[C];
                 if (D === undefined) {
                     D = new Array(0);
@@ -187,5 +187,5 @@ export var Class784 = function (g) {
         }
     };
     g = undefined;
-    return t;
+    return EnumType;
 };

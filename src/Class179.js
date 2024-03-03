@@ -15,7 +15,7 @@ export var Class179 = function () {
             return g;
         };
         var n;
-        c.member600 = function () {
+        c.getColour = function () {
             return n;
         };
         c.member2005 = function (s) {

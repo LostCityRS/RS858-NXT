@@ -8,7 +8,7 @@ export var Class520 = function (c) {
         a = e;
     };
     var d = function (e) {
-        a = e.member1089();
+        a = e.gjstr();
     };
     if (c !== undefined) {
         d(c);

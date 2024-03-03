@@ -1,56 +1,56 @@
 import { Class410 } from 'Class410.js';
-export var Class736 = function (k) {
-    var e = {};
-    var c;
+export var LightType = function (k) {
+    var LightType = {};
+    var myList;
     var g = -1;
-    if (k.member625 !== undefined && k.member2896 !== undefined) {
+    if (k.member625 !== undefined && k.myList !== undefined) {
         g = k.member625;
-        c = k.member2896;
+        myList = k.myList;
     } else {
         throw new Error('1752 ');
     }
-    var h = Class410.member4704;
-    e.member4748 = function () {
-        return h;
+    var function0 = Class410.member4704;
+    LightType.getFunction = function () {
+        return function0;
     };
-    var d = 0;
-    e.member2968 = function () {
-        return d;
+    var offset = 0;
+    LightType.getOffset = function () {
+        return offset;
     };
-    var j = 2048;
-    e.member4749 = function () {
-        return j;
+    var amplitude = 2048;
+    LightType.getAmplitude = function () {
+        return amplitude;
     };
-    var i = 2048;
-    e.member4750 = function () {
-        return i;
+    var frequency = 2048;
+    LightType.getFrequency = function () {
+        return frequency;
     };
-    var b = function (n) {
+    var b = function (packet) {
         while (true) {
-            var m = n.member609();
-            if (m === undefined) {
+            var opcode = packet.g1();
+            if (opcode === undefined) {
                 throw new Error('1753 ');
                 break;
             }
-            if (m === 0) {
+            if (opcode === 0) {
                 break;
             }
-            a(n, m);
+            decodeNext(packet, opcode);
         }
     };
-    e.decode = b;
-    var a = function (n, m) {
-        if (m === 1) {
-            h = n.member609();
-        } else if (m === 2) {
-            i = n.member608();
-        } else if (m === 3) {
-            j = n.member608();
-        } else if (m === 4) {
-            d = n.member1071();
+    LightType.decode = b;
+    var decodeNext = function (packet, opcode) {
+        if (opcode === 1) {
+            function0 = packet.g1();
+        } else if (opcode === 2) {
+            frequency = packet.g2();
+        } else if (opcode === 3) {
+            amplitude = packet.g2();
+        } else if (opcode === 4) {
+            offset = packet.g2s();
         } else if (false) {
         }
     };
     k = undefined;
-    return e;
+    return LightType;
 };

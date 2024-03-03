@@ -1,7 +1,7 @@
 import { Class86 } from 'Class86.js';
 import { Class291 } from 'Class291.js';
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class226 } from 'Class226.js';
 import { Class76 } from 'Class76.js';
 export var Class427 = function () {
@@ -49,63 +49,63 @@ export var Class427 = function () {
         if (d.member6168 !== undefined && d.member6154 !== undefined && d.member625 !== undefined && d.member995 !== undefined) {
             this.member995 = d.member995;
             this.member625 = d.member625;
-            this.member6149 = d.member6168.member1089();
-            this.member6150 = d.member6168.member1089();
-            this.origin = Class291(d.member6168.member1073());
-            var i = d.member6168.member1074();
+            this.member6149 = d.member6168.gjstr();
+            this.member6150 = d.member6168.gjstr();
+            this.origin = Class291(d.member6168.g4());
+            var i = d.member6168.g4s();
             if (i !== -1) {
                 this.member6158 = i;
             }
-            this.member6159 = d.member6168.member609() === 1;
-            this.member6160 = d.member6168.member609();
-            d.member6168.member609();
-            var c = d.member6168.member609();
+            this.member6159 = d.member6168.g1() === 1;
+            this.member6160 = d.member6168.g1();
+            d.member6168.g1();
+            var c = d.member6168.g1();
             this.member6151 = new Array(c);
             for (var j = 0; j < c; j++) {
                 this.member6151[j] = {
-                    level: d.member6168.member609(),
-                    member6169: d.member6168.member608(),
-                    member6170: d.member6168.member608(),
-                    member6171: d.member6168.member608(),
-                    member6172: d.member6168.member608(),
-                    member6173: d.member6168.member608(),
-                    member6174: d.member6168.member608(),
-                    member6175: d.member6168.member608(),
-                    member6176: d.member6168.member608()
+                    level: d.member6168.g1(),
+                    member6169: d.member6168.g2(),
+                    member6170: d.member6168.g2(),
+                    member6171: d.member6168.g2(),
+                    member6172: d.member6168.g2(),
+                    member6173: d.member6168.g2(),
+                    member6174: d.member6168.g2(),
+                    member6175: d.member6168.g2(),
+                    member6176: d.member6168.g2()
                 };
             }
-            var h = d.member6154.member608();
+            var h = d.member6154.g2();
             this.member6152 = new Array(h);
             for (var g = 0; g < h; g++) {
                 this.member6152[g] = {
-                    member6177: d.member6154.member609(),
-                    member6178: d.member6154.member609(),
-                    member6179: d.member6154.member608(),
-                    member6180: d.member6154.member608(),
-                    member6181: d.member6154.member609(),
-                    member6182: d.member6154.member608(),
-                    member6183: d.member6154.member608()
+                    member6177: d.member6154.g1(),
+                    member6178: d.member6154.g1(),
+                    member6179: d.member6154.g2(),
+                    member6180: d.member6154.g2(),
+                    member6181: d.member6154.g1(),
+                    member6182: d.member6154.g2(),
+                    member6183: d.member6154.g2()
                 };
             }
-            var e = d.member6154.member608();
+            var e = d.member6154.g2();
             this.member6153 = new Array(e);
             for (var b = 0; b < e; b++) {
                 this.member6153[b] = {
-                    member6177: d.member6154.member609(),
-                    member6178: d.member6154.member609(),
-                    member6179: d.member6154.member608(),
-                    member6180: d.member6154.member608(),
-                    member6184: d.member6154.member609(),
-                    member6185: d.member6154.member609(),
-                    member6181: d.member6154.member609(),
-                    member6182: d.member6154.member608(),
-                    member6183: d.member6154.member608(),
-                    member6186: d.member6154.member609(),
-                    member6187: d.member6154.member609()
+                    member6177: d.member6154.g1(),
+                    member6178: d.member6154.g1(),
+                    member6179: d.member6154.g2(),
+                    member6180: d.member6154.g2(),
+                    member6184: d.member6154.g1(),
+                    member6185: d.member6154.g1(),
+                    member6181: d.member6154.g1(),
+                    member6182: d.member6154.g2(),
+                    member6183: d.member6154.g2(),
+                    member6186: d.member6154.g1(),
+                    member6187: d.member6154.g1()
                 };
             }
-            this.member6156 = d.member6154.member609();
-            this.member6157 = d.member6154.member609();
+            this.member6156 = d.member6154.g1();
+            this.member6157 = d.member6154.g1();
             this.member4184();
         } else if (d.member6188 !== undefined && d.member6189 !== undefined && d.member6190 !== undefined) {
             this.member625 = -1;
@@ -171,12 +171,12 @@ export var Class427 = function () {
         if (this.member625 === -1) {
             return undefined;
         }
-        if (this.member6155 === member47) {
+        if (this.member6155 === NULL) {
             var c = this.member995.member1439(Class95.member823);
             var e = 2;
-            var b = this.member995.getFile(Class95.member823, e, this.member625, Class96.member840);
-            if (b === member47) {
-                return member47;
+            var b = this.member995.getFile(Class95.member823, e, this.member625, Priority.member840);
+            if (b === NULL) {
+                return NULL;
             }
             var d = Class226({
                 member2744: b.getData(),

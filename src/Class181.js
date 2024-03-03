@@ -22,7 +22,7 @@ export var Class181 = function () {
         this.member546 = 0;
         this.member2024 = 0;
     };
-    a.prototype.member444 = function () {
+    a.prototype.getID = function () {
         return this.member625;
     };
     a.prototype.member2025 = function () {
@@ -43,7 +43,7 @@ export var Class181 = function () {
     a.prototype.member2029 = function () {
         return this.member2019;
     };
-    a.prototype.member600 = function () {
+    a.prototype.getColour = function () {
         return this.member546;
     };
     a.prototype.fill = function (n, i, h, c, k, m, d, j, e) {

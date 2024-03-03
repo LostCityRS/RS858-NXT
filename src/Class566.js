@@ -12,7 +12,7 @@ export var Class566 = function () {
             }
             j(x);
             if (E[x] === undefined) {
-                return member47;
+                return NULL;
             } else {
                 return E[x];
             }
@@ -97,7 +97,7 @@ export var Class566 = function () {
             i = new Array(q);
             for (var c = 0; c < q; c++) {
                 var t = m.member8853[c];
-                var A = new Uint32Array(t.member600());
+                var A = new Uint32Array(t.getColour());
                 var k = t.member556();
                 var g = t.member557();
                 var B = c % D * F;

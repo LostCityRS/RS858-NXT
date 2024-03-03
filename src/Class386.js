@@ -1,5 +1,5 @@
 import { Class50 } from 'Class50.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class384 } from 'Class384.js';
 import { Class383 } from 'Class383.js';
 import { Class244 } from 'Class244.js';
@@ -11,13 +11,13 @@ export var Class386 = function () {
     var a = function (b) {
         this.member4359 = undefined;
         this.member4360 = -1;
-        this.member4361 = member47;
+        this.member4361 = NULL;
         this.member4344 = Class50.member368;
         this.member4345 = 0;
         this.member4347 = false;
         this.member4350 = false;
-        this.member4362 = member47;
-        this.member4363 = member47;
+        this.member4362 = NULL;
+        this.member4363 = NULL;
         this.member4364 = false;
         this.member4365 = false;
         this.member4366 = -1;
@@ -45,7 +45,7 @@ export var Class386 = function () {
         return this.member4377();
     };
     a.prototype.member4377 = function () {
-        return this.member4361 !== member47 && this.member4362 !== member47 && this.member4363 !== member47;
+        return this.member4361 !== NULL && this.member4362 !== NULL && this.member4363 !== NULL;
     };
     a.prototype.member4378 = function () {
         if (this.member4370 !== undefined) {
@@ -55,16 +55,16 @@ export var Class386 = function () {
     };
     a.prototype.member4380 = function (g, j, b, i, d, h) {
         if (!this.member4377()) {
-            if (this.member4361 === member47) {
+            if (this.member4361 === NULL) {
                 this.member4381(g);
-                if (this.member4361 === member47) {
+                if (this.member4361 === NULL) {
                     return false;
                 }
             }
             var e = this.member4361.member2913();
             if (e !== undefined) {
                 var c = e.member2919();
-                if (c === member47) {
+                if (c === NULL) {
                     return false;
                 }
                 this.member4359.member4338(c);
@@ -74,17 +74,17 @@ export var Class386 = function () {
         return this.member1540();
     };
     a.prototype.member4381 = function (b) {
-        this.member4361 = b.member3227(Class131.member1216.member1204, this.member4360);
+        this.member4361 = b.getConfigType(Js5ConfigGroup.SEQTYPE.member1204, this.member4360);
     };
     a.prototype.member4382 = function (g, b, e, c, d) {
-        if (this.member4362 !== member47 && this.member4363 !== member47) {
+        if (this.member4362 !== NULL && this.member4363 !== NULL) {
             return;
         }
         this.member4362 = this.member4361.member2935(g, b, e, c);
-        if (this.member4362 === member47) {
+        if (this.member4362 === NULL) {
             return;
         }
-        if (this.member4363 === member47) {
+        if (this.member4363 === NULL) {
             this.member4363 = Class384({
                 member4343: this.member4362.member2004(),
                 member4344: this.member4344,
@@ -98,7 +98,7 @@ export var Class386 = function () {
         }
     };
     a.prototype.member2927 = function () {
-        if (this.member4361 === member47) {
+        if (this.member4361 === NULL) {
             return -1;
         }
         return this.member4361.member2927();
@@ -107,13 +107,13 @@ export var Class386 = function () {
         if (this.member4365) {
             return true;
         }
-        if (this.member4363 === member47) {
+        if (this.member4363 === NULL) {
             return false;
         }
         return this.member4363.member1999();
     };
     a.prototype.member301 = function (c, b) {
-        if (this.member4363 !== member47) {
+        if (this.member4363 !== NULL) {
             this.member4363.member301(c, b);
         }
     };
@@ -127,7 +127,7 @@ export var Class386 = function () {
         this.member4363.member4342(b);
     };
     a.prototype.member1843 = function () {
-        if (this.member4362 === member47) {
+        if (this.member4362 === NULL) {
             return false;
         }
         return this.member4362.member1843();
@@ -168,7 +168,7 @@ export var Class386 = function () {
         }
     };
     a.prototype.member4388 = function (d, c, b) {
-        if (this.member4362 === member47) {
+        if (this.member4362 === NULL) {
             return;
         }
         this.member301(d, c);
@@ -179,7 +179,7 @@ export var Class386 = function () {
         }
     };
     a.prototype.member4224 = function (c, b) {
-        if (this.member4363 === member47) {
+        if (this.member4363 === NULL) {
             return;
         }
         if (this.member4361.member2926() === Class244.member2844) {
@@ -211,7 +211,7 @@ export var Class386 = function () {
                     o = true;
                 }
                 var g = this.member4361.member2921();
-                if (this.member4361 === member47 || g === null || b >= g.length || g[b] === undefined) {
+                if (this.member4361 === NULL || g === null || b >= g.length || g[b] === undefined) {
                     continue;
                 }
                 var n = g[b][0];
@@ -267,7 +267,7 @@ export var Class386 = function () {
         return true;
     };
     a.prototype.member4392 = function () {
-        if (this.member4361 === member47) {
+        if (this.member4361 === NULL) {
             return false;
         }
         return this.member4361.member2927() === Class244.member2846;

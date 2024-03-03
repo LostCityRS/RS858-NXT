@@ -1,5 +1,5 @@
 import { Class562 } from 'Class562.js';
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 import { Class86 } from 'Class86.js';
 import { Class467 } from 'Class467.js';
 export var Class748 = function () {
@@ -11,7 +11,7 @@ export var Class748 = function () {
         var d;
         if (c.member7907 !== undefined && c.position !== undefined && c.member9078 !== undefined && c.member7887 !== undefined) {
             e = c.member7907;
-            b = Class290({
+            b = CoordFine({
                 level: c.position.level,
                 x: c.position.x * Class86.member718,
                 member756: c.position.member756 * Class86.member718

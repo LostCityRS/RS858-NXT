@@ -1,4 +1,4 @@
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 export var Class420 = function (b) {
     var d = {};
     var e;
@@ -15,22 +15,22 @@ export var Class420 = function (b) {
         e = k;
         g = j;
         if (g === -1) {
-            h = Class124(260, undefined, i);
+            h = Packet(260, undefined, i);
         } else if (g === -2) {
-            h = Class124(10000, undefined, i);
+            h = Packet(10000, undefined, i);
         } else if (g <= 18) {
-            h = Class124(20, undefined, i);
+            h = Packet(20, undefined, i);
         } else if (g <= 98) {
-            h = Class124(100, undefined, i);
+            h = Packet(100, undefined, i);
         } else {
-            h = Class124(260, undefined, i);
+            h = Packet(260, undefined, i);
         }
-        d.member2698 = h;
+        d.packet = h;
         c = 0;
         if (i !== undefined) {
-            h.member1052(e);
+            h.p1enc(e);
         } else {
-            h.member1051(e);
+            h.p1(e);
         }
     };
     d.setup = a;

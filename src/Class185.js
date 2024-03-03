@@ -117,7 +117,7 @@ export var Class185 = function () {
         }
     };
     o.member2061 = function (v) {
-        r[g++] = v.member444();
+        r[g++] = v.getID();
     };
     o.member487 = function () {
         q = 0;

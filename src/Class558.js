@@ -48,11 +48,11 @@ export var Class558 = function (q) {
         return ao;
     };
     var F = -1;
-    ab.member8662 = function () {
+    ab.getSpotShadowTexture = function () {
         return F;
     };
     var Z = 0;
-    ab.member8663 = function () {
+    ab.getSpotShadowTextureAlpha = function () {
         return Z;
     };
     var U;
@@ -174,7 +174,7 @@ export var Class558 = function (q) {
         var aa = q.data;
         var Y = false;
         while (true) {
-            var X = aa.member609();
+            var X = aa.g1();
             if (X === 0) {
                 break;
             } else if (X === 1) {
@@ -184,14 +184,14 @@ export var Class558 = function (q) {
                     H = new Array(i);
                 }
                 for (var am = 0; am < I.length; am++) {
-                    I[am] = aa.member1071();
-                    H[am] = aa.member1071();
+                    I[am] = aa.g2s();
+                    H[am] = aa.g2s();
                 }
                 Y = true;
             } else if (X === 2) {
-                n = aa.member1086();
+                n = aa.gSmart2or4null();
             } else if (X === 3) {
-                o = aa.member609();
+                o = aa.g1();
                 I = new Array(o);
                 H = new Array(o);
             } else if (X === 4) {
@@ -207,15 +207,15 @@ export var Class558 = function (q) {
                     U[R] = new Array(4);
                     N[R] = new Array(4);
                     for (var x = 0; x < 4; x++) {
-                        var c = aa.member608();
+                        var c = aa.g2();
                         if (c === 65535) {
                             c = -1;
                         }
                         U[R][x] = c;
-                        var z = aa.member608();
+                        var z = aa.g2();
                         N[R][x] = new Array(z);
                         for (var m = 0; m < z; m++) {
-                            var E = aa.member608();
+                            var E = aa.g2();
                             if (E === 65535) {
                                 E = -1;
                             }
@@ -226,49 +226,49 @@ export var Class558 = function (q) {
             } else if (X === 8) {
                 an = false;
             } else if (X === 9) {
-                g = aa.member609();
+                g = aa.g1();
             } else if (X === 10) {
                 r = false;
             } else if (X === 11) {
-                ah = aa.member609();
+                ah = aa.g1();
             } else if (X === 12) {
-                aj = aa.member608();
-                j = aa.member608();
+                aj = aa.g2();
+                j = aa.g2();
             } else if (X === 13) {
-                a = aa.member609();
+                a = aa.g1();
             } else if (X === 14) {
-                B = aa.member609();
+                B = aa.g1();
             } else if (X === 15) {
-                ai = aa.member609();
+                ai = aa.g1();
             } else if (X === 16) {
                 L = true;
             } else if (X === 17) {
-                ad = aa.member1073();
+                ad = aa.g4();
             } else if (X === 18) {
-                k = aa.member1073();
+                k = aa.g4();
             } else if (X === 19) {
-                ag = aa.member1073();
+                ag = aa.g4();
             } else if (X === 20) {
-                F = aa.member608();
-                Z = aa.member609();
+                F = aa.g2();
+                Z = aa.g1();
             } else if (X === 21) {
-                Q = aa.member609();
+                Q = aa.g1();
             } else if (X === 22) {
-                O = aa.member1086();
-                d = aa.member1086();
-                P = aa.member1086();
-                e = aa.member1086();
-                T = aa.member1086();
-                W = aa.member1086();
-                A = aa.member1070();
-                y = aa.member1070();
-                ac = aa.member1086();
-                v = aa.member1086();
-                S = aa.member1086();
-                G = aa.member1086();
-                u = aa.member1086();
-                b = aa.member1086();
-                ak = aa.member1086();
+                O = aa.gSmart2or4null();
+                d = aa.gSmart2or4null();
+                P = aa.gSmart2or4null();
+                e = aa.gSmart2or4null();
+                T = aa.gSmart2or4null();
+                W = aa.gSmart2or4null();
+                A = aa.g1s();
+                y = aa.g1s();
+                ac = aa.gSmart2or4null();
+                v = aa.gSmart2or4null();
+                S = aa.gSmart2or4null();
+                G = aa.gSmart2or4null();
+                u = aa.gSmart2or4null();
+                b = aa.gSmart2or4null();
+                ak = aa.gSmart2or4null();
             } else if (X === 23) {
                 af = new Array(10);
                 h = new Array(10);
@@ -276,15 +276,15 @@ export var Class558 = function (q) {
                     af[R] = new Array(4);
                     h[R] = new Array(4);
                     for (var x = 0; x < 4; x++) {
-                        var D = aa.member608();
+                        var D = aa.g2();
                         if (D === 65535) {
                             D = -1;
                         }
                         af[R][x] = D;
-                        var z = aa.member608();
+                        var z = aa.g2();
                         h[R][x] = new Array(z);
                         for (var J = 0; J < z; J++) {
-                            var V = aa.member608();
+                            var V = aa.g2();
                             if (V === 65535) {
                                 V = -1;
                             }

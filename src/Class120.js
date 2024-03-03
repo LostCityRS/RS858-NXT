@@ -96,7 +96,7 @@ export var Class120 = function () {
             u[Class72.member501] = Class119({ member433: v });
             u[Class72.member500] = Class101({ member433: v });
             u[Class72.member406] = Class111({ member433: v });
-            u[Class72.member498] = Class115({ member433: v });
+            u[Class72.POINTLIGHT] = Class115({ member433: v });
             u[Class72.member96] = Class118({ member433: v });
             u[Class72.member499] = Class114({
                 member433: v,

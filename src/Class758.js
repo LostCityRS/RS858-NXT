@@ -1,131 +1,131 @@
-export var Class758 = function () {
-    var a = function (c, b) {
-        this.member2896 = undefined;
+export var BASType = function () {
+    var BASType = function (c, b) {
+        this.myList = undefined;
         this.member625 = undefined;
         if (c !== undefined && b !== undefined) {
             this.member625 = c;
-            this.member2896 = b;
+            this.myList = b;
         } else {
             throw new Error('1522 ');
         }
-        this.member3590 = -1;
-        this.member10223 = null;
-        this.member10224 = null;
-        this.member10225 = 0;
-        this.member10226 = -1;
-        this.member10227 = -1;
-        this.member10228 = -1;
-        this.member10229 = -1;
-        this.member10230 = -1;
-        this.member10231 = -1;
+        this.readyanim = -1;
+        this.randomreadyanim = null;
+        this.randomreadyanim_weight = null;
+        this.randomreadyanim_totalweight = 0;
+        this.readyanim_l = -1;
+        this.readyanim_r = -1;
+        this.walkanim = -1;
+        this.walkanim_b = -1;
+        this.walkanim_l = -1;
+        this.walkanim_r = -1;
         this.member10232 = -1;
         this.member10233 = -1;
-        this.member10234 = -1;
-        this.member10235 = -1;
-        this.member10236 = -1;
-        this.member10237 = -1;
+        this.runanim = -1;
+        this.runanim_b = -1;
+        this.runanim_l = -1;
+        this.runanim_r = -1;
         this.member10238 = -1;
         this.member10239 = -1;
-        this.member10240 = -1;
-        this.member10241 = -1;
-        this.member10242 = -1;
-        this.member10243 = -1;
+        this.crawlanim = -1;
+        this.crawlanim_b = -1;
+        this.crawlanim_l = -1;
+        this.crawlanim_r = -1;
         this.member10244 = -1;
         this.member10245 = -1;
-        this.member10246 = 0, this.member10247 = 0;
+        this.xof = 0, this.yof = 0;
         this.member10248 = 0, this.member10249 = 0;
         this.member10250 = -1;
         this.member8681 = -1;
-        this.member8608 = -1;
-        this.member8636 = true;
+        this.overlayheight = -1;
+        this.spotshadow = true;
     };
-    a.prototype.member6148 = function () {
-        return this.member3590;
+    BASType.prototype.getReadyAnim = function () {
+        return this.readyanim;
     };
-    a.prototype.member6146 = function () {
-        return this.member10223;
+    BASType.prototype.getRandomReadyAnims = function () {
+        return this.randomreadyanim;
     };
-    a.prototype.member6147 = function () {
-        return this.member10224;
+    BASType.prototype.getRandomReadyAnimWeights = function () {
+        return this.randomreadyanim_weight;
     };
-    a.prototype.member7859 = function () {
-        return this.member10226;
+    BASType.prototype.getReadyAnimL = function () {
+        return this.readyanim_l;
     };
-    a.prototype.member7860 = function () {
-        return this.member10227;
+    BASType.prototype.getReadyAnimR = function () {
+        return this.readyanim_r;
     };
-    a.prototype.member7861 = function () {
-        return this.member10228;
+    BASType.prototype.getWalkAnim = function () {
+        return this.walkanim;
     };
-    a.prototype.member7862 = function () {
-        return this.member10229;
+    BASType.prototype.getWalkAnimB = function () {
+        return this.walkanim_b;
     };
-    a.prototype.member7863 = function () {
-        return this.member10230;
+    BASType.prototype.getWalkAnimL = function () {
+        return this.walkanim_l;
     };
-    a.prototype.member7864 = function () {
-        return this.member10231;
+    BASType.prototype.getWalkAnimR = function () {
+        return this.walkanim_r;
     };
-    a.prototype.member7873 = function () {
+    BASType.prototype.member7873 = function () {
         return this.member10232;
     };
-    a.prototype.member7874 = function () {
+    BASType.prototype.member7874 = function () {
         return this.member10233;
     };
-    a.prototype.member7865 = function () {
-        return this.member10234;
+    BASType.prototype.getRunAnim = function () {
+        return this.runanim;
     };
-    a.prototype.member7866 = function () {
-        return this.member10235;
+    BASType.prototype.getRunAnimB = function () {
+        return this.runanim_b;
     };
-    a.prototype.member7867 = function () {
-        return this.member10236;
+    BASType.prototype.getRunAnimL = function () {
+        return this.runanim_l;
     };
-    a.prototype.member7868 = function () {
-        return this.member10237;
+    BASType.prototype.getRunAnimR = function () {
+        return this.runanim_r;
     };
-    a.prototype.member7875 = function () {
+    BASType.prototype.member7875 = function () {
         return this.member10238;
     };
-    a.prototype.member7876 = function () {
+    BASType.prototype.member7876 = function () {
         return this.member10239;
     };
-    a.prototype.member7869 = function () {
-        return this.member10240;
+    BASType.prototype.getCrawlAnim = function () {
+        return this.crawlanim;
     };
-    a.prototype.member7870 = function () {
-        return this.member10241;
+    BASType.prototype.getCrawlAnimB = function () {
+        return this.crawlanim_b;
     };
-    a.prototype.member7871 = function () {
-        return this.member10242;
+    BASType.prototype.getCrawlAnimL = function () {
+        return this.crawlanim_l;
     };
-    a.prototype.member7872 = function () {
-        return this.member10243;
+    BASType.prototype.getCrawlAnimR = function () {
+        return this.crawlanim_r;
     };
-    a.prototype.member7877 = function () {
+    BASType.prototype.member7877 = function () {
         return this.member10244;
     };
-    a.prototype.member7878 = function () {
+    BASType.prototype.member7878 = function () {
         return this.member10245;
     };
-    a.prototype.member7854 = function () {
-        return this.member10246;
+    BASType.prototype.getOffsetX = function () {
+        return this.xof;
     };
-    a.prototype.member7855 = function () {
-        return this.member10247;
+    BASType.prototype.getOffsetY = function () {
+        return this.yof;
     };
-    a.prototype.member7857 = function () {
+    BASType.prototype.member7857 = function () {
         return this.member10248;
     };
-    a.prototype.member7858 = function () {
+    BASType.prototype.member7858 = function () {
         return this.member10249;
     };
-    a.prototype.member4121 = function () {
-        return this.member8608;
+    BASType.prototype.getOverlayHeight = function () {
+        return this.overlayheight;
     };
-    a.prototype.decode = function (c) {
+    BASType.prototype.decode = function (c) {
         while (true) {
-            var b = c.member609();
+            var b = c.g1();
             if (b === undefined) {
                 throw new Error('1523 ');
                 break;
@@ -133,122 +133,123 @@ export var Class758 = function () {
             if (b === 0) {
                 break;
             }
-            this.member2932(c, b);
+            this.decodeNext(c, b);
         }
     };
-    a.prototype.member2932 = function (h, c) {
-        if (c === 1) {
-            this.member3590 = h.member1086();
-            this.member10228 = h.member1086();
-        } else if (c === 2) {
-            this.member10240 = h.member1086();
-        } else if (c === 3) {
-            this.member10241 = h.member1086();
-        } else if (c === 4) {
-            this.member10242 = h.member1086();
-        } else if (c === 5) {
-            this.member10243 = h.member1086();
-        } else if (c === 6) {
-            this.member10234 = h.member1086();
-        } else if (c === 7) {
-            this.member10235 = h.member1086();
-        } else if (c === 8) {
-            this.member10236 = h.member1086();
-        } else if (c === 9) {
-            this.member10237 = h.member1086();
-        } else if (c === 26) {
-            this.member10246 = h.member609() * 4;
-            this.member10247 = h.member609() * 4;
-        } else if (c === 27) {
-            var b = h.member609();
-            h.member607(h.member1047() + b * 2);
-        } else if (c === 28) {
-            b = h.member609();
-            h.member607(h.member1047() + b);
-        } else if (c === 29) {
-            h.member609();
-        } else if (c === 30) {
-            h.member608();
-        } else if (c === 31) {
-            h.member609();
-        } else if (c === 32) {
-            h.member608();
-        } else if (c === 33) {
-            h.member1071();
-        } else if (c === 34) {
-            h.member609();
-        } else if (c === 35) {
-            h.member608();
-        } else if (c === 36) {
-            h.member1071();
-        } else if (c === 37) {
-            h.member609();
-        } else if (c === 38) {
-            this.member10226 = h.member1086();
-        } else if (c === 39) {
-            this.member10227 = h.member1086();
-        } else if (c === 40) {
-            this.member10229 = h.member1086();
-        } else if (c === 41) {
-            this.member10230 = h.member1086();
-        } else if (c === 42) {
-            this.member10231 = h.member1086();
-        } else if (c === 43) {
-            this.member10250 = h.member1086();
-        } else if (c === 44) {
-            this.member8681 = h.member1086();
-        } else if (c === 45) {
-            this.member8608 = h.member608();
-        } else if (c === 46) {
-            this.member10244 = h.member1086();
-        } else if (c === 47) {
-            this.member10245 = h.member1086();
-        } else if (c === 48) {
-            this.member10238 = h.member1086();
-        } else if (c === 49) {
-            this.member10239 = h.member1086();
-        } else if (c === 50) {
-            this.member10232 = h.member1086();
-        } else if (c === 51) {
-            this.member10233 = h.member1086();
-        } else if (c === 52) {
-            var g = h.member609();
-            this.member10223 = new Array(g);
-            this.member10224 = new Array(g);
-            for (var e = 0; e < g; e++) {
-                this.member10223[e] = h.member1086();
-                var d = h.member609();
-                this.member10224[e] = d;
-                this.member10225 += d;
+    BASType.prototype.decodeNext = function (packet, opcode) {
+        if (opcode === 1) {
+            this.readyanim = packet.gSmart2or4null();
+            this.walkanim = packet.gSmart2or4null();
+        } else if (opcode === 2) {
+            this.crawlanim = packet.gSmart2or4null();
+        } else if (opcode === 3) {
+            this.crawlanim_b = packet.gSmart2or4null();
+        } else if (opcode === 4) {
+            this.crawlanim_l = packet.gSmart2or4null();
+        } else if (opcode === 5) {
+            this.crawlanim_r = packet.gSmart2or4null();
+        } else if (opcode === 6) {
+            this.runanim = packet.gSmart2or4null();
+        } else if (opcode === 7) {
+            this.runanim_b = packet.gSmart2or4null();
+        } else if (opcode === 8) {
+            this.runanim_l = packet.gSmart2or4null();
+        } else if (opcode === 9) {
+            this.runanim_r = packet.gSmart2or4null();
+        } else if (opcode === 26) {
+            this.xof = packet.g1() * 4;
+            this.yof = packet.g1() * 4;
+        } else if (opcode === 27) {
+            var count = packet.g1();
+            packet.setPos(packet.getPos() + count * 2);
+        } else if (opcode === 28) {
+            count = packet.g1();
+            packet.setPos(packet.getPos() + count);
+        } else if (opcode === 29) {
+            packet.g1();
+        } else if (opcode === 30) {
+            packet.g2();
+        } else if (opcode === 31) {
+            packet.g1();
+        } else if (opcode === 32) {
+            packet.g2();
+        } else if (opcode === 33) {
+            packet.g2s();
+        } else if (opcode === 34) {
+            packet.g1();
+        } else if (opcode === 35) {
+            packet.g2();
+        } else if (opcode === 36) {
+            packet.g2s();
+        } else if (opcode === 37) {
+            packet.g1();
+        } else if (opcode === 38) {
+            this.readyanim_l = packet.gSmart2or4null();
+        } else if (opcode === 39) {
+            this.readyanim_r = packet.gSmart2or4null();
+        } else if (opcode === 40) {
+            this.walkanim_b = packet.gSmart2or4null();
+        } else if (opcode === 41) {
+            this.walkanim_l = packet.gSmart2or4null();
+        } else if (opcode === 42) {
+            this.walkanim_r = packet.gSmart2or4null();
+        } else if (opcode === 43) {
+            this.member10250 = packet.gSmart2or4null();
+        } else if (opcode === 44) {
+            this.member8681 = packet.gSmart2or4null();
+        } else if (opcode === 45) {
+            this.overlayheight = packet.g2();
+        } else if (opcode === 46) {
+            this.member10244 = packet.gSmart2or4null();
+        } else if (opcode === 47) {
+            this.member10245 = packet.gSmart2or4null();
+        } else if (opcode === 48) {
+            this.member10238 = packet.gSmart2or4null();
+        } else if (opcode === 49) {
+            this.member10239 = packet.gSmart2or4null();
+        } else if (opcode === 50) {
+            this.member10232 = packet.gSmart2or4null();
+        } else if (opcode === 51) {
+            this.member10233 = packet.gSmart2or4null();
+        } else if (opcode === 52) {
+            var count = packet.g1();
+            this.randomreadyanim = new Array(count);
+            this.randomreadyanim_weight = new Array(count);
+
+            for (var i = 0; i < count; i++) {
+                this.randomreadyanim[i] = packet.gSmart2or4null();
+                var weight = packet.g1();
+                this.randomreadyanim_weight[i] = weight;
+                this.randomreadyanim_totalweight += weight;
             }
-        } else if (c === 53) {
-            this.member8636 = false;
-        } else if (c === 54) {
-            this.member10248 = h.member609() << 2;
-            this.member10249 = h.member609() << 2;
-        } else if (c === 55) {
-            h.member607(h.member1047() + 3);
-        } else if (c === 56) {
-            h.member607(h.member1047() + 1 + 3 * 2);
+        } else if (opcode === 53) {
+            this.spotshadow = false;
+        } else if (opcode === 54) {
+            this.member10248 = packet.g1() << 2;
+            this.member10249 = packet.g1() << 2;
+        } else if (opcode === 55) {
+            packet.setPos(packet.getPos() + 3);
+        } else if (opcode === 56) {
+            packet.setPos(packet.getPos() + 1 + 3 * 2);
         } else if (false) {
         }
     };
-    a.prototype.member7828 = function () {
-        if (this.member3590 !== -1) {
-            return this.member3590;
+    BASType.prototype.member7828 = function () {
+        if (this.readyanim !== -1) {
+            return this.readyanim;
         }
-        if (this.member10223 !== null) {
-            var c = Math.floor(Math.random() * this.member10225);
+        if (this.randomreadyanim !== null) {
+            var c = Math.floor(Math.random() * this.randomreadyanim_totalweight);
             var b = 0;
-            while (c >= this.member10224[b]) {
-                c -= this.member10224[b];
+            while (c >= this.randomreadyanim_weight[b]) {
+                c -= this.randomreadyanim_weight[b];
                 b++;
             }
-            return this.member10223[b];
+            return this.randomreadyanim[b];
         }
         return -1;
     };
     return function (c, b) {
-        return new a(c, b);
+        return new BASType(c, b);
     };
 }();

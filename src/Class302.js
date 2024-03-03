@@ -1,5 +1,5 @@
 import { Class301 } from 'Class301.js';
-import { Class122 } from 'Class122.js';
+import { CP1252 } from 'Class122.js';
 export var Class302 = function () {
     var D = {};
     var C;
@@ -140,7 +140,7 @@ export var Class302 = function () {
         var O = 0;
         var V = Q.length;
         for (var M = 0; M < V; M++) {
-            var T = Class122.member1035(Q.charCodeAt(M));
+            var T = CP1252.member1035(Q.charCodeAt(M));
             if (T === B) {
                 K = M;
                 continue;
@@ -156,7 +156,7 @@ export var Class302 = function () {
                         continue;
                     }
                     var L = U[P];
-                    if (L === undefined || L.member3606 === undefined || L.member3606 === member47) {
+                    if (L === undefined || L.member3606 === undefined || L.member3606 === NULL) {
                         continue;
                     }
                     O += L.width;
@@ -273,7 +273,7 @@ export var Class302 = function () {
         var R = 0;
         var O = new Array(0);
         for (var Y = 0; Y < K.length; Y++) {
-            var Q = Class122.member1035(K.charCodeAt(Y));
+            var Q = CP1252.member1035(K.charCodeAt(Y));
             var ad = 0;
             var V;
             if (Q === B) {
@@ -333,7 +333,7 @@ export var Class302 = function () {
                         continue;
                     }
                     var ab = P[ae];
-                    if (ab === undefined || ab.member3606 === undefined || ab.member3606 === member47) {
+                    if (ab === undefined || ab.member3606 === undefined || ab.member3606 === NULL) {
                         continue;
                     }
                     ad += member3615.width;
@@ -465,7 +465,7 @@ export var Class302 = function () {
             }
         }
         for (var Y = 0; Y < K.length; Y++) {
-            var O = Class122.member1035(K.charCodeAt(Y));
+            var O = CP1252.member1035(K.charCodeAt(Y));
             var ad = V;
             var aa = T;
             if (O === B) {
@@ -483,7 +483,7 @@ export var Class302 = function () {
                         continue;
                     }
                     var ab = N[ae];
-                    if (ab === undefined || ab.member3606 === undefined || ab.member3606 === member47) {
+                    if (ab === undefined || ab.member3606 === undefined || ab.member3606 === NULL) {
                         continue;
                     }
                     if (P !== undefined) {

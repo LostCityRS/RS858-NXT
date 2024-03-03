@@ -40,7 +40,7 @@ export var Class771 = function () {
     };
     var d = 0;
     var b = 0;
-    c.member607 = function (r, s) {
+    c.setPos = function (r, s) {
         d = r;
         b = s + 15;
     };
@@ -54,7 +54,7 @@ export var Class771 = function () {
             return;
         }
         var t = a.member7137.member3639(x);
-        if (t === member47) {
+        if (t === NULL) {
             return;
         }
         var v = t.member3598().member3599() + t.member3598().member3603();

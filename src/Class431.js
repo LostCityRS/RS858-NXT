@@ -7,13 +7,13 @@ export var Class431 = function (a) {
     if (a.data !== undefined) {
         var e = a.data;
         while (true) {
-            var b = e.member609();
+            var b = e.g1();
             if (b === 0) {
                 break;
             } else if (b === 1) {
-                c = e.member608();
+                c = e.g2();
             } else if (b === 10) {
-                e.member608();
+                e.g2();
             } else {
                 throw new Error('981 ' + b);
             }

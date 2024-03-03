@@ -93,7 +93,7 @@ export var Class683 = function () {
         };
         y.member8556 = x;
         var o = function (G) {
-            var H = G.member609();
+            var H = G.g1();
             if ((H & 1) !== 0) {
                 if (false) {
                 } else {
@@ -108,24 +108,24 @@ export var Class683 = function () {
             }
             var K = 2;
             if ((H & 4) !== 0) {
-                K = G.member609();
+                K = G.g1();
             }
-            G.member1077();
-            var N = G.member1077();
-            B = N.member1058 * Math.pow(2, 32) + N.member1059;
-            A = G.member1089();
-            r = G.member609() === 1;
-            E = G.member1070();
-            q = G.member1070();
-            s = G.member608();
+            G.g8();
+            var N = G.g8();
+            B = N.high * Math.pow(2, 32) + N.low;
+            A = G.gjstr();
+            r = G.g1() === 1;
+            E = G.g1s();
+            q = G.g1s();
+            s = G.g2();
             v = [];
             for (var I = 0; I < s; I++) {
-                var L = G.member1089();
-                var J = G.member1070();
-                var M = G.member608();
+                var L = G.gjstr();
+                var J = G.g1s();
+                var M = G.g2();
                 var F;
                 if (K >= 3) {
-                    F = G.member609() === 1;
+                    F = G.g1() === 1;
                 } else {
                     F = false;
                 }

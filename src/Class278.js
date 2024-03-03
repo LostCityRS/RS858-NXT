@@ -43,7 +43,7 @@ export var Class278 = function () {
         var e = function (i) {
             for (var h = 0; h < g.length; h++) {
                 var j = g[h];
-                if (j.member444() === i) {
+                if (j.getID() === i) {
                     return g[h];
                 }
             }

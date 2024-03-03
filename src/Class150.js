@@ -84,9 +84,9 @@ export var Class150 = function () {
         var n = s.member1337();
         if (s.member1361()) {
             if (s.member1469() && a.member553()) {
-                o.push(Class149(s.member444(), q, n, s.member1417()));
+                o.push(Class149(s.getID(), q, n, s.member1417()));
             } else {
-                r.push(Class149(s.member444(), q, n, s.member1417()));
+                r.push(Class149(s.getID(), q, n, s.member1417()));
             }
         }
     };
@@ -134,7 +134,7 @@ export var Class150 = function () {
     };
     d.member1515 = function (s, r) {
         var o = undefined, n = undefined;
-        if (s !== undefined && s !== member47) {
+        if (s !== undefined && s !== NULL) {
             o = s.member1516();
             n = s.member1517();
         }

@@ -63,20 +63,20 @@ export var Class568 = function () {
         j.member6218 = function () {
             return 0;
         };
-        j.member3590 = function () {
+        j.readyanim = function () {
             return m && k !== undefined;
         };
-        var n = j.member3590;
+        var n = j.readyanim;
         j.member6219 = function (r, o) {
-            var q = r.member609();
-            var s = r.member608();
-            if (q === Class567.member4134) {
+            var q = r.g1();
+            var s = r.g2();
+            if (q === Class567.PLAYER) {
                 k = o.member6452.member6453(s);
             } else {
                 k = o.member6450.member6451(s);
             }
-            r.member1088(b);
-            i = r.member609() === 1;
+            r.gFloatArray(b);
+            i = r.g1() === 1;
             m = true;
         };
         j.member8864 = function (o) {

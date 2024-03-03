@@ -1,12 +1,12 @@
-import { Class170 } from 'Class170.js';
+import { HillChange } from 'Class170.js';
 import { Class41 } from 'Class41.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 export var Class171 = function () {
     var a = 1;
     var b = new Float32Array(3);
     return function (aa) {
         var aL = {};
-        var n = Class170.member1860;
+        var n = HillChange.member1860;
         var h = 0;
         aL.member1861 = function () {
             return h;
@@ -121,17 +121,17 @@ export var Class171 = function () {
         };
         if (aa.data !== undefined) {
             var y = aa.data;
-            var ae = Class124(undefined, y.getData());
-            var aE = Class124(undefined, y.getData());
-            var aB = Class124(undefined, y.getData());
-            var aA = Class124(undefined, y.getData());
-            var az = Class124(undefined, y.getData());
-            var at = Class124(undefined, y.getData());
-            var m = Class124(undefined, y.getData());
-            var X = Class124(undefined, y.getData());
-            var aN = Class124(undefined, y.getData());
-            var ao = Class124(undefined, y.getData());
-            var ar = Class124(undefined, y.getData());
+            var ae = Packet(undefined, y.getData());
+            var aE = Packet(undefined, y.getData());
+            var aB = Packet(undefined, y.getData());
+            var aA = Packet(undefined, y.getData());
+            var az = Packet(undefined, y.getData());
+            var at = Packet(undefined, y.getData());
+            var m = Packet(undefined, y.getData());
+            var X = Packet(undefined, y.getData());
+            var aN = Packet(undefined, y.getData());
+            var ao = Packet(undefined, y.getData());
+            var ar = Packet(undefined, y.getData());
             ap = new Array(0);
             J = new Array(0);
             g = new Array(0);
@@ -139,11 +139,11 @@ export var Class171 = function () {
             aN = new Array(0);
             ax = new Array(0);
             aC = new Array(0);
-            var n = ae.member609();
-            if (n !== Class170.member1860) {
+            var n = ae.g1();
+            if (n !== HillChange.member1860) {
                 throw new Error('1570 ' + n);
             }
-            var C = ae.member609();
+            var C = ae.g1();
             if (C > a) {
                 throw new Error('1571 ' + C);
             }
@@ -157,21 +157,21 @@ export var Class171 = function () {
             var z = ae.g3();
             var F = ae.g3();
             var ah = ae.g3();
-            var Y = ae.member609();
+            var Y = ae.g1();
             for (var Z = 0; Z < Y; Z++) {
-                var af = ae.member608();
-                var c = ae.member608();
-                var k = ae.member1071();
-                aE.member607(K + ae.member1086());
-                aB.member607(aG + ae.member1086());
-                aA.member607(q + ae.member1086());
-                az.member607(A + ae.member1086());
-                at.member607(av + ae.member1086());
-                X.member607(v + ae.member1086());
-                m.member607(E + ae.member1086());
-                aN.member607(z + ae.member1086());
-                ao.member607(F + ae.member1086());
-                ar.member607(ah + ae.member1086());
+                var af = ae.g2();
+                var c = ae.g2();
+                var k = ae.g2s();
+                aE.setPos(K + ae.gSmart2or4null());
+                aB.setPos(aG + ae.gSmart2or4null());
+                aA.setPos(q + ae.gSmart2or4null());
+                az.setPos(A + ae.gSmart2or4null());
+                at.setPos(av + ae.gSmart2or4null());
+                X.setPos(v + ae.gSmart2or4null());
+                m.setPos(E + ae.gSmart2or4null());
+                aN.setPos(z + ae.gSmart2or4null());
+                ao.setPos(F + ae.gSmart2or4null());
+                ar.setPos(ah + ae.gSmart2or4null());
                 var ag = new Float32Array(3);
                 var e = 0;
                 var aM = new Array(af);
@@ -179,22 +179,22 @@ export var Class171 = function () {
                 var aq = new Array(af);
                 var r = new Array(af);
                 for (var aj = 0; aj < af; aj++) {
-                    var i = aE.member609();
+                    var i = aE.g1();
                     var aK = 0;
                     if ((i & 1) === 1) {
-                        aK = aB.member1080();
+                        aK = aB.gSmart1or2s();
                     }
                     var aJ = 0;
                     if ((i & 2) === 2) {
-                        aJ = aA.member1080();
+                        aJ = aA.gSmart1or2s();
                     }
                     var aI = 0;
                     if ((i & 4) === 4) {
-                        aI = az.member1080();
+                        aI = az.gSmart1or2s();
                     }
                     var o = 0;
                     if ((i & 8) === 8) {
-                        o = at.member1074();
+                        o = at.g4s();
                     }
                     ag[0] += aK;
                     ag[1] += aJ;
@@ -206,11 +206,11 @@ export var Class171 = function () {
                         ag[2]
                     ]);
                     ai[aj] = e;
-                    var an = m.member609();
+                    var an = m.g1();
                     aq[aj] = new Array(an);
                     for (var H = 0; H < an; H++) {
-                        var G = 1 - X.member1071() / (32767 / 8);
-                        var ak = 1 - X.member1071() / (32767 / 8);
+                        var G = 1 - X.g2s() / (32767 / 8);
+                        var ak = 1 - X.g2s() / (32767 / 8);
                         aq[aj][H] = new Float32Array([
                             G,
                             ak
@@ -229,39 +229,39 @@ export var Class171 = function () {
                 var T = 0, Q = 0, O = 0;
                 var aH = 0;
                 for (var d = 0; d < c; d++) {
-                    var S = ao.member609();
+                    var S = ao.g1();
                     if (S === 1) {
-                        P = aN.member1080() + aH;
+                        P = aN.gSmart1or2s() + aH;
                         aH = P;
-                        T = ar.member609();
-                        N = aN.member1080() + aH;
+                        T = ar.g1();
+                        N = aN.gSmart1or2s() + aH;
                         aH = N;
-                        Q = ar.member609();
-                        M = aN.member1080() + aH;
+                        Q = ar.g1();
+                        M = aN.gSmart1or2s() + aH;
                         aH = M;
-                        O = ar.member609();
+                        O = ar.g1();
                     } else if (S === 2) {
                         N = M;
-                        M = aN.member1080() + aH;
+                        M = aN.gSmart1or2s() + aH;
                         aH = M;
                         Q = O;
-                        O = ar.member609();
+                        O = ar.g1();
                     } else if (S === 3) {
                         P = M;
-                        M = aN.member1080() + aH;
+                        M = aN.gSmart1or2s() + aH;
                         aH = M;
                         T = O;
-                        O = ar.member609();
+                        O = ar.g1();
                     } else if (S === 4) {
                         var ad = P;
                         P = N;
                         N = ad;
-                        M = aN.member1080() + aH;
+                        M = aN.gSmart1or2s() + aH;
                         aH = M;
                         ad = T;
                         T = Q;
                         Q = ad;
-                        O = ar.member609();
+                        O = ar.g1();
                     }
                     am[d] = [
                         P + h,
@@ -340,7 +340,7 @@ export var Class171 = function () {
             var t = aa.member1880.member1881();
             var V = aa.member1880.member1882();
             var B = aa.member1880.member1883();
-            var U = aa.member1880.member600();
+            var U = aa.member1880.getColour();
             var x = aa.member1880.member1884();
             var al = new Float32Array([
                 0,
@@ -394,7 +394,7 @@ export var Class171 = function () {
         };
         aL.member1885 = aD;
         aL.member1886 = function () {
-            return Class170.member1860;
+            return HillChange.member1860;
         };
         aL.member1887 = function (u) {
             return undefined;

@@ -1,4 +1,4 @@
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class215 } from 'Class215.js';
 export var Class226 = function () {
     var a = function (u) {
@@ -39,43 +39,43 @@ export var Class226 = function () {
         var c = 4;
         var W = false;
         if (u.member2744 !== undefined) {
-            var aj = Class124(undefined, u.member2744);
+            var aj = Packet(undefined, u.member2744);
             if (u.member2745) {
                 W = true;
             }
-            aj.member609();
-            var o = aj.member609();
-            var q = aj.member609();
-            var v = aj.member609();
+            aj.g1();
+            var o = aj.g1();
+            var q = aj.g1();
+            var v = aj.g1();
             if (o !== 80 || q !== 78 || v !== 71) {
                 throw new Error('1069 ');
             }
-            aj.member1073();
+            aj.g4();
             var Y = null;
             while (true) {
-                var H = aj.member1073();
+                var H = aj.g4();
                 var ak = '';
                 for (var an = 0; an < 4; an++) {
-                    ak += String.fromCharCode(aj.member609());
+                    ak += String.fromCharCode(aj.g1());
                 }
-                var aa = aj.member1047();
+                var aa = aj.getPos();
                 if (ak === 'IHDR') {
-                    d = aj.member1073();
-                    j = aj.member1073();
-                    X = aj.member609();
+                    d = aj.g4();
+                    j = aj.g4();
+                    X = aj.g1();
                     if (X !== 8) {
                         throw new Error('1070 ' + X);
                     }
-                    Q = aj.member609();
-                    P = aj.member609();
+                    Q = aj.g1();
+                    P = aj.g1();
                     if (P !== r) {
                         throw new Error('1071 ' + P);
                     }
-                    s = aj.member609();
+                    s = aj.g1();
                     if (s !== i) {
                         throw new Error('1072 ' + s);
                     }
-                    m = aj.member609();
+                    m = aj.g1();
                     if (m !== x && m !== ai) {
                         throw new Error('1073 ' + m);
                     }
@@ -107,19 +107,19 @@ export var Class226 = function () {
                     }
                 } else if (ak === 'IDAT') {
                     if (Y === null) {
-                        Y = Class124(H);
+                        Y = Packet(H);
                     } else {
                         var K = Y;
-                        Y = Class124(K.getSize() + H);
+                        Y = Packet(K.getSize() + H);
                         Y.member1067(K.getData(), 0, K.getSize());
                     }
-                    Y.member1067(aj.getData(), aj.member1047(), H);
-                    aj.member607(aj.member1047() + H);
+                    Y.member1067(aj.getData(), aj.getPos(), H);
+                    aj.setPos(aj.getPos() + H);
                 } else if (ak === 'tRNS') {
                     if (Q === B) {
                         for (var an = 0; an < z.length; an++) {
                             z[an] &= 4294967040;
-                            z[an] |= aj.member609();
+                            z[an] |= aj.g1();
                         }
                     } else if (Q === T) {
                         throw new Error('1074 ');
@@ -131,41 +131,41 @@ export var Class226 = function () {
                 } else if (ak === 'IEND') {
                     break;
                 } else {
-                    aj.member607(aj.member1047() + H);
+                    aj.setPos(aj.getPos() + H);
                     if (false) {
                     }
                 }
-                if (aa + H !== aj.member1047()) {
+                if (aa + H !== aj.getPos()) {
                     throw new Error('1077 ' + ak);
                 }
-                var am = aj.member1073();
+                var am = aj.g4();
             }
             var g = new Class215.member2649(new Uint8Array(Y.getData()));
-            var R = Class124(undefined, g.member2645());
+            var R = Packet(undefined, g.member2645());
             var ab = new Uint8Array(d * j * (U / 8));
             var y = 0;
             var N = 0;
             while (y < j) {
-                var t = R.member609();
+                var t = R.g1();
                 if (t === k) {
                     for (var an = 0; an < d * C; an++) {
-                        ab[N++] = R.member609();
+                        ab[N++] = R.g1();
                     }
                 } else if (t === af) {
                     for (var an = 0; an < d * C; an++) {
-                        var al = R.member609();
+                        var al = R.g1();
                         var n = an < C ? 0 : ab[N - C];
                         ab[N++] = al + n & 255;
                     }
                 } else if (t === A) {
                     for (var an = 0; an < d * C; an++) {
-                        var al = R.member609();
+                        var al = R.g1();
                         var ah = y <= 0 ? 0 : ab[N - d * C];
                         ab[N++] = al + ah & 255;
                     }
                 } else if (t === F) {
                     for (var an = 0; an < d * C; an++) {
-                        var al = R.member609();
+                        var al = R.g1();
                         var n = an < C ? 0 : ab[N - C];
                         var ah = y <= 0 ? 0 : ab[N - d * C];
                         var E = Math.floor((n + ah) / 2);
@@ -173,7 +173,7 @@ export var Class226 = function () {
                     }
                 } else if (t === c) {
                     for (var an = 0; an < d * C; an++) {
-                        var al = R.member609();
+                        var al = R.g1();
                         var n = an < C ? 0 : ab[N - C];
                         var ah = y <= 0 ? 0 : ab[N - d * C];
                         var ag = y <= 0 || an < C ? 0 : ab[N - d * C - C];
@@ -199,10 +199,10 @@ export var Class226 = function () {
             if (N !== d * j * (U / 8)) {
                 throw new Error('1079 ' + N);
             }
-            ab = Class124(undefined, ab.buffer);
+            ab = Packet(undefined, ab.buffer);
             if (Q === S) {
                 for (var an = 0; an < d * j; an++) {
-                    var D = ab.member609();
+                    var D = ab.g1();
                     O[an * 4 + 0] = D;
                     O[an * 4 + 1] = D;
                     O[an * 4 + 2] = D;
@@ -210,9 +210,9 @@ export var Class226 = function () {
                 }
             } else if (Q === T) {
                 for (var an = 0; an < d * j; an++) {
-                    O[an * 4 + 0] = ab.member609();
-                    O[an * 4 + 1] = ab.member609();
-                    O[an * 4 + 2] = ab.member609();
+                    O[an * 4 + 0] = ab.g1();
+                    O[an * 4 + 1] = ab.g1();
+                    O[an * 4 + 2] = ab.g1();
                     if (W && O[an * 4 + 0] === O[an * 4 + 1] === O[an * 4 + 2] === 0) {
                         O[an * 4 + 3] = 0;
                     } else {
@@ -221,7 +221,7 @@ export var Class226 = function () {
                 }
             } else if (Q === B) {
                 for (var an = 0; an < d * j; an++) {
-                    var V = z[ab.member609()];
+                    var V = z[ab.g1()];
                     if (V === undefined) {
                         throw new Error('1080 ');
                     }
@@ -232,21 +232,21 @@ export var Class226 = function () {
                 }
             } else if (Q === ac) {
                 for (var an = 0; an < d * j; an++) {
-                    var D = ab.member609();
+                    var D = ab.g1();
                     O[an * 4 + 0] = D;
                     O[an * 4 + 1] = D;
                     O[an * 4 + 2] = D;
-                    O[an * 4 + 3] = ab.member609();
+                    O[an * 4 + 3] = ab.g1();
                 }
             } else if (Q === h) {
                 for (var an = 0; an < d * j; an++) {
-                    O[an * 4 + 0] = ab.member609();
-                    O[an * 4 + 1] = ab.member609();
-                    O[an * 4 + 2] = ab.member609();
-                    O[an * 4 + 3] = ab.member609();
+                    O[an * 4 + 0] = ab.g1();
+                    O[an * 4 + 1] = ab.g1();
+                    O[an * 4 + 2] = ab.g1();
+                    O[an * 4 + 3] = ab.g1();
                 }
             }
-            if (ab.member1047() !== ab.getSize()) {
+            if (ab.getPos() !== ab.getSize()) {
                 throw new Error('1081 ');
             }
         } else {

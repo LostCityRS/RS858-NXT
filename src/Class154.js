@@ -7,7 +7,7 @@ import { Class76 } from 'Class76.js';
 import { Class147 } from 'Class147.js';
 import { Class153 } from 'Class153.js';
 import { Class93 } from 'Class93.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 export var Class154 = function () {
     var k = {};
     var m;
@@ -65,8 +65,8 @@ export var Class154 = function () {
             return C;
         } else {
             var B = e(q, A, D, z);
-            if (B === member47) {
-                return member47;
+            if (B === NULL) {
+                return NULL;
             }
             if (B !== undefined) {
                 if (z && !B.member1547) {
@@ -82,7 +82,7 @@ export var Class154 = function () {
     var o = k.member1277;
     k.member1549 = function (A) {
         if (!Class147.member1483()) {
-            return member47;
+            return NULL;
         }
         var D = Class147.member1484(A);
         if (D === undefined) {
@@ -94,8 +94,8 @@ export var Class154 = function () {
         var C = D.member1469();
         var z = D.getSize();
         var B = e(y, A, z, C);
-        if (B === member47) {
-            return member47;
+        if (B === NULL) {
+            return NULL;
         }
         if (B === undefined) {
             return undefined;
@@ -114,7 +114,7 @@ export var Class154 = function () {
             Q = t;
         }
         if (!i.member1437(Q)) {
-            return member47;
+            return NULL;
         }
         var R = i.member1551(Q, V, 0, Class93.member797);
         if (S !== q && N) {
@@ -128,13 +128,13 @@ export var Class154 = function () {
             return undefined;
         }
         if (!R || C === false) {
-            return member47;
+            return NULL;
         }
-        var A = i.getFile(Q, V, 0, Class96.member841);
+        var A = i.getFile(Q, V, 0, Priority.member841);
         var I = A.getData();
         var H = false;
         if (C) {
-            var T = i.getFile(t, V, 0, Class96.member841);
+            var T = i.getFile(t, V, 0, Priority.member841);
             var O = new Uint32Array(T.getData());
             var P = new Uint8Array(I);
             var z = new Float32Array(B * B * 4);

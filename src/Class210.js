@@ -4,7 +4,7 @@ import { Class121 } from 'Class121.js';
 import { Class188 } from 'Class188.js';
 import { Class32 } from 'Class32.js';
 import { Class198 } from 'Class198.js';
-import { Class170 } from 'Class170.js';
+import { HillChange } from 'Class170.js';
 import { Class86 } from 'Class86.js';
 export var Class210 = function () {
     var d = {};
@@ -22,107 +22,107 @@ export var Class210 = function () {
         this.member2505(g);
     };
     e.prototype.member2505 = function (j) {
-        this.member2504 = j.member609();
-        var r = j.member608();
+        this.member2504 = j.g1();
+        var r = j.g2();
         this.member2502 = new Array(r);
         for (var k = 0; k < r; k++) {
             var t = this.member2502[k] = {};
-            t.member2506 = j.member1073();
-            t.level = j.member609();
-            t.member2507 = j.member609();
-            t.member2508 = j.member609();
-            t.member2509 = j.member609();
-            t.member2510 = j.member1071();
-            t.member2511 = j.member1071();
-            t.member2512 = j.member1071();
-            t.member2513 = j.member1071();
-            t.member2514 = j.member608();
-            t.member2515 = j.member608();
+            t.member2506 = j.g4();
+            t.level = j.g1();
+            t.member2507 = j.g1();
+            t.member2508 = j.g1();
+            t.member2509 = j.g1();
+            t.member2510 = j.g2s();
+            t.member2511 = j.g2s();
+            t.member2512 = j.g2s();
+            t.member2513 = j.g2s();
+            t.member2514 = j.g2();
+            t.member2515 = j.g2();
             t.member2516 = j.g3();
             t.member2517 = j.g3();
-            t.member2241 = j.member608();
-            t.member2242 = j.member608();
-            t.member2518 = j.member608();
-            t.member2519 = j.member609();
-            t.member2520 = j.member609();
-            t.member2521 = j.member609() === 1;
+            t.member2241 = j.g2();
+            t.member2242 = j.g2();
+            t.member2518 = j.g2();
+            t.member2519 = j.g1();
+            t.member2520 = j.g1();
+            t.member2521 = j.g1() === 1;
             t.member2522 = !t.member2521;
-            t.member2523 = j.member1070();
+            t.member2523 = j.g1s();
             if (t.member2523 === -1) {
                 t.member2523 = undefined;
             }
-            t.member2524 = j.member609() === 1;
-            t.member2525 = j.member609() === 1;
-            t.member2526 = j.member609() === 1;
-            t.member2527 = j.member609() === 1;
-            t.member2528 = j.member609() === 1;
-            t.member2529 = j.member609();
-            t.member2530 = j.member609();
-            t.member2531 = j.member1071();
-            t.member2532 = j.member609() === 1;
-            if (j.member609() === 1) {
+            t.active = j.g1() === 1;
+            t.member2525 = j.g1() === 1;
+            t.member2526 = j.g1() === 1;
+            t.member2527 = j.g1() === 1;
+            t.member2528 = j.g1() === 1;
+            t.member2529 = j.g1();
+            t.hillchange_mode = j.g1();
+            t.hillchange_value = j.g2s();
+            t.member2532 = j.g1() === 1;
+            if (j.g1() === 1) {
                 t.member2533 = {};
-                t.member2533.member2534 = new Array(j.member609());
-                var q = j.member609();
+                t.member2533.member2534 = new Array(j.g1());
+                var q = j.g1();
                 for (var s = 0; s < t.member2533.member2534.length; s++) {
                     t.member2533.member2534[s] = new Int32Array(q);
                     for (var g = 0; g < q; g++) {
-                        t.member2533.member2534[s][g] = j.member1071();
+                        t.member2533.member2534[s][g] = j.g2s();
                     }
                 }
             }
-            if (j.member609() === 1) {
+            if (j.g1() === 1) {
                 if (t.member2533 === undefined) {
                     t.member2533 = {};
                 }
-                t.member2533.member2371 = new Array(j.member609());
-                var q = j.member609();
+                t.member2533.member2371 = new Array(j.g1());
+                var q = j.g1();
                 for (var s = 0; s < t.member2533.member2371.length; s++) {
                     t.member2533.member2371[s] = new Int32Array(q);
                     for (var g = 0; g < q; g++) {
-                        t.member2533.member2371[s][g] = j.member1071();
+                        t.member2533.member2371[s][g] = j.g2s();
                     }
                 }
             }
-            t.member2535 = j.member608();
-            t.member2536 = j.member609() === 1;
-            var n = j.member609();
+            t.member2535 = j.g2();
+            t.member2536 = j.g1() === 1;
+            var n = j.g1();
             if (n > 0) {
                 t.member2537 = new Array(n);
                 for (var i = 0; i < n; i++) {
-                    t.member2537[i] = j.member608();
+                    t.member2537[i] = j.g2();
                 }
             }
-            t.member2538 = j.member608();
-            t.member2539 = j.member608();
-            t.member2540 = j.member608();
-            t.member2541 = j.member609();
-            t.member2542 = j.member608();
-            t.member2543 = j.member608();
-            t.member2544 = j.member608();
-            t.member2545 = j.member609();
-            t.member2546 = j.member608();
-            t.member2547 = j.member608();
-            t.member2548 = j.member320();
-            var m = j.member609();
+            t.member2538 = j.g2();
+            t.member2539 = j.g2();
+            t.bgsound = j.g2();
+            t.member2541 = j.g1();
+            t.member2542 = j.g2();
+            t.member2543 = j.g2();
+            t.member2544 = j.g2();
+            t.member2545 = j.g1();
+            t.member2546 = j.g2();
+            t.member2547 = j.g2();
+            t.member2548 = j.gFloat();
+            var m = j.g1();
             if (m > 0) {
-                t.member2549 = new Int32Array(m);
+                t.bgsound_random = new Int32Array(m);
                 for (var h = 0; h < m; h++) {
-                    t.member2549[h] = j.member608();
+                    t.bgsound_random[h] = j.g2();
                 }
-                t.member2550 = j.g3();
-                t.member2551 = j.g3();
-                t.member2552 = j.member609();
-                t.member2553 = j.member609();
-                t.member2554 = j.member608();
-                t.member2555 = j.member608();
-                t.member2556 = j.member320();
+                t.bgsound_mindelay = j.g3();
+                t.bgsound_maxdelay = j.g3();
+                t.member2552 = j.g1();
+                t.member2553 = j.g1();
+                t.member2554 = j.g2();
+                t.member2555 = j.g2();
+                t.member2556 = j.gFloat();
             }
         }
-        var o = j.member608();
+        var o = j.g2();
         this.member2503 = new Array(o);
         for (var k = 0; k < o; k++) {
-            var u = j.member1073();
+            var u = j.g4();
             this.member2503[u] = Class188(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, j);
         }
         if (false) {
@@ -242,7 +242,7 @@ export var Class210 = function () {
                     member2563: [g],
                     member2565: A,
                     member2566: z,
-                    member2569: g.member2524 ? 1 : 0,
+                    member2569: g.active ? 1 : 0,
                     member2570: g.member2561 ? 0 : 1
                 };
                 h.push(j);
@@ -252,13 +252,13 @@ export var Class210 = function () {
         this.member2572(D, F);
     };
     e.prototype.member2564 = function (h, i, k) {
-        if (h.member2540 >= 0) {
+        if (h.bgsound >= 0) {
             var j = Class41.create();
             j[0] = h.member2516;
             j[1] = h.member2511;
             j[2] = h.member2517;
             var m = {
-                member2573: h.member2540,
+                member2573: h.bgsound,
                 member2574: j,
                 member2538: h.member2538,
                 member2539: h.member2539,
@@ -273,15 +273,15 @@ export var Class210 = function () {
             };
             i.push(m);
         }
-        if (h.member2549 !== undefined && h.member2549.length > 0) {
+        if (h.bgsound_random !== undefined && h.bgsound_random.length > 0) {
             var j = Class41.create();
             j[0] = h.member2516;
             j[1] = h.member2511;
             j[2] = h.member2517;
             var g = {
-                member2549: h.member2549,
-                member2550: h.member2550,
-                member2551: h.member2551,
+                bgsound_random: h.bgsound_random,
+                bgsound_mindelay: h.bgsound_mindelay,
+                bgsound_maxdelay: h.bgsound_maxdelay,
                 member2574: j,
                 member2538: h.member2538,
                 member2539: h.member2539,
@@ -298,8 +298,8 @@ export var Class210 = function () {
         }
     };
     e.prototype.member2571 = function (j, E) {
-        var F = E.member1047();
-        E.member607(F + 2);
+        var F = E.getPos();
+        E.setPos(F + 2);
         var k = 0;
         for (var m = 0; m < j.length; m++) {
             var v = j[m];
@@ -324,7 +324,7 @@ export var Class210 = function () {
                 } else if (g.member2520 !== 0) {
                     C.member1668(g.member2520, true);
                 }
-                if (g.member2532 === false && g.member2530 !== Class170.member1852 && g.member2533 !== undefined) {
+                if (g.member2532 === false && g.hillchange_mode !== HillChange.member1852 && g.member2533 !== undefined) {
                     this.member2580(g, C, 0);
                 }
                 b[0] = g.member2510 + d.member2363;
@@ -342,11 +342,11 @@ export var Class210 = function () {
                     member2515: g.member2515,
                     member1794: C.member2098().member681(),
                     member2581: Class41.create(b),
-                    member2243: g.member2241 / Class86.member718,
-                    member2244: g.member2242 / Class86.member718
+                    width: g.member2241 / Class86.member718,
+                    length: g.member2242 / Class86.member718
                 };
-                if (g.member2524) {
-                    i[D - s].member2524 = true;
+                if (g.active) {
+                    i[D - s].active = true;
                     i[D - s].member2506 = g.member2506;
                     i[D - s].member2519 = g.member2519;
                     i[D - s].member2520 = g.member2520;
@@ -360,88 +360,88 @@ export var Class210 = function () {
                 continue;
             }
             var r = Class188(undefined, undefined, undefined, undefined, undefined, B);
-            E.member1051(r.member2122() ? 1 : 0);
-            E.member1051(r.member2121() ? 1 : 0);
-            E.member1051(v.member2526 ? 1 : 0);
-            E.member1051(v.member2522 ? 1 : 0);
+            E.p1(r.member2122() ? 1 : 0);
+            E.p1(r.member2121() ? 1 : 0);
+            E.p1(v.member2526 ? 1 : 0);
+            E.p1(v.member2522 ? 1 : 0);
             if (v.member2537 !== undefined) {
-                E.member1054(v.member2537.length);
+                E.p2(v.member2537.length);
                 for (var n = 0; n < v.member2537.length; n++) {
-                    E.member1054(v.member2537[n]);
+                    E.p2(v.member2537[n]);
                 }
             } else {
-                E.member1054(0);
+                E.p2(0);
             }
-            E.member1054(v.member2565.length);
+            E.p2(v.member2565.length);
             for (var x = 0; x < v.member2565.length; x++) {
                 var o = v.member2565[x];
-                E.member1054(o.member2573);
-                E.member1055(o.member2574[0]);
-                E.member1055(o.member2574[1]);
-                E.member1055(o.member2574[2]);
-                E.member1054(o.member2538);
-                E.member1054(o.member2539);
-                E.member1054(o.member2542);
-                E.member1054(o.member2543);
-                E.member1054(o.member2544);
-                E.member1051(o.member2575);
-                E.member1051(o.member2576);
-                E.member1054(o.member2577);
-                E.member1054(o.member2578);
-                E.member1063(o.member2579);
+                E.p2(o.member2573);
+                E.p3(o.member2574[0]);
+                E.p3(o.member2574[1]);
+                E.p3(o.member2574[2]);
+                E.p2(o.member2538);
+                E.p2(o.member2539);
+                E.p2(o.member2542);
+                E.p2(o.member2543);
+                E.p2(o.member2544);
+                E.p1(o.member2575);
+                E.p1(o.member2576);
+                E.p2(o.member2577);
+                E.p2(o.member2578);
+                E.pFloat(o.member2579);
             }
-            E.member1054(v.member2566.length);
+            E.p2(v.member2566.length);
             for (var x = 0; x < v.member2566.length; x++) {
                 var o = v.member2566[x];
-                E.member1051(o.member2549.length);
-                for (var u = 0; u < o.member2549.length; u++) {
-                    E.member1054(o.member2549[u]);
+                E.p1(o.bgsound_random.length);
+                for (var u = 0; u < o.bgsound_random.length; u++) {
+                    E.p2(o.bgsound_random[u]);
                 }
-                E.member1055(o.member2550);
-                E.member1055(o.member2551);
-                E.member1055(o.member2574[0]);
-                E.member1055(o.member2574[1]);
-                E.member1055(o.member2574[2]);
-                E.member1054(o.member2538);
-                E.member1054(o.member2539);
-                E.member1054(o.member2542);
-                E.member1054(o.member2543);
-                E.member1054(o.member2544);
-                E.member1051(o.member2575);
-                E.member1051(o.member2576);
-                E.member1054(o.member2577);
-                E.member1054(o.member2578);
-                E.member1063(o.member2579);
+                E.p3(o.bgsound_mindelay);
+                E.p3(o.bgsound_maxdelay);
+                E.p3(o.member2574[0]);
+                E.p3(o.member2574[1]);
+                E.p3(o.member2574[2]);
+                E.p2(o.member2538);
+                E.p2(o.member2539);
+                E.p2(o.member2542);
+                E.p2(o.member2543);
+                E.p2(o.member2544);
+                E.p1(o.member2575);
+                E.p1(o.member2576);
+                E.p2(o.member2577);
+                E.p2(o.member2578);
+                E.pFloat(o.member2579);
             }
-            E.member1054(i.length);
+            E.p2(i.length);
             for (var y = 0; y < i.length; y++) {
                 var t = i[y];
-                E.member1056(t.member2079);
-                E.member1051(t.level);
-                E.member1051(t.member2507);
-                E.member1051(t.member2523 === undefined ? -1 : t.member2523);
-                E.member1054(t.member2518);
-                E.member1054(t.member2514);
-                E.member1054(t.member2515);
+                E.p4(t.member2079);
+                E.p1(t.level);
+                E.p1(t.member2507);
+                E.p1(t.member2523 === undefined ? -1 : t.member2523);
+                E.p2(t.member2518);
+                E.p2(t.member2514);
+                E.p2(t.member2515);
                 t.member1794.member1318(E);
-                E.member1054(t.member2581[0]);
-                E.member1054(t.member2581[1]);
-                E.member1054(t.member2581[2]);
-                E.member1051(t.member2243);
-                E.member1051(t.member2244);
-                if (t.member2524) {
-                    E.member1051(1);
-                    E.member1056(t.member2506);
-                    E.member1051(t.member2519);
-                    E.member1051(t.member2520);
-                    E.member1051(t.member2522 ? 1 : 0);
+                E.p2(t.member2581[0]);
+                E.p2(t.member2581[1]);
+                E.p2(t.member2581[2]);
+                E.p1(t.width);
+                E.p1(t.length);
+                if (t.active) {
+                    E.p1(1);
+                    E.p4(t.member2506);
+                    E.p1(t.member2519);
+                    E.p1(t.member2520);
+                    E.p1(t.member2522 ? 1 : 0);
                 } else {
-                    E.member1051(0);
+                    E.p1(0);
                 }
                 if (t.member2582) {
-                    E.member1051(1);
+                    E.p1(1);
                 } else {
-                    E.member1051(0);
+                    E.p1(0);
                 }
             }
             r.member1318(E);
@@ -451,39 +451,39 @@ export var Class210 = function () {
             }
             r.member512();
         }
-        var z = E.member1047();
-        E.member607(F);
-        E.member1054(k);
-        E.member607(z);
+        var z = E.getPos();
+        E.setPos(F);
+        E.p2(k);
+        E.setPos(z);
     };
     e.prototype.member2572 = function (j, k) {
-        k.member1054(j.length);
+        k.p2(j.length);
         for (var g = 0; g < j.length; g++) {
             var i = j[g];
             var m = this.member2503[this.member2559(i)];
             m = Class188(undefined, undefined, undefined, undefined, m);
-            if (i.member2532 === false && i.member2530 !== Class170.member1852 && i.member2533 !== undefined) {
+            if (i.member2532 === false && i.hillchange_mode !== HillChange.member1852 && i.member2533 !== undefined) {
                 this.member2580(i, m, i.member2520);
             }
-            k.member1051(i.level);
-            k.member1051(i.member2523 === undefined ? -1 : i.member2523);
-            k.member1056(i.member2506);
-            k.member1051(i.member2522 ? 1 : 0);
-            k.member1051(i.member2519);
-            k.member1051(i.member2520);
-            k.member1051(i.member2527 ? 1 : 0);
-            k.member1054(i.member2535);
-            k.member1051(i.member2536 ? 1 : 0);
-            k.member1054(i.member2514);
-            k.member1054(i.member2515);
-            k.member1051(i.member2529);
+            k.p1(i.level);
+            k.p1(i.member2523 === undefined ? -1 : i.member2523);
+            k.p4(i.member2506);
+            k.p1(i.member2522 ? 1 : 0);
+            k.p1(i.member2519);
+            k.p1(i.member2520);
+            k.p1(i.member2527 ? 1 : 0);
+            k.p2(i.member2535);
+            k.p1(i.member2536 ? 1 : 0);
+            k.p2(i.member2514);
+            k.p2(i.member2515);
+            k.p1(i.member2529);
             if (i.member2537 !== undefined) {
-                k.member1051(i.member2537.length);
+                k.p1(i.member2537.length);
                 for (var h = 0; h < i.member2537.length; h++) {
-                    k.member1054(i.member2537[h]);
+                    k.p2(i.member2537[h]);
                 }
             } else {
-                k.member1051(0);
+                k.p1(0);
             }
             m.member1318(k);
             m.member512();
@@ -589,17 +589,17 @@ export var Class210 = function () {
                 return (B * (C - u) + A * u) / C - q.member2511;
             }
         };
-        if (q.member2530 === Class170.member1855) {
-            var i = (q.member2531 & 255) * 4;
-            var h = (q.member2531 >> 8 & 255) * 4;
-            var r = (q.member2531 >> 16 & 255) << 2;
-            var o = (q.member2531 >> 24 & 255) << 2;
+        if (q.hillchange_mode === HillChange.ROTATE) {
+            var i = (q.hillchange_value & 255) * 4;
+            var h = (q.hillchange_value >> 8 & 255) * 4;
+            var r = (q.hillchange_value >> 16 & 255) << 2;
+            var o = (q.hillchange_value >> 24 & 255) << 2;
             var k = n.member2120(i, h, r, o, j);
             if (k !== undefined) {
                 n.transform(k);
             }
         } else {
-            n.member1725(q.member2530, q.member2531, j, g);
+            n.member1725(q.hillchange_mode, q.hillchange_value, j, g);
         }
     };
     e.prototype.tidyup = function () {

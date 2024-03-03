@@ -1,6 +1,6 @@
 import { Class148 } from 'Class148.js';
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class80 } from 'Class80.js';
 export var Class423 = function () {
     var g = {};
@@ -13,35 +13,35 @@ export var Class423 = function () {
         member6108: { member1204: -1 },
         member6109: {
             member1204: -1,
-            member1288: member47
+            member1288: NULL
         },
         member6110: {
             member1204: -1,
-            member1288: member47
+            member1288: NULL
         },
         otherLevel: {
             member1204: -1,
-            member1288: member47
+            member1288: NULL
         },
         member325: {
             member1204: -1,
-            member1288: member47
+            member1288: NULL
         },
         member6111: {
             member1204: -1,
-            member1288: member47
+            member1288: NULL
         },
         member6112: {
             member1204: -1,
-            member1288: member47
+            member1288: NULL
         },
         member6113: {
             member1204: -1,
-            member1288: member47
+            member1288: NULL
         },
         member6114: {
             member1204: -1,
-            member1288: member47
+            member1288: NULL
         }
     };
     g.member6115 = a;
@@ -56,7 +56,7 @@ export var Class423 = function () {
             return;
         }
         var k = b.member6116.member6117();
-        if (k === member47) {
+        if (k === NULL) {
             return;
         }
         a.member6105.member1204 = k.member6118();
@@ -75,11 +75,11 @@ export var Class423 = function () {
     };
     g.member486 = h;
     g.member6130 = function (k) {
-        if (k.member1288 !== member47) {
+        if (k.member1288 !== NULL) {
             return k.member1288;
         }
         if (!i) {
-            return member47;
+            return NULL;
         }
         k.member1288 = j(k.member1204);
         return k.member1288;
@@ -87,11 +87,11 @@ export var Class423 = function () {
     var e = function () {
         for (var n in a) {
             var m = a[n];
-            if (m !== undefined && m.member1288 !== undefined && m.member1288 !== member47) {
+            if (m !== undefined && m.member1288 !== undefined && m.member1288 !== NULL) {
                 for (var k = 0; k < m.member1288.length; k++) {
                     m.member1288[k].member3606.member512();
                 }
-                m.member1288 = member47;
+                m.member1288 = NULL;
             }
         }
     };
@@ -99,18 +99,18 @@ export var Class423 = function () {
         if (m === true && d[q] !== undefined) {
             return d[q];
         }
-        var n = b.member995.getFile(Class95.member811, q, 0, Class96.member841);
+        var n = b.member995.getFile(Class95.member811, q, 0, Priority.member841);
         if (n === undefined) {
             throw new Error('1781 ' + q);
         }
-        if (n === member47) {
-            return member47;
+        if (n === NULL) {
+            return NULL;
         }
         var r = Class80.member606(n);
         var o = new Array(r.length);
         for (var k = 0; k < r.length; k++) {
             o[k] = {
-                member3606: Class148.member1495(r[k].member600(), r[k].member556(), r[k].member557(), 0),
+                member3606: Class148.member1495(r[k].getColour(), r[k].member556(), r[k].member557(), 0),
                 width: r[k].member556(),
                 height: r[k].member557()
             };

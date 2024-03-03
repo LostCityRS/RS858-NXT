@@ -1,15 +1,15 @@
 import { Class105 } from 'Class105.js';
 import { Class95 } from 'Class95.js';
-import { Class131 } from 'Class131.js';
-import { Class96 } from 'Class96.js';
-import { Class250 } from 'Class250.js';
+import { Js5ConfigGroup } from 'Class131.js';
+import { Priority } from 'Class96.js';
+import { SeqType } from 'Class250.js';
 import { Class734 } from 'Class734.js';
-export var Class760 = function (q) {
+export var SeqTypeList = function (q) {
     var e = {};
     var o = undefined;
     var m = undefined;
     var s = undefined;
-    e.member2933 = function () {
+    e.getSeqGroupTypeList = function () {
         return s;
     };
     var r = null;
@@ -20,31 +20,31 @@ export var Class760 = function (q) {
     };
     var c = Class105({ member895: 512 });
     var n = Class105({ member895: 512 });
-    if (q.member2739 !== undefined && q.member3992 !== undefined && q.member995 !== undefined && q.member10262 !== undefined) {
+    if (q.member2739 !== undefined && q.member3992 !== undefined && q.member995 !== undefined && q.seqGroupTypeList !== undefined) {
         o = q.member2739;
         m = q.member3992;
         r = q.member995;
-        s = q.member10262;
+        s = q.seqGroupTypeList;
         var a = r.member1439(Class95.member820).member3896();
-        k = a * Class131.member1262(Class131.member1216.member1210) + r.member1439(Class95.member820).member1440(a);
+        k = a * Js5ConfigGroup.getFileBits(Js5ConfigGroup.SEQTYPE.fileBits) + r.member1439(Class95.member820).member1440(a);
     } else {
         throw new Error('1758 ');
     }
     var i = function (x) {
         var u = c.find(x);
-        if (u === member47) {
-            var v = r.getFile(Class95.member820, Class131.member1263(x, Class131.member1216.member1210), Class131.member1264(x, Class131.member1216.member1210), Class96.member840, Class131.member1216.priority);
-            if (v === member47) {
-                return member47;
+        if (u === NULL) {
+            var v = r.getFile(Class95.member820, Js5ConfigGroup.getGroupID(x, Js5ConfigGroup.SEQTYPE.fileBits), Js5ConfigGroup.getFileID(x, Js5ConfigGroup.SEQTYPE.fileBits), Priority.member840, Js5ConfigGroup.SEQTYPE.priority);
+            if (v === NULL) {
+                return NULL;
             }
-            u = Class250(x, e);
+            u = SeqType(x, e);
             if (v !== undefined) {
                 var t = u.decode(v);
-                if (t === member47) {
-                    return member47;
+                if (t === NULL) {
+                    return NULL;
                 }
             }
-            u.member2934();
+            u.postDecode();
             c.put(u, 1, x);
         }
         return u;

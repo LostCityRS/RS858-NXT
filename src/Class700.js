@@ -27,7 +27,7 @@ export var Class700 = function () {
         return this.member9925.member2754(b);
     };
     a.prototype.member4589 = function (c) {
-        var b = this.member9925.add(c, c.member2703());
+        var b = this.member9925.add(c, c.getPriority());
         if (!b) {
             c.member4248(Class379.CANCELLED);
         } else {
@@ -39,7 +39,7 @@ export var Class700 = function () {
             var e = d.member2723();
             if (e === Class380.member2860) {
                 var c = d.member2889(this.member995, this.member2970);
-                if (c === member47) {
+                if (c === NULL) {
                     continue;
                 } else if (c === undefined) {
                     d.member4248(Class379.member4232);

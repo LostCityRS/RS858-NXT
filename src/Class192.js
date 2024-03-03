@@ -1,8 +1,8 @@
 import { Class37 } from 'Class37.js';
-import { Class170 } from 'Class170.js';
+import { HillChange } from 'Class170.js';
 import { Class41 } from 'Class41.js';
 import { Class143 } from 'Class143.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class165 } from 'Class165.js';
 import { Class49 } from 'Class49.js';
 import { Class81 } from 'Class81.js';
@@ -33,7 +33,7 @@ export var Class192 = function () {
     var F = 26;
     var J = function (M, S, L, Q) {
         this.member2145 = -1;
-        this.member2146 = Class170.member1859;
+        this.member2146 = HillChange.member1859;
         this.member2147 = undefined;
         this.member2148 = 12;
         this.member1879 = 0;
@@ -133,40 +133,40 @@ export var Class192 = function () {
             this.member2187 = L.member2187;
             this.member2086 = L.member2086;
         } else if (Q !== undefined) {
-            this.member2146 = Q.member609();
-            this.member2148 = Q.member609();
-            this.member1879 = Q.member608();
-            this.member2149 = Q.member608();
+            this.member2146 = Q.g1();
+            this.member2148 = Q.g1();
+            this.member1879 = Q.g2();
+            this.member2149 = Q.g2();
             this.member2150 = new Int32Array(this.member1879);
-            Q.member1092(this.member2150.buffer, 0, this.member2150.buffer.byteLength);
+            Q.gdata(this.member2150.buffer, 0, this.member2150.buffer.byteLength);
             this.member2151 = new Int32Array(this.member1879);
-            Q.member1092(this.member2151.buffer, 0, this.member2151.buffer.byteLength);
+            Q.gdata(this.member2151.buffer, 0, this.member2151.buffer.byteLength);
             this.member2152 = new Int32Array(this.member1879);
-            Q.member1092(this.member2152.buffer, 0, this.member2152.buffer.byteLength);
+            Q.gdata(this.member2152.buffer, 0, this.member2152.buffer.byteLength);
             this.member2153 = this.member2188(Q, Int32Array);
-            var W = Q.member608();
+            var W = Q.g2();
             if (W > 0) {
                 this.member2154 = new Array(W);
                 for (var R = 0; R < W; R++) {
-                    var P = Q.member608();
-                    var X = Q.member1073();
+                    var P = Q.g2();
+                    var X = Q.g4();
                     this.member2154[P] = new Int32Array(X / 4);
-                    member2189.member1092(this.member2154[P], 0, X);
+                    member2189.gdata(this.member2154[P], 0, X);
                 }
             }
             this.member434 = this.member2188(Q, Int16Array);
             this.member2155 = this.member2188(Q, Uint16Array);
-            this.member1568 = Q.member608();
+            this.member1568 = Q.g2();
             this.member2156 = this.member2188(Q, Int16Array);
             this.member2157 = this.member2188(Q, Int16Array);
             this.member2158 = this.member2188(Q, Int16Array);
             this.member2159 = this.member2188(Q, Int8Array);
             this.member2160 = this.member2188(Q, Int8Array);
-            this.member2161 = Q.member1071();
+            this.member2161 = Q.g2s();
             this.member2162 = this.member2188(Q, Uint16Array);
             this.member2163 = this.member2188(Q, Uint16Array);
             this.member2164 = this.member2188(Q, Int8Array);
-            this.member2165 = Q.member608();
+            this.member2165 = Q.g2();
             this.member1877 = this.member2188(Q, Uint16Array);
             this.member2166 = this.member2188(Q, Int32Array);
             this.member2167 = this.member2188(Q, Int16Array);
@@ -174,7 +174,7 @@ export var Class192 = function () {
             this.member2169 = this.member2188(Q, Uint8Array);
             this.member2170 = this.member2188(Q, Uint8Array);
             this.member1878 = this.member2188(Q, Float32Array);
-            this.member2171 = Q.member608();
+            this.member2171 = Q.g2();
             this.member2172 = this.member2188(Q, Int8Array);
             this.member2173 = this.member2188(Q, Int16Array);
             this.member2174 = this.member2188(Q, Int16Array);
@@ -187,40 +187,40 @@ export var Class192 = function () {
             this.member2181 = this.member2188(Q, Int8Array);
             this.member2182 = this.member2188(Q, Int8Array);
             this.member2183 = this.member2188(Q, Int8Array);
-            this.member2186 = Q.member608();
+            this.member2186 = Q.g2();
             this.member1872 = this.member2188(Q, Float32Array);
             this.member1873 = this.member2188(Q, Float32Array);
-            var V = Q.member608();
+            var V = Q.g2();
             if (V > 0) {
                 this.member2087 = new Array(V);
                 for (var R = 0; R < this.member2087.length; R++) {
                     var U = this.member2087[R] = {};
-                    U.member2190 = Q.member608();
-                    U.member2191 = Q.member608();
-                    U.member1594 = Q.member608();
-                    U.member1595 = Q.member608();
-                    U.member1596 = Q.member608();
-                    U.member2192 = Q.member608();
+                    U.member2190 = Q.g2();
+                    U.member2191 = Q.g2();
+                    U.member1594 = Q.g2();
+                    U.member1595 = Q.g2();
+                    U.member1596 = Q.g2();
+                    U.member2192 = Q.g2();
                 }
             }
-            var N = Q.member608();
+            var N = Q.g2();
             if (N > 0) {
                 this.member2187 = new Array(N);
                 for (var R = 0; R < this.member2187.length; R++) {
                     var U = this.member2187[R] = {};
-                    U.member2193 = Q.member608();
-                    U.member2194 = Q.member608();
+                    U.member2193 = Q.g2();
+                    U.member2194 = Q.g2();
                 }
             }
-            var O = Q.member608();
+            var O = Q.g2();
             if (O > 0) {
                 this.member2086 = new Array(O);
                 for (var R = 0; R < this.member2086.length; R++) {
                     var T = this.member2086[R] = {};
-                    T.member2070 = Q.member608();
-                    T.member2195 = Q.member608();
-                    T.member2196 = Q.member608();
-                    T.member2071 = Q.member608();
+                    T.member2070 = Q.g2();
+                    T.member2195 = Q.g2();
+                    T.member2196 = Q.g2();
+                    T.member2071 = Q.g2();
                 }
             }
         } else if (S !== undefined) {
@@ -233,7 +233,7 @@ export var Class192 = function () {
         v.call(this);
     };
     J.prototype.member1886 = function () {
-        return Class170.member1859;
+        return HillChange.member1859;
     };
     J.prototype.member2197 = function () {
         return this.member2148;
@@ -652,24 +652,24 @@ export var Class192 = function () {
     };
     var K = function (ah) {
         var a0;
-        var Y = Class124(undefined, ah.getData());
-        var X = Class124(undefined, ah.getData());
-        var V = Class124(undefined, ah.getData());
-        var U = Class124(undefined, ah.getData());
-        var T = Class124(undefined, ah.getData());
-        var Q = Class124(undefined, ah.getData());
-        var O = Class124(undefined, ah.getData());
-        var bq = Y.member609();
-        if (bq !== Class170.member1859) {
+        var Y = Packet(undefined, ah.getData());
+        var X = Packet(undefined, ah.getData());
+        var V = Packet(undefined, ah.getData());
+        var U = Packet(undefined, ah.getData());
+        var T = Packet(undefined, ah.getData());
+        var Q = Packet(undefined, ah.getData());
+        var O = Packet(undefined, ah.getData());
+        var bq = Y.g1();
+        if (bq !== HillChange.member1859) {
             throw new Error('2038 ' + bq);
         }
-        this.member2147 = Y.member609();
-        this.member2148 = Y.member609();
-        Y.member607(ah.getSize() - F);
-        this.member1879 = Y.member608();
-        this.member1568 = Y.member608();
-        this.member2171 = Y.member608();
-        var aj = Y.member609();
+        this.member2147 = Y.g1();
+        this.member2148 = Y.g1();
+        Y.setPos(ah.getSize() - F);
+        this.member1879 = Y.g2();
+        this.member1568 = Y.g2();
+        this.member2171 = Y.g2();
+        var aj = Y.g1();
         var at = (aj & 1) === 1;
         var bp = (aj & 2) === 2;
         var ar = (aj & 4) === 4;
@@ -677,18 +677,18 @@ export var Class192 = function () {
         var an = (aj & 32) === 32;
         var Z = (aj & 64) === 64;
         var ax = (aj & 128) === 128;
-        var ac = Y.member609();
-        var ao = Y.member609();
-        var ap = Y.member609();
-        var aJ = Y.member609();
-        var R = Y.member609();
-        var ba = Y.member608();
-        var be = Y.member608();
-        var bk = Y.member608();
-        var aZ = Y.member608();
-        var bb = Y.member608();
-        var bo = Y.member608();
-        var a5 = Y.member608();
+        var ac = Y.g1();
+        var ao = Y.g1();
+        var ap = Y.g1();
+        var aJ = Y.g1();
+        var R = Y.g1();
+        var ba = Y.g2();
+        var be = Y.g2();
+        var bk = Y.g2();
+        var aZ = Y.g2();
+        var bb = Y.g2();
+        var bo = Y.g2();
+        var a5 = Y.g2();
         if (!aI) {
             if (R === 1) {
                 bo = this.member1879;
@@ -706,9 +706,9 @@ export var Class192 = function () {
         var a3 = 0, aM = 0, a2 = 0;
         if (this.member2171 > 0) {
             this.member2172 = new Int8Array(this.member2171);
-            Y.member607(I);
+            Y.setPos(I);
             for (a0 = 0; a0 < this.member2171; a0++) {
-                var aK = this.member2172[a0] = Y.member1070();
+                var aK = this.member2172[a0] = Y.g1s();
                 if (aK === 0) {
                     a3++;
                 }
@@ -781,12 +781,12 @@ export var Class192 = function () {
         var aP = ah.getSize();
         var aN = ah.getSize();
         if (ax) {
-            var bc = Class124(undefined, ah.getData());
-            bc.member1045 = ah.getSize() - F - 1;
-            bc.member1045 -= bc.member609() - 1;
-            this.member2186 = bc.member608();
-            var S = bc.member608();
-            var P = bc.member608();
+            var bc = Packet(undefined, ah.getData());
+            bc.pos = ah.getSize() - F - 1;
+            bc.pos -= bc.g1() - 1;
+            this.member2186 = bc.g2();
+            var S = bc.g2();
+            var P = bc.g2();
             aW = W + S;
             aQ = aW + P;
             aP = aQ + this.member1879;
@@ -839,34 +839,34 @@ export var Class192 = function () {
                 this.member2181 = new Int8Array(this.member2171);
             }
         }
-        Y.member607(aV);
-        X.member607(aU);
-        V.member607(aT);
-        U.member607(aS);
-        T.member607(aR);
+        Y.setPos(aV);
+        X.setPos(aU);
+        V.setPos(aT);
+        U.setPos(aS);
+        T.setPos(aR);
         var a8 = 0, a7 = 0, a6 = 0;
         for (a0 = 0; a0 < this.member1879; a0++) {
-            var al = Y.member609();
+            var al = Y.g1();
             var N = 0;
             if ((al & 1) !== 0) {
-                N = X.member1080();
+                N = X.gSmart1or2s();
             }
             var M = 0;
             if ((al & 2) !== 0) {
-                M = -V.member1080();
+                M = -V.gSmart1or2s();
             }
             var br = 0;
             if ((al & 4) !== 0) {
-                br = U.member1080();
+                br = U.gSmart1or2s();
             }
             a8 = this.member2150[a0] = a8 + N;
             a7 = this.member2151[a0] = a7 + M;
             a6 = this.member2152[a0] = a6 + br;
             if (R === 1) {
                 if (aI) {
-                    this.member2153[a0] = T.member1081();
+                    this.member2153[a0] = T.gSmart1or2null();
                 } else {
-                    this.member2153[a0] = T.member609();
+                    this.member2153[a0] = T.g1();
                     if (this.member2153[a0] === 255) {
                         this.member2153[a0] = A;
                     }
@@ -874,13 +874,13 @@ export var Class192 = function () {
             }
         }
         if (this.member2186 > 0) {
-            Y.member607(aQ);
-            X.member607(aP);
-            V.member607(aN);
+            Y.setPos(aQ);
+            X.setPos(aP);
+            V.setPos(aN);
             this.member2155 = new Uint16Array(this.member1879);
             for (var aw = 0, av = 0; aw < this.member1879; ++aw) {
                 this.member2155[aw] = av;
-                av += Y.member609();
+                av += Y.g1();
             }
             this.member2168 = new Uint8Array(this.member1568);
             this.member2169 = new Uint8Array(this.member1568);
@@ -888,47 +888,47 @@ export var Class192 = function () {
             this.member1872 = new Float32Array(this.member2186);
             this.member1873 = new Float32Array(this.member2186);
             for (var aw = 0; aw < this.member2186; ++aw) {
-                this.member1872[aw] = X.member1071() / 4096;
-                this.member1873[aw] = V.member1071() / 4096;
+                this.member1872[aw] = X.g2s() / 4096;
+                this.member1873[aw] = V.g2s() / 4096;
             }
         }
-        Y.member607(am);
-        X.member607(ak);
-        V.member607(ai);
-        U.member607(ag);
-        T.member607(af);
-        Q.member607(ae);
-        O.member607(ad);
+        Y.setPos(am);
+        X.setPos(ak);
+        V.setPos(ai);
+        U.setPos(ag);
+        T.setPos(af);
+        Q.setPos(ae);
+        O.setPos(ad);
         for (a0 = 0; a0 < this.member1568; a0++) {
-            this.member2163[a0] = Y.member608();
+            this.member2163[a0] = Y.g2();
             if (at) {
-                this.member2159[a0] = X.member609();
+                this.member2159[a0] = X.g1();
             }
             if (ac === 255) {
-                this.member2160[a0] = V.member609();
+                this.member2160[a0] = V.g1();
             }
             if (ao === 1) {
-                this.member2164[a0] = U.member609();
+                this.member2164[a0] = U.g1();
             }
             if (ap === 1) {
                 if (an) {
-                    this.member2166[a0] = T.member1081();
+                    this.member2166[a0] = T.gSmart1or2null();
                 } else {
-                    this.member2166[a0] = T.member609();
+                    this.member2166[a0] = T.g1();
                     if (this.member2166[a0] === 255) {
                         this.member2166[a0] = -1;
                     }
                 }
             }
             if (aJ === 1) {
-                this.member1877[a0] = Q.member608() - 1;
+                this.member1877[a0] = Q.g2() - 1;
             }
             if (this.member2162 !== undefined) {
                 if (this.member1877[a0] !== D) {
                     if (this.member2148 >= 16) {
-                        this.member2162[a0] = O.member1078() - 1;
+                        this.member2162[a0] = O.gSmart1or2() - 1;
                     } else {
-                        this.member2162[a0] = O.member609() - 1;
+                        this.member2162[a0] = O.g1() - 1;
                     }
                 } else {
                     this.member2162[a0] = H;
@@ -936,21 +936,21 @@ export var Class192 = function () {
             }
         }
         this.member2149 = -1;
-        Y.member607(aY);
-        X.member607(aX);
-        V.member607(aW);
+        Y.setPos(aY);
+        X.setPos(aX);
+        V.setPos(aW);
         var bn = 0, bm = 0, bl = 0;
         var aH = 0, aG = 0, aF = 0;
         var L = 0;
         for (a0 = 0; a0 < this.member1568; a0++) {
-            var aK = X.member609();
+            var aK = X.g1();
             var au = aK & 7;
             if (au === 1) {
-                aH = Y.member1080() + L;
+                aH = Y.gSmart1or2s() + L;
                 L = aH;
-                aG = Y.member1080() + L;
+                aG = Y.gSmart1or2s() + L;
                 L = aG;
-                aF = Y.member1080() + L;
+                aF = Y.gSmart1or2s() + L;
                 L = aF;
                 this.member2156[a0] = aH;
                 this.member2157[a0] = aG;
@@ -966,7 +966,7 @@ export var Class192 = function () {
                 }
             } else if (au === 2) {
                 aG = aF;
-                aF = Y.member1080() + L;
+                aF = Y.gSmart1or2s() + L;
                 L = aF;
                 this.member2156[a0] = aH;
                 this.member2157[a0] = aG;
@@ -976,7 +976,7 @@ export var Class192 = function () {
                 }
             } else if (au === 3) {
                 aH = aF;
-                aF = Y.member1080() + L;
+                aF = Y.gSmart1or2s() + L;
                 L = aF;
                 this.member2156[a0] = aH;
                 this.member2157[a0] = aG;
@@ -988,7 +988,7 @@ export var Class192 = function () {
                 var aO = aH;
                 aH = aG;
                 aG = aO;
-                aF = Y.member1080() + L;
+                aF = Y.gSmart1or2s() + L;
                 L = aF;
                 this.member2156[a0] = aH;
                 this.member2157[a0] = aG;
@@ -999,59 +999,59 @@ export var Class192 = function () {
             }
             if (this.member2186 > 0) {
                 if ((aK & 8) !== 0) {
-                    this.member2168[a0] = V.member609();
-                    this.member2169[a0] = V.member609();
-                    this.member2170[a0] = V.member609();
+                    this.member2168[a0] = V.g1();
+                    this.member2169[a0] = V.g1();
+                    this.member2170[a0] = V.g1();
                 }
             }
         }
         this.member2149++;
-        Y.member607(bj);
-        X.member607(bi);
-        V.member607(bh);
-        U.member607(bg);
-        T.member607(bf);
-        Q.member607(bd);
+        Y.setPos(bj);
+        X.setPos(bi);
+        V.setPos(bh);
+        U.setPos(bg);
+        T.setPos(bf);
+        Q.setPos(bd);
         for (a0 = 0; a0 < this.member2171; a0++) {
             var aK = this.member2172[a0];
             if (aK === 0) {
-                this.member2173[a0] = Y.member1071();
-                this.member2174[a0] = Y.member1071();
-                this.member2175[a0] = Y.member1071();
+                this.member2173[a0] = Y.g2s();
+                this.member2174[a0] = Y.g2s();
+                this.member2175[a0] = Y.g2s();
             } else {
-                this.member2173[a0] = X.member1071();
-                this.member2174[a0] = X.member1071();
-                this.member2175[a0] = X.member1071();
+                this.member2173[a0] = X.g2s();
+                this.member2174[a0] = X.g2s();
+                this.member2175[a0] = X.g2s();
                 if (this.member2148 < 15) {
-                    this.member2176[a0] = V.member608();
+                    this.member2176[a0] = V.g2();
                     if (this.member2148 < 14) {
-                        this.member2177[a0] = V.member608();
+                        this.member2177[a0] = V.g2();
                     } else {
                         this.member2177[a0] = V.g3();
                     }
-                    this.member2178[a0] = V.member608();
+                    this.member2178[a0] = V.g2();
                 } else {
                     this.member2176[a0] = V.g3();
                     this.member2177[a0] = V.g3();
                     this.member2178[a0] = V.g3();
                 }
-                this.member2182[a0] = U.member609();
-                this.member2183[a0] = T.member1070();
-                this.member2179[a0] = Q.member1070();
+                this.member2182[a0] = U.g1();
+                this.member2183[a0] = T.g1s();
+                this.member2179[a0] = Q.g1s();
                 if (aK === 2) {
-                    this.member2180[a0] = Q.member1070();
-                    this.member2181[a0] = Q.member1070();
+                    this.member2180[a0] = Q.g1s();
+                    this.member2181[a0] = Q.g1s();
                 }
             }
         }
-        Y.member607(W);
+        Y.setPos(W);
         if (bp) {
-            var aq = Y.member609();
+            var aq = Y.g1();
             if (aq > 0) {
                 this.member2087 = new Array(aq);
                 for (var a0 = 0; a0 < aq; a0++) {
-                    var aE = Y.member608();
-                    var aD = Y.member608();
+                    var aE = Y.g2();
+                    var aD = Y.g2();
                     var aC = ac;
                     if (ac === 255) {
                         aC = this.member2160[aD];
@@ -1066,12 +1066,12 @@ export var Class192 = function () {
                     };
                 }
             }
-            var ab = Y.member609();
+            var ab = Y.g1();
             if (ab > 0) {
                 this.member2187 = new Array(ab);
                 for (var a0 = 0; a0 < ab; a0++) {
-                    var aB = Y.member608();
-                    var aA = Y.member608();
+                    var aB = Y.g2();
+                    var aA = Y.g2();
                     this.member2187[a0] = {
                         member2193: aB,
                         member2194: aA
@@ -1080,25 +1080,25 @@ export var Class192 = function () {
             }
         }
         if (ar) {
-            var aL = Y.member609();
+            var aL = Y.g1();
             if (aL > 0) {
                 this.member2086 = new Array(aL);
                 for (var a0 = 0; a0 < aL; a0++) {
-                    var a9 = Y.member608();
-                    var az = Y.member608();
+                    var a9 = Y.g2();
+                    var az = Y.g2();
                     var ay;
                     if (Z) {
-                        ay = Y.member1081();
+                        ay = Y.gSmart1or2null();
                         if (ay === -1) {
                             ay = undefined;
                         }
                     } else {
-                        ay = Y.member609();
+                        ay = Y.g1();
                         if (ay === 255) {
                             ay = undefined;
                         }
                     }
-                    var a4 = Y.member1070();
+                    var a4 = Y.g1s();
                     this.member2086[a0] = {
                         member2070: a9,
                         member2195: az,
@@ -1821,7 +1821,7 @@ export var Class192 = function () {
     J.prototype.member681 = function (O, P) {
         var M = this;
         if (O) {
-            M = this.member1319();
+            M = this.clone();
         }
         var N = {
             member2148: M.member2148,
@@ -1965,46 +1965,46 @@ export var Class192 = function () {
         return N;
     };
     J.prototype.member1318 = function (Q) {
-        Q.member1051(this.member2146);
-        Q.member1051(this.member2148);
-        Q.member1054(this.member1879);
-        Q.member1054(this.member2149);
+        Q.p1(this.member2146);
+        Q.p1(this.member2148);
+        Q.p2(this.member1879);
+        Q.p2(this.member2149);
         Q.member1067(this.member2150.buffer, 0, this.member1879 * 4);
         Q.member1067(this.member2151.buffer, 0, this.member1879 * 4);
         Q.member1067(this.member2152.buffer, 0, this.member1879 * 4);
         this.member2225(Q, this.member2153);
         if (this.member2154 !== undefined) {
-            var N = Q.member1047();
-            Q.member607(N + 2);
+            var N = Q.getPos();
+            Q.setPos(N + 2);
             var O = 0;
             for (var L = 0; L < this.member2154.length; L++) {
                 if (this.member2154[L] !== undefined) {
-                    Q.member1054(L);
-                    Q.member1056(this.member2154[L].buffer.byteLength);
+                    Q.p2(L);
+                    Q.p4(this.member2154[L].buffer.byteLength);
                     Q.pArrayBufffer(this.member2154[L].buffer, 0, this.member2154[L].buffer.byteLength);
                     O++;
                 }
             }
-            var M = Q.member1047();
-            Q.member607(N);
-            Q.member1054(O);
-            Q.member607(M);
+            var M = Q.getPos();
+            Q.setPos(N);
+            Q.p2(O);
+            Q.setPos(M);
         } else {
-            Q.member1054(0);
+            Q.p2(0);
         }
         this.member2225(Q, this.member434);
         this.member2225(Q, this.member2155);
-        Q.member1054(this.member1568);
+        Q.p2(this.member1568);
         this.member2225(Q, this.member2156);
         this.member2225(Q, this.member2157);
         this.member2225(Q, this.member2158);
         this.member2225(Q, this.member2159);
         this.member2225(Q, this.member2160);
-        Q.member1054(this.member2161);
+        Q.p2(this.member2161);
         this.member2225(Q, this.member2162);
         this.member2225(Q, this.member2163);
         this.member2225(Q, this.member2164);
-        Q.member1054(this.member2165);
+        Q.p2(this.member2165);
         this.member2225(Q, this.member1877);
         this.member2225(Q, this.member2166);
         this.member2225(Q, this.member2167);
@@ -2012,7 +2012,7 @@ export var Class192 = function () {
         this.member2225(Q, this.member2169);
         this.member2225(Q, this.member2170);
         this.member2225(Q, this.member1878);
-        Q.member1054(this.member2171);
+        Q.p2(this.member2171);
         this.member2225(Q, this.member2172);
         this.member2225(Q, this.member2173);
         this.member2225(Q, this.member2174);
@@ -2025,66 +2025,66 @@ export var Class192 = function () {
         this.member2225(Q, this.member2181);
         this.member2225(Q, this.member2182);
         this.member2225(Q, this.member2183);
-        Q.member1054(this.member2186);
+        Q.p2(this.member2186);
         this.member2225(Q, this.member1872);
         this.member2225(Q, this.member1873);
         if (this.member2087 !== undefined) {
-            Q.member1054(this.member2087.length);
+            Q.p2(this.member2087.length);
             for (var L = 0; L < this.member2087.length; L++) {
                 var R = this.member2087[L];
-                Q.member1054(R.member2190);
-                Q.member1054(R.member2191);
-                Q.member1054(R.member1594);
-                Q.member1054(R.member1595);
-                Q.member1054(R.member1596);
-                Q.member1054(R.member2192);
+                Q.p2(R.member2190);
+                Q.p2(R.member2191);
+                Q.p2(R.member1594);
+                Q.p2(R.member1595);
+                Q.p2(R.member1596);
+                Q.p2(R.member2192);
             }
         } else {
-            Q.member1054(0);
+            Q.p2(0);
         }
         if (this.member2187 !== undefined) {
-            Q.member1054(this.member2187.length);
+            Q.p2(this.member2187.length);
             for (var L = 0; L < this.member2187.length; L++) {
                 var R = this.member2187[L];
-                Q.member1054(R.member2193);
-                Q.member1054(R.member2194);
+                Q.p2(R.member2193);
+                Q.p2(R.member2194);
             }
         } else {
-            Q.member1054(0);
+            Q.p2(0);
         }
         if (this.member2086 !== undefined) {
-            Q.member1054(this.member2086.length);
+            Q.p2(this.member2086.length);
             for (var L = 0; L < this.member2086.length; L++) {
                 var P = this.member2086[L];
-                Q.member1054(P.member2070);
-                Q.member1054(P.member2195);
-                Q.member1054(P.member2196);
-                Q.member1054(P.member2071);
+                Q.p2(P.member2070);
+                Q.p2(P.member2195);
+                Q.p2(P.member2196);
+                Q.p2(P.member2071);
             }
         } else {
-            Q.member1054(0);
+            Q.p2(0);
         }
     };
     J.prototype.member2225 = function (L, M) {
         if (M !== undefined) {
-            L.member1051(1);
-            L.member1056(M.buffer.byteLength);
+            L.p1(1);
+            L.p4(M.buffer.byteLength);
             L.member1067(M.buffer, 0, M.buffer.byteLength);
         } else {
-            L.member1051(0);
+            L.p1(0);
         }
     };
     J.prototype.member2188 = function (M, N) {
-        var L = M.member609() === 1;
+        var L = M.g1() === 1;
         if (L) {
-            var O = new N(new ArrayBuffer(M.member1073()));
-            M.member1092(O.buffer, 0, O.buffer.byteLength);
+            var O = new N(new ArrayBuffer(M.g4()));
+            M.gdata(O.buffer, 0, O.buffer.byteLength);
             return O;
         } else {
             return undefined;
         }
     };
-    J.prototype.member1319 = function () {
+    J.prototype.clone = function () {
         var N;
         if (this.member2087 !== undefined) {
             N = new Array(this.member2087.length);
@@ -2201,7 +2201,7 @@ export var Class192 = function () {
         if (this.member2086 !== undefined) {
             for (var R = 0; R < this.member2086.length; R++) {
                 var M = N.member1719(this.member2086[R].member2070);
-                var L = M.member701();
+                var L = M.getMaterial();
                 if (L !== undefined) {
                     if (S[L] === undefined) {
                         Q[O++] = L;

@@ -14,7 +14,7 @@ export var Class673 = function () {
         var c = 31;
         var g = 31;
         var v = -1;
-        q.member9787 = function () {
+        q.getDamageFont = function () {
             return v;
         };
         q.member9558 = function (x) {
@@ -69,12 +69,12 @@ export var Class673 = function () {
                 if (v === -1) {
                     v = Class423.member6115.member6107.member1204;
                     if (v === -1) {
-                        return member47;
+                        return NULL;
                     }
                 }
                 j = t.member7137.member3639(v);
                 if (j === null) {
-                    return member47;
+                    return NULL;
                 }
                 u();
             }
@@ -98,7 +98,7 @@ export var Class673 = function () {
                 M += ' ';
                 for (var F = 0; F < C.length; F++) {
                     var B = i.member9804(C[F]);
-                    if (B === member47) {
+                    if (B === NULL) {
                         continue;
                     }
                     var A = B.member3606.member1539();
@@ -109,7 +109,7 @@ export var Class673 = function () {
             }
             if (L.member9805()) {
                 var H = Class423.member6130(Class423.member6115.otherLevel);
-                if (H === member47 || H.length === 0) {
+                if (H === NULL || H.length === 0) {
                     return;
                 }
                 var A = H[0].member3606.member1539();

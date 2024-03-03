@@ -1,9 +1,9 @@
 import { Class41 } from 'Class41.js';
 import { Class140 } from 'Class140.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class86 } from 'Class86.js';
 import { Class121 } from 'Class121.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class157 } from 'Class157.js';
 import { Class128 } from 'Class128.js';
 import { Class87 } from 'Class87.js';
@@ -46,7 +46,7 @@ export var Class159 = function (m) {
         x = m.request.member1643;
         l = new Array(m.request.member1640.length);
         for (var h = 0; h < l.length; h++) {
-            l[h] = Class124(undefined, m.request.member1640[h]);
+            l[h] = Packet(undefined, m.request.member1640[h]);
         }
         r = m.request.member1644;
         s = m.request.member1641;
@@ -146,14 +146,14 @@ export var Class159 = function (m) {
             var Z = true;
             if (!k) {
                 if (!a) {
-                    ac.member1652(Class131.member1203.member1204, M, an, 0);
+                    ac.member1652(Js5ConfigGroup.FLUTYPE.member1204, M, an, 0);
                     a = true;
                 }
                 Z = false;
             }
             if (!u) {
                 if (!W) {
-                    ac.member1652(Class131.member1207.member1204, D, an, 1);
+                    ac.member1652(Js5ConfigGroup.FLOTYPE.member1204, D, an, 1);
                     W = true;
                 }
                 Z = false;
@@ -198,7 +198,7 @@ export var Class159 = function (m) {
             }
             var ab = Class157({
                 member1560: P,
-                member1561: Math.floor(Class86.member718 * (Class86.member729 / P)),
+                size: Math.floor(Class86.member718 * (Class86.member729 / P)),
                 member1562: d[Y].member1562,
                 member1569: d[Y].member1569,
                 member1565: o
@@ -230,38 +230,38 @@ export var Class159 = function (m) {
         for (var ad = 0; ad < A.length; ad++) {
             A[ad] = new Array(Class86.member414);
             var ac = l[ad];
-            while (ac.member1047() < ac.getSize()) {
-                var aa = ac.member609();
+            while (ac.getPos() < ac.getSize()) {
+                var aa = ac.g1();
                 var ab = A[ad][aa] = new Array(Class86.member729 + 2);
                 for (var Y = 0; Y < Class86.member729 + 2; Y++) {
                     ab[Y] = new Array(Class86.member729 + 2);
                     for (var ag = 0; ag < Class86.member729 + 2; ag++) {
                         var ae = ab[Y][ag] = {};
-                        var af = ac.member609();
+                        var af = ac.g1();
                         if (af !== 0) {
                             ae.member1660 = af >> 1 & 7;
                             ae.member1661 = (af >> 4 & 1) === 1;
-                            ae.member1662 = ac.member609();
+                            ae.member1662 = ac.g1();
                             if (ae.member1661) {
-                                ae.member1663 = ac.member609();
+                                ae.member1663 = ac.g1();
                             } else if (aa === 0) {
                                 ae.member1663 = 0;
                             }
-                            ae.member1649 = ac.member1078() - 1;
+                            ae.member1649 = ac.gSmart1or2() - 1;
                             if (ae.member1649 !== -1) {
-                                ae.member1664 = ac.member608();
+                                ae.member1664 = ac.g2();
                             }
-                            ae.member1651 = ac.member1078() - 1;
+                            ae.member1651 = ac.gSmart1or2() - 1;
                             // Note: The below check and its content is an addition.
                             if (ae.member1661) {
-                                ac.member1078()
+                                ac.gSmart1or2()
                             }
                             if (ae.member1651 !== -1) {
-                                var Z = ac.member609();
+                                var Z = ac.g1();
                                 ae.member1598 = Class128.getByID(Z >> 2);
                                 ae.member1665 = Z & 3;
                                 if (ae.member1661) {
-                                    ae.member1650 = ac.member1078() - 1;
+                                    ae.member1650 = ac.gSmart1or2() - 1;
                                 }
                             }
                             if (o !== undefined && ae.member1661) {
@@ -270,7 +270,7 @@ export var Class159 = function (m) {
                                 }
                             }
                         } else {
-                            ae.member1662 = ac.member609();
+                            ae.member1662 = ac.g1();
                             ae.member1661 = false;
                             ae.member1663 = 0;
                         }

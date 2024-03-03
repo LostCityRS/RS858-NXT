@@ -28,22 +28,22 @@ export var Class176 = function () {
     };
     var a = function (q) {
         while (true) {
-            var o = q.member609();
+            var o = q.g1();
             if (o === 0) {
                 break;
             } else if (o === 1) {
-                this.member1946 = q.member608();
+                this.member1946 = q.g2();
             } else if (o === 2) {
-                this.member1740 = q.member609();
+                this.member1740 = q.g1();
             } else if (o === 3) {
-                this.member1947[0] = q.member1074();
-                this.member1947[1] = q.member1074();
-                this.member1947[2] = q.member1074();
+                this.member1947[0] = q.g4s();
+                this.member1947[1] = q.g4s();
+                this.member1947[2] = q.g4s();
             } else if (o === 4) {
-                this.member1948 = q.member609();
-                this.member1949 = q.member1074();
+                this.member1948 = q.g1();
+                this.member1949 = q.g4s();
             } else if (o === 6) {
-                this.type = q.member609();
+                this.type = q.g1();
             } else if (o === 8) {
                 this.member1950 = b;
             } else if (o === 9) {

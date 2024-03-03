@@ -1,12 +1,12 @@
 import { Class547 } from 'Class547.js';
-export var Class548 = function () {
+export var QuickChatPhraseType = function () {
     var a = '...';
     var b = function (d, c) {
-        this.member2896;
+        this.myList;
         this.member625 = -1;
         if (d !== undefined && c !== undefined) {
             this.member625 = d;
-            this.member2896 = c;
+            this.myList = c;
         } else {
             throw new Error('1410 ');
         }
@@ -16,7 +16,7 @@ export var Class548 = function () {
         this.member8721;
         this.member8722 = true;
     };
-    b.prototype.member444 = function () {
+    b.prototype.getID = function () {
         return this.member625;
     };
     b.prototype.member3637 = function () {
@@ -60,7 +60,7 @@ export var Class548 = function () {
     };
     b.prototype.decode = function (d) {
         while (true) {
-            var c = d.member609();
+            var c = d.g1();
             if (c === undefined) {
                 throw new Error('1411 ');
                 break;
@@ -68,30 +68,30 @@ export var Class548 = function () {
             if (c === 0) {
                 break;
             }
-            this.member2932(d, c);
+            this.decodeNext(d, c);
         }
     };
-    b.prototype.member2932 = function (k, g) {
+    b.prototype.decodeNext = function (k, g) {
         if (g === 1) {
-            this.text = k.member1089().split('<');
+            this.text = k.gjstr().split('<');
         } else if (g === 2) {
-            var h = k.member609();
+            var h = k.g1();
             this.member8721 = new Uint16Array(h);
             for (var d = 0; d < h; d++) {
-                this.member8721[d] = k.member608();
+                this.member8721[d] = k.g2();
             }
         } else if (g === 3) {
-            var h = k.member609();
+            var h = k.g1();
             this.member8719 = new Uint16Array(h);
             this.member8720 = new Array(h);
             for (var d = 0; d < h; d++) {
-                var c = k.member608();
+                var c = k.g2();
                 var i = Class547.member8718(c);
                 if (i !== undefined) {
                     this.member8719[d] = c;
                     this.member8720[d] = new Uint16Array(i.member8704);
                     for (var e = 0; e < i.member8704; e++) {
-                        this.member8720[d][e] = k.member608();
+                        this.member8720[d][e] = k.g2();
                     }
                 } else if (false) {
                 }
@@ -101,11 +101,11 @@ export var Class548 = function () {
         } else if (false) {
         }
     };
-    b.prototype.member2934 = function () {
+    b.prototype.postDecode = function () {
         if (this.member8721 === undefined) {
             return;
         }
-        var d = this.member2896.member8729();
+        var d = this.myList.member8729();
         if (this.member625 > d) {
             for (var c = 0; c < this.member8721.length; c++) {
                 this.member8721[c] += d;
@@ -117,7 +117,7 @@ export var Class548 = function () {
         if (this.member8719 !== undefined) {
             for (var c = 0; c < this.member8719.length; c++) {
                 d += this.text[c];
-                d += this.member2896.member8730(this.member8725(c), this.member8720[c], e.member1087(Class547.member8718(this.member8719[c]).member8703));
+                d += this.myList.member8730(this.member8725(c), this.member8720[c], e.member1087(Class547.member8718(this.member8719[c]).member8703));
             }
         }
         d += this.text[this.text.length - 1];

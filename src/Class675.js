@@ -31,7 +31,7 @@ export var Class675 = function () {
         this.member9811.member887(c);
         return d;
     };
-    a.prototype.member2703 = function () {
+    a.prototype.getPriority = function () {
         if (this.member9811.member776() !== null) {
             return this.member9811.member776().member9814();
         }

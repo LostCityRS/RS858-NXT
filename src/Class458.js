@@ -10,22 +10,22 @@ export var Class458 = function () {
         var j = 0;
         var q = 0;
         var n = 0;
-        r.member1053 = function () {
+        r.next = function () {
             if (D === 0) {
                 s();
                 D = z;
             }
             return B[--D];
         };
-        var h = r.member1053;
-        r.member1084 = function () {
+        var h = r.next;
+        r.peek = function () {
             if (D === 0) {
                 s();
                 D = z;
             }
             return B[D - 1];
         };
-        var g = r.member1084;
+        var g = r.peek;
         var s = function () {
             var c, b, e;
             q = q + ++n | 0;

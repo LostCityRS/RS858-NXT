@@ -7,7 +7,7 @@ export var Class671 = function () {
     };
     b.member25 = c;
     Class433.member6327.member6428 = function (d, e) {
-        a.member7620.member9780();
+        a.delayedStateChange.incrementVerifyID();
     };
     Class433.member6423.member6428 = function (d, e) {
     };

@@ -55,9 +55,9 @@ export var Class585 = function () {
             }
         };
         b.member6219 = function (n) {
-            c = n.member609();
-            k = n.member320();
-            i = n.member320();
+            c = n.g1();
+            k = n.gFloat();
+            i = n.gFloat();
         };
         var d = b.member6219;
         if (m.member8969 !== undefined && m.member3701 !== undefined && m.member4735 !== undefined && m.member8970 !== undefined) {

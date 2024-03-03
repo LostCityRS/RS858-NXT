@@ -17,7 +17,7 @@ import { Class415 } from 'Class415.js';
 import { Class70 } from 'Class70.js';
 import { Class302 } from 'Class302.js';
 import { Class301 } from 'Class301.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class120 } from 'Class120.js';
 export var Class445 = function () {
     var D = 36;
@@ -50,7 +50,7 @@ export var Class445 = function () {
         this.member6680(M, O, Q, P, N);
     };
     y.prototype.member7002 = function () {
-        this.member7004 = -1;
+        this.graphic = -1;
         this.member7005 = 0;
         this.member7006 = false;
         this.member7007 = 0;
@@ -79,19 +79,19 @@ export var Class445 = function () {
         this.member6681();
     };
     y.prototype.member6797 = function (O, M) {
-        this.member7004 = O.member1074();
-        this.member7005 = O.member608();
-        var Q = O.member609();
+        this.graphic = O.g4s();
+        this.member7005 = O.g2();
+        var Q = O.g1();
         this.member7006 = (Q & 1) !== 0;
         this.member7011 = (Q & 2) !== 0;
-        var P = 255 - O.member609();
-        this.member7007 = O.member609();
-        this.member7008 = O.member1073();
-        this.member7009 = O.member609() === 1;
-        this.member7010 = O.member609() === 1;
-        var N = O.member1073();
+        var P = 255 - O.g1();
+        this.member7007 = O.g1();
+        this.member7008 = O.g4();
+        this.member7009 = O.g1() === 1;
+        this.member7010 = O.g1() === 1;
+        var N = O.g4();
         if (M >= 3) {
-            this.member7012 = O.member609() === 1;
+            this.member7012 = O.g1() === 1;
         }
         return {
             member4638: N,
@@ -99,10 +99,10 @@ export var Class445 = function () {
         };
     };
     y.prototype.member7027 = function () {
-        return this.member7004;
+        return this.graphic;
     };
     y.prototype.member6808 = function (M) {
-        this.member7004 = M;
+        this.graphic = M;
         this.member1280 = undefined;
     };
     y.prototype.member7028 = function () {
@@ -226,12 +226,12 @@ export var Class445 = function () {
         this.member7024 = M;
     };
     y.prototype.member7068 = function () {
-        if (this.member7004 === -1) {
+        if (this.graphic === -1) {
             return undefined;
         }
         if (this.member1280 === undefined) {
             this.member7025();
-            this.member1280 = this.member7004 + ((this.member7011 ? 1 : 0) << 16) + (this.member7007 << 17) + this.member7008 * Math.pow(2, 19);
+            this.member1280 = this.graphic + ((this.member7011 ? 1 : 0) << 16) + (this.member7007 << 17) + this.member7008 * Math.pow(2, 19);
         }
         if (this.member7069 === undefined) {
             this.member7069 = Class148.member1491(this.member1280);
@@ -239,18 +239,18 @@ export var Class445 = function () {
         if (this.member7069.member1540()) {
             return this.member7069;
         } else {
-            return member47;
+            return NULL;
         }
     };
     y.prototype.member7070 = function () {
         if (this.member7069 === undefined) {
             this.member7068();
             if (this.member7069 === undefined) {
-                return member47;
+                return NULL;
             }
         }
         if (!this.member7069.member1540()) {
-            return member47;
+            return NULL;
         }
         var M = this.member7069.member1539();
         var N = M.member1285(this.member7069.member1494());
@@ -260,11 +260,11 @@ export var Class445 = function () {
         if (this.member7069 === undefined) {
             this.member7068();
             if (this.member7069 === undefined) {
-                return member47;
+                return NULL;
             }
         }
         if (!this.member7069.member1540()) {
-            return member47;
+            return NULL;
         }
         var M = this.member7069.member1539();
         var N = M.member1285(this.member7069.member1494());
@@ -278,7 +278,7 @@ export var Class445 = function () {
     };
     y.prototype.member512 = function () {
         this.member7025();
-        if (this.member7024 !== undefined && this.member7024 !== member47) {
+        if (this.member7024 !== undefined && this.member7024 !== NULL) {
             this.member7024.texture.member512();
         }
         this.member7024 = undefined;
@@ -378,10 +378,10 @@ export var Class445 = function () {
     };
     var v = function (Z, ab, ae, ad, O, M, R, Q, aa, U, W, V) {
         var Y = ab.member7075(Z, Q);
-        if (Y === member47 || Y === undefined) {
+        if (Y === NULL || Y === undefined) {
             throw new Error('1199 ');
         }
-        var S = ab.member7076();
+        var S = ab.getDescription();
         if (M) {
             S = Math.floor(S * 1.5);
         } else if (ad === 2) {
@@ -389,8 +389,8 @@ export var Class445 = function () {
         }
         S = S << Class86.member719;
         var T = Y.member2098();
-        var X = ab.member7077();
-        var ac = ab.member7078();
+        var X = ab.get2dAngle();
+        var ac = ab.get2dOffset();
         var N = ac[1] << Class86.member719;
         c[0] = ac[0] << Class86.member719;
         c[1] = -(T.member1793()[1] / 2 + N);
@@ -467,7 +467,7 @@ export var Class445 = function () {
         } else if (!I(Y, undefined, u, U)) {
             return false;
         }
-        if (R === Class444.member7000 || R === Class444.member7001 && (ab.member7079() === 1 || ae !== 1) && ae !== -1) {
+        if (R === Class444.member7000 || R === Class444.member7001 && (ab.getStackable() === 1 || ae !== 1) && ae !== -1) {
             Class302.member3601(E(ae, aa, V), 0, 0, W, undefined, Class301.member3594, 4294902015, 511);
             Z.member585();
             Z.member3640.member1630();
@@ -543,45 +543,45 @@ export var Class445 = function () {
             }
         }
         var ag = this.member7044();
-        var ae = N.member3227(Class131.member1214.member1204, this.member6807());
-        if (ae === member47) {
-            return member47;
+        var ae = N.getConfigType(Js5ConfigGroup.OBJTYPE.member1204, this.member6807());
+        if (ae === NULL) {
+            return NULL;
         }
-        ae = ae.member7082(ag);
-        if (ae === member47) {
-            return member47;
+        ae = ae.getCountObj(ag);
+        if (ae === NULL) {
+            return NULL;
         }
         var U = ae.member7075(ac, P);
-        var S = U !== member47 && U.member2130();
+        var S = U !== NULL && U.member2130();
         var ab = -1;
         var Z = true;
-        if (ae.member7083() !== -1) {
-            ab = ae.member7084();
+        if (ae.getCertTemplate() !== -1) {
+            ab = ae.getCertLink();
             Z = false;
-        } else if (ae.member7085() !== -1) {
-            ab = ae.member7086();
+        } else if (ae.getShardTemplate() !== -1) {
+            ab = ae.getShardLink();
             Z = false;
-        } else if (ae.member7087() !== -1) {
-            ab = ae.member7088();
-        } else if (ae.member7089() !== -1) {
-            ab = ae.member7090();
+        } else if (ae.getLentTemplate() !== -1) {
+            ab = ae.getLentLink();
+        } else if (ae.getBoughtTemplate() !== -1) {
+            ab = ae.getBoughtLink();
         }
         var ah = undefined;
         if (ab !== -1) {
-            ah = N.member3227(Class131.member1214.member1204, ab);
-            if (ah === member47) {
-                return member47;
+            ah = N.getConfigType(Js5ConfigGroup.OBJTYPE.member1204, ab);
+            if (ah === NULL) {
+                return NULL;
             }
-            ah = ah.member7082(ag);
-            if (ah === member47) {
-                return member47;
+            ah = ah.getCountObj(ag);
+            if (ah === NULL) {
+                return NULL;
             }
             var M = ah.member7075(ac, P);
-            S = M !== member47 && M.member2130() && S;
+            S = M !== NULL && M.member2130() && S;
         }
         S = S && Y !== null;
         if (!S) {
-            return member47;
+            return NULL;
         }
         if (q === undefined) {
             q = Class120({
@@ -626,7 +626,7 @@ export var Class445 = function () {
         ac.member585();
         var V = j(ac);
         if (!ai) {
-            return member47;
+            return NULL;
         }
         var R = {
             texture: V.texture,

@@ -2,7 +2,7 @@ import { Class608 } from 'Class608.js';
 import { Class296 } from 'Class296.js';
 import { Class220 } from 'Class220.js';
 import { Class350 } from 'Class350.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class561 } from 'Class561.js';
 import { Class453 } from 'Class453.js';
 import { Class303 } from 'Class303.js';
@@ -257,12 +257,12 @@ export var Class618 = function () {
         if (aG.member4480().member3961.getValue() === Class350.member3778) {
             var bA = 'default';
             if (bB !== -1) {
-                var bv = aG.member2970.member3227(Class131.member1227.member1204, bB);
-                if (bv === member47 || bv === undefined) {
+                var bv = aG.member2970.getConfigType(Js5ConfigGroup.CURSORTYPE.member1204, bB);
+                if (bv === NULL || bv === undefined) {
                     return;
                 }
                 var bx = aG.member7140.member7227();
-                var bA = 'url(' + bx.member7142() + '/customcursor_' + bB + '.cur) ' + bv.member9256() + ' ' + bv.member9257() + ', auto';
+                var bA = 'url(' + bx.member7142() + '/customcursor_' + bB + '.cur) ' + bv.getHotspotX() + ' ' + bv.getHotspotY() + ', auto';
             }
             aG.member9258().style.cursor = bA;
         } else {
@@ -438,7 +438,7 @@ export var Class618 = function () {
         case Class438.member6635:
             bA = Class449;
             break;
-        case Class438.member6636:
+        case Class438.MODEL:
             bA = Class616;
             break;
         case Class438.member402:
@@ -588,7 +588,7 @@ export var Class618 = function () {
         var bB = bC.member7444();
         for (var bv = 0; bv < bB.length; bv++) {
             var bA = bB[bv];
-            if (bA.member2794() === Class438.member6636) {
+            if (bA.member2794() === Class438.MODEL) {
                 bA.member7554(aG.member6116.member7139());
             }
         }
@@ -605,11 +605,11 @@ export var Class618 = function () {
         }
         at[bv.member6724()] = bv;
         var bx = bj.member7439(bv.member6719(), false);
-        if (bx === member47) {
+        if (bx === NULL) {
             return;
         }
         var bC = bj.member7438(bv.member6724());
-        if (bC === member47) {
+        if (bC === NULL) {
             return;
         }
         C(bx, bC.member6752(), bC.member6754(), bB);
@@ -791,7 +791,7 @@ export var Class618 = function () {
         var bK = at[bv.member6721()];
         if (bK !== undefined) {
             var bE = bj.member7439(bK.member6719(), false);
-            if (bE !== member47) {
+            if (bE !== NULL) {
                 C(bE, bx, bB, bG);
             }
         }
@@ -933,11 +933,11 @@ export var Class618 = function () {
         var bv = bC.member6722();
         if (bv >= 0) {
             var bB = bj.member7438(bC.member6724());
-            var bx = member47;
-            if (bB !== member47) {
+            var bx = NULL;
+            if (bB !== NULL) {
                 bx = bB.member7445();
             }
-            if (bB === member47 || bx === member47 || bv >= bx.length || bx[bv] !== bC) {
+            if (bB === NULL || bx === NULL || bv >= bx.length || bx[bv] !== bC) {
                 if (false) {
                 }
                 return;
@@ -1759,26 +1759,26 @@ export var Class618 = function () {
     var x = br.member7638;
     var aQ = function (bA, bC, bD, bv, bB) {
         var bx = bA.member8260(bC);
-        bx.member2698.member1133(bD);
-        bx.member2698.member1113(bB);
-        bx.member2698.member1115(bv);
+        bx.packet.p4_alt3(bD);
+        bx.packet.p2_alt1(bB);
+        bx.packet.p2_alt3(bv);
         bA.member8261(bx);
     };
     var aM = function (bC, bv, bE, bx, bD, bB) {
         var bA = bC.member8260(Class501.member8153);
-        bA.member2698.member1051(1 + 4 + 2 + bD.length + 1 + 1);
-        bA.member2698.member1105(bv);
-        bA.member2698.member1056(bE);
-        bA.member2698.member1113(bx);
-        bA.member2698.member1104(bB);
-        bA.member2698.member1065(bD);
+        bA.packet.p1(1 + 4 + 2 + bD.length + 1 + 1);
+        bA.packet.p1_alt2(bv);
+        bA.packet.p4(bE);
+        bA.packet.p2_alt1(bx);
+        bA.packet.p1_alt1(bB);
+        bA.packet.pjstr(bD);
         bC.member8261(bA);
     };
     var aY = function () {
         var bA = aG.member8252.member8259();
         var bv = bA.member8260(Class501.member8117);
         var bx = aC.member3462();
-        bv.member2698.member1133(bx);
+        bv.packet.p4_alt3(bx);
         bA.member8261(bv);
     };
     br.member7635 = function (bD, bv, bC, bB) {
@@ -1934,8 +1934,8 @@ export var Class618 = function () {
         }
         var bx = aG.member8252.member8259();
         var bv = bx.member8260(Class501.member8108);
-        bv.member2698.member1113(aK.member6722());
-        bv.member2698.member1056(aK.member6721());
+        bv.packet.p2_alt1(aK.member6722());
+        bv.packet.p4(aK.member6721());
         bx.member8261(bv);
     };
     br.member9284 = function () {
@@ -1946,12 +1946,12 @@ export var Class618 = function () {
         }
         var bB = aG.member8252.member8259();
         var bA = bB.member8260(Class501.member8064);
-        bA.member2698.member1115(bx.member6722());
-        bA.member2698.member1131(bv.member6721());
-        bA.member2698.member1132(bx.member6721());
-        bA.member2698.member1114(bx.member6807());
-        bA.member2698.member1054(bv.member6722());
-        bA.member2698.member1054(bv.member6807());
+        bA.packet.p2_alt3(bx.member6722());
+        bA.packet.p4_alt1(bv.member6721());
+        bA.packet.p4_alt2(bx.member6721());
+        bA.packet.p2_alt2(bx.member6807());
+        bA.packet.p2(bv.member6722());
+        bA.packet.p2(bv.member6807());
         bB.member8261(bA);
     };
     var t = br.member9284;

@@ -1,14 +1,14 @@
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class80 } from 'Class80.js';
 import { Class76 } from 'Class76.js';
-export var Class551 = function (j) {
+export var MSIType = function (j) {
     var g = {};
     var e;
     var h;
-    if (j.member625 !== undefined && j.member2896 !== undefined) {
+    if (j.member625 !== undefined && j.myList !== undefined) {
         h = j.member625;
-        e = j.member2896;
+        e = j.myList;
     } else {
         throw new Error('1208 ');
     }
@@ -21,12 +21,12 @@ export var Class551 = function (j) {
         return c;
     };
     var d = false;
-    g.member8600 = function () {
+    g.getResize = function () {
         return d;
     };
     g.decode = function (m) {
         while (true) {
-            var k = m.member609();
+            var k = m.g1();
             if (k === undefined) {
                 throw new Error('1209 ');
                 break;
@@ -40,7 +40,7 @@ export var Class551 = function (j) {
     var b = g.decode;
     var a = function (m, k) {
         if (k === 1) {
-            i = m.member1086();
+            i = m.gSmart2or4null();
         } else if (k === 2) {
             c = m.g3();
         } else if (k === 3) {
@@ -57,7 +57,7 @@ export var Class551 = function (j) {
         var u = e.member8753(i);
         if (u === null) {
             var q = e.member7535();
-            var k = q.getFile(Class95.member811, i, 0, Class96.member840);
+            var k = q.getFile(Class95.member811, i, 0, Priority.member840);
             if (k !== null) {
                 var n = Class80.member606(k);
                 n[0].member604();
@@ -67,7 +67,7 @@ export var Class551 = function (j) {
                 for (var s = 0; s < r; s++) {
                     n[0].member602();
                 }
-                var t = n[0].member600();
+                var t = n[0].getColour();
                 u = Class76(m, n[0].member556(), n[0].member557(), t, false);
                 u.member563();
                 e.member8754(u, i);

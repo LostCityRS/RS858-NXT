@@ -139,12 +139,12 @@ export var Class429 = function () {
         z.member6218 = function () {
             return 0;
         };
-        z.member3590 = function () {
+        z.readyanim = function () {
             return i;
         };
-        var d = z.member3590;
+        var d = z.readyanim;
         z.member6219 = function (C, B) {
-            C.member1088(b);
+            C.gFloatArray(b);
             i = true;
         };
         return z;

@@ -1,6 +1,6 @@
 import { Class372 } from 'Class372.js';
 import { Class374 } from 'Class374.js';
-import { Class166 } from 'Class166.js';
+import { Cuboid } from 'Class166.js';
 import { Class86 } from 'Class86.js';
 import { Class121 } from 'Class121.js';
 import { Class387 } from 'Class387.js';
@@ -21,13 +21,13 @@ export var Class402 = function () {
         this.member1642 = undefined;
         this.member4627 = undefined;
         this.member4628 = undefined;
-        this.member1566 = member47;
+        this.member1566 = NULL;
         if (h !== undefined && j !== undefined && e !== undefined && g !== undefined && d !== undefined && i !== undefined) {
             member46(this, Class372, h, j, e, Class374.member4145, -1);
             this.member1643 = g;
             this.member1642 = d;
             this.member4627 = i;
-            this.member4093(Class166(new Float32Array([
+            this.member4093(Cuboid(new Float32Array([
                 0,
                 0,
                 0
@@ -51,10 +51,10 @@ export var Class402 = function () {
         var q = this.member4087();
         var o = this.member4089();
         if (o <= Class121.member796) {
-            if (this.member1566 === member47) {
+            if (this.member1566 === NULL) {
                 var e = this.member4085().member4114();
                 var r = e.member4114(0, this.member1643 * Class86.member729, this.member1642 * Class86.member729);
-                if (r !== member47) {
+                if (r !== NULL) {
                     if (this.member4628 === undefined) {
                         var t = Class387.member391;
                         if (this.member3320().member4192() === g) {
@@ -76,8 +76,8 @@ export var Class402 = function () {
                         return;
                     }
                     var k = this.member4628.member2893();
-                    if (k !== member47) {
-                        if (this.member1566 !== member47) {
+                    if (k !== NULL) {
+                        if (this.member1566 !== NULL) {
                             this.member512();
                         }
                         this.member1566 = new Array(k.length);
@@ -105,28 +105,28 @@ export var Class402 = function () {
         this.member4088(o);
     };
     b.prototype.member512 = function () {
-        if (this.member1566 !== member47) {
+        if (this.member1566 !== NULL) {
             for (var d = 0; d < this.member1566.length; d++) {
                 this.member1566[d].member512();
                 this.member3320().removeChild(this.member1566[d].member3320());
             }
-            this.member1566 = member47;
+            this.member1566 = NULL;
         }
     };
     b.prototype.member4230 = function (g, e) {
-        if (this.member1566 !== member47) {
+        if (this.member1566 !== NULL) {
             for (var d = 0; d < this.member1566.length; d++) {
                 this.member1566[d].member4230(g, e);
             }
         }
     };
     b.prototype.member4631 = function () {
-        return this.member1566 !== member47 && this.member1566.length > 0;
+        return this.member1566 !== NULL && this.member1566.length > 0;
     };
     b.prototype.member4632 = function (k, o, d) {
         var m = Number.MAX_VALUE;
         var j = undefined;
-        if (this.member1566 !== member47) {
+        if (this.member1566 !== NULL) {
             for (var h = 0; h < this.member1566.length; h++) {
                 var e = this.member1566[h];
                 if (e.member2285.member2255 && !e.member2285.member2238) {

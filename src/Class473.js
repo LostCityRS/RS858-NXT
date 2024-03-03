@@ -14,10 +14,10 @@ export var Class473 = function () {
     };
     member45(Class442, b);
     b.prototype.member6797 = function (e, c) {
-        this.member7563 = e.member608();
-        this.member7564 = e.member608();
+        this.member7563 = e.g2();
+        this.member7564 = e.g2();
         if (c === -1) {
-            var d = e.member609() === 1;
+            var d = e.g1() === 1;
         }
         return {
             member4638: 0,

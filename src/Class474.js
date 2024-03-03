@@ -27,19 +27,19 @@ export var Class474 = function () {
         this.member6681();
     };
     a.prototype.member6797 = function (g, c, e, b) {
-        this.member7577 = g.member1086();
+        this.member7577 = g.gSmart2or4null();
         if (c >= 2) {
-            this.member7578 = g.member609() === 1;
+            this.member7578 = g.g1() === 1;
         }
-        this.member7579 = g.member1089();
-        this.member7580 = g.member609();
-        this.member7581 = g.member609();
-        this.member7582 = g.member609();
-        this.member7583 = g.member609() === 1;
-        var d = g.member1073();
-        var h = 255 - g.member609();
+        this.member7579 = g.gjstr();
+        this.member7580 = g.g1();
+        this.member7581 = g.g1();
+        this.member7582 = g.g1();
+        this.member7583 = g.g1() === 1;
+        var d = g.g4();
+        var h = 255 - g.g1();
         if (c >= 0) {
-            this.member7584 = g.member609();
+            this.member7584 = g.g1();
         }
         return {
             member4638: d,

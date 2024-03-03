@@ -44,7 +44,7 @@ export var Class78 = function () {
     a.prototype.member599 = function () {
         return this.member594 + this.height + this.member593;
     };
-    a.prototype.member600 = function () {
+    a.prototype.getColour = function () {
         return this.image.buffer;
     };
     a.prototype.member601 = function () {

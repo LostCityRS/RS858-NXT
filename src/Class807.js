@@ -5,9 +5,9 @@ import { Class504 } from 'Class504.js';
 import { Class236 } from 'Class236.js';
 import { Class500 } from 'Class500.js';
 import { Class642 } from 'Class642.js';
-import { Class769 } from 'Class769.js';
+import { DelayedStateChange } from 'Class769.js';
 import { Class458 } from 'Class458.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class502 } from 'Class502.js';
 import { Class721 } from 'Class721.js';
 import { Class723 } from 'Class723.js';
@@ -80,17 +80,17 @@ export var Class807 = function () {
     var ah = false;
     var ai = -1;
     var aM = {
-        member1058: -1,
-        member1059: 0
+        high: -1,
+        low: 0
     };
     var a2;
     var aF = {
-        member1058: 0,
-        member1059: 0
+        high: 0,
+        low: 0
     };
     var D = {
-        member1058: 0,
-        member1059: Math.floor(Math.random() * 99999999)
+        high: 0,
+        low: Math.floor(Math.random() * 99999999)
     };
     var R = Class270.member3144;
     var af = function () {
@@ -202,10 +202,10 @@ export var Class807 = function () {
     };
     a8.member9708 = T;
     var g = function () {
-        aM.member1058 = -1;
-        aM.member1059 = 0;
-        aF.member1058 = 0;
-        aF.member1059 = 0;
+        aM.high = -1;
+        aM.low = 0;
+        aF.high = 0;
+        aF.low = 0;
         ai = -1;
     };
     var S = function () {
@@ -229,11 +229,11 @@ export var Class807 = function () {
             return;
         }
         if (bj !== ai) {
-            aM.member1058 = -1;
-            aM.member1059 = 0;
+            aM.high = -1;
+            aM.low = 0;
         }
         ai = bj;
-        a0(a7, aB.member8252.member8253(), '', '', bl, bh, false, aM.member1058 === -1, true, aM);
+        a0(a7, aB.member8252.member8253(), '', '', bl, bh, false, aM.high === -1, true, aM);
     };
     a8.member9730 = K;
     var J = function (bj, bh) {
@@ -278,11 +278,11 @@ export var Class807 = function () {
         o = -1;
         b = -1;
         if (bj !== ai) {
-            aM.member1058 = -1;
-            aM.member1059 = 0;
+            aM.high = -1;
+            aM.low = 0;
         }
         ai = bj;
-        a0(ag, aB.member8252.member9083(), '', '', bl, bh, false, aM.member1058 === -1, true, aM);
+        a0(ag, aB.member8252.member9083(), '', '', bl, bh, false, aM.high === -1, true, aM);
     };
     a8.member9729 = E;
     var C = function (bh) {
@@ -306,7 +306,7 @@ export var Class807 = function () {
     a8.member9722 = C;
     var am = function (bj, bl, bh) {
         if (ai !== -1) {
-            a0(ag, aB.member8252.member9083(), '', '', bl, bh, bj, aM.member1058 === -1, true, aM);
+            a0(ag, aB.member8252.member9083(), '', '', bl, bh, bj, aM.high === -1, true, aM);
             return;
         }
         g();
@@ -326,8 +326,8 @@ export var Class807 = function () {
         ah = bq;
         aM = bh;
         if (!bv) {
-            aM.member1058 = -1;
-            aM.member1059 = 0;
+            aM.high = -1;
+            aM.low = 0;
         }
         U = bv;
         if (!U && (bb === '' || aP === '')) {
@@ -418,31 +418,31 @@ export var Class807 = function () {
             var bv;
             if (ah) {
                 bv = Class504.member8229(Class236.member2826.member2818, Class236.member2826.member2819, undefined);
-                bv.member2698.member1054(0);
-                var bm = bv.member2698.member1047();
-                bv.member2698.member1056(Class299.member3565());
-                bv.member2698.member1056(Class299.member3566());
+                bv.packet.p2(0);
+                var bm = bv.packet.getPos();
+                bv.packet.p4(Class299.member3565());
+                bv.packet.p4(Class299.member3566());
                 if (al === ag) {
-                    bv.member2698.member1051(aJ ? 1 : 0);
+                    bv.packet.p1(aJ ? 1 : 0);
                 }
                 var bt = s();
                 aa(bt, ai);
                 a6 = ai;
-                bt.member1051(ai);
-                bt.member1051(aB.clientParameters.member7138.value.id);
-                bt.member1056(aB.clientParameters.member8273.value);
+                bt.p1(ai);
+                bt.p1(aB.clientParameters.member7138.value.id);
+                bt.p4(aB.clientParameters.affiliate.value);
                 for (var bZ = 0; bZ < 5; bZ++) {
-                    bt.member1056(Math.floor(Math.random() * 99999999));
+                    bt.p4(Math.floor(Math.random() * 99999999));
                 }
-                bt.member1057(D);
-                bt.member1051(aB.clientParameters.member7256.value.id);
-                bt.member1051(Math.floor(Math.random() * 99999999));
+                bt.p8(D);
+                bt.p1(aB.clientParameters.member7256.value.id);
+                bt.p1(Math.floor(Math.random() * 99999999));
                 bt.member1101(Class500.member8047, Class500.member8048);
-                bv.member2698.member1067(bt.getData(), 0, bt.member1047());
-                var bD = bv.member2698.member1047() - bm;
-                bv.member2698.member607(bm - 2);
-                bv.member2698.member1054(bD);
-                bv.member2698.member607(bm + bD);
+                bv.packet.member1067(bt.getData(), 0, bt.getPos());
+                var bD = bv.packet.getPos() - bm;
+                bv.packet.setPos(bm - 2);
+                bv.packet.p2(bD);
+                bv.packet.setPos(bm + bD);
             } else {
                 bv = Class504.member8229(Class236.member2817.member2818, Class236.member2817.member2819, undefined);
             }
@@ -455,7 +455,7 @@ export var Class807 = function () {
                 return;
             }
             var bE = n.member8282(1);
-            var bJ = bE.member609();
+            var bJ = bE.g1();
             if (bJ !== 0) {
                 if (false) {
                 }
@@ -476,7 +476,7 @@ export var Class807 = function () {
                 return;
             }
             var bE = n.member8282(2);
-            a2 = bE.member608();
+            a2 = bE.g2();
             I = a;
         }
         if (I === a) {
@@ -485,7 +485,7 @@ export var Class807 = function () {
             }
             var bE = n.member8282(a2);
             bE.member1103(aK, 0, a2);
-            var bq = bE.member1089(true);
+            var bq = bE.gjstr(true);
             Class642.member9618(Class642.member2827, [bq]);
             I = aO;
         }
@@ -494,7 +494,7 @@ export var Class807 = function () {
                 return;
             }
             var bE = n.member8282(1);
-            if (bE.member609() === 1) {
+            if (bE.g1() === 1) {
                 I = u;
             }
         }
@@ -504,9 +504,9 @@ export var Class807 = function () {
             }
             var bE = n.member8282(16);
             bE.member1103(aK, 0, 16);
-            aM = bE.member1077();
-            aF = bE.member1077();
-            if (aM.member1058 < 0) {
+            aM = bE.g8();
+            aF = bE.g8();
+            if (aM.high < 0) {
                 I = aD;
                 ao(Class270.member3183);
                 aN();
@@ -528,78 +528,78 @@ export var Class807 = function () {
                     bB = Class236.member2821;
                 }
                 bv = Class504.member8229(bB.member2818, bB.member2819, undefined);
-                bv.member2698.member1054(0);
-                var bm = bv.member2698.member1047();
+                bv.packet.p2(0);
+                var bm = bv.packet.getPos();
                 var bR;
                 if (!ah) {
-                    bv.member2698.member1056(Class299.member3565());
-                    bv.member2698.member1056(Class299.member3566());
-                    bv.member2698.member1051(aJ ? 1 : 0);
-                    bR = bv.member2698.member1047();
+                    bv.packet.p4(Class299.member3565());
+                    bv.packet.p4(Class299.member3566());
+                    bv.packet.p1(aJ ? 1 : 0);
+                    bR = bv.packet.getPos();
                     var bt = aZ();
-                    bv.member2698.member1067(bt.getData(), 0, bt.member1047());
-                    bR = bv.member2698.member1047();
-                    bv.member2698.member1051(aM.member1058 === -1 ? 1 : 0);
-                    if (aM.member1058 === -1) {
-                        bv.member2698.member1065(bb);
+                    bv.packet.member1067(bt.getData(), 0, bt.getPos());
+                    bR = bv.packet.getPos();
+                    bv.packet.p1(aM.high === -1 ? 1 : 0);
+                    if (aM.high === -1) {
+                        bv.packet.pjstr(bb);
                     } else {
-                        bv.member2698.member1057(aM);
+                        bv.packet.p8(aM);
                     }
                 } else {
                     bR = bm;
                 }
-                bv.member2698.member1051(aB.member6103.member9895() ? 3 : 2);
-                bv.member2698.member1054(aB.member433.member588());
-                bv.member2698.member1054(aB.member433.member589());
-                bv.member2698.member1051(aB.member4480().member3940.getValue());
-                aB.member9854().member2815(bv.member2698);
+                bv.packet.p1(aB.member6103.member9895() ? 3 : 2);
+                bv.packet.p2(aB.member433.member588());
+                bv.packet.p2(aB.member433.member589());
+                bv.packet.p1(aB.member4480().member3940.getValue());
+                aB.member9854().member2815(bv.packet);
                 var bC = aB.clientParameters.member9630.value;
                 if (bC === undefined) {
                     bC = '';
                 }
-                bv.member2698.member1065(bC);
-                bv.member2698.member1056(aB.clientParameters.member8273.value);
+                bv.packet.pjstr(bC);
+                bv.packet.p4(aB.clientParameters.affiliate.value);
                 var bj = aB.member4480().member3389();
-                bv.member2698.member1051(bj.member1047());
-                bv.member2698.member1067(bj.getData(), 0, bj.member1047());
+                bv.packet.p1(bj.getPos());
+                bv.packet.member1067(bj.getData(), 0, bj.getPos());
                 aB.member6103.member6104(true);
                 var bx = aB.member8278().member681();
-                bv.member2698.member1067(bx.getData(), 0, bx.member1047());
-                bv.member2698.member1056(Class769.member10380());
-                bv.member2698.member1057({
-                    member1059: aB.clientParameters.member8274.value,
-                    member1058: aB.clientParameters.member8275.value
+                bv.packet.member1067(bx.getData(), 0, bx.getPos());
+                bv.packet.p4(DelayedStateChange.getVerifyID());
+                bv.packet.p8({
+                    low: aB.clientParameters.member8274.value,
+                    high: aB.clientParameters.member8275.value
                 });
-                bv.member2698.member1057({
-                    member1059: aB.clientParameters.member8781.value,
-                    member1058: aB.clientParameters.member8780.value
+                bv.packet.p8({
+                    low: aB.clientParameters.member8781.value,
+                    high: aB.clientParameters.member8780.value
                 });
                 var bU = aB.clientParameters.member8276.value;
                 if (bU === undefined) {
                     bU = '';
                 }
-                bv.member2698.member1065(bU);
+                bv.packet.pjstr(bU);
                 var bM = aB.clientParameters.member8277.value;
-                bv.member2698.member1051(bM === undefined ? 0 : 1);
+                bv.packet.p1(bM === undefined ? 0 : 1);
                 if (bM !== undefined) {
-                    bv.member2698.member1065(bM);
+                    bv.packet.pjstr(bM);
                 }
-                bv.member2698.member1051(1);
-                bv.member2698.member1051(aB.clientParameters.member10342.value ? 1 : 0);
-                bv.member2698.member1051(aB.member9733());
-                bv.member2698.member1056(aB.clientParameters.member10343.value);
-                bv.member2698.member1065(aB.clientParameters.member8272.value);
+                bv.packet.p1(1);
+                bv.packet.p1(aB.clientParameters.member10342.value ? 1 : 0);
+                bv.packet.p1(aB.member9733());
+                bv.packet.p4(aB.clientParameters.member10343.value);
+                bv.packet.pjstr(aB.clientParameters.clientToken.value);
                 var b0 = aB.member7140.member7227();
                 var bH = aB.member7140.member10098();
-                bv.member2698.member1051(bH === null || bH.member7228() !== b0.member7228() ? 1 : 0);
+                bv.packet.p1(bH === null || bH.member7228() !== b0.member7228() ? 1 : 0);
                 var bW = aB.member7140.member8268();
-                bv.member2698.member1054(bW === null ? -1 : bW.member7228());
-                e(bv.member2698);
-                bv.member2698.member1102(aK, bR, bv.member2698.member1047());
-                var bD = bv.member2698.member1047() - bm;
-                bv.member2698.member607(1);
-                bv.member2698.member1054(bD);
-                bv.member2698.member607(1 + 2 + bD);
+                bv.packet.p2(bW === null ? -1 : bW.member7228());
+                e(bv.packet);
+                bv.packet.member1102(aK, bR, bv.packet.getPos());
+                var bD = bv.packet.getPos() - bm;
+                bv.packet.setPos(1);
+                bv.packet.p2(bD);
+                bv.packet.setPos(1 + 2 + bD);
             } else {
                 if (!aL()) {
                     return;
@@ -611,62 +611,62 @@ export var Class807 = function () {
                     bB = Class236.member2822;
                 }
                 bv = Class504.member8229(bB.member2818, bB.member2819, undefined);
-                bv.member2698.member1054(0);
-                var bm = bv.member2698.member1047();
+                bv.packet.p2(0);
+                var bm = bv.packet.getPos();
                 var bR;
                 if (!ah) {
-                    bv.member2698.member1056(Class299.member3565());
-                    bv.member2698.member1056(Class299.member3566());
-                    bR = bv.member2698.member1047();
+                    bv.packet.p4(Class299.member3565());
+                    bv.packet.p4(Class299.member3566());
+                    bR = bv.packet.getPos();
                     var bt = aZ();
-                    bv.member2698.member1067(bt.getData(), 0, bt.member1047());
-                    bR = bv.member2698.member1047();
-                    bv.member2698.member1051(aM.member1058 === -1 ? 1 : 0);
-                    if (aM.member1058 === -1) {
-                        bv.member2698.member1065(bb);
+                    bv.packet.member1067(bt.getData(), 0, bt.getPos());
+                    bR = bv.packet.getPos();
+                    bv.packet.p1(aM.high === -1 ? 1 : 0);
+                    if (aM.high === -1) {
+                        bv.packet.pjstr(bb);
                     } else {
-                        bv.member2698.member1057(aM);
+                        bv.packet.p8(aM);
                     }
                 } else {
                     bR = bm;
                 }
-                bv.member2698.member1051(aB.clientParameters.member7256.value.id);
-                bv.member2698.member1051(aB.clientParameters.member7138.value.id);
+                bv.packet.p1(aB.clientParameters.member7256.value.id);
+                bv.packet.p1(aB.clientParameters.member7138.value.id);
                 if (true) {
-                    bv.member2698.member1051(aB.member6103.member9895() ? 3 : 2);
-                    bv.member2698.member1054(aB.member433.member588());
-                    bv.member2698.member1054(aB.member433.member589());
-                    bv.member2698.member1051(aB.member4480().member3940.getValue());
+                    bv.packet.p1(aB.member6103.member9895() ? 3 : 2);
+                    bv.packet.p2(aB.member433.member588());
+                    bv.packet.p2(aB.member433.member589());
+                    bv.packet.p1(aB.member4480().member3940.getValue());
                 } else {
                 }
-                aB.member9854().member2815(bv.member2698);
+                aB.member9854().member2815(bv.packet);
                 var bC = aB.clientParameters.member9630.value;
                 if (bC === undefined) {
                     bC = '';
                 }
-                bv.member2698.member1065(bC);
+                bv.packet.pjstr(bC);
                 var bj = aB.member4480().member3389();
-                bv.member2698.member1051(bj.member1047());
-                bv.member2698.member1067(bj.getData(), 0, bj.member1047());
+                bv.packet.p1(bj.getPos());
+                bv.packet.member1067(bj.getData(), 0, bj.getPos());
                 aB.member6103.member6104(true);
                 var bx = aB.member8278().member681();
-                bv.member2698.member1067(bx.getData(), 0, bx.member1047());
-                bv.member2698.member1056(Class769.member10380());
+                bv.packet.member1067(bx.getData(), 0, bx.getPos());
+                bv.packet.p4(DelayedStateChange.getVerifyID());
                 var bU = aB.clientParameters.member8276.value;
                 if (bU === undefined) {
                     bU = '';
                 }
-                bv.member2698.member1065(bU);
-                bv.member2698.member1056(aB.clientParameters.member8273.value);
-                bv.member2698.member1056(aB.clientParameters.member10343.value);
-                bv.member2698.member1065(aB.clientParameters.member8272.value);
-                bv.member2698.member1051(aB.member9733());
-                e(bv.member2698);
-                bv.member2698.member1102(aK, bR, bv.member2698.member1047());
-                var bD = bv.member2698.member1047() - bm;
-                bv.member2698.member607(1);
-                bv.member2698.member1054(bD);
-                bv.member2698.member607(1 + 2 + bD);
+                bv.packet.pjstr(bU);
+                bv.packet.p4(aB.clientParameters.affiliate.value);
+                bv.packet.p4(aB.clientParameters.member10343.value);
+                bv.packet.pjstr(aB.clientParameters.clientToken.value);
+                bv.packet.p1(aB.member9733());
+                e(bv.packet);
+                bv.packet.member1102(aK, bR, bv.packet.getPos());
+                var bD = bv.packet.getPos() - bm;
+                bv.packet.setPos(1);
+                bv.packet.p2(bD);
+                bv.packet.setPos(1 + 2 + bD);
             }
             n.member8261(bv);
             n.member8279();
@@ -684,7 +684,7 @@ export var Class807 = function () {
                 return;
             }
             var bE = n.member8282(1);
-            x = bE.member609();
+            x = bE.g1();
             I = a1;
             if (false) {
             }
@@ -755,7 +755,7 @@ export var Class807 = function () {
                 return;
             }
             var bE = n.member8282(1);
-            var bo = bE.member609();
+            var bo = bE.g1();
             ap = bo * Class299.member3571;
             I = aD;
             ao(Class270.member3169);
@@ -768,7 +768,7 @@ export var Class807 = function () {
                 return;
             }
             var bE = n.member8282(2);
-            au = bE.member608();
+            au = bE.g2();
             if (false) {
             }
             I = a9;
@@ -779,8 +779,8 @@ export var Class807 = function () {
                 return;
             }
             var bE = n.member8282(4);
-            ar = bE.member1073();
-            bE.member607(0);
+            ar = bE.g4();
+            bE.setPos(0);
             I = aD;
             ao(Class270.member3201);
             n.member8254();
@@ -793,14 +793,14 @@ export var Class807 = function () {
                     return;
                 }
                 var bE = n.member8282(1);
-                o = bE.member609();
+                o = bE.g1();
             } else if (a3 === Class270.member3193) {
                 if (n.member8281() < 3) {
                     return;
                 }
                 var bE = n.member8282(3);
-                o = bE.member609();
-                b = bE.member608();
+                o = bE.g1();
+                b = bE.g2();
             } else if (false) {
             } else {
                 throw new Error();
@@ -820,7 +820,7 @@ export var Class807 = function () {
                 return;
             }
             var bE = n.member8282(2);
-            aA = bE.member608();
+            aA = bE.g2();
             I = B;
             return;
         }
@@ -849,7 +849,7 @@ export var Class807 = function () {
                 return;
             }
             var bE = n.member8282(2);
-            n.member10531 = bE.member608();
+            n.member10531 = bE.g2();
             I = aE;
         }
         if (I === aE) {
@@ -857,18 +857,18 @@ export var Class807 = function () {
                 return;
             }
             var bE = n.member8282(n.member10531);
-            L = Class124(n.member10531);
-            bE.member1092(L.getData(), 0, n.member10531);
+            L = Packet(n.member10531);
+            bE.gdata(L.getData(), 0, n.member10531);
             I = k;
         }
         if (I === k) {
-            L.member607(0);
-            var bV = L.member609() === 1;
-            var bQ = aB.member2970.member10424();
+            L.setPos(0);
+            var bV = L.g1() === 1;
+            var bQ = aB.member2970.getVarClientTypeList();
             var bN = aB.member6116.member9766().member10421();
-            while (L.member1047() < L.getSize()) {
+            while (L.getPos() < L.getSize()) {
                 var bI = bQ.member3026(L);
-                if (bI === member47) {
+                if (bI === NULL) {
                     return;
                 }
                 var bh = bQ.list(bI.id);
@@ -890,7 +890,7 @@ export var Class807 = function () {
                 return;
             }
             var bE = n.member8282(1);
-            t = bE.member609();
+            t = bE.g1();
             I = ak;
             if (false) {
             }
@@ -920,7 +920,7 @@ export var Class807 = function () {
                 return;
             }
             var bE = n.member8282(1);
-            ab = bE.member609();
+            ab = bE.g1();
             I = an;
             return;
         }
@@ -931,8 +931,8 @@ export var Class807 = function () {
                     return;
                 }
                 bE = n.member8282(2);
-                bE.member607(0);
-                n.member10531 = bE.member608();
+                bE.setPos(0);
+                n.member10531 = bE.g2();
             }
             if (n.member8281() < n.member10531) {
                 return;
@@ -943,9 +943,9 @@ export var Class807 = function () {
             aJ = false;
             aB.member8236(Class453.member7201);
             aB.member7135().member7846(true);
-            bE.member607(0);
+            bE.setPos(0);
             aB.member6452.member8460(bE, n.member10531);
-            if (bE.member1047() !== n.member10531) {
+            if (bE.getPos() !== n.member10531) {
                 if (false) {
                 } else {
                     throw new Error();
@@ -967,53 +967,53 @@ export var Class807 = function () {
             var bl = Class721({ member7710: aB });
             if (al === ag) {
                 aI(bE);
-                b1.member8171(bE.member609());
-                b1.member8173(bE.member609());
-                b1.member8176(bE.member609() === 1);
-                b1.member8182(bE.member609() === 1);
-                b1.member8184(bE.member609() === 1);
-                bl.member10049(bE.member609() === 1);
-                b1.member8205(bE.member608());
-                b1.member8192(bE.member609() === 1);
-                b1.member8178(bE.member1072());
-                bl.member10051(bE.member609() === 1);
-                aB.clientParameters.member8502.value = bE.member1089();
-                b1.member8220(bE.member1076() - Date.now());
+                b1.member8171(bE.g1());
+                b1.member8173(bE.g1());
+                b1.member8176(bE.g1() === 1);
+                b1.member8182(bE.g1() === 1);
+                b1.member8184(bE.g1() === 1);
+                bl.member10049(bE.g1() === 1);
+                b1.member8205(bE.g2());
+                b1.member8192(bE.g1() === 1);
+                b1.member8178(bE.g3s());
+                bl.member10051(bE.g1() === 1);
+                aB.clientParameters.member8502.value = bE.gjstr();
+                b1.member8220(bE.g6() - Date.now());
             } else {
                 aI(bE);
-                b1.member8171(bE.member609());
-                b1.member8173(bE.member609());
-                b1.member8176(bE.member609() === 1);
-                b1.member8178(bE.member1072());
-                b1.member8218(bE.member1070());
-                b1.member8182(bE.member609() === 1);
-                b1.member8184(bE.member609() === 1);
-                var bK = bE.member1077();
+                b1.member8171(bE.g1());
+                b1.member8173(bE.g1());
+                b1.member8176(bE.g1() === 1);
+                b1.member8178(bE.g3s());
+                b1.member8218(bE.g1s());
+                b1.member8182(bE.g1() === 1);
+                b1.member8184(bE.g1() === 1);
+                var bK = bE.g8();
                 b1.member8196(bK);
-                b1.member8220(bK - Date.now() - bE.member1075());
-                var bO = bE.member609();
+                b1.member8220(bK - Date.now() - bE.g5());
+                var bO = bE.g1();
                 b1.member8192((bO & 1) != 0);
                 b1.member8194((bO & 2) != 0);
-                b1.member8202(bE.member1073());
-                b1.member8204(bE.member1073());
-                b1.member8186(bE.member608());
-                b1.member8188(bE.member608());
-                b1.member8209(bE.member608());
-                b1.member8210(bE.member1073());
-                b1.member8190(bE.member609());
-                b1.member8198(bE.member608());
-                b1.member8200(bE.member608());
-                b1.member8180(bE.member609() === 1);
-                b1.member3010(bE.member1089(true));
-                b1.member8216(bE.member609());
-                b1.member8214(bE.member1073());
-                var bL = bE.member608();
+                b1.member8202(bE.g4());
+                b1.member8204(bE.g4());
+                b1.member8186(bE.g2());
+                b1.member8188(bE.g2());
+                b1.member8209(bE.g2());
+                b1.member8210(bE.g4());
+                b1.member8190(bE.g1());
+                b1.member8198(bE.g2());
+                b1.member8200(bE.g2());
+                b1.member8180(bE.g1() === 1);
+                b1.member3010(bE.gjstr(true));
+                b1.member8216(bE.g1());
+                b1.member8214(bE.g4());
+                var bL = bE.g2();
                 if (bL === 65535) {
                     bL = -1;
                 }
-                var bA = bE.member1089(true);
-                var bP = bE.member608();
-                var bY = bE.member608();
+                var bA = bE.gjstr(true);
+                var bP = bE.g2();
+                var bY = bE.g2();
                 var bG = aB.clientParameters.member8025.value;
                 var bH = Class723({
                     member8439: bL,
@@ -1023,7 +1023,7 @@ export var Class807 = function () {
                 });
                 aB.member7140.member10097(bH);
                 if (bG !== Class315.member3689 && (bG !== Class315.member3693 || b1.member8026() < 2)) {
-                    if (aB.member7140.member7227().member2969(aB.member7140.member7141())) {
+                    if (aB.member7140.member7227().equals(aB.member7140.member7141())) {
                         aB.member7140.member9665();
                     }
                 }
@@ -1068,17 +1068,17 @@ export var Class807 = function () {
     };
     a8.member487 = aY;
     var s = function () {
-        var bh = Class124(518);
+        var bh = Packet(518);
         aK = new Array(4);
         aK[0] = Math.floor(Math.random() * 99999999);
         aK[1] = Math.floor(Math.random() * 99999999);
         aK[2] = Math.floor(Math.random() * 99999999);
         aK[3] = Math.floor(Math.random() * 99999999);
-        bh.member1051(10);
-        bh.member1056(aK[0]);
-        bh.member1056(aK[1]);
-        bh.member1056(aK[2]);
-        bh.member1056(aK[3]);
+        bh.p1(10);
+        bh.p4(aK[0]);
+        bh.p4(aK[1]);
+        bh.p4(aK[2]);
+        bh.p4(aK[3]);
         return bh;
     };
     var aZ = function () {
@@ -1086,16 +1086,16 @@ export var Class807 = function () {
         var bj;
         if (ai !== -1) {
             bj = ai;
-        } else if (aM.member1058 === -1) {
+        } else if (aM.high === -1) {
             bj = Class317.member3717(bb);
         } else {
-            bj = aM.member1058;
+            bj = aM.high;
         }
         a6 = bj;
         aa(bh, bj);
-        bh.member1065(aP);
-        bh.member1057(aF);
-        bh.member1057(D);
+        bh.pjstr(aP);
+        bh.p8(aF);
+        bh.p8(D);
         bh.member1101(Class500.member8047, Class500.member8048);
         return bh;
     };
@@ -1113,32 +1113,32 @@ export var Class807 = function () {
         } else {
             bo = Class528.member8482;
         }
-        bh.member1051(bo);
+        bh.p1(bo);
         switch (bo) {
         case Class528.member8480:
             var bm = parseInt(localStorage[bj + '' + bl]);
-            bh.member1056(bm);
+            bh.p4(bm);
             break;
         case Class528.member8481:
         case Class528.member8483:
-            bh.member1055(parseInt(d));
-            bh.member607(bh.member1047() + 1);
+            bh.p3(parseInt(d));
+            bh.setPos(bh.getPos() + 1);
             break;
         case Class528.member8482:
-            bh.member607(bh.member1047() + 4);
+            bh.setPos(bh.getPos() + 4);
             break;
         }
     };
     var aI = function (bo) {
-        var bh = bo.member609() === 1;
+        var bh = bo.g1() === 1;
         if (bh) {
             var bm = 0;
             var bj = new ArrayBuffer(4);
-            bo.member1093(bj, 0, 4);
-            bo.member607(bo.member1047() - 4);
+            bo.gdataenc(bj, 0, 4);
+            bo.setPos(bo.getPos() - 4);
             bo.member1067(bj, 0, 4);
-            bo.member607(bo.member1047() - 4);
-            var bm = bo.member1074();
+            bo.setPos(bo.getPos() - 4);
+            var bm = bo.g4s();
             var bl = Class66.member432('totp');
             localStorage[bl + '' + a6] = bm;
         }
@@ -1146,88 +1146,88 @@ export var Class807 = function () {
     var aL = function () {
         var bh = true;
         if (true) {
-            if (aB.member995.member1439(Class95.member805) === member47) {
+            if (aB.member995.member1439(Class95.member805) === NULL) {
                 bh = false;
             }
-            if (aB.member995.member1439(Class95.member806) === member47) {
-                bh = false;
-            }
-        } else {
-        }
-        if (aB.member995.member1439(Class95.member807) === member47) {
-            bh = false;
-        }
-        if (true) {
-            if (aB.member995.member1439(Class95.member808) === member47) {
-                bh = false;
-            }
-            if (aB.member995.member1439(Class95.member809) === member47) {
-                bh = false;
-            }
-            if (aB.member995.member1439(Class95.member810) === member47) {
-                bh = false;
-            }
-            if (aB.member995.member1439(Class95.member811) === member47) {
-                bh = false;
-            }
-            if (aB.member995.member1439(Class95.member837) === member47) {
-                bh = false;
-            }
-            if (aB.member995.member1439(Class95.member838) === member47) {
-                bh = false;
-            }
-            if (aB.member995.member1439(Class95.member839) === member47) {
+            if (aB.member995.member1439(Class95.member806) === NULL) {
                 bh = false;
             }
         } else {
         }
-        if (aB.member995.member1439(Class95.member813) === member47) {
+        if (aB.member995.member1439(Class95.member807) === NULL) {
             bh = false;
         }
         if (true) {
-            if (aB.member995.member1439(Class95.member814) === member47) {
+            if (aB.member995.member1439(Class95.member808) === NULL) {
+                bh = false;
+            }
+            if (aB.member995.member1439(Class95.member809) === NULL) {
+                bh = false;
+            }
+            if (aB.member995.member1439(Class95.member810) === NULL) {
+                bh = false;
+            }
+            if (aB.member995.member1439(Class95.member811) === NULL) {
+                bh = false;
+            }
+            if (aB.member995.member1439(Class95.member837) === NULL) {
+                bh = false;
+            }
+            if (aB.member995.member1439(Class95.member838) === NULL) {
+                bh = false;
+            }
+            if (aB.member995.member1439(Class95.member839) === NULL) {
                 bh = false;
             }
         } else {
         }
-        if (aB.member995.member1439(Class95.member816) === member47) {
-            bh = false;
-        }
-        if (aB.member995.member1439(Class95.member817) === member47) {
-            bh = false;
-        }
-        if (aB.member995.member1439(Class95.member818) === member47) {
-            bh = false;
-        }
-        if (aB.member995.member1439(Class95.member819) === member47) {
-            bh = false;
-        }
-        if (aB.member995.member1439(Class95.member820) === member47) {
-            bh = false;
-        }
-        if (aB.member995.member1439(Class95.member821) === member47) {
-            bh = false;
-        }
-        if (aB.member995.member1439(Class95.member822) === member47) {
+        if (aB.member995.member1439(Class95.member813) === NULL) {
             bh = false;
         }
         if (true) {
-            if (aB.member995.member1439(Class95.member823) === member47) {
-                bh = false;
-            }
-            if (aB.member995.member1439(Class95.member826) === member47) {
-                bh = false;
-            }
-            if (aB.member995.member1439(Class95.member827) === member47) {
+            if (aB.member995.member1439(Class95.member814) === NULL) {
                 bh = false;
             }
         } else {
         }
-        if (aB.member995.member1439(Class95.member828) === member47) {
+        if (aB.member995.member1439(Class95.member816) === NULL) {
+            bh = false;
+        }
+        if (aB.member995.member1439(Class95.member817) === NULL) {
+            bh = false;
+        }
+        if (aB.member995.member1439(Class95.member818) === NULL) {
+            bh = false;
+        }
+        if (aB.member995.member1439(Class95.member819) === NULL) {
+            bh = false;
+        }
+        if (aB.member995.member1439(Class95.member820) === NULL) {
+            bh = false;
+        }
+        if (aB.member995.member1439(Class95.member821) === NULL) {
+            bh = false;
+        }
+        if (aB.member995.member1439(Class95.member822) === NULL) {
             bh = false;
         }
         if (true) {
-            if (aB.member995.member1439(Class95.member829) === member47) {
+            if (aB.member995.member1439(Class95.member823) === NULL) {
+                bh = false;
+            }
+            if (aB.member995.member1439(Class95.member826) === NULL) {
+                bh = false;
+            }
+            if (aB.member995.member1439(Class95.member827) === NULL) {
+                bh = false;
+            }
+        } else {
+        }
+        if (aB.member995.member1439(Class95.member828) === NULL) {
+            bh = false;
+        }
+        if (true) {
+            if (aB.member995.member1439(Class95.member829) === NULL) {
                 bh = false;
             }
         } else {
@@ -1235,44 +1235,44 @@ export var Class807 = function () {
         return bh;
     };
     var e = function (bh) {
-        bh.member1056(true ? aB.member995.member1439(Class95.member805).member3897() : {});
-        bh.member1056(true ? aB.member995.member1439(Class95.member806).member3897() : {});
-        bh.member1056(aB.member995.member1439(Class95.member807).member3897());
-        bh.member1056(true ? aB.member995.member1439(Class95.member808).member3897() : {});
-        bh.member1056(true ? aB.member995.member1439(Class95.member809).member3897() : {});
-        bh.member1056(true ? aB.member995.member1439(Class95.member810).member3897() : {});
-        bh.member1056(true ? aB.member995.member1439(Class95.member811).member3897() : {});
-        bh.member1056(0);
-        bh.member1056(aB.member995.member1439(Class95.member813).member3897());
-        bh.member1056(true ? aB.member995.member1439(Class95.member814).member3897() : {});
-        bh.member1056(0);
-        bh.member1056(aB.member995.member1439(Class95.member816).member3897());
-        bh.member1056(aB.member995.member1439(Class95.member817).member3897());
-        bh.member1056(aB.member995.member1439(Class95.member818).member3897());
-        bh.member1056(aB.member995.member1439(Class95.member819).member3897());
-        bh.member1056(aB.member995.member1439(Class95.member820).member3897());
-        bh.member1056(aB.member995.member1439(Class95.member821).member3897());
-        bh.member1056(aB.member995.member1439(Class95.member822).member3897());
-        bh.member1056(true ? aB.member995.member1439(Class95.member823).member3897() : {});
-        bh.member1056(0);
-        bh.member1056(0);
-        bh.member1056(true ? aB.member995.member1439(Class95.member826).member3897() : {});
-        bh.member1056(true ? aB.member995.member1439(Class95.member827).member3897() : {});
-        bh.member1056(aB.member995.member1439(Class95.member828).member3897());
-        bh.member1056(true ? aB.member995.member1439(Class95.member829).member3897() : {});
-        bh.member1056(0);
-        bh.member1056(0);
-        bh.member1056(0);
-        bh.member1056(0);
-        bh.member1056(0);
-        bh.member1056(0);
-        bh.member1056(0);
-        bh.member1056(true ? aB.member995.member1439(Class95.member837).member3897() : {});
-        bh.member1056(true ? aB.member995.member1439(Class95.member838).member3897() : {});
-        bh.member1056(true ? aB.member995.member1439(Class95.member839).member3897() : {});
-        bh.member1056(0);
-        bh.member1056(0);
-        bh.member1056(0);
+        bh.p4(true ? aB.member995.member1439(Class95.member805).member3897() : {});
+        bh.p4(true ? aB.member995.member1439(Class95.member806).member3897() : {});
+        bh.p4(aB.member995.member1439(Class95.member807).member3897());
+        bh.p4(true ? aB.member995.member1439(Class95.member808).member3897() : {});
+        bh.p4(true ? aB.member995.member1439(Class95.member809).member3897() : {});
+        bh.p4(true ? aB.member995.member1439(Class95.member810).member3897() : {});
+        bh.p4(true ? aB.member995.member1439(Class95.member811).member3897() : {});
+        bh.p4(0);
+        bh.p4(aB.member995.member1439(Class95.member813).member3897());
+        bh.p4(true ? aB.member995.member1439(Class95.member814).member3897() : {});
+        bh.p4(0);
+        bh.p4(aB.member995.member1439(Class95.member816).member3897());
+        bh.p4(aB.member995.member1439(Class95.member817).member3897());
+        bh.p4(aB.member995.member1439(Class95.member818).member3897());
+        bh.p4(aB.member995.member1439(Class95.member819).member3897());
+        bh.p4(aB.member995.member1439(Class95.member820).member3897());
+        bh.p4(aB.member995.member1439(Class95.member821).member3897());
+        bh.p4(aB.member995.member1439(Class95.member822).member3897());
+        bh.p4(true ? aB.member995.member1439(Class95.member823).member3897() : {});
+        bh.p4(0);
+        bh.p4(0);
+        bh.p4(true ? aB.member995.member1439(Class95.member826).member3897() : {});
+        bh.p4(true ? aB.member995.member1439(Class95.member827).member3897() : {});
+        bh.p4(aB.member995.member1439(Class95.member828).member3897());
+        bh.p4(true ? aB.member995.member1439(Class95.member829).member3897() : {});
+        bh.p4(0);
+        bh.p4(0);
+        bh.p4(0);
+        bh.p4(0);
+        bh.p4(0);
+        bh.p4(0);
+        bh.p4(0);
+        bh.p4(true ? aB.member995.member1439(Class95.member837).member3897() : {});
+        bh.p4(true ? aB.member995.member1439(Class95.member838).member3897() : {});
+        bh.p4(true ? aB.member995.member1439(Class95.member839).member3897() : {});
+        bh.p4(0);
+        bh.p4(0);
+        bh.p4(0);
     };
     return a8;
 }();

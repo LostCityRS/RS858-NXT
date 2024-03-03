@@ -95,7 +95,7 @@ export var Class592 = function () {
                 m = r;
             }
         };
-        b.member3590 = function () {
+        b.readyanim = function () {
             return j && n[0] !== undefined;
         };
         b.member8918 = function () {
@@ -112,22 +112,22 @@ export var Class592 = function () {
         };
         b.member6219 = function (u, s) {
             o();
-            var t = u.member609();
+            var t = u.g1();
             for (var r = 0; r < t; r++) {
                 n.push(Class577({ member3456: u }));
-                d.push(u.member320());
+                d.push(u.gFloat());
             }
             if (k === Class578.member8911) {
                 for (var r = 0; r < t; r++) {
-                    e.push(u.member320());
-                    i.push(u.member320());
-                    h.push(u.member320());
+                    e.push(u.gFloat());
+                    i.push(u.gFloat());
+                    h.push(u.gFloat());
                 }
             }
             if (k === Class578.member8913) {
                 for (var r = 0; r < t; r++) {
-                    e.push(u.member320());
-                    i.push(u.member320());
+                    e.push(u.gFloat());
+                    i.push(u.gFloat());
                 }
             }
             j = true;

@@ -7,7 +7,7 @@ import { Class49 } from 'Class49.js';
 import { Class132 } from 'Class132.js';
 import { Class72 } from 'Class72.js';
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class209 } from 'Class209.js';
 import { Class86 } from 'Class86.js';
 import { Class188 } from 'Class188.js';
@@ -19,18 +19,18 @@ export var Class770 = function () {
     var a = function (n, q, i, o, h, g, e, k, j, m) {
         this.member7710;
         this.member3701;
-        this.member9949;
+        this.model;
         this.member8576;
         this.member3455;
         this.member3298;
-        this.member2621 = member47;
+        this.member2621 = NULL;
         this.member10387 = undefined;
         this.member8577 = false;
         if (q !== undefined && i !== undefined && o !== undefined && h !== undefined) {
             member46(this, Class372, q, i, o, Class374.member4143, h);
             this.member7710 = n;
             this.member3701 = g;
-            this.member9949 = e;
+            this.model = e;
             this.member8576 = k;
             this.member3455 = j;
             this.member3298 = m;
@@ -46,7 +46,7 @@ export var Class770 = function () {
     };
     member45(Class372, a);
     a.prototype.member10388 = function () {
-        return this.member9949;
+        return this.model;
     };
     a.prototype.member952 = function (j, i, h, g, e) {
         Class49.member334(h, b);
@@ -54,7 +54,7 @@ export var Class770 = function () {
     };
     a.prototype.member3437 = function (g, j, k, n, i) {
         if (this.member4103(g)) {
-            if (this.member2621 === member47 || this.member2621.member2106() === 0) {
+            if (this.member2621 === NULL || this.member2621.member2106() === 0) {
                 this.member4105(false);
                 return;
             }
@@ -103,12 +103,12 @@ export var Class770 = function () {
         this.node.member4198(g);
     };
     a.prototype.member4380 = function () {
-        if (this.member2621 !== member47) {
+        if (this.member2621 !== NULL) {
             return;
         }
-        var g = this.member7710.member995.getFile(Class95.member810, this.member9949, 0, Class96.member841);
-        if (g === member47) {
-            return member47;
+        var g = this.member7710.member995.getFile(Class95.member810, this.model, 0, Priority.member841);
+        if (g === NULL) {
+            return NULL;
         }
         var e = Class209(g);
         if (e.member2463() < 13) {
@@ -118,15 +118,15 @@ export var Class770 = function () {
         this.member2621.member510();
     };
     a.prototype.member512 = function () {
-        if (this.member2621 !== member47) {
+        if (this.member2621 !== NULL) {
             this.member2621.member511();
-            this.member2621 = member47;
+            this.member2621 = NULL;
         }
         this.member3320().member4189();
     };
     a.prototype.member4102 = function () {
         var e;
-        if (this.member2621 !== member47) {
+        if (this.member2621 !== NULL) {
             if (this.member2621.member2121()) {
                 e |= Class376.member4171;
             }

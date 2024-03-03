@@ -10,7 +10,7 @@ export var Class115 = function () {
         var c = new Int32Array(Class32.member312);
         var h = undefined;
         if (d.member433 !== undefined) {
-            g = Class74({ member526: Class72.member498 });
+            g = Class74({ member526: Class72.POINTLIGHT });
             j = d.member433;
         } else {
             throw new Error('1182 ');
@@ -63,7 +63,7 @@ export var Class115 = function () {
                     e[4 * n + 1] = m[1];
                     e[4 * n + 2] = m[2];
                     e[4 * n + 3] = 1 / q.member992();
-                    c[n] = q.member993();
+                    c[n] = q.getDamageColour();
                 }
                 o.member467(Class7.member169, e);
                 o.member467(Class7.member170, c);

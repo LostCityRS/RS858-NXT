@@ -1,11 +1,11 @@
 export var Class267 = function (b) {
     var d = {};
     var g;
-    if (b.member2698 !== undefined) {
-        var c = b.member2698.member609();
+    if (b.packet !== undefined) {
+        var c = b.packet.g1();
         g = new Array(c);
         for (var a = 0; a < c; a++) {
-            g[a] = b.member2698.member609();
+            g[a] = b.packet.g1();
         }
     } else {
         throw new Error('1750 ');

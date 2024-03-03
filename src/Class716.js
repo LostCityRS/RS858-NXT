@@ -58,7 +58,7 @@ export var Class716 = function () {
         }
     };
     var c = function (u, k, s, i, o, t, r, q, n, m) {
-        if (m === member47) {
+        if (m === NULL) {
             b(u, k, s - u, i - k, o);
             return;
         }

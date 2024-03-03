@@ -35,15 +35,15 @@ export var Class780 = function (q) {
     if (q.data !== undefined) {
         var a = q.data;
         while (true) {
-            var r = a.member609();
+            var r = a.g1();
             if (r === 0) {
                 break;
             } else if (r === 1) {
-                j = new Array(a.member609());
+                j = new Array(a.g1());
                 n = 0;
                 s = 0;
                 for (var g = 0; g < j.length; g++) {
-                    j[g] = a.member609();
+                    j[g] = a.g1();
                     if (j[g] === h) {
                         n++;
                     } else if (j[g] === c) {
@@ -51,23 +51,23 @@ export var Class780 = function (q) {
                     }
                 }
             } else if (r === 3) {
-                k = a.member609();
+                k = a.g1();
             } else if (r === 4) {
-                b = a.member609();
+                b = a.g1();
             } else if (r === 5) {
-                m = new Array(a.member609());
+                m = new Array(a.g1());
                 for (var g = 0; g < m.length; g++) {
-                    m[g] = a.member609();
+                    m[g] = a.g1();
                 }
             } else if (r === 6) {
-                i = new Array(a.member609());
+                i = new Array(a.g1());
                 for (var g = 0; g < i.length; g++) {
-                    i[g] = a.member609();
+                    i[g] = a.g1();
                 }
             } else if (r === 7) {
                 o = new Array(j.length);
                 for (var g = 0; g < j.length; g++) {
-                    o[g] = a.member609() - 1;
+                    o[g] = a.g1() - 1;
                 }
             } else {
                 throw new Error('1025 ' + r);

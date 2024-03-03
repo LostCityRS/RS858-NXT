@@ -1,5 +1,5 @@
 import { Class421 } from 'Class421.js';
-import { Class465 } from 'Class465.js';
+import { VarDomainType } from 'Class465.js';
 import { Class317 } from 'Class317.js';
 export var Class641 = function () {
     var c = {};
@@ -66,7 +66,7 @@ export var Class641 = function () {
         var g = b.member9601();
         if (g !== undefined) {
             e.member8882 = g;
-            e.member8888[Class465.member7381.serialID] = e.member8882;
+            e.member8888[VarDomainType.CLAN_SETTING.serialID] = e.member8882;
             e.member6100[e.member6099++] = 1;
         } else {
             e.member6100[e.member6099++] = 0;
@@ -76,7 +76,7 @@ export var Class641 = function () {
         var g = b.member9602();
         if (g !== undefined) {
             e.member8882 = g;
-            e.member8888[Class465.member7381.serialID] = e.member8882;
+            e.member8888[VarDomainType.CLAN_SETTING.serialID] = e.member8882;
             e.member6100[e.member6099++] = 1;
         } else {
             e.member6100[e.member6099++] = 0;
@@ -156,7 +156,7 @@ export var Class641 = function () {
     };
     Class421.member5688.member867 = function (g) {
         var e = g.member8877[--g.member8878];
-        if (e.member1058 === 4294967295 && e.member1059 === 4294967295) {
+        if (e.high === 4294967295 && e.low === 4294967295) {
             g.member6142[g.member6143++] = '';
         } else {
             g.member6142[g.member6143++] = Class317.member3727.toString(e).toUpperCase();

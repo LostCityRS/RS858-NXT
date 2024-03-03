@@ -29,7 +29,7 @@ export var Class187 = function () {
             return n;
         };
         var j = 4294967295;
-        e.member600 = function () {
+        e.getColour = function () {
             return j;
         };
         var o = 1, m = 1;

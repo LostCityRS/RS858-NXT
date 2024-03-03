@@ -41,7 +41,7 @@ export var Class339 = function () {
                 throw new Error('1344 ');
             }
             if (this.member433.member860() && !this.member3818) {
-                this.member555 = Class76(this.member433, this.width, this.height, member47, false, true, true, this.member552, true);
+                this.member555 = Class76(this.member433, this.width, this.height, NULL, false, true, true, this.member552, true);
                 this.member555.member563();
                 this.member555.member510();
             } else {

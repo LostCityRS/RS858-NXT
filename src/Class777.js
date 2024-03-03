@@ -33,7 +33,7 @@ export var Class777 = function (m) {
     if (m.data !== undefined) {
         var c = m.data;
         while (true) {
-            var n = c.member609();
+            var n = c.g1();
             if (n === 0) {
                 break;
             } else if (n === 1) {
@@ -45,11 +45,11 @@ export var Class777 = function (m) {
             } else if (n === 4) {
                 j = Class269.member3142(c);
             } else if (n === 5) {
-                d = Class267({ member2698: c });
+                d = Class267({ packet: c });
             } else if (n === 6) {
-                h = Class267({ member2698: c });
+                h = Class267({ packet: c });
             } else if (n === 7) {
-                q = Class267({ member2698: c });
+                q = Class267({ packet: c });
             } else if (n === 8) {
                 Class269.member3142(c);
             } else if (n === 9) {
@@ -59,9 +59,9 @@ export var Class777 = function (m) {
             } else if (n === 11) {
                 k = true;
             } else if (n === 12) {
-                o = c.member1073();
+                o = c.g4();
             } else if (n === 13) {
-                a = c.member1073();
+                a = c.g4();
             } else {
                 throw new Error('1056 ' + n);
             }

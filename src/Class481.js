@@ -17,7 +17,7 @@ export var Class481 = function (a) {
         return e;
     };
     var g;
-    d.member7682 = function () {
+    d.getStickTime = function () {
         return g;
     };
     d.replace = function (j) {

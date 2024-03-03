@@ -1,8 +1,8 @@
 import { Class251 } from 'Class251.js';
 import { Class691 } from 'Class691.js';
-import { Class462 } from 'Class462.js';
+import { BaseVarType } from 'Class462.js';
 import { Class66 } from 'Class66.js';
-import { Class465 } from 'Class465.js';
+import { VarDomainType } from 'Class465.js';
 import { Class501 } from 'Class501.js';
 export var Class781 = function (i) {
     var o = {};
@@ -35,12 +35,12 @@ export var Class781 = function (i) {
         throw new Error('1742 ');
     }
     var m = function (y) {
-        var z = y.member444();
+        var z = y.getID();
         if (n[z] === undefined) {
             if (y.member9901() === Class691.PERMANENT) {
                 var A = localStorage.getItem(t(z));
                 if (A !== null) {
-                    if (y.member8041().member7287 === Class462.member7281 || y.member8041().member7287 === Class462.member7282) {
+                    if (y.member8041().baseVarType === BaseVarType.INTEGER || y.member8041().baseVarType === BaseVarType.LONG) {
                         A = parseInt(A);
                     }
                     b.member2945(y, A);
@@ -48,33 +48,33 @@ export var Class781 = function (i) {
             }
             n[z] = true;
         }
-        return b.member2943(y);
+        return b.getVarInt(y);
     };
-    o.member2943 = m;
+    o.getVarInt = m;
     var j = function (y, z) {
         if (y.member9901() === Class691.PERMANENT) {
-            localStorage.setItem(t(y.member444()), z);
+            localStorage.setItem(t(y.getID()), z);
         } else if (y.member9901() === Class691.member9898) {
-            if (y.member7378.member7287 === Class462.member7283) {
+            if (y.member7378.baseVarType === BaseVarType.STRING) {
                 if (z.length > 80) {
                     z = z.substring(0, 80);
                 }
             }
-            if (!g[y.member444()] && b.member2943(y, z) !== z) {
+            if (!g[y.getID()] && b.getVarInt(y, z) !== z) {
                 x++;
-                g[y.member444()] = true;
+                g[y.getID()] = true;
             }
         }
         b.member2945(y, z);
     };
     o.member2945 = j;
     var t = function (y) {
-        return Class66.member432('vt') + Class465.member7379.serialID + '.' + y;
+        return Class66.member432('vt') + VarDomainType.CLIENT.serialID + '.' + y;
     };
     var h = function (y) {
         return y.member2948(m(y.member2949()));
     };
-    o.member2950 = h;
+    o.getVarBit = h;
     var e = function (A, z) {
         var y = A.member2949();
         j(y, A.member2951(m(y), z));
@@ -94,7 +94,7 @@ export var Class781 = function (i) {
             }
             r = new Array(x);
             var D = 0;
-            var F = q.member2970.member10424();
+            var F = q.member2970.getVarClientTypeList();
             for (var B in g) {
                 if (g.hasOwnProperty(B)) {
                     r[D++] = {
@@ -115,23 +115,23 @@ export var Class781 = function (i) {
                     return;
                 }
                 var z = A.member8260(Class501.member8154);
-                z.member2698.member1054(0);
-                var E = z.member2698.member1045;
-                z.member2698.member1045 += 1;
-                var F = q.member2970.member10424();
+                z.packet.p2(0);
+                var E = z.packet.pos;
+                z.packet.pos += 1;
+                var F = q.member2970.getVarClientTypeList();
                 while (a < r.length) {
                     var y = r[a];
-                    if (C + z.member2698.member1045 > 1500) {
+                    if (C + z.packet.pos > 1500) {
                         break;
                     }
-                    F.member10425(y, z.member2698);
+                    F.member10425(y, z.packet);
                     a++;
                 }
-                z.member2698.member1069(z.member2698.member1045 - E);
+                z.packet.member1069(z.packet.pos - E);
                 if (a >= r.length) {
-                    z.member2698.member1044[E] = 1;
+                    z.packet.arr[E] = 1;
                 } else {
-                    z.member2698.member1044[E] = 0;
+                    z.packet.arr[E] = 0;
                 }
                 A.member8261(z);
                 d = Date.now() + 1000;

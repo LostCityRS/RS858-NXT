@@ -34,7 +34,7 @@ export var Class723 = function () {
             var i = Class299.member3584();
             return i.member3484() ? g : h;
         };
-        e.member2969 = function (i) {
+        e.equals = function (i) {
             if (c !== i.member7228()) {
                 return false;
             }

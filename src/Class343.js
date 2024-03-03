@@ -4,7 +4,7 @@ export var Class343 = function () {
         var i = {};
         var c;
         var k;
-        var o = member47;
+        var o = NULL;
         var e = 13;
         var r = false;
         var d = 'DB';
@@ -64,7 +64,7 @@ export var Class343 = function () {
                 }
             };
         };
-        i.member3590 = function () {
+        i.readyanim = function () {
             return r;
         };
         var g = function (s) {

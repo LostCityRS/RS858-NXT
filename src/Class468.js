@@ -1,6 +1,6 @@
 import { Class105 } from 'Class105.js';
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class93 } from 'Class93.js';
 import { Class466 } from 'Class466.js';
 import { Class467 } from 'Class467.js';
@@ -36,7 +36,7 @@ export var Class468 = function () {
                 return;
             }
         }
-        var n = a.member995.getFile(Class95.member813, r, 0, Class96.member840, Class93.member795);
+        var n = a.member995.getFile(Class95.member813, r, 0, Priority.member840, Class93.member795);
         if (n === undefined) {
             return;
         }
@@ -63,7 +63,7 @@ export var Class468 = function () {
         if (o !== null) {
             return o;
         }
-        var n = a.member995.getFile(Class95.member813, q, 0, Class96.member840, Class93.member795);
+        var n = a.member995.getFile(Class95.member813, q, 0, Priority.member840, Class93.member795);
         if (n === undefined) {
             return undefined;
         }
@@ -111,10 +111,10 @@ export var Class468 = function () {
             return o;
         }
         var q = a.member995.member1439(Class95.member813);
-        if (q === member47) {
-            return member47;
+        if (q === NULL) {
+            return NULL;
         }
-        var n = a.member995.getFile(Class95.member813, q.member3899(r), 0, Class96.member840, Class93.member795);
+        var n = a.member995.getFile(Class95.member813, q.member3899(r), 0, Priority.member840, Class93.member795);
         if (n !== undefined) {
             if (n === null) {
                 return null;

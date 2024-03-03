@@ -1,9 +1,9 @@
 import { Class105 } from 'Class105.js';
 import { Class95 } from 'Class95.js';
-import { Class131 } from 'Class131.js';
-import { Class96 } from 'Class96.js';
-import { Class707 } from 'Class707.js';
-export var Class792 = function (j) {
+import { Js5ConfigGroup } from 'Class131.js';
+import { Priority } from 'Class96.js';
+import { SeqGroupType } from 'Class707.js';
+export var SeqGroupTypeList = function (j) {
     var b = {};
     var i = null;
     var h = null;
@@ -17,18 +17,18 @@ export var Class792 = function (j) {
         i = j.member2739;
         h = j.member3992;
         k = j.member995;
-        g = k.member1439(Class95.member807, Class131.member1259.member1204).member3896();
+        g = k.member1439(Class95.member807, Js5ConfigGroup.SEQGROUPTYPE.member1204).member3896();
     } else {
         throw new Error('1394 ');
     }
     var e = function (o) {
         var m = a.find(o);
-        if (m === member47) {
-            var n = k.getFile(Class95.member807, Class131.member1259.member1204, o, Class96.member840);
-            if (n === member47) {
-                return member47;
+        if (m === NULL) {
+            var n = k.getFile(Class95.member807, Js5ConfigGroup.SEQGROUPTYPE.member1204, o, Priority.member840);
+            if (n === NULL) {
+                return NULL;
             }
-            m = Class707(o, b);
+            m = SeqGroupType(o, b);
             if (n !== undefined) {
                 m.decode(n);
             }

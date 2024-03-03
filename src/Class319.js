@@ -64,7 +64,7 @@ export var Class319 = function () {
         this.member511();
     };
     a.prototype.member3732 = function () {
-        var b = Class76(this.member433, this.width, this.height, member47, false, true, true, this.member552, false);
+        var b = Class76(this.member433, this.width, this.height, NULL, false, true, true, this.member552, false);
         b.member563();
         b.member510();
         return b;

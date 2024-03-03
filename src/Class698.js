@@ -34,14 +34,14 @@ export var Class698 = function () {
     member45(Class672, a);
     a.prototype.member4589 = function (b) {
         this.member9914.member2604();
-        this.member9914.member1051(b.member4238());
+        this.member9914.p1(b.member4238());
         this.member9914.member2605(4);
         var d = this.member9914.member2606();
-        this.member9914.member1054(b.member4239());
+        this.member9914.p2(b.member4239());
         b.member2560(this.member9914);
         var c = this.member9914.member2606() - d;
         this.member9914.member2605(-(c + 4));
-        this.member9914.member1056(c);
+        this.member9914.p4(c);
         this.member9914.member2605(c);
         this.member9914.member2607();
         this.member9910[b.member4239()] = b;
@@ -87,35 +87,35 @@ export var Class698 = function () {
                 if (!this.member9914.member2603(5)) {
                     break;
                 }
-                this.member9915 = this.member9914.member609();
-                this.member9916 = this.member9914.member1073();
+                this.member9915 = this.member9914.g1();
+                this.member9916 = this.member9914.g4();
             }
             if (!this.member9914.member2603(this.member9916)) {
                 break;
             }
             if (this.member9915 === Class211.LOG) {
-                console.log('%c' + this.member9914.member1089(), 'color:#bada55');
+                console.log('%c' + this.member9914.gjstr(), 'color:#bada55');
             } else if (this.member9915 === Class211.member2316) {
-                var g = this.member9914.member608();
-                var c = new Uint16Array(this.member9914.member608());
+                var g = this.member9914.g2();
+                var c = new Uint16Array(this.member9914.g2());
                 for (var b = 0; b < c.length; b++) {
-                    c[b] = this.member9914.member608();
+                    c[b] = this.member9914.g2();
                 }
                 var e = Class150.member1513(c);
                 this.member9910[g].member2884(e);
                 this.member9914.member2604();
-                this.member9914.member1051(Class211.member2316);
+                this.member9914.p1(Class211.member2316);
                 this.member9914.member2605(4);
                 var i = this.member9914.member2606();
-                this.member9914.member1054(g);
+                this.member9914.p2(g);
                 e.member1318(this.member9914, true, true);
                 var h = this.member9914.member2606() - i;
                 this.member9914.member2605(-(h + 4));
-                this.member9914.member1056(h);
+                this.member9914.p4(h);
                 this.member9914.member2605(h);
                 this.member9914.member2607();
             } else if (this.member9915 === Class211.COMPLETE) {
-                var g = this.member9914.member608();
+                var g = this.member9914.g2();
                 if (this.member9910[g].member2723() === Class380.member2861) {
                     var d = this.member9910[g].member4244(this.member9914, this.member9916 - 2);
                     this.member9786(this.member9910[g], Class379.member4231, d);
@@ -125,7 +125,7 @@ export var Class698 = function () {
                 }
                 this.member9910[g] = undefined;
             } else if (this.member9915 === Class211.ERROR) {
-                var g = this.member9914.member608();
+                var g = this.member9914.g2();
                 this.member9786(this.member9910[g], Class379.member4232);
                 this.member9910[g] = undefined;
             } else {

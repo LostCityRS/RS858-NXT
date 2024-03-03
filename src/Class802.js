@@ -126,8 +126,8 @@ export var Class802 = function () {
         var U = new Array(S.length);
         var V = true;
         for (var P = 0; P < S.length; P++) {
-            var T = B.member3227(R, S[P]);
-            if (T === member47) {
+            var T = B.getConfigType(R, S[P]);
+            if (T === NULL) {
                 V = false;
             } else {
                 U[P] = T.member681();
@@ -191,7 +191,7 @@ export var Class802 = function () {
         for (var Q = 0; Q < v; Q++) {
             c[Q] = {
                 member2788: P.getElementById('w' + Q + 'lps'),
-                member2524: P.getElementById('w' + Q + 'active'),
+                active: P.getElementById('w' + Q + 'active'),
                 activity: P.getElementById('w' + Q + 'activity')
             };
         }
@@ -207,7 +207,7 @@ export var Class802 = function () {
             if (S === undefined) {
                 S = R.member2889(L, B);
             }
-            if (S !== member47) {
+            if (S !== NULL) {
                 R.member10517 = S;
                 if (false) {
                 }
@@ -368,7 +368,7 @@ export var Class802 = function () {
                 }
                 if (c[X].member2788 !== null) {
                     c[X].member2788.textContent = O[X].member2788;
-                    c[X].member2524.textContent = O[X].activity + '%';
+                    c[X].active.textContent = O[X].activity + '%';
                     c[X].activity.textContent = W;
                 }
             }
@@ -380,7 +380,7 @@ export var Class802 = function () {
     };
     H.member2939 = function (P) {
         if (z) {
-            return e.add(P, P.member2703());
+            return e.add(P, P.getPriority());
         }
         if (false) {
         }

@@ -386,7 +386,7 @@ export var Class727 = function () {
             }
             if (X === 'getcamerapos') {
                 var aj = P.member6101.member9070();
-                if (aj.member3590()) {
+                if (aj.readyanim()) {
                     var Y = Class140.create();
                     aj.member8926(Y);
                     var ah = Class416.member4790(Y);
@@ -495,10 +495,10 @@ export var Class727 = function () {
             }
             if (R.member8239()) {
                 var Z = R.member8260(Class501.member8136);
-                Z.member2698.member1051(X.length + 3);
-                Z.member2698.member1051(ab ? 1 : 0);
-                Z.member2698.member1051(ak ? 1 : 0);
-                Z.member2698.member1065(X);
+                Z.packet.p1(X.length + 3);
+                Z.packet.p1(ab ? 1 : 0);
+                Z.packet.p1(ak ? 1 : 0);
+                Z.packet.pjstr(X);
                 R.member8261(Z);
             }
         }

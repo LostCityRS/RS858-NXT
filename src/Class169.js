@@ -1,5 +1,5 @@
 import { Class168 } from 'Class168.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class167 } from 'Class167.js';
 export var Class169 = function () {
     var b = function (d, e, c) {
@@ -63,26 +63,26 @@ export var Class169 = function () {
     };
     var a = function (u, h) {
         this.member1836 = u;
-        var j = h.member609();
-        var v = h.member608();
-        var t = h.member608();
+        var j = h.g1();
+        var v = h.g2();
+        var t = h.g2();
         for (var d = 0; d < t; d++) {
-            if (h.member609() > 0) {
+            if (h.g1() > 0) {
                 this.member1828++;
             }
         }
-        h.member607(5);
+        h.setPos(5);
         this.member1837 = new Int32Array(this.member1828 * 6);
         this.member1828 = 0;
-        var g = Class124(undefined, h.getData());
-        g.member607(h.member1047() + t);
+        var g = Packet(undefined, h.getData());
+        g.setPos(h.getPos() + t);
         var i = -1, c = -1;
         for (var d = 0; d < t; d++) {
             var e = this.member1836.member1833(d);
             if (e === Class167.member1817) {
                 i = d;
             }
-            var k = h.member609();
+            var k = h.g1();
             if (k > 0) {
                 if (e === Class167.member1817) {
                     c = d;
@@ -94,36 +94,36 @@ export var Class169 = function () {
                 }
                 if (j >= 2 && e === Class167.member1823) {
                     if ((k & 1) !== 0) {
-                        g.member1080();
-                        s = g.member1080();
+                        g.gSmart1or2s();
+                        s = g.gSmart1or2s();
                     } else {
                         s = o;
                     }
                     if ((k & 2) !== 0) {
-                        g.member1080();
-                        r = g.member1080();
+                        g.gSmart1or2s();
+                        r = g.gSmart1or2s();
                     } else {
                         r = o;
                     }
                     if ((k & 4) !== 0) {
-                        g.member1080();
-                        q = g.member1080();
+                        g.gSmart1or2s();
+                        q = g.gSmart1or2s();
                     } else {
                         q = o;
                     }
                 } else {
                     if ((k & 1) !== 0) {
-                        s = g.member1080();
+                        s = g.gSmart1or2s();
                     } else {
                         s = o;
                     }
                     if ((k & 2) !== 0) {
-                        r = g.member1080();
+                        r = g.gSmart1or2s();
                     } else {
                         r = o;
                     }
                     if ((k & 4) !== 0) {
-                        q = g.member1080();
+                        q = g.gSmart1or2s();
                     } else {
                         q = o;
                     }
@@ -162,7 +162,7 @@ export var Class169 = function () {
                 this.member1828++;
             }
         }
-        if (g.member1047() !== h.getSize()) {
+        if (g.getPos() !== h.getSize()) {
             throw new Error('905 ');
         }
     };

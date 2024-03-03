@@ -1,6 +1,6 @@
 import { Class532 } from 'Class532.js';
 import { Class501 } from 'Class501.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class533 } from 'Class533.js';
 import { Class433 } from 'Class433.js';
 import { Class682 } from 'Class682.js';
@@ -62,9 +62,9 @@ export var Class685 = function () {
         }
         var y = c.member8252.member8259();
         var u = y.member8260(Class501.member8144);
-        u.member2698.member1051(2 + Class124.member1152(v.member3009()));
-        u.member2698.member1054(x);
-        u.member2698.member1065(v.member3009());
+        u.packet.p1(2 + Packet.member1152(v.member3009()));
+        u.packet.p2(x);
+        u.packet.pjstr(v.member3009());
         y.member8261(u);
     };
     h.member9603 = t;
@@ -79,10 +79,10 @@ export var Class685 = function () {
         }
         var z = c.member8252.member8259();
         var v = z.member8260(Class501.member8143);
-        v.member2698.member1051(1 + 2 + Class124.member1152(x.member3009()));
-        v.member2698.member1051(u ? 1 : 0);
-        v.member2698.member1054(y);
-        v.member2698.member1065(x.member3009());
+        v.packet.p1(1 + 2 + Packet.member1152(x.member3009()));
+        v.packet.p1(u ? 1 : 0);
+        v.packet.p2(y);
+        v.packet.pjstr(x.member3009());
         z.member8261(v);
         return true;
     };
@@ -97,16 +97,16 @@ export var Class685 = function () {
         var v = e.member8848(x);
         var y = c.member8252.member8259();
         var u = y.member8260(Class501.member8145);
-        u.member2698.member1051(3 + Class124.member1152(v.member3009()));
-        u.member2698.member1054(x);
-        u.member2698.member1051(z ? 1 : 0);
-        u.member2698.member1065(v.member3009());
+        u.packet.p1(3 + Packet.member1152(v.member3009()));
+        u.packet.p2(x);
+        u.packet.p1(z ? 1 : 0);
+        u.packet.pjstr(v.member3009());
         y.member8261(u);
     };
     h.member9604 = q;
     var g = function (u, x) {
         c.member7187.member9156();
-        var v = u.member609() === 1;
+        var v = u.g1() === 1;
         if (x === 1) {
             if (v) {
                 i = undefined;
@@ -124,7 +124,7 @@ export var Class685 = function () {
     Class433.member6275.member6428 = g;
     var j = function (u, x) {
         c.member7187.member9156();
-        var v = u.member609() === 1;
+        var v = u.g1() === 1;
         var y = Class682(u);
         if (v) {
             y.member9873(i);
@@ -135,7 +135,7 @@ export var Class685 = function () {
     Class433.member6276.member6428 = j;
     var n = function (u, x) {
         c.member7187.member9158();
-        var v = u.member609() === 1;
+        var v = u.g1() === 1;
         if (x === 1) {
             if (v) {
                 e = undefined;
@@ -156,7 +156,7 @@ export var Class685 = function () {
     Class433.member6277.member6428 = n;
     var k = function (u, x) {
         c.member7187.member9158();
-        var v = u.member609() === 1;
+        var v = u.g1() === 1;
         var y = Class684(u);
         if (v) {
             y.member9877(e);

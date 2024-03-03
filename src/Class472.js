@@ -7,9 +7,9 @@ export var Class472 = function () {
     };
     member45(Class442, a);
     a.prototype.member6797 = function (g, c, e, b) {
-        this.member7555 = g.member609();
-        var d = g.member1073();
-        this.member7556 = g.member609() === 1;
+        this.member7555 = g.g1();
+        var d = g.g4();
+        this.member7556 = g.g1() === 1;
         return {
             member4638: d,
             alpha: 255

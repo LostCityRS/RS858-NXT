@@ -1,5 +1,5 @@
 import { Class421 } from 'Class421.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 export var Class650 = function () {
     var c = {};
     var a;
@@ -10,52 +10,52 @@ export var Class650 = function () {
     };
     c.member25 = d;
     Class421.member5974.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
         g.member6099--;
         g.member6142[g.member6143++] = e.getName();
     };
     Class421.member5975.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
         g.member6099--;
         g.member6142[g.member6143++] = e.member9631();
     };
     Class421.member5976.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
         g.member6100[g.member6099 - 1] = e.member2794();
     };
     Class421.member5977.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
         g.member6100[g.member6099 - 1] = e.member9632();
     };
     Class421.member5978.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
         g.member6100[g.member6099 - 1] = e.member8413() ? 1 : 0;
     };
     Class421.member5979.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
         g.member6100[g.member6099 - 1] = e.member2977();
     };
     Class421.member5980.member867 = function (h) {
-        var g = b.member3227(Class131.member1229.member1204, h.member6100[h.member6099 - 1]);
-        if (g === member47) {
+        var g = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, h.member6100[h.member6099 - 1]);
+        if (g === NULL) {
             return true;
         }
         var e = g.member9633();
@@ -66,8 +66,8 @@ export var Class650 = function () {
         }
     };
     Class421.member5981.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 2]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 2]);
+        if (e === NULL) {
             return true;
         }
         var h = g.member6100[g.member6099 - 1];
@@ -75,31 +75,31 @@ export var Class650 = function () {
         g.member6099 -= 1;
     };
     Class421.member5982.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 2]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 2]);
+        if (e === NULL) {
             return true;
         }
         var h = g.member6100[g.member6099 - 1];
-        g.member6100[g.member6099 - 2] = e.member9634(a.member8687(), h) ? 1 : 0;
+        g.member6100[g.member6099 - 2] = e.member9634(a.getVarValueProvider(), h) ? 1 : 0;
         g.member6099 -= 1;
     };
     Class421.member5983.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
         g.member6100[g.member6099 - 1] = e.member9635();
     };
     Class421.member5984.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
-        g.member6100[g.member6099 - 1] = e.member9636(a.member8687()) ? 1 : 0;
+        g.member6100[g.member6099 - 1] = e.member9636(a.getVarValueProvider()) ? 1 : 0;
     };
     Class421.member5985.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
         var h = e.member9637();
@@ -110,8 +110,8 @@ export var Class650 = function () {
         }
     };
     Class421.member5986.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 2]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 2]);
+        if (e === NULL) {
             return true;
         }
         var h = g.member6100[g.member6099 - 1];
@@ -119,8 +119,8 @@ export var Class650 = function () {
         g.member6099 -= 1;
     };
     Class421.member5987.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 2]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 2]);
+        if (e === NULL) {
             return true;
         }
         var h = g.member6100[g.member6099 - 1];
@@ -128,8 +128,8 @@ export var Class650 = function () {
         g.member6099 -= 1;
     };
     Class421.member5988.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 2]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 2]);
+        if (e === NULL) {
             return true;
         }
         var h = g.member6100[g.member6099 - 1];
@@ -137,8 +137,8 @@ export var Class650 = function () {
         g.member6099 -= 1;
     };
     Class421.member5989.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
         var h = e.member9640();
@@ -149,8 +149,8 @@ export var Class650 = function () {
         }
     };
     Class421.member5990.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 2]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 2]);
+        if (e === NULL) {
             return true;
         }
         var h = g.member6100[g.member6099 - 1];
@@ -158,17 +158,17 @@ export var Class650 = function () {
         g.member6099 -= 2;
     };
     Class421.member5991.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 2]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 2]);
+        if (e === NULL) {
             return true;
         }
         var h = g.member6100[g.member6099 - 1];
-        g.member6100[g.member6099 - 2] = e.member9642(a.member8687(), h) ? 1 : 0;
+        g.member6100[g.member6099 - 2] = e.member9642(a.getVarValueProvider(), h) ? 1 : 0;
         g.member6099 -= 1;
     };
     Class421.member5992.member867 = function (h) {
-        var e = b.member3227(Class131.member1229.member1204, h.member6100[h.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, h.member6100[h.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
         var g = e.member9643();
@@ -179,8 +179,8 @@ export var Class650 = function () {
         }
     };
     Class421.member5993.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 2]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 2]);
+        if (e === NULL) {
             return true;
         }
         var h = g.member6100[g.member6099 - 1];
@@ -188,40 +188,40 @@ export var Class650 = function () {
         g.member6099 -= 2;
     };
     Class421.member5994.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 2]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 2]);
+        if (e === NULL) {
             return true;
         }
         var h = g.member6100[g.member6099 - 1];
-        g.member6100[g.member6099 - 2] = e.member9645(a.member8687(), h) ? 1 : 0;
+        g.member6100[g.member6099 - 2] = e.member9645(a.getVarValueProvider(), h) ? 1 : 0;
         g.member6099 -= 1;
     };
     Class421.member5995.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
-        g.member6100[g.member6099 - 1] = e.member9646(a.member8687(), a.member6116.member8789()) ? 1 : 0;
+        g.member6100[g.member6099 - 1] = e.member9646(a.getVarValueProvider(), a.member6116.member8789()) ? 1 : 0;
     };
     Class421.member5996.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
-        g.member6100[g.member6099 - 1] = e.member9647(a.member8687()) ? 1 : 0;
+        g.member6100[g.member6099 - 1] = e.member9647(a.getVarValueProvider()) ? 1 : 0;
     };
     Class421.member5997.member867 = function (g) {
-        var e = b.member3227(Class131.member1229.member1204, g.member6100[g.member6099 - 1]);
-        if (e === member47) {
+        var e = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, g.member6100[g.member6099 - 1]);
+        if (e === NULL) {
             return true;
         }
-        g.member6100[g.member6099 - 1] = e.member2976(a.member8687()) ? 1 : 0;
+        g.member6100[g.member6099 - 1] = e.member2976(a.getVarValueProvider()) ? 1 : 0;
     };
     Class421.member5998.member867 = function (h) {
-        var g = b.member3227(Class131.member1229.member1204, h.member6100[h.member6099 - 2]);
+        var g = b.getConfigType(Js5ConfigGroup.QUESTTYPE.member1204, h.member6100[h.member6099 - 2]);
         var e = h.member6100[h.member6099 - 1];
-        var i = b.member3227(Class131.member1215.member1204, e);
-        if (g === member47 || i == member47) {
+        var i = b.getConfigType(Js5ConfigGroup.PARAMTYPE.member1204, e);
+        if (g === NULL || i == NULL) {
             return true;
         }
         if (i.member6141()) {

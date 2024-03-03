@@ -1,5 +1,5 @@
 import { Class188 } from 'Class188.js';
-import { Class170 } from 'Class170.js';
+import { HillChange } from 'Class170.js';
 export var Class199 = function (m) {
     var d = {};
     var i;
@@ -33,7 +33,7 @@ export var Class199 = function (m) {
     var l = function (y) {
         var A = Class188(undefined, undefined, undefined, undefined, undefined, undefined, i);
         var r = undefined;
-        if (h !== null && a !== Class170.member1852) {
+        if (h !== null && a !== HillChange.member1852) {
             var x = function (H, G) {
                 if (j === 1) {
                     var J = H;
@@ -105,7 +105,7 @@ export var Class199 = function (m) {
                 var E = (h.member2371[B][I + 1] * (K - D) + h.member2371[B + 1][I + 1] * D) / K;
                 return (F * (K - C) + E * C) / K - k;
             };
-            if (a === Class170.member1855) {
+            if (a === HillChange.ROTATE) {
                 var t = (n & 255) * 4;
                 var q = (n >> 8 & 255) * 4;
                 var z = (n >> 16 & 255) << 2;

@@ -231,22 +231,22 @@ export var Class581 = function () {
             B = Class416.member4790(c);
             return Class415.member4773(B.member4791);
         };
-        z.member3590 = function () {
+        z.readyanim = function () {
             return o && C !== undefined;
         };
-        var k = z.member3590;
+        var k = z.readyanim;
         z.member6219 = function (F, D) {
-            var E = F.member609();
-            var G = F.member608();
-            if (E === Class567.member4134) {
+            var E = F.g1();
+            var G = F.g2();
+            if (E === Class567.PLAYER) {
                 C = D.member6452.member6453(G);
             } else {
                 C = D.member6450.member6451(G);
             }
-            F.member1088(r);
-            F.member1088(n);
-            v = F.member609() === 1;
-            u = F.member608();
+            F.gFloatArray(r);
+            F.gFloatArray(n);
+            v = F.g1() === 1;
+            u = F.g2();
             o = true;
         };
         z.member8864 = function (D) {

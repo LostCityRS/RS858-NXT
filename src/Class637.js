@@ -47,7 +47,7 @@ export var Class637 = function () {
     };
     Class421.member5546.member867 = function (g) {
         var i = e.member9541();
-        if (!e.isOpen() && i !== undefined && i.member2794() === Class605.member4133) {
+        if (!e.isOpen() && i !== undefined && i.member2794() === Class605.NPC) {
             var h = i.member9531();
             var j = a.member6450.member6451(h);
             if (j !== undefined) {
@@ -59,7 +59,7 @@ export var Class637 = function () {
     };
     Class421.member5547.member867 = function (h) {
         var i = e.member9541();
-        if (!e.isOpen() && i !== undefined && i.member2794() === Class605.member4134) {
+        if (!e.isOpen() && i !== undefined && i.member2794() === Class605.PLAYER) {
             var g = i.member9531();
             var j = a.member6452.member6453(g);
             if (j !== undefined) {

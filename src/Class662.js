@@ -105,7 +105,7 @@ export var Class662 = function () {
         g.member8261(e);
     };
     Class421.member5536.member867 = function (e) {
-        e.member6100[e.member6099++] = a.clientParameters.member8273.value;
+        e.member6100[e.member6099++] = a.clientParameters.affiliate.value;
     };
     Class421.member5825.member867 = function (g) {
         var h = g.member6142[--g.member6143];

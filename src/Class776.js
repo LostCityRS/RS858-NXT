@@ -1,12 +1,12 @@
 import { Class49 } from 'Class49.js';
 import { Class37 } from 'Class37.js';
-import { Class166 } from 'Class166.js';
-import { Class290 } from 'Class290.js';
+import { Cuboid } from 'Class166.js';
+import { CoordFine } from 'Class290.js';
 import { Class86 } from 'Class86.js';
 import { Class372 } from 'Class372.js';
 import { Class374 } from 'Class374.js';
 import { Class373 } from 'Class373.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class41 } from 'Class41.js';
 import { Class32 } from 'Class32.js';
 import { Class304 } from 'Class304.js';
@@ -18,9 +18,9 @@ export var Class776 = function () {
     var e = new Float32Array(3);
     var g = new Class49.member313();
     var d = Class37.create();
-    var h = Class166(new Float32Array(3), new Float32Array(3));
-    var c = Class166(new Float32Array(3), new Float32Array(3));
-    var b = Class290();
+    var h = Cuboid(new Float32Array(3), new Float32Array(3));
+    var c = Cuboid(new Float32Array(3), new Float32Array(3));
+    var b = CoordFine();
     var a = function (B) {
         var n = null;
         var i;
@@ -117,8 +117,8 @@ export var Class776 = function () {
                     continue;
                 }
                 if (k[D].member2621 === null) {
-                    var C = i.member2970.member3227(Class131.member1214.member1204, k[D].member9764);
-                    if (C === member47) {
+                    var C = i.member2970.getConfigType(Js5ConfigGroup.OBJTYPE.member1204, k[D].member9764);
+                    if (C === NULL) {
                         continue;
                     }
                     k[D].member2621 = C.member9981(i.member433, k[D].member1917);
@@ -196,9 +196,9 @@ export var Class776 = function () {
                         if (N.member4700 === null) {
                             var W = false;
                             if (Q === undefined) {
-                                Q = i.member2970.member3227(Class131.member1214.member1204, N.member9764);
+                                Q = i.member2970.getConfigType(Js5ConfigGroup.OBJTYPE.member1204, N.member9764);
                             }
-                            if (Q !== member47) {
+                            if (Q !== NULL) {
                                 W = Q.member9973();
                             }
                             var X, R;
@@ -226,9 +226,9 @@ export var Class776 = function () {
                         J = true;
                         if (N.member10415 === undefined) {
                             if (Q === undefined) {
-                                Q = i.member2970.member3227(Class131.member1214.member1204, N.member9764);
+                                Q = i.member2970.getConfigType(Js5ConfigGroup.OBJTYPE.member1204, N.member9764);
                             }
-                            if (Q !== member47) {
+                            if (Q !== NULL) {
                                 N.member10415 = Q.member4494();
                             }
                         }
@@ -271,7 +271,7 @@ export var Class776 = function () {
                 n.member4107(false);
                 return;
             }
-            var C = O.member941(Class72.member498);
+            var C = O.member941(Class72.POINTLIGHT);
             var V = u !== undefined && !M && C.member291();
             if (V) {
                 var D = u.member427();
@@ -325,22 +325,22 @@ export var Class776 = function () {
             return D;
         };
         var o = function (E, D) {
-            var C = E.member9579();
-            if (E.member7079() === 1) {
+            var C = E.getCost();
+            if (E.getStackable() === 1) {
                 C *= D + 1;
             }
             return C;
         };
         var t = function (E, C) {
-            var D = i.member2970.member3227(Class131.member1214.member1204, E.member9764);
-            var F = i.member2970.member3227(Class131.member1214.member1204, C.member9764);
-            if (D === member47 && F !== member47) {
+            var D = i.member2970.getConfigType(Js5ConfigGroup.OBJTYPE.member1204, E.member9764);
+            var F = i.member2970.getConfigType(Js5ConfigGroup.OBJTYPE.member1204, C.member9764);
+            if (D === NULL && F !== NULL) {
                 return 1;
             }
-            if (D !== member47 && F === member47) {
+            if (D !== NULL && F === NULL) {
                 return -1;
             }
-            if (D === member47 && F === member47) {
+            if (D === NULL && F === NULL) {
                 return 0;
             }
             return o(F, C.member1917) - o(D, E.member1917);
@@ -384,7 +384,7 @@ export var Class776 = function () {
         var z = function () {
             if (!v) {
                 j.sort(t);
-                if (i.member2970.member3227(Class131.member1214.member1204, j[j.length - 1].member9764) !== member47) {
+                if (i.member2970.getConfigType(Js5ConfigGroup.OBJTYPE.member1204, j[j.length - 1].member9764) !== NULL) {
                     v = true;
                 }
                 A();

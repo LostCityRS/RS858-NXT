@@ -33,14 +33,14 @@ export var Class774 = function () {
         }
         var v = u;
         var q = i;
-        var o = r.member1080();
+        var o = r.gSmart1or2s();
         var g = new Array(o);
         var x = new Array(o);
-        var m = r.member608();
-        var h = r.member608();
+        var m = r.g2();
+        var h = r.g2();
         for (var s = 0; s < o; s++) {
-            g[s] = m + r.member1070();
-            x[s] = h + r.member1070();
+            g[s] = m + r.g1s();
+            x[s] = h + r.g1s();
         }
         if (b[v] === undefined || !b[v].member3320().member4188()) {
             var k = Class377();

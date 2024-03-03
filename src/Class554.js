@@ -17,7 +17,7 @@ export var Class554 = function () {
             e = b + this.member6752();
             g = i + this.member6754();
         }
-        c.member433.member3640.member3802(d, h, e, g, this.member7557(), this.member600(), true);
+        c.member433.member3640.member3802(d, h, e, g, this.member7557(), this.getColour(), true);
     };
     return a;
 }();

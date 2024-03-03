@@ -1,37 +1,37 @@
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class209 } from 'Class209.js';
-export var Class479 = function () {
-    var a = function (k) {
+export var IDKType = function () {
+    var IDKType = function (k) {
         var u = {};
-        var x;
+        var myList;
         var b = -1;
-        if (k.member625 !== undefined && k.member2896 !== undefined) {
+        if (k.member625 !== undefined && k.myList !== undefined) {
             b = k.member625;
-            x = k.member2896;
+            myList = k.myList;
         } else {
             throw new Error('1214 ');
         }
-        var i = null;
-        var q = [
+        var model = null;
+        var head = [
             -1,
             -1,
             -1,
             -1,
             -1
         ];
-        var v = null;
-        var e = null;
-        var t = null;
-        var r = null;
-        u.member7661 = function () {
-            return r;
+        var recol_s = null;
+        var recol_d = null;
+        var recolindex = null;
+        var retex_s = null;
+        u.getRetexS = function () {
+            return retex_s;
         };
-        var n = null;
-        u.member7608 = function () {
-            return n;
+        var retex_d = null;
+        u.getRetexD = function () {
+            return retex_d;
         };
-        var m = null;
+        var retexindex = null;
         var j = function () {
             return {
                 member625: b,
@@ -42,89 +42,89 @@ export var Class479 = function () {
             };
         };
         u.member681 = j;
-        var s = function (z) {
+        var decode = function (packet) {
             while (true) {
-                var y = z.member609();
-                if (y === undefined) {
+                var opcode = packet.g1();
+                if (opcode === undefined) {
                     throw new Error('1215 ');
                     break;
                 }
-                if (y === 0) {
+                if (opcode === 0) {
                     break;
                 }
-                o(z, y);
+                decodeNext(packet, opcode);
             }
         };
-        u.decode = s;
-        var o = function (A, H) {
-            if (H === 1) {
-                A.member609();
-            } else if (H === 2) {
-                var F = A.member609();
-                i = new Array(F);
-                for (var B = 0; B < F; B++) {
-                    i[B] = A.member1086();
+        u.decode = decode;
+        var decodeNext = function (packet, opcode) {
+            if (opcode === 1) {
+                packet.g1();
+            } else if (opcode === 2) {
+                var count = packet.g1();
+                model = new Array(count);
+                for (var i = 0; i < count; i++) {
+                    model[i] = packet.gSmart2or4null();
                 }
-            } else if (H === 40) {
-                var z = A.member609();
-                v = new Array(z);
-                e = new Array(z);
-                for (var y = 0; y < z; y++) {
-                    v[y] = A.member608();
-                    e[y] = A.member608();
+            } else if (opcode === 40) {
+                var count = packet.g1();
+                recol_s = new Array(count);
+                recol_d = new Array(count);
+                for (var y = 0; y < count; y++) {
+                    recol_s[y] = packet.g2();
+                    recol_d[y] = packet.g2();
                 }
-            } else if (H === 41) {
-                var I = A.member609();
-                r = new Array(I);
-                n = new Array(I);
+            } else if (opcode === 41) {
+                var I = packet.g1();
+                retex_s = new Array(I);
+                retex_d = new Array(I);
                 for (var E = 0; E < I; E++) {
-                    r[E] = A.member1071();
-                    n[E] = A.member1071();
+                    retex_s[E] = packet.g2s();
+                    retex_d[E] = packet.g2s();
                 }
-            } else if (H === 44) {
-                var G = A.member608();
+            } else if (opcode === 44) {
+                var G = packet.g2();
                 var J = 0;
                 for (var B = G; B > 0; B = B >> 1) {
                     J++;
                 }
-                t = new Array(J);
+                recolindex = new Array(J);
                 var C = 0;
                 for (var B = 0; B < J; B++) {
                     if ((G & 1 << B) > 0) {
-                        t[B] = C++;
+                        recolindex[B] = C++;
                     } else {
-                        t[B] = -1;
+                        recolindex[B] = -1;
                     }
                 }
-            } else if (H === 45) {
-                var K = A.member608();
+            } else if (opcode === 45) {
+                var K = packet.g2();
                 var D = 0;
                 for (var B = K; B > 0; B = B >> 1) {
                     D++;
                 }
-                m = new Array(D);
+                retexindex = new Array(D);
                 var C = 0;
                 for (var B = 0; B < D; B++) {
                     if ((K & 1 << B) > 0) {
-                        m[B] = C++;
+                        retexindex[B] = C++;
                     } else {
-                        m[B] = -1;
+                        retexindex[B] = -1;
                     }
                 }
-            } else if (H >= 60 && H < 65) {
-                q[H - 60] = A.member1086();
+            } else if (opcode >= 60 && opcode < 65) {
+                head[opcode - 60] = packet.gSmart2or4null();
             } else if (false) {
             }
         };
         if (true) {
             var h = function () {
-                if (i === null) {
+                if (model === null) {
                     return true;
                 }
                 var z = true;
-                var y = x.member7535();
-                for (var A = 0; A < i.length; A++) {
-                    if (y.getFile(Class95.member810, i[A], 0, Class96.member840) === null) {
+                var y = myList.member7535();
+                for (var A = 0; A < model.length; A++) {
+                    if (y.getFile(Class95.member810, model[A], 0, Priority.member840) === null) {
                         z = false;
                     }
                 }
@@ -132,19 +132,19 @@ export var Class479 = function () {
             };
             u.member7662 = h;
             var g = function () {
-                if (i == null) {
+                if (model == null) {
                     return null;
                 }
-                var z = x.member7535();
-                var C = new Array(i.length);
-                for (var B = 0; B < i.length; B++) {
-                    var y = z.getFile(Class95.member810, i[B], 0, Class96.member840);
+                var z = myList.member7535();
+                var C = new Array(model.length);
+                for (var B = 0; B < model.length; B++) {
+                    var y = z.getFile(Class95.member810, model[B], 0, Priority.member840);
                     if (y === null) {
                         return null;
                     }
                     C[B] = Class209(y);
                 }
-                for (var B = 0; B < i.length; B++) {
+                for (var B = 0; B < model.length; B++) {
                     if (C[B].member2463() < 13) {
                         C[B].member2495(2);
                     }
@@ -158,20 +158,20 @@ export var Class479 = function () {
                 if (A === null) {
                     return null;
                 }
-                if (v !== undefined && v !== null) {
-                    A.member2497(v, e);
+                if (recol_s !== undefined && recol_s !== null) {
+                    A.member2497(recol_s, recol_d);
                 }
-                if (r !== null) {
-                    A.member2499(r, n);
+                if (retex_s !== null) {
+                    A.member2499(retex_s, retex_d);
                 }
                 return A;
             };
             u.member7546 = g;
             var d = function () {
-                var z = x.member7535();
+                var z = myList.member7535();
                 var y = true;
-                for (var A = 0; A < q.length; A++) {
-                    if (q[A] != -1 && z.getFile(Class95.member810, q[A], 0, Class96.member840) === null) {
+                for (var A = 0; A < head.length; A++) {
+                    if (head[A] != -1 && z.getFile(Class95.member810, head[A], 0, Priority.member840) === null) {
                         y = false;
                     }
                 }
@@ -179,13 +179,13 @@ export var Class479 = function () {
             };
             u.member7663 = d;
             var c = function () {
-                var z = x.member7535();
+                var z = myList.member7535();
                 var C = new Array(0);
-                for (var B = 0; B < q.length; B++) {
-                    if (q[B] === -1) {
+                for (var B = 0; B < head.length; B++) {
+                    if (head[B] === -1) {
                         continue;
                     }
-                    var y = z.getFile(Class95.member810, q[B], 0, Class96.member840);
+                    var y = z.getFile(Class95.member810, head[B], 0, Priority.member840);
                     if (y === null) {
                         return null;
                     }
@@ -205,11 +205,11 @@ export var Class479 = function () {
                 if (A === null) {
                     return null;
                 }
-                if (v !== undefined && v !== null) {
-                    A.member2497(v, e);
+                if (recol_s !== undefined && recol_s !== null) {
+                    A.member2497(recol_s, recol_d);
                 }
-                if (r !== null) {
-                    A.member2499(r, n);
+                if (retex_s !== null) {
+                    A.member2499(retex_s, retex_d);
                 }
                 return A;
             };
@@ -219,7 +219,7 @@ export var Class479 = function () {
         k = undefined;
         return u;
     };
-    a.member7664 = [
+    IDKType.member7664 = [
         0,
         1,
         2,
@@ -229,7 +229,7 @@ export var Class479 = function () {
         6,
         14
     ];
-    a.member7665 = [
+    IDKType.member7665 = [
         7,
         8,
         9,
@@ -239,5 +239,5 @@ export var Class479 = function () {
         13,
         15
     ];
-    return a;
+    return IDKType;
 }();

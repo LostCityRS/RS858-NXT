@@ -1,4 +1,4 @@
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 export var Class322 = function () {
     var a = 1;
     var h = {
@@ -35,41 +35,41 @@ export var Class322 = function () {
                     throw new Error('1799 ');
                 }
             }
-            y.member607(I + K);
-            y.member1056(J);
+            y.setPos(I + K);
+            y.p4(J);
         };
         var u = function (I, J) {
             if (I === d && J !== e && J !== c) {
                 throw new Error('1800 ');
             }
-            y.member607(I + J);
-            return y.member1074();
+            y.setPos(I + J);
+            return y.g4s();
         };
         var t = function (I, J) {
             if (I === d && J !== e && J !== c) {
                 throw new Error('1801 ');
             }
-            y.member607(I + J);
-            return y.member1073();
+            y.setPos(I + J);
+            return y.g4();
         };
         var q = function (K) {
             if (K === d) {
                 throw new Error('1802 ');
             }
             var J = t(K, c);
-            var I = y.member1073();
+            var I = y.g4();
             if (J === j || I === j) {
                 return;
             }
             D(K, c, j);
-            y.member1056(j);
+            y.p4(j);
             D(J, e, I);
             D(I, c, J);
         };
         var B = function (K, J) {
             var I = t(J, e);
             D(K, c, J);
-            y.member1056(I);
+            y.p4(I);
             D(I, c, K);
             D(J, e, K);
         };
@@ -78,39 +78,39 @@ export var Class322 = function () {
                 throw new Error('1803 ');
             }
             H = I;
-            y.member607(n);
-            y.member1056(H);
+            y.setPos(n);
+            y.p4(H);
         };
         if (F === undefined) {
             if (E === undefined) {
                 throw new Error('1804 ');
             }
-            y = Class124((E + g) * k);
-            y.member1051(a);
-            y.member1056(0);
+            y = Packet((E + g) * k);
+            y.p1(a);
+            y.p4(0);
             D(d, c, d);
             D(d, e, d);
             var v = d;
         } else if (E === undefined) {
-            y = Class124(undefined, F);
+            y = Packet(undefined, F);
         } else {
             if (E < F.byteLength / k - g) {
                 throw new Error('1805 ');
             }
-            y = Class124((E + g) * k);
+            y = Packet((E + g) * k);
             y.member1067(F, 0, F.byteLength);
         }
-        y.member607(0);
-        C = y.member609();
+        y.setPos(0);
+        C = y.g1();
         if (C > a) {
             throw new Error('1806 ' + C);
         }
         if (y.getSize() % k !== 0) {
             throw new Error('1807 ');
         }
-        H = y.member1073();
+        H = y.g4();
         v = t(d, c);
-        s = y.member1073();
+        s = y.g4();
         var G = function (I) {
             q(I);
             B(I, v);
@@ -118,8 +118,8 @@ export var Class322 = function () {
         var r = function (I) {
             h.id = I / k - g;
             h.crc = u(I, b);
-            h.version = y.member1074();
-            h.bytes = y.member1073();
+            h.version = y.g4s();
+            h.bytes = y.g4();
             return h;
         };
         x.member3741 = function (M) {
@@ -128,7 +128,7 @@ export var Class322 = function () {
                 throw new Error('1808 ' + M);
             }
             var K = t(L, c);
-            var J = y.member1073();
+            var J = y.g4();
             if (K === j || J === j) {
                 return undefined;
             }
@@ -142,12 +142,12 @@ export var Class322 = function () {
                 throw new Error('1809 ' + O);
             }
             D(M, b, P);
-            y.member1056(J);
-            var N = y.member1073();
-            y.member607(y.member1047() - 4);
-            y.member1056(I);
-            var L = y.member1073();
-            var K = y.member1073();
+            y.p4(J);
+            var N = y.g4();
+            y.setPos(y.getPos() - 4);
+            y.p4(I);
+            var L = y.g4();
+            var K = y.g4();
             if (L !== j && K !== j) {
                 A(H + (I - N));
             } else {
@@ -161,7 +161,7 @@ export var Class322 = function () {
                 throw new Error('1810 ' + N);
             }
             var L = t(M, c);
-            var K = y.member1073();
+            var K = y.g4();
             if (L === j || K === j) {
                 return;
             }

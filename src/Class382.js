@@ -14,7 +14,7 @@ export var Class382 = function () {
         this.member2520 = h;
         this.member4331 = b;
         this.member2533 = c;
-        this.member4332 = member47;
+        this.member4332 = NULL;
     };
     member45(Class248, a);
     a.prototype.member2889 = function (d, c) {
@@ -23,10 +23,10 @@ export var Class382 = function () {
         var e = {
             member4330: g,
             member2520: this.member2520,
-            member2241: this.member4329.member4164(this.member2520) * Class86.member718,
-            member2242: this.member4329.member4165(this.member2520) * Class86.member718,
-            member2530: this.member4148.member4333(),
-            member2531: this.member4148.member4334(),
+            member2241: this.member4329.getWidth(this.member2520) * Class86.member718,
+            member2242: this.member4329.getLength(this.member2520) * Class86.member718,
+            hillchange_mode: this.member4148.getHillChangeMode(),
+            hillchange_value: this.member4148.getHillChangeValue(),
             member4331: this.member4331,
             member2533: this.member2533
         };

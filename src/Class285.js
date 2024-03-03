@@ -701,7 +701,7 @@ export var Class285 = function () {
                     var ag = false;
                     var aj = c[ak].length - 1;
                     while (ag == false) {
-                        var am = c[ak][aj].member2703();
+                        var am = c[ak][aj].getPriority();
                         var ah = c[ak][aj].member3360();
                         if (am < 0) {
                             if (ah === Class279.member3309) {
@@ -718,7 +718,7 @@ export var Class285 = function () {
                     }
                     if (aj >= c[ak].length - an) {
                         while (aj >= c[ak].length - an) {
-                            var am = c[ak][aj].member2703();
+                            var am = c[ak][aj].getPriority();
                             var ah = c[ak][aj].member3360();
                             if (ah === Class279.member3309) {
                                 c[ak][aj].member3327();
@@ -833,8 +833,8 @@ export var Class285 = function () {
         };
         Q.member3385 = e;
         var B = function (ai, ah) {
-            var ag = ai.member2703();
-            var aj = ah.member2703();
+            var ag = ai.getPriority();
+            var aj = ah.getPriority();
             return aj - ag;
         };
         var m = function (ao) {

@@ -1,9 +1,9 @@
 import { Class105 } from 'Class105.js';
 import { Class95 } from 'Class95.js';
-import { Class131 } from 'Class131.js';
-import { Class96 } from 'Class96.js';
-import { Class551 } from 'Class551.js';
-export var Class552 = function (k) {
+import { Js5ConfigGroup } from 'Class131.js';
+import { Priority } from 'Class96.js';
+import { MSIType } from 'Class551.js';
+export var MSITypeList = function (k) {
     var d = {};
     var m = null;
     d.member7535 = function () {
@@ -28,13 +28,13 @@ export var Class552 = function (k) {
     d.list = function (q) {
         var n = c.find(q);
         if (n === null) {
-            var o = m.getFile(Class95.member807, Class131.member1228.member1204, q, Class96.member840, Class131.member1228.priority);
+            var o = m.getFile(Class95.member807, Js5ConfigGroup.MSITYPE.member1204, q, Priority.member840, Js5ConfigGroup.MSITYPE.priority);
             if (o === null) {
                 return null;
             }
-            n = Class551({
+            n = MSIType({
                 member625: q,
-                member2896: d
+                myList: d
             });
             if (o !== undefined) {
                 n.decode(o);

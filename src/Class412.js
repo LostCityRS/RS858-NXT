@@ -3,7 +3,7 @@ import { Class158 } from 'Class158.js';
 import { Class411 } from 'Class411.js';
 import { Class95 } from 'Class95.js';
 import { Class271 } from 'Class271.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 export var Class412 = function (j) {
     var c = {};
     var d, b;
@@ -111,13 +111,13 @@ export var Class412 = function (j) {
         if (t === undefined) {
             return new Array(0);
         } else if (t === false) {
-            return member47;
+            return NULL;
         } else {
-            var o = u.getFile(Class95.member809, v, Class271.member3213, Class96.member841);
-            var m = o.member609();
+            var o = u.getFile(Class95.member809, v, Class271.member3213, Priority.member841);
+            var m = o.g1();
             var q = new Array(m);
             for (var n = 0; n < m; n++) {
-                q[n] = Class411({ member2698: o });
+                q[n] = Class411({ packet: o });
             }
             return q;
         }

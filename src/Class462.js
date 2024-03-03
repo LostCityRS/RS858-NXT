@@ -1,28 +1,28 @@
-import { Class290 } from 'Class290.js';
-export var Class462 = function () {
+import { CoordFine } from 'Class290.js';
+export var BaseVarType = function () {
     var a = {
-        member7281: {
+        INTEGER: {
             serialID: 0,
-            decode: function (c) {
-                return c.member1074();
+            decode: function (packet) {
+                return packet.g4s();
             }
         },
-        member7282: {
+        LONG: {
             serialID: 1,
-            decode: function (c) {
-                return c.member1077();
+            decode: function (packet) {
+                return packet.g8();
             }
         },
-        member7283: {
+        STRING: {
             serialID: 2,
-            decode: function (c) {
-                return c.member1089(true);
+            decode: function (packet) {
+                return packet.gjstr(true);
             }
         },
-        member7284: {
+        COORDFINE: {
             serialID: 3,
-            decode: function (c) {
-                return Class290({ member3456: c });
+            decode: function (packet) {
+                return CoordFine({ member3456: packet });
             }
         }
     };

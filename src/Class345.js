@@ -5,9 +5,9 @@ export var Class345 = function () {
     var b = [undefined];
     var d = function (s, h) {
         var u = {};
-        var v = member47;
-        var o = member47;
-        var e = member47;
+        var v = NULL;
+        var o = NULL;
+        var e = NULL;
         var y = false;
         var k = false;
         var x;
@@ -96,7 +96,7 @@ export var Class345 = function () {
             }
         };
         g(t, z);
-        u.member3590 = function () {
+        u.readyanim = function () {
             return k;
         };
         var m = function (B) {
@@ -206,7 +206,7 @@ export var Class345 = function () {
             }
             k = false;
             e.removeRecursively(function () {
-                e = member47;
+                e = NULL;
                 j();
                 if (B !== undefined) {
                     B();

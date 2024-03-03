@@ -1,18 +1,18 @@
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 import { Class37 } from 'Class37.js';
 import { Class372 } from 'Class372.js';
 import { Class374 } from 'Class374.js';
 import { Class304 } from 'Class304.js';
 import { Class291 } from 'Class291.js';
 import { Class198 } from 'Class198.js';
-import { Class166 } from 'Class166.js';
+import { Cuboid } from 'Class166.js';
 import { Class305 } from 'Class305.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class373 } from 'Class373.js';
 import { Class86 } from 'Class86.js';
 import { Class32 } from 'Class32.js';
 import { Class387 } from 'Class387.js';
-import { Class170 } from 'Class170.js';
+import { HillChange } from 'Class170.js';
 import { Class382 } from 'Class382.js';
 import { Class188 } from 'Class188.js';
 import { Class388 } from 'Class388.js';
@@ -33,11 +33,11 @@ export var Class389 = function () {
     var d = 0;
     var b = 1;
     var g = 2;
-    var c = Class290();
+    var c = CoordFine();
     var a = function (n, z, j, r, s, t, o, u, h, D, C, B, A, q, v, x, k, y, m, i) {
         this.member2506 = -1;
-        this.member4453 = member47;
-        this.member4148 = member47;
+        this.member4453 = NULL;
+        this.member4148 = NULL;
         this.member2522;
         this.member2523;
         this.member2519;
@@ -63,8 +63,8 @@ export var Class389 = function () {
         this.member4462 = undefined;
         this.member4210 = 0;
         this.member1612 = new Float32Array(4);
-        this.member2619 = member47;
-        this.member2621 = member47;
+        this.member2619 = NULL;
+        this.member2621 = NULL;
         this.member4463 = undefined;
         this.member4464;
         this.member4465 = false;
@@ -100,10 +100,10 @@ export var Class389 = function () {
             this.member2621 = y;
             this.member2621.member563();
             this.member2621.member510();
-            if (this.member4148 !== null && this.member4148.member4470() !== null) {
-                this.member4093(Class166(this.member4148.member4470()));
+            if (this.member4148 !== null && this.member4148.getClickbox() !== null) {
+                this.member4093(Cuboid(this.member4148.getClickbox()));
             } else {
-                this.member4093(Class166(this.member2621.member2098()));
+                this.member4093(Cuboid(this.member2621.member2098()));
             }
             this.member4210 = Date.now();
             this.member1612[3] = -1;
@@ -140,7 +140,7 @@ export var Class389 = function () {
         }
     };
     member45(Class372, a);
-    a.prototype.member444 = function () {
+    a.prototype.getID = function () {
         return this.member2506;
     };
     a.prototype.member4151 = function () {
@@ -177,7 +177,7 @@ export var Class389 = function () {
         return this.member2529;
     };
     a.prototype.member4475 = function () {
-        if (this.member2621 === member47 || this.member4460 !== undefined) {
+        if (this.member2621 === NULL || this.member4460 !== undefined) {
             return true;
         }
         return false;
@@ -232,24 +232,24 @@ export var Class389 = function () {
         return false;
     };
     a.prototype.member4380 = function (F, C, m, H, G, y) {
-        if (this.member4453 === member47) {
-            this.member4453 = m.member3227(Class131.member1209.member1204, this.member2506);
-            if (this.member4453 === member47) {
+        if (this.member4453 === NULL) {
+            this.member4453 = m.getConfigType(Js5ConfigGroup.LOCTYPE.member1204, this.member2506);
+            if (this.member4453 === NULL) {
                 return;
             }
             if (this.member4453.member4481()) {
                 this.member4148 = this.member4453.member4482();
-                if (this.member4148 === member47) {
-                    this.member4453 = member47;
+                if (this.member4148 === NULL) {
+                    this.member4453 = NULL;
                     return;
                 }
             } else {
                 this.member4148 = this.member4453;
             }
-            if (this.member4453.member2985() || this.member4453.member4481()) {
+            if (this.member4453.getActive() || this.member4453.member4481()) {
                 this.member4096(Class373({ empty: true }));
             }
-            if (!this.member4453.member2985()) {
+            if (!this.member4453.getActive()) {
                 this.member4094(true);
             }
         }
@@ -258,13 +258,13 @@ export var Class389 = function () {
             return;
         }
         var t = this.member4147.x * Class86.member718, o = this.member4147.member756 * Class86.member718;
-        var r = this.member4453.member4164(this.member2520) * Class86.member718;
-        var j = this.member4453.member4165(this.member2520) * Class86.member718;
+        var r = this.member4453.getWidth(this.member2520) * Class86.member718;
+        var j = this.member4453.getLength(this.member2520) * Class86.member718;
         if (this.member4331 === -1) {
             this.member4331 = this.member4453.member4483(this.member4453, this.member4085().member4114(), this.member4110(t, o), this.member4147.x, this.member4147.member756, this.member2520, !this.member2522);
             if (this.member4331 !== -1) {
                 var I = this.member3320();
-                var z = this.member4148.member2968();
+                var z = this.member4148.getOffset();
                 Class198.member2361(this.member2519, this.member2520, this.member2535, this.member2536, e);
                 var x = this.member4456 * Class86.member718 + r / 2 + (z === null ? 0 : z[0]) + e.member2363;
                 var s = this.member4455 * Class86.member718 + j / 2 + (z === null ? 0 : z[2]) + e.member2364;
@@ -294,24 +294,24 @@ export var Class389 = function () {
             h.length = q;
             this.member4211 = Class304(h);
         }
-        if (this.member2621 === member47 || this.member4465) {
-            if (this.member4148.member4486() !== null) {
+        if (this.member2621 === NULL || this.member4465) {
+            if (this.member4148.getModels() !== null) {
                 if (this.member4463 === undefined) {
                     this.member4464 = this.member4148.member4487(G, Class387.member4394, this.member2519, this.member2520, this.member2527, this.member4454, true);
-                    if (this.member4464 === member47) {
+                    if (this.member4464 === NULL) {
                         return;
                     }
                     if (this.member4464 !== undefined) {
                         this.member4464.member2621.member510();
                         this.member2619 = this.member4464.member2619;
-                        var i = this.member4148.member4333();
-                        if (i === Class170.member1853 || i === Class170.member1854 || i === Class170.member1855) {
+                        var i = this.member4148.getHillChangeMode();
+                        if (i === HillChange.FLOOR_SKEW || i === HillChange.TREE_SKEW || i === HillChange.ROTATE) {
                             this.member2532 = this.member4148.member4488(this.member4453, this.member4331, this.member4085().member4114(), this.member4110(t, o), this.member4147.x, this.member4147.member756, this.member2520, !this.member2522);
                         } else {
                             this.member2532 = false;
                         }
                         var v = null;
-                        if (this.member2532 === false && i !== Class170.member1852) {
+                        if (this.member2532 === false && i !== HillChange.member1852) {
                             v = this.member4148.member4489(this.member4453, this.member4085().member4114(), this.member4110(t, o), this.member4147.x, this.member4147.member756, this.member2520, !this.member2522);
                             if (v === undefined) {
                                 v = null;
@@ -338,17 +338,17 @@ export var Class389 = function () {
                     if (E.member4490 !== undefined) {
                         this.member4461 = new Float32Array(E.member4490);
                     }
-                    if (this.member4465 && this.member2621 !== member47) {
+                    if (this.member4465 && this.member2621 !== NULL) {
                         this.member512();
                     }
                     this.member4465 = false;
                     this.member2621 = Class188(undefined, undefined, F, undefined, undefined, undefined, E.member2621);
                     this.member2621.member510();
                     this.member2621.member563();
-                    if (this.member4148.member4470() !== null) {
-                        this.member4093(Class166(this.member4148.member4470()));
+                    if (this.member4148.getClickbox() !== null) {
+                        this.member4093(Cuboid(this.member4148.getClickbox()));
                     } else {
-                        this.member4093(Class166(this.member2621.member2098()));
+                        this.member4093(Cuboid(this.member2621.member2098()));
                     }
                     this.member4477();
                 }
@@ -363,16 +363,16 @@ export var Class389 = function () {
             }
             if (this.member4478()) {
                 if (this.member4466 === undefined) {
-                    if (this.member2619 === member47) {
+                    if (this.member2619 === NULL) {
                         var B = this.member4148.member4487(G, Class387.member104, this.member2519, this.member2520, this.member2527, this.member4454, true);
-                        if (B !== member47) {
+                        if (B !== NULL) {
                             this.member2619 = B.member2619;
                         } else {
                             A = false;
                         }
                     }
-                    if (this.member2619 !== member47) {
-                        this.member4466 = Class388(m, H, false, Class50.member369, this.member4385, this, this.member4148.member4492);
+                    if (this.member2619 !== NULL) {
+                        this.member4466 = Class388(m, H, false, Class50.member369, this.member4385, this, this.member4148.randseq);
                         if (!this.member4148.member4479 || this.member4070.member4480().member3938.getValue() === Class305.member796) {
                             this.member4466.member4439(this.member4148.member2142());
                         }
@@ -406,11 +406,11 @@ export var Class389 = function () {
     };
     a.prototype.member512 = function () {
         this.member4154(g);
-        if (this.member2621 !== member47 && this.member2621 !== undefined) {
+        if (this.member2621 !== NULL && this.member2621 !== undefined) {
             this.member2621.member511();
-            this.member2621 = member47;
+            this.member2621 = NULL;
         }
-        this.member2619 = member47;
+        this.member2619 = NULL;
         if (this.member4466 !== undefined) {
             this.member4466.member512();
             this.member4466 = undefined;
@@ -421,7 +421,7 @@ export var Class389 = function () {
     a.prototype.member952 = function (h, m, u, t, s) {
         var i = Class132.member1266();
         var k = i.member522(Class72.member499);
-        var n = i.member941(Class72.member498);
+        var n = i.member941(Class72.POINTLIGHT);
         if (this.member4212) {
             n.member990(this.member4211);
         }
@@ -435,7 +435,7 @@ export var Class389 = function () {
         h.member4228(Class155.member96, o);
         h.member4228(Class155.member416, o);
         var r = this.member4085().member4227();
-        var j = !this.member4148.member2985() && this.member4081() >= r || this.member4081() > r;
+        var j = !this.member4148.getActive() && this.member4081() >= r || this.member4081() > r;
         this.member2621.member952(h, t, m, this.member4462 !== undefined ? this.member4462 : u, this.member1611, this.member1728, false, s, this.member1612, j);
         if (this.member2285 !== undefined) {
             i.member1024(Class72.member504);
@@ -459,7 +459,7 @@ export var Class389 = function () {
         if (this.member4148 === undefined) {
             return;
         }
-        if (this.member2621 === member47 || this.member4148 === member47) {
+        if (this.member2621 === NULL || this.member4148 === NULL) {
             return;
         }
         if (this.member4148.member4495()) {
@@ -473,7 +473,7 @@ export var Class389 = function () {
     a.prototype.member486 = function (k, s, r, q) {
         var h = Class132.member1266();
         var j = h.member522(Class72.member499);
-        var m = h.member941(Class72.member498);
+        var m = h.member941(Class72.POINTLIGHT);
         if (this.member4212) {
             m.member990(this.member4211);
         }
@@ -484,13 +484,13 @@ export var Class389 = function () {
             n.member913(this.member2285.member1593[1] - this.member2285.member1673, this.member2285.member1593[1] - this.member2285.member1674);
         }
         var o = this.member4085().member4227();
-        var i = !this.member4148.member2985() && this.member4081() >= o || this.member4081() > o;
+        var i = !this.member4148.getActive() && this.member4081() >= o || this.member4081() > o;
         this.member2621.member1630(r, k, this.member4462 !== undefined ? this.member4462 : s, this.member1611, this.member1728, false, q, this.member1612, i);
         if (this.member2285 !== undefined) {
             h.member1024(Class72.member504);
         }
         if (this.member4466 !== undefined && !j && !h.member522(Class72.member96) && (q === undefined || q === Class133.member1270)) {
-            this.member4466.member4449(k);
+            this.member4466.getID9(k);
         }
         if (this.member4212) {
             m.member991();
@@ -508,14 +508,14 @@ export var Class389 = function () {
         var h = this.member4462 !== undefined ? this.member4462 : k;
         Class49.member334(h, this.member1611);
         if (this.member4466 !== undefined) {
-            this.member1728 = this.member4466.member4445(j, 0);
+            this.member1728 = this.member4466.getID5(j, 0);
         } else {
             this.member1728 = undefined;
         }
     };
     a.prototype.member3437 = function (n, u, k, B, t) {
         if (this.member4103(n)) {
-            if (this.member4453 === member47 || this.member4149) {
+            if (this.member4453 === NULL || this.member4149) {
                 this.member4105(false);
                 return;
             }
@@ -525,14 +525,14 @@ export var Class389 = function () {
                     this.member512();
                     this.member4148 = A;
                     this.member4459 = -1;
-                } else if (A !== member47 && (this.member2621 === member47 && A.member4486() !== null || this.member4459 !== A.member682())) {
+                } else if (A !== NULL && (this.member2621 === NULL && A.getModels() !== null || this.member4459 !== A.member682())) {
                     this.member4465 = true;
                     this.member4148 = A;
                     this.member4459 = A.member682();
                     this.member4092(1);
                 }
             }
-            if (this.member4148 === member47 || this.member4148 === undefined || this.member2621 === member47 || this.member2621 === undefined) {
+            if (this.member4148 === NULL || this.member4148 === undefined || this.member2621 === NULL || this.member2621 === undefined) {
                 this.member4105(false);
                 return;
             }
@@ -555,13 +555,13 @@ export var Class389 = function () {
             var s = this.member4462 !== undefined ? this.member4462 : u;
             Class49.member334(s, this.member1611);
             if (this.member4466 !== undefined) {
-                this.member1728 = this.member4466.member4445(t, 0);
-                this.member4466.member4448(s);
+                this.member1728 = this.member4466.getID5(t, 0);
+                this.member4466.getID8(s);
             } else {
                 this.member1728 = undefined;
             }
             var x = this.member4095();
-            if (x !== undefined && A !== member47 && A.member2985()) {
+            if (x !== undefined && A !== NULL && A.getActive()) {
                 var m = this.member4085().member4166();
                 var v = this.member3320().member4167().member1812(B, k, m.width, m.height, x);
                 this.member4098(v);
@@ -620,7 +620,7 @@ export var Class389 = function () {
                 return;
             }
         }
-        var h = q.member941(Class72.member498);
+        var h = q.member941(Class72.POINTLIGHT);
         this.member4212 = this.member4211 !== undefined && h.member291() && !o;
         if (this.member4212) {
             var i = this.member4211.member427();
@@ -634,7 +634,7 @@ export var Class389 = function () {
         if (h === d) {
             return true;
         }
-        if (this.member4148 === member47 || this.member2621 === member47) {
+        if (this.member4148 === NULL || this.member2621 === NULL) {
             return false;
         }
         if (!this.member4148.member4161(this.member2519, this.member2522) || !this.member4453.member4161(this.member2519, this.member2522)) {
@@ -647,7 +647,7 @@ export var Class389 = function () {
             i = this.member4085().member4114().member4163;
         }
         var j = this.member4148.member4496(this.member2519);
-        i(this.member4110(), this.member4147.x, this.member4147.member756, this.member4148.member4164(this.member2520), this.member4148.member4165(this.member2520), j === 0 && this.member2621 !== undefined ? this.member2621.member2098().member1793()[1] : j);
+        i(this.member4110(), this.member4147.x, this.member4147.member756, this.member4148.getWidth(this.member2520), this.member4148.getLength(this.member2520), j === 0 && this.member2621 !== undefined ? this.member2621.member2098().member1793()[1] : j);
         return true;
     };
     a.prototype.member4102 = function () {
@@ -665,7 +665,7 @@ export var Class389 = function () {
                 h |= Class376.member4171;
             }
         }
-        if (this.member2621 !== member47 && this.member2621 !== undefined) {
+        if (this.member2621 !== NULL && this.member2621 !== undefined) {
             if (this.member2621.member2121()) {
                 h |= Class376.member4171;
             }
@@ -680,15 +680,15 @@ export var Class389 = function () {
     a.prototype.member4122 = function () {
         --this.member4469;
         this.member4125();
-        if (this.member4148 === member47 || this.member4148 === undefined) {
+        if (this.member4148 === NULL || this.member4148 === undefined) {
             return;
         }
-        var s = this.member4148.member4497();
+        var s = this.member4148.getBackgroundSound();
         var r = this.member4148.member4498();
         if (s >= 0 && !this.member4126(s)) {
-            var m = Class371.member4059(Class332.member3782, s, -1, this.member4148.member4499(), Class347.member3914, this, r, {
+            var m = Class371.member4059(Class332.member3782, s, -1, this.member4148.getBackgroundSoundVolume(), Class347.member3914, this, r, {
                 member4014: 0,
-                maxDistance: this.member4148.member4500() + this.member4148.member4501()
+                maxDistance: this.member4148.getBackgroundSoundRange() + this.member4148.getBackgroundSoundSize()
             }, this.getWorldPosition(), this.member4081());
             if (m !== undefined) {
                 m.member3335(this.member4148.member4502(), this.member4148.member4503(), this.member4148.member4504(), this.member4148.member4505());
@@ -696,7 +696,7 @@ export var Class389 = function () {
                 this.member4128(m, s);
             }
         }
-        var j = this.member4148.member4506();
+        var j = this.member4148.getBackgroundSoundRandom();
         if (this.member4469 <= 0 && j !== undefined && j.length > 0) {
             var n = true;
             for (var k = 0; k < j.length; k++) {
@@ -709,16 +709,16 @@ export var Class389 = function () {
                 var i = j[Math.floor(Math.random() * j.length)];
                 var o = this.member4148.member4507();
                 if (i >= 0) {
-                    var m = Class371.member4059(Class332.member3783, i, 0, this.member4148.member4499(), Class347.member3913, this, o, {
+                    var m = Class371.member4059(Class332.member3783, i, 0, this.member4148.getBackgroundSoundVolume(), Class347.member3913, this, o, {
                         member4014: 0,
-                        maxDistance: this.member4148.member4500() + this.member4148.member4501()
+                        maxDistance: this.member4148.getBackgroundSoundRange() + this.member4148.getBackgroundSoundSize()
                     }, this.getWorldPosition(), this.member4081());
                     if (m !== undefined) {
                         m.member3335(this.member4148.member4508(), this.member4148.member4509(), this.member4148.member4510(), this.member4148.member4511());
                         m.start();
                         this.member4128(m, i);
-                        var h = this.member4148.member4512();
-                        var q = this.member4148.member4513();
+                        var h = this.member4148.getBackgroundSoundMinDelay();
+                        var q = this.member4148.getBackgroundSoundMaxDelay();
                         this.member4469 = Math.floor(h + Math.random() * (q - h));
                     }
                 }
@@ -726,7 +726,7 @@ export var Class389 = function () {
         }
     };
     a.prototype.member4385 = function (r, i, m, k, s, j, h, q, o) {
-        if (this.member4148 === member47 || this.member4148 === undefined) {
+        if (this.member4148 === NULL || this.member4148 === undefined) {
             return;
         }
         var n = Class371.member4059(Class332.member3785, r, i, k != -1 ? m * k / 100 : m, Class347.member3910, this, Class351.member3918, {

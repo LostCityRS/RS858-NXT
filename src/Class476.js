@@ -1,5 +1,5 @@
 import { Class469 } from 'Class469.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class421 } from 'Class421.js';
 import { Class471 } from 'Class471.js';
 import { Class438 } from 'Class438.js';
@@ -28,7 +28,7 @@ export var Class476 = function () {
         aj = aF.member2970;
         bv = bF;
         aD = aF.member7619;
-        bj = aF.member7620;
+        bj = aF.delayedStateChange;
         r = aF.member7137;
         bt = Class469.member7436;
         bq = Class469.member7441;
@@ -39,8 +39,8 @@ export var Class476 = function () {
         bE.member6099 -= 2;
         var bI = bE.member6100[bE.member6099];
         var bF = bE.member6100[bE.member6099 + 1];
-        var bG = aj.member3227(Class131.member1215.member1204, bI);
-        if (bG === member47) {
+        var bG = aj.getConfigType(Js5ConfigGroup.PARAMTYPE.member1204, bI);
+        if (bG === NULL) {
             bE.member6099 += 2;
             return true;
         }
@@ -62,8 +62,8 @@ export var Class476 = function () {
     var aN = function (bJ, bH, bE) {
         var bI = bE.member6100[--bE.member6099];
         var bF = bE.member6142[--bE.member6143];
-        var bG = aj.member3227(Class131.member1215.member1204, bI);
-        if (bG === member47) {
+        var bG = aj.getConfigType(Js5ConfigGroup.PARAMTYPE.member1204, bI);
+        if (bG === NULL) {
             bE.member6099++;
             bE.member6143++;
             return true;
@@ -134,8 +134,8 @@ export var Class476 = function () {
         var bF = bE.member7433 ? bE.member7434 : bE.member7435;
         var bI = bF.member7105();
         var bG = bE.member6100[--bE.member6099];
-        var bH = aj.member3227(Class131.member1215.member1204, bG);
-        if (bH === member47) {
+        var bH = aj.getConfigType(Js5ConfigGroup.PARAMTYPE.member1204, bG);
+        if (bH === NULL) {
             bE.member6099++;
             return true;
         }
@@ -199,7 +199,7 @@ export var Class476 = function () {
         bG.member6099 -= 4;
         bI.member6741(bG.member6100[bG.member6099]);
         bI.member6743(bG.member6100[bG.member6099 + 1]);
-        if (bI.member2794() === Class438.member6636) {
+        if (bI.member2794() === Class438.MODEL) {
             bI.member7511(0);
             bI.member7513(0);
         }
@@ -610,25 +610,25 @@ export var Class476 = function () {
             bj.member7633(false, bL.member6721());
         }
         if (bH === -1) {
-            if (bL.member2794() === Class438.member6636) {
-                bL.member7497(Class461.member6636);
+            if (bL.member2794() === Class438.MODEL) {
+                bL.member7497(Class461.MODEL);
                 bL.member7500(-1);
             }
             bL.member7043(-1);
             return;
         }
-        var bF = aj.member3227(Class131.member1214.member1204, bH);
-        if (bF === member47) {
+        var bF = aj.getConfigType(Js5ConfigGroup.OBJTYPE.member1204, bH);
+        if (bF === NULL) {
             bI.member6099 += 2;
             return true;
         }
         bL.member7043(bH);
         bL.member7045(bE);
-        if (bL.member2794() === Class438.member6636) {
+        if (bL.member2794() === Class438.MODEL) {
             bL.member7049(bG);
-            bL.member7504(bF.member7077());
-            bL.member7533(bF.member7078());
-            bL.member7507(bF.member7076());
+            bL.member7504(bF.get2dAngle());
+            bL.member7533(bF.get2dOffset());
+            bL.member7507(bF.getDescription());
             if (bL.member7510() > 0) {
                 bL.member7507(bL.member7506() * 32 / bL.member7510());
             } else if (bL.member6740() > 0) {
@@ -865,7 +865,7 @@ export var Class476 = function () {
         return bt(bE, a9);
     };
     var bo = function (bG, bF, bE) {
-        bE.member6100[bE.member6099++] = bG.member993();
+        bE.member6100[bE.member6099++] = bG.getDamageColour();
     };
     Class421.member5459.member867 = function (bE) {
         return bq(bE, bo);
@@ -899,7 +899,7 @@ export var Class476 = function () {
         var bE = bG.member6100[bG.member6099];
         var bF = bG.member6100[bG.member6099 + 1];
         var bH = bv.member7105(bE, bF);
-        if (bH === member47) {
+        if (bH === NULL) {
             bG.member6099 += 2;
             return true;
         }
@@ -910,7 +910,7 @@ export var Class476 = function () {
         var bG = bF.member6100[bF.member6099];
         var bE = bF.member6100[bF.member6099 + 1];
         var bH = bv.member7105(comID, bE);
-        if (bH === member47) {
+        if (bH === NULL) {
             bF.member6099 += 2;
             return true;
         }
@@ -921,7 +921,7 @@ export var Class476 = function () {
         var bG = bF.member6100[bF.member6099];
         var bE = bF.member6100[bF.member6099 + 1];
         var bH = bv.member7105(comID, bE);
-        if (bH === member47) {
+        if (bH === NULL) {
             bF.member6099 += 2;
             return true;
         }
@@ -932,7 +932,7 @@ export var Class476 = function () {
         var bG = bF.member6100[bF.member6099];
         var bE = bF.member6100[bF.member6099 + 1];
         var bH = bv.member7105(comID, bE);
-        if (bH === member47) {
+        if (bH === NULL) {
             bF.member6099 += 2;
             return true;
         }
@@ -943,7 +943,7 @@ export var Class476 = function () {
         var bG = bF.member6100[bF.member6099];
         var bE = bF.member6100[bF.member6099 + 1];
         var bH = bv.member7105(comID, bE);
-        if (bH === member47) {
+        if (bH === NULL) {
             bF.member6099 += 2;
             return true;
         }
@@ -954,7 +954,7 @@ export var Class476 = function () {
         var bG = bF.member6100[bF.member6099];
         var bE = bF.member6100[bF.member6099 + 1];
         var bH = bv.member7105(comID, bE);
-        if (bH === member47) {
+        if (bH === NULL) {
             bF.member6099 += 2;
             return true;
         }
@@ -965,7 +965,7 @@ export var Class476 = function () {
         var bG = bF.member6100[bF.member6099];
         var bE = bF.member6100[bF.member6099 + 1];
         var bH = bv.member7105(comID, bE);
-        if (bH === member47) {
+        if (bH === NULL) {
             bF.member6099 += 2;
             return true;
         }
@@ -976,7 +976,7 @@ export var Class476 = function () {
         var bG = bF.member6100[bF.member6099];
         var bE = bF.member6100[bF.member6099 + 1];
         var bH = bv.member7105(comID, bE);
-        if (bH === member47) {
+        if (bH === NULL) {
             bF.member6099 += 2;
             return true;
         }
@@ -987,7 +987,7 @@ export var Class476 = function () {
         var bG = bF.member6100[bF.member6099];
         var bE = bF.member6100[bF.member6099 + 1];
         var bH = bv.member7105(comID, bE);
-        if (bH === member47) {
+        if (bH === NULL) {
             bF.member6099 += 2;
             return true;
         }
@@ -998,7 +998,7 @@ export var Class476 = function () {
         var bG = bF.member6100[bF.member6099];
         var bE = bF.member6100[bF.member6099 + 1];
         var bH = bv.member7105(comID, bE);
-        if (bH === member47) {
+        if (bH === NULL) {
             bF.member6099 += 2;
             return true;
         }
@@ -1007,7 +1007,7 @@ export var Class476 = function () {
     Class421.member5890.member867 = function (bF) {
         var bG = bF.member6100[--bF.member6099];
         var bE = bv.member7439(bG, false);
-        if (bE === member47) {
+        if (bE === NULL) {
             bF.member6099++;
             return true;
         }
@@ -1018,7 +1018,7 @@ export var Class476 = function () {
         var bH = bF.member6100[bF.member6099];
         var bG = bF.member6100[bF.member6099 + 1];
         var bE = bv.member7439(bH, false);
-        if (bE === member47) {
+        if (bE === NULL) {
             bF.member6099 += 2;
             return true;
         }
@@ -1034,7 +1034,7 @@ export var Class476 = function () {
         var bH = bF.member6100[bF.member6099];
         var bG = bF.member6100[bF.member6099 + 1];
         var bE = bv.member7439(bH, false);
-        if (bE === member47) {
+        if (bE === NULL) {
             bF.member6099 += 2;
             return true;
         }
@@ -1066,7 +1066,7 @@ export var Class476 = function () {
     Class421.member5889.member867 = function (bF) {
         var bG = bF.member6100[--bF.member6099];
         var bE = bv.member7439(bG, false);
-        if (bE === member47) {
+        if (bE === NULL) {
             bF.member6099++;
             return true;
         }
@@ -1083,7 +1083,7 @@ export var Class476 = function () {
         var bG = bF.member6100[bF.member6099 + 1];
         var bE = bF.member6100[bF.member6099 + 2];
         var bI = bv.member7105(bH * Math.pow(2, 16) | bG, bE);
-        if (bI === member47) {
+        if (bI === NULL) {
             bF.member6099 += 3;
             return true;
         }
@@ -1142,7 +1142,7 @@ export var Class476 = function () {
     };
     var j = function (bH, bF, bE) {
         var bG = bE.member6100[--bE.member6099];
-        bH.member7497(Class461.member6636);
+        bH.member7497(Class461.MODEL);
         bH.member7500(bG);
         if (bH.member6722() === -1 && !bF.member7621()) {
             bj.member7643(false, bH.member6721());
@@ -1175,7 +1175,7 @@ export var Class476 = function () {
     var G = function (bI, bH, bF) {
         var bG = bI.member7070();
         var bE = bI.member7071();
-        if (bG === member47 || bE === member47) {
+        if (bG === NULL || bE === NULL) {
             return true;
         }
         bF.member6100[bF.member6099++] = bG;
@@ -1325,7 +1325,7 @@ export var Class476 = function () {
         var bE = bH.member6100[--bH.member6099];
         var bG = bL.member7586();
         var bF = r.member3639(bG);
-        if (bF === member47) {
+        if (bF === NULL) {
             bH.member6099 += 2;
             return true;
         }
@@ -1342,7 +1342,7 @@ export var Class476 = function () {
         var bJ = bG.member6100[--bG.member6099];
         var bF = bK.member7586();
         var bE = r.member3639(bF);
-        if (bE === member47) {
+        if (bE === NULL) {
             bG.member6099++;
             return true;
         }
@@ -1597,8 +1597,8 @@ export var Class476 = function () {
         if (bK.member1886() !== Class461.member7277) {
             throw new Error('1118 ');
         }
-        var bH = aj.member3227(Class131.member1213.member1204, bK.member7501());
-        if (bH === member47) {
+        var bH = aj.getConfigType(Js5ConfigGroup.NPCTYPE.member1204, bK.member7501());
+        if (bH === NULL) {
             bG.member6099 += 2;
             return true;
         }
@@ -1611,10 +1611,10 @@ export var Class476 = function () {
             bK.member7529(bE);
         }
         bE.member7603(Class475.member7617() * Math.pow(2, 32) | 4294967295);
-        if (bF < 0 || bF >= bH.member7615().length) {
+        if (bF < 0 || bF >= bH.getModels().length) {
             throw new Error('1119 ' + slotID);
         }
-        bE.member4486()[bF] = bI;
+        bE.getModels()[bF] = bI;
     };
     Class421.member5168.member867 = function (bE) {
         return bq(bE, aV);
@@ -1628,8 +1628,8 @@ export var Class476 = function () {
         if (bK.member1886() !== Class461.member7274) {
             throw new Error('1120 ');
         }
-        var bH = aj.member3227(Class131.member1213.member1204, bK.member7501());
-        if (bH === member47) {
+        var bH = aj.getConfigType(Js5ConfigGroup.NPCTYPE.member1204, bK.member7501());
+        if (bH === NULL) {
             bG.member6099 += 2;
             return true;
         }
@@ -1642,10 +1642,10 @@ export var Class476 = function () {
             bK.member7529(bE);
         }
         bE.member7603(Class475.member7618() * Math.pow(2, 32) | 4294967295);
-        if (bF < 0 || bF >= bH.member7616().length) {
+        if (bF < 0 || bF >= bH.getHeadModels().length) {
             throw new Error('1121 ' + slotID);
         }
-        bE.member4486()[bF] = bI;
+        bE.getModels()[bF] = bI;
     };
     Class421.member5170.member867 = function (bE) {
         return bq(bE, B);
@@ -1661,8 +1661,8 @@ export var Class476 = function () {
         if (bF !== Class461.member7277 && bF !== Class461.member7274) {
             throw new Error('1122 ');
         }
-        var bL = aj.member3227(Class131.member1213.member1204, bM.member7501());
-        if (bL === member47) {
+        var bL = aj.getConfigType(Js5ConfigGroup.NPCTYPE.member1204, bM.member7501());
+        if (bL === NULL) {
             bE.member6099 += 2;
             return true;
         }
@@ -1681,7 +1681,7 @@ export var Class476 = function () {
             bG = Class475.member7618();
         }
         bH.member7603(bG * Math.pow(2, 32) | 4294967295);
-        var bI = bL.member7650();
+        var bI = bL.getRecolIndices();
         if (bI !== null) {
             if (bK < 0 || bK >= bI.length) {
                 throw new Error('1123 ' + (bK + 1));
@@ -1689,11 +1689,11 @@ export var Class476 = function () {
                 bN = bI[bK];
             }
         }
-        var bO = bL.member7607();
+        var bO = bL.getRecolD();
         if (bO === null || bN < 0 || bN >= bO.length) {
             throw new Error('1124 ' + (bK + 1));
         }
-        bH.member7607()[bN] = bP;
+        bH.getRecolD()[bN] = bP;
     };
     Class421.member5172.member867 = function (bE) {
         return bq(bE, aO);
@@ -1709,8 +1709,8 @@ export var Class476 = function () {
         if (bF !== Class461.member7277 && bF !== Class461.member7274) {
             throw new Error('1125 ');
         }
-        var bM = aj.member3227(Class131.member1213.member1204, bN.member7501());
-        if (bM === member47) {
+        var bM = aj.getConfigType(Js5ConfigGroup.NPCTYPE.member1204, bN.member7501());
+        if (bM === NULL) {
             bE.member6099 += 2;
             return true;
         }
@@ -1729,7 +1729,7 @@ export var Class476 = function () {
             bH = Class475.member7618();
         }
         bI.member7603(bH * Math.pow(2, 32) | 4294967295);
-        var bO = bM.member7651();
+        var bO = bM.getRetexIndices();
         if (bO !== null) {
             if (bL < 0 || bL >= bO.length) {
                 throw new Error('1126 ' + (bL + 1));
@@ -1737,11 +1737,11 @@ export var Class476 = function () {
                 bP = bO[bL];
             }
         }
-        var bG = bM.member7608();
+        var bG = bM.getRetexD();
         if (bG === null || bP < 0 || bP >= bG.length) {
             throw new Error('1127 ' + (bL + 1));
         }
-        bI.member7608()[bP] = bK;
+        bI.getRetexD()[bP] = bK;
     };
     Class421.member5174.member867 = function (bE) {
         return bq(bE, aR);
@@ -1850,7 +1850,7 @@ export var Class476 = function () {
         var bF = bG.member6100[bG.member6099 + 1];
         var bI = bG.member6100[bG.member6099 + 2];
         var bH = bv.member7105(bE, bF);
-        if (bH === member47) {
+        if (bH === NULL) {
             bG.member6099 += 3;
             return true;
         }

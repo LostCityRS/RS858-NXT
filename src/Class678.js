@@ -64,12 +64,12 @@ export var Class678 = function () {
             return;
         }
         var i = d.member8260(Class501.member8065);
-        i.member2698.member1113(n.member9248());
-        i.member2698.member1113(j.member6807());
-        i.member2698.member1132(n.member9247());
-        i.member2698.member1056(h);
-        i.member2698.member1113(g);
-        i.member2698.member1054(n.member9249());
+        i.packet.p2_alt1(n.member9248());
+        i.packet.p2_alt1(j.member6807());
+        i.packet.p4_alt2(n.member9247());
+        i.packet.p4(h);
+        i.packet.p2_alt1(g);
+        i.packet.p2(n.member9249());
         d.member8261(i);
     };
     return b;

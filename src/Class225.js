@@ -1,4 +1,4 @@
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 export var Class225 = function (o) {
     var d = {};
     var e;
@@ -64,7 +64,7 @@ export var Class225 = function (o) {
             if (z.status === 200) {
                 b(v);
             } else {
-                v.member2696(u, C, member47, s, q);
+                v.member2696(u, C, NULL, s, q);
                 c(v, false);
             }
         };
@@ -84,11 +84,11 @@ export var Class225 = function (o) {
     var b = function (r) {
         var q = r.member2742.response;
         if (q !== null && q !== undefined) {
-            var s = Class124(undefined, q);
+            var s = Packet(undefined, q);
             r.member2696(r.member2693, r.member1204, s, r.member2694, r.member2697);
             c(r, true);
         } else {
-            r.member2696(r.member2693, r.member1204, member47, r.member2694, r.member2697);
+            r.member2696(r.member2693, r.member1204, NULL, r.member2694, r.member2697);
             c(r, false);
         }
     };

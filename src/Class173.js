@@ -1,4 +1,4 @@
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class172 } from 'Class172.js';
 export var Class173 = function () {
     var a = {};
@@ -38,7 +38,7 @@ export var Class173 = function () {
                 e = d.member1439(g).member1440(0);
                 b = new Array(e + 1);
                 for (var i = 0; i < e; i++) {
-                    var h = d.getFile(g, 0, i, Class96.member841);
+                    var h = d.getFile(g, 0, i, Priority.member841);
                     if (h !== undefined) {
                         b[i] = Class172(h);
                         c++;

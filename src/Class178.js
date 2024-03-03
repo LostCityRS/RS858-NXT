@@ -40,11 +40,11 @@ export var Class178 = function () {
         this.member1996 = h;
     };
     var b = function (i, h) {
-        var e = i.member609();
+        var e = i.g1();
         if (e !== a) {
             throw new Error('896 ' + e);
         }
-        var g = i.member1078();
+        var g = i.gSmart1or2();
         this.member1995 = new Array(g);
         for (var j = 0; j < g; j++) {
             this.member1995[j] = Class177(undefined, undefined, undefined, i, h);

@@ -1,6 +1,6 @@
 import { Class165 } from 'Class165.js';
 import { Class547 } from 'Class547.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 export var Class811 = function () {
     var e = {};
     var d;
@@ -61,16 +61,16 @@ export var Class811 = function () {
     };
     e.member8730 = function (k, i, j) {
         if (k === Class547.member8701 || k === Class547.member8708 || k === Class547.member8709 || k === Class547.member8713) {
-            var h = d.member3227(Class131.member1212.member1204, i[0]);
-            if (h === member47) {
-                return member47;
+            var h = d.getConfigType(Js5ConfigGroup.ENUMTYPE.member1204, i[0]);
+            if (h === NULL) {
+                return NULL;
             }
             return h.member9450(j);
         }
         if (k === Class547.member8705 || k === Class547.member8712) {
-            var g = d.member3227(Class131.member1214.member1204, j);
-            if (g === member47) {
-                return member47;
+            var g = d.getConfigType(Js5ConfigGroup.OBJTYPE.member1204, j);
+            if (g === NULL) {
+                return NULL;
             }
             return g.getName();
         }

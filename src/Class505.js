@@ -3,7 +3,7 @@ import { Class478 } from 'Class478.js';
 import { Class503 } from 'Class503.js';
 import { Class480 } from 'Class480.js';
 import { Class425 } from 'Class425.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class500 } from 'Class500.js';
 import { Class460 } from 'Class460.js';
 import { Class501 } from 'Class501.js';
@@ -132,20 +132,20 @@ export var Class505 = function () {
     S.member8250 = t;
     var U = 99999999;
     var q = function (aa) {
-        var ab = new Class124(518);
+        var ab = new Packet(518);
         for (var Z = 0; Z < 4; Z++) {
             P[Z] = Math.floor(Math.random() * U);
         }
-        ab.member1051(10);
+        ab.p1(10);
         for (var Z = 0; Z < 4; Z++) {
-            ab.member1056(P[Z]);
+            ab.p4(P[Z]);
         }
         for (var Z = 0; Z < 10; Z++) {
-            ab.member1056(Math.floor(Math.random() * U));
+            ab.p4(Math.floor(Math.random() * U));
         }
-        ab.member1054(Math.floor(Math.random() * U));
+        ab.p2(Math.floor(Math.random() * U));
         ab.member1101(Class500.member8047, Class500.member8048);
-        aa.member2698.member1067(ab.getData(), 0, ab.member1047());
+        aa.packet.member1067(ab.getData(), 0, ab.getPos());
         return P;
     };
     S.member8251 = q;
@@ -181,13 +181,13 @@ export var Class505 = function () {
         }
         var ad = Y.member8252.member8259();
         var aa = ad.member8260(Class501.member8164);
-        var ac = aa.member2698;
-        ac.member1054(0);
-        var ab = ac.member1047();
-        ac.member1065(Z);
-        ac.member1045 += 7;
-        ac.member1102(P, ab, ac.member1047());
-        ac.member1069(ac.member1047() - ab);
+        var ac = aa.packet;
+        ac.p2(0);
+        var ab = ac.getPos();
+        ac.pjstr(Z);
+        ac.pos += 7;
+        ac.member1102(P, ab, ac.getPos());
+        ac.member1069(ac.getPos() - ab);
         ad.member8261(aa);
         b = Class425.member6135;
     };
@@ -198,13 +198,13 @@ export var Class505 = function () {
         }
         var ad = Y.member8252.member8259();
         var Z = ad.member8260(Class501.member8167);
-        var ac = Z.member2698;
-        ac.member1051(0);
-        var ab = ac.member1047();
-        ac.member1065(aa);
-        ac.member1045 += 7;
-        ac.member1102(P, ab, ac.member1047());
-        ac.member1068(ac.member1047() - ab);
+        var ac = Z.packet;
+        ac.p1(0);
+        var ab = ac.getPos();
+        ac.pjstr(aa);
+        ac.pos += 7;
+        ac.member1102(P, ab, ac.getPos());
+        ac.member1068(ac.getPos() - ab);
         ad.member8261(Z);
         Q = Class460.member6135;
     };
@@ -223,17 +223,17 @@ export var Class505 = function () {
         }
         var ae = Y.member8252.member8259();
         var aa = ae.member8260(Class501.member8163);
-        var ab = aa.member2698;
-        ab.member1054(0);
-        var Z = ab.member1047();
-        ab.member1065(ac);
-        ab.member1065(ag);
-        ab.member1051(ad);
-        ab.member1051(af ? 1 : 0);
-        ab.member1065(ah);
-        ab.member1045 += 7;
-        ab.member1102(P, Z, ab.member1047());
-        ab.member1069(ab.member1047() - Z);
+        var ab = aa.packet;
+        ab.p2(0);
+        var Z = ab.getPos();
+        ab.pjstr(ac);
+        ab.pjstr(ag);
+        ab.p1(ad);
+        ab.p1(af ? 1 : 0);
+        ab.pjstr(ah);
+        ab.pos += 7;
+        ab.member1102(P, Z, ab.getPos());
+        ab.member1069(ab.getPos() - Z);
         ae.member8261(aa);
         if (ad < 13) {
             R = true;
@@ -248,7 +248,7 @@ export var Class505 = function () {
         }
         var ab = Y.member8252.member8259();
         var Z = ab.member8260(Class501.member8165);
-        Z.member2698.member1051(aa);
+        Z.packet.p1(aa);
         ab.member8261(Z);
     };
     S.member8266 = e;
@@ -284,18 +284,18 @@ export var Class505 = function () {
         ac.member8206();
         af.member8271();
         var ae = Class504.member8229(Class236.member2825.member2818, Class236.member2825.member2819, undefined);
-        ae.member2698.member1054(0);
-        var Z = ae.member2698.member1047();
-        ae.member2698.member1054(Number(Y.member3565()));
-        ae.member2698.member1054(Number(Y.member3566()));
+        ae.packet.p2(0);
+        var Z = ae.packet.getPos();
+        ae.packet.p2(Number(Y.member3565()));
+        ae.packet.p2(Number(Y.member3566()));
         q(ae);
-        var ag = ae.member2698.member1047();
-        var ak = Y.clientParameters.member8272.value;
+        var ag = ae.packet.getPos();
+        var ak = Y.clientParameters.clientToken.value;
         if (ak === undefined) {
             ak = '';
         }
-        ae.member2698.member1065(ak);
-        ae.member2698.member1054(Y.clientParameters.member8273.value);
+        ae.packet.pjstr(ak);
+        ae.packet.p2(Y.clientParameters.affiliate.value);
         var ai = Y.clientParameters.member8274.value;
         var ab = Y.clientParameters.member8275.value;
         if (ai === undefined) {
@@ -304,30 +304,30 @@ export var Class505 = function () {
         if (ab === undefined) {
             ab = 0;
         }
-        ae.member2698.member1057({
-            member1059: ai,
-            member1058: ab
+        ae.packet.p8({
+            low: ai,
+            high: ab
         });
         var ah = Y.clientParameters.member8276.value;
         if (ah === undefined) {
             ah = '';
         }
-        ae.member2698.member1065(ah);
-        ae.member2698.member1051(Y.clientParameters.member7138.value.id);
-        ae.member2698.member1051(Y.clientParameters.member7256.value.id);
+        ae.packet.pjstr(ah);
+        ae.packet.p1(Y.clientParameters.member7138.value.id);
+        ae.packet.p1(Y.clientParameters.member7256.value.id);
         var ad = Class235(Class66.member432('player'));
         ad.member2816();
-        ad.member2815(ae.member2698);
+        ad.member2815(ae.packet);
         var aa = Y.clientParameters.member8277.value !== undefined;
-        ae.member2698.member1051(aa ? 1 : 0);
+        ae.packet.p1(aa ? 1 : 0);
         if (aa) {
-            ae.member2698.member1065(Y.clientParameters.member8277.value);
+            ae.packet.pjstr(Y.clientParameters.member8277.value);
         }
         var aj = Y.member8278().member681();
-        ae.member2698.member1067(aj.getData(), 0, aj.member1047());
-        ae.member2698.member1045 += 7;
-        ae.member2698.member1102(P, ag, ae.member2698.member1047());
-        ae.member2698.member1069(ae.member2698.member1047() - Z);
+        ae.packet.member1067(aj.getData(), 0, aj.getPos());
+        ae.packet.pos += 7;
+        ae.packet.member1102(P, ag, ae.packet.getPos());
+        ae.packet.member1069(ae.packet.getPos() - Z);
         af.member8261(ae);
         af.member8279();
         Y.member8280(ac);
@@ -343,7 +343,7 @@ export var Class505 = function () {
             return;
         }
         var ac = ad.member8282(1);
-        c = ac.member609();
+        c = ac.g1();
         if (c === Class503.member6136) {
             var Z = Class458({ member7265: P });
             var ab = new Uint32Array(4);
@@ -355,7 +355,7 @@ export var Class505 = function () {
             V = d;
             ad.member8271();
             ad.member8279();
-            ad.member8284().member607(0);
+            ad.member8284().setPos(0);
         } else {
             console.log(c);
             ad.member8254();

@@ -13,9 +13,9 @@ export var Class470 = function () {
         this.member6681();
     };
     a.prototype.member6797 = function (g, c, e, b) {
-        var d = g.member1073();
-        this.member7467 = g.member609() === 1;
-        var h = 255 - g.member609();
+        var d = g.g4();
+        this.member7467 = g.g1() === 1;
+        var h = 255 - g.g1();
         return {
             member4638: d,
             alpha: h

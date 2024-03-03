@@ -1,6 +1,6 @@
 import { Class421 } from 'Class421.js';
-import { Class465 } from 'Class465.js';
-import { Class462 } from 'Class462.js';
+import { VarDomainType } from 'Class465.js';
+import { BaseVarType } from 'Class462.js';
 import { Class633 } from 'Class633.js';
 import { Class451 } from 'Class451.js';
 export var Class663 = function () {
@@ -25,29 +25,29 @@ export var Class663 = function () {
             e.member3023();
         }
         if (c) {
-            var j = a.member2970.member7393(Class465.member4134, g);
-            if (j === member47) {
+            var j = a.member2970.getVarType(VarDomainType.PLAYER, g);
+            if (j === NULL) {
                 h.member6099 += 3;
                 return true;
             }
-            switch (j.member8041().member7287) {
-            case Class462.member7281:
-                h.member6100[h.member6099++] = e.member3020().member2943(j.id);
+            switch (j.member8041().baseVarType) {
+            case BaseVarType.INTEGER:
+                h.member6100[h.member6099++] = e.member3020().getVarInt(j.id);
                 break;
-            case Class462.member7282:
-                h.member8877[h.member8878++] = e.member3020().member2943(j.id);
+            case BaseVarType.LONG:
+                h.member8877[h.member8878++] = e.member3020().getVarInt(j.id);
                 break;
             default:
-                h.member6142[h.member6143++] = e.member3020().member2943(j.id);
+                h.member6142[h.member6143++] = e.member3020().getVarInt(j.id);
                 break;
             }
         } else {
-            var i = a.member2970.member7394(g);
-            if (i === member47) {
+            var i = a.member2970.getVarBitType(g);
+            if (i === NULL) {
                 h.member6099 += 3;
                 return true;
             }
-            h.member6100[h.member6099++] = i.member2948(e.member3020().member2943(i.member2949()));
+            h.member6100[h.member6099++] = i.member2948(e.member3020().getVarInt(i.member2949()));
         }
     };
     Class421.member6025.member867 = function (d) {
@@ -56,7 +56,7 @@ export var Class663 = function () {
     };
     Class421.member6026.member867 = function (d) {
         var c = d.member6100[--d.member6099];
-        d.member6100[d.member6099++] = a.member8846.member8444().member8419(c).member3018();
+        d.member6100[d.member6099++] = a.member8846.member8444().member8419(c).getTeam();
     };
     Class421.member6027.member867 = function (d) {
         var c = d.member6100[--d.member6099];

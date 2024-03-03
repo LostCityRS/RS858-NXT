@@ -1,5 +1,5 @@
 export var Class72 = {
-    member498: 0,
+    POINTLIGHT: 0,
     member96: 1,
     member499: 2,
     member500: 3,

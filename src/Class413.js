@@ -1,4 +1,4 @@
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 import { Class32 } from 'Class32.js';
 import { Class304 } from 'Class304.js';
 import { Class121 } from 'Class121.js';
@@ -16,7 +16,7 @@ import { Class72 } from 'Class72.js';
 import { Class376 } from 'Class376.js';
 export var Class413 = function () {
     var c = new Float32Array(16);
-    var b = Class290();
+    var b = CoordFine();
     var a = new Array(Class32.member311);
     var e = Class304(undefined, Class32.member311);
     var d = function (j, n, h, i, g, k, m) {
@@ -183,7 +183,7 @@ export var Class413 = function () {
         var q = n.member4227();
         var j = n.member4766();
         var r = s.member522(Class72.member499);
-        var g = s.member941(Class72.member498);
+        var g = s.member941(Class72.POINTLIGHT);
         var y = !r && g.member291();
         if (this.member4087() >= Class121.member797 || this.member1643 < j[0] - 1 || this.member1643 > j[0] + 1 || this.member1642 < j[1] - 1 || this.member1642 > j[1] + 1) {
             t = 0;
@@ -221,7 +221,7 @@ export var Class413 = function () {
         var u = i.member4227();
         var n = i.member4766();
         var j = h.member522(Class72.member499);
-        var q = h.member941(Class72.member498);
+        var q = h.member941(Class72.POINTLIGHT);
         var o = !j && q.member291();
         if (this.member4087() >= Class121.member797 || this.member1643 < n[0] - 1 || this.member1643 > n[0] + 1 || this.member1642 < n[1] - 1 || this.member1642 > n[1] + 1) {
             t = 0;

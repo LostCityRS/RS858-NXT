@@ -2,7 +2,7 @@ import { Class182 } from 'Class182.js';
 import { Class41 } from 'Class41.js';
 import { Class377 } from 'Class377.js';
 import { Class525 } from 'Class525.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class50 } from 'Class50.js';
 export var Class722 = function () {
     var e = {};
@@ -70,19 +70,19 @@ export var Class722 = function () {
         var n = m.member4179.member7821(m.slotID);
         if (n !== undefined && m.member6432 !== -1) {
             if (n.member8462() === m.member6432) {
-                var q = b.member2970.member3227(Class131.member1217.member1204, m.member6432);
-                if (q !== member47 && q.member8464()) {
+                var q = b.member2970.getConfigType(Js5ConfigGroup.SPOTTYPE.member1204, m.member6432);
+                if (q !== NULL && q.member8464()) {
                     if (n.member2928() === Class50.member371 || n.member2928() === Class50.member373) {
                         k = false;
                     }
                 }
             } else {
-                var s = b.member2970.member3227(Class131.member1217.member1204, m.member6432);
-                if (s !== member47) {
-                    var r = b.member2970.member3227(Class131.member1216.member1204, s.member4609());
+                var s = b.member2970.getConfigType(Js5ConfigGroup.SPOTTYPE.member1204, m.member6432);
+                if (s !== NULL) {
+                    var r = b.member2970.getConfigType(Js5ConfigGroup.SEQTYPE.member1204, s.member4609());
                     var o = n.member8467();
-                    if (r !== member47 && o !== member47) {
-                        if (o.member2703() > r.member2703()) {
+                    if (r !== NULL && o !== NULL) {
+                        if (o.getPriority() > r.getPriority()) {
                             k = false;
                         }
                     }

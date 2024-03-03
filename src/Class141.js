@@ -113,7 +113,7 @@ export var Class141 = function () {
         }
     };
     var T = function (ay) {
-        var ax = ay.member609();
+        var ax = ay.g1();
         if (ax === K) {
             this.size = 64;
         } else if (ax === X) {
@@ -127,7 +127,7 @@ export var Class141 = function () {
         } else {
             throw new Error('934 ' + ax);
         }
-        var av = ay.member1073();
+        var av = ay.g4();
         if ((av & ae) !== 0) {
             this.member1361 = true;
         }
@@ -143,63 +143,63 @@ export var Class141 = function () {
         if ((av & y) !== 0) {
             this.member1365 = true;
         }
-        var aw = ay.member609();
+        var aw = ay.g1();
         this.member1382 = aw & 7;
         this.member1383 = aw >> 3 & 7;
-        var au = ay.member1073();
+        var au = ay.g4();
         this.member1366 = (au & J) !== 0;
         this.member1367 = (au & F) !== 0;
         this.member1384 = (au & aq) !== 0;
         this.member1385 = (au & ai) !== 0;
         if ((au & B) !== 0) {
-            this.member1370 = ay.member320();
-            this.member1371 = ay.member320();
+            this.member1370 = ay.gFloat();
+            this.member1371 = ay.gFloat();
         }
         if ((au & Y) !== 0) {
-            this.member1372 = ay.member1073();
+            this.member1372 = ay.g4();
         }
         if ((au & k) !== 0) {
-            this.member1373 = ay.member1073();
+            this.member1373 = ay.g4();
         }
         if ((au & x) !== 0) {
-            this.member1374 = ay.member1073();
+            this.member1374 = ay.g4();
         }
         if ((au & N) !== 0) {
-            this.member1375 = ay.member1073();
+            this.member1375 = ay.g4();
         }
         if ((au & o) !== 0) {
-            this.member1376 = ay.member1073();
+            this.member1376 = ay.g4();
         }
-        this.member1378 = ay.member609() === 1;
-        this.member1379 = ay.member609();
-        this.member1380 = ay.member609();
-        this.member1338 = ay.member609();
+        this.member1378 = ay.g1() === 1;
+        this.member1379 = ay.g1();
+        this.member1380 = ay.g1();
+        this.member1338 = ay.g1();
         if (this.member1338 === ar) {
-            this.member1381 = ay.member609();
+            this.member1381 = ay.g1();
         }
-        var at = ay.member609();
+        var at = ay.g1();
         if ((at & M) !== 0) {
-            this.member1368 = ay.member1070();
+            this.member1368 = ay.g1s();
         }
         if ((at & D) !== 0) {
-            this.member1369 = ay.member1070();
+            this.member1369 = ay.g1s();
         }
-        if (ay.member609() === 1) {
+        if (ay.g1() === 1) {
             this.member1386 = true;
-            this.member1387 = ay.member1070();
-            this.member1388 = ay.member1070();
-            this.member1389 = ay.member1074();
-            this.member1396 = ay.member609();
-            this.member1390 = ay.member609() === 1;
-            this.member1391 = ay.member609();
-            this.member1392 = ay.member609() === 1;
-            this.member1393 = ay.member609() === 1;
-            this.member1394 = ay.member609();
-            this.member1395 = ay.member609();
-            this.member1397 = ay.member608();
+            this.member1387 = ay.g1s();
+            this.member1388 = ay.g1s();
+            this.member1389 = ay.g4s();
+            this.member1396 = ay.g1();
+            this.member1390 = ay.g1() === 1;
+            this.member1391 = ay.g1();
+            this.member1392 = ay.g1() === 1;
+            this.member1393 = ay.g1() === 1;
+            this.member1394 = ay.g1();
+            this.member1395 = ay.g1();
+            this.member1397 = ay.g2();
         }
     };
-    an.prototype.member444 = function () {
+    an.prototype.getID = function () {
         return this.member1360;
     };
     an.prototype.getSize = function () {

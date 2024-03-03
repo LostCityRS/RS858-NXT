@@ -8,13 +8,13 @@ export var Class265 = function (m) {
     var d;
     var h;
     var i;
-    if (m.member2698 !== undefined) {
-        d = m.member2698.member609();
-        h = m.member2698.member609();
-        var b = m.member2698.member609();
+    if (m.packet !== undefined) {
+        d = m.packet.g1();
+        h = m.packet.g1();
+        var b = m.packet.g1();
         i = new Array(b);
         for (var g = 0; g < b; g++) {
-            i[g] = m.member2698.member609();
+            i[g] = m.packet.g1();
         }
     } else {
         throw new Error('1016 ');

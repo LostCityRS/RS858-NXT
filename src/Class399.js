@@ -1,16 +1,16 @@
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class86 } from 'Class86.js';
 import { Class158 } from 'Class158.js';
 import { Class95 } from 'Class95.js';
 import { Class271 } from 'Class271.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class198 } from 'Class198.js';
 export var Class399 = function () {
     var b = function (c) {
         this.member1643;
         this.member1642;
         this.member1644 = undefined;
-        this.member2563 = member47;
+        this.member2563 = NULL;
         this.member4614 = null;
         this.member4615 = null;
         this.member4616 = [];
@@ -26,7 +26,7 @@ export var Class399 = function () {
         return this.member2563;
     };
     b.prototype.member3250 = function () {
-        return this.member2563 !== member47;
+        return this.member2563 !== NULL;
     };
     b.prototype.load = function (B, h, g) {
         var z = 1;
@@ -64,9 +64,9 @@ export var Class399 = function () {
             var C = this.member4614[o];
             for (var J = 0; J < C.length; J++) {
                 var c = C[J];
-                if (c.member4148 === undefined || c.member4148 === member47) {
-                    c.member4148 = h.member3227(Class131.member1209.member1204, c.member2506);
-                    if (c.member4148 === undefined || c.member4148 === member47) {
+                if (c.member4148 === undefined || c.member4148 === NULL) {
+                    c.member4148 = h.getConfigType(Js5ConfigGroup.LOCTYPE.member1204, c.member2506);
+                    if (c.member4148 === undefined || c.member4148 === NULL) {
                         e = false;
                     }
                 }
@@ -81,7 +81,7 @@ export var Class399 = function () {
             if (G === null || G === undefined) {
                 continue;
             }
-            I.member2535 = G.member4148.member4619();
+            I.member2535 = G.member4148.getWallWidth();
         }
         this.member4615 = null;
         this.member4616.length = 0;
@@ -119,8 +119,8 @@ export var Class399 = function () {
                                 if (c.level === k.level && c.x >= r && c.x <= y && c.member756 >= n && c.member756 <= v) {
                                     var H = c.x % Class86.member717;
                                     var F = c.member756 % Class86.member717;
-                                    var A = Class158.member1638(H, F, k.member1668, c.member4148.member4164(0), c.member4148.member4165(0), c.member2520);
-                                    var x = Class158.member1639(H, F, k.member1668, c.member4148.member4164(0), c.member4148.member4165(0), c.member2520);
+                                    var A = Class158.member1638(H, F, k.member1668, c.member4148.getWidth(0), c.member4148.getLength(0), c.member2520);
+                                    var x = Class158.member1639(H, F, k.member1668, c.member4148.getWidth(0), c.member4148.getLength(0), c.member2520);
                                     var E = j * Class86.member717 + A;
                                     var D = i * Class86.member717 + x;
                                     var t = d;
@@ -165,7 +165,7 @@ export var Class399 = function () {
             i = false;
         }
         if (!i) {
-            return member47;
+            return NULL;
         } else {
             var d = new Array(0);
             this.member4622(h, c, e, Class271.member3206, d, false);
@@ -174,17 +174,17 @@ export var Class399 = function () {
         }
     };
     b.prototype.member4622 = function (s, e, g, r, t, d) {
-        var h = s.getFile(Class95.member809, g, r, Class96.member841);
+        var h = s.getFile(Class95.member809, g, r, Priority.member841);
         if (h === undefined) {
             return;
         }
         var q = -1;
         while (true) {
             var k = 0;
-            var v = h.member1078();
+            var v = h.gSmart1or2();
             while (v === 32767) {
                 k += v;
-                v = h.member1078();
+                v = h.gSmart1or2();
             }
             k += v;
             if (k === 0) {
@@ -193,13 +193,13 @@ export var Class399 = function () {
             q += k;
             var z = 0;
             while (true) {
-                var c = h.member1078();
+                var c = h.gSmart1or2();
                 if (c === 0) {
                     break;
                 }
                 z += c - 1;
                 var j = z & 63, n = z >> 6 & 63, m = z >> 12;
-                var u = h.member609();
+                var u = h.g1();
                 var o = u >> 2;
                 var i = new a(m, n, j, q, o, u & 3, o === Class198.member2332, !d, o === Class198.member2339);
                 t.push(i);
@@ -227,7 +227,7 @@ export var Class399 = function () {
         this.member2527 = g;
         this.member2521 = h;
         this.member2536 = i;
-        this.member4148 = member47;
+        this.member4148 = NULL;
         this.member2535 = undefined;
     };
     return function (c) {

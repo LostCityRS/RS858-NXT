@@ -1,6 +1,6 @@
 import { Class220 } from 'Class220.js';
 import { Class182 } from 'Class182.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class224 } from 'Class224.js';
 import { Class218 } from 'Class218.js';
 import { Class227 } from 'Class227.js';
@@ -20,9 +20,9 @@ export var Class229 = function (i) {
     var h = Class182();
     var a = null;
     var e;
-    var m = Class124(6);
-    var F = Class124(o);
-    var D = Class124(u);
+    var m = Packet(6);
+    var F = Packet(o);
+    var D = Packet(u);
     var x = 0;
     var z = undefined;
     var c = undefined;
@@ -30,19 +30,19 @@ export var Class229 = function (i) {
     var b = function (M, O) {
         a = M;
         e = Date.now();
-        m.member607(0);
-        m.member1051(Class224.member2734);
-        m.member1055(g);
+        m.setPos(0);
+        m.p1(Class224.member2734);
+        m.p3(g);
         a.write(m.getData());
-        m.member607(0);
+        m.setPos(0);
         if (O) {
-            m.member1051(Class224.member2731);
+            m.p1(Class224.member2731);
         } else {
-            m.member1051(Class224.member2732);
+            m.p1(Class224.member2732);
         }
         a.write(m.getData());
         a.member2601();
-        F.member607(0);
+        F.setPos(0);
         z = undefined;
         c = undefined;
         var N;
@@ -160,17 +160,17 @@ export var Class229 = function (i) {
                     }
                     e = Date.now();
                     if (z === undefined) {
-                        var ab = o - F.member1047();
+                        var ab = o - F.getPos();
                         if (ab > P) {
                             ab = P;
                         }
                         a.read(F, ab);
-                        if (F.member1047() < o) {
+                        if (F.getPos() < o) {
                             continue;
                         }
-                        F.member607(0);
-                        var S = F.member609();
-                        var T = F.member1073();
+                        F.setPos(0);
+                        var S = F.g1();
+                        var T = F.g4();
                         var Z = (T & 2147483648) != 0;
                         var ac = T & 2147483647;
                         if (Z) {
@@ -195,45 +195,45 @@ export var Class229 = function (i) {
                         } else if (false) {
                         }
                         x = o;
-                        F.member607(0);
-                        D.member607(0);
+                        F.setPos(0);
+                        D.setPos(0);
                         continue;
                     }
                     var X = z.member2704();
                     if (X === null) {
-                        var M = u - D.member1047();
+                        var M = u - D.getPos();
                         if (M > P) {
                             M = P;
                         }
                         a.read(D, M);
-                        if (D.member1047() < u) {
+                        if (D.getPos() < u) {
                             continue;
                         }
-                        D.member607(0);
-                        var O = D.member609();
-                        var N = D.member1074();
+                        D.setPos(0);
+                        var O = D.g1();
+                        var N = D.g4s();
                         var W = 5;
                         if (O != Class227.member2746) {
                             W = 9;
                         }
                         z.member2705(N + W + z.member2702());
                         X = z.member2704();
-                        X.member1051(O);
-                        X.member1056(N);
+                        X.p1(O);
+                        X.p4(N);
                         x += u;
                         continue;
                     }
                     var Q = X.getSize() - z.member2702();
                     var V = H - x;
-                    if (V > Q - X.member1047()) {
-                        V = Q - X.member1047();
+                    if (V > Q - X.getPos()) {
+                        V = Q - X.getPos();
                     }
                     if (V > P) {
                         V = P;
                     }
                     a.read(X, V);
                     x += V;
-                    if (X.member1047() == Q) {
+                    if (X.getPos() == Q) {
                         if (false) {
                         }
                         c.remove();
@@ -257,18 +257,18 @@ export var Class229 = function (i) {
                 a = null;
                 z = undefined;
                 c = undefined;
-                F.member607(0);
-                D.member607(0);
+                F.setPos(0);
+                D.setPos(0);
                 return true;
             }
         }
     };
     v.member78 = j;
     var I = function (M, N) {
-        m.member607(0);
-        m.member1051(N & 15 | (M.member2703() & 15) << 4);
-        m.member1051(M.member2699());
-        m.member1056(M.member2700());
+        m.setPos(0);
+        m.p1(N & 15 | (M.getPriority() & 15) << 4);
+        m.p1(M.member2699());
+        m.p4(M.member2700());
         a.write(m.getData());
     };
     i = undefined;

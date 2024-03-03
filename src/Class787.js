@@ -1,9 +1,9 @@
 import { Class105 } from 'Class105.js';
 import { Class95 } from 'Class95.js';
-import { Class131 } from 'Class131.js';
-import { Class96 } from 'Class96.js';
-import { Class702 } from 'Class702.js';
-export var Class787 = function (o) {
+import { Js5ConfigGroup } from 'Class131.js';
+import { Priority } from 'Class96.js';
+import { VarBitType } from 'Class702.js';
+export var VarBitTypeList = function (o) {
     var d = {};
     var k = null;
     var j = null;
@@ -25,20 +25,20 @@ export var Class787 = function (o) {
         j = o.member3992;
         q = o.member995;
         m = o.member2970;
-        i = q.member1439(Class95.member807).member1440(Class131.member1254.member1204);
+        i = q.member1439(Class95.member807).member1440(Js5ConfigGroup.VAR_BIT.member1204);
     } else {
         throw new Error('1747 ');
     }
     var h = function (s) {
         var r = c.find(s);
         if (r === null) {
-            var n = q.getFile(Class95.member807, Class131.member1254.member1204, s, Class96.member840, Class131.member1254.priority);
+            var n = q.getFile(Class95.member807, Js5ConfigGroup.VAR_BIT.member1204, s, Priority.member840, Js5ConfigGroup.VAR_BIT.priority);
             if (n === null) {
                 return null;
             }
-            r = Class702({
+            r = VarBitType({
                 member625: s,
-                member2896: d
+                myList: d
             });
             if (n !== undefined) {
                 if (!r.decode(n, m)) {

@@ -18,10 +18,10 @@ export var Class151 = function () {
             this.member1508 = d.member1508;
             this.member1510 = d.member1510;
             if (this.member1508 !== undefined) {
-                this.member1518 = this.member1508.member444();
+                this.member1518 = this.member1508.getID();
             }
             if (this.member1510 !== undefined) {
-                this.member1519 = this.member1510.member444();
+                this.member1519 = this.member1510.getID();
             }
             this.member1509 = d.member1509;
             this.member1511 = d.member1511;
@@ -37,41 +37,41 @@ export var Class151 = function () {
         } else if ((d.member1522 !== undefined || d.member1523 !== undefined) && (d.member1509 !== undefined || d.member1511 !== undefined)) {
             if (d.member1522 !== undefined) {
                 this.member1508 = Class138({ member1348: d.member1522 });
-                this.member1518 = this.member1508.member444();
+                this.member1518 = this.member1508.getID();
             }
             if (d.member1523 !== undefined) {
                 this.member1510 = Class138({ member1348: d.member1523 });
-                this.member1519 = this.member1510.member444();
+                this.member1519 = this.member1510.getID();
             }
             this.member1509 = d.member1509;
             this.member1511 = d.member1511;
             this.member1332();
         } else if (d.member1524 !== undefined) {
-            var c = d.member1524.member609() === 0;
+            var c = d.member1524.g1() === 0;
             if (c) {
-                if (d.member1524.member609() === 1) {
+                if (d.member1524.g1() === 1) {
                     this.member1508 = Class138({ member1349: d.member1524 });
-                    this.member1518 = this.member1508.member444();
+                    this.member1518 = this.member1508.getID();
                 }
-                if (d.member1524.member609() === 1) {
+                if (d.member1524.g1() === 1) {
                     this.member1510 = Class138({ member1349: d.member1524 });
-                    this.member1519 = this.member1510.member444();
+                    this.member1519 = this.member1510.getID();
                 }
             } else {
-                this.member1518 = d.member1524.member1071();
+                this.member1518 = d.member1524.g2s();
                 if (this.member1518 !== -1) {
                     this.member1508 = Class150.member1497(this.member1518);
                 }
-                this.member1519 = d.member1524.member1071();
+                this.member1519 = d.member1524.g2s();
                 if (this.member1519 !== -1) {
                     this.member1510 = Class150.member1497(this.member1519);
                 }
             }
-            this.member1509 = new Array(d.member1524.member608());
+            this.member1509 = new Array(d.member1524.g2());
             for (var b = 0; b < this.member1509.length; b++) {
                 this.member1509[b] = Class149(undefined, undefined, undefined, undefined, d.member1524);
             }
-            this.member1511 = new Array(d.member1524.member608());
+            this.member1511 = new Array(d.member1524.g2());
             for (var b = 0; b < this.member1511.length; b++) {
                 this.member1511[b] = Class149(undefined, undefined, undefined, undefined, d.member1524);
             }
@@ -143,29 +143,29 @@ export var Class151 = function () {
     };
     a.prototype.member1318 = function (c, d, e) {
         if (d) {
-            c.member1051(0);
+            c.p1(0);
             if (this.member1508 === undefined) {
-                c.member1051(0);
+                c.p1(0);
             } else {
-                c.member1051(1);
+                c.p1(1);
                 this.member1508.member1326(c, e ? this.member1509 : undefined);
             }
             if (this.member1510 === undefined) {
-                c.member1051(0);
+                c.p1(0);
             } else {
-                c.member1051(1);
+                c.p1(1);
                 this.member1510.member1326(c, e ? this.member1511 : undefined);
             }
         } else {
-            c.member1051(1);
-            c.member1054(this.member1518);
-            c.member1054(this.member1519);
+            c.p1(1);
+            c.p2(this.member1518);
+            c.p2(this.member1519);
         }
-        c.member1054(this.member1509.length);
+        c.p2(this.member1509.length);
         for (var b = 0; b < this.member1509.length; b++) {
             this.member1509[b].member1318(c);
         }
-        c.member1054(this.member1511.length);
+        c.p2(this.member1511.length);
         for (var b = 0; b < this.member1511.length; b++) {
             this.member1511[b].member1318(c);
         }
@@ -231,13 +231,13 @@ export var Class151 = function () {
         }
         if (this.member1508 !== undefined) {
             this.member1520 = this.member1508.member1327(this.member1509, true);
-            this.member1518 = this.member1508.member444();
+            this.member1518 = this.member1508.getID();
         } else {
             this.member1518 = -1;
         }
         if (this.member1510 !== undefined) {
             this.member1521 = this.member1510.member1327(this.member1511, true);
-            this.member1519 = this.member1510.member444();
+            this.member1519 = this.member1510.getID();
         } else {
             this.member1519 = -1;
         }

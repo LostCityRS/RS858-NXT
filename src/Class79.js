@@ -53,7 +53,7 @@ export var Class79 = function () {
     a.prototype.member599 = function () {
         return this.member594 + this.height + this.member593;
     };
-    a.prototype.member600 = function () {
+    a.prototype.getColour = function () {
         var b = new Uint8Array(this.width * this.height * 4);
         for (var c = 0; c < this.width * this.height; c++) {
             b[c * 4] = (this.member603[this.image[c]] & 16711680) >>> 16;

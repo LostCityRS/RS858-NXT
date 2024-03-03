@@ -14,7 +14,7 @@ export var Class235 = function (c) {
             d = new Array(e.member2812);
         }
         for (var h = 0; h < e.member2812; h++) {
-            d[h] = i.member609();
+            d[h] = i.g1();
         }
         localStorage[b + 'uid'] = a(d);
     };
@@ -26,7 +26,7 @@ export var Class235 = function (c) {
             throw new Error('1185 ');
         }
         for (var h = 0; h < e.member2812; h++) {
-            i.member1051(d[h]);
+            i.p1(d[h]);
         }
     };
     e.member2816 = function (i) {

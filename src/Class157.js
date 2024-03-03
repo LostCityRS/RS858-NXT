@@ -80,7 +80,7 @@ export var Class157 = function () {
         this.member1559 = 0;
         this.member433;
         this.member1560 = undefined;
-        this.member1561 = undefined;
+        this.size = undefined;
         this.member1562 = undefined;
         this.member1563 = undefined;
         this.member1564 = undefined;
@@ -98,9 +98,9 @@ export var Class157 = function () {
     };
     member45(Class73, r);
     r.prototype.member25 = function (B) {
-        if (B.member1560 !== undefined && B.member1561 !== undefined && B.member1562 !== undefined) {
+        if (B.member1560 !== undefined && B.size !== undefined && B.member1562 !== undefined) {
             this.member1560 = B.member1560;
-            this.member1561 = B.member1561;
+            this.size = B.size;
             this.member1562 = B.member1562;
             this.member1565 = B.member1565;
             this.member1569 = B.member1569;
@@ -113,7 +113,7 @@ export var Class157 = function () {
                 this.member1569 = Class151(B.member680.member1569);
             }
             this.member1563 = B.member680.member1563;
-            this.member1561 = B.member680.member1561;
+            this.size = B.member680.size;
             this.member1560 = B.member680.member1560;
             this.member1565 = B.member680.member1565;
             this.member563();
@@ -340,9 +340,9 @@ export var Class157 = function () {
     };
     r.prototype.member765 = function (H, I, F, C, M, G) {
         if (!G.member759) {
-            H.x = I * this.member1561;
+            H.x = I * this.size;
             H.y = this.member1562[I][F].height;
-            H.member756 = F * this.member1561;
+            H.member756 = F * this.size;
             H.member757 = this.member1600(H.member757, I, F);
             Class87.member753(G, H);
             return H;
@@ -369,16 +369,16 @@ export var Class157 = function () {
             J = Class87.member762(B, J, D.member1598.member762(D, Class87.member741, this));
             B = false;
         }
-        H.x = I * this.member1561;
+        H.x = I * this.size;
         H.y = this.member1562[I][F].height;
-        H.member756 = F * this.member1561;
+        H.member756 = F * this.size;
         H.member757 = this.member1600(H.member757, I, F);
         Class87.member753(J, H);
         return H;
     };
     r.prototype.member764 = function (N, B, O, E, L, G, J) {
-        var H = B * this.member1561 + this.member1561 * (1 + E) / 2;
-        var F = O * this.member1561 + this.member1561 * (1 + L) / 2;
+        var H = B * this.size + this.size * (1 + E) / 2;
+        var F = O * this.size + this.size * (1 + L) / 2;
         var D = (1 - E) * (1 - L);
         var C = N.height * D;
         var M = N.member747 * D;
@@ -460,16 +460,16 @@ export var Class157 = function () {
             for (var G = 0; G < 3; G++, A++) {
                 var E = [
                     [
-                        I[G].x / this.member1561 / I[0].member743,
-                        I[G].member756 / this.member1561 / I[0].member743
+                        I[G].x / this.size / I[0].member743,
+                        I[G].member756 / this.size / I[0].member743
                     ],
                     [
-                        I[G].x / this.member1561 / I[1].member743,
-                        I[G].member756 / this.member1561 / I[1].member743
+                        I[G].x / this.size / I[1].member743,
+                        I[G].member756 / this.size / I[1].member743
                     ],
                     [
-                        I[G].x / this.member1561 / I[2].member743,
-                        I[G].member756 / this.member1561 / I[2].member743
+                        I[G].x / this.size / I[2].member743,
+                        I[G].member756 / this.size / I[2].member743
                     ]
                 ];
                 this.member1604(I[G], J, F, y[G], H, E);
@@ -479,11 +479,11 @@ export var Class157 = function () {
         B.member1581++;
     };
     r.prototype.member1603 = function (H, G, B, F) {
-        this.member1575[a / 4] = Math.floor(H.x - this.member1561);
+        this.member1575[a / 4] = Math.floor(H.x - this.size);
         a += 4;
         this.member1575[a / 4] = Math.floor(B !== undefined ? B : H.y);
         a += 4;
-        this.member1575[a / 4] = Math.floor(H.member756 - this.member1561);
+        this.member1575[a / 4] = Math.floor(H.member756 - this.size);
         a += 4;
         var E = 1;
         if (G) {
@@ -498,11 +498,11 @@ export var Class157 = function () {
         this.member1578[a++] = D & 255;
     };
     r.prototype.member1604 = function (F, J, D, M, G, C) {
-        this.member1575[a / 4] = Math.floor(F.x - this.member1561);
+        this.member1575[a / 4] = Math.floor(F.x - this.size);
         a += 4;
         this.member1575[a / 4] = Math.floor(F.y);
         a += 4;
-        this.member1575[a / 4] = Math.floor(F.member756 - this.member1561);
+        this.member1575[a / 4] = Math.floor(F.member756 - this.size);
         a += 4;
         this.member1577[a / 2] = Math.floor(F.member757[0] * 32767);
         a += 2;
@@ -554,7 +554,7 @@ export var Class157 = function () {
             B = 0;
         }
         D[0] = E;
-        D[1] = this.member1561 * 2;
+        D[1] = this.size * 2;
         D[2] = B;
         Class41.normalize(D);
         return D;
@@ -592,7 +592,7 @@ export var Class157 = function () {
             member1570: this.member1570,
             member1569: this.member1569 === undefined ? undefined : this.member1569.member681(),
             member1563: this.member1563,
-            member1561: this.member1561,
+            size: this.size,
             member1560: this.member1560,
             member1565: this.member1565
         };
@@ -681,7 +681,7 @@ export var Class157 = function () {
             if (B && D.member1025(Class72.member102)) {
                 v.enable(Class5.member102);
             }
-            var H = D.member941(Class72.member498);
+            var H = D.member941(Class72.POINTLIGHT);
             if (H.member988() > 0) {
                 v.enable(Class5.member91);
             }
@@ -705,7 +705,7 @@ export var Class157 = function () {
         var E = false;
         if (O.member1025(Class72.member500)) {
             var I = O.member941(Class72.member500);
-            if (I.member880(T, this.member1561 * this.member1560, U.member1624)) {
+            if (I.member880(T, this.size * this.member1560, U.member1624)) {
                 E = true;
             }
         }
@@ -753,7 +753,7 @@ export var Class157 = function () {
     r.prototype.member1628 = function (B, M, J, I, H, E, D, C, P, O, N, L) {
         var G = Class83.member619(Class82.member390, c);
         var F = Class132.member1266();
-        var K = F.member941(Class72.member498);
+        var K = F.member941(Class72.POINTLIGHT);
         G.member863 = B.member863;
         G.member1607 = this;
         G.priority = Class110.member926;
@@ -785,7 +785,7 @@ export var Class157 = function () {
         var D = false;
         if (N.member1025(Class72.member500)) {
             var H = N.member941(Class72.member500);
-            if (H.member880(S, this.member1561 * this.member1560, T.member1624)) {
+            if (H.member880(S, this.size * this.member1560, T.member1624)) {
                 D = true;
             }
         }
@@ -902,7 +902,7 @@ export var Class157 = function () {
                 L.member1026(Class72.member500, H);
             }
             if (Q.member291(Class5.member91)) {
-                L.member1026(Class72.member498, H);
+                L.member1026(Class72.POINTLIGHT, H);
             }
         }
         if (Q.member291(Class5.member102)) {

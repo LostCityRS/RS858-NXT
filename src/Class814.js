@@ -2,7 +2,7 @@ import { Class49 } from 'Class49.js';
 import { Class291 } from 'Class291.js';
 import { Class515 } from 'Class515.js';
 import { Class423 } from 'Class423.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class623 } from 'Class623.js';
 import { Class302 } from 'Class302.js';
 import { Class484 } from 'Class484.js';
@@ -85,7 +85,7 @@ export var Class814 = function () {
             }
         }
         J.member2026(c);
-        c[1] += J.member4121();
+        c[1] += J.getOverlayHeight();
         Class515.member8337(c, J.member4085());
         if (!Class515.member8340(c)) {
             return false;
@@ -100,7 +100,7 @@ export var Class814 = function () {
             var K = Class423.member6115.member6107.member1204;
             if (K !== -1) {
                 var J = F.member7137.member3639(K);
-                if (J !== member47) {
+                if (J !== NULL) {
                     E = J.member3598().member3599() + J.member3598().member3603();
                 }
             }
@@ -124,7 +124,7 @@ export var Class814 = function () {
             return false;
         }
         for (var J = 0; J < K.length; J++) {
-            if (K[J] !== undefined && K[J] !== member47) {
+            if (K[J] !== undefined && K[J] !== NULL) {
                 n.y -= m(K[J], n.x, n.y) + 2;
             }
         }
@@ -146,30 +146,30 @@ export var Class814 = function () {
             r.member10538 = null;
             r.member10539 = null;
             r.duration = 0;
-            if (S.member444() >= 0) {
+            if (S.getID() >= 0) {
                 if (S.member7685() <= R) {
                     continue;
                 }
-                r.member10538 = e.member3227(Class131.member1234.member1204, S.member444());
-                if (r.member10538 === member47) {
+                r.member10538 = e.getConfigType(Js5ConfigGroup.HITMARKTYPE.member1204, S.getID());
+                if (r.member10538 === NULL) {
                     continue;
                 }
-                if (r.member10538.member10440()) {
-                    r.member10538 = r.member10538.member10441();
-                    if (r.member10538 === member47) {
+                if (r.member10538.isMultiMark()) {
+                    r.member10538 = r.member10538.getMultiMark();
+                    if (r.member10538 === NULL) {
                         continue;
                     }
                 }
-                r.duration = r.member10538.member7682();
+                r.duration = r.member10538.getStickTime();
             }
             if (S.member7686() >= 0) {
-                r.member10539 = e.member3227(Class131.member1234.member1204, S.member7686());
-                if (r.member10539 === member47) {
+                r.member10539 = e.getConfigType(Js5ConfigGroup.HITMARKTYPE.member1204, S.member7686());
+                if (r.member10539 === NULL) {
                     continue;
                 }
-                if (r.member10539.member10440()) {
-                    r.member10539 = r.member10539.member10441();
-                    if (r.member10539 === member47) {
+                if (r.member10539.isMultiMark()) {
+                    r.member10539 = r.member10539.getMultiMark();
+                    if (r.member10539 === NULL) {
                         continue;
                     }
                 }
@@ -177,7 +177,7 @@ export var Class814 = function () {
             if (S.member7685() - r.duration > R) {
                 continue;
             }
-            r.member10540 = Q.member4121();
+            r.member10540 = Q.getOverlayHeight();
             Q.member2026(r.member10537);
             r.member10537[1] += r.member10540;
             Class515.member8337(r.member10537, Q.member4085());
@@ -204,7 +204,7 @@ export var Class814 = function () {
             if (r.member10544 !== null) {
                 r.member10544.member510();
             }
-            r.member10545 = r.member10538.member9787();
+            r.member10545 = r.member10538.getDamageFont();
             if (r.member10545 === -1) {
                 r.member10545 = Class423.member6115.member6105.member1204;
             }
@@ -231,7 +231,7 @@ export var Class814 = function () {
                 if (r.member10550 !== null) {
                     r.member10550.member510();
                 }
-                r.member10552 = r.member10539.member9787();
+                r.member10552 = r.member10539.getDamageFont();
                 if (r.member10552 === -1) {
                     r.member10552 = Class423.member6115.member6105.member1204;
                 }
@@ -280,11 +280,11 @@ export var Class814 = function () {
             if (r.member10544 !== null) {
                 r.width += r.member10544.member556();
             }
-            var L = r.member10538.member10434();
+            var L = r.member10538.getGraphicOffsetX();
             r.member10560 += L;
             r.member10561 += L;
             r.member10564 += L;
-            r.member10565 = r.member10538.member10435();
+            r.member10565 = r.member10538.getGraphicOffsetY();
             r.member10566 = 0;
             r.member10567 = 0;
             r.member10568 = 0;
@@ -315,25 +315,25 @@ export var Class814 = function () {
                 if (r.member10550 !== null) {
                     r.width += r.member10550.member556();
                 }
-                var J = r.member10539.member10434();
+                var J = r.member10539.getGraphicOffsetX();
                 r.member10567 += J;
                 r.member10568 += J;
                 r.member10569 += J;
-                r.member10570 = r.member10539.member10435();
+                r.member10570 = r.member10539.getGraphicOffsetY();
             }
             r.member10572 = S.member7685() - R;
-            r.member10573 = r.member10538.member10431() - r.member10538.member10431() * r.member10572 / r.member10538.member7682();
-            r.member10574 = r.member10538.member10432() + r.member10538.member10432() * r.member10572 / r.member10538.member7682();
+            r.member10573 = r.member10538.getScrollToOffsetX() - r.member10538.getScrollToOffsetX() * r.member10572 / r.member10538.getStickTime();
+            r.member10574 = r.member10538.getScrollToOffsetY() + r.member10538.getScrollToOffsetY() * r.member10572 / r.member10538.getStickTime();
             r.member10575 = r.x - (r.width >> 1) + r.member10573;
             r.member10576 = r.y + Class484.member7708 + r.member10574;
-            r.member10577 = r.member10576 + Class484.member7709 + r.member10538.member10433();
+            r.member10577 = r.member10576 + Class484.member7709 + r.member10538.getDamageOffsetY();
             r.member10578 = 0;
             if (r.member10539 !== null) {
-                r.member10578 = r.member10576 + Class484.member7709 + r.member10539.member10433();
+                r.member10578 = r.member10576 + Class484.member7709 + r.member10539.getDamageOffsetY();
             }
             r.alpha = 255;
-            if (r.member10538.member9987() >= 0) {
-                r.alpha = r.member10572 * 255 / (r.duration - r.member10538.member9987());
+            if (r.member10538.getFadeOut() >= 0) {
+                r.alpha = r.member10572 * 255 / (r.duration - r.member10538.getFadeOut());
                 if (r.alpha > 255) {
                     r.alpha = 255;
                 }
@@ -367,7 +367,7 @@ export var Class814 = function () {
                 if (r.member10541 !== null) {
                     M = r.member10576 - r.member10577;
                 }
-                Class302.member3601(r.member10553, r.member10575 + r.member10562, r.member10577 + M, r.member10546, 0, Class301.member3595, r.member10538.member993() << 8 | r.alpha);
+                Class302.member3601(r.member10553, r.member10575 + r.member10562, r.member10577 + M, r.member10546, 0, Class301.member3595, r.member10538.getDamageColour() << 8 | r.alpha);
             }
             if (r.member10539 !== null) {
                 var T = 0;
@@ -395,7 +395,7 @@ export var Class814 = function () {
                     if (r.member10547 !== null) {
                         M = r.member10576 - r.member10578;
                     }
-                    Class302.member3601(r.member10555, r.member10575 + r.member10571, r.member10578 - M, r.member10551, 0, Class301.member3595, r.member10539.member993() << 8 | r.alpha);
+                    Class302.member3601(r.member10555, r.member10575 + r.member10571, r.member10578 - M, r.member10551, 0, Class301.member3595, r.member10539.getDamageColour() << 8 | r.alpha);
                 }
             }
         }
@@ -429,8 +429,8 @@ export var Class814 = function () {
                 Z = L.member9993();
                 break;
             case Class486.member7729:
-                S = L.member9990();
-                Z = L.member9989();
+                S = L.getEmptyGraphic();
+                Z = L.getFullGraphic();
                 break;
             }
             var Q = null;
@@ -455,15 +455,15 @@ export var Class814 = function () {
             var V = N - W.member7679();
             var T;
             var R = O.member556() * W.member7681() / 255;
-            if (W.member7682() > V) {
+            if (W.getStickTime() > V) {
                 var ab = L.member9988() === 0 ? 0 : Math.floor(V / L.member9988()) * L.member9988;
                 var U = O.member556() * W.member7680 / 255;
-                T = U + (R - U) * ab / W.member7682();
+                T = U + (R - U) * ab / W.getStickTime();
             } else {
                 T = R;
-                var P = W.member7682() + L.member7728() - V;
-                if (L.member9987() >= 0) {
-                    M = P * 256 / (L.member7728() - L.member9987());
+                var P = W.getStickTime() + L.member7728() - V;
+                if (L.getFadeOut() >= 0) {
+                    M = P * 256 / (L.member7728() - L.getFadeOut());
                     if (M > 255) {
                         M = 255;
                     }
@@ -503,7 +503,7 @@ export var Class814 = function () {
             return true;
         }
         var L = F.member7137.member3639(M);
-        if (L === member47) {
+        if (L === NULL) {
             return true;
         }
         v.x = n.x;

@@ -1,5 +1,5 @@
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class93 } from 'Class93.js';
 import { Class80 } from 'Class80.js';
 import { Class76 } from 'Class76.js';
@@ -70,9 +70,9 @@ export var Class303 = function () {
         q = K;
         C = S;
         H = P;
-        j = member47;
-        F = member47;
-        o = member47;
+        j = NULL;
+        F = NULL;
+        o = NULL;
         i = N;
         b = R;
         A();
@@ -81,39 +81,39 @@ export var Class303 = function () {
     var A = function () {
         var K = true;
         var J;
-        if (j === undefined || j === member47) {
-            J = v.getFile(Class95.member811, q, 0, Class96.member840, Class93.member796);
-            if (J !== member47 && J !== undefined) {
+        if (j === undefined || j === NULL) {
+            J = v.getFile(Class95.member811, q, 0, Priority.member840, Class93.member796);
+            if (J !== NULL && J !== undefined) {
                 j = Class80.member605(J);
-                t = Class76(y, j.member556(), j.member557(), j.member600(), false);
+                t = Class76(y, j.member556(), j.member557(), j.getColour(), false);
                 t.member563();
             } else {
                 K = false;
             }
         }
-        if (F === undefined || F === member47) {
-            J = v.getFile(Class95.member811, C, 0, Class96.member840, Class93.member796);
-            if (J !== member47 && J !== undefined) {
+        if (F === undefined || F === NULL) {
+            J = v.getFile(Class95.member811, C, 0, Priority.member840, Class93.member796);
+            if (J !== NULL && J !== undefined) {
                 F = Class80.member605(J);
-                u = Class76(y, F.member556(), F.member557(), F.member600(), false);
+                u = Class76(y, F.member556(), F.member557(), F.getColour(), false);
                 u.member563();
             } else {
                 K = false;
             }
         }
-        if (o === undefined || o === member47) {
-            J = v.getFile(Class95.member811, H, 0, Class96.member840, Class93.member796);
-            if (J !== member47 && J !== undefined) {
+        if (o === undefined || o === NULL) {
+            J = v.getFile(Class95.member811, H, 0, Priority.member840, Class93.member796);
+            if (J !== NULL && J !== undefined) {
                 o = Class80.member605(J);
-                h = Class76(y, o.member556(), o.member557(), o.member600(), false);
+                h = Class76(y, o.member556(), o.member557(), o.getColour(), false);
                 h.member563();
             } else {
                 K = false;
             }
         }
-        if (s === undefined || s === member47) {
+        if (s === undefined || s === NULL) {
             s = E.member3639(b);
-            if (s === member47) {
+            if (s === NULL) {
                 K = false;
             }
         }

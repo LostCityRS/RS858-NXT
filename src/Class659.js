@@ -52,7 +52,7 @@ export var Class659 = function () {
             return true;
         }
         var t = a.member6101.member9070();
-        if (!t.member3590()) {
+        if (!t.readyanim()) {
             return true;
         }
         s.member6099 -= 2;
@@ -75,14 +75,14 @@ export var Class659 = function () {
         s.member6100[s.member6099++] = 0;
     };
     Class421.member5791.member867 = function (s) {
-        if (!a.member7135() || !a.member6101.member9070().member3590()) {
+        if (!a.member7135() || !a.member6101.member9070().readyanim()) {
             return true;
         }
         a.member6101.member9070().member8926(e, j);
         s.member6100[s.member6099++] = j[0];
     };
     Class421.member5792.member867 = function (s) {
-        if (!a.member7135() || !a.member6101.member9070().member3590()) {
+        if (!a.member7135() || !a.member6101.member9070().readyanim()) {
             return true;
         }
         a.member6101.member9070().member8926(e, j);
@@ -92,10 +92,10 @@ export var Class659 = function () {
         a.member6101.member7844(q.member6117().member7845());
     };
     Class421.member5804.member867 = function (s) {
-        s.member6100[s.member6099++] = a.member6101.member9070().member3590() ? 1 : 0;
+        s.member6100[s.member6099++] = a.member6101.member9070().readyanim() ? 1 : 0;
     };
     Class421.member5272.member867 = function (t) {
-        if (!a.member7135() || !a.member6101.member9070().member3590()) {
+        if (!a.member7135() || !a.member6101.member9070().readyanim()) {
             return true;
         }
         t.member6099 -= 4;
@@ -124,7 +124,7 @@ export var Class659 = function () {
         }
     };
     Class421.member5273.member867 = function (t) {
-        if (!a.member7135() || !a.member6101.member9070().member3590()) {
+        if (!a.member7135() || !a.member6101.member9070().readyanim()) {
             return true;
         }
         t.member6099 -= 4;
@@ -153,7 +153,7 @@ export var Class659 = function () {
         }
     };
     Class421.member5282.member867 = function (u) {
-        if (!a.member7135() || !a.member6101.member9070().member3590()) {
+        if (!a.member7135() || !a.member6101.member9070().readyanim()) {
             return true;
         }
         var t = u.member6100[--u.member6099];
@@ -185,7 +185,7 @@ export var Class659 = function () {
         if (q.member6117().member7845()) {
             a.member6101.member9074();
         } else {
-            if (!a.member7135() || !a.member6101.member9070().member3590()) {
+            if (!a.member7135() || !a.member6101.member9070().readyanim()) {
                 return true;
             }
             var s = a.member7135();
@@ -227,7 +227,7 @@ export var Class659 = function () {
         t.member6100[t.member6099++] = s;
     };
     Class421.member5274.member867 = function (t) {
-        if (!a.member7135() || !a.member6101.member9070().member3590()) {
+        if (!a.member7135() || !a.member6101.member9070().readyanim()) {
             return true;
         }
         t.member6099 -= 6;
@@ -258,25 +258,25 @@ export var Class659 = function () {
         a.member6101.member9070().member9057(E, G, A, B, x, s);
     };
     Class421.member5277.member867 = function (s) {
-        if (!a.member7135() || !a.member6101.member9070().member3590()) {
+        if (!a.member7135() || !a.member6101.member9070().readyanim()) {
             return true;
         }
         a.member6101.member9070().member9046();
     };
     Class421.member5278.member867 = function (s) {
-        if (!a.member7135() || !a.member6101.member9070().member3590()) {
+        if (!a.member7135() || !a.member6101.member9070().readyanim()) {
             return true;
         }
         a.member6101.member9070().member9047();
     };
     Class421.member5279.member867 = function (s) {
-        if (!a.member7135() || !a.member6101.member9070().member3590()) {
+        if (!a.member7135() || !a.member6101.member9070().readyanim()) {
             return true;
         }
         a.member6101.member9070().member9049();
     };
     Class421.member5280.member867 = function (s) {
-        if (!a.member7135() || !a.member6101.member9070().member3590()) {
+        if (!a.member7135() || !a.member6101.member9070().readyanim()) {
             return true;
         }
         a.member6101.member9070().member9048();

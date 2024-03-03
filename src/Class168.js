@@ -19,23 +19,23 @@ export var Class168 = function () {
     };
     var b = function (e, h) {
         this.member1827 = e;
-        this.member1828 = h.member608();
+        this.member1828 = h.g2();
         this.member1829 = new Uint8Array(this.member1828);
         this.member1830 = new Array(this.member1828);
         for (var d = 0; d < this.member1828; d++) {
-            this.member1829[d] = h.member609();
+            this.member1829[d] = h.g1();
             if (this.member1829[d] === Class167.member1822) {
                 this.member1829[d] = Class167.member1819;
             }
         }
-        h.member607(h.member1047() + this.member1828);
-        h.member607(h.member1047() + this.member1828 * 2);
+        h.setPos(h.getPos() + this.member1828);
+        h.setPos(h.getPos() + this.member1828 * 2);
         for (d = 0; d < this.member1828; d++) {
-            this.member1830[d] = new Uint16Array(h.member1078());
+            this.member1830[d] = new Uint16Array(h.gSmart1or2());
         }
         for (d = 0; d < this.member1828; d++) {
             for (var c = 0; c < this.member1830[d].length; c++) {
-                var g = h.member1078();
+                var g = h.gSmart1or2();
                 this.member1830[d][c] = g;
                 if (g > this.member1831) {
                     this.member1831 = g;

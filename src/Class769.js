@@ -1,9 +1,9 @@
 import { Class103 } from 'Class103.js';
 import { Class453 } from 'Class453.js';
 import { Class501 } from 'Class501.js';
-import { Class465 } from 'Class465.js';
+import { VarDomainType } from 'Class465.js';
 import { Class438 } from 'Class438.js';
-export var Class769 = function () {
+export var DelayedStateChange = function () {
     var aa = {};
     var ad = 1;
     var q = 2;
@@ -27,16 +27,16 @@ export var Class769 = function () {
     var X = 21;
     var Y = 1000 / 2;
     var ah;
-    var h = 0;
-    aa.member10380 = function () {
-        return h;
+    var verifyID = 0;
+    aa.getVerifyID = function () {
+        return verifyID;
     };
-    var ac = function () {
-        h++;
-        ab = true;
+    var incrementVerifyID = function () {
+        verifyID++;
+        verifyIDChanged = true;
     };
-    aa.member9780 = ac;
-    var ab = false;
+    aa.incrementVerifyID = incrementVerifyID;
+    var verifyIDChanged = false;
     var V = Class103();
     var v = Class103();
     var E = new Array(25);
@@ -52,8 +52,8 @@ export var Class769 = function () {
             for (var ai = 0; ai < E.length; ai++) {
                 E[ai] = {};
             }
-            h = 0;
-            ab = false;
+            verifyID = 0;
+            verifyIDChanged = false;
         }
     };
     aa.member7183 = y;
@@ -67,13 +67,13 @@ export var Class769 = function () {
                 N(al);
             }
         }
-        if (ab) {
+        if (verifyIDChanged) {
             var ak = ah.member8252.member8259();
             if (ak !== undefined) {
                 var ai = ak.member8260(Class501.member8118);
-                ai.member2698.member1056(h);
+                ai.packet.p4(verifyID);
                 ak.member8261(ai);
-                ab = false;
+                verifyIDChanged = false;
             }
         }
     };
@@ -82,11 +82,11 @@ export var Class769 = function () {
         var ao = true;
         if (ar.member2971) {
             if (ar.type === ad) {
-                var ax = ah.member2970.member7393(Class465.member7379, ar.member4249);
+                var ax = ah.member2970.getVarType(VarDomainType.CLIENT, ar.member4249);
                 ah.member6116.member9766().member2945(ax, ar.value);
                 ah.member7187.member9140(ar.member4249);
             } else if (ar.type === q) {
-                var ax = ah.member2970.member7393(Class465.member7379, ar.member4249);
+                var ax = ah.member2970.getVarType(VarDomainType.CLIENT, ar.member4249);
                 ah.member6116.member9766().member2945(ax, ar.value);
                 ah.member7187.member9142(ar.member4249);
             } else if (ar.type === Z) {
@@ -216,7 +216,7 @@ export var Class769 = function () {
                 var aq = ah.member7619.member7745().member7438(ar.member4249);
                 if (aq === null) {
                     ao = false;
-                } else if (aq.member2794() === Class438.member6636) {
+                } else if (aq.member2794() === Class438.MODEL) {
                     var ai = ar.value;
                     var at = ar.member10381;
                     aq.member7518(ai, at);
@@ -225,7 +225,7 @@ export var Class769 = function () {
                 var aq = ah.member7619.member7745().member7438(ar.member4249);
                 if (aq === null) {
                     ao = false;
-                } else if (aq.member2794() === Class438.member6636) {
+                } else if (aq.member2794() === Class438.MODEL) {
                     var aw = value;
                     var an = member10381;
                     aq.member7517(aw, an);
@@ -317,7 +317,7 @@ export var Class769 = function () {
         }
     };
     var U = function (ak, ai, aj) {
-        var al = k(ad, ai.member444());
+        var al = k(ad, ai.getID());
         if (ak) {
             al.member10386();
             al.value = aj;
@@ -327,11 +327,11 @@ export var Class769 = function () {
     };
     aa.member9622 = U;
     var T = function (ak, aj, ai) {
-        var al = k(ad, aj.member2949().member444());
+        var al = k(ad, aj.member2949().getID());
         if (ak) {
             al.member10386();
             if (C) {
-                al.value = ah.member6116.member9766().member2943(aj.member2949());
+                al.value = ah.member6116.member9766().getVarInt(aj.member2949());
             }
             al.value = aj.member2951(al.value, ai);
         } else {
@@ -340,7 +340,7 @@ export var Class769 = function () {
     };
     aa.member10204 = T;
     var S = function (ak, ai, aj) {
-        var al = k(q, ai.member444());
+        var al = k(q, ai.getID());
         if (ak) {
             al.member10386();
             al.value = aj;

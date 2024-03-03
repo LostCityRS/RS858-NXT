@@ -226,7 +226,7 @@ export var Class371 = function () {
         }
         aa = aq;
         Class370.member3383();
-        if (aj.member3590()) {
+        if (aj.readyanim()) {
             aj.member3650(b);
             aj.member3649(z);
             aj.member3651(R);

@@ -1,51 +1,51 @@
-import { Class170 } from 'Class170.js';
+import { HillChange } from 'Class170.js';
 import { Class459 } from 'Class459.js';
 import { Class188 } from 'Class188.js';
 import { Class95 } from 'Class95.js';
 import { Class209 } from 'Class209.js';
-import { Class96 } from 'Class96.js';
-export var Class729 = function () {
-    var a = function (k) {
+import { Priority } from 'Class96.js';
+export var EffectAnimType = function () {
+    var EffectAnimType = function (k) {
         var r = {};
         var y;
         var b;
-        r.member444 = function () {
+        r.getID = function () {
             return b;
         };
-        if (k.member625 !== undefined && k.member2896 !== undefined) {
+        if (k.member625 !== undefined && k.myList !== undefined) {
             b = k.member625;
-            y = k.member2896;
+            y = k.myList;
         } else {
             throw new Error('1440 ');
         }
-        var h;
-        var s = -1;
+        var model;
+        var anim = -1;
         r.member4609 = function () {
-            return s;
+            return anim;
         };
-        var u;
-        var g;
-        var t;
-        var d;
-        var v = 1;
-        var n = 1;
-        var e = 0;
+        var recol_s;
+        var recol_d;
+        var retex_s;
+        var retex_d;
+        var resizeh = 1;
+        var resizev = 1;
+        var rotation = 0;
         var x = false;
         r.member8464 = function () {
             return x;
         };
-        var c = Class170.member1852;
+        var hillchange_mode = HillChange.member1852;
         r.member8466 = function () {
-            return c === Class170.member1855;
+            return hillchange_mode === HillChange.ROTATE;
         };
-        var m;
+        var hillchange_value;
         var i = true;
         r.member4494 = function () {
             return i;
         };
         r.decode = function (B) {
             while (true) {
-                var A = B.member609();
+                var A = B.g1();
                 if (A === undefined) {
                     throw new Error('1441 ');
                     break;
@@ -53,57 +53,57 @@ export var Class729 = function () {
                 if (A === 0) {
                     break;
                 }
-                o(B, A);
+                decodeNext(B, A);
             }
         };
         var q = r.decode;
-        var o = function (E, B) {
-            if (B === 1) {
-                h = E.member1086();
-            } else if (B === 2) {
-                s = E.member1086();
-            } else if (B === 4) {
-                v = E.member608() / Class459.member7266;
-            } else if (B === 5) {
-                n = E.member608() / Class459.member7266;
-            } else if (B === 6) {
-                e = E.member608();
-            } else if (B === 7) {
-                E.member609();
-            } else if (B === 8) {
-                E.member609();
-            } else if (B === 9) {
-                c = Class170.member1855;
-                m = Class459.member7267;
-            } else if (B === 10) {
+        var decodeNext = function (packet, opcode) {
+            if (opcode === 1) {
+                model = packet.gSmart2or4null();
+            } else if (opcode === 2) {
+                anim = packet.gSmart2or4null();
+            } else if (opcode === 4) {
+                resizeh = packet.g2() / Class459.member7266;
+            } else if (opcode === 5) {
+                resizev = packet.g2() / Class459.member7266;
+            } else if (opcode === 6) {
+                rotation = packet.g2();
+            } else if (opcode === 7) {
+                packet.g1();
+            } else if (opcode === 8) {
+                packet.g1();
+            } else if (opcode === 9) {
+                hillchange_mode = HillChange.ROTATE;
+                hillchange_value = Class459.member7267;
+            } else if (opcode === 10) {
                 x = true;
-            } else if (B === 15) {
-                c = Class170.member1855;
-                m = E.member608();
-            } else if (B === 16) {
-                c = Class170.member1855;
-                m = E.member1073();
-            } else if (B === 40) {
-                var C = E.member609();
-                u = new Float32Array(C);
-                g = new Float32Array(C);
-                for (var A = 0; A < C; A++) {
-                    u[A] = E.member608();
-                    g[A] = E.member608();
+            } else if (opcode === 15) {
+                hillchange_mode = HillChange.ROTATE;
+                hillchange_value = packet.g2();
+            } else if (opcode === 16) {
+                hillchange_mode = HillChange.ROTATE;
+                hillchange_value = packet.g4();
+            } else if (opcode === 40) {
+                var count = packet.g1();
+                recol_s = new Float32Array(count);
+                recol_d = new Float32Array(count);
+                for (var A = 0; A < count; A++) {
+                    recol_s[A] = packet.g2();
+                    recol_d[A] = packet.g2();
                 }
-            } else if (B === 41) {
-                var D = E.member609();
-                t = new Float32Array(D);
-                d = new Float32Array(D);
-                for (var A = 0; A < D; A++) {
-                    t[A] = E.member608();
-                    d[A] = E.member608();
+            } else if (opcode === 41) {
+                var count = packet.g1();
+                retex_s = new Float32Array(count);
+                retex_d = new Float32Array(count);
+                for (var i = 0; i < count; i++) {
+                    retex_s[i] = packet.g2();
+                    retex_d[i] = packet.g2();
                 }
-            } else if (B === 44) {
-                E.member608();
-            } else if (B === 45) {
-                E.member608();
-            } else if (B === 46) {
+            } else if (opcode === 44) {
+                packet.g2();
+            } else if (opcode === 45) {
+                packet.g2();
+            } else if (opcode === 46) {
                 i = false;
             } else if (false) {
             }
@@ -111,7 +111,7 @@ export var Class729 = function () {
         if (true) {
             r.member7075 = function (F, E, D) {
                 var C = null;
-                var C = y.member9978().find(h);
+                var C = y.member9978().find(model);
                 if (C === null) {
                     var B = j();
                     if (B === null) {
@@ -120,31 +120,31 @@ export var Class729 = function () {
                     var A = {};
                     A.member10111 = B;
                     C = Class188(B, undefined, F);
-                    y.member9978().put(C, 1, h);
+                    y.member9978().put(C, 1, model);
                 }
                 return C;
             };
             var z = r.member7075;
             r.member2008 = function () {
-                var A = y.member9979().find(h);
+                var A = y.member9979().find(model);
                 if (A === null) {
-                    if (!y.member7535().member1551(Class95.member810, h, 0)) {
+                    if (!y.member7535().member1551(Class95.member810, model, 0)) {
                         return null;
                     }
-                    A = Class209(y.member7535().getFile(Class95.member810, h, 0, Class96.member840));
+                    A = Class209(y.member7535().getFile(Class95.member810, model, 0, Priority.member840));
                     if (A.member2463() < 13) {
                         A.member2495(2);
                     }
-                    if (u !== undefined) {
-                        A.member2497(u, g);
+                    if (recol_s !== undefined) {
+                        A.member2497(recol_s, recol_d);
                     }
-                    if (t !== undefined) {
-                        A.member2499(t, d);
+                    if (retex_s !== undefined) {
+                        A.member2499(retex_s, retex_d);
                     }
-                    if (v !== 1 || n !== 1) {
-                        A.scale(v, n, v);
+                    if (resizeh !== 1 || resizev !== 1) {
+                        A.scale(resizeh, resizev, resizeh);
                     }
-                    y.member9979().put(A, 1, h);
+                    y.member9979().put(A, 1, model);
                 }
                 return A;
             };
@@ -154,5 +154,5 @@ export var Class729 = function () {
         k = undefined;
         return r;
     };
-    return a;
+    return EffectAnimType;
 }();

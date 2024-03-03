@@ -52,7 +52,7 @@ export var Class597 = function () {
         var n;
         if (true) {
             n = Class423.member6130(Class423.member6115.member6111);
-            if (n === member47) {
+            if (n === NULL) {
                 n = null;
             }
         } else {
@@ -73,7 +73,7 @@ export var Class597 = function () {
         var n;
         if (true) {
             n = Class423.member6130(Class423.member6115.member6111);
-            if (n === member47) {
+            if (n === NULL) {
                 n = null;
             }
         } else {
@@ -95,7 +95,7 @@ export var Class597 = function () {
         var n;
         if (true) {
             n = Class423.member6130(Class423.member6115.member6111);
-            if (n === member47) {
+            if (n === NULL) {
                 n = null;
             }
         } else {
@@ -124,7 +124,7 @@ export var Class597 = function () {
             var q = i.member6453();
             if (q !== undefined) {
                 o = q.member7136();
-                if (o !== member47) {
+                if (o !== NULL) {
                     k = o.member7917();
                 }
             } else {
@@ -232,7 +232,7 @@ export var Class597 = function () {
         var n = k.member6142[--k.member6143];
         var j = k.member6100[--k.member6099];
         var i = c.member3639(j);
-        if (i === member47) {
+        if (i === NULL) {
             k.member6099++;
             k.member6143++;
             return true;
@@ -240,7 +240,7 @@ export var Class597 = function () {
         var m;
         if (true) {
             m = Class423.member6130(Class423.member6115.member6111);
-            if (m === member47) {
+            if (m === NULL) {
                 m = null;
             }
         } else {

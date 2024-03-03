@@ -1,6 +1,6 @@
 import { Class262 } from 'Class262.js';
 import { Class279 } from 'Class279.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class276 } from 'Class276.js';
 import { Class280 } from 'Class280.js';
 export var Class281 = function () {
@@ -137,30 +137,30 @@ export var Class281 = function () {
                 br = T(ag);
             }
             if (br !== undefined && br !== null) {
-                var bt = Class124(undefined, br);
-                if (bt.member609() !== 74 || bt.member609() != 65 || bt.member609() !== 71 || bt.member609() !== 65) {
+                var bt = Packet(undefined, br);
+                if (bt.g1() !== 74 || bt.g1() != 65 || bt.g1() !== 71 || bt.g1() !== 65) {
                     throw new Error('1682 ');
                 }
-                N = bt.member1073();
-                aj = bt.member1073();
+                N = bt.g4();
+                aj = bt.g4();
                 if (aj < 0) {
                     aj = ~aj;
                     r = true;
                 }
-                var bm = bt.member1073();
-                h = bt.member1073();
-                X = bt.member1073();
+                var bm = bt.g4();
+                h = bt.g4();
+                X = bt.g4();
                 C = aK > X ? X : aK;
                 for (var bl = 0; bl < X; bl++) {
-                    u[bl] = bt.member1073();
-                    aQ[bl] = bt.member1073();
+                    u[bl] = bt.g4();
+                    aQ[bl] = bt.g4();
                 }
-                Z = bt.member1047();
+                Z = bt.getPos();
                 for (var bl = 0; bl < (T === undefined ? X : 1); bl++) {
-                    var bq = bt.member1047();
+                    var bq = bt.getPos();
                     var bo = bq + u[bl];
                     t[bl] = bq;
-                    bt.member607(bo);
+                    bt.setPos(bo);
                 }
                 a7 = at ? new Array(C) : new Array(X);
                 M = new Array(a7.length);
@@ -668,7 +668,7 @@ export var Class281 = function () {
         var aL = function () {
             return o;
         };
-        bb.member2703 = aL;
+        bb.getPriority = aL;
         var av = function () {
             var bl = n;
             n = false;

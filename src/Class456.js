@@ -8,13 +8,13 @@ export var Class456 = function () {
     b.member25 = c;
     Class433.member6251.member6428 = function (j, n) {
         var m = a.member7259;
-        while (j.member1047() < n) {
-            var e = j.member609();
+        while (j.getPos() < n) {
+            var e = j.g1();
             var i = (e & 1) === 1;
             var r = (e & 2) === 2;
-            var d = j.member1089();
-            var q = j.member1089();
-            var h = j.member1089();
+            var d = j.gjstr();
+            var q = j.gjstr();
+            var h = j.gjstr();
             var o = true;
             for (var k = 0; k < m.member7238(); k++) {
                 var g = m.member7235(k);

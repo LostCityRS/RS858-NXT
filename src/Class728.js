@@ -1,39 +1,39 @@
-export var Class728 = function (m) {
-    var g = {};
+export var FloorUnderlayType = function (m) {
+    var FloorUnderlayType = {};
     var d;
     var j = -1;
-    if (m.member625 !== undefined && m.member2896 !== undefined) {
+    if (m.member625 !== undefined && m.myList !== undefined) {
         j = m.member625;
-        d = m.member2896;
+        d = m.myList;
     } else {
         throw new Error('1350 ');
     }
-    var k = 0;
-    g.member600 = function () {
-        return k;
+    var colour = 0;
+    FloorUnderlayType.getColour = function () {
+        return colour;
     };
-    var h = -1;
-    g.member701 = function () {
-        return h;
+    var material = -1;
+    FloorUnderlayType.getMaterial = function () {
+        return material;
     };
-    var e = 1;
-    g.member10110 = function () {
-        return e;
+    var materialscale = 1;
+    FloorUnderlayType.getMaterialScale = function () {
+        return materialscale;
     };
-    var c = true;
+    var hardshadow = true;
     var i = function () {
         return {
             member625: j,
-            member546: k,
-            member651: h,
-            member743: e,
-            member2526: c
+            member546: colour,
+            member651: material,
+            member743: materialscale,
+            member2526: hardshadow
         };
     };
-    g.member681 = i;
-    var b = function (o) {
+    FloorUnderlayType.member681 = i;
+    var decode = function (o) {
         while (true) {
-            var n = o.member609();
+            var n = o.g1();
             if (n === undefined) {
                 throw new Error('1351 ');
                 break;
@@ -41,31 +41,31 @@ export var Class728 = function (m) {
             if (n === 0) {
                 break;
             }
-            a(o, n);
+            decodeNext(o, n);
         }
     };
-    g.decode = b;
-    var a = function (q, o) {
-        if (o === 1) {
-            var n = q.g3();
+    FloorUnderlayType.decode = decode;
+    var decodeNext = function (packet, opcode) {
+        if (opcode === 1) {
+            var n = packet.g3();
             if (n === 16711935) {
-                k = 0;
+                colour = 0;
             } else {
-                k = n << 8 | 255;
+                colour = n << 8 | 255;
             }
-        } else if (o === 2) {
-            h = q.member608();
-            if (h === 65535) {
-                h = -1;
+        } else if (opcode === 2) {
+            material = packet.g2();
+            if (material === 65535) {
+                material = -1;
             }
-        } else if (o === 3) {
-            e = q.member608() / 128;
-        } else if (o === 4) {
-            c = false;
-        } else if (o === 5) {
+        } else if (opcode === 3) {
+            materialscale = packet.g2() / 128;
+        } else if (opcode === 4) {
+            hardshadow = false;
+        } else if (opcode === 5) {
         } else if (false) {
         }
     };
     m = undefined;
-    return g;
+    return FloorUnderlayType;
 };

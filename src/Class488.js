@@ -20,17 +20,17 @@ export var Class488 = function (n) {
     };
     g.member7742 = k;
     var j = function (s) {
-        return d.member2943(s);
+        return d.getVarInt(s);
     };
-    g.member2943 = j;
+    g.getVarInt = j;
     var e = function (s, t) {
         d.member2945(s, t);
     };
     g.member2945 = e;
     var c = function (s) {
-        return d.member2950(s);
+        return d.getVarBit(s);
     };
-    g.member2950 = c;
+    g.getVarBit = c;
     var b = function (t, s) {
         d.member2952(t, s);
     };

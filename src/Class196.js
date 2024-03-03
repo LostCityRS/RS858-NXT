@@ -1,5 +1,5 @@
-import { Class124 } from 'Class124.js';
-import { Class170 } from 'Class170.js';
+import { Packet } from 'Class124.js';
+import { HillChange } from 'Class170.js';
 import { Class192 } from 'Class192.js';
 import { Class171 } from 'Class171.js';
 import { Class174 } from 'Class174.js';
@@ -47,11 +47,11 @@ export var Class196 = function () {
                 var z = new Array(0);
                 var C = 0;
                 for (var B = 0; B < c.length; B++) {
-                    var A = Class124(undefined, c[B]);
-                    var u = A.member609();
-                    A.member607(0);
+                    var A = Packet(undefined, c[B]);
+                    var u = A.g1();
+                    A.setPos(0);
                     var v;
-                    if (u === Class170.member1859) {
+                    if (u === HillChange.member1859) {
                         v = Class192(A);
                         if (v.member2197() < 13) {
                             v.member2226(2);
@@ -65,7 +65,7 @@ export var Class196 = function () {
                         if (r !== undefined && r[B] !== undefined) {
                             v.translate(r[B]);
                         }
-                    } else if (u === Class170.member1860) {
+                    } else if (u === HillChange.member1860) {
                         v = Class171({ data: A });
                     } else {
                         throw new Error('1843 ' + u);
@@ -75,7 +75,7 @@ export var Class196 = function () {
                 }
                 if (z.length === 1) {
                     p = z[0];
-                } else if (z[0].member1886() === Class170.member1859) {
+                } else if (z[0].member1886() === HillChange.member1859) {
                     p = Class192(undefined, z);
                 } else {
                     p = Class171({ member1876: z });
@@ -105,7 +105,7 @@ export var Class196 = function () {
                     n = Class151({ empty: true });
                 }
             }
-            if (p.member1886() === Class170.member1859) {
+            if (p.member1886() === HillChange.member1859) {
                 var G = Class188(p, undefined, undefined, n);
             } else {
                 var G = Class188(undefined, p, undefined, n);

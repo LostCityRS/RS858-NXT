@@ -1,5 +1,5 @@
 import { Class377 } from 'Class377.js';
-import { Class166 } from 'Class166.js';
+import { Cuboid } from 'Class166.js';
 export var Class508 = function () {
     var a = function (c) {
         var e = {};
@@ -14,8 +14,8 @@ export var Class508 = function () {
             b = Class377();
         };
         var g = e.member301;
-        var d = Class166(new Float32Array(3), new Float32Array(3));
-        var h = Class166(new Float32Array(3), new Float32Array(3));
+        var d = Cuboid(new Float32Array(3), new Float32Array(3));
+        var h = Cuboid(new Float32Array(3), new Float32Array(3));
         e.member4190 = function (i, k, m, j) {
             b.member4190(i, k, m, j);
         };

@@ -23,12 +23,12 @@ export var Class708 = function () {
     };
     e.member7183 = d;
     e.member3295 = function (j) {
-        var i = j.member609();
-        var h = j.member609();
-        if (j.member609() === 0) {
+        var i = j.g1();
+        var h = j.g1();
+        if (j.g1() === 0) {
             c[i][h] = Class518({ member8405: true });
         } else {
-            j.member607(j.member1047() - 1);
+            j.setPos(j.getPos() - 1);
             c[i][h] = Class518({ data: j });
         }
         b.member7187.member9160();

@@ -95,7 +95,7 @@ export var Class502 = function (j) {
         if (i === undefined) {
             return 0;
         } else {
-            return i.member1059 + i.member1058 * Math.pow(2, 32);
+            return i.low + i.high * Math.pow(2, 32);
         }
     };
     v.member8196 = function (K) {

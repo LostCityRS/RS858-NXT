@@ -16,9 +16,9 @@ export var Class231 = function () {
     }
     d.member2769 = function (m, n, j) {
         var k = 4294967295;
-        m.member607(n);
+        m.setPos(n);
         for (var i = 0; i < j; i++) {
-            k = k >>> 8 ^ g[(k ^ m.member609()) & 255];
+            k = k >>> 8 ^ g[(k ^ m.g1()) & 255];
         }
         k ^= 4294967295;
         return k;

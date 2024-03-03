@@ -1,602 +1,603 @@
 import { Class432 } from 'Class432.js';
 import { Class41 } from 'Class41.js';
-import { Class166 } from 'Class166.js';
+import { Cuboid } from 'Class166.js';
 import { Class454 } from 'Class454.js';
-import { Class465 } from 'Class465.js';
+import { VarDomainType } from 'Class465.js';
 import { Class542 } from 'Class542.js';
 import { Class188 } from 'Class188.js';
 import { Class209 } from 'Class209.js';
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class86 } from 'Class86.js';
-export var Class543 = function () {
+export var NPCType = function () {
     var b = true;
     var a = 6;
-    var c = function (e, d, g) {
-        this.member2896;
+    var NPCType = function (e, d, g) {
+        this.myList;
         this.member625;
-        this.member8602 = null;
+        this.op = null;
         if (e !== undefined && d !== undefined && g !== undefined) {
             this.member625 = e;
-            this.member2896 = d;
-            this.member8602 = g;
+            this.myList = d;
+            this.op = g;
         } else {
             throw new Error('1665 ');
         }
         this.name = 'null';
-        this.member8376 = false;
-        this.member8603 = null;
-        this.member8604 = -1;
-        this.member8605 = null;
-        this.member8606 = undefined;
-        this.member8607 = undefined;
+        this.members = false;
+        this.cursor = null;
+        this.attackcursor = -1;
+        this.quest = null;
+        this.headicon_id = undefined;
+        this.headicon_subid = undefined;
         this.icon = -1;
-        this.member8608 = -1;
-        this.member8609 = -1;
-        this.member8610 = -1;
+        this.overlayheight = -1;
+        this.reprioritiseattackop = -1;
+        this.vislevel = -1;
         this.params = null;
         this.member8611 = true;
-        this.member8612 = -1;
-        this.member8613 = 0;
-        this.member8614 = null;
-        this.member8615 = null;
-        this.member8616 = undefined;
-        this.member2615 = null;
-        this.member2616 = null;
+        this.spotshadowtexture = -1;
+        this.spotshadowtexturealpha = 0;
+        this.models = null;
+        this.headmodel = null;
+        this.modeloffset = undefined;
+        this.recol_s = null;
+        this.recol_d = null;
         this.member8617 = null;
-        this.member8618 = null;
-        this.member8619 = null;
-        this.member8620 = null;
-        this.member8621 = null;
-        this.member8622, this.member8623, this.member8624;
-        this.member8625 = 0;
+        this.recolindex = null;
+        this.retex_s = null;
+        this.retex_d = null;
+        this.retexindex = null;
+        this.tint_hue, this.tint_saturation, this.tint_lightness;
+        this.tint_strength = 0;
         this.resize = null;
-        this.member8626 = 64, this.member8627 = 0;
-        this.member8628 = true;
+        this.ambient = 64, this.contrast = 0;
+        this.antimacro = true;
         this.member8629 = 0;
-        this.member8630 = 0;
-        this.member8631 = null;
-        this.member8632 = -1;
-        this.member1561 = 1;
-        this.member8633 = false;
-        this.member8634 = false;
-        this.member8635 = false;
-        this.member7757 = 32;
-        this.member2524 = true;
-        this.member7850 = true;
-        this.member8636 = true;
+        this.picksizeshift = 0;
+        this.clickbox = null;
+        this.bas = -1;
+        this.size = 1;
+        this.drawabove = false;
+        this.drawbelow = false;
+        this.follower = false;
+        this.turnspeed = 32;
+        this.active = true;
+        this.walksmoothing = true;
+        this.spotshadow = true;
         this.member8637 = 0;
-        this.member8638 = Math.PI;
-        this.member8639 = Class432.member6229;
-        this.member8640 = true;
-        this.member8641 = -1;
-        this.member8642 = null;
-        this.member8643 = -1;
-        this.member8644 = -1;
-        this.member8645 = -1;
-        this.member8646 = -1;
-        this.member8647 = -1;
-        this.member8648 = -1;
-        this.member8649 = 0;
-        this.member8650 = 0;
-        this.member8651 = 255;
+        this.respawndir = Math.PI;
+        this.defaultmovemode = Class432.member6229;
+        this.minimap = true;
+        this.mapelement = -1;
+        this.multinpc = null;
+        this.multivar = -1;
+        this.multivarbit = -1;
+        this.bgsound_ready = -1;
+        this.bgsound_crawl = -1;
+        this.bgsound_walk = -1;
+        this.bgsound_run = -1;
+        this.bgsound_range = 0;
+        this.bgsound_size = 0;
+        this.bgsound_volume = 255;
         this.member8652 = false;
-        this.member8653 = 256, this.member8654 = 256;
+        this.bgsound_minrate = 256, this.bgsound_maxrate = 256;
         this.member8655 = false;
     };
-    c.prototype.member682 = function () {
+    NPCType.prototype.member682 = function () {
         return this.member625;
     };
-    c.prototype.member8656 = function () {
-        return this.member8602;
+    NPCType.prototype.getOps = function () {
+        return this.op;
     };
-    c.prototype.getName = function () {
+    NPCType.prototype.getName = function () {
         return this.name;
     };
-    c.prototype.member8657 = function (d) {
-        if (this.member8603 === null) {
+    NPCType.prototype.getCursor = function (d) {
+        if (this.cursor === null) {
             return -1;
         } else {
-            return this.member8603[d];
+            return this.cursor[d];
         }
     };
-    c.prototype.member8658 = function () {
-        return this.member8609;
+    NPCType.prototype.getReprioritiseAttackOp = function () {
+        return this.reprioritiseattackop;
     };
-    c.prototype.member8659 = function () {
-        return this.member8610;
+    NPCType.prototype.getVisLevel = function () {
+        return this.vislevel;
     };
-    c.prototype.member8660 = function () {
-        return this.member8605;
+    NPCType.prototype.getQuests = function () {
+        return this.quest;
     };
-    c.prototype.member8661 = function () {
+    NPCType.prototype.getIcon = function () {
         return this.icon;
     };
-    c.prototype.member4494 = function () {
+    NPCType.prototype.member4494 = function () {
         return this.member8611;
     };
-    c.prototype.member8662 = function () {
-        return this.member8612;
+    NPCType.prototype.getSpotShadowTexture = function () {
+        return this.spotshadowtexture;
     };
-    c.prototype.member8663 = function () {
-        return this.member8613;
+    NPCType.prototype.getSpotShadowTextureAlpha = function () {
+        return this.spotshadowtexturealpha;
     };
-    c.prototype.member4121 = function () {
-        return this.member8608;
+    NPCType.prototype.getOverlayHeight = function () {
+        return this.overlayheight;
     };
-    c.prototype.member7615 = function () {
-        return this.member8614;
+    NPCType.prototype.getModels = function () {
+        return this.models;
     };
-    c.prototype.member7616 = function () {
-        return this.member8615;
+    NPCType.prototype.getHeadModels = function () {
+        return this.headmodel;
     };
-    c.prototype.member8564 = function () {
-        return this.member8606;
+    NPCType.prototype.getHeadIconIDs = function () {
+        return this.headicon_id;
     };
-    c.prototype.member8565 = function () {
-        return this.member8607;
+    NPCType.prototype.getHeadIconSubIDs = function () {
+        return this.headicon_subid;
     };
-    c.prototype.member8599 = function () {
-        return this.member2615;
+    NPCType.prototype.getRecolS = function () {
+        return this.recol_s;
     };
-    c.prototype.member7607 = function () {
-        return this.member2616;
+    NPCType.prototype.getRecolD = function () {
+        return this.recol_d;
     };
-    c.prototype.member7650 = function () {
-        return this.member8618;
+    NPCType.prototype.getRecolIndices = function () {
+        return this.recolindex;
     };
-    c.prototype.member7661 = function () {
-        return this.member8619;
+    NPCType.prototype.getRetexS = function () {
+        return this.retex_s;
     };
-    c.prototype.member7608 = function () {
-        return this.member8620;
+    NPCType.prototype.getRetexD = function () {
+        return this.retex_d;
     };
-    c.prototype.member7651 = function () {
-        return this.member8621;
+    NPCType.prototype.getRetexIndices = function () {
+        return this.retexindex;
     };
-    c.prototype.member8600 = function () {
+    NPCType.prototype.getResize = function () {
         return this.resize;
     };
-    c.prototype.member8601 = function () {
-        return this.member8626;
+    NPCType.prototype.getAmbient = function () {
+        return this.ambient;
     };
-    c.prototype.member8664 = function () {
-        return this.member8630;
+    NPCType.prototype.getPickSizeShift = function () {
+        return this.picksizeshift;
     };
-    c.prototype.member4470 = function () {
-        return this.member8631;
+    NPCType.prototype.getClickbox = function () {
+        return this.clickbox;
     };
-    c.prototype.member8665 = function () {
+    NPCType.prototype.member8665 = function () {
         return this.member8629;
     };
-    c.prototype.member8666 = function () {
-        return this.member8632;
+    NPCType.prototype.getBAS = function () {
+        return this.bas;
     };
-    c.prototype.member7795 = function () {
-        return this.member1561;
+    NPCType.prototype.member7795 = function () {
+        return this.size;
     };
-    c.prototype.member8667 = function () {
-        return this.member7757;
+    NPCType.prototype.getTurnSpeed = function () {
+        return this.turnspeed;
     };
-    c.prototype.member2985 = function () {
-        return this.member2524;
+    NPCType.prototype.getActive = function () {
+        return this.active;
     };
-    c.prototype.member8668 = function () {
-        return this.member8635;
+    NPCType.prototype.getFollower = function () {
+        return this.follower;
     };
-    c.prototype.member8669 = function () {
-        return this.member8633;
+    NPCType.prototype.getDrawAbove = function () {
+        return this.drawabove;
     };
-    c.prototype.member8670 = function () {
-        return this.member8634;
+    NPCType.prototype.getDrawBelow = function () {
+        return this.drawbelow;
     };
-    c.prototype.member8671 = function () {
-        return this.member8640;
+    NPCType.prototype.getMinimap = function () {
+        return this.minimap;
     };
-    c.prototype.member8672 = function () {
-        return this.member8641;
+    NPCType.prototype.getMapElement = function () {
+        return this.mapelement;
     };
-    c.prototype.member8673 = function () {
-        return this.member8645;
+    NPCType.prototype.getBackgroundSoundReady = function () {
+        return this.bgsound_ready;
     };
-    c.prototype.member8674 = function () {
-        return this.member8646;
+    NPCType.prototype.getBackgroundSoundCrawl = function () {
+        return this.bgsound_crawl;
     };
-    c.prototype.member8675 = function () {
-        return this.member8647;
+    NPCType.prototype.getBackgroundSoundWalk = function () {
+        return this.bgsound_walk;
     };
-    c.prototype.member8676 = function () {
-        return this.member8648;
+    NPCType.prototype.getBackgroundSoundRun = function () {
+        return this.bgsound_run;
     };
-    c.prototype.member4500 = function () {
-        return this.member8649;
+    NPCType.prototype.getBackgroundSoundRange = function () {
+        return this.bgsound_range;
     };
-    c.prototype.member4501 = function () {
-        return this.member8650;
+    NPCType.prototype.getBackgroundSoundSize = function () {
+        return this.bgsound_size;
     };
-    c.prototype.member4499 = function () {
-        return this.member8651;
+    NPCType.prototype.getBackgroundSoundVolume = function () {
+        return this.bgsound_volume;
     };
-    c.prototype.member8677 = function () {
+    NPCType.prototype.member8677 = function () {
         return this.member8652;
     };
-    c.prototype.member8678 = function () {
-        return this.member8653;
+    NPCType.prototype.getBackgroundSoundMinRate = function () {
+        return this.bgsound_minrate;
     };
-    c.prototype.member8679 = function () {
-        return this.member8654;
+    NPCType.prototype.getBackgroundSoundMaxRate = function () {
+        return this.bgsound_maxrate;
     };
-    c.prototype.decode = function (g) {
+    NPCType.prototype.decode = function (g) {
         var e = -1;
         while (true) {
-            var d = g.member609();
+            var d = g.g1();
             if (d === 0) {
                 break;
             }
-            this.member2932(g, d, e);
-            if (g.member1047() > g.getSize()) {
+            this.decodeNext(g, d, e);
+            if (g.getPos() > g.getSize()) {
                 throw new Error('1666 ' + this.member625 + '1666 ' + d + '1666 ' + e);
             }
             e = d;
         }
     };
-    c.prototype.member2932 = function (K, i, F) {
+    NPCType.prototype.decodeNext = function (K, i, F) {
         if (i === 1) {
-            var z = K.member609();
-            this.member8614 = new Array(z);
+            var z = K.g1();
+            this.models = new Array(z);
             for (var D = 0; D < z; D++) {
-                this.member8614[D] = K.member1086();
+                this.models[D] = K.gSmart2or4null();
             }
         } else if (i === 2) {
-            this.name = K.member1089();
+            this.name = K.gjstr();
         } else if (i === 12) {
-            this.member1561 = K.member609();
+            this.size = K.g1();
         } else if (i >= 30 && i < 35) {
-            this.member8602[i - 30] = K.member1089();
+            this.op[i - 30] = K.gjstr();
         } else if (i === 39) {
-            this.member8627 = K.member1070() * 5;
+            this.contrast = K.g1s() * 5;
         } else if (i === 40) {
-            var A = K.member609();
-            this.member2615 = new Array(A);
-            this.member2616 = new Array(A);
+            var A = K.g1();
+            this.recol_s = new Array(A);
+            this.recol_d = new Array(A);
             for (var u = 0; u < A; u++) {
-                this.member2615[u] = K.member608();
-                this.member2616[u] = K.member608();
+                this.recol_s[u] = K.g2();
+                this.recol_d[u] = K.g2();
             }
         } else if (i === 41) {
-            var M = K.member609();
-            this.member8619 = new Array(M);
-            this.member8620 = new Array(M);
+            var M = K.g1();
+            this.retex_s = new Array(M);
+            this.retex_d = new Array(M);
             for (var t = 0; t < M; t++) {
-                this.member8619[t] = K.member1071();
-                this.member8620[t] = K.member1071();
+                this.retex_s[t] = K.g2s();
+                this.retex_d[t] = K.g2s();
             }
         } else if (i === 42) {
-            var e = K.member609();
+            var e = K.g1();
             this.member8617 = new Array(e);
             for (var m = 0; m < e; m++) {
-                this.member8617[m] = K.member1070();
+                this.member8617[m] = K.g1s();
             }
         } else if (i === 44) {
-            var J = K.member608();
+            var J = K.g2();
             var h = 0;
             for (var B = J; B > 0; B = B >> 1) {
                 h++;
             }
-            this.member8618 = new Array(h);
+            this.recolindex = new Array(h);
             var v = 0;
             for (var B = 0; B < h; B++) {
                 if ((J & 1 << B) > 0) {
-                    this.member8618[B] = v++;
+                    this.recolindex[B] = v++;
                 } else {
-                    this.member8618[B] = -1;
+                    this.recolindex[B] = -1;
                 }
             }
         } else if (i === 45) {
-            var H = K.member608();
+            var H = K.g2();
             var I = 0;
             for (var B = H; B > 0; B = B >> 1) {
                 I++;
             }
-            this.member8621 = new Array(I);
+            this.retexindex = new Array(I);
             var v = 0;
             for (var B = 0; B < I; B++) {
                 if ((H & 1 << B) > 0) {
-                    this.member8621[B] = v++;
+                    this.retexindex[B] = v++;
                 } else {
-                    this.member8621[B] = -1;
+                    this.retexindex[B] = -1;
                 }
             }
         } else if (i === 60) {
-            this.member8680 = K.member609();
-            this.member8615 = new Array(z);
-            for (D = 0; D < this.member8680; D++) {
-                this.member8615[D] = K.member1086();
+            this.headmodel_count = K.g1();
+            this.headmodel = new Array(z);
+            for (D = 0; D < this.headmodel_count; D++) {
+                this.headmodel[D] = K.gSmart2or4null();
             }
         } else if (i === 93) {
-            this.member8640 = false;
+            this.minimap = false;
         } else if (i === 95) {
-            this.member8610 = K.member608();
+            this.vislevel = K.g2();
         } else if (i === 97 || i === 98) {
             if (this.resize === null) {
                 this.resize = Class41.create();
                 this.resize[0] = this.resize[1] = this.resize[2] = 128;
             }
             if (i === 97) {
-                this.resize[0] = this.resize[2] = K.member608();
+                this.resize[0] = this.resize[2] = K.g2();
             } else {
-                this.resize[1] = K.member608();
+                this.resize[1] = K.g2();
             }
         } else if (i === 99) {
-            this.member8633 = true;
+            this.drawabove = true;
         } else if (i === 100) {
-            this.member8626 = K.member1070() + 64;
+            this.ambient = K.g1s() + 64;
         } else if (i === 101) {
-            this.member8627 = K.member1070() * 5;
+            this.contrast = K.g1s() * 5;
         } else if (i === 102) {
-            var E = K.member609();
+            var E = K.g1();
             var L = 0;
             var B = E;
             while (B !== 0) {
                 L++;
                 B >>= 1;
             }
-            this.member8606 = new Array(L);
-            this.member8607 = new Array(L);
+            this.headicon_id = new Array(L);
+            this.headicon_subid = new Array(L);
             for (var N = 0; N < L; N++) {
                 if ((E & 1 << N) === 0) {
-                    this.member8606[N] = -1;
-                    this.member8607[N] = -1;
+                    this.headicon_id[N] = -1;
+                    this.headicon_subid[N] = -1;
                 } else {
-                    this.member8606[N] = K.member1086();
-                    this.member8607[N] = K.member1081();
+                    this.headicon_id[N] = K.gSmart2or4null();
+                    this.headicon_subid[N] = K.gSmart1or2null();
                 }
             }
         } else if (i === 103) {
-            this.member7757 = K.member608();
+            this.turnspeed = K.g2();
         } else if (i === 106 || i === 118) {
-            this.member8644 = K.member608();
-            if (this.member8644 === 65535) {
-                this.member8644 = -1;
+            this.multivarbit = K.g2();
+            if (this.multivarbit === 65535) {
+                this.multivarbit = -1;
             }
-            this.member8643 = K.member608();
-            if (this.member8643 === 65535) {
-                this.member8643 = -1;
+            this.multivar = K.g2();
+            if (this.multivar === 65535) {
+                this.multivar = -1;
             }
             var d = -1;
             if (i === 118) {
-                d = K.member608();
+                d = K.g2();
                 if (d === 65535) {
                     d = -1;
                 }
             }
-            var k = K.member609();
-            this.member8642 = new Array(k + 2);
+            var k = K.g1();
+            this.multinpc = new Array(k + 2);
             for (var j = 0; j <= k; j++) {
-                this.member8642[j] = K.member608();
-                if (this.member8642[j] === 65535) {
-                    this.member8642[j] = -1;
+                this.multinpc[j] = K.g2();
+                if (this.multinpc[j] === 65535) {
+                    this.multinpc[j] = -1;
                 }
             }
-            this.member8642[k + 1] = d;
+            this.multinpc[k + 1] = d;
         } else if (i === 107) {
-            this.member2524 = false;
+            this.active = false;
         } else if (i === 109) {
-            this.member7850 = false;
+            this.walksmoothing = false;
         } else if (i === 111) {
-            this.member8636 = false;
+            this.spotshadow = false;
         } else if (i === 113) {
-            K.member608();
-            K.member608();
+            K.g2();
+            K.g2();
         } else if (i === 114) {
-            K.member1070();
-            K.member1070();
+            K.g1s();
+            K.g1s();
         } else if (i === 119) {
-            this.member8637 = K.member609();
+            this.member8637 = K.g1();
         } else if (i === 121) {
-            this.member8616 = new Array(this.member8614.length);
-            var r = K.member609();
+            this.modeloffset = new Array(this.models.length);
+            var r = K.g1();
             for (var o = 0; o < r; o++) {
-                var s = K.member609();
-                this.member8616[s] = Class41.create();
-                this.member8616[s][0] = K.member1070();
-                this.member8616[s][1] = K.member1070();
-                this.member8616[s][2] = K.member1070();
+                var s = K.g1();
+                this.modeloffset[s] = Class41.create();
+                this.modeloffset[s][0] = K.g1s();
+                this.modeloffset[s][1] = K.g1s();
+                this.modeloffset[s][2] = K.g1s();
             }
         } else if (i === 123) {
-            this.member8608 = K.member608();
+            this.overlayheight = K.g2();
         } else if (i === 125) {
-            this.member8638 = K.member1070();
+            this.respawndir = K.g1s();
         } else if (i === 127) {
-            this.member8632 = K.member608();
+            this.bas = K.g2();
         } else if (i === 128) {
-            this.member8639 = K.member609();
+            this.defaultmovemode = K.g1();
         } else if (i === 134) {
-            this.member8645 = K.member608();
-            if (this.member8645 === 65535) {
-                this.member8645 = -1;
+            this.bgsound_ready = K.g2();
+            if (this.bgsound_ready === 65535) {
+                this.bgsound_ready = -1;
             }
-            this.member8646 = K.member608();
-            if (this.member8646 === 65535) {
-                this.member8646 = -1;
+            this.bgsound_crawl = K.g2();
+            if (this.bgsound_crawl === 65535) {
+                this.bgsound_crawl = -1;
             }
-            this.member8647 = K.member608();
-            if (this.member8647 === 65535) {
-                this.member8647 = -1;
+            this.bgsound_walk = K.g2();
+            if (this.bgsound_walk === 65535) {
+                this.bgsound_walk = -1;
             }
-            this.member8648 = K.member608();
-            if (this.member8648 === 65535) {
-                this.member8648 = -1;
+            this.bgsound_run = K.g2();
+            if (this.bgsound_run === 65535) {
+                this.bgsound_run = -1;
             }
-            this.member8649 = K.member609();
+            this.bgsound_range = K.g1();
         } else if (i === 137) {
-            this.member8604 = K.member608();
-            if (this.member8603 === null) {
-                this.member8603 = new Array(a);
+            this.attackcursor = K.g2();
+            if (this.cursor === null) {
+                this.cursor = new Array(a);
                 for (var N = 0; N < a; N++) {
-                    this.member8603[N] = -1;
+                    this.cursor[N] = -1;
                 }
             }
-            this.member8603[1] = this.member8604;
+            this.cursor[1] = this.attackcursor;
         } else if (i === 138) {
-            this.icon = K.member1086();
+            this.icon = K.gSmart2or4null();
         } else if (i === 139) {
-            this.member8681 = K.member1086();
+            this.member8681 = K.gSmart2or4null();
         } else if (i === 140) {
-            this.member8651 = K.member609();
+            this.bgsound_volume = K.g1();
         } else if (i === 141) {
-            this.member8635 = true;
+            this.follower = true;
         } else if (i === 142) {
-            this.member8641 = K.member608();
+            this.mapelement = K.g2();
         } else if (i === 143) {
-            this.member8634 = true;
+            this.drawbelow = true;
         } else if (i >= 150 && i < 155) {
-            this.member8602[i - 150] = K.member1089();
-            if (!this.member2896.member8682()) {
-                this.member8602[i - 150] = null;
+            this.op[i - 150] = K.gjstr();
+            if (!this.myList.getAllowMembers()) {
+                this.op[i - 150] = null;
             }
         } else if (i === 155) {
-            this.member8622 = K.member1070();
-            this.member8623 = K.member1070();
-            this.member8624 = K.member1070();
-            this.member8625 = K.member1070();
+            this.tint_hue = K.g1s();
+            this.tint_saturation = K.g1s();
+            this.tint_lightness = K.g1s();
+            this.tint_strength = K.g1s();
         } else if (i === 158) {
-            this.member8609 = 1;
+            this.reprioritiseattackop = 1;
         } else if (i === 159) {
-            this.member8609 = 0;
+            this.reprioritiseattackop = 0;
         } else if (i === 160) {
-            var G = K.member609();
-            this.member8605 = new Array(G);
+            var G = K.g1();
+            this.quest = new Array(G);
             for (var C = 0; C < G; C++) {
-                this.member8605[C] = K.member608();
+                this.quest[C] = K.g2();
             }
         } else if (i === 162) {
             this.member8652 = true;
         } else if (i === 163) {
-            K.member609();
+            K.g1();
         } else if (i === 164) {
-            this.member8653 = K.member608();
-            this.member8654 = K.member608();
+            this.bgsound_minrate = K.g2();
+            this.bgsound_maxrate = K.g2();
         } else if (i === 165) {
-            this.member8630 = K.member609();
+            this.picksizeshift = K.g1();
         } else if (i === 168) {
-            this.member8650 = K.member609();
+            this.bgsound_size = K.g1();
         } else if (i === 169) {
-            this.member8628 = false;
+            this.antimacro = false;
         } else if (i >= 170 && i < 176) {
-            if (this.member8603 === null) {
-                this.member8603 = new Array(a);
+            if (this.cursor === null) {
+                this.cursor = new Array(a);
                 for (var N = 0; N < a; N++) {
-                    this.member8603[N] = -1;
+                    this.cursor[N] = -1;
                 }
             }
-            this.member8603[i - 170] = K.member608();
+            this.cursor[i - 170] = K.g2();
         } else if (i === 178) {
             this.member8611 = false;
         } else if (i === 179) {
-            this.member8631 = Class166({ member1795: K });
+            this.clickbox = Cuboid({ member1795: K });
         } else if (i === 180) {
-            this.member8629 = K.member609() * 1000 / 50;
+            this.member8629 = K.g1() * 1000 / 50;
         } else if (i === 181) {
-            this.member8612 = p.member608();
-            this.member8613 = p.member609();
+            this.spotshadowtexture = p.g2();
+            this.spotshadowtexturealpha = p.g1();
         } else if (i === 182) {
             this.member8655 = true;
         } else if (i === 249) {
-            var g = K.member609();
+            var g = K.g1();
             if (this.params === null) {
                 this.params = {};
             }
             for (var q = 0; q < g; q++) {
-                var y = K.member609() === 1;
+                var y = K.g1() === 1;
                 var x = K.g3();
                 if (y) {
-                    this.params[x] = K.member1089();
+                    this.params[x] = K.gjstr();
                 } else {
-                    this.params[x] = K.member1074();
+                    this.params[x] = K.g4s();
                 }
             }
         } else if (false) {
         }
     };
-    c.prototype.member2934 = function () {
-        if (this.member8614 === null) {
-            this.member8614 = new Array(0);
+    NPCType.prototype.postDecode = function () {
+        if (this.models === null) {
+            this.models = new Array(0);
         }
-        if (this.member8609 === -1) {
-            if (this.member2896.member8683() === Class454.member3713) {
-                this.member8609 = 1;
+        if (this.reprioritiseattackop === -1) {
+            if (this.myList.member8683() === Class454.member3713) {
+                this.reprioritiseattackop = 1;
             } else {
-                this.member8609 = 0;
+                this.reprioritiseattackop = 0;
             }
         }
     };
-    c.prototype.member8684 = function () {
-        return this.member8642 !== null;
+    NPCType.prototype.isMultiNPC = function () {
+        return this.multinpc !== null;
     };
-    c.prototype.member8685 = function () {
+    NPCType.prototype.member8685 = function () {
         return this.member8655;
     };
-    c.prototype.member8686 = function () {
-        if (this.member8642 === null || this.member2896.member8687() === null) {
+    NPCType.prototype.getMultiNPC = function () {
+        if (this.multinpc === null || this.myList.getVarValueProvider() === null) {
             return this;
         }
         var h = -1;
-        if (this.member8644 !== -1) {
-            var g = this.member2896.member7539().member7394(this.member8644);
-            if (g !== member47) {
-                h = this.member2896.member8687().member2950(g);
+        if (this.multivarbit !== -1) {
+            var g = this.myList.getVarTypeProvider().getVarBitType(this.multivarbit);
+            if (g !== NULL) {
+                h = this.myList.getVarValueProvider().getVarBit(g);
             }
-        } else if (this.member8643 !== -1) {
-            var d = this.member2896.member7539().member7393(Class465.member4134, this.member8643);
-            if (d !== member47) {
-                h = this.member2896.member8687().member2943(d);
+        } else if (this.multivar !== -1) {
+            var d = this.myList.getVarTypeProvider().getVarType(VarDomainType.PLAYER, this.multivar);
+            if (d !== NULL) {
+                h = this.myList.getVarValueProvider().getVarInt(d);
             }
         }
-        if (h < 0 || h >= this.member8642.length - 1) {
-            var e = this.member8642[this.member8642.length - 1];
+        if (h < 0 || h >= this.multinpc.length - 1) {
+            var e = this.multinpc[this.multinpc.length - 1];
             if (e !== -1) {
-                return this.member2896.list(e);
+                return this.myList.list(e);
             } else {
                 return undefined;
             }
         }
-        if (this.member8642[h] === -1) {
+        if (this.multinpc[h] === -1) {
             return undefined;
         }
-        return this.member2896.list(this.member8642[h]);
+        return this.myList.list(this.multinpc[h]);
     };
+    
     if (true) {
-        c.prototype.member8688 = function (e, n, r, j, o) {
+        NPCType.prototype.member8688 = function (e, n, r, j, o) {
             var k = this.member625;
             if (o !== undefined) {
                 k += o.member6725() * Math.pow(2, 16);
             }
-            var d = this.member2896.member8689();
+            var d = this.myList.member8689();
             var s = d.find(k);
             if (s === null) {
-                var m = this.member2896.member8690().find(k);
+                var m = this.myList.member8690().find(k);
                 if (m === null) {
-                    if (this.member2896.member8690().member906() > 0) {
+                    if (this.myList.member8690().getRemaining() > 0) {
                         var m = Class542(r, this, o);
                         if (n.member2939(m)) {
-                            this.member2896.member8690().put(m, 1, k);
+                            this.myList.member8690().put(m, 1, k);
                         }
-                        return member47;
+                        return NULL;
                     } else {
-                        return member47;
+                        return NULL;
                     }
                 } else {
                     var g = m.member2723();
                     if (!g.member2859) {
-                        return member47;
+                        return NULL;
                     } else if (!g.member2863) {
-                        this.member2896.member8690().remove(k);
-                        return member47;
+                        this.myList.member8690().remove(k);
+                        return NULL;
                     } else {
                         var i = m.member2893();
                         var h = undefined;
-                        if (i !== member47) {
+                        if (i !== NULL) {
                             var q = Class188(undefined, undefined, e, undefined, undefined, undefined, i.member680);
                             h = { member2621: q };
                             if (i.member2619 !== undefined) {
@@ -604,7 +605,7 @@ export var Class543 = function () {
                             }
                             d.put(h, 1, k);
                         }
-                        this.member2896.member8690().remove(k);
+                        this.myList.member8690().remove(k);
                         m.member2885();
                         if (h !== undefined) {
                             h.member2621.member563();
@@ -616,67 +617,67 @@ export var Class543 = function () {
                 return s;
             }
         };
-        c.prototype.member7546 = function (i, h, d, j) {
-            if (this.member8642 !== null) {
-                var e = this.member8686();
+        NPCType.prototype.member7546 = function (i, h, d, j) {
+            if (this.multinpc !== null) {
+                var e = this.getMultiNPC();
                 if (e === undefined || e === null) {
-                    return member47;
+                    return NULL;
                 }
                 return e.member7546(i, h, d, j);
             }
-            var g = this.member8688(i, h, d, this.member8614, j);
+            var g = this.member8688(i, h, d, this.models, j);
             if (g === undefined) {
                 return undefined;
-            } else if (g !== member47) {
+            } else if (g !== NULL) {
                 return g.member2619;
             } else {
-                return member47;
+                return NULL;
             }
         };
-        c.prototype.member7545 = function (i, h, d, j) {
-            if (this.member8642 !== null) {
-                var e = this.member8686();
+        NPCType.prototype.member7545 = function (i, h, d, j) {
+            if (this.multinpc !== null) {
+                var e = this.getMultiNPC();
                 if (e === undefined || e === null) {
-                    return member47;
+                    return NULL;
                 }
                 return e.member7545(i, h, d, j);
             }
-            var g = this.member8688(i, h, d, this.member8614, j);
+            var g = this.member8688(i, h, d, this.models, j);
             if (g === undefined) {
                 return undefined;
-            } else if (g !== member47) {
+            } else if (g !== NULL) {
                 return g.member2621;
             } else {
-                return member47;
+                return NULL;
             }
         };
-        c.prototype.member7544 = function (e) {
-            if (this.member8642 !== null) {
-                var d = this.member8686();
+        NPCType.prototype.member7544 = function (e) {
+            if (this.multinpc !== null) {
+                var d = this.getMultiNPC();
                 if (d === undefined || d === null) {
                     return null;
                 }
                 return d.member7544(e);
             }
-            if (this.member8615 === null && (e === undefined || e.member4486() === undefined)) {
+            if (this.headmodel === null && (e === undefined || e.getModels() === undefined)) {
                 return undefined;
             }
-            return this.member2008(this.member2896.member8691(), this.member8615, e);
+            return this.member2008(this.myList.member8691(), this.headmodel, e);
         };
-        c.prototype.member7543 = function (e, g) {
-            if (this.member8642 !== null) {
-                var d = this.member8686();
+        NPCType.prototype.member7543 = function (e, g) {
+            if (this.multinpc !== null) {
+                var d = this.getMultiNPC();
                 if (d === undefined || d === null) {
                     return null;
                 }
                 return d.member7543(e, g);
             }
-            if (this.member8615 === null && (g === undefined || g.member4486() === undefined)) {
+            if (this.headmodel === null && (g === undefined || g.getModels() === undefined)) {
                 return undefined;
             }
-            return this.member7075(e, this.member2896.member8692(), this.member2896.member8691(), this.member8615, g);
+            return this.member7075(e, this.myList.member8692(), this.myList.member8691(), this.headmodel, g);
         };
-        c.prototype.member2008 = function (d, e, i) {
+        NPCType.prototype.member2008 = function (d, e, i) {
             var g = this.member625;
             if (i !== undefined) {
                 g += i.member6725() * Math.pow(2, 16);
@@ -684,13 +685,13 @@ export var Class543 = function () {
             var n = d.find(g);
             if (n === null) {
                 var j = e;
-                if (i !== undefined && i.member4486() !== undefined) {
-                    j = i.member4486();
+                if (i !== undefined && i.getModels() !== undefined) {
+                    j = i.getModels();
                 }
                 var m = true;
                 for (var k = 0; k < j.length; k++) {
                     if (j[k] != -1) {
-                        if (!this.member2896.member7535().member1551(Class95.member810, j[k], 0)) {
+                        if (!this.myList.member7535().member1551(Class95.member810, j[k], 0)) {
                             m = false;
                         }
                     }
@@ -701,12 +702,12 @@ export var Class543 = function () {
                 var h = new Array(j.length);
                 for (k = 0; k < j.length; k++) {
                     if (j[k] != -1) {
-                        h[k] = Class209(this.member2896.member7535().getFile(Class95.member810, j[k], 0, Class96.member840));
+                        h[k] = Class209(this.myList.member7535().getFile(Class95.member810, j[k], 0, Priority.member840));
                         if (h[k].member2463() < 13) {
                             h[k].member2495(Class86.member719);
                         }
-                        if (this.member8616 !== undefined && this.member8616[k] !== undefined) {
-                            h[k].translate(member8616[k]);
+                        if (this.modeloffset !== undefined && this.modeloffset[k] !== undefined) {
+                            h[k].translate(modeloffset[k]);
                         }
                     }
                 }
@@ -715,30 +716,30 @@ export var Class543 = function () {
                 } else {
                     n = Class209(undefined, h);
                 }
-                if (this.member2615 !== null) {
-                    if (i !== undefined && i.member7607() !== undefined) {
-                        n.member2497(this.member2615, i.member7607());
+                if (this.recol_s !== null) {
+                    if (i !== undefined && i.getRecolD() !== undefined) {
+                        n.member2497(this.recol_s, i.getRecolD());
                     } else if (this.member8617 !== null) {
                         throw new Error('1667 ');
-                    } else if (this.member2616 !== null) {
-                        n.member2497(this.member2615, this.member2616);
+                    } else if (this.recol_d !== null) {
+                        n.member2497(this.recol_s, this.recol_d);
                     }
                 }
-                if (this.member8619 !== null) {
-                    if (i !== undefined && i.member7608() !== undefined) {
-                        n.member2499(this.member8619, i.member7608());
-                    } else if (this.member8620 !== null) {
-                        n.member2499(this.member8619, this.member8620);
+                if (this.retex_s !== null) {
+                    if (i !== undefined && i.getRetexD() !== undefined) {
+                        n.member2499(this.retex_s, i.getRetexD());
+                    } else if (this.retex_d !== null) {
+                        n.member2499(this.retex_s, this.retex_d);
                     }
                 }
-                if (this.member8626 !== undefined) {
-                    n.member2500(this.member8626);
+                if (this.ambient !== undefined) {
+                    n.member2500(this.ambient);
                 }
                 d.put(n, 1, g);
             }
             return n;
         };
-        c.prototype.member7075 = function (j, h, g, m, k) {
+        NPCType.prototype.member7075 = function (j, h, g, m, k) {
             var i = this.member625;
             if (k !== undefined) {
                 i += k.member6725() * Math.pow(2, 16);
@@ -756,7 +757,7 @@ export var Class543 = function () {
         };
     } else {
     }
-    c.prototype.getParam = function (g, e) {
+    NPCType.prototype.getParam = function (g, e) {
         if (this.params === null) {
             return e;
         }
@@ -767,7 +768,7 @@ export var Class543 = function () {
             return d;
         }
     };
-    c.prototype.member2941 = function (g, e) {
+    NPCType.prototype.member2941 = function (g, e) {
         if (this.params === null) {
             return e;
         }
@@ -779,6 +780,6 @@ export var Class543 = function () {
         }
     };
     return function (e, d, g) {
-        return new c(e, d, g);
+        return new NPCType(e, d, g);
     };
 }();

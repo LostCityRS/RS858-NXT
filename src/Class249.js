@@ -13,7 +13,7 @@ export var Class249 = function () {
         this.member2887 = d;
         this.member2235 = c;
         this.loop = i;
-        this.member2888 = member47;
+        this.member2888 = NULL;
     };
     member45(Class248, a);
     a.prototype.member2889 = function (c, b) {

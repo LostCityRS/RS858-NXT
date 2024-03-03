@@ -15,7 +15,7 @@ export var Class91 = function () {
         var u;
         var s;
         var n = false;
-        j.member444 = function () {
+        j.getID = function () {
             return e;
         };
         j.member780 = function () {

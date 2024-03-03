@@ -1,6 +1,6 @@
 import { Class291 } from 'Class291.js';
 import { Class421 } from 'Class421.js';
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 export var Class629 = function () {
     var c = {};
     var b;
@@ -37,11 +37,11 @@ export var Class629 = function () {
         var g = b.member7135();
         if (g !== undefined) {
             var e = g.member6453();
-            var i = Class290();
+            var i = CoordFine();
             e.member7838(i);
             h.member6142[h.member6143++] = i;
         } else {
-            h.member6142[h.member6143++] = Class290();
+            h.member6142[h.member6143++] = CoordFine();
         }
     };
     Class421.member5507.member867 = function (g) {
@@ -61,7 +61,7 @@ export var Class629 = function () {
         g.member6100[g.member6099++] = e.level;
     };
     Class421.member5511.member867 = function (g) {
-        var e = Class290(g.member6142[--g.member6143]);
+        var e = CoordFine(g.member6142[--g.member6143]);
         g.member6099 -= 4;
         e.level += g.member6100[g.member6099];
         e.member3454[0] += g.member6100[g.member6099 + 1];

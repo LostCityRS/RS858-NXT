@@ -4,7 +4,7 @@ import { Class105 } from 'Class105.js';
 import { Class49 } from 'Class49.js';
 import { Class71 } from 'Class71.js';
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class93 } from 'Class93.js';
 import { Class80 } from 'Class80.js';
 import { Class76 } from 'Class76.js';
@@ -228,7 +228,7 @@ export var Class117 = function () {
             if (A !== null) {
                 return A;
             }
-            var E = r.getFile(Class95.member811, B, 0, Class96.member840, Class93.member796);
+            var E = r.getFile(Class95.member811, B, 0, Priority.member840, Class93.member796);
             if (E === undefined) {
                 return null;
             }
@@ -236,7 +236,7 @@ export var Class117 = function () {
                 return null;
             }
             var D = Class80.member605(E);
-            var C = Class76(u, D.member556(), D.member557(), D.member600(), false, true, false);
+            var C = Class76(u, D.member556(), D.member557(), D.getColour(), false, true, false);
             D = null;
             E = null;
             if (C === null) {

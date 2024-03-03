@@ -14,16 +14,16 @@ export var Class684 = function () {
             this.member9856;
         };
         g.prototype.decode = function (r) {
-            if (r.member609() !== 255) {
+            if (r.g1() !== 255) {
                 throw new Error();
             }
-            this.member7233 = r.member1089();
+            this.member7233 = r.gjstr();
             if (this.member7233 === '') {
                 this.member7233 = undefined;
             }
-            this.member8439 = r.member608();
-            this.member8438 = r.member1070();
-            this.member9856 = r.member1077();
+            this.member8439 = r.g2();
+            this.member8438 = r.g1s();
+            this.member9856 = r.g8();
         };
         g.prototype.apply = function (r) {
             r.member9874(this.member7233, this.member8438, this.member8439, this.member9856);
@@ -33,9 +33,9 @@ export var Class684 = function () {
             this.member9876;
         };
         n.prototype.decode = function (r) {
-            this.member8436 = r.member608();
-            this.member9876 = r.member609();
-            if (r.member609() !== 255) {
+            this.member8436 = r.g2();
+            this.member9876 = r.g1();
+            if (r.g1() !== 255) {
                 throw new Error();
             }
         };
@@ -51,13 +51,13 @@ export var Class684 = function () {
             this.member9857;
         };
         i.prototype.decode = function (r) {
-            r.member609();
-            this.member8436 = r.member608();
-            this.member8438 = r.member1070();
-            this.member8439 = r.member608();
-            this.member3564 = r.member1077();
-            this.member7233 = r.member1089();
-            this.member9857 = r.member609() === 1;
+            r.g1();
+            this.member8436 = r.g2();
+            this.member8438 = r.g1s();
+            this.member8439 = r.g2();
+            this.member3564 = r.g8();
+            this.member7233 = r.gjstr();
+            this.member9857 = r.g1() === 1;
         };
         i.prototype.apply = function (s) {
             var r = s.member8848(this.member8436);
@@ -70,24 +70,24 @@ export var Class684 = function () {
             this.member9870;
         };
         h.prototype.decode = function (r) {
-            this.member2808 = r.member1089();
+            this.member2808 = r.gjstr();
             if (this.member2808 === '') {
                 this.member2808 = undefined;
             } else {
-                this.member9868 = r.member609() === 1;
-                this.member9869 = r.member1070();
-                this.member9870 = r.member1070();
+                this.member9868 = r.g1() === 1;
+                this.member9869 = r.g1s();
+                this.member9870 = r.g1s();
             }
         };
         h.prototype.apply = function (r) {
             r.member8556(this.member2808, this.member9868, this.member9869, this.member9870);
         };
         var e = function (t) {
-            t.member1077();
-            var r = t.member1077();
-            o = r.member1058 * Math.pow(2, 32) + r.member1059;
+            t.g8();
+            var r = t.g8();
+            o = r.high * Math.pow(2, 32) + r.low;
             j = [];
-            var s = t.member609();
+            var s = t.g1();
             while (s !== 0) {
                 var u;
                 switch (s) {
@@ -108,7 +108,7 @@ export var Class684 = function () {
                 }
                 u.decode(t);
                 j.push(u);
-                s = t.member609();
+                s = t.g1();
             }
         };
         var q = function (s) {

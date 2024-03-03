@@ -45,8 +45,8 @@ export var Class194 = function () {
         this.member1564 = null;
         this.member2241;
         this.member2242;
-        this.member2243;
-        this.member2244;
+        this.width;
+        this.length;
         this.member2245 = new Float32Array(4);
         this.member1675 = new Float32Array(3);
         this.member2246;
@@ -145,8 +145,8 @@ export var Class194 = function () {
                 var r = this.member2247 !== undefined ? this.member2247.getSize() : this.member2248.getSize();
                 this.member2257 = new Float32Array([
                     r * Class137.member1304,
-                    this.member2247 !== undefined ? q.member1330(this.member2247.member444()) : -1,
-                    this.member2248 !== undefined ? q.member1330(this.member2248.member444()) : -1,
+                    this.member2247 !== undefined ? q.member1330(this.member2247.getID()) : -1,
+                    this.member2248 !== undefined ? q.member1330(this.member2248.getID()) : -1,
                     this.member2239.member2269 / Class137.member1304
                 ]);
             }
@@ -163,8 +163,8 @@ export var Class194 = function () {
                 var r = this.member2247 !== undefined ? this.member2249.getSize() : this.member2250.getSize();
                 this.member2258 = new Float32Array([
                     r * Class137.member1304,
-                    this.member2249 !== undefined ? q.member1330(this.member2249.member444()) : -1,
-                    this.member2250 !== undefined ? q.member1330(this.member2250.member444()) : -1,
+                    this.member2249 !== undefined ? q.member1330(this.member2249.getID()) : -1,
+                    this.member2250 !== undefined ? q.member1330(this.member2250.getID()) : -1,
                     this.member2239.member2270 / Class137.member1304
                 ]);
             }
@@ -177,7 +177,7 @@ export var Class194 = function () {
             if (q !== undefined) {
                 this.member2259 = new Float32Array([
                     this.member2252.getSize() * Class137.member1304,
-                    q.member1330(this.member2252.member444()),
+                    q.member1330(this.member2252.getID()),
                     -1,
                     1 / this.member2239.member2271 / Class137.member1304
                 ]);
@@ -191,7 +191,7 @@ export var Class194 = function () {
             if (q !== undefined) {
                 this.member2260 = new Float32Array([
                     this.member2253.getSize() * Class137.member1304,
-                    q.member1330(this.member2253.member444()),
+                    q.member1330(this.member2253.getID()),
                     -1,
                     this.member2239.member2272 / Class137.member1304
                 ]);
@@ -235,47 +235,47 @@ export var Class194 = function () {
                 this.member2239.member2253
             ]);
         }
-        this.member2243 = Math.floor(this.member2239.width / this.member2239.member1592) + 2;
-        this.member2244 = Math.floor(this.member2239.length / this.member2239.member1592) + 2;
-        this.member1570 = new ArrayBuffer(this.member2243 * this.member2244 * i);
+        this.width = Math.floor(this.member2239.width / this.member2239.member1592) + 2;
+        this.length = Math.floor(this.member2239.length / this.member2239.member1592) + 2;
+        this.member1570 = new ArrayBuffer(this.width * this.length * i);
         this.member1577 = new Int16Array(this.member1570);
-        this.member1699 = new ArrayBuffer(this.member2243 * this.member2244 * 2 * 3 * 2);
+        this.member1699 = new ArrayBuffer(this.width * this.length * 2 * 3 * 2);
         this.member2262 = new Uint16Array(this.member1699);
         this.member2238 = false;
         if (this.member2239.member2280 !== 0) {
-            for (var q = 0; q < this.member2243; ++q) {
-                for (var y = 0; y < this.member2244; ++y) {
+            for (var q = 0; q < this.width; ++q) {
+                for (var y = 0; y < this.length; ++y) {
                     if (!this.member2238) {
                         this.member2238 |= this.member2275(q, y) >= 0;
                     }
                     this.member1604(q, y);
-                    if (q < this.member2243 - 1 && y < this.member2244 - 1) {
-                        this.member2262[this.member1568 * 3 + 0] = q * this.member2244 + y;
-                        this.member2262[this.member1568 * 3 + 1] = (q + 1) * this.member2244 + y;
-                        this.member2262[this.member1568 * 3 + 2] = q * this.member2244 + y + 1;
+                    if (q < this.width - 1 && y < this.length - 1) {
+                        this.member2262[this.member1568 * 3 + 0] = q * this.length + y;
+                        this.member2262[this.member1568 * 3 + 1] = (q + 1) * this.length + y;
+                        this.member2262[this.member1568 * 3 + 2] = q * this.length + y + 1;
                         this.member1568++;
-                        this.member2262[this.member1568 * 3 + 0] = (q + 1) * this.member2244 + y;
-                        this.member2262[this.member1568 * 3 + 1] = (q + 1) * this.member2244 + y + 1;
-                        this.member2262[this.member1568 * 3 + 2] = q * this.member2244 + y + 1;
+                        this.member2262[this.member1568 * 3 + 0] = (q + 1) * this.length + y;
+                        this.member2262[this.member1568 * 3 + 1] = (q + 1) * this.length + y + 1;
+                        this.member2262[this.member1568 * 3 + 2] = q * this.length + y + 1;
                         this.member1568++;
                     }
                 }
             }
         } else {
-            var s = new ArrayBuffer(this.member2243 * this.member2244 * 2);
+            var s = new ArrayBuffer(this.width * this.length * 2);
             var t = new Uint16Array(s);
-            var v = new ArrayBuffer(this.member2243 * this.member2244);
-            for (var q = 0; q < this.member2243; ++q) {
-                for (var y = 0; y < this.member2244; ++y) {
+            var v = new ArrayBuffer(this.width * this.length);
+            for (var q = 0; q < this.width; ++q) {
+                for (var y = 0; y < this.length; ++y) {
                     var z = this.member2275(q, y);
                     this.member2238 |= z >= 0;
                     var u = this.member2279(q, y);
                     var r = z < 0 || z <= this.member2239.member2281 * 8 || u <= this.member2239.member2282 * 1.5;
-                    v[q * this.member2244 + y] = !r;
-                    t[q * this.member2244 + y] = k;
+                    v[q * this.length + y] = !r;
+                    t[q * this.length + y] = k;
                 }
             }
-            this.member2283(t, v, 0, this.member2243, 0, this.member2244);
+            this.member2283(t, v, 0, this.width, 0, this.length);
         }
         if (this.member433 !== undefined) {
             this.member563();
@@ -306,16 +306,16 @@ export var Class194 = function () {
             if (A > 1 && v > 1) {
                 C = true;
                 for (var z = G; C && z <= F; z++) {
-                    if (z <= 0 || z >= this.member2243) {
+                    if (z <= 0 || z >= this.width) {
                         C = false;
                         continue;
                     }
                     for (var r = D; r <= B; r++) {
-                        if (r <= 0 || r >= this.member2244) {
+                        if (r <= 0 || r >= this.length) {
                             C = false;
                             break;
                         }
-                        if (!E[z * this.member2244 + r]) {
+                        if (!E[z * this.length + r]) {
                             C = false;
                             break;
                         }
@@ -329,13 +329,13 @@ export var Class194 = function () {
                 this.member2284(q, F, D);
                 this.member2284(q, G, B);
                 this.member2284(q, F, B);
-                this.member2262[this.member1568 * 3 + 0] = q[G * this.member2244 + D];
-                this.member2262[this.member1568 * 3 + 1] = q[F * this.member2244 + D];
-                this.member2262[this.member1568 * 3 + 2] = q[G * this.member2244 + B];
+                this.member2262[this.member1568 * 3 + 0] = q[G * this.length + D];
+                this.member2262[this.member1568 * 3 + 1] = q[F * this.length + D];
+                this.member2262[this.member1568 * 3 + 2] = q[G * this.length + B];
                 this.member1568++;
-                this.member2262[this.member1568 * 3 + 0] = q[F * this.member2244 + D];
-                this.member2262[this.member1568 * 3 + 1] = q[F * this.member2244 + B];
-                this.member2262[this.member1568 * 3 + 2] = q[G * this.member2244 + B];
+                this.member2262[this.member1568 * 3 + 0] = q[F * this.length + D];
+                this.member2262[this.member1568 * 3 + 1] = q[F * this.length + B];
+                this.member2262[this.member1568 * 3 + 2] = q[G * this.length + B];
                 this.member1568++;
             } else {
                 var y = Math.floor(A / 2);
@@ -376,8 +376,8 @@ export var Class194 = function () {
         }
     };
     j.prototype.member2284 = function (r, q, s) {
-        if (r[q * this.member2244 + s] === k) {
-            r[q * this.member2244 + s] = this.member2261 / i;
+        if (r[q * this.length + s] === k) {
+            r[q * this.length + s] = this.member2261 / i;
             this.member1604(q, s);
         }
     };
@@ -478,7 +478,7 @@ export var Class194 = function () {
         }
         var x = Class83.member619(Class82.member391, h);
         var s = Class132.member1266();
-        var z = s.member941(Class72.member498);
+        var z = s.member941(Class72.POINTLIGHT);
         var r = z.member987();
         x.member863 = q.member863;
         x.member2285 = this;

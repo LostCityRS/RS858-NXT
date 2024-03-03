@@ -45,7 +45,7 @@ export var Class556 = function () {
         var o = function () {
             if (v === undefined) {
                 var A = q.member1439(r[u]);
-                if (A === member47) {
+                if (A === NULL) {
                     return false;
                 }
                 v = A.member3902();
@@ -70,7 +70,7 @@ export var Class556 = function () {
         s.member78 = function () {
             for (var C = g.member776(); C !== undefined; C = g.member777()) {
                 var B = q.member4002(C.member2693, C.member1204);
-                if (B === member47) {
+                if (B === NULL) {
                     continue;
                 }
                 if (false) {
@@ -80,7 +80,7 @@ export var Class556 = function () {
             if (g.getSize() < x) {
                 while (true) {
                     if (h === j) {
-                        if (q.member4001() === member47) {
+                        if (q.member4001() === NULL) {
                             return;
                         }
                         k = 0;
@@ -100,7 +100,7 @@ export var Class556 = function () {
                     }
                     if (h === y) {
                         var B = q.member4002(r[u], v[e]);
-                        if (B !== member47) {
+                        if (B !== NULL) {
                             if (false) {
                             }
                             h = d;

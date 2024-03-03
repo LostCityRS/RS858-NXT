@@ -10,7 +10,7 @@ export var Class610 = function () {
             return;
         }
         var d = e.member4695().member4696(b.member433);
-        if (d === member47 || d === undefined) {
+        if (d === NULL || d === undefined) {
             return;
         }
         var h = d.texture.member556();

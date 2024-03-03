@@ -1,4 +1,4 @@
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 import { Class251 } from 'Class251.js';
 import { Class259 } from 'Class259.js';
 import { Class453 } from 'Class453.js';
@@ -11,7 +11,7 @@ import { Class68 } from 'Class68.js';
 import { Class757 } from 'Class757.js';
 import { Class95 } from 'Class95.js';
 import { Class763 } from 'Class763.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class257 } from 'Class257.js';
 import { Class558 } from 'Class558.js';
 import { Class777 } from 'Class777.js';
@@ -19,7 +19,7 @@ import { Class780 } from 'Class780.js';
 import { Class779 } from 'Class779.js';
 import { Class431 } from 'Class431.js';
 import { Class772 } from 'Class772.js';
-import { Class465 } from 'Class465.js';
+import { VarDomainType } from 'Class465.js';
 import { Class274 } from 'Class274.js';
 import { Class121 } from 'Class121.js';
 import { Class417 } from 'Class417.js';
@@ -30,32 +30,32 @@ export var Class782 = function () {
     var q = {};
     var y;
     var a = 0;
-    var r = Class290();
+    var r = CoordFine();
     var g = 0;
     q.member7139 = function () {
         return g;
     };
-    var i = member47;
+    var i = NULL;
     q.member6117 = function () {
         return i;
     };
-    var E = member47;
+    var E = NULL;
     q.member9589 = function () {
         return E;
     };
-    var n = member47;
+    var n = NULL;
     q.member3024 = function () {
         return n;
     };
-    var b = member47;
+    var b = NULL;
     q.member8030 = function () {
         return b;
     };
-    var C = member47;
+    var C = NULL;
     q.member10426 = function () {
         return C;
     };
-    var z = member47;
+    var z = NULL;
     q.member10427 = function () {
         return z;
     };
@@ -80,7 +80,7 @@ export var Class782 = function () {
         }
     };
     var j = {
-        member3590: function () {
+        readyanim: function () {
             return false;
         }
     };
@@ -106,7 +106,7 @@ export var Class782 = function () {
         if (M === Class453.member7203 || M === Class453.member7204) {
             k.member10422();
         }
-        y.member8687().member301();
+        y.getVarValueProvider().member301();
         if (true) {
             y.member9208.member301();
         } else {
@@ -246,50 +246,50 @@ export var Class782 = function () {
             return;
         }
         var M = true;
-        if (n === member47) {
-            var H = y.member995.getFile(Class95.member828, Class763.member6951, 0, Class96.member840);
-            if (H === member47) {
+        if (n === NULL) {
+            var H = y.member995.getFile(Class95.member828, Class763.member6951, 0, Priority.member840);
+            if (H === NULL) {
                 M = false;
             } else {
                 n = Class257({ data: H });
             }
         }
         if (true) {
-            if (i === member47) {
-                var N = y.member995.getFile(Class95.member828, Class763.member10269, 0, Class96.member840);
-                if (N === member47) {
+            if (i === NULL) {
+                var N = y.member995.getFile(Class95.member828, Class763.member10269, 0, Priority.member840);
+                if (N === NULL) {
                     M = false;
                 } else {
                     i = Class558({ data: N });
                 }
             }
-            if (E === member47) {
-                var P = y.member995.getFile(Class95.member828, Class763.member9169, 0, Class96.member840);
-                if (P === member47) {
+            if (E === NULL) {
+                var P = y.member995.getFile(Class95.member828, Class763.member9169, 0, Priority.member840);
+                if (P === NULL) {
                     M = false;
                 } else {
                     E = Class777({ data: P });
                 }
             }
-            if (b === member47) {
-                var L = y.member995.getFile(Class95.member828, Class763.member10272, 0, Class96.member840);
-                if (L === member47) {
+            if (b === NULL) {
+                var L = y.member995.getFile(Class95.member828, Class763.member10272, 0, Priority.member840);
+                if (L === NULL) {
                     M = false;
                 } else {
                     b = Class780({ data: L });
                 }
             }
-            if (C === member47) {
-                var O = y.member995.getFile(Class95.member828, Class763.member10270, 0, Class96.member840);
-                if (O === member47) {
+            if (C === NULL) {
+                var O = y.member995.getFile(Class95.member828, Class763.member10270, 0, Priority.member840);
+                if (O === NULL) {
                     M = false;
                 } else {
                     C = Class779({ data: O });
                 }
             }
-            if (z === member47) {
-                var I = y.member995.getFile(Class95.member828, Class763.member9170, 0, Class96.member840);
-                if (I === member47) {
+            if (z === NULL) {
+                var I = y.member995.getFile(Class95.member828, Class763.member9170, 0, Priority.member840);
+                if (I === NULL) {
                     M = false;
                 } else {
                     z = Class431({ data: I });
@@ -322,22 +322,22 @@ export var Class782 = function () {
         }
     };
     var u = function () {
-        var H = y.member8687().member78();
+        var H = y.getVarValueProvider().member78();
         while (H !== -1) {
             F(H);
             y.member7187.member9137(H);
-            H = y.member8687().member78();
+            H = y.getVarValueProvider().member78();
         }
-        y.member7620.member487();
+        y.delayedStateChange.member487();
     };
     var F = function (J) {
         if (true) {
-            var I = y.member2970.member7393(Class465.member4134, J);
+            var I = y.member2970.getVarType(VarDomainType.PLAYER, J);
             var H = I.member6726();
             if (H === 0) {
                 return;
             }
-            var K = y.member8687().member2943(I);
+            var K = y.getVarValueProvider().getVarInt(I);
             if (H === 5) {
                 y.member4480().member3970(K !== 0);
             }
@@ -375,7 +375,7 @@ export var Class782 = function () {
                 Class417.member4805(L);
             }
             var J = y.member6101.member9071();
-            if (J.member3590()) {
+            if (J.readyanim()) {
                 J.member9025(c);
                 var I = y.member6444.member6445();
                 if (I !== null) {

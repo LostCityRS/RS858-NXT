@@ -8,7 +8,7 @@ export var Class277 = function () {
         };
         var g = -1;
         var j = 1;
-        e.member444 = function () {
+        e.getID = function () {
             if (!i) {
                 return undefined;
             }

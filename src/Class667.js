@@ -3,8 +3,8 @@ import { Class450 } from 'Class450.js';
 import { Class501 } from 'Class501.js';
 import { Class633 } from 'Class633.js';
 import { Class443 } from 'Class443.js';
-import { Class124 } from 'Class124.js';
-import { Class131 } from 'Class131.js';
+import { Packet } from 'Class124.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class540 } from 'Class540.js';
 export var Class667 = function () {
     var d = {};
@@ -65,9 +65,9 @@ export var Class667 = function () {
         a.member8023.member7182(r);
         var s = a.member8252.member8259();
         var q = s.member8260(Class501.member8133);
-        q.member2698.member1051(o);
-        q.member2698.member1051(n);
-        q.member2698.member1051(r);
+        q.packet.p1(o);
+        q.packet.p1(n);
+        q.packet.p1(r);
         s.member8261(q);
     };
     Class421.member5719.member867 = function (o) {
@@ -76,7 +76,7 @@ export var Class667 = function () {
         var r = o.member6100[o.member6099 + 1];
         var n = a.member8023.member7190(q, r);
         if (n !== undefined) {
-            o.member6100[o.member6099++] = n.member444();
+            o.member6100[o.member6099++] = n.getID();
             o.member6142[o.member6143++] = Class633.member9463(n.member2793());
             o.member6100[o.member6099++] = n.member304();
             o.member6142[o.member6143++] = n.member2795() !== undefined ? n.member2795() : '';
@@ -149,12 +149,12 @@ export var Class667 = function () {
     var m = function (n) {
         var q = a.member8252.member8259();
         var o = q.member8260(Class501.member8140);
-        o.member2698.member1051(n);
+        o.packet.p1(n);
         q.member8261(o);
     };
     d.member9736 = m;
     Class421.member5225.member867 = function (n) {
-        if (!a.member9737.member3590()) {
+        if (!a.member9737.readyanim()) {
             return true;
         }
         var o = n.member6142[--n.member6143];
@@ -171,12 +171,12 @@ export var Class667 = function () {
         var n = u.member9739;
         var t = a.member8252.member8259();
         var o = t.member8260(Class501.member6365);
-        o.member2698.member1051(0);
-        var s = o.member2698.member1047();
-        o.member2698.member1051(q);
-        o.member2698.member1051(n);
-        a.member9737.member9740(o.member2698, v);
-        o.member2698.member1068(o.member2698.member1047() - s);
+        o.packet.p1(0);
+        var s = o.packet.getPos();
+        o.packet.p1(q);
+        o.packet.p1(n);
+        a.member9737.member9740(o.packet, v);
+        o.packet.member1068(o.packet.getPos() - s);
         t.member8261(o);
     };
     d.member9741 = j;
@@ -247,7 +247,7 @@ export var Class667 = function () {
         return q;
     };
     Class421.member5226.member867 = function (o) {
-        if (!a.member9737.member3590()) {
+        if (!a.member9737.readyanim()) {
             return true;
         }
         var q = o.member6142[--o.member6143];
@@ -261,11 +261,11 @@ export var Class667 = function () {
         }
         var s = a.member8252.member8259();
         var n = s.member8260(Class501.member6252);
-        n.member2698.member1054(0);
-        var q = n.member2698.member1047();
-        n.member2698.member1065(r);
-        a.member9737.member9740(n.member2698, t);
-        n.member2698.member1069(n.member2698.member1047() - q);
+        n.packet.p2(0);
+        var q = n.packet.getPos();
+        n.packet.pjstr(r);
+        a.member9737.member9740(n.packet, t);
+        n.packet.member1069(n.packet.getPos() - q);
         s.member8261(n);
     };
     d.member9742 = g;
@@ -287,18 +287,18 @@ export var Class667 = function () {
         }
         var q = a.member8252.member8259();
         var n = q.member8260(Class501.member8128);
-        n.member2698.member1051(Class124.member1152(o) + 2 + Class124.member1152(t));
-        n.member2698.member1065(o);
-        n.member2698.member1051(r - 1);
-        n.member2698.member1051(s);
-        n.member2698.member1065(t);
+        n.packet.p1(Packet.member1152(o) + 2 + Packet.member1152(t));
+        n.packet.pjstr(o);
+        n.packet.p1(r - 1);
+        n.packet.p1(s);
+        n.packet.pjstr(t);
         q.member8261(n);
     };
     d.member9743 = e;
     Class421.member5227.member867 = function (o) {
         var q = o.member6100[--o.member6099];
-        var n = a.member2970.member3227(Class131.member1221.member1204, q);
-        if (n === member47) {
+        var n = a.member2970.getConfigType(Js5ConfigGroup.CHATPHRASETYPE.member1204, q);
+        if (n === NULL) {
             o.member6099++;
             return true;
         }
@@ -312,24 +312,24 @@ export var Class667 = function () {
         var q = s.member6142[--s.member6143];
         var r = a.member8252.member8259();
         var n = r.member8260(Class501.member6287);
-        n.member2698.member1051(0);
-        var o = n.member2698.member1047();
-        n.member2698.member1065(q);
-        n.member2698.member1054(s.member8881.member8584());
-        s.member8881.member8585().member8732(n.member2698, s.member8881.member8586());
-        n.member2698.member1068(n.member2698.member1047() - o);
+        n.packet.p1(0);
+        var o = n.packet.getPos();
+        n.packet.pjstr(q);
+        n.packet.p2(s.member8881.member8584());
+        s.member8881.member8585().member8732(n.packet, s.member8881.member8586());
+        n.packet.member1068(n.packet.getPos() - o);
         r.member8261(n);
     };
     Class421.member5228.member867 = function (s) {
         var n = s.member6100[--s.member6099];
         var r = a.member8252.member8259();
         var o = r.member8260(Class501.member8119);
-        o.member2698.member1051(0);
-        var q = o.member2698.member1047();
-        o.member2698.member1051(n);
-        o.member2698.member1054(s.member8881.member8584());
-        s.member8881.member8585().member8732(o.member2698, s.member8881.member8586());
-        o.member2698.member1068(o.member2698.member1047() - q);
+        o.packet.p1(0);
+        var q = o.packet.getPos();
+        o.packet.p1(n);
+        o.packet.p2(s.member8881.member8584());
+        s.member8881.member8585().member8732(o.packet, s.member8881.member8586());
+        o.packet.member1068(o.packet.getPos() - q);
         r.member8261(o);
     };
     Class421.member5230.member867 = function (n) {
@@ -351,8 +351,8 @@ export var Class667 = function () {
         if (o === -1) {
             n.member6100[n.member6099++] = -1;
         } else {
-            var q = a.member2970.member3227(Class131.member1222.member1204, r);
-            if (q === member47) {
+            var q = a.member2970.getConfigType(Js5ConfigGroup.CHATCATTYPE.member1204, r);
+            if (q === NULL) {
                 n.member6099 += 2;
                 return true;
             }
@@ -366,8 +366,8 @@ export var Class667 = function () {
         if (o === -1) {
             n.member6100[n.member6099++] = -1;
         } else {
-            var q = a.member2970.member3227(Class131.member1222.member1204, r);
-            if (q === member47) {
+            var q = a.member2970.getConfigType(Js5ConfigGroup.CHATCATTYPE.member1204, r);
+            if (q === NULL) {
                 n.member6099 += 2;
                 return true;
             }
@@ -376,8 +376,8 @@ export var Class667 = function () {
     };
     Class421.member5728.member867 = function (n) {
         var q = n.member6100[--n.member6099];
-        var o = a.member2970.member3227(Class131.member1222.member1204, q);
-        if (o === member47) {
+        var o = a.member2970.getConfigType(Js5ConfigGroup.CHATCATTYPE.member1204, q);
+        if (o === NULL) {
             n.member6099++;
             return true;
         }
@@ -387,8 +387,8 @@ export var Class667 = function () {
         n.member6099 -= 2;
         var r = n.member6100[n.member6099];
         var o = n.member6100[n.member6099 + 1];
-        var q = a.member2970.member3227(Class131.member1222.member1204, r);
-        if (q === member47) {
+        var q = a.member2970.getConfigType(Js5ConfigGroup.CHATCATTYPE.member1204, r);
+        if (q === NULL) {
             n.member6099 += 2;
             return true;
         }
@@ -396,8 +396,8 @@ export var Class667 = function () {
     };
     Class421.member5731.member867 = function (n) {
         var q = n.member6100[--n.member6099];
-        var o = a.member2970.member3227(Class131.member1222.member1204, q);
-        if (o === member47) {
+        var o = a.member2970.getConfigType(Js5ConfigGroup.CHATCATTYPE.member1204, q);
+        if (o === NULL) {
             n.member6099++;
             return true;
         }
@@ -407,8 +407,8 @@ export var Class667 = function () {
         n.member6099 -= 2;
         var r = n.member6100[n.member6099];
         var o = n.member6100[n.member6099 + 1];
-        var q = a.member2970.member3227(Class131.member1222.member1204, r);
-        if (q === member47) {
+        var q = a.member2970.getConfigType(Js5ConfigGroup.CHATCATTYPE.member1204, r);
+        if (q === NULL) {
             n.member6099 += 2;
             return true;
         }
@@ -418,8 +418,8 @@ export var Class667 = function () {
         n.member6099 -= 2;
         var r = n.member6100[n.member6099];
         var o = n.member6100[n.member6099 + 1];
-        var q = a.member2970.member3227(Class131.member1222.member1204, r);
-        if (q === member47) {
+        var q = a.member2970.getConfigType(Js5ConfigGroup.CHATCATTYPE.member1204, r);
+        if (q === NULL) {
             n.member6099 += 2;
             return true;
         }
@@ -427,8 +427,8 @@ export var Class667 = function () {
     };
     Class421.member5729.member867 = function (n) {
         var q = n.member6100[--n.member6099];
-        var o = a.member2970.member3227(Class131.member1222.member1204, q);
-        if (o === member47) {
+        var o = a.member2970.getConfigType(Js5ConfigGroup.CHATCATTYPE.member1204, q);
+        if (o === NULL) {
             n.member6099++;
             return true;
         }
@@ -438,8 +438,8 @@ export var Class667 = function () {
         n.member6099 -= 2;
         var r = n.member6100[n.member6099];
         var o = n.member6100[n.member6099 + 1];
-        var q = a.member2970.member3227(Class131.member1222.member1204, r);
-        if (q === member47) {
+        var q = a.member2970.getConfigType(Js5ConfigGroup.CHATCATTYPE.member1204, r);
+        if (q === NULL) {
             n.member6099 += 2;
             return true;
         }
@@ -466,8 +466,8 @@ export var Class667 = function () {
         q.member6099 -= 2;
         var s = q.member6100[q.member6099];
         var r = q.member6100[q.member6099 + 1];
-        var n = a.member2970.member3227(Class131.member1221.member1204, s);
-        if (n === member47) {
+        var n = a.member2970.getConfigType(Js5ConfigGroup.CHATPHRASETYPE.member1204, s);
+        if (n === NULL) {
             q.member6099 += 2;
             return true;
         }
@@ -479,8 +479,8 @@ export var Class667 = function () {
     };
     Class421.member5734.member867 = function (o) {
         var q = o.member6100[--o.member6099];
-        var n = a.member2970.member3227(Class131.member1221.member1204, q);
-        if (n === member47) {
+        var n = a.member2970.getConfigType(Js5ConfigGroup.CHATPHRASETYPE.member1204, q);
+        if (n === NULL) {
             o.member6099++;
             return true;
         }
@@ -490,8 +490,8 @@ export var Class667 = function () {
         o.member6099 -= 2;
         var r = o.member6100[o.member6099];
         var q = o.member6100[o.member6099 + 1];
-        var n = a.member2970.member3227(Class131.member1221.member1204, r);
-        if (n === member47) {
+        var n = a.member2970.getConfigType(Js5ConfigGroup.CHATPHRASETYPE.member1204, r);
+        if (n === NULL) {
             o.member6099 += 2;
             return true;
         }
@@ -503,8 +503,8 @@ export var Class667 = function () {
     };
     Class421.member5740.member867 = function (o) {
         var q = o.member6100[--o.member6099];
-        var n = a.member2970.member3227(Class131.member1221.member1204, q);
-        if (n === member47) {
+        var n = a.member2970.getConfigType(Js5ConfigGroup.CHATPHRASETYPE.member1204, q);
+        if (n === NULL) {
             o.member6099++;
             return true;
         }
@@ -515,8 +515,8 @@ export var Class667 = function () {
         var s = q.member6100[q.member6099];
         var o = q.member6100[q.member6099 + 1];
         var r = q.member6100[q.member6099 + 2];
-        var n = a.member2970.member3227(Class131.member1221.member1204, s);
-        if (n === member47) {
+        var n = a.member2970.getConfigType(Js5ConfigGroup.CHATPHRASETYPE.member1204, s);
+        if (n === NULL) {
             q.member6099 += 3;
             return true;
         }
@@ -531,8 +531,8 @@ export var Class667 = function () {
     };
     Class421.member5733.member867 = function (o) {
         var q = o.member6100[--o.member6099];
-        var n = a.member2970.member3227(Class131.member1221.member1204, q);
-        if (n === member47) {
+        var n = a.member2970.getConfigType(Js5ConfigGroup.CHATPHRASETYPE.member1204, q);
+        if (n === NULL) {
             o.member6099++;
             return true;
         }

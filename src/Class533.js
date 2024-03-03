@@ -267,14 +267,14 @@ export var Class533 = function () {
             }
         };
         var d = function (Y) {
-            var aa = Y.member609();
+            var aa = Y.g1();
             if (aa < 1 || aa > b) {
                 if (false) {
                 } else {
                     throw new Error();
                 }
             }
-            var Z = Y.member609();
+            var Z = Y.g1();
             if ((Z & 1) !== 0) {
                 if (false) {
                 } else {
@@ -287,24 +287,24 @@ export var Class533 = function () {
                     throw new Error();
                 }
             }
-            C = Y.member1073();
-            I = Y.member1073();
+            C = Y.g4();
+            I = Y.g4();
             if (aa <= 3 && I !== 0) {
                 I += 11745 * 24 * 60;
             }
-            F = Y.member608();
-            S = Y.member609();
-            A = Y.member1089();
+            F = Y.g2();
+            S = Y.g1();
+            A = Y.gjstr();
             if (aa >= 4) {
-                o = Y.member1073();
+                o = Y.g4();
             } else {
                 o = 0;
             }
-            k = Y.member609() === 1;
-            i = Y.member1070();
-            g = Y.member1070();
-            t = Y.member1070();
-            r = Y.member1070();
+            k = Y.g1() === 1;
+            i = Y.g1s();
+            g = Y.g1s();
+            t = Y.g1s();
+            r = Y.g1s();
             if (F > 0) {
                 G = new Array(F);
                 P = new Array(F);
@@ -312,23 +312,23 @@ export var Class533 = function () {
                 L = new Array(F);
                 x = new Array(F);
                 for (var X = 0; X < F; X++) {
-                    G[X] = Y.member1089();
+                    G[X] = Y.gjstr();
                     if (G[X] === '') {
                         G[X] = undefined;
                     }
-                    P[X] = Y.member1070();
+                    P[X] = Y.g1s();
                     if (aa >= 2) {
-                        K[X] = Y.member1073();
+                        K[X] = Y.g4();
                     } else {
                         K[X] = 0;
                     }
                     if (aa >= 5) {
-                        L[X] = Y.member608();
+                        L[X] = Y.g2();
                     } else {
                         L[X] = 0;
                     }
                     if (aa >= 6) {
-                        x[X] = Y.member609() === 1;
+                        x[X] = Y.g1() === 1;
                     } else {
                         x[X] = false;
                     }
@@ -338,27 +338,27 @@ export var Class533 = function () {
             if (S > 0) {
                 y = new Array(S);
                 for (var X = 0; X < S; X++) {
-                    y[X] = Y.member1089();
+                    y[X] = Y.gjstr();
                     if (y[X] === '') {
                         y[X] = undefined;
                     }
                 }
             }
             if (aa >= 3) {
-                var W = Y.member608();
+                var W = Y.g2();
                 if (W > 0) {
                     M = [];
                     while (W-- > 0) {
-                        var U = Y.member1073();
+                        var U = Y.g4();
                         var V = U & 1073741823;
                         var ab = U >>> 30;
                         var ac;
                         if (ab === 0) {
-                            ac = Y.member1073();
+                            ac = Y.g4();
                         } else if (ab === 1) {
-                            ac = Y.member1077();
+                            ac = Y.g8();
                         } else if (ab === 2) {
-                            ac = Y.member1089();
+                            ac = Y.gjstr();
                         }
                         M[V] = ac;
                     }
@@ -371,16 +371,16 @@ export var Class533 = function () {
             throw new Error('1739 ');
         }
         var h = function (U) {
-            if (M[U.member444()] === undefined) {
+            if (M[U.getID()] === undefined) {
                 return U.member2944();
             }
-            return M[U.member444()];
+            return M[U.getID()];
         };
-        R.member2943 = h;
+        R.getVarInt = h;
         var e = function (U) {
             return U.member2948(h(U.member2949()));
         };
-        R.member2950 = e;
+        R.getVarBit = e;
         return R;
     };
 }();

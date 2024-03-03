@@ -1,6 +1,6 @@
 import { Class372 } from 'Class372.js';
 import { Class374 } from 'Class374.js';
-import { Class166 } from 'Class166.js';
+import { Cuboid } from 'Class166.js';
 import { Class403 } from 'Class403.js';
 import { Class404 } from 'Class404.js';
 import { Class41 } from 'Class41.js';
@@ -18,7 +18,7 @@ export var Class405 = function () {
             this.member4650 = d.member4652();
             var g = this.member3320().member4099();
             var h = this.member4651.member992();
-            this.member4093(Class166(new Float32Array([
+            this.member4093(Cuboid(new Float32Array([
                 g[0] - h,
                 g[1] - h,
                 g[2] - h
@@ -27,7 +27,7 @@ export var Class405 = function () {
                 g[1] + h,
                 g[2] + h
             ])));
-            Class403.call(this, this.member4651.member992(), this.member4651.member993(), this.member4651.member4646());
+            Class403.call(this, this.member4651.member992(), this.member4651.getDamageColour(), this.member4651.member4646());
             Class404.add(this);
         } else {
             throw new Error('1596 ');
@@ -70,7 +70,7 @@ export var Class405 = function () {
         }
         this.member4649(j);
         var e = this.member4651.member4655(this.member2970, j, h);
-        var k = this.member993();
+        var k = this.getDamageColour();
         var g = (k >> 16) * e;
         var i = (k >> 8 & 255) * e;
         var d = (k & 255) * e;

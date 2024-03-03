@@ -21,10 +21,10 @@ export var Class682 = function () {
             this.member9861;
         };
         z.prototype.decode = function (M) {
-            if (M.member609() !== 255) {
+            if (M.g1() !== 255) {
                 throw new Error();
             }
-            this.member9861 = M.member1089();
+            this.member9861 = M.gjstr();
             if (this.member9861 === '') {
                 this.member9861 = undefined;
             }
@@ -37,14 +37,14 @@ export var Class682 = function () {
             this.member9862;
         };
         y.prototype.decode = function (M) {
-            if (M.member609() !== 255) {
+            if (M.g1() !== 255) {
                 throw new Error();
             }
-            this.member9861 = M.member1089();
+            this.member9861 = M.gjstr();
             if (this.member9861 === '') {
                 this.member9861 = undefined;
             }
-            this.member9862 = M.member608();
+            this.member9862 = M.g2();
         };
         y.prototype.apply = function (M) {
             M.member8547(this.member9861, this.member9862);
@@ -53,7 +53,7 @@ export var Class682 = function () {
             this.member8436;
         };
         r.prototype.decode = function (M) {
-            this.member8436 = M.member608();
+            this.member8436 = M.g2();
         };
         r.prototype.apply = function (M) {
             M.member8548(this.member8436);
@@ -63,8 +63,8 @@ export var Class682 = function () {
             this.member9863;
         };
         I.prototype.decode = function (M) {
-            this.member8436 = M.member608();
-            this.member9863 = M.member1070();
+            this.member8436 = M.g2();
+            this.member9863 = M.g1s();
         };
         I.prototype.apply = function (M) {
             M.member8551(this.member8436, this.member9863);
@@ -76,10 +76,10 @@ export var Class682 = function () {
             this.member9866;
         };
         E.prototype.decode = function (M) {
-            this.member8436 = M.member608();
-            this.member9864 = M.member1073();
-            this.member9865 = M.member609();
-            this.member9866 = M.member609();
+            this.member8436 = M.g2();
+            this.member9864 = M.g4();
+            this.member9865 = M.g1();
+            this.member9866 = M.g1();
         };
         E.prototype.apply = function (M) {
             M.member8552(this.member8436, this.member9864, this.member9865, this.member9866);
@@ -89,8 +89,8 @@ export var Class682 = function () {
             this.member9857;
         };
         B.prototype.decode = function (M) {
-            this.member8436 = M.member608();
-            this.member9857 = M.member609() === 1;
+            this.member8436 = M.g2();
+            this.member9857 = M.g1() === 1;
         };
         B.prototype.apply = function (M) {
             M.member8553(this.member8436, this.member9857);
@@ -99,10 +99,10 @@ export var Class682 = function () {
             this.member9867;
         };
         L.prototype.decode = function (M) {
-            if (M.member609() !== 255) {
+            if (M.g1() !== 255) {
                 throw new Error();
             }
-            this.member9867 = M.member1089();
+            this.member9867 = M.gjstr();
             if (this.member9867 === '') {
                 this.member9867 = undefined;
             }
@@ -114,7 +114,7 @@ export var Class682 = function () {
             this.member8436;
         };
         u.prototype.decode = function (M) {
-            this.member8436 = M.member608();
+            this.member8436 = M.g2();
         };
         u.prototype.apply = function (M) {
             M.member8550(this.member8436);
@@ -124,8 +124,8 @@ export var Class682 = function () {
             this.member8554;
         };
         t.prototype.decode = function (M) {
-            this.member2808 = M.member1089();
-            this.member8554 = M.member1073();
+            this.member2808 = M.gjstr();
+            this.member8554 = M.g4();
         };
         t.prototype.apply = function (M) {
             M.member8555(this.member2808, this.member8554);
@@ -138,11 +138,11 @@ export var Class682 = function () {
             this.member9872;
         };
         x.prototype.decode = function (M) {
-            this.member9868 = M.member609() === 1;
-            this.member9869 = M.member1070();
-            this.member9870 = M.member1070();
-            this.member9871 = M.member1070();
-            this.member9872 = M.member1070();
+            this.member9868 = M.g1() === 1;
+            this.member9869 = M.g1s();
+            this.member9870 = M.g1s();
+            this.member9871 = M.g1s();
+            this.member9872 = M.g1s();
         };
         x.prototype.apply = function (M) {
             M.member8556(this.member9868, this.member9869, this.member9870, this.member9871, this.member9872);
@@ -152,8 +152,8 @@ export var Class682 = function () {
             this.value;
         };
         s.prototype.decode = function (M) {
-            this.id = M.member1073();
-            this.value = M.member1073();
+            this.id = M.g4();
+            this.value = M.g4();
         };
         s.prototype.apply = function (M) {
             M.member8557(this.id, this.value);
@@ -165,10 +165,10 @@ export var Class682 = function () {
             this.member9866;
         };
         F.prototype.decode = function (M) {
-            this.id = M.member1073();
-            this.value = M.member1073();
-            this.member9865 = M.member609();
-            this.member9866 = M.member609();
+            this.id = M.g4();
+            this.value = M.g4();
+            this.member9865 = M.g1();
+            this.member9866 = M.g1();
         };
         F.prototype.apply = function (M) {
             M.member8558(this.id, this.value, this.member9865, this.member9866);
@@ -178,8 +178,8 @@ export var Class682 = function () {
             this.value;
         };
         J.prototype.decode = function (M) {
-            this.id = M.member1073();
-            this.value = M.member1077();
+            this.id = M.g4();
+            this.value = M.g8();
         };
         J.prototype.apply = function (M) {
             M.member8557(this.id, this.value);
@@ -189,17 +189,17 @@ export var Class682 = function () {
             this.value;
         };
         K.prototype.decode = function (M) {
-            this.id = M.member1073();
-            this.value = M.member1089();
+            this.id = M.g4();
+            this.value = M.gjstr();
         };
         K.prototype.apply = function (M) {
             M.member8557(this.id, this.value);
         };
         var D = function (N) {
-            N.member1077();
-            v = N.member1073();
+            N.g8();
+            v = N.g4();
             H = [];
-            var M = N.member609();
+            var M = N.g1();
             while (M !== 0) {
                 var O;
                 switch (M) {
@@ -250,7 +250,7 @@ export var Class682 = function () {
                 }
                 O.decode(N);
                 H.push(O);
-                M = N.member609();
+                M = N.g1();
             }
         };
         var C = function (N) {

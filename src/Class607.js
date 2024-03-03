@@ -5,7 +5,7 @@ export var Class607 = function () {
     };
     member45(Class470, a);
     a.prototype.member6811 = function (h, c, b, g) {
-        var e = this.member600();
+        var e = this.getColour();
         var d = (e & 255) === 255;
         if (this.member7469()) {
             c.member433.member3640.member3796(b, g, this.member6752(), this.member6754(), e, d);

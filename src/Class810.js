@@ -28,14 +28,14 @@ export var Class810 = function () {
         Class757.member10221({
             member10222: function () {
                 var m = k.member8260(Class501.member8168);
-                m.member2698.member1106(a.member4480().member3967.getValue());
-                m.member2698.member1104(Math.min(Math.floor(Class327.member3775(Class327.member406)), 255));
-                m.member2698.member1104(Math.min(Math.floor(Class327.member3775(Class327.member3768)), 255));
-                m.member2698.member1104(Math.min(Math.floor(Class327.member3775(Class327.member3767)), 255));
-                m.member2698.member1105(Math.min(Math.floor(Class327.member3775(Class327.member3766)), 255));
-                m.member2698.member1114(Math.min(Math.floor(Class327.member3775(Class327.member3769)), 65535));
-                m.member2698.member1106(Math.min(Math.floor(Class327.member3775(Class327.member3765)), 255));
-                m.member2698.member1104(Math.min(Math.floor(Class327.member3775(Class327.member502)), 255));
+                m.packet.p1_alt3(a.member4480().member3967.getValue());
+                m.packet.p1_alt1(Math.min(Math.floor(Class327.member3775(Class327.member406)), 255));
+                m.packet.p1_alt1(Math.min(Math.floor(Class327.member3775(Class327.member3768)), 255));
+                m.packet.p1_alt1(Math.min(Math.floor(Class327.member3775(Class327.member3767)), 255));
+                m.packet.p1_alt2(Math.min(Math.floor(Class327.member3775(Class327.member3766)), 255));
+                m.packet.p2_alt2(Math.min(Math.floor(Class327.member3775(Class327.member3769)), 65535));
+                m.packet.p1_alt3(Math.min(Math.floor(Class327.member3775(Class327.member3765)), 255));
+                m.packet.p1_alt1(Math.min(Math.floor(Class327.member3775(Class327.member502)), 255));
                 k.member8261(m);
                 if (false) {
                 }

@@ -1,4 +1,4 @@
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 import { Class433 } from 'Class433.js';
 import { Class198 } from 'Class198.js';
 import { Class434 } from 'Class434.js';
@@ -11,12 +11,12 @@ export var Class435 = function () {
         b = h;
     };
     d.member25 = g;
-    var e = Class290();
+    var e = CoordFine();
     Class433.member6296.member6428 = function (m, s) {
-        var v = m.member1134();
-        var u = m.member1108();
-        var i = m.member1073();
-        var j = m.member1107();
+        var v = m.g4_alt1();
+        var u = m.g1_alt2();
+        var i = m.g4();
+        var j = m.g1_alt1();
         var h = v >> 28 & 3;
         var t = v >> 14 & 16383;
         var r = v & 16383;
@@ -36,23 +36,23 @@ export var Class435 = function () {
         b.member6429.addRequest(k);
     };
     Class433.member6298.member6428 = function (t, u) {
-        var h = t.member1121();
-        var o = t.member1121();
-        var z = t.member1109();
+        var h = t.g2s_alt3();
+        var o = t.g2s_alt3();
+        var z = t.g1_alt3();
         if (z === 255) {
             z = -1;
         }
-        var k = t.member1107();
-        var F = t.member1070();
-        var i = t.member1117();
-        var y = t.member1108();
-        var D = t.member608();
-        var s = t.member1116();
-        var C = t.member1117();
-        var j = t.member609() * 4;
-        var E = t.member1112();
-        var n = t.member608();
-        var q = t.member1116();
+        var k = t.g1_alt1();
+        var F = t.g1s();
+        var i = t.g2_alt2();
+        var y = t.g1_alt2();
+        var D = t.g2();
+        var s = t.g2_alt1();
+        var C = t.g2_alt2();
+        var j = t.g1() * 4;
+        var E = t.g1s_alt3();
+        var n = t.g2();
+        var q = t.g2_alt1();
         var m = (y & 1) !== 0;
         var v = (y & 2) !== 0;
         var G = v ? y >> 2 : -1;
@@ -90,12 +90,12 @@ export var Class435 = function () {
         });
     };
     Class433.member6297.member6428 = function (k, q) {
-        var x = k.member608();
-        var v = k.member1109();
-        var s = k.member1073();
-        var r = k.member609();
-        var t = k.member608();
-        var y = k.member608();
+        var x = k.g2();
+        var v = k.g1_alt3();
+        var s = k.g4();
+        var r = k.g1();
+        var t = k.g2();
+        var y = k.g2();
         if (y === 65535) {
             y = -1;
         }
@@ -146,11 +146,11 @@ export var Class435 = function () {
         }
     };
     Class433.member6295.member6428 = function (m, n) {
-        var o = m.member1108();
-        var k = m.member1118();
+        var o = m.g1_alt2();
+        var k = m.g2_alt3();
         var j = new Array(Class432.member6232);
         for (var h = 0; h < Class432.member6232; h++) {
-            j[h] = m.member1073();
+            j[h] = m.g4();
         }
         var i = b.member6450.member6451(k);
         if (i !== undefined && i !== null) {
@@ -164,10 +164,10 @@ export var Class435 = function () {
     Class433.member6424.member6428 = function (h, i) {
     };
     var c = function (h) {
-        h.member4440();
+        h.getID0();
     };
     var a = function (h) {
-        h.member4440();
+        h.getID0();
     };
     return d;
 }();

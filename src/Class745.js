@@ -14,9 +14,9 @@ export var Class745 = function () {
         return !a.member6101.member9085(e.member3239() ? e : undefined, e.member9926());
     };
     Class433.member6402.member6428 = function (g, j) {
-        var e = g.member1135();
-        var d = g.member1117();
-        var h = g.member1117();
+        var e = g.g4_alt2();
+        var d = g.g2_alt2();
+        var h = g.g2_alt2();
         var n = Math.ceil(d / Class299.member3570);
         var k = Class404.get(h);
         if (k !== undefined) {

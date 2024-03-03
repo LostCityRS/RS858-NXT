@@ -28,9 +28,9 @@ export var Class89 = function () {
             if (i === undefined) {
                 throw new Error('1618 ');
             }
-            var j = i.member444();
+            var j = i.getID();
             if (c[j] !== undefined) {
-                throw new Error('1619 ' + i.member444());
+                throw new Error('1619 ' + i.getID());
             }
             if (g < j) {
                 g = j;

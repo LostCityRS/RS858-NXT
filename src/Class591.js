@@ -50,10 +50,10 @@ export var Class591 = function () {
             Class41.set(h, e);
             Class41.member313(g);
         };
-        i.member3590 = function () {
+        i.readyanim = function () {
             return k;
         };
-        var m = i.member3590;
+        var m = i.readyanim;
         i.member8938 = function (q, o, n, t) {
             if (!m() || !b) {
                 return;
@@ -80,7 +80,7 @@ export var Class591 = function () {
         };
         i.member6219 = function (n) {
             k = true;
-            n.member1088(e);
+            n.gFloatArray(e);
         };
         return i;
     };

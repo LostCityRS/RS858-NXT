@@ -1,6 +1,6 @@
 import { Class598 } from 'Class598.js';
 import { Class602 } from 'Class602.js';
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 import { Class86 } from 'Class86.js';
 import { Class604 } from 'Class604.js';
 import { Class605 } from 'Class605.js';
@@ -25,7 +25,7 @@ export var Class606 = function () {
                 member9174: null,
                 member9101: c.member6116.member6117().member8775()
             });
-            this.member9175 = Class290();
+            this.member9175 = CoordFine();
         } else {
             this.member9173.member9102(this.member6752(), this.member6754());
         }
@@ -71,7 +71,7 @@ export var Class606 = function () {
             }
             if (E.member8851() && (E.member9180() & Class604.member9167) !== 0) {
             } else {
-                y.member9179.member9181(x, t, Class605.member7343);
+                y.member9179.member9181(x, t, Class605.INTERFACE);
             }
         }
     };

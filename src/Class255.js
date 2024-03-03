@@ -25,11 +25,11 @@ export var Class255 = function () {
             return g(t) * 10;
         };
         var e = i.member2983;
-        if (s.id !== undefined && s.member2984 !== undefined && s.member2981 !== undefined && s.member2985 !== undefined && s.member2986 !== undefined && s.member2987 !== undefined && s.member2988 !== undefined) {
+        if (s.id !== undefined && s.member2984 !== undefined && s.member2981 !== undefined && s.getActive !== undefined && s.member2986 !== undefined && s.member2987 !== undefined && s.member2988 !== undefined) {
             c = s.id;
             q = s.member2984;
             o = s.member2981;
-            n = s.member2985;
+            n = s.getActive;
             k = s.member2987;
             j = s.member2988;
             if (o) {

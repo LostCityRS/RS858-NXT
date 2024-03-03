@@ -91,64 +91,64 @@ export var Class701 = function () {
             return K;
         };
         if (I !== undefined) {
-            var u = I.member608();
+            var u = I.g2();
             if (u === 0) {
-                D = I.member608() / Class299.member3570;
+                D = I.g2() / Class299.member3570;
                 K = false;
             } else {
                 if ((u & e) !== 0) {
-                    C = I.member1073();
+                    C = I.g4();
                 }
                 if ((u & g) !== 0) {
-                    y = I.member320();
+                    y = I.gFloat();
                 }
                 if ((u & r) !== 0) {
-                    x = I.member320();
+                    x = I.gFloat();
                 }
                 if ((u & j) !== 0) {
-                    z = I.member320();
+                    z = I.gFloat();
                 }
                 if ((u & b) !== 0) {
                     v = Class41.member321(I);
                 }
                 if ((u & m) !== 0) {
-                    G = I.member1073();
+                    G = I.g4();
                 }
                 if ((u & q) !== 0) {
-                    s = I.member608();
+                    s = I.g2();
                 }
                 if ((u & i) !== 0) {
-                    B = I.member608();
+                    B = I.g2();
                 }
                 if ((u & d) !== 0) {
-                    H = I.member320();
+                    H = I.gFloat();
                 }
                 if ((u & o) !== 0) {
-                    A = I.member320();
+                    A = I.gFloat();
                 }
                 if ((u & a) !== 0) {
-                    J = I.member320();
+                    J = I.gFloat();
                 }
                 if ((u & c) !== 0) {
-                    L = I.member608();
-                    I.member1071();
-                    I.member1071();
-                    I.member1071();
-                    I.member608();
+                    L = I.g2();
+                    I.g2s();
+                    I.g2s();
+                    I.g2s();
+                    I.g2();
                 }
                 if ((u & n) !== 0) {
-                    E[0] = I.member608();
-                    t[0] = I.member320();
+                    E[0] = I.g2();
+                    t[0] = I.gFloat();
                 }
                 if ((u & k) !== 0) {
-                    E[1] = I.member608();
-                    t[1] = I.member320();
+                    E[1] = I.g2();
+                    t[1] = I.gFloat();
                 }
                 if ((u & h) !== 0) {
-                    E[2] = I.member608();
-                    t[2] = I.member320();
+                    E[2] = I.g2();
+                    t[2] = I.gFloat();
                 }
-                D = I.member608() / Class299.member3570;
+                D = I.g2() / Class299.member3570;
             }
         } else {
             throw new Error('1190 ');

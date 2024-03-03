@@ -152,9 +152,9 @@ export var Class288 = function () {
     d.prototype.member1628 = function (F, D, E, z) {
         var B = Class83.member619(Class82.member2866, c);
         var A = Class132.member1266();
-        var G = A.member941(Class72.member498);
+        var G = A.member941(Class72.POINTLIGHT);
         var C = G.member987();
-        B.member862 = z.member444();
+        B.member862 = z.getID();
         B.member863 = F.member863;
         B.member865 = F.member1939();
         B.member3434 = this;
@@ -329,7 +329,7 @@ export var Class288 = function () {
     d.prototype.member3440 = function () {
         v = 0;
         for (var A = this.member3431.member776(); A !== undefined; A = this.member3431.member777()) {
-            var z = A.member2030().member701();
+            var z = A.member2030().getMaterial();
             var B = undefined;
             if (z !== -1) {
                 B = Class147.member1484(z);
@@ -344,7 +344,7 @@ export var Class288 = function () {
         }
         this.member1569 = Class150.member1512(m);
         for (var A = this.member3431.member776(); A !== undefined; A = this.member3431.member777()) {
-            var z = A.member2030().member701();
+            var z = A.member2030().getMaterial();
             var B = undefined;
             if (z !== -1) {
                 B = Class147.member1484(z);
@@ -391,7 +391,7 @@ export var Class288 = function () {
                     var B = i[z * (g + 1)];
                     if (B < g) {
                         i[z * (g + 1)]++;
-                        i[z * (g + 1) + 1 + B] = F.member444();
+                        i[z * (g + 1) + 1 + B] = F.getID();
                     }
                 }
             }

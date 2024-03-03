@@ -412,7 +412,7 @@ export var Class85 = function () {
     b.prototype.member700 = function () {
         return this.get(d.member647) === 1;
     };
-    b.prototype.member701 = function () {
+    b.prototype.getMaterial = function () {
         return this.get(d.member651);
     };
     b.prototype.member702 = function () {

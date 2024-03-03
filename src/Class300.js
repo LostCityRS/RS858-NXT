@@ -171,10 +171,10 @@ export var Class300 = function () {
         I = K;
         I.member3589 = C;
         H();
-        D.member3590 = function () {
-            return I.member3590() && !v;
+        D.readyanim = function () {
+            return I.readyanim() && !v;
         };
-        var L = D.member3590;
+        var L = D.readyanim;
         var x = function (M) {
             F(M, undefined);
             A(M);
@@ -296,7 +296,7 @@ export var Class300 = function () {
         };
         D.member301 = function (N, M) {
             v = true;
-            if (!I.member3590()) {
+            if (!I.readyanim()) {
                 var O = q();
                 O.requestType = e;
                 O.filename = undefined;

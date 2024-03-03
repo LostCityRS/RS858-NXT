@@ -1,6 +1,6 @@
 import { Class322 } from 'Class322.js';
 import { Class300 } from 'Class300.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class366 } from 'Class366.js';
 export var Class367 = function () {
     var v = 1;
@@ -54,7 +54,7 @@ export var Class367 = function () {
             return Math.floor(aq / ap.member784());
         };
         var U = function (aq, ar) {
-            var ap = aq.member444() + '-';
+            var ap = aq.getID() + '-';
             if (aq.member784() !== undefined) {
                 ap += A(aq, ar) + '-' + aq.member784();
             } else {
@@ -66,7 +66,7 @@ export var Class367 = function () {
             return ap;
         };
         var ah = function (aq) {
-            var ap = aq.member444() + '-index';
+            var ap = aq.getID() + '-index';
             if (aq.member781()) {
                 ap += '-' + an.member3700;
             }
@@ -110,15 +110,15 @@ export var Class367 = function () {
             }
         };
         var ao = function (ap) {
-            af[ap.member444()] = true;
+            af[ap.getID()] = true;
         };
         var E = function (ap) {
-            var aq = ap.member444();
+            var aq = ap.getID();
             ai[aq] = Class322(undefined, P(aq));
             ao(ap);
         };
         var al = function (aq, av) {
-            var ar = aq.member444();
+            var ar = aq.getID();
             if (av === undefined || av === null || av.byteLength === 0) {
                 return;
             }
@@ -173,7 +173,7 @@ export var Class367 = function () {
             }
         };
         var Q = function (ap) {
-            var aq = ap.member444();
+            var aq = ap.getID();
             T.writeFile(ah(ap), ai[aq].member681(), false);
         };
         var N = function (at, av, aq) {
@@ -195,7 +195,7 @@ export var Class367 = function () {
         };
         ae.member773 = function () {
             for (var ap = C.member776(); ap !== undefined; ap = C.member777()) {
-                var ar = ap.member444();
+                var ar = ap.getID();
                 var aq = ai[ar];
                 if (aq === undefined) {
                     continue;
@@ -212,8 +212,8 @@ export var Class367 = function () {
         D = H.member3991;
         an = H.member3992;
         C = H.member3993;
-        ae.member3590 = function () {
-            return I && T.member3590();
+        ae.readyanim = function () {
+            return I && T.readyanim();
         };
         var G = function () {
             var ap = new ArrayBuffer(1);
@@ -249,7 +249,7 @@ export var Class367 = function () {
                     y = ar;
                     var au = s;
                     for (var at = C.member776(); at !== undefined && au > 0; at = C.member777()) {
-                        var aq = ai[at.member444()];
+                        var aq = ai[at.getID()];
                         if (aq === undefined) {
                             continue;
                         }
@@ -307,17 +307,17 @@ export var Class367 = function () {
             }
         };
         ae.member3256 = function (au, ay, aq, aw, ax) {
-            var av = au.member444();
+            var av = au.getID();
             var at = 16 + aq.byteLength + 8;
             var ap = U(au, ay);
-            var ar = Class124(at);
-            ar.member1056(ay);
-            ar.member1056(aq.byteLength);
-            ar.member1056(aw);
-            ar.member1056(ax);
+            var ar = Packet(at);
+            ar.p4(ay);
+            ar.p4(aq.byteLength);
+            ar.p4(aw);
+            ar.p4(ax);
             ar.member1067(aq, 0, aq.byteLength);
-            ar.member1056(aw);
-            ar.member1056(ax);
+            ar.p4(aw);
+            ar.p4(ax);
             T.writeFile(U(au, ay), ar.getData(), au.member784() !== undefined, function (az) {
                 if (false) {
                 }
@@ -326,7 +326,7 @@ export var Class367 = function () {
             }, K);
         };
         ae.member3994 = function (ar, at, av) {
-            var au = ar.member444();
+            var au = ar.getID();
             var aq = T.getFileStatus(U(ar, at));
             if (aq !== undefined) {
                 return Class366.member3990;
@@ -345,7 +345,7 @@ export var Class367 = function () {
         };
         var B = ae.member3994;
         ae.member3995 = function (at, au, ax, aw, ar) {
-            var av = at.member444();
+            var av = at.getID();
             var aq = function () {
                 ac(av, au);
                 ao(at);
@@ -358,9 +358,9 @@ export var Class367 = function () {
                     aq();
                     return;
                 }
-                var az = Class124(undefined, aA);
+                var az = Packet(undefined, aA);
                 var aC = {};
-                while (az.member1047() < az.getSize()) {
+                while (az.getPos() < az.getSize()) {
                     try {
                         if (!O(at, au, ax, aw, ar, az, aC, ay)) {
                             return;
@@ -389,15 +389,15 @@ export var Class367 = function () {
         };
         var V = ae.member3995;
         var O = function (az, ar, aB, aI, av, aD, aG, aF) {
-            var ap = az.member444();
-            var at = aD.member1073();
-            var ax = aD.member1073();
-            var aw = aD.member1074();
-            var au = aD.member1074();
-            var aK = aD.member1047();
-            aD.member607(aK + ax);
-            var ay = aD.member1074();
-            var aH = aD.member1074();
+            var ap = az.getID();
+            var at = aD.g4();
+            var ax = aD.g4();
+            var aw = aD.g4s();
+            var au = aD.g4s();
+            var aK = aD.getPos();
+            aD.setPos(aK + ax);
+            var ay = aD.g4s();
+            var aH = aD.g4s();
             if (aw !== ay || au !== aH) {
                 if (false) {
                 }
@@ -420,12 +420,12 @@ export var Class367 = function () {
                 return false;
             }
             var aJ;
-            var aq = aD.member1047();
-            var aC = new Class124(ax);
-            aD.member607(aK);
-            aD.member1092(aC.getData(), 0, ax);
-            aC.member607(0);
-            aD.member607(aq);
+            var aq = aD.getPos();
+            var aC = new Packet(ax);
+            aD.setPos(aK);
+            aD.gdata(aC.getData(), 0, ax);
+            aC.setPos(0);
+            aD.setPos(aq);
             aG[at] = {
                 crc: aw,
                 version: au,
@@ -448,7 +448,7 @@ export var Class367 = function () {
         };
         var aj = function (aq, ax, aw, ap) {
             if (aq.member784() !== undefined && ap[ax] === undefined) {
-                var ar = aq.member444();
+                var ar = aq.getID();
                 if (ax > u) {
                     ac(ar, ax);
                 } else {
@@ -475,7 +475,7 @@ export var Class367 = function () {
             }
         };
         ae.member3260 = function (at, av, ax) {
-            var aw = at.member444();
+            var aw = at.getID();
             if (at.member784() === undefined || av > u) {
                 ac(aw, av);
             } else {

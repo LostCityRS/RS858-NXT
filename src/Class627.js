@@ -156,7 +156,7 @@ export var Class627 = function () {
         var g = i.member6100[i.member6099 + 1];
         var h = Class291(0, h >> 14 & 16383, h & 16383);
         var e = Class513.member8330(h);
-        if (e === member47) {
+        if (e === NULL) {
             if (false) {
             }
             i.member6099 += 2;
@@ -178,8 +178,8 @@ export var Class627 = function () {
         e.member6099 -= 2;
         var g = e.member6100[e.member6099];
         var h = e.member6100[e.member6099 + 1] === 0;
-        var d = a.member2970.member3227(Js5ConfigGroup.member1230.member1204, g);
-        if (d === member47) {
+        var d = a.member2970.getConfigType(Js5ConfigGroup.MELTYPE.member1204, g);
+        if (d === NULL) {
             if (false) {
             }
             e.member6099 += 2;
@@ -200,8 +200,8 @@ export var Class627 = function () {
     Class421.member5776.member867 = function (h) {
         h.member6099 -= 2;
         var i = h.member6100[h.member6099];
-        var e = a.member2970.member3227(Js5ConfigGroup.member1230.member1204, i);
-        if (e === member47) {
+        var e = a.member2970.getConfigType(Js5ConfigGroup.MELTYPE.member1204, i);
+        if (e === NULL) {
             if (false) {
             }
             h.member6099 += 2;
@@ -217,8 +217,8 @@ export var Class627 = function () {
     };
     Class421.member5246.member867 = function (e) {
         var g = e.member6100[--e.member6099];
-        var d = a.member2970.member3227(Js5ConfigGroup.member1230.member1204, g);
-        if (d === member47) {
+        var d = a.member2970.getConfigType(Js5ConfigGroup.MELTYPE.member1204, g);
+        if (d === NULL) {
             if (false) {
             }
             e.member6099++;
@@ -254,7 +254,7 @@ export var Class627 = function () {
     Class421.member5761.member867 = function (g) {
         var e = g.member6100[--g.member6099];
         var d = Class513.member8333(e);
-        if (d === member47) {
+        if (d === NULL) {
             g.member6099++;
             return true;
         }
@@ -267,7 +267,7 @@ export var Class627 = function () {
     Class421.member5762.member867 = function (g) {
         var e = g.member6100[--g.member6099];
         var d = Class513.member8333(e);
-        if (d === member47) {
+        if (d === NULL) {
             g.member6099++;
             return true;
         }
@@ -283,7 +283,7 @@ export var Class627 = function () {
     Class421.member5763.member867 = function (g) {
         var e = g.member6100[--g.member6099];
         var d = Class513.member8333(e);
-        if (d === member47) {
+        if (d === NULL) {
             g.member6099++;
             return true;
         }
@@ -303,7 +303,7 @@ export var Class627 = function () {
     Class421.member5767.member867 = function (g) {
         var e = g.member6100[--g.member6099];
         var d = Class513.member8333(e);
-        if (d === member47) {
+        if (d === NULL) {
             g.member6099++;
             return true;
         }
@@ -319,8 +319,8 @@ export var Class627 = function () {
     };
     Class421.member5774.member867 = function (e) {
         var g = e.member6100[--e.member6099];
-        var d = a.member2970.member3227(Js5ConfigGroup.member1230.member1204, g);
-        if (d === member47) {
+        var d = a.member2970.getConfigType(Js5ConfigGroup.MELTYPE.member1204, g);
+        if (d === NULL) {
             if (false) {
             }
             e.member6099++;
@@ -393,7 +393,7 @@ export var Class627 = function () {
         var e = g.member6100[--g.member6099];
         var e = Class291(0, e >> 14 & 16383, e & 16383);
         var d = Class513.member8331(e);
-        if (d === member47) {
+        if (d === NULL) {
             g.member6099++;
             return true;
         }
@@ -406,7 +406,7 @@ export var Class627 = function () {
     Class421.member5758.member867 = function (g) {
         var e = g.member6100[--g.member6099];
         var d = Class513.member8333(e);
-        if (d === member47) {
+        if (d === NULL) {
             g.member6099++;
             return true;
         }
@@ -504,7 +504,7 @@ export var Class627 = function () {
         g.member8346(true);
         g.member4808(true);
         var e = Class513.member8333(d);
-        if (e === undefined || e === member47) {
+        if (e === undefined || e === NULL) {
             if (false) {
             }
             return;

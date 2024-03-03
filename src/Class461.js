@@ -1,6 +1,6 @@
 export var Class461 = function () {
     var a = {
-        member6636: 1,
+        MODEL: 1,
         member7274: 2,
         member7275: 3,
         member4135: 4,

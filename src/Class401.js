@@ -13,7 +13,7 @@ export var Class401 = function () {
         this.member1566 = h;
         this.member4624 = c;
         this.member4625 = i;
-        this.member4626 = member47;
+        this.member4626 = NULL;
     };
     member45(Class248, a);
     a.prototype.member2889 = function (d, c) {

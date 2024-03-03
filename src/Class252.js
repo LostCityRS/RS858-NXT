@@ -1,98 +1,98 @@
-export var Class252 = function () {
-    var a = function (b) {
-        this.member2953 = -1;
-        this.member2954 = -1;
-        this.member2955 = -1;
-        this.member2956 = -1;
-        this.member2957 = -1;
+export var ObjWearModels = function () {
+    var ObjWearModels = function (b) {
+        this.wear1 = -1;
+        this.wear2 = -1;
+        this.wear3 = -1;
+        this.head1 = -1;
+        this.head2 = -1;
         this.offset = new Float32Array(3);
         if (b !== undefined) {
-            if (b.member2953 !== undefined) {
-                this.member2953 = b.member2953;
+            if (b.wear1 !== undefined) {
+                this.wear1 = b.wear1;
             }
-            if (b.member2954 !== undefined) {
-                this.member2954 = b.member2954;
+            if (b.wear2 !== undefined) {
+                this.wear2 = b.wear2;
             }
-            if (b.member2955 !== undefined) {
-                this.member2955 = b.member2955;
+            if (b.wear3 !== undefined) {
+                this.wear3 = b.wear3;
             }
-            if (b.member2956 !== undefined) {
-                this.member2956 = b.member2956;
+            if (b.head1 !== undefined) {
+                this.head1 = b.head1;
             }
-            if (b.member2957 !== undefined) {
-                this.member2957 = b.member2957;
+            if (b.head2 !== undefined) {
+                this.head2 = b.head2;
             }
             if (b.offset !== undefined) {
                 this.offset = b.offset;
             }
         }
     };
-    a.prototype.member2958 = function () {
-        return this.member2953;
+    ObjWearModels.prototype.getWear1 = function () {
+        return this.wear1;
     };
-    a.prototype.member2959 = function (b) {
-        this.member2953 = b;
+    ObjWearModels.prototype.setWear1 = function (wear1) {
+        this.wear1 = wear1;
     };
-    a.prototype.member2960 = function () {
-        return this.member2954;
+    ObjWearModels.prototype.getWear2 = function () {
+        return this.wear2;
     };
-    a.prototype.member2961 = function (b) {
-        this.member2954 = b;
+    ObjWearModels.prototype.setWear2 = function (wear2) {
+        this.wear2 = wear2;
     };
-    a.prototype.member2962 = function () {
-        return this.member2955;
+    ObjWearModels.prototype.getWear3 = function () {
+        return this.wear3;
     };
-    a.prototype.member2963 = function (b) {
-        this.member2955 = b;
+    ObjWearModels.prototype.setWear3 = function (wear3) {
+        this.wear3 = wear3;
     };
-    a.prototype.member2964 = function () {
-        return this.member2956;
+    ObjWearModels.prototype.getHead1 = function () {
+        return this.head1;
     };
-    a.prototype.member2965 = function (b) {
-        this.member2956 = b;
+    ObjWearModels.prototype.setHead1 = function (head1) {
+        this.head1 = head1;
     };
-    a.prototype.member2966 = function () {
-        return this.member2957;
+    ObjWearModels.prototype.getHead2 = function () {
+        return this.head2;
     };
-    a.prototype.member2967 = function (b) {
-        this.member2957 = b;
+    ObjWearModels.prototype.setHead2 = function (head2) {
+        this.head2 = head2;
     };
-    a.prototype.member2968 = function () {
+    ObjWearModels.prototype.getOffset = function () {
         return this.offset;
     };
-    a.prototype.member1319 = function () {
-        return new a({
-            member2953: this.member2953,
-            member2954: this.member2954,
-            member2955: this.member2955,
-            member2956: this.member2956,
-            member2957: this.member2957,
+    ObjWearModels.prototype.clone = function () {
+        return new ObjWearModels({
+            wear1: this.wear1,
+            wear2: this.wear2,
+            wear3: this.wear3,
+            head1: this.head1,
+            head2: this.head2,
             offset: this.offset
         });
     };
-    a.prototype.member2969 = function (b) {
-        if (this.member2953 !== b.member2958()) {
+    ObjWearModels.prototype.equals = function (b) {
+        if (this.wear1 !== b.getWear1()) {
             return false;
         }
-        if (this.member2954 !== b.member2960()) {
+        if (this.wear2 !== b.getWear2()) {
             return false;
         }
-        if (this.member2955 !== b.member2962()) {
+        if (this.wear3 !== b.getWear3()) {
             return false;
         }
-        if (this.member2956 !== b.member2964()) {
+        if (this.head1 !== b.getHead1()) {
             return false;
         }
-        if (this.member2957 !== b.member2966()) {
+        if (this.head2 !== b.getHead2()) {
             return false;
         }
-        var c = b.member2968();
+        var c = b.getOffset();
         if (this.offset[0] !== c[0] || this.offset[1] !== c[1] || this.offset[2] !== c[2]) {
             return false;
         }
         return true;
     };
     return function (b) {
-        return new a(b);
+        return new ObjWearModels(b);
     };
 }();

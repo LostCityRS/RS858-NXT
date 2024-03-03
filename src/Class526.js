@@ -1,4 +1,4 @@
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 export var Class526 = function () {
     var a = function (q) {
         var h = {};
@@ -39,17 +39,17 @@ export var Class526 = function () {
                 if (n[v] === -1 || n[v] === undefined) {
                     continue;
                 }
-                var r = o.member3227(Class131.member1214.member1204, n[v]);
-                if (r === member47) {
+                var r = o.getConfigType(Js5ConfigGroup.OBJTYPE.member1204, n[v]);
+                if (r === NULL) {
                     t = false;
                     continue;
                 }
-                if (r.member8472() === u) {
+                if (r.getCategory() === u) {
                     s += i[v];
                 }
             }
             if (!t) {
-                return member47;
+                return NULL;
             }
             return s;
         };
@@ -57,16 +57,16 @@ export var Class526 = function () {
         h.member8473 = function (t, s) {
             var u = 0;
             var v = true;
-            var z = o.member3227(Class131.member1215.member1204, t);
-            if (z === member47) {
-                return member47;
+            var z = o.getConfigType(Js5ConfigGroup.PARAMTYPE.member1204, t);
+            if (z === NULL) {
+                return NULL;
             }
             for (var y = 0; y < n.length; y++) {
                 if (n[y] === -1 || n[y] === undefined) {
                     continue;
                 }
-                var r = o.member3227(Class131.member1214.member1204, n[y]);
-                if (r === member47) {
+                var r = o.getConfigType(Js5ConfigGroup.OBJTYPE.member1204, n[y]);
+                if (r === NULL) {
                     v = false;
                     continue;
                 }
@@ -80,7 +80,7 @@ export var Class526 = function () {
                 }
             }
             if (!v) {
-                return member47;
+                return NULL;
             }
             return u;
         };
@@ -129,8 +129,8 @@ export var Class526 = function () {
                 if (objTypeIDs[s] === undefined || objTypeIDs[s] === -1) {
                     continue;
                 }
-                var r = o.member3227(Class131.member1214.groupid, objTypeIDs[s]);
-                if (r === member47 || !r.member7662(u, 0, null)) {
+                var r = o.getConfigType(Js5ConfigGroup.OBJTYPE.groupid, objTypeIDs[s]);
+                if (r === NULL || !r.member7662(u, 0, null)) {
                     x = false;
                     continue;
                 }
@@ -143,7 +143,7 @@ export var Class526 = function () {
                 if (objTypeIDs[s] === undefined || objTypeIDs[s] === -1) {
                     continue;
                 }
-                var r = o.member3227(Class131.member1214.groupid, objTypeIDs[s]);
+                var r = o.getConfigType(Js5ConfigGroup.OBJTYPE.groupid, objTypeIDs[s]);
                 t.push(r.member7546(u, 0, null));
             }
             var y = ModelRaw({ member1876: t });

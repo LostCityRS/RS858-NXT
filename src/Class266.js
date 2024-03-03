@@ -2,9 +2,9 @@ export var Class266 = function (b) {
     var d = {};
     var a;
     var c;
-    if (b.member2698 !== undefined) {
-        a = b.member2698.member609();
-        c = b.member2698.member609();
+    if (b.packet !== undefined) {
+        a = b.packet.g1();
+        c = b.packet.g1();
     } else {
         throw new Error('894 ');
     }

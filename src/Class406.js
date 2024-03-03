@@ -3,7 +3,7 @@ import { Class247 } from 'Class247.js';
 import { Class197 } from 'Class197.js';
 import { Class95 } from 'Class95.js';
 import { Class271 } from 'Class271.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 export var Class406 = function () {
     var a = function (e, d, c, g, i, h, b) {
         if (e === undefined || d === undefined || c === undefined || g === undefined) {
@@ -16,16 +16,16 @@ export var Class406 = function () {
         this.member1644 = i;
         this.member1566 = h;
         this.member1565 = b;
-        this.member1640 = member47;
-        this.member4659 = member47;
+        this.member1640 = NULL;
+        this.member4659 = NULL;
     };
     member45(Class248, a);
     a.prototype.member2889 = function (k, j) {
         if (this.member1644 === undefined) {
-            if (this.member1640 === member47) {
+            if (this.member1640 === NULL) {
                 var h = this.member4660(k, this.member1643, this.member1642);
-                if (h === member47) {
-                    return member47;
+                if (h === NULL) {
+                    return NULL;
                 } else if (h === undefined) {
                     return undefined;
                 } else {
@@ -36,12 +36,12 @@ export var Class406 = function () {
             if (this.member1644.member3251.length < 1) {
                 return undefined;
             }
-            if (this.member1640 === member47) {
+            if (this.member1640 === NULL) {
                 var d = new Array(this.member1644.member3251.length);
                 var i = true;
                 for (var g = 0; g < this.member1644.member3251.length; g++) {
                     var e = this.member4660(k, this.member1644.member3251[g].member1643, this.member1644.member3251[g].member1642);
-                    if (e === member47) {
+                    if (e === NULL) {
                         i = false;
                     } else if (e !== undefined) {
                         d[g] = e.getData();
@@ -52,7 +52,7 @@ export var Class406 = function () {
                 if (i) {
                     this.member1640 = d;
                 } else {
-                    return member47;
+                    return NULL;
                 }
             }
         }
@@ -77,9 +77,9 @@ export var Class406 = function () {
         if (d === undefined) {
             return undefined;
         } else if (d === false) {
-            return member47;
+            return NULL;
         } else {
-            return e.getFile(Class95.member809, c, Class271.member3211, Class96.member841);
+            return e.getFile(Class95.member809, c, Class271.member3211, Priority.member841);
         }
     };
     a.prototype.member2892 = function (b) {

@@ -9,7 +9,7 @@ import { Class461 } from 'Class461.js';
 import { Class317 } from 'Class317.js';
 import { Class86 } from 'Class86.js';
 import { Class415 } from 'Class415.js';
-import { Class166 } from 'Class166.js';
+import { Cuboid } from 'Class166.js';
 export var Class616 = function () {
     var h = Class292(Class49.create(), Class49.create(), Class41.create(), Class41.create());
     var e = Class41.create();
@@ -165,7 +165,7 @@ export var Class616 = function () {
                 Class49.member347(i, Class415.member4773(o[2]));
                 i[14] += j;
             }
-            var A = Class166(G.member2098());
+            var A = Cuboid(G.member2098());
             A.transform(i);
             var v = A.member1792()[2], z = A.member1793()[2];
             z += this.member7506();
@@ -178,8 +178,8 @@ export var Class616 = function () {
             a.member3651(h.member1624);
             a.member3649(h.member3464);
             h.member3466();
-            G.member1630(H.member6116.member7139(), h, i, c, this.member4446(H.member6116.member7139()), false, undefined);
-            this.member4447(i, h);
+            G.member1630(H.member6116.member7139(), h, i, c, this.getID6(H.member6116.member7139()), false, undefined);
+            this.getID7(i, h);
             H.member433.member585();
             var n = L.member9210();
             H.member433.member3640.member3623(H.member433.member3842, H.member433.member3843, n.width, n.height, 4294967295, 0, 1 - n.member496, n.member495, 1, n.texture, false);

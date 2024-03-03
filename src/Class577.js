@@ -194,15 +194,15 @@ export var Class577 = function () {
                 s[1] = t.member8910 !== undefined ? t.member8910 : 0;
             } else if (t.member3456 !== undefined) {
                 var b = t.member3456;
-                var c = b.member1078();
-                b.member1088(k);
-                b.member1088(o);
-                s[0] = b.member320();
-                b.member1088(n);
-                b.member1088(m);
+                var c = b.gSmart1or2();
+                b.gFloatArray(k);
+                b.gFloatArray(o);
+                s[0] = b.gFloat();
+                b.gFloatArray(n);
+                b.gFloatArray(m);
                 Class41.member322(n, m, m);
                 Class41.add(n, m, m);
-                s[1] = b.member320();
+                s[1] = b.gFloat();
                 i[0] = Class576({
                     member8895: [
                         k,
@@ -212,11 +212,11 @@ export var Class577 = function () {
                     ]
                 });
                 for (var h = 2; h < c; h++) {
-                    b.member1088(n);
-                    b.member1088(m);
+                    b.gFloatArray(n);
+                    b.gFloatArray(m);
                     Class41.member322(n, m, m);
                     Class41.add(n, m, m);
-                    q(n, m, b.member320());
+                    q(n, m, b.gFloat());
                 }
             } else {
                 throw new Error('1376 ');

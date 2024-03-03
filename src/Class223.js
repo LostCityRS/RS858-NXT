@@ -1,6 +1,6 @@
 import { Class222 } from 'Class222.js';
 import { Class221 } from 'Class221.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 export var Class223 = function () {
     var a = function (j) {
         var t = {};
@@ -134,7 +134,7 @@ export var Class223 = function () {
             } else {
                 var B = m.member2718();
                 if (B > 0) {
-                    var z = Class124(B);
+                    var z = Packet(B);
                     m.getData(z, B);
                     var A = Date.now();
                     k.send(z.getData());

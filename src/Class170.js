@@ -1,10 +1,10 @@
-export var Class170 = {
+export var HillChange = {
     member1852: 0,
-    member1853: 1,
-    member1854: 2,
-    member1855: 3,
-    member1856: 4,
-    member1857: 5,
+    FLOOR_SKEW: 1,
+    TREE_SKEW: 2,
+    ROTATE: 3,
+    CEILING_SKEW: 4,
+    SKEW_TO_FIT: 5,
     member1858: 0,
     member1859: 1,
     member1860: 2

@@ -10,13 +10,13 @@ export var Class714 = function () {
     };
     b.member25 = c;
     Class433.member6374.member6428 = function (i, j) {
-        var e = i.member1073();
-        var g = i.member1073();
+        var e = i.g4();
+        var g = i.g4();
         var h = a.member8252.member8259();
         var d = h.member8260(Class501.member8146);
-        d.member2698.member1132(e);
-        d.member2698.member1132(g);
-        d.member2698.member1104(Class299.member3580());
+        d.packet.p4_alt2(e);
+        d.packet.p4_alt2(g);
+        d.packet.p1_alt1(Class299.member3580());
         h.member8261(d);
     };
     Class433.member6381.member6428 = function (d, e) {
@@ -24,7 +24,7 @@ export var Class714 = function () {
     };
     if (true) {
         Class433.member6266.member6428 = function (d, g) {
-            var e = d.member609();
+            var e = d.g1();
             a.member9171.member9998(e % 3);
             if (e >= 3) {
                 Class618.member9240(false);
@@ -33,16 +33,16 @@ export var Class714 = function () {
             }
         };
         Class433.member6356.member6428 = function (d, e) {
-            a.member6101.member9075(d.member1108());
-            a.member7620.member9780();
+            a.member6101.member9075(d.g1_alt2());
+            a.delayedStateChange.incrementVerifyID();
         };
         Class433.member6377.member6428 = function (d, e) {
-            var g = d.member1089();
+            var g = d.gjstr();
             a.member9219.member9620(g, false, false);
         };
         Class433.member6366.member6428 = function (e, g) {
-            var d = e.member1107() === 1;
-            a.member7620.member9780();
+            var d = e.g1_alt1() === 1;
+            a.delayedStateChange.incrementVerifyID();
         };
     } else {
     }

@@ -2,7 +2,7 @@ export var Class215 = function () {
     var a = {};
     a.member2639 = function () {
         function j() {
-            this.member1045 = 0;
+            this.pos = 0;
             this.member2640 = 0;
             this.member2641 = false;
             this.buffer = null;
@@ -25,17 +25,17 @@ export var Class215 = function () {
                 return this.buffer = n;
             },
             member2643: function b() {
-                var m = this.member1045;
+                var m = this.pos;
                 while (this.member2640 <= m) {
                     if (this.member2641) {
                         return null;
                     }
                     this.member2644();
                 }
-                return this.buffer[this.member1045++];
+                return this.buffer[this.pos++];
             },
             member2645: function k(q) {
-                var o = this.member1045;
+                var o = this.pos;
                 if (q) {
                     this.member2642(o + q);
                     var n = o + q;
@@ -52,28 +52,28 @@ export var Class215 = function () {
                     }
                     var n = this.member2640;
                 }
-                this.member1045 = n;
+                this.pos = n;
                 return this.buffer.subarray(o, n);
             },
             member2646: function g() {
-                var m = this.member1045;
+                var m = this.pos;
                 while (this.member2640 <= m) {
                     if (this.member2641) {
                         return null;
                     }
                     this.member2644();
                 }
-                return String.fromCharCode(this.buffer[this.member1045]);
+                return String.fromCharCode(this.buffer[this.pos]);
             },
             member2647: function c() {
-                var m = this.member1045;
+                var m = this.pos;
                 while (this.member2640 <= m) {
                     if (this.member2641) {
                         return null;
                     }
                     this.member2644();
                 }
-                return String.fromCharCode(this.buffer[this.member1045++]);
+                return String.fromCharCode(this.buffer[this.pos++]);
             },
             member2648: function e(q, n, o) {
                 var m = q + n;
@@ -86,10 +86,10 @@ export var Class215 = function () {
                 if (!m) {
                     m = 1;
                 }
-                this.member1045 += m;
+                this.pos += m;
             },
             member301: function h() {
-                this.member1045 = 0;
+                this.pos = 0;
             }
         };
         return j;

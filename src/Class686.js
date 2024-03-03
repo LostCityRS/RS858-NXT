@@ -1,8 +1,8 @@
 import { Class105 } from 'Class105.js';
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
-import { Class548 } from 'Class548.js';
-export var Class686 = function (i) {
+import { Priority } from 'Class96.js';
+import { QuickChatPhraseType } from 'Class548.js';
+export var QuickChatPhraseTypeList = function (i) {
     var r = {};
     var t;
     var s;
@@ -45,12 +45,12 @@ export var Class686 = function (i) {
                 B = c - h + a;
             }
             var A = u(B);
-            if (A === member47) {
+            if (A === NULL) {
                 return;
             }
             if (A !== undefined) {
                 k[c] = {
-                    id: A.member444(),
+                    id: A.getID(),
                     text: A.member8731(),
                     member8722: A.member8723()
                 };
@@ -72,21 +72,21 @@ export var Class686 = function (i) {
     }
     var u = function (C) {
         var z = o.find(C);
-        if (z === member47) {
+        if (z === NULL) {
             var A = C >= a;
             var B;
             if (A) {
-                B = q.getFile(Class95.member825, m, C & n, Class96.member840);
+                B = q.getFile(Class95.member825, m, C & n, Priority.member840);
             } else {
-                B = q.getFile(Class95.member824, m, C, Class96.member840);
+                B = q.getFile(Class95.member824, m, C, Priority.member840);
             }
-            if (B === member47) {
-                return member47;
+            if (B === NULL) {
+                return NULL;
             }
-            z = Class548(C, r);
+            z = QuickChatPhraseType(C, r);
             if (B !== undefined) {
                 z.decode(B);
-                z.member2934();
+                z.postDecode();
             }
             o.put(z, 1, C);
         }

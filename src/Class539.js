@@ -10,7 +10,7 @@ export var Class539 = function () {
     Class433.member4533.member6428 = function (g, h) {
         var e = a.member8252.member8259();
         var d = e.member8260(Class501.member8141);
-        d.member2698.member1051(1);
+        d.packet.p1(1);
         e.member8261(d);
     };
     return b;

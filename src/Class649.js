@@ -10,7 +10,7 @@ export var Class649 = function () {
     };
     g.member25 = i;
     Class433.member6292.member6428 = function (n, r) {
-        var q = n.member1089();
+        var q = n.gjstr();
         var j = c.clientParameters.member9628.value;
         var k = c.clientParameters.member8255.value;
         var m = 3 * 365 * 24 * 60 * 60;
@@ -23,7 +23,7 @@ export var Class649 = function () {
         document.member8256 = '"' + o + '"';
     };
     Class433.member6293.member6428 = function (m, n) {
-        var o = m.member609() === 1;
+        var o = m.g1() === 1;
         var k = m.member1091(n - 1);
         if (o) {
             var j = m.member1091(n - k.length - 1);
@@ -100,7 +100,7 @@ export var Class649 = function () {
         }
         var n = c.clientParameters.member7256.value.member7205 + '.com';
         var q = m ? 'https://' : 'http://';
-        return q + o + '.' + n + '/l=' + c.clientParameters.member7138.value.id + '/a=' + c.clientParameters.member8273.value + r + '/';
+        return q + o + '.' + n + '/l=' + c.clientParameters.member7138.value.id + '/a=' + c.clientParameters.affiliate.value + r + '/';
     };
     g.member7142 = a;
     return g;

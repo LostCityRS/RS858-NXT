@@ -1,7 +1,7 @@
 import { Class37 } from 'Class37.js';
 import { Class372 } from 'Class372.js';
 import { Class374 } from 'Class374.js';
-import { Class166 } from 'Class166.js';
+import { Cuboid } from 'Class166.js';
 import { Class49 } from 'Class49.js';
 import { Class132 } from 'Class132.js';
 import { Class72 } from 'Class72.js';
@@ -31,7 +31,7 @@ export var Class400 = function () {
             this.member4210 = Date.now();
             this.member1612[3] = -1;
             var i = this.member2285.member2273();
-            var e = Class166(new Float32Array([
+            var e = Cuboid(new Float32Array([
                 -i.width / 2,
                 i.member1593[1],
                 -i.length / 2
@@ -58,7 +58,7 @@ export var Class400 = function () {
     };
     d.prototype.member3437 = function (e, i, j, k, h) {
         if (this.member4103(e)) {
-            if (this.member1566 === member47) {
+            if (this.member1566 === NULL) {
                 this.member4105(false);
                 return;
             }

@@ -1,9 +1,9 @@
 import { Class105 } from 'Class105.js';
 import { Class95 } from 'Class95.js';
-import { Class131 } from 'Class131.js';
-import { Class96 } from 'Class96.js';
-import { Class783 } from 'Class783.js';
-export var Class788 = function (n) {
+import { Js5ConfigGroup } from 'Class131.js';
+import { Priority } from 'Class96.js';
+import { HitmarkType } from 'Class783.js';
+export var HitmarkTypeList = function (n) {
     var d = {};
     var o = null;
     d.member7535 = function () {
@@ -11,11 +11,11 @@ export var Class788 = function (n) {
     };
     var a = d.member7535;
     var i = null;
-    d.member8687 = function () {
+    d.getVarValueProvider = function () {
         return i;
     };
     var m = null;
-    d.member7539 = function () {
+    d.getVarTypeProvider = function () {
         return m;
     };
     if (n.member995 !== undefined && n.member8694 !== undefined && n.member2970 !== undefined) {
@@ -38,13 +38,13 @@ export var Class788 = function (n) {
     d.list = function (s) {
         var q = c.find(s);
         if (q === null) {
-            var r = o.getFile(Class95.member807, Class131.member1234.member1204, s, Class96.member840, Class131.member1234.priority);
+            var r = o.getFile(Class95.member807, Js5ConfigGroup.HITMARKTYPE.member1204, s, Priority.member840, Js5ConfigGroup.HITMARKTYPE.priority);
             if (r === null) {
                 return null;
             }
-            q = Class783({
+            q = HitmarkType({
                 member625: s,
-                member2896: d
+                myList: d
             });
             if (r !== undefined) {
                 q.decode(r);

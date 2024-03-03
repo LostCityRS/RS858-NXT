@@ -5,7 +5,7 @@ import { Class450 } from 'Class450.js';
 import { Class571 } from 'Class571.js';
 import { Class501 } from 'Class501.js';
 import { Class570 } from 'Class570.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 export var Class572 = function () {
     var d = {};
     var g;
@@ -88,9 +88,9 @@ export var Class572 = function () {
         }
         var o = a.member8252.member8259();
         var k = o.member8260(Class501.member8131);
-        k.member2698.member1051(j.length + 2);
-        k.member2698.member1065(j);
-        k.member2698.member1051(n ? 1 : 0);
+        k.packet.p1(j.length + 2);
+        k.packet.pjstr(j);
+        k.packet.p1(n ? 1 : 0);
         o.member8261(k);
     };
     d.member8872 = e;
@@ -122,8 +122,8 @@ export var Class572 = function () {
                 g.member7255();
                 var o = a.member8252.member8259();
                 var m = o.member8260(Class501.member8130);
-                m.member2698.member1051(k.length + 1);
-                m.member2698.member1065(k);
+                m.packet.p1(k.length + 1);
+                m.packet.pjstr(k);
                 o.member8261(m);
                 return;
             }
@@ -202,9 +202,9 @@ export var Class572 = function () {
         if (i.length > 30) {
             i = i.substring(0, 30);
         }
-        k.member2698.member1051(Class124.member1152(j) + Class124.member1152(i));
-        k.member2698.member1065(i);
-        k.member2698.member1065(j);
+        k.packet.p1(Packet.member1152(j) + Packet.member1152(i));
+        k.packet.pjstr(i);
+        k.packet.pjstr(j);
         n.member8261(k);
     };
     return d;

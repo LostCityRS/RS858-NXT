@@ -1,5 +1,5 @@
 import { Class484 } from 'Class484.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class482 } from 'Class482.js';
 import { Class481 } from 'Class481.js';
 import { Class103 } from 'Class103.js';
@@ -42,10 +42,10 @@ export var Class485 = function () {
         var r = -1;
         var e = 0;
         if (c >= 0) {
-            var s = this.member7710.member2970.member3227(Class131.member1234.member1204, c);
-            if (s !== member47) {
-                b = s.member7721();
-                e = s.member7682();
+            var s = this.member7710.member2970.getConfigType(Js5ConfigGroup.HITMARKTYPE.member1204, c);
+            if (s !== NULL) {
+                b = s.getReplaceMode();
+                e = s.getStickTime();
             } else {
                 b = Class484.member7702;
                 e = Class484.member7706;
@@ -135,21 +135,21 @@ export var Class485 = function () {
     };
     a.prototype.member7725 = function (c) {
         for (var b = 0; b < this.member7714.length; b++) {
-            if (this.member7714[b] !== undefined && this.member7714[b].member776().member2794().member444() === c) {
+            if (this.member7714[b] !== undefined && this.member7714[b].member776().member2794().getID() === c) {
                 this.member7724(b);
                 return;
             }
         }
     };
     a.prototype.member7726 = function (e) {
-        var h = this.member7710.member2970.member3227(Class131.member1256.member1204, e.id);
-        if (h === member47) {
+        var h = this.member7710.member2970.getConfigType(Js5ConfigGroup.HEADBARTYPE.member1204, e.id);
+        if (h === NULL) {
             return;
         }
         e.type = h;
         var g = -1;
         var d = -1;
-        var j = h.member2703();
+        var j = h.getPriority();
         var c = 0;
         for (var b = 0; b < this.member7714.length; b++) {
             if (this.member7714[b] === undefined) {
@@ -159,7 +159,7 @@ export var Class485 = function () {
                 break;
             }
             var h = this.member7714[b].member776().member2794();
-            if (h.member444() === e.id) {
+            if (h.getID() === e.id) {
                 var i = this.member7722(e, this.member7714[b]);
                 return;
             }
@@ -167,9 +167,9 @@ export var Class485 = function () {
             if (h.member7727() <= h.member7727()) {
                 g = b;
             }
-            if (h.member2703() > j) {
+            if (h.getPriority() > j) {
                 d = b;
-                j = h.member2703();
+                j = h.getPriority();
             }
         }
         if (d < 0 && c >= this.member7710.member6116.member6117().member7715()) {
@@ -202,7 +202,7 @@ export var Class485 = function () {
                     break;
                 }
             }
-            if (d.member7679() + d.member7682 + d.member2794().member7728() < c) {
+            if (d.member7679() + d.getStickTime + d.member2794().member7728() < c) {
                 this.member7714[b].unlink(d);
             }
             if (this.member7714[b].member890() === 0) {

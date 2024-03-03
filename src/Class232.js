@@ -1,4 +1,4 @@
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class230 } from 'Class230.js';
 import { Class229 } from 'Class229.js';
 import { Class225 } from 'Class225.js';
@@ -33,7 +33,7 @@ export var Class232 = function () {
     var y = undefined;
     var r = I;
     var T = false;
-    var V = Class124(1000);
+    var V = Packet(1000);
     var H = undefined;
     var t = undefined;
     var C = [];
@@ -93,7 +93,7 @@ export var Class232 = function () {
         setInterval(n, B);
     };
     var U = function (ac, ab, ad) {
-        if (ad !== member47) {
+        if (ad !== NULL) {
             var aa = ad.getData();
             g({
                 member59: Class230.member2765,
@@ -102,20 +102,20 @@ export var Class232 = function () {
         } else {
             g({
                 member59: Class230.member2765,
-                member2780: member47
+                member2780: NULL
             });
         }
     };
     var L = function () {
         if (!d()) {
             q = true;
-            U(255, 255, member47);
+            U(255, 255, NULL);
         } else if (!H.member2741(255, 255, m, true, U)) {
-            U(255, 255, member47);
+            U(255, 255, NULL);
         }
     };
     var o = function (ac, ab, ad) {
-        if (ad !== member47) {
+        if (ad !== NULL) {
             var aa = ad.getData();
             g({
                 member59: Class230.member2768,
@@ -124,17 +124,17 @@ export var Class232 = function () {
         } else {
             g({
                 member59: Class230.member2768,
-                member2780: member47
+                member2780: NULL
             });
         }
     };
     var Q = function () {
         if (!t.member2741(255, 255, m, true, o)) {
-            o(255, 255, member47);
+            o(255, 255, NULL);
         }
     };
     var X = function (ae, ad, af) {
-        if (af !== member47) {
+        if (af !== NULL) {
             var ab = Class231.member2769(af, 0, af.getSize());
             var ac = Class227.member2691(af);
             var aa = ac.getData();
@@ -148,20 +148,20 @@ export var Class232 = function () {
             g({
                 member59: Class230.member2766,
                 member2693: ad,
-                member2782: member47
+                member2782: NULL
             });
         }
     };
     var i = function (aa) {
         if (!d()) {
             q = true;
-            X(255, aa, member47);
+            X(255, aa, NULL);
         } else if (!H.member2741(255, aa, m, true, X)) {
-            X(255, aa, member47);
+            X(255, aa, NULL);
         }
     };
     var A = function (ab, ac, ak, at, ap) {
-        if (ak !== member47) {
+        if (ak !== NULL) {
             if (ak.getSize() <= 2) {
                 throw new Error('1063 ');
             }
@@ -175,14 +175,14 @@ export var Class232 = function () {
                     throw new Error('1064 ');
                 }
             } else if (ap.member2776 === Class90.member779) {
-                var ar = Class124(undefined, aj.getData());
-                var am = ar.member609();
+                var ar = Packet(undefined, aj.getData());
+                var am = ar.g1();
                 var ai = 0;
                 var aa;
                 for (var aq = 0; aq < am; aq++) {
-                    var ae = ar.member1073();
+                    var ae = ar.g4();
                     var an = new ArrayBuffer(ae);
-                    ar.member1092(an, 0, ae);
+                    ar.gdata(an, 0, ae);
                     var ad = Class226({
                         member2744: an,
                         member2745: true
@@ -213,7 +213,7 @@ export var Class232 = function () {
                 member2693: ab,
                 member1204: ac,
                 member2694: at,
-                member2783: member47
+                member2783: NULL
             });
         }
     };
@@ -225,13 +225,13 @@ export var Class232 = function () {
         };
         if (!d()) {
             q = true;
-            A(ac, aj, member47, ab, aa);
+            A(ac, aj, NULL, ab, aa);
         } else if (ad) {
             if (!t.member2741(ac, aj, O, true, A, aa, ah, ai)) {
-                A(ac, aj, member47, ab, aa);
+                A(ac, aj, NULL, ab, aa);
             }
         } else if (!H.member2741(ac, aj, O, ab, A, aa, ag)) {
-            A(ac, aj, member47, ab, aa);
+            A(ac, aj, NULL, ab, aa);
         }
     };
     var F = function (ai) {
@@ -253,7 +253,7 @@ export var Class232 = function () {
         if (af !== undefined) {
             var ab = ai.response;
             if (ab !== null && ab !== undefined) {
-                var ag = Class124(undefined, ab);
+                var ag = Packet(undefined, ab);
                 A(ad, af, ag, true, aa);
             }
         }
@@ -328,11 +328,11 @@ export var Class232 = function () {
             y.member2601();
             r = c;
         } else if (r === c) {
-            V.member607(0);
+            V.setPos(0);
             var ag = y.read(V, 1);
             if (ag === 1) {
-                V.member607(0);
-                var ab = V.member609();
+                V.setPos(0);
+                var ab = V.g1();
                 if (ab == 0) {
                     r = K;
                 } else if (false) {
@@ -343,11 +343,11 @@ export var Class232 = function () {
             var ae = y.member2718(af);
             if (ae >= af) {
                 if (af > 0) {
-                    V.member607(0);
+                    V.setPos(0);
                     y.read(V, af);
-                    V.member607(0);
+                    V.setPos(0);
                     for (var aa = 0; aa < v; aa++) {
-                        var ad = V.member1073();
+                        var ad = V.g4();
                     }
                 }
                 H.member2755(y, false);

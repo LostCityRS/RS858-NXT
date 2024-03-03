@@ -9,7 +9,7 @@ import { Class623 } from 'Class623.js';
 import { Class517 } from 'Class517.js';
 import { Class814 } from 'Class814.js';
 import { Class527 } from 'Class527.js';
-import { Class766 } from 'Class766.js';
+import { ClientParameters } from 'Class766.js';
 import { Class726 } from 'Class726.js';
 import { Class669 } from 'Class669.js';
 import { Class468 } from 'Class468.js';
@@ -24,7 +24,7 @@ import { Class523 } from 'Class523.js';
 import { Class756 } from 'Class756.js';
 import { Class455 } from 'Class455.js';
 import { Class708 } from 'Class708.js';
-import { Class769 } from 'Class769.js';
+import { DelayedStateChange } from 'Class769.js';
 import { Class603 } from 'Class603.js';
 import { Class524 } from 'Class524.js';
 import { Class679 } from 'Class679.js';
@@ -53,7 +53,7 @@ import { Class315 } from 'Class315.js';
 import { Class364 } from 'Class364.js';
 import { Class233 } from 'Class233.js';
 import { Class95 } from 'Class95.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class236 } from 'Class236.js';
 import { Class809 } from 'Class809.js';
 import { Class556 } from 'Class556.js';
@@ -156,7 +156,7 @@ export var Class815 = function () {
         delete k[A];
     };
     var m = null;
-    n.member8687 = function () {
+    n.getVarValueProvider = function () {
         return m;
     };
     n.member10429 = undefined;
@@ -191,7 +191,7 @@ export var Class815 = function () {
     n.member9208 = Class527;
     var o = {};
     n.member10582 = o;
-    n.clientParameters = o.clientParameters = Class766;
+    n.clientParameters = o.clientParameters = ClientParameters;
     n.member7140 = o.member7140 = Class726;
     n.member7887 = o.member7887 = Class669;
     n.member9268 = o.member9268 = Class468;
@@ -206,7 +206,7 @@ export var Class815 = function () {
     n.member8845 = o.member8845 = Class756;
     n.member7259 = o.member7259 = Class455;
     n.member9753 = o.member9753 = Class708;
-    n.member7620 = o.member7620 = Class769;
+    n.delayedStateChange = o.delayedStateChange = DelayedStateChange;
     n.member7187 = o.member7187 = Class603;
     n.member6452 = o.member6452 = Class524;
     if (true) {
@@ -261,8 +261,8 @@ export var Class815 = function () {
             A += c + ' ';
             A += -1;
             A += ' ';
-            if (n.clientParameters.member8272.value !== undefined) {
-                A += n.clientParameters.member8272.value;
+            if (n.clientParameters.clientToken.value !== undefined) {
+                A += n.clientParameters.clientToken.value;
             } else {
                 A += ',';
             }
@@ -275,31 +275,31 @@ export var Class815 = function () {
     var g = function () {
         var B = t();
         var A = Class723({
-            member8439: Class766.member10328.value,
+            member8439: ClientParameters.member10328.value,
             member10059: B,
-            member10060: Class766.member10329.value,
-            member10061: Class766.member10330.value
+            member10060: ClientParameters.member10329.value,
+            member10061: ClientParameters.member10330.value
         });
         Class726.member25(n, A, undefined, undefined);
         e('html5', 'ct=' + u);
     };
     n.member10584 = function (B) {
         if (window.clientParametersLocal !== undefined) {
-            Class766.member10585(window.clientParametersLocal);
+            ClientParameters.member10585(window.clientParametersLocal);
         } else if (window.clientParametersObfuscated !== undefined) {
-            Class766.member10358(window.clientParametersObfuscated);
+            ClientParameters.member10358(window.clientParametersObfuscated);
         } else {
             throw new Error('907 ');
         }
         B.member3475(Class94.member803 * 1024 * 1024);
         B.member3477('');
-        B.member3479(Class766.member10347.value);
-        B.member3481(Class766.member8025.value);
-        B.member3485(Class766.member10346.value.indexOf('https://') !== -1);
-        B.member3489(Class766.member10337.value);
-        B.member3483(Class766.member7256.value);
+        B.member3479(ClientParameters.member10347.value);
+        B.member3481(ClientParameters.member8025.value);
+        B.member3485(ClientParameters.member10346.value.indexOf('https://') !== -1);
+        B.member3489(ClientParameters.member10337.value);
+        B.member3483(ClientParameters.member7256.value);
         var C = 'client';
-        var A = Class766.member10345.value;
+        var A = ClientParameters.member10345.value;
         if (A === undefined) {
             throw new Error('908 ');
         }
@@ -309,7 +309,7 @@ export var Class815 = function () {
         B.member3487(C);
     };
     var t = function () {
-        var A = Class766.member10346.value;
+        var A = ClientParameters.member10346.value;
         A = A.substring(A.indexOf('//') + 2);
         var C = A.indexOf('/');
         if (C !== -1) {
@@ -324,33 +324,33 @@ export var Class815 = function () {
     n.member25 = function (L, G, B, H) {
         s = L;
         b = G;
-        if (Class766.member8025.value === Class315.member3689) {
+        if (ClientParameters.member8025.value === Class315.member3689) {
             z = (s << 8) + b;
         }
         var E = t();
         var I = Class723({
-            member8439: Class766.member10328.value,
+            member8439: ClientParameters.member10328.value,
             member10059: E,
-            member10060: Class766.member10329.value,
-            member10061: Class766.member10330.value
+            member10060: ClientParameters.member10329.value,
+            member10061: ClientParameters.member10330.value
         });
         var K = Class723({
-            member8439: Class766.member10332.value,
-            member10059: Class766.member10333.value,
-            member10060: Class766.member10334.value,
-            member10061: Class766.member10335.value
+            member8439: ClientParameters.member10332.value,
+            member10059: ClientParameters.member10333.value,
+            member10060: ClientParameters.member10334.value,
+            member10061: ClientParameters.member10335.value
         });
         var O = Class723({
-            member8439: Class766.member10348.value,
-            member10059: Class766.member10349.value,
-            member10060: Class766.member10350.value,
-            member10061: Class766.member10351.value
+            member8439: ClientParameters.member10348.value,
+            member10059: ClientParameters.member10349.value,
+            member10060: ClientParameters.member10350.value,
+            member10061: ClientParameters.member10351.value
         });
         var D = Class723({
-            member8439: Class766.member10352.value,
-            member10059: Class766.member10353.value,
-            member10060: Class766.member10354.value,
-            member10061: Class766.member10355.value
+            member8439: ClientParameters.member10352.value,
+            member10059: ClientParameters.member10353.value,
+            member10060: ClientParameters.member10354.value,
+            member10061: ClientParameters.member10355.value
         });
         Class726.member25(n, I, K, O);
         Class812.member25(n, s, b, Class299.member3584().member3486());
@@ -363,29 +363,29 @@ export var Class815 = function () {
         }
         d = Class233({});
         Class95.member774(r.member3388.getValue());
-        var C = 4 + 4 + Class124.member1152(Class766.member8272.value);
+        var C = 4 + 4 + Packet.member1152(ClientParameters.clientToken.value);
         if (isNaN(C)) {
-            throw new Error('909 ' + Class766.member8272.value);
+            throw new Error('909 ' + ClientParameters.clientToken.value);
         }
-        var F = Class124(C + 2);
-        F.member1051(Class236.member2820.member2818);
-        F.member1051(C);
-        F.member1056(s);
-        F.member1056(b);
-        F.member1065(Class766.member8272.value);
-        F.member1051(Class766.member7138.value.id);
-        var J = Class766.member7256.value.member7205;
-        var P = Class766.member10345.value;
+        var F = Packet(C + 2);
+        F.p1(Class236.member2820.member2818);
+        F.p1(C);
+        F.p4(s);
+        F.p4(b);
+        F.pjstr(ClientParameters.clientToken.value);
+        F.p1(ClientParameters.member7138.value.id);
+        var J = ClientParameters.member7256.value.member7205;
+        var P = ClientParameters.member10345.value;
         if (P !== '') {
             J += '-' + P;
         }
         var N = true ? D.member7142() : {};
-        Class368.member25(J, O.member10062(), N, Class766.member7256.value, F.getData(), Class809.member10533.length, Class95, Class766.member7138.value);
+        Class368.member25(J, O.member10062(), N, ClientParameters.member7256.value, F.getData(), Class809.member10533.length, Class95, ClientParameters.member7138.value);
         n.member9751 = Class556(Class368, Class95);
         m = Class253({ member2970: Class800 });
         Class811.member25(Class800);
         var M = member51;
-        Class800.member25(Class368, Class766.member7138.value, Class766.member7256.value, false, m, undefined, M, Class811, M);
+        Class800.member25(Class368, ClientParameters.member7138.value, ClientParameters.member7256.value, false, m, undefined, M, Class811, M);
         if (true) {
             Class802.member25(Class368, Class800);
             n.member8366 = Class700(Class368, Class800, 2, 0, 20, 100);
@@ -442,7 +442,7 @@ export var Class815 = function () {
         Class756.member25(n);
         Class455.member25(n);
         Class708.member25(n);
-        Class769.member25(n);
+        DelayedStateChange.member25(n);
         Class524.member25(n);
         if (true) {
             Class689.member25(n);
@@ -489,7 +489,7 @@ export var Class815 = function () {
         var C = n.member8252.member9083();
         if (C !== undefined) {
             var A = C.member8260(Class501.member8112);
-            A.member2698.member1056(B);
+            A.packet.p4(B);
             C.member8261(A);
         }
     };
@@ -500,7 +500,7 @@ export var Class815 = function () {
         var C = n.member8252.member8259();
         if (C !== undefined) {
             var A = C.member8260(Class501.member8111);
-            A.member2698.member1056(B);
+            A.packet.p4(B);
             C.member8261(A);
         }
     };

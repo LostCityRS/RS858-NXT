@@ -26,8 +26,8 @@ export var Class573 = function () {
     };
     a.prototype.member7454 = function (c, e, b) {
         var d = c.member7634(e, b);
-        if (d === member47) {
-            return member47;
+        if (d === NULL) {
+            return NULL;
         } else if (d === undefined) {
             this.member301();
             return false;
@@ -39,8 +39,8 @@ export var Class573 = function () {
     };
     a.prototype.member7455 = function (b, d) {
         var c = b.member7438(d);
-        if (c === member47) {
-            return member47;
+        if (c === NULL) {
+            return NULL;
         } else if (c === undefined) {
             this.member301();
             return false;
@@ -51,7 +51,7 @@ export var Class573 = function () {
         }
     };
     a.prototype.member8876 = function (c, d) {
-        if (c === undefined || c === member47) {
+        if (c === undefined || c === NULL) {
             throw new Error('1543 ');
         }
         this.member8875 = c;
@@ -59,8 +59,8 @@ export var Class573 = function () {
             throw new Error('1544 ');
         }
         var b = this.member8875.member7438(d & 65535);
-        if (b === member47) {
-            return member47;
+        if (b === NULL) {
+            return NULL;
         } else if (b === undefined) {
             this.member301();
             return false;

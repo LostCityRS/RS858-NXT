@@ -68,7 +68,7 @@ export var Class452 = function () {
             member2811: z
         };
         if (F !== undefined) {
-            delete r[F.member444()];
+            delete r[F.getID()];
             n.unlink(F);
             F.member2802(E);
         } else {
@@ -110,7 +110,7 @@ export var Class452 = function () {
         if (r[s].member884 === n.member883) {
             return -1;
         } else {
-            return r[s].member884.member444();
+            return r[s].member884.getID();
         }
     };
     e.member7193 = function (s) {
@@ -120,7 +120,7 @@ export var Class452 = function () {
         if (r[s].next === n.member883) {
             return -1;
         } else {
-            return r[s].next.member444();
+            return r[s].next.getID();
         }
     };
     e.member7194 = function () {

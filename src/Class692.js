@@ -1,7 +1,7 @@
 import { Class691 } from 'Class691.js';
 import { Class457 } from 'Class457.js';
 import { Class261 } from 'Class261.js';
-import { Class463 } from 'Class463.js';
+import { ScriptVarType } from 'Class463.js';
 export var Class692 = function () {
     var a = function (c, b) {
         this.member9899;
@@ -22,7 +22,7 @@ export var Class692 = function () {
     a.prototype.member9621 = function () {
         return this.member9899;
     };
-    a.prototype.member444 = function () {
+    a.prototype.getID = function () {
         return this.member625;
     };
     a.prototype.member8041 = function () {
@@ -36,24 +36,24 @@ export var Class692 = function () {
     };
     a.prototype.decode = function (c) {
         while (true) {
-            var d = c.member609();
+            var d = c.g1();
             if (d === 0) {
                 break;
             }
             if (d === Class261.member3029.serialID) {
-                var b = c.member609();
-                this.member7378 = Class463.getByID(b);
+                var b = c.g1();
+                this.member7378 = ScriptVarType.getByID(b);
                 if (this.member7378 === null) {
                     throw new Error('1170 ' + b);
                 }
             } else if (d === Class261.member3027.serialID) {
-                this.member3690 = c.member1089(true);
+                this.member3690 = c.gjstr(true);
             } else if (d === Class261.member3030.serialID) {
-                this.lifetime = Class691.getByID(c.member609());
+                this.lifetime = Class691.getByID(c.g1());
             } else if (d === Class261.member3031.serialID) {
-                this.member9900 = Class457.getByID(c.member609());
+                this.member9900 = Class457.getByID(c.g1());
             } else if (d === Class261.member3033.serialID) {
-                this.member6683 = c.member608();
+                this.member6683 = c.g2();
             } else if (d === Class261.member3032.serialID) {
                 this.member7377 = false;
             }

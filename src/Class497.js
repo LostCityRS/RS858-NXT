@@ -1,4 +1,4 @@
-import { Class252 } from 'Class252.js';
+import { ObjWearModels } from 'Class252.js';
 export var Class497 = function (h) {
     var n = {};
     var u = 1 << 0;
@@ -6,65 +6,65 @@ export var Class497 = function (h) {
     var t = 1 << 2;
     var v = 1 << 3;
     var e = null;
-    n.member7935 = function () {
+    n.getManWear = function () {
         return e;
     };
     var r = null;
-    n.member7936 = function () {
+    n.getWomanWear = function () {
         return r;
     };
     var b = null;
-    n.member7607 = function () {
+    n.getRecolD = function () {
         return b;
     };
     var i = null;
-    n.member7608 = function () {
+    n.getRetexD = function () {
         return i;
     };
-    if (h.member7937 !== undefined && h.member2698 !== undefined) {
+    if (h.member7937 !== undefined && h.packet !== undefined) {
         var q = h.member7937;
-        var m = h.member2698;
-        var s = q.member7935();
+        var m = h.packet;
+        var s = q.getManWear();
         if (s !== null) {
-            e = s.member1319();
+            e = s.clone();
         } else {
-            e = Class252({});
+            e = ObjWearModels({});
         }
-        s = q.member7936();
+        s = q.getWomanWear();
         if (s != null) {
-            r = s.member1319();
+            r = s.clone();
         } else {
-            r = Class252({});
+            r = ObjWearModels({});
         }
-        if (q.member7607() !== null) {
-            b = q.member7607().slice(0);
+        if (q.getRecolD() !== null) {
+            b = q.getRecolD().slice(0);
         }
-        if (q.member7608() !== null) {
-            i = q.member7608().slice(0);
+        if (q.getRetexD() !== null) {
+            i = q.getRetexD().slice(0);
         }
-        var d = m.member609();
+        var d = m.g1();
         if ((d & u) !== 0) {
-            e.member2959(m.member1086());
-            r.member2959(m.member1086());
-            if (q.member7935().member2960() !== -1 || q.member7936().member2960() !== -1) {
-                e.member2961(m.member1086());
-                r.member2961(m.member1086());
+            e.setWear1(m.gSmart2or4null());
+            r.setWear1(m.gSmart2or4null());
+            if (q.getManWear().getWear2() !== -1 || q.getWomanWear().getWear2() !== -1) {
+                e.setWear2(m.gSmart2or4null());
+                r.setWear2(m.gSmart2or4null());
             }
-            if (q.member7935().member2962() !== -1 || q.member7936().member2962() !== -1) {
-                e.member2963(m.member1086());
-                r.member2963(m.member1086());
+            if (q.getManWear().getWear3() !== -1 || q.getWomanWear().getWear3() !== -1) {
+                e.setWear3(m.gSmart2or4null());
+                r.setWear3(m.gSmart2or4null());
             }
         }
         if ((d & c) !== 0) {
-            e.member2965(m.member1086());
-            r.member2965(m.member1086());
-            if (q.member7935().member2966() !== -1 || q.member7936().member2966() !== -1) {
-                e.member2967(m.member1086());
-                r.member2967(m.member1086());
+            e.setHead1(m.gSmart2or4null());
+            r.setHead1(m.gSmart2or4null());
+            if (q.getManWear().getHead2() !== -1 || q.getWomanWear().getHead2() !== -1) {
+                e.setHead2(m.gSmart2or4null());
+                r.setHead2(m.gSmart2or4null());
             }
         }
         if ((d & t) !== 0) {
-            var k = m.member608();
+            var k = m.g2();
             var g = new Array(4);
             g[0] = k & 15;
             g[1] = k >> 4 & 15;
@@ -72,18 +72,18 @@ export var Class497 = function (h) {
             g[3] = k >> 12 & 15;
             for (var o = 0; o < 4; o++) {
                 if (g[o] !== 15) {
-                    b[g[o]] = m.member608();
+                    b[g[o]] = m.g2();
                 }
             }
         }
         if ((d & v) !== 0) {
-            var k = m.member609();
+            var k = m.g1();
             var g = new Array(2);
             g[0] = k & 15;
             g[1] = k >> 4 & 15;
             for (var o = 0; o < 2; o++) {
                 if (g[o] !== 15) {
-                    i[g[o]] = m.member608();
+                    i[g[o]] = m.g2();
                 }
             }
         }
@@ -113,20 +113,20 @@ export var Class497 = function (h) {
         }
         return true;
     };
-    n.member2969 = function (j) {
+    n.equals = function (j) {
         if (j === null || j === undefined) {
             return false;
         }
-        if (!e.member2969(j.member7935())) {
+        if (!e.equals(j.getManWear())) {
             return false;
         }
-        if (!r.member2969(j.member7936())) {
+        if (!r.equals(j.getWomanWear())) {
             return false;
         }
-        if (!a(b, j.member7607())) {
+        if (!a(b, j.getRecolD())) {
             return false;
         }
-        if (!a(i, j.member7608())) {
+        if (!a(i, j.getRetexD())) {
             return false;
         }
         return true;

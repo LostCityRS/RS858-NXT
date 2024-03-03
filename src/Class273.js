@@ -2,7 +2,7 @@ import { Class272 } from 'Class272.js';
 import { Class86 } from 'Class86.js';
 import { Class95 } from 'Class95.js';
 import { Class271 } from 'Class271.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 export var Class273 = function () {
     var a = Class272({ member3248: true });
     var b = function (m) {
@@ -74,9 +74,9 @@ export var Class273 = function () {
             if (q === undefined) {
                 return a;
             } else if (q === false) {
-                return member47;
+                return NULL;
             } else {
-                return Class272({ data: s.getFile(Class95.member809, o, Class271.member3212, Class96.member841) });
+                return Class272({ data: s.getFile(Class95.member809, o, Class271.member3212, Priority.member841) });
             }
         };
         m = undefined;

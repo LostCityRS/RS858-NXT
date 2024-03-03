@@ -1,4 +1,4 @@
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 import { Class86 } from 'Class86.js';
 export var Class291 = function () {
     var b = function (d, c, e) {
@@ -8,7 +8,7 @@ export var Class291 = function () {
         this.member3455 = undefined;
         this.member25(d, c, e);
     };
-    var a = Class290().member3459();
+    var a = CoordFine().member3459();
     b.prototype.member25 = function (d, c, e) {
         if (d !== undefined) {
             if (typeof d === 'number') {
@@ -56,7 +56,7 @@ export var Class291 = function () {
     };
     b.prototype.member3461 = function (c) {
         if (this.member3455 === undefined) {
-            this.member3455 = Class290();
+            this.member3455 = CoordFine();
         }
         this.member3455.level = this.level;
         this.member3455.member3454[0] = this.x * Class86.member718 + (c ? Class86.member718 / 2 : 0);

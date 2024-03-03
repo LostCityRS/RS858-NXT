@@ -1,5 +1,5 @@
 import { Class309 } from 'Class309.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class93 } from 'Class93.js';
 import { Class311 } from 'Class311.js';
 import { Class262 } from 'Class262.js';
@@ -16,7 +16,7 @@ export var Class312 = function () {
             if (o === 0) {
                 o = k;
             }
-            j = n.getFile(h, o, 0, Class96.member840, Class93.member796);
+            j = n.getFile(h, o, 0, Priority.member840, Class93.member796);
             if (j === null || j === undefined) {
                 return j;
             }

@@ -62,7 +62,7 @@ export var Class174 = function () {
                     if (k[i] !== undefined) {
                         b[i] = Class160({
                             member625: i,
-                            member651: k[i].member701(),
+                            member651: k[i].getMaterial(),
                             member1676: k[i].member1680(),
                             member1677: k[i].member1681(),
                             member1380: k[i].member1416(),

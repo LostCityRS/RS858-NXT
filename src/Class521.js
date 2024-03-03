@@ -126,7 +126,7 @@ export var Class521 = function () {
             v.member2876(x ? Class519.member8407 : Class519.member8406);
         };
         h.member8429 = function (v, u) {
-            e[v].member3019(u);
+            e[v].setTeam(u);
         };
         h.member8430 = function () {
             for (var u = 0; u < e.length; u++) {
@@ -145,35 +145,35 @@ export var Class521 = function () {
             v.member3021(x);
         };
         h.decode = function (x, D) {
-            var B = x.member609();
+            var B = x.g1();
             if (B <= 0 || B > b) {
                 throw new Error('1328 ' + B + '1328 ' + b + '1328 ');
             }
-            var u = x.member609();
+            var u = x.g1();
             o = (u & c) !== 0;
-            q = x.member1073();
-            x.member608();
-            s = x.member1076();
-            t = x.member1089();
-            r = x.member1071();
-            m = x.member1073();
-            x.member608();
-            k = x.member1076();
-            var z = x.member608();
+            q = x.g4();
+            x.g2();
+            s = x.g6();
+            t = x.gjstr();
+            r = x.g2s();
+            m = x.g4();
+            x.g2();
+            k = x.g6();
+            var z = x.g2();
             e = new Array(z);
             for (var A = 0; A < z; A++) {
                 e[A] = Class260(x, D);
             }
-            var v = x.member608();
+            var v = x.g2();
             g = new Array(v);
             for (var A = 0; A < v; A++) {
                 g[A] = Class520(x);
             }
             i = Class251();
-            var C = x.member608();
+            var C = x.g2();
             for (var A = 0; A < C; A++) {
-                var y = D.member8433().member3026(x);
-                if (y === member47) {
+                var y = D.getVarPlayerGroupTypeList().member3026(x);
+                if (y === NULL) {
                     return false;
                 }
                 i.member2947(y.id, y.value);

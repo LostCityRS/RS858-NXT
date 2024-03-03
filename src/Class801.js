@@ -27,7 +27,7 @@ export var Class801 = function () {
         };
         d.member9907 = function (h, g) {
             for (var e = d.member776(); e !== undefined; e = d.member777()) {
-                if (h.member2969(e.member8493())) {
+                if (h.equals(e.member8493())) {
                     e.member8496(g);
                     if (e.member10416()) {
                         e.member512();

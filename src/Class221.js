@@ -1,4 +1,4 @@
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 export var Class221 = function () {
     var a = function (m) {
         var d = {};
@@ -8,7 +8,7 @@ export var Class221 = function () {
         var c = 0;
         if (m.size !== undefined) {
             n = m.size;
-            b = Class124(n);
+            b = Packet(n);
         } else {
             throw new Error('1786 ');
         }
@@ -26,7 +26,7 @@ export var Class221 = function () {
             if (i >= k) {
                 if (i + o > n) {
                     b.member1067(q, 0, n - i);
-                    b.member607(0);
+                    b.setPos(0);
                     b.member1067(q, n - i, o - (n - i));
                     i = o - (n - i);
                 } else {
@@ -62,7 +62,7 @@ export var Class221 = function () {
         var e = d.getData;
         d.member301 = function () {
             k = i = c = 0;
-            b.member607(0);
+            b.setPos(0);
         };
         var g = d.member301;
         m = undefined;

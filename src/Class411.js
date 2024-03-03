@@ -1,7 +1,7 @@
 import { Class86 } from 'Class86.js';
 import { Class143 } from 'Class143.js';
 import { Class410 } from 'Class410.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 export var Class411 = function () {
     var a = function (b) {
         this.level;
@@ -42,7 +42,7 @@ export var Class411 = function () {
     a.prototype.member4740 = function () {
         return this.member4732;
     };
-    a.prototype.member993 = function () {
+    a.prototype.getDamageColour = function () {
         return this.member4638;
     };
     a.prototype.member992 = function () {
@@ -58,19 +58,19 @@ export var Class411 = function () {
         return this.member4642;
     };
     a.prototype.member25 = function (h) {
-        if (h.member2698 !== undefined) {
-            this.level = h.member2698.member609();
+        if (h.packet !== undefined) {
+            this.level = h.packet.g1();
             this.member4729 = (this.level & 8) != 0;
             this.member4728 = (this.level & 16) != 0;
             this.level = this.level & 7;
-            this.position[0] = h.member2698.member608();
-            this.position[2] = h.member2698.member608();
-            this.position[1] = h.member2698.member608();
-            var d = h.member2698.member609();
+            this.position[0] = h.packet.g2();
+            this.position[2] = h.packet.g2();
+            this.position[1] = h.packet.g2();
+            var d = h.packet.g1();
             var g = d * 2 + 1;
             this.member4730 = new Uint32Array(g);
             for (var j = 0; j < this.member4730.length; j++) {
-                var k = h.member2698.member608();
+                var k = h.packet.g2();
                 var i = k >>> 8;
                 var e = k & 255;
                 if (i >= g) {
@@ -83,15 +83,15 @@ export var Class411 = function () {
             }
             this.member4129 = d * Class86.member718 + Class86.member718 / 2;
             this.member4129 *= 2;
-            this.member4638 = Class143.member1441(h.member2698.member608());
-            var b = h.member2698.member609();
+            this.member4638 = Class143.member1441(h.packet.g2());
+            var b = h.packet.g1();
             this.member4731 = b & 31;
             this.member4734 = (b & 224) << 3;
-            this.member4642 = h.member2698.member1071();
+            this.member4642 = h.packet.g2s();
             if (this.member4731 !== Class410.member4726) {
                 this.member4743();
             } else {
-                this.member4733 = h.member2698.member608();
+                this.member4733 = h.packet.g2();
             }
         } else if (h.member4744 !== undefined && h.member4745 !== undefined && h.member1668 !== undefined) {
             var c = h.member4744;
@@ -101,7 +101,7 @@ export var Class411 = function () {
             this.position = h.member4745;
             this.member4730 = c.member4738();
             this.member4129 = c.member992();
-            this.member4638 = c.member993();
+            this.member4638 = c.getDamageColour();
             this.member4731 = c.member4739();
             this.member4734 = c.member4742();
             this.member4642 = c.member4646();
@@ -222,12 +222,12 @@ export var Class411 = function () {
     a.prototype.member4655 = function (h, j, e) {
         var i = true;
         if (this.member4733 !== -1) {
-            var g = h.member3227(Class131.member1225.member1204, this.member4733);
-            if (g !== member47) {
-                this.member4732 = g.member4748();
-                this.offset = g.member2968();
-                this.member4735 = g.member4749();
-                this.frequency = g.member4750();
+            var g = h.getConfigType(Js5ConfigGroup.LIGHTTYPE.member1204, this.member4733);
+            if (g !== NULL) {
+                this.member4732 = g.getFunction();
+                this.offset = g.getOffset();
+                this.member4735 = g.getAmplitude();
+                this.frequency = g.getFrequency();
                 this.member4733 = -1;
             } else {
                 i = false;

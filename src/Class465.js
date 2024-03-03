@@ -1,48 +1,48 @@
-import { Class131 } from 'Class131.js';
-import { Class463 } from 'Class463.js';
-export var Class465 = function () {
+import { Js5ConfigGroup } from 'Class131.js';
+import { ScriptVarType } from 'Class463.js';
+export var VarDomainType = function () {
     var a = {
-        member4134: {
-            member2385: Class131.member1245,
+        PLAYER: {
+            member2385: Js5ConfigGroup.VAR_PLAYER,
             serialID: 0,
             member7375: true,
             member7376: true,
             member2944: function (c) {
-                if (c.member7377 && c.member7378 === Class463.member7288) {
+                if (c.member7377 && c.member7378 === ScriptVarType.BOOLEAN) {
                     return -1;
                 } else {
                     return c.member7378.defaultValue;
                 }
             }
         },
-        member4133: {
-            member2385: Class131.member1246,
+        NPC: {
+            member2385: Js5ConfigGroup.VAR_NPC,
             serialID: 1,
             member7375: false,
             member7376: true,
             member2944: function (c) {
-                if (c.member7377 && c.member7378 === Class463.member7288) {
+                if (c.member7377 && c.member7378 === ScriptVarType.BOOLEAN) {
                     return -1;
                 } else {
                     return c.member7378.defaultValue;
                 }
             }
         },
-        member7379: {
-            member2385: Class131.member1247,
+        CLIENT: {
+            member2385: Js5ConfigGroup.VAR_CLIENT,
             serialID: 2,
             member7375: true,
             member7376: true,
             member2944: function (c) {
-                if (c.member7377 && (c.member7378 === Class463.member7285 || c.member7378 === Class463.member7288)) {
+                if (c.member7377 && (c.member7378 === ScriptVarType.INT || c.member7378 === ScriptVarType.BOOLEAN)) {
                     return -1;
                 } else {
                     return c.member7378.defaultValue;
                 }
             }
         },
-        member7380: {
-            member2385: Class131.member1251,
+        CLAN: {
+            member2385: Js5ConfigGroup.VAR_CLAN,
             serialID: 6,
             member7375: true,
             member7376: true,
@@ -50,8 +50,8 @@ export var Class465 = function () {
                 return c.member7378.defaultValue;
             }
         },
-        member7381: {
-            member2385: Class131.member1252,
+        CLAN_SETTING: {
+            member2385: Js5ConfigGroup.VAR_CLAN_SETTING,
             serialID: 7,
             member7375: true,
             member7376: false,
@@ -59,8 +59,8 @@ export var Class465 = function () {
                 return c.member7378.defaultValue;
             }
         },
-        member7360: {
-            member2385: Class131.member1260,
+        PLAYER_GROUP: {
+            member2385: Js5ConfigGroup.VAR_PLAYER_GROUP,
             serialID: 9,
             member7375: true,
             member7376: true,

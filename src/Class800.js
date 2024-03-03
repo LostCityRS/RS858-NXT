@@ -1,34 +1,34 @@
-import { Class131 } from 'Class131.js';
-import { Class465 } from 'Class465.js';
+import { Js5ConfigGroup } from 'Class131.js';
+import { VarDomainType } from 'Class465.js';
 import { Class95 } from 'Class95.js';
-import { Class796 } from 'Class796.js';
-import { Class670 } from 'Class670.js';
-import { Class785 } from 'Class785.js';
-import { Class735 } from 'Class735.js';
-import { Class706 } from 'Class706.js';
-import { Class731 } from 'Class731.js';
-import { Class686 } from 'Class686.js';
-import { Class787 } from 'Class787.js';
+import { ConfigTypeList } from 'Class796.js';
+import { ParamType } from 'Class670.js';
+import { EnumTypeList } from 'Class785.js';
+import { InvType } from 'Class735.js';
+import { ObjTypeList } from 'Class706.js';
+import { QuickChatCatTypeList } from 'Class731.js';
+import { QuickChatPhraseTypeList } from 'Class686.js';
+import { VarBitTypeList } from 'Class787.js';
 import { Class794 } from 'Class794.js';
-import { Class793 } from 'Class793.js';
-import { Class799 } from 'Class799.js';
-import { Class786 } from 'Class786.js';
-import { Class728 } from 'Class728.js';
-import { Class762 } from 'Class762.js';
-import { Class788 } from 'Class788.js';
-import { Class711 } from 'Class711.js';
-import { Class736 } from 'Class736.js';
-import { Class479 } from 'Class479.js';
-import { Class798 } from 'Class798.js';
-import { Class761 } from 'Class761.js';
-import { Class552 } from 'Class552.js';
-import { Class544 } from 'Class544.js';
-import { Class797 } from 'Class797.js';
-import { Class792 } from 'Class792.js';
-import { Class760 } from 'Class760.js';
-import { Class791 } from 'Class791.js';
-import { Class759 } from 'Class759.js';
-import { Class795 } from 'Class795.js';
+import { StructType } from 'Class793.js';
+import { BASTypeList } from 'Class799.js';
+import { EffectAnimTypeList } from 'Class786.js';
+import { FloorUnderlayType } from 'Class728.js';
+import { FloorOverlayType } from 'Class762.js';
+import { HitmarkTypeList } from 'Class788.js';
+import { HeadbarTypeList } from 'Class711.js';
+import { LightType } from 'Class736.js';
+import { IDKType } from 'Class479.js';
+import { LocTypeList } from 'Class798.js';
+import { MapElementTypeList } from 'Class761.js';
+import { MSITypeList } from 'Class552.js';
+import { NPCTypeList } from 'Class544.js';
+import { QuestTypeList } from 'Class797.js';
+import { SeqGroupTypeList } from 'Class792.js';
+import { SeqTypeList } from 'Class760.js';
+import { SkyBoxType } from 'Class791.js';
+import { WaterType } from 'Class759.js';
+import { CursorType } from 'Class795.js';
 export var Class800 = function () {
     var S = {};
     var V;
@@ -38,9 +38,9 @@ export var Class800 = function () {
     S.member8695 = function (ag) {
         ac = ag;
         if (true) {
-            M.member8695(ac);
-            R.member8695(ac);
-            u.member8695(ac);
+            locTypeList.member8695(ac);
+            npcTypeList.member8695(ac);
+            objTypeList.member8695(ac);
         } else {
         }
     };
@@ -53,62 +53,62 @@ export var Class800 = function () {
     var U = 1;
     var d = 2;
     var af = m;
-    var C = new Array(Class131.member1261 + 1);
-    var s;
-    var D;
-    var H;
-    var i;
-    var I;
-    var k;
-    var ab;
-    var E;
-    var t;
-    var G;
-    var M;
-    var W;
-    var F;
-    var R;
-    var u;
+    var configTypeLists = new Array(Js5ConfigGroup.member1261 + 1);
+    var basTypeList;
+    var enumTypeList;
+    var effectAnimTypeList;
+    var floorUnderlayTypeList;
+    var floorOverlayTypeList;
+    var hitmarkTypeList;
+    var headbarTypeList;
+    var idkTypeList;
+    var invTypeList;
+    var lightTypeList;
+    var locTypeList;
+    var mapElementTypeList;
+    var msiTypeList;
+    var npcTypeList;
+    var objTypeList;
     S.member9592 = function () {
-        return u;
+        return objTypeList;
     };
-    var A;
-    var ad;
+    var paramTypeList;
+    var questTypeList;
     S.member2974 = function () {
-        return ad;
+        return questTypeList;
     };
-    var r;
-    var O;
+    var chatCatTypeList;
+    var chatPhraseTypeList;
     S.member9744 = function () {
-        return O;
+        return chatPhraseTypeList;
     };
-    var L;
-    var K;
-    var y;
-    var c;
-    var n;
+    var seqGroupTypeList;
+    var seqTypeList;
+    var skyBoxTypeList;
+    var structTypeList;
+    var waterTypeList;
     var Q;
-    var T;
-    S.member8443 = function () {
-        return T;
+    var varBitTypeList;
+    S.getVarBitTypeList = function () {
+        return varBitTypeList;
     };
-    var z;
-    S.member10208 = function () {
-        return z;
+    var varClanTypeList;
+    S.getVarClanTypeList = function () {
+        return varClanTypeList;
     };
-    var J;
-    var P;
-    S.member10424 = function () {
-        return P;
+    var varClanSettingTypeList;
+    var varClientTypeList;
+    S.getVarClientTypeList = function () {
+        return varClientTypeList;
     };
-    var b;
-    var aa;
-    S.member3025 = function () {
-        return aa;
+    var varNPCTypeList;
+    var varPlayerTypeList;
+    S.getVarPlayerTypeList = function () {
+        return varPlayerTypeList;
     };
-    var B;
-    S.member8433 = function () {
-        return B;
+    var varPlayerGroupTypeList;
+    S.getVarPlayerGroupTypeList = function () {
+        return varPlayerGroupTypeList;
     };
     var X = function (ag, aj, al, ao, ah, am, ai, ak, an) {
         V = ag;
@@ -122,45 +122,45 @@ export var Class800 = function () {
         x = ak;
     };
     S.member25 = X;
-    var q = function (ah, ag) {
+    var getConfigType = function (ah, ag) {
         if (af !== d) {
-            return member47;
+            return NULL;
         }
-        if (C[ah] !== undefined) {
-            return C[ah].list(ag);
+        if (configTypeLists[ah] !== undefined) {
+            return configTypeLists[ah].list(ag);
         } else {
             throw new Error('1722 ' + ah);
         }
     };
-    S.member3227 = q;
-    var j = function (ag, ah) {
+    S.getConfigType = getConfigType;
+    var getVarType = function (ag, ah) {
         if (af !== d) {
-            return member47;
+            return NULL;
         }
-        if (ag === Class465.member4134) {
-            return aa.list(ah);
-        } else if (ag === Class465.member7360) {
-            return B.list(ah);
-        } else if (ag === Class465.member4133) {
-            return b.list(ah);
-        } else if (ag === Class465.member7379) {
-            return P.list(ah);
-        } else if (ag === Class465.member7380) {
-            return z.list(ah);
-        } else if (ag === Class465.member7381) {
-            return J.list(ah);
+        if (ag === VarDomainType.PLAYER) {
+            return varPlayerTypeList.list(ah);
+        } else if (ag === VarDomainType.PLAYER_GROUP) {
+            return varPlayerGroupTypeList.list(ah);
+        } else if (ag === VarDomainType.NPC) {
+            return varNPCTypeList.list(ah);
+        } else if (ag === VarDomainType.CLIENT) {
+            return varClientTypeList.list(ah);
+        } else if (ag === VarDomainType.CLAN) {
+            return varClanTypeList.list(ah);
+        } else if (ag === VarDomainType.CLAN_SETTING) {
+            return varClanSettingTypeList.list(ah);
         } else {
-            throw new Error('1723 ' + Class465.serialID);
+            throw new Error('1723 ' + VarDomainType.serialID);
         }
     };
-    S.member7393 = j;
-    var h = function (ag) {
+    S.getVarType = getVarType;
+    var getVarBitType = function (ag) {
         if (af !== d) {
-            return member47;
+            return NULL;
         }
-        return T.list(ag);
+        return varBitTypeList.list(ag);
     };
-    S.member7394 = h;
+    S.getVarBitType = getVarBitType;
     var v = function () {
         if (af === m) {
             if (V.member1437(Class95.member807) && V.member1437(Class95.member816) && V.member1437(Class95.member817) && V.member1437(Class95.member818) && V.member1437(Class95.member819) && V.member1437(Class95.member820) && V.member1437(Class95.member821) && V.member1437(Class95.member822) && V.member1437(Class95.JS5_CONFIG_AUDIOGROUPS) && V.member1437(Class95.JS5_CONFIG_AUDIOBUSS)) {
@@ -173,203 +173,203 @@ export var Class800 = function () {
                 }
             }
         } else if (af === U) {
-            if (o === undefined || o[Class131.member1215.member1204]) {
-                A = Class796({
+            if (o === undefined || o[Js5ConfigGroup.PARAMTYPE.member1204]) {
+                paramTypeList = ConfigTypeList({
                     member2739: a,
                     member3992: ae,
                     member995: V,
-                    member2385: Class131.member1215,
-                    member10512: Class670
+                    member2385: Js5ConfigGroup.PARAMTYPE,
+                    configTypeConstructor: ParamType
                 });
-                C[Class131.member1215.member1204] = A;
+                configTypeLists[Js5ConfigGroup.PARAMTYPE.member1204] = paramTypeList;
             }
-            if (o === undefined || o[Class131.member1212.member1204]) {
-                D = Class785({
+            if (o === undefined || o[Js5ConfigGroup.ENUMTYPE.member1204]) {
+                enumTypeList = EnumTypeList({
                     member2739: a,
                     member3992: ae,
                     member995: V
                 });
-                C[Class131.member1212.member1204] = D;
+                configTypeLists[Js5ConfigGroup.ENUMTYPE.member1204] = enumTypeList;
             }
-            if (o === undefined || o[Class131.member1208.member1204]) {
-                t = Class796({
+            if (o === undefined || o[Js5ConfigGroup.INVTYPE.member1204]) {
+                invTypeList = ConfigTypeList({
                     member2739: a,
                     member3992: ae,
                     member995: V,
-                    member2385: Class131.member1208,
-                    member10512: Class735
+                    member2385: Js5ConfigGroup.INVTYPE,
+                    configTypeConstructor: InvType
                 });
-                C[Class131.member1208.member1204] = t;
+                configTypeLists[Js5ConfigGroup.INVTYPE.member1204] = invTypeList;
             }
-            if (o === undefined || o[Class131.member1214.member1204]) {
-                u = Class706({
+            if (o === undefined || o[Js5ConfigGroup.OBJTYPE.member1204]) {
+                objTypeList = ObjTypeList({
                     member2739: a,
                     member3992: ae,
                     member9984: ac,
                     member995: V,
                     member2970: S
                 });
-                C[Class131.member1214.member1204] = u;
+                configTypeLists[Js5ConfigGroup.OBJTYPE.member1204] = objTypeList;
             }
             if (x !== undefined) {
-                if (o === undefined || o[Class131.member1222.member1204]) {
-                    r = Class731({
+                if (o === undefined || o[Js5ConfigGroup.CHATCATTYPE.member1204]) {
+                    chatCatTypeList = QuickChatCatTypeList({
                         member2739: a,
                         member3992: ae,
                         member995: V
                     });
-                    C[Class131.member1222.member1204] = r;
+                    configTypeLists[Js5ConfigGroup.CHATCATTYPE.member1204] = chatCatTypeList;
                 }
-                if (o === undefined || o[Class131.member1221.member1204]) {
-                    O = Class686({
+                if (o === undefined || o[Js5ConfigGroup.CHATPHRASETYPE.member1204]) {
+                    chatPhraseTypeList = QuickChatPhraseTypeList({
                         member2739: a,
                         member3992: ae,
                         member995: V,
                         member9746: x
                     });
-                    C[Class131.member1221.member1204] = O;
+                    configTypeLists[Js5ConfigGroup.CHATPHRASETYPE.member1204] = chatPhraseTypeList;
                 }
             }
-            if (o === undefined || o[Class131.member1254.member1204]) {
-                T = Class787({
+            if (o === undefined || o[Js5ConfigGroup.VAR_BIT.member1204]) {
+                varBitTypeList = VarBitTypeList({
                     member2739: a,
                     member3992: ae,
                     member995: V,
                     member2970: S
                 });
             }
-            if (o === undefined || o[Class131.member1251.member1204]) {
-                z = Class794({
+            if (o === undefined || o[Js5ConfigGroup.VAR_CLAN.member1204]) {
+                varClanTypeList = Class794({
                     member2739: a,
                     member3992: ae,
                     member995: V,
-                    member2385: Class131.member1251,
-                    member10511: Class465.member7380
+                    member2385: Js5ConfigGroup.VAR_CLAN,
+                    member10511: VarDomainType.CLAN
                 });
             }
-            if (o === undefined || o[Class131.member1252.member1204]) {
-                J = Class794({
+            if (o === undefined || o[Js5ConfigGroup.VAR_CLAN_SETTING.member1204]) {
+                varClanSettingTypeList = Class794({
                     member2739: a,
                     member3992: ae,
                     member995: V,
-                    member2385: Class131.member1252,
-                    member10511: Class465.member7381
+                    member2385: Js5ConfigGroup.VAR_CLAN_SETTING,
+                    member10511: VarDomainType.CLAN_SETTING
                 });
             }
-            if (o === undefined || o[Class131.member1247.member1204]) {
-                P = Class794({
+            if (o === undefined || o[Js5ConfigGroup.VAR_CLIENT.member1204]) {
+                varClientTypeList = Class794({
                     member2739: a,
                     member3992: ae,
                     member995: V,
-                    member2385: Class131.member1247,
-                    member10511: Class465.member7379
+                    member2385: Js5ConfigGroup.VAR_CLIENT,
+                    member10511: VarDomainType.CLIENT
                 });
             }
-            if (o === undefined || o[Class131.member1246.member1204]) {
-                b = Class794({
+            if (o === undefined || o[Js5ConfigGroup.VAR_NPC.member1204]) {
+                varNPCTypeList = Class794({
                     member2739: a,
                     member3992: ae,
                     member995: V,
-                    member2385: Class131.member1246,
-                    member10511: Class465.member4133
+                    member2385: Js5ConfigGroup.VAR_NPC,
+                    member10511: VarDomainType.NPC
                 });
             }
-            if (o === undefined || o[Class131.member1245.member1204]) {
-                aa = Class794({
+            if (o === undefined || o[Js5ConfigGroup.VAR_PLAYER.member1204]) {
+                varPlayerTypeList = Class794({
                     member2739: a,
                     member3992: ae,
                     member995: V,
-                    member2385: Class131.member1245,
-                    member10511: Class465.member4134
+                    member2385: Js5ConfigGroup.VAR_PLAYER,
+                    member10511: VarDomainType.PLAYER
                 });
             }
-            if (o === undefined || o[Class131.member1220.member1204]) {
-                c = Class796({
+            if (o === undefined || o[Js5ConfigGroup.STRUCTTYPE.member1204]) {
+                structTypeList = ConfigTypeList({
                     member2739: a,
                     member3992: ae,
                     member995: V,
-                    member2385: Class131.member1220,
-                    member10512: Class793,
+                    member2385: Js5ConfigGroup.STRUCTTYPE,
+                    configTypeConstructor: StructType,
                     member10513: Class95.member822
                 });
-                C[Class131.member1220.member1204] = c;
+                configTypeLists[Js5ConfigGroup.STRUCTTYPE.member1204] = structTypeList;
             }
             if (true) {
-                if (o === undefined || o[Class131.member1260.member1204]) {
-                    B = Class794({
+                if (o === undefined || o[Js5ConfigGroup.VAR_PLAYER_GROUP.member1204]) {
+                    varPlayerGroupTypeList = Class794({
                         member2739: a,
                         member3992: ae,
                         member995: V,
-                        member2385: Class131.member1260,
-                        member10511: Class465.member7360
+                        member2385: Js5ConfigGroup.VAR_PLAYER_GROUP,
+                        member10511: VarDomainType.PLAYER_GROUP
                     });
                 }
-                if (o === undefined || o[Class131.member1226.member1204]) {
-                    s = Class799({
+                if (o === undefined || o[Js5ConfigGroup.BASTYPE.member1204]) {
+                    basTypeList = BASTypeList({
                         member2739: a,
                         member3992: ae,
                         member995: V
                     });
-                    C[Class131.member1226.member1204] = s;
+                    configTypeLists[Js5ConfigGroup.BASTYPE.member1204] = basTypeList;
                 }
-                if (o === undefined || o[Class131.member1217.member1204]) {
-                    H = Class786({ member995: V });
-                    C[Class131.member1217.member1204] = H;
+                if (o === undefined || o[Js5ConfigGroup.SPOTTYPE.member1204]) {
+                    effectAnimTypeList = EffectAnimTypeList({ member995: V });
+                    configTypeLists[Js5ConfigGroup.SPOTTYPE.member1204] = effectAnimTypeList;
                 }
-                if (o === undefined || o[Class131.member1203.member1204]) {
-                    i = Class796({
+                if (o === undefined || o[Js5ConfigGroup.FLUTYPE.member1204]) {
+                    floorUnderlayTypeList = ConfigTypeList({
                         member2739: a,
                         member3992: ae,
                         member995: V,
-                        member2385: Class131.member1203,
-                        member10512: Class728
+                        member2385: Js5ConfigGroup.FLUTYPE,
+                        configTypeConstructor: FloorUnderlayType
                     });
-                    C[Class131.member1203.member1204] = i;
+                    configTypeLists[Js5ConfigGroup.FLUTYPE.member1204] = floorUnderlayTypeList;
                 }
-                if (o === undefined || o[Class131.member1207.member1204]) {
-                    I = Class796({
+                if (o === undefined || o[Js5ConfigGroup.FLOTYPE.member1204]) {
+                    floorOverlayTypeList = ConfigTypeList({
                         member2739: a,
                         member3992: ae,
                         member995: V,
-                        member2385: Class131.member1207,
-                        member10512: Class762
+                        member2385: Js5ConfigGroup.FLOTYPE,
+                        configTypeConstructor: FloorOverlayType
                     });
-                    C[Class131.member1207.member1204] = I;
+                    configTypeLists[Js5ConfigGroup.FLOTYPE.member1204] = floorOverlayTypeList;
                 }
-                if (o === undefined || o[Class131.member1234.member1204]) {
-                    k = Class788({
+                if (o === undefined || o[Js5ConfigGroup.HITMARKTYPE.member1204]) {
+                    hitmarkTypeList = HitmarkTypeList({
                         member995: V,
                         member2970: S,
                         member8694: Y
                     });
-                    C[Class131.member1234.member1204] = k;
+                    configTypeLists[Js5ConfigGroup.HITMARKTYPE.member1204] = hitmarkTypeList;
                 }
-                if (o === undefined || o[Class131.member1256.member1204]) {
-                    ab = Class711({ member995: V });
-                    C[Class131.member1256.member1204] = ab;
+                if (o === undefined || o[Js5ConfigGroup.HEADBARTYPE.member1204]) {
+                    headbarTypeList = HeadbarTypeList({ member995: V });
+                    configTypeLists[Js5ConfigGroup.HEADBARTYPE.member1204] = headbarTypeList;
                 }
-                if (o === undefined || o[Class131.member1225.member1204]) {
-                    G = Class796({
+                if (o === undefined || o[Js5ConfigGroup.LIGHTTYPE.member1204]) {
+                    lightTypeList = ConfigTypeList({
                         member2739: a,
                         member3992: ae,
                         member995: V,
-                        member2385: Class131.member1225,
-                        member10512: Class736
+                        member2385: Js5ConfigGroup.LIGHTTYPE,
+                        configTypeConstructor: LightType
                     });
-                    C[Class131.member1225.member1204] = G;
+                    configTypeLists[Js5ConfigGroup.LIGHTTYPE.member1204] = lightTypeList;
                 }
-                if (o === undefined || o[Class131.member1206.member1204]) {
-                    E = Class796({
+                if (o === undefined || o[Js5ConfigGroup.IDKTYPE.member1204]) {
+                    idkTypeList = ConfigTypeList({
                         member2739: a,
                         member3992: ae,
                         member995: V,
-                        member2385: Class131.member1206,
-                        member10512: Class479
+                        member2385: Js5ConfigGroup.IDKTYPE,
+                        configTypeConstructor: IDKType
                     });
-                    C[Class131.member1206.member1204] = E;
+                    configTypeLists[Js5ConfigGroup.IDKTYPE.member1204] = idkTypeList;
                 }
-                if (o === undefined || o[Class131.member1209.member1204]) {
-                    M = Class798({
+                if (o === undefined || o[Js5ConfigGroup.LOCTYPE.member1204]) {
+                    locTypeList = LocTypeList({
                         member2739: a,
                         member3992: ae,
                         member8693: ac,
@@ -377,22 +377,22 @@ export var Class800 = function () {
                         member2970: S,
                         member8694: Y
                     });
-                    C[Class131.member1209.member1204] = M;
+                    configTypeLists[Js5ConfigGroup.LOCTYPE.member1204] = locTypeList;
                 }
-                if (o === undefined || o[Class131.member1230.member1204]) {
-                    W = Class761({
+                if (o === undefined || o[Js5ConfigGroup.MELTYPE.member1204]) {
+                    mapElementTypeList = MapElementTypeList({
                         member995: V,
                         member2970: S,
                         member8694: Y
                     });
-                    C[Class131.member1230.member1204] = W;
+                    configTypeLists[Js5ConfigGroup.MELTYPE.member1204] = mapElementTypeList;
                 }
-                if (o === undefined || o[Class131.member1228.member1204]) {
-                    F = Class552({ member995: V });
-                    C[Class131.member1228.member1204] = F;
+                if (o === undefined || o[Js5ConfigGroup.MSITYPE.member1204]) {
+                    msiTypeList = MSITypeList({ member995: V });
+                    configTypeLists[Js5ConfigGroup.MSITYPE.member1204] = msiTypeList;
                 }
-                if (o === undefined || o[Class131.member1213.member1204]) {
-                    R = Class544({
+                if (o === undefined || o[Js5ConfigGroup.NPCTYPE.member1204]) {
+                    npcTypeList = NPCTypeList({
                         member2739: a,
                         member3992: ae,
                         member8693: ac,
@@ -400,92 +400,92 @@ export var Class800 = function () {
                         member2970: S,
                         member8694: Y
                     });
-                    C[Class131.member1213.member1204] = R;
+                    configTypeLists[Js5ConfigGroup.NPCTYPE.member1204] = npcTypeList;
                 }
-                if (o === undefined || o[Class131.member1229.member1204]) {
-                    ad = Class797({
+                if (o === undefined || o[Js5ConfigGroup.QUESTTYPE.member1204]) {
+                    questTypeList = QuestTypeList({
                         member2739: a,
                         member3992: ae,
                         member995: V,
                         member2970: S
                     });
-                    C[Class131.member1229.member1204] = ad;
+                    configTypeLists[Js5ConfigGroup.QUESTTYPE.member1204] = questTypeList;
                 }
-                if (o === undefined || o[Class131.member1259.member1204]) {
-                    L = Class792({
+                if (o === undefined || o[Js5ConfigGroup.SEQGROUPTYPE.member1204]) {
+                    seqGroupTypeList = SeqGroupTypeList({
                         member2739: a,
                         member3992: ae,
                         member995: V
                     });
-                    C[Class131.member1259.member1204] = L;
+                    configTypeLists[Js5ConfigGroup.SEQGROUPTYPE.member1204] = seqGroupTypeList;
                 }
-                if (o === undefined || o[Class131.member1216.member1204]) {
-                    K = Class760({
+                if (o === undefined || o[Js5ConfigGroup.SEQTYPE.member1204]) {
+                    seqTypeList = SeqTypeList({
                         member2739: a,
                         member3992: ae,
                         member995: V,
-                        member10262: L
+                        seqGroupTypeList: seqGroupTypeList
                     });
-                    C[Class131.member1216.member1204] = K;
+                    configTypeLists[Js5ConfigGroup.SEQTYPE.member1204] = seqTypeList;
                 }
-                if (o === undefined || o[Class131.member1223.member1204]) {
-                    y = Class796({
+                if (o === undefined || o[Js5ConfigGroup.SKYBOXTYPE.member1204]) {
+                    skyBoxTypeList = ConfigTypeList({
                         member2739: a,
                         member3992: ae,
                         member995: V,
-                        member2385: Class131.member1223,
-                        member10512: Class791
+                        member2385: Js5ConfigGroup.SKYBOXTYPE,
+                        configTypeConstructor: SkyBoxType
                     });
-                    C[Class131.member1223.member1204] = y;
+                    configTypeLists[Js5ConfigGroup.SKYBOXTYPE.member1204] = skyBoxTypeList;
                 }
-                if (o === undefined || o[Class131.member1258.member1204]) {
-                    n = Class796({
+                if (o === undefined || o[Js5ConfigGroup.WATERTYPE.member1204]) {
+                    waterTypeList = ConfigTypeList({
                         member2739: a,
                         member3992: ae,
                         member995: V,
-                        member2385: Class131.member1258,
-                        member10512: Class759
+                        member2385: Js5ConfigGroup.WATERTYPE,
+                        configTypeConstructor: WaterType
                     });
-                    C[Class131.member1258.member1204] = n;
+                    configTypeLists[Js5ConfigGroup.WATERTYPE.member1204] = waterTypeList;
                 }
-                if (o === undefined || o[Class131.member1227.member1204]) {
-                    Q = Class796({
+                if (o === undefined || o[Js5ConfigGroup.CURSORTYPE.member1204]) {
+                    Q = ConfigTypeList({
                         member2739: a,
                         member3992: ae,
                         member995: V,
-                        member2385: Class131.member1227,
-                        member10512: Class795
+                        member2385: Js5ConfigGroup.CURSORTYPE,
+                        configTypeConstructor: CursorType
                     });
-                    C[Class131.member1227.member1204] = Q;
+                    configTypeLists[Js5ConfigGroup.CURSORTYPE.member1204] = Q;
                 }
             } else {
             }
             af = d;
         } else if (af === d) {
-            for (var ag = 0; ag < C.length; ag++) {
-                if (C[ag] !== undefined) {
-                    C[ag].member8697(2000);
+            for (var ag = 0; ag < configTypeLists.length; ag++) {
+                if (configTypeLists[ag] !== undefined) {
+                    configTypeLists[ag].member8697(2000);
                 }
             }
-            if (g && !u.member9593()) {
-                u.member9983();
+            if (g && !objTypeList.member9593()) {
+                objTypeList.member9983();
             }
-            if (Z && !O.member9745()) {
-                O.member9883();
+            if (Z && !chatPhraseTypeList.member9745()) {
+                chatPhraseTypeList.member9883();
             }
         }
     };
     S.member78 = v;
     S.member8696 = function () {
-        for (var ag = 0; ag < C.length; ag++) {
-            if (C[ag] !== undefined) {
-                C[ag].member8696();
+        for (var ag = 0; ag < configTypeLists.length; ag++) {
+            if (configTypeLists[ag] !== undefined) {
+                configTypeLists[ag].member8696();
             }
         }
     };
     var N = S.member8696;
     S.member2975 = function (ag) {
-        return C[ag].member2975();
+        return configTypeLists[ag].member2975();
     };
     var e = S.member2975;
     return S;

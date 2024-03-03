@@ -8,9 +8,9 @@ export var Class740 = function () {
     };
     b.member25 = c;
     Class433.member6401.member6428 = function (h, i) {
-        var g = h.member608();
-        var e = h.member609();
-        var d = h.member1089();
+        var g = h.g2();
+        var e = h.g1();
+        var d = h.gjstr();
         var j = {
             member8871: e,
             member3492: d

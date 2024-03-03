@@ -1,7 +1,7 @@
 import { Class41 } from 'Class41.js';
 import { Class49 } from 'Class49.js';
 import { Class162 } from 'Class162.js';
-export var Class166 = function () {
+export var Cuboid = function () {
     var i = new Float32Array(3);
     var t = new Float32Array(3);
     var r = new Float32Array(3);
@@ -45,22 +45,22 @@ export var Class166 = function () {
             this.member1790 = u.member680.member1790;
         } else if (u.member1524 !== undefined) {
             this.member1789 = new Float32Array(3);
-            this.member1789[0] = u.member1524.member320();
-            this.member1789[1] = u.member1524.member320();
-            this.member1789[2] = u.member1524.member320();
+            this.member1789[0] = u.member1524.gFloat();
+            this.member1789[1] = u.member1524.gFloat();
+            this.member1789[2] = u.member1524.gFloat();
             this.member1790 = new Float32Array(3);
-            this.member1790[0] = u.member1524.member320();
-            this.member1790[1] = u.member1524.member320();
-            this.member1790[2] = u.member1524.member320();
+            this.member1790[0] = u.member1524.gFloat();
+            this.member1790[1] = u.member1524.gFloat();
+            this.member1790[2] = u.member1524.gFloat();
         } else if (u.member1795 !== undefined) {
             this.member1789 = new Float32Array(3);
-            this.member1789[0] = u.member1795.member1080();
-            this.member1789[1] = -u.member1795.member1080();
-            this.member1789[2] = u.member1795.member1080();
+            this.member1789[0] = u.member1795.gSmart1or2s();
+            this.member1789[1] = -u.member1795.gSmart1or2s();
+            this.member1789[2] = u.member1795.gSmart1or2s();
             this.member1790 = new Float32Array(3);
-            this.member1790[0] = u.member1795.member1080();
-            this.member1790[1] = -u.member1795.member1080();
-            this.member1790[2] = u.member1795.member1080();
+            this.member1790[0] = u.member1795.gSmart1or2s();
+            this.member1790[1] = -u.member1795.gSmart1or2s();
+            this.member1790[2] = u.member1795.gSmart1or2s();
         } else {
             throw new Error('1719 ');
         }
@@ -72,12 +72,12 @@ export var Class166 = function () {
         return this;
     };
     d.prototype.member1318 = function (u) {
-        u.member1063(this.member1789[0]);
-        u.member1063(this.member1789[1]);
-        u.member1063(this.member1789[2]);
-        u.member1063(this.member1790[0]);
-        u.member1063(this.member1790[1]);
-        u.member1063(this.member1790[2]);
+        u.pFloat(this.member1789[0]);
+        u.pFloat(this.member1789[1]);
+        u.pFloat(this.member1789[2]);
+        u.pFloat(this.member1790[0]);
+        u.pFloat(this.member1790[1]);
+        u.pFloat(this.member1790[2]);
     };
     d.prototype.member301 = function () {
         this.member1789[0] = +k;

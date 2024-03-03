@@ -2,7 +2,7 @@ import { Class421 } from 'Class421.js';
 import { Class291 } from 'Class291.js';
 import { Class68 } from 'Class68.js';
 import { Class317 } from 'Class317.js';
-import { Class479 } from 'Class479.js';
+import { IDKType } from 'Class479.js';
 import { Class415 } from 'Class415.js';
 export var Class559 = function () {
     var c = {};
@@ -296,14 +296,14 @@ export var Class559 = function () {
             if (k === null) {
                 return;
             }
-            for (var g = 0; g < Class479.member7664.length; g++) {
-                if (Class479.member7664[g] === m) {
+            for (var g = 0; g < IDKType.member7664.length; g++) {
+                if (IDKType.member7664[g] === m) {
                     k.member7913(g, h);
                     return;
                 }
             }
-            for (var g = 0; g < Class479.member7665.length; g++) {
-                if (Class479.member7665[g] === m) {
+            for (var g = 0; g < IDKType.member7665.length; g++) {
+                if (IDKType.member7665[g] === m) {
                     k.member7913(g, h);
                     return;
                 }

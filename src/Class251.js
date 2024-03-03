@@ -8,17 +8,17 @@ export var Class251 = function () {
         if (true) {
         } else {
         }
-        d.member2943 = function (n) {
-            var o = i[n.member444()];
+        d.getVarInt = function (n) {
+            var o = i[n.getID()];
             if (o === undefined) {
                 return n.member2944();
             } else {
                 return o;
             }
         };
-        var h = d.member2943;
+        var h = d.getVarInt;
         d.member2945 = function (n, o) {
-            i[n.member444()] = o;
+            i[n.getID()] = o;
         };
         var e = d.member2945;
         var m = function (n) {
@@ -30,9 +30,9 @@ export var Class251 = function () {
         };
         var k = d.member2947;
         var c = function (n) {
-            return n.member2948(i[n.member2949().member444()]);
+            return n.member2948(i[n.member2949().getID()]);
         };
-        d.member2950 = c;
+        d.getVarBit = c;
         var b = function (q, o) {
             var n = q.member2949();
             e(n, q.member2951(h(n), o));

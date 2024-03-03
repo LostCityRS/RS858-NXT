@@ -1,6 +1,6 @@
 import { Class66 } from 'Class66.js';
 import { Class293 } from 'Class293.js';
-import { Class766 } from 'Class766.js';
+import { ClientParameters } from 'Class766.js';
 import { Class371 } from 'Class371.js';
 import { Class633 } from 'Class633.js';
 import { Class421 } from 'Class421.js';
@@ -44,7 +44,7 @@ export var Class767 = function () {
         a = Class66.member432('debugwindow');
         if (true) {
             Class293.member3468({
-                url: window.debugMonitorUsingHTML === true ? 'clientjsdebug.html' : Class766.member10346.value + '/html5gamedebug.ws',
+                url: window.debugMonitorUsingHTML === true ? 'clientjsdebug.html' : ClientParameters.member10346.value + '/html5gamedebug.ws',
                 member3469: 'height=800,location=no,menubar=no,status=no,toolbar=no,width=600'
             });
             Class293.member3473(function () {

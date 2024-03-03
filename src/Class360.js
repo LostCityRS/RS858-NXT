@@ -7,9 +7,9 @@ export var Class360 = function () {
     member45(Class92, b);
     b.prototype.member793 = function (d, c) {
         if (this.value === a.member797) {
-            c.member1024(Class72.member498);
+            c.member1024(Class72.POINTLIGHT);
         } else {
-            c.member1023(Class72.member498);
+            c.member1023(Class72.POINTLIGHT);
         }
     };
     b.prototype.member792 = function () {

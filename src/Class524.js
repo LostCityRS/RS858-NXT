@@ -1,4 +1,4 @@
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 import { Class291 } from 'Class291.js';
 import { Class486 } from 'Class486.js';
 import { Class377 } from 'Class377.js';
@@ -8,7 +8,7 @@ import { Class432 } from 'Class432.js';
 export var Class524 = function () {
     var u = {};
     var z;
-    var x = Class290();
+    var x = CoordFine();
     var v = false;
     u.member8448 = 2048;
     var A = u.member8448;
@@ -145,9 +145,9 @@ export var Class524 = function () {
         }
     };
     var b = function (J, O) {
-        J.member1096();
+        J.enterBitMode();
         var Q = z.member7135().member7649();
-        var R = J.member1098(30);
+        var R = J.gBit(30);
         B[Q] = {
             position: Class291(R),
             member7777: 0,
@@ -168,7 +168,7 @@ export var Class524 = function () {
                 member7710: z,
                 slotID: Q
             });
-            M.member7849(Class290(B[Q].position.level, B[Q].position.x * Class86.member718 + M.member7795() * Class86.member718 / 2, B[Q].position.member756 * Class86.member718 + M.member7795() * Class86.member718 / 2));
+            M.member7849(CoordFine(B[Q].position.level, B[Q].position.x * Class86.member718 + M.member7795() * Class86.member718 / 2, B[Q].position.member756 * Class86.member718 + M.member7795() * Class86.member718 / 2));
             N.member4185(M);
         } else {
         }
@@ -179,7 +179,7 @@ export var Class524 = function () {
             if (P === Q) {
                 continue;
             }
-            var H = J.member1098(18);
+            var H = J.gBit(18);
             var I = H >> 16 & 3;
             var L = H >> 8 & 255;
             var K = H & 255;
@@ -195,15 +195,15 @@ export var Class524 = function () {
             };
             m[h++] = P;
         }
-        J.member1100();
+        J.leaveBitMode();
     };
     u.member8460 = b;
     var a = function (H, I) {
         q = 0;
         s(H);
         n(H);
-        if (H.member1047() !== I) {
-            throw new Error('1603 ' + H.member1047() + '1603 ' + I);
+        if (H.getPos() !== I) {
+            throw new Error('1603 ' + H.getPos() + '1603 ' + I);
         }
     };
     u.member8461 = a;
@@ -211,7 +211,7 @@ export var Class524 = function () {
         if (false) {
         }
         var K = 0;
-        J.member1096();
+        J.enterBitMode();
         for (var L = 0; L < i; L++) {
             var H = k[L];
             if (!B[H].member8459) {
@@ -220,7 +220,7 @@ export var Class524 = function () {
                     B[H].member8458 = true;
                     continue;
                 }
-                var I = J.member1098(1);
+                var I = J.gBit(1);
                 if (I === 0) {
                     K = F(J);
                     B[H].member8458 = true;
@@ -229,11 +229,11 @@ export var Class524 = function () {
                 r(J, H);
             }
         }
-        J.member1100();
+        J.leaveBitMode();
         if (K !== 0) {
             throw new Error('1604 ' + K);
         }
-        J.member1096();
+        J.enterBitMode();
         for (var L = 0; L < i; L++) {
             var H = k[L];
             if (B[H].member8459) {
@@ -242,7 +242,7 @@ export var Class524 = function () {
                     B[H].member8458 = true;
                     continue;
                 }
-                var I = J.member1098(1);
+                var I = J.gBit(1);
                 if (I === 0) {
                     K = F(J);
                     B[H].member8458 = true;
@@ -251,11 +251,11 @@ export var Class524 = function () {
                 r(J, H);
             }
         }
-        J.member1100();
+        J.leaveBitMode();
         if (K !== 0) {
             throw new Error('1605 ' + K);
         }
-        J.member1096();
+        J.enterBitMode();
         for (var L = 0; L < h; L++) {
             var H = m[L];
             if (B[H].member8459) {
@@ -264,7 +264,7 @@ export var Class524 = function () {
                     B[H].member8458 = true;
                     continue;
                 }
-                var I = J.member1098(1);
+                var I = J.gBit(1);
                 if (I === 0) {
                     K = F(J);
                     B[H].member8458 = true;
@@ -275,11 +275,11 @@ export var Class524 = function () {
                 }
             }
         }
-        J.member1100();
+        J.leaveBitMode();
         if (K !== 0) {
             throw new Error('1606 ' + K);
         }
-        J.member1096();
+        J.enterBitMode();
         for (var L = 0; L < h; L++) {
             var H = m[L];
             if (!B[H].member8459) {
@@ -288,7 +288,7 @@ export var Class524 = function () {
                     B[H].member8458 = true;
                     continue;
                 }
-                var I = J.member1098(1);
+                var I = J.gBit(1);
                 if (I === 0) {
                     K = F(J);
                     B[H].member8458 = true;
@@ -299,7 +299,7 @@ export var Class524 = function () {
                 }
             }
         }
-        J.member1100();
+        J.leaveBitMode();
         if (K !== 0) {
             throw new Error('1607 ' + K);
         }
@@ -320,16 +320,16 @@ export var Class524 = function () {
         }
     };
     var F = function (J) {
-        var I = J.member1098(2);
+        var I = J.gBit(2);
         var H;
         if (I === 0) {
             H = 0;
         } else if (I === 1) {
-            H = J.member1098(5);
+            H = J.gBit(5);
         } else if (I === 2) {
-            H = J.member1098(8);
+            H = J.gBit(8);
         } else {
-            H = J.member1098(11);
+            H = J.gBit(11);
         }
         return H;
     };
@@ -337,11 +337,11 @@ export var Class524 = function () {
         if (false) {
         }
         var I = z.member6101.member6430();
-        var aa = U.member1098(1) === 1;
+        var aa = U.gBit(1) === 1;
         if (aa) {
             t[q++] = K;
         }
-        var Y = U.member1098(2);
+        var Y = U.gBit(2);
         var L = B[K].member8449;
         if (Y === 0) {
             if (aa) {
@@ -360,18 +360,18 @@ export var Class524 = function () {
             B[K].member8449.member3320().member4189();
             B[K].member8449.member512();
             B[K].member8449 = undefined;
-            if (U.member1098(1) !== 0) {
+            if (U.gBit(1) !== 0) {
                 c(U, K);
             }
             return;
         }
         if (Y === 1) {
-            var P = U.member1098(3);
-            var H = U.member1098(1) === 1;
+            var P = U.gBit(3);
+            var H = U.gBit(1) === 1;
             L.member7839(x);
             var O = x.member3454[0], N = x.member3454[2];
             if (H) {
-                var V = U.member1098(2);
+                var V = U.gBit(2);
                 if (V === 0) {
                     N += Class86.member718;
                 } else if (V === 1) {
@@ -405,14 +405,14 @@ export var Class524 = function () {
                 O += Class86.member718;
                 N += Class86.member718;
             }
-            var T = Class290(x.level, O, N);
+            var T = CoordFine(x.level, O, N);
             L.member7779(T, B[K].member7804);
             if (false) {
             }
             return;
         }
         if (Y == 2) {
-            var ac = U.member1098(4);
+            var ac = U.gBit(4);
             L.member7839(x);
             var O = x.member3454[0], N = x.member3454[2];
             if (ac === 0) {
@@ -460,15 +460,15 @@ export var Class524 = function () {
                 O += Class86.member718 * 2;
                 N += Class86.member718 * 2;
             }
-            var T = Class290(x.level, O, N);
+            var T = CoordFine(x.level, O, N);
             L.member7779(T, B[K].member7804);
             if (false) {
             }
             return;
         }
-        var X = U.member1098(1);
+        var X = U.gBit(1);
         if (X === 0) {
-            var S = U.member1098(15);
+            var S = U.gBit(15);
             var Q = S >> 12 & 7;
             var Z = S >> 10 & 3;
             var R = S >> 5 & 31;
@@ -481,7 +481,7 @@ export var Class524 = function () {
             }
             L.member7839(x);
             var O = x.member3454[0] + R * Class86.member718, N = x.member3454[2] + ab * Class86.member718;
-            var T = Class290(x.level + Z & 3, O, N);
+            var T = CoordFine(x.level + Z & 3, O, N);
             if (Q - 1 == Class432.member6231) {
                 L.member7849(T, true);
             } else {
@@ -493,15 +493,15 @@ export var Class524 = function () {
             }
             return;
         }
-        var Q = U.member1098(3);
-        var J = U.member1098(30);
+        var Q = U.gBit(3);
+        var J = U.gBit(30);
         var Z = J >> 28 & 3;
         var M = (J >> 14 & 16383) * Class86.member718;
         var W = (J & 16383) * Class86.member718;
         L.member7839(x);
         var O = x.member3454[0] + M & 16384 * Class86.member718 - 1;
         var N = x.member3454[2] + W & 16384 * Class86.member718 - 1;
-        var T = Class290(x.level + Z & 3, O, N);
+        var T = CoordFine(x.level + Z & 3, O, N);
         if (Q - 1 == Class432.member6231) {
             L.member7849(T, true);
         } else {
@@ -515,14 +515,14 @@ export var Class524 = function () {
     var c = function (R, J) {
         if (false) {
         }
-        var S = R.member1098(2);
+        var S = R.gBit(2);
         if (S === 0) {
-            if (R.member1098(1) !== 0) {
+            if (R.gBit(1) !== 0) {
                 c(R, J);
             }
-            var T = R.member1098(6);
-            var ab = R.member1098(6);
-            var V = R.member1098(1) === 1;
+            var T = R.gBit(6);
+            var ab = R.gBit(6);
+            var V = R.gBit(1) === 1;
             if (V) {
                 t[q++] = J;
             }
@@ -550,20 +550,20 @@ export var Class524 = function () {
                 }
                 if (false) {
                 }
-                L.member7849(Class290(B[J].position.level, Y * Class86.member718 + L.member7795() * Class86.member718 / 2, X * Class86.member718 + L.member7795() * Class86.member718 / 2));
+                L.member7849(CoordFine(B[J].position.level, Y * Class86.member718 + L.member7795() * Class86.member718 / 2, X * Class86.member718 + L.member7795() * Class86.member718 / 2));
             } else {
             }
             return true;
         }
         if (S === 1) {
-            var U = R.member1098(2);
+            var U = R.gBit(2);
             B[J].position.level = B[J].position.level + U & 3;
             if (false) {
             }
             return false;
         }
         if (S === 2) {
-            var aa = R.member1098(5);
+            var aa = R.gBit(5);
             var U = aa >> 3 & 3;
             var M = aa & 7;
             var I = B[J].position.level + U & 3;
@@ -603,7 +603,7 @@ export var Class524 = function () {
             B[J].position.member756 = P;
             return false;
         }
-        var Z = R.member1098(20);
+        var Z = R.gBit(20);
         var N = Z >> 18 & 3;
         var U = Z >> 16 & 3;
         var O = Z >> 8 & 255;
@@ -622,7 +622,7 @@ export var Class524 = function () {
         for (var L = 0; L < q; L++) {
             var H = t[L];
             var K = B[H].member8449;
-            var I = J.member608();
+            var I = J.g2();
             if (false) {
             }
             K.member7802(J, I);

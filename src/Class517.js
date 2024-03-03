@@ -9,7 +9,7 @@ import { Class392 } from 'Class392.js';
 import { Class427 } from 'Class427.js';
 import { Class86 } from 'Class86.js';
 import { Class95 } from 'Class95.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class103 } from 'Class103.js';
 export var Class517 = function () {
     var H = new Float32Array(3);
@@ -94,7 +94,7 @@ export var Class517 = function () {
         if (V === undefined) {
             throw new Error('1153 ' + W + '1153 ');
         }
-        if (V === member47) {
+        if (V === NULL) {
             return false;
         }
         if (U) {
@@ -129,7 +129,7 @@ export var Class517 = function () {
             Y = false;
         }
         var W = Class513.member8332(T);
-        if (W === member47) {
+        if (W === NULL) {
             return false;
         }
         if (W === undefined) {
@@ -168,7 +168,7 @@ export var Class517 = function () {
             Y = false;
         }
         var W = Class513.member8331(T);
-        if (W === member47) {
+        if (W === NULL) {
             return false;
         }
         if (W === undefined) {
@@ -328,7 +328,7 @@ export var Class517 = function () {
         Class95.member827
     ];
     var K = 1 + 4 + 4 + A.length * 8;
-    var t = Class124(K);
+    var t = Packet(K);
     var P = false;
     var v = undefined;
     var r = Class103();
@@ -344,7 +344,7 @@ export var Class517 = function () {
             }
             return;
         }
-        if (!z.member3590()) {
+        if (!z.readyanim()) {
             return;
         }
         if (v === undefined) {
@@ -399,17 +399,17 @@ export var Class517 = function () {
         if (!P || v[T] !== undefined || Class95.member804 === 0) {
             return;
         }
-        t.member607(0);
-        t.member1051(k);
-        t.member1056(D);
-        t.member1056(J.member3954.member3763());
+        t.setPos(0);
+        t.p1(k);
+        t.p4(D);
+        t.p4(J.member3954.member3763());
         for (var S = 0; S < A.length; S++) {
             var U = N.member1439(A[S]);
-            if (U === member47) {
+            if (U === NULL) {
                 return;
             }
-            t.member1056(U.member3895());
-            t.member1056(U.member3897());
+            t.p4(U.member3895());
+            t.p4(U.member3897());
         }
         z.writeFile(T, t.getData(), false, undefined, undefined);
         z.writeFile(T, V, true, g, b);
@@ -453,22 +453,22 @@ export var Class517 = function () {
         }, T);
     };
     var d = function (aa, X) {
-        var ab = Class124(undefined, X);
-        var V = ab.member609();
+        var ab = Packet(undefined, X);
+        var V = ab.g1();
         if (V !== k) {
             if (false) {
             }
             h(aa);
             return undefined;
         }
-        var Z = ab.member1073();
+        var Z = ab.g4();
         if (Z !== D) {
             if (false) {
             }
             h(aa);
             return undefined;
         }
-        var U = ab.member1073();
+        var U = ab.g4();
         if (U !== J.member3954.member3763()) {
             if (false) {
             }
@@ -477,14 +477,14 @@ export var Class517 = function () {
         }
         for (var Y = 0; Y < A.length; Y++) {
             var W = N.member1439(A[Y]);
-            if (W === member47) {
+            if (W === NULL) {
                 if (false) {
                 }
                 h(aa);
                 return undefined;
             }
-            var S = ab.member1073();
-            var T = ab.member1074();
+            var S = ab.g4();
+            var T = ab.g4s();
             if (S !== W.member3895() || T !== W.member3897()) {
                 if (false) {
                 }

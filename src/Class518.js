@@ -44,14 +44,14 @@ export var Class518 = function () {
             j = 0;
             d = 0;
         } else if (k.data !== undefined) {
-            var m = k.data.member1070();
+            var m = k.data.g1s();
             g = m & 7;
             i = m >> 3;
-            c = k.data.member608();
-            h = k.data.member1073();
-            b = k.data.member1073();
-            j = k.data.member1073();
-            d = k.data.member1073();
+            c = k.data.g2();
+            h = k.data.g4();
+            b = k.data.g4();
+            j = k.data.g4();
+            d = k.data.g4();
         } else {
             throw new Error('1407 ');
         }

@@ -1,13 +1,13 @@
-import { Class122 } from 'Class122.js';
-import { Class463 } from 'Class463.js';
-export var Class670 = function () {
+import { CP1252 } from 'Class122.js';
+import { ScriptVarType } from 'Class463.js';
+export var ParamType = function () {
     var a = 's'.charCodeAt(0);
     var b = function (c) {
-        this.member2896;
+        this.myList;
         this.member625 = -1;
-        if (c.member625 !== undefined && c.member2896 !== undefined) {
+        if (c.member625 !== undefined && c.myList !== undefined) {
             this.member625 = c.member625;
-            this.member2896 = c.member2896;
+            this.myList = c.myList;
         } else {
             throw new Error('878 ');
         }
@@ -34,7 +34,7 @@ export var Class670 = function () {
     };
     b.prototype.decode = function (d) {
         while (true) {
-            var c = d.member609();
+            var c = d.g1();
             if (c === undefined) {
                 throw new Error('879 ');
                 break;
@@ -42,22 +42,22 @@ export var Class670 = function () {
             if (c === 0) {
                 break;
             }
-            this.member2932(d, c);
+            this.decodeNext(d, c);
         }
     };
-    b.prototype.member2932 = function (d, c) {
+    b.prototype.decodeNext = function (d, c) {
         if (c === 1) {
-            this.member9774 = Class122.member1036(d.member609());
+            this.member9774 = CP1252.decodeChar(d.g1());
         } else if (c === 2) {
-            this.member9775 = d.member1074();
+            this.member9775 = d.g4s();
         } else if (c === 4) {
             this.member9777 = false;
         } else if (c === 5) {
-            this.member9776 = d.member1089();
+            this.member9776 = d.gjstr();
         } else if (c === 101) {
-            this.type = Class463.getByID(d.member1078());
+            this.type = ScriptVarType.getByID(d.gSmart1or2());
             if (this.type !== null) {
-                this.member9774 = this.type.member7286.charCodeAt(0);
+                this.member9774 = this.type.legacyChar.charCodeAt(0);
             }
         } else if (false) {
         }

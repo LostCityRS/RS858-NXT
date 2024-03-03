@@ -42,18 +42,18 @@ export var Class253 = function (i) {
     };
     r.member301 = t;
     var o = function (v) {
-        return u[v.member444()];
+        return u[v.getID()];
     };
-    r.member2943 = o;
+    r.getVarInt = o;
     var j = function (v, x) {
-        u[v.member444()] = x;
+        u[v.getID()] = x;
         q = undefined;
-        var y = k[v.member444()];
+        var y = k[v.getID()];
         if (y !== undefined) {
             y.delayTime = Date.now() + m;
             y.member2971 = false;
         } else {
-            k[v.member444()] = {
+            k[v.getID()] = {
                 delayTime: Date.now() + m,
                 member2971: false
             };
@@ -61,15 +61,15 @@ export var Class253 = function (i) {
     };
     r.member2945 = j;
     var h = function (v, x) {
-        s[v.member444()] = x;
-        var y = k[v.member444()];
+        s[v.getID()] = x;
+        var y = k[v.getID()];
         if (y !== undefined) {
             if (y.delayTime !== a && !y.member2971) {
                 y.delayTime = Date.now() + m;
                 y.member2971 = true;
             }
         } else {
-            k[v.member444()] = {
+            k[v.getID()] = {
                 delayTime: Date.now() + a,
                 member2971: true
             };
@@ -77,9 +77,9 @@ export var Class253 = function (i) {
     };
     r.member2972 = h;
     var g = function (v) {
-        return v.member2948(u[v.member2949().member444()]);
+        return v.member2948(u[v.member2949().getID()]);
     };
-    r.member2950 = g;
+    r.getVarBit = g;
     var e = function (z, x) {
         try {
             var v = z.member2949();
@@ -90,7 +90,7 @@ export var Class253 = function (i) {
     r.member2952 = e;
     var d = function (y, x) {
         var v = y.member2949();
-        h(v, y.member2951(s[v.member444()], x));
+        h(v, y.member2951(s[v.getID()], x));
     };
     r.member2973 = d;
     var q;
@@ -103,8 +103,8 @@ export var Class253 = function (i) {
         q = 0;
         for (var v = 0; v < y; v++) {
             var x = z.list(v);
-            if (x === member47) {
-                return member47;
+            if (x === NULL) {
+                return NULL;
             }
             if (x.member2976(r)) {
                 q += x.member2977();

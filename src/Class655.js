@@ -1,6 +1,6 @@
 import { Class469 } from 'Class469.js';
 import { Class421 } from 'Class421.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 export var Class655 = function () {
     var g = {};
     var c;
@@ -42,8 +42,8 @@ export var Class655 = function () {
     }
     Class421.member5494.member867 = function (r) {
         var o = r.member6100[--r.member6099];
-        var q = c.member2970.member3227(Class131.member1208.member1204, o);
-        if (q === member47) {
+        var q = c.member2970.getConfigType(Js5ConfigGroup.INVTYPE.member1204, o);
+        if (q === NULL) {
             r.member6099++;
             return true;
         }
@@ -51,8 +51,8 @@ export var Class655 = function () {
     };
     Class421.member5531.member867 = function (r) {
         var q = r.member6100[--r.member6099];
-        var o = c.member2970.member3227(Class131.member1208.member1204, q);
-        if (o === member47) {
+        var o = c.member2970.getConfigType(Js5ConfigGroup.INVTYPE.member1204, q);
+        if (o === NULL) {
             r.member6099++;
             return true;
         }
@@ -78,17 +78,17 @@ export var Class655 = function () {
     Class421.member5495.member867 = function (s) {
         s.member6099 -= 2;
         var r = s.member6100[s.member6100[s.member6099]];
-        var q = c.member2970.member3227(Class131.member1208.member1204, r);
-        if (q === member47) {
+        var q = c.member2970.getConfigType(Js5ConfigGroup.INVTYPE.member1204, r);
+        if (q === NULL) {
             s.member6099 += 2;
             return true;
         }
         var u = s.member6100[s.member6099 + 1];
         var o = -1;
-        var t = q.member9702();
-        for (var v = 0; v < q.member9703(); v++) {
+        var t = q.getStockObjs();
+        for (var v = 0; v < q.getStockLength(); v++) {
             if (t[v] === u) {
-                o = q.member9704(v);
+                o = q.getStockCounts(v);
                 break;
             }
         }
@@ -150,7 +150,7 @@ export var Class655 = function () {
         var s = -1;
         if (t !== null) {
             s = t.member8471(o);
-            if (s === member47) {
+            if (s === NULL) {
                 r.member6099 += 2;
                 return true;
             }
@@ -165,7 +165,7 @@ export var Class655 = function () {
         var r = -1;
         if (s !== null) {
             r = s.member8473(t, v);
-            if (r === member47) {
+            if (r === NULL) {
                 q.member6099 += 2;
                 return true;
             }

@@ -20,15 +20,15 @@ export var Class190 = function () {
         };
         var n = function (x, t) {
             var u = Class49.member313();
-            x.member1088(u, 0, 3);
+            x.gFloatArray(u, 0, 3);
             u[3] = 0;
-            x.member1088(u, 4, 3);
+            x.gFloatArray(u, 4, 3);
             u[7] = 0;
-            x.member1088(u, 8, 3);
+            x.gFloatArray(u, 8, 3);
             u[11] = 0;
-            u[12] = x.member1071();
-            u[13] = x.member1071();
-            u[14] = x.member1071();
+            u[12] = x.g2s();
+            u[13] = x.g2s();
+            u[14] = x.g2s();
             u[15] = 1;
             var v = Class180({
                 member2011: e++,
@@ -41,18 +41,18 @@ export var Class190 = function () {
                 t.member2013(v);
             }
             k[v.member1722()] = v;
-            var s = x.member609();
+            var s = x.g1();
             for (var r = 0; r < s; r++) {
                 n(x, v);
             }
         };
         if (q.data !== undefined) {
             var i = q.data;
-            var m = i.member609();
+            var m = i.g1();
             if (m !== b) {
                 throw new Error('1321 ' + m);
             }
-            var o = i.member609();
+            var o = i.g1();
             g = new Array(o);
             for (var j = 0; j < o; j++) {
                 n(i, undefined);

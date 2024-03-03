@@ -46,13 +46,13 @@ export var Class589 = function () {
             Class41.set(d, c);
             Class41.member313(b);
         };
-        g.member3590 = function () {
+        g.readyanim = function () {
             return e;
         };
-        var h = g.member3590;
+        var h = g.readyanim;
         g.member6219 = function (j) {
             e = true;
-            j.member1088(c);
+            j.gFloatArray(c);
         };
         return g;
     };

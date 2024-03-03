@@ -9,25 +9,25 @@ export var Class737 = function () {
     c.member25 = d;
     Class433.member6238.member6428 = function (r, s) {
         var A = a.member7259;
-        while (r.member1047() < s) {
+        while (r.getPos() < s) {
             var z = true;
-            var C = r.member609() === 1;
-            var D = r.member1089();
-            var q = r.member1089();
-            var v = r.member608();
-            var n = r.member609();
-            var h = r.member609();
+            var C = r.g1() === 1;
+            var D = r.gjstr();
+            var q = r.gjstr();
+            var v = r.g2();
+            var n = r.g1();
+            var h = r.g1();
             var i = (h & 1) !== 0;
             var k = (h & 2) !== 0;
             var o = '';
             var m = -1;
             var g = 0;
             if (v > 0) {
-                o = r.member1089();
-                m = r.member609();
-                g = r.member1073();
+                o = r.gjstr();
+                m = r.g1();
+                g = r.g4();
             }
-            var e = r.member1089();
+            var e = r.gjstr();
             for (var B = 0; B < A.member7223(); B++) {
                 var t = A.member7220(B);
                 if (!C && D === t.member7233) {
@@ -105,7 +105,7 @@ export var Class737 = function () {
         g.member7255();
     };
     Class433.member6254.member6428 = function (e, g) {
-        a.member7259.member7253(e.member609());
+        a.member7259.member7253(e.g1());
     };
     return c;
 }();

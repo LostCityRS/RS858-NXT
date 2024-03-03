@@ -1,7 +1,7 @@
 import { Class725 } from 'Class725.js';
 import { Class723 } from 'Class723.js';
 import { Class501 } from 'Class501.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 export var Class726 = function () {
     var x = {};
     var D;
@@ -111,7 +111,7 @@ export var Class726 = function () {
         } else {
             var K = D.member8252.member8259();
             var L = K.member8260(Class501.member8157);
-            L.member2698.member1056(Class725.member10093());
+            L.packet.p4(Class725.member10093());
             K.member8261(L);
             J = true;
             return false;
@@ -119,13 +119,13 @@ export var Class726 = function () {
     };
     x.member9660 = v;
     var u = function (O, P) {
-        var M = O.member609() === 1;
+        var M = O.g1() === 1;
         if (z === null) {
-            z = new Class124(20000);
+            z = new Packet(20000);
         }
-        z.member1067(O.getData(), O.member1047(), P);
+        z.member1067(O.getData(), O.getPos(), P);
         if (M) {
-            z.member607(0);
+            z.setPos(0);
             Class725.decode(z);
             G = new Array(Class725.member10092());
             var N = 0;

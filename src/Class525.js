@@ -3,7 +3,7 @@ import { Class37 } from 'Class37.js';
 import { Class372 } from 'Class372.js';
 import { Class374 } from 'Class374.js';
 import { Class50 } from 'Class50.js';
-import { Class131 } from 'Class131.js';
+import { Js5ConfigGroup } from 'Class131.js';
 import { Class288 } from 'Class288.js';
 import { Class386 } from 'Class386.js';
 import { Class387 } from 'Class387.js';
@@ -41,7 +41,7 @@ export var Class525 = function () {
         var j = false;
         var x = Class37.create();
         if (e.node !== undefined && e.parent !== undefined && e.member4070 !== undefined && e.level !== undefined && e.member7710 !== undefined && e.member6432 !== undefined && e.member6439 !== undefined && e.member6448 !== undefined && e.member6440 !== undefined && e.member6449 !== undefined && e.member1788 !== undefined && e.member4345 !== undefined) {
-            q = new Class372(e.node, e.parent, e.member4070, Class374.member4136, e.level);
+            q = new Class372(e.node, e.parent, e.member4070, Class374.SPOTANIM, e.level);
             u = e.member7710;
             t = e.member6432;
             s = e.member6439;
@@ -80,8 +80,8 @@ export var Class525 = function () {
         };
         q.member4380 = function (H, F) {
             if (C === null) {
-                C = u.member2970.member3227(Class131.member1217.member1204, t);
-                if (C === member47) {
+                C = u.member2970.getConfigType(Js5ConfigGroup.SPOTTYPE.member1204, t);
+                if (C === NULL) {
                     return false;
                 }
                 if (c === undefined) {
@@ -171,7 +171,7 @@ export var Class525 = function () {
                 } else {
                     B = null;
                 }
-                if (C !== member47 && C.member8466()) {
+                if (C !== NULL && C.member8466()) {
                     this.member4085().member4114().member8328(b, r.member2098(), H, true);
                 }
                 q.member4102();
@@ -181,7 +181,7 @@ export var Class525 = function () {
                 q.member4105(true);
                 var E = Class132.member1266();
                 var F = E.member522(Class72.member499);
-                if (F && C !== member47 && !C.member4494()) {
+                if (F && C !== NULL && !C.member4494()) {
                     q.member4107(false);
                     return;
                 }

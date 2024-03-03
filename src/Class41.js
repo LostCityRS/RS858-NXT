@@ -14,9 +14,9 @@ export var Class41 = function () {
     t.create = e;
     var q = function (z) {
         var A = new Float32Array(3);
-        A[0] = z.member320();
-        A[1] = z.member320();
-        A[2] = z.member320();
+        A[0] = z.gFloat();
+        A[1] = z.gFloat();
+        A[2] = z.gFloat();
         return A;
     };
     t.member321 = q;

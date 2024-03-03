@@ -18,7 +18,7 @@ export var Class325 = function () {
         h.member2005 = function (v) {
             r = v;
         };
-        h.member600 = function () {
+        h.getColour = function () {
             return r;
         };
         h.member1884 = function () {

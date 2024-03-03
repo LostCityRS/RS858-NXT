@@ -1,11 +1,11 @@
 import { Class86 } from 'Class86.js';
-export var Class290 = function () {
-    var a = function (c, b, e, d) {
+export var CoordFine = function () {
+    var CoordFine = function (c, b, e, d) {
         this.level = -1;
         this.member3454 = new Float32Array(3);
         this.member25(c, b, e, d);
     };
-    a.prototype.member25 = function (c, b, e, d) {
+    CoordFine.prototype.member25 = function (c, b, e, d) {
         if (c !== undefined) {
             if (typeof c === 'number') {
                 this.level = c;
@@ -23,7 +23,7 @@ export var Class290 = function () {
                     this.member3454[1] = b[1];
                     this.member3454[2] = b[2];
                 }
-            } else if (c instanceof a || c.level !== undefined && c.member3454 !== undefined) {
+            } else if (c instanceof CoordFine || c.level !== undefined && c.member3454 !== undefined) {
                 this.level = c.level;
                 this.member3454[0] = c.member3454[0];
                 this.member3454[1] = c.member3454[1];
@@ -41,41 +41,41 @@ export var Class290 = function () {
                 this.member3454[1] = c.member3455.member3454[1];
                 this.member3454[2] = c.member3455.member3454[2];
             } else if (c.member3456 !== undefined) {
-                this.level = c.member3456.member609();
-                this.x = c.member3456.member1074();
-                this.y = c.member3456.member1074();
-                this.member756 = c.member3456.member1074();
+                this.level = c.member3456.g1();
+                this.x = c.member3456.g4s();
+                this.y = c.member3456.g4s();
+                this.member756 = c.member3456.g4s();
             }
         }
     };
-    a.prototype.set = function (b) {
+    CoordFine.prototype.set = function (b) {
         this.level = b.level;
         this.member3454[0] = b.member3454[0];
         this.member3454[1] = b.member3454[1];
         this.member3454[2] = b.member3454[2];
     };
-    a.prototype.member3457 = function (c) {
+    CoordFine.prototype.member3457 = function (c) {
         var d = c.member3454[0] - this.member3454[0];
         var b = c.member3454[2] - this.member3454[2];
         return Math.sqrt(d * d + b * b);
     };
-    a.prototype.member2969 = function (b) {
+    CoordFine.prototype.equals = function (b) {
         return this.level === b.level && this.member3454[0] === b.member3454[0] && this.member3454[1] === b.member3454[1] && this.member3454[2] === b.member3454[2];
     };
-    a.prototype.member3458 = function (b) {
+    CoordFine.prototype.member3458 = function (b) {
         return Math.floor(this.member3454[b] / Class86.member718);
     };
-    a.prototype.toString = function (b) {
+    CoordFine.prototype.toString = function (b) {
         if (b) {
             return '(' + this.level + ',' + Math.floor(this.member3454[0] / 32768) + ',' + Math.floor(this.member3454[1] / 32768) + ',' + Math.floor(this.member3454[0] % 32768 / 512) + ',' + Math.floor(this.member3454[2] % 32768 / 512) + ')';
         } else {
             return '(' + this.level + ',' + this.member3454[0] + ',' + this.member3454[1] + ',' + this.member3454[2] + ')';
         }
     };
-    a.prototype.member3459 = function () {
-        return a;
+    CoordFine.prototype.member3459 = function () {
+        return CoordFine;
     };
     return function (c, b, e, d) {
-        return new a(c, b, e, d);
+        return new CoordFine(c, b, e, d);
     };
 }();

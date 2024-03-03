@@ -56,7 +56,7 @@ export var Class68 = function () {
             try {
                 var K = M.member451();
                 if (K > Date.now() - G) {
-                    I.member422(Class63.member418(M.member444()), M.member445(), K);
+                    I.member422(Class63.member418(M.getID()), M.member445(), K);
                 }
             } catch (L) {
                 if (false) {
@@ -228,7 +228,7 @@ export var Class68 = function () {
                 L.member456();
             }
             L.member449();
-            z = L.member444();
+            z = L.getID();
             E = L.member445();
             b = L;
         }

@@ -1,9 +1,9 @@
 export var Class374 = {
     member4132: 0,
-    member4133: 1,
-    member4134: 2,
+    NPC: 1,
+    PLAYER: 2,
     member4135: 3,
-    member4136: 4,
+    SPOTANIM: 4,
     member4137: 5,
     member390: 6,
     member391: 7,

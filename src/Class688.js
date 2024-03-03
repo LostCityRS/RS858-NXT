@@ -1,6 +1,6 @@
 import { Class649 } from 'Class649.js';
 import { Class297 } from 'Class297.js';
-import { Class124 } from 'Class124.js';
+import { Packet } from 'Class124.js';
 import { Class687 } from 'Class687.js';
 import { Class500 } from 'Class500.js';
 export var Class688 = function () {
@@ -71,59 +71,59 @@ export var Class688 = function () {
             e = i.member9889;
             return;
         }
-        var y = Class124(undefined, z.response);
-        var E = y.member1077();
-        var B = Class124(128);
-        var x = Class124(128);
+        var y = Packet(undefined, z.response);
+        var E = y.g8();
+        var B = Packet(128);
+        var x = Packet(128);
         var I = new Array(4);
         I[0] = Math.floor(Class687.Math.random() * Math.pow(2, 32));
         I[1] = Math.floor(Class687.Math.random() * Math.pow(2, 32));
-        I[2] = Math.floor(E.member1058);
-        I[3] = Math.floor(E.member1059);
-        B.member1051(10);
+        I[2] = Math.floor(E.high);
+        I[3] = Math.floor(E.low);
+        B.p1(10);
         for (var C = 0; C < 4; C++) {
-            B.member1056(Math.floor(Class687.Math.random() * Math.pow(2, 32)));
+            B.p4(Math.floor(Class687.Math.random() * Math.pow(2, 32)));
         }
         for (var C = 0; C < 4; C++) {
-            B.member1056(I[C]);
+            B.p4(I[C]);
         }
-        B.member1056(0);
-        B.member1056(0);
+        B.p4(0);
+        B.p4(0);
         for (var C = 0; C < 4; C++) {
-            B.member1056(Math.floor(Class687.Math.random() * Math.pow(2, 32)));
+            B.p4(Math.floor(Class687.Math.random() * Math.pow(2, 32)));
         }
         B.member1101(Class500.member8051, Class500.member8052);
-        x.member1051(10);
+        x.p1(10);
         for (var C = 0; C < 3; C++) {
-            x.member1056(Math.floor(Class687.Math.random() * Math.pow(2, 32)));
+            x.p4(Math.floor(Class687.Math.random() * Math.pow(2, 32)));
         }
         for (var C = 0; C < 3; C++) {
-            x.member1056(Math.floor(Class687.Math.random() * Math.pow(2, 32)));
+            x.p4(Math.floor(Class687.Math.random() * Math.pow(2, 32)));
         }
-        x.member1054(Math.floor(Class687.Math.random() * Math.pow(2, 32)));
+        x.p2(Math.floor(Class687.Math.random() * Math.pow(2, 32)));
         for (var C = 0; C < 24; C += 4) {
-            x.member1056(-1);
+            x.p4(-1);
         }
         for (var C = 0; C < 2; C++) {
-            x.member1056(Math.floor(Class687.Math.random() * Math.pow(2, 32)));
+            x.p4(Math.floor(Class687.Math.random() * Math.pow(2, 32)));
         }
         x.member1101(Class500.member8051, Class500.member8052);
-        var G = Class124.member1152(j);
+        var G = Packet.member1152(j);
         if (G % 8 !== 0) {
             G += 8 - G % 8;
         }
-        var u = Class124(G);
-        u.member1065(j);
+        var u = Packet(G);
+        u.pjstr(j);
         u.member1102(I, 0, G);
-        var D = B.member1047();
-        var A = x.member1047();
-        var t = Class124(5 + D + A + G);
-        t.member1051(k);
-        t.member1051(D);
+        var D = B.getPos();
+        var A = x.getPos();
+        var t = Packet(5 + D + A + G);
+        t.p1(k);
+        t.p1(D);
         t.member1067(B.getData(), 0, D);
-        t.member1051(A);
+        t.p1(A);
         t.member1067(x.getData(), 0, A);
-        t.member1054(G);
+        t.p2(G);
         t.member1067(u.getData(), 0, G);
         var H = String.fromCharCode.apply(undefined, new Uint8Array(t.getData()));
         H = window.btoa(H);
@@ -171,9 +171,9 @@ export var Class688 = function () {
                 e = i.member9890;
                 return;
             }
-            var K = Class124(undefined, J);
+            var K = Packet(undefined, J);
             K.member1103(I, 0, J.byteLength);
-            var N = K.member1089();
+            var N = K.gjstr();
             Class649.member9629(N, true);
             e = i.member9886;
         });

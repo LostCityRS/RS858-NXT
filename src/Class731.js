@@ -1,8 +1,8 @@
 import { Class105 } from 'Class105.js';
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
-import { Class550 } from 'Class550.js';
-export var Class731 = function (o) {
+import { Priority } from 'Class96.js';
+import { QuickChatCat } from 'Class550.js';
+export var QuickChatCatTypeList = function (o) {
     var d = {};
     var m;
     var j;
@@ -33,21 +33,21 @@ export var Class731 = function (o) {
     }
     var h = function (u) {
         var t = b.find(u);
-        if (t === member47) {
+        if (t === NULL) {
             var r = u >= c;
             var s;
             if (r) {
-                s = q.getFile(Class95.member825, k, u & n, Class96.member840);
+                s = q.getFile(Class95.member825, k, u & n, Priority.member840);
             } else {
-                s = q.getFile(Class95.member824, k, u, Class96.member840);
+                s = q.getFile(Class95.member824, k, u, Priority.member840);
             }
-            if (s === member47) {
-                return member47;
+            if (s === NULL) {
+                return NULL;
             }
-            t = Class550(u, d);
+            t = QuickChatCat(u, d);
             if (s !== undefined) {
                 t.decode(s);
-                t.member2934();
+                t.postDecode();
             }
             b.put(t, 1, u);
         }

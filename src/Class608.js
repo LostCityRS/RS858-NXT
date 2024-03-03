@@ -16,7 +16,7 @@ export var Class608 = function () {
     };
     k.member25 = function (v, s) {
         o[Class438.member402] = new h(e, v(Class438.member402, 0), s(Class438.member402, 0));
-        o[Class438.member6636] = new h(q, v(Class438.member6636, 0), s(Class438.member6636, 0));
+        o[Class438.MODEL] = new h(q, v(Class438.MODEL, 0), s(Class438.MODEL, 0));
         o[Class438.member6633] = new h(d, v(Class438.member6633, 0), s(Class438.member6633, 0));
         o[Class438.member6635] = new h(j, v(Class438.member6635, 0), s(Class438.member6635, 0));
         o[Class438.member6634] = new h(g, v(Class438.member6634, 0), s(Class438.member6634, 0));

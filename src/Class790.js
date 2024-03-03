@@ -1,305 +1,305 @@
-import { Class170 } from 'Class170.js';
+import { HillChange } from 'Class170.js';
 import { Class396 } from 'Class396.js';
 import { Class690 } from 'Class690.js';
 import { Class198 } from 'Class198.js';
 import { Class41 } from 'Class41.js';
-import { Class166 } from 'Class166.js';
+import { Cuboid } from 'Class166.js';
 import { Class86 } from 'Class86.js';
-import { Class465 } from 'Class465.js';
+import { VarDomainType } from 'Class465.js';
 import { Class738 } from 'Class738.js';
 import { Class379 } from 'Class379.js';
-export var Class790 = function () {
+export var LocType = function () {
     var a = 6;
     var b = 'null';
-    var c = function (e, d, g) {
-        this.member2896;
+    var LocType = function (e, d, g) {
+        this.myList;
         this.member625;
-        this.member8602 = null;
+        this.op = null;
         if (e !== undefined && d !== undefined && g !== undefined) {
             this.member625 = e;
-            this.member2896 = d;
-            this.member8602 = g;
+            this.myList = d;
+            this.op = g;
         } else {
             throw new Error('1812 ');
         }
         this.name = b;
-        this.member8376 = false;
+        this.members = false;
         this.member10481 = false;
-        this.member8603 = null;
-        this.member8605 = null;
+        this.cursor = null;
+        this.quest = null;
         this.params = null;
-        this.member10482 = null;
-        this.member9904 = null;
+        this.model_shape = null;
+        this.model = null;
         this.resize = null;
         this.offset = null;
         this.member10483 = null;
-        this.member2614 = false;
-        this.member2615 = null;
-        this.member2616 = null;
+        this.mirror = false;
+        this.recol_s = null;
+        this.recol_d = null;
         this.member8617 = null;
-        this.member8618 = null;
-        this.member8619 = null;
-        this.member8620 = null;
-        this.member8621 = null;
-        this.member8622, this.member8623, this.member8624;
-        this.member8625 = 0;
-        this.member8628 = false;
-        this.member2530 = Class170.member1852;
-        this.member2531 = -1;
-        this.member8626 = 64;
-        this.member8627 = 0;
+        this.recolindex = null;
+        this.retex_s = null;
+        this.retex_d = null;
+        this.retexindex = null;
+        this.tint_hue, this.tint_saturation, this.tint_lightness;
+        this.tint_strength = 0;
+        this.antimacro = false;
+        this.hillchange_mode = HillChange.member1852;
+        this.hillchange_value = -1;
+        this.ambient = 64;
+        this.contrast = 0;
         this.member10484 = false;
-        this.member10485 = true;
+        this.hardshadow = true;
         this.member8611 = true;
         this.member10486 = -1;
         this.member10487 = Class396.member778;
-        this.member8631 = null;
-        this.member10488 = null;
-        this.member10489 = null;
-        this.member4492 = true;
+        this.clickbox = null;
+        this.anim = null;
+        this.anim_weight = null;
+        this.randseq = true;
         this.member4479 = false;
-        this.member2243 = 1;
-        this.member2244 = 1;
-        this.member10490 = 2;
-        this.member10491 = true;
-        this.member2524 = -1;
-        this.member10492 = 64;
+        this.width = 1;
+        this.length = 1;
+        this.blockwalk = 2;
+        this.blockrange = true;
+        this.active = -1;
+        this.wallwidth = 64;
         this.member10493;
-        this.member10494 = false;
-        this.member10495 = -1;
+        this.breakroutefinding = false;
+        this.raiseobject = -1;
         this.member10496 = 0;
         this.member10497 = false;
         this.member10498 = Class690.member9897;
-        this.member8641 = -1;
-        this.member10499 = -1;
-        this.member10500 = false;
-        this.member10501 = 0;
-        this.member10502 = false;
-        this.member10503 = null;
-        this.member8643 = -1, this.member8644 = -1;
-        this.member2540 = -1;
-        this.member8649 = 0;
-        this.member8650 = 0;
-        this.member8651 = 255;
+        this.mapelement = -1;
+        this.msi = -1;
+        this.msirotate = false;
+        this.msiangle = 0;
+        this.msimirror = false;
+        this.multiloc = null;
+        this.multivar = -1, this.multivarbit = -1;
+        this.bgsound = -1;
+        this.bgsound_range = 0;
+        this.bgsound_size = 0;
+        this.bgsound_volume = 255;
         this.member10504 = false;
-        this.member8653 = 256;
-        this.member8654 = 256;
+        this.bgsound_minrate = 256;
+        this.bgsound_maxrate = 256;
         this.member2541 = 0;
         this.member2545 = false;
         this.member2546 = 3000;
         this.member2547 = 0;
         this.member2548 = 1;
-        this.member2550 = 0;
-        this.member2551 = 0;
-        this.member2549 = undefined;
+        this.bgsound_mindelay = 0;
+        this.bgsound_maxdelay = 0;
+        this.bgsound_random = undefined;
         this.member2552 = 0;
         this.member2553 = false;
         this.member2554 = 3000;
         this.member2555 = 0;
         this.member2556 = 1;
     };
-    c.prototype.member682 = function () {
+    LocType.prototype.member682 = function () {
         return this.member625;
     };
-    c.prototype.member8656 = function () {
-        if (!this.member2896.member8682() && this.member8376) {
+    LocType.prototype.getOps = function () {
+        if (!this.myList.getAllowMembers() && this.members) {
             return null;
         }
-        return this.member8602;
+        return this.op;
     };
-    c.prototype.getName = function () {
+    LocType.prototype.getName = function () {
         return this.name;
     };
-    c.prototype.member4495 = function () {
+    LocType.prototype.member4495 = function () {
         return this.member10481;
     };
-    c.prototype.member8657 = function (d) {
-        if (this.member8603 === null) {
+    LocType.prototype.getCursor = function (d) {
+        if (this.cursor === null) {
             return -1;
         } else {
-            return this.member8603[d];
+            return this.cursor[d];
         }
     };
-    c.prototype.member8660 = function () {
-        return this.member8605;
+    LocType.prototype.getQuests = function () {
+        return this.quest;
     };
-    c.prototype.member10168 = function () {
-        return this.member10482;
+    LocType.prototype.getModelShapes = function () {
+        return this.model_shape;
     };
-    c.prototype.member4486 = function () {
-        return this.member9904;
+    LocType.prototype.getModels = function () {
+        return this.model;
     };
-    c.prototype.member8600 = function () {
+    LocType.prototype.getResize = function () {
         return this.resize;
     };
-    c.prototype.member2968 = function () {
+    LocType.prototype.getOffset = function () {
         return this.offset;
     };
-    c.prototype.member10169 = function () {
-        return this.member2614;
+    LocType.prototype.getMirror = function () {
+        return this.mirror;
     };
-    c.prototype.member8599 = function () {
-        return this.member2615;
+    LocType.prototype.getRecolS = function () {
+        return this.recol_s;
     };
-    c.prototype.member7607 = function () {
-        return this.member2616;
+    LocType.prototype.getRecolD = function () {
+        return this.recol_d;
     };
-    c.prototype.member7661 = function () {
-        return this.member8619;
+    LocType.prototype.getRetexS = function () {
+        return this.retex_s;
     };
-    c.prototype.member7608 = function () {
-        return this.member8620;
+    LocType.prototype.getRetexD = function () {
+        return this.retex_d;
     };
-    c.prototype.member4333 = function () {
-        return this.member2530;
+    LocType.prototype.getHillChangeMode = function () {
+        return this.hillchange_mode;
     };
-    c.prototype.member4334 = function () {
-        return this.member2531;
+    LocType.prototype.getHillChangeValue = function () {
+        return this.hillchange_value;
     };
-    c.prototype.member8601 = function () {
-        return this.member8626;
+    LocType.prototype.getAmbient = function () {
+        return this.ambient;
     };
-    c.prototype.member4581 = function () {
+    LocType.prototype.member4581 = function () {
         return this.member10486;
     };
-    c.prototype.member4582 = function () {
+    LocType.prototype.member4582 = function () {
         return this.member10487;
     };
-    c.prototype.member4494 = function (d) {
+    LocType.prototype.member4494 = function (d) {
         if (!this.member8611) {
             return false;
         }
-        if (d === Class198.member2352 && !this.member10485) {
+        if (d === Class198.member2352 && !this.hardshadow) {
             return false;
         }
         return true;
     };
-    c.prototype.member4470 = function () {
-        return this.member8631;
+    LocType.prototype.getClickbox = function () {
+        return this.clickbox;
     };
-    c.prototype.member4524 = function () {
-        return this.member10488;
+    LocType.prototype.getAnim = function () {
+        return this.anim;
     };
-    c.prototype.member10505 = function () {
+    LocType.prototype.member10505 = function () {
         return this.member4479;
     };
-    c.prototype.member4164 = function (d) {
+    LocType.prototype.getWidth = function (d) {
         if (d === 0 || d === 2) {
-            return this.member2243;
+            return this.width;
         } else {
-            return this.member2244;
+            return this.length;
         }
     };
-    c.prototype.member4165 = function (d) {
+    LocType.prototype.getLength = function (d) {
         if (d === 0 || d === 2) {
-            return this.member2244;
+            return this.length;
         } else {
-            return this.member2243;
+            return this.width;
         }
     };
-    c.prototype.member2985 = function () {
-        return this.member2524 === 1;
+    LocType.prototype.getActive = function () {
+        return this.active === 1;
     };
-    c.prototype.member4619 = function () {
-        return this.member10492;
+    LocType.prototype.getWallWidth = function () {
+        return this.wallwidth;
     };
-    c.prototype.member4496 = function (d) {
+    LocType.prototype.member4496 = function (d) {
         return d === Class198.member2352 ? this.member10496 : 0;
     };
-    c.prototype.member4161 = function (d, e) {
+    LocType.prototype.member4161 = function (d, e) {
         if (e) {
             return false;
         }
-        return Class198.member2359(d) && this.member10495 === 1 || d === Class198.member2352 && this.member10496 !== 0;
+        return Class198.member2359(d) && this.raiseobject === 1 || d === Class198.member2352 && this.member10496 !== 0;
     };
-    c.prototype.member4523 = function () {
+    LocType.prototype.member4523 = function () {
         return this.member10497;
     };
-    c.prototype.member10506 = function () {
+    LocType.prototype.member10506 = function () {
         return this.member10498;
     };
-    c.prototype.member8672 = function () {
-        return this.member8641;
+    LocType.prototype.getMapElement = function () {
+        return this.mapelement;
     };
-    c.prototype.member9114 = function () {
-        return this.member10499;
+    LocType.prototype.getMSI = function () {
+        return this.msi;
     };
-    c.prototype.member9115 = function () {
-        return this.member10500;
+    LocType.prototype.getMSIRotate = function () {
+        return this.msirotate;
     };
-    c.prototype.member9116 = function () {
-        return this.member10501;
+    LocType.prototype.getMSIAngle = function () {
+        return this.msiangle;
     };
-    c.prototype.member9117 = function () {
-        return this.member10502;
+    LocType.prototype.getMSIMirror = function () {
+        return this.msimirror;
     };
-    c.prototype.member4497 = function () {
-        return this.member2540;
+    LocType.prototype.getBackgroundSound = function () {
+        return this.bgsound;
     };
-    c.prototype.member4500 = function () {
-        return this.member8649;
+    LocType.prototype.getBackgroundSoundRange = function () {
+        return this.bgsound_range;
     };
-    c.prototype.member4501 = function () {
-        return this.member8650;
+    LocType.prototype.getBackgroundSoundSize = function () {
+        return this.bgsound_size;
     };
-    c.prototype.member4499 = function () {
-        return this.member8651;
+    LocType.prototype.getBackgroundSoundVolume = function () {
+        return this.bgsound_volume;
     };
-    c.prototype.member8677 = function () {
+    LocType.prototype.member8677 = function () {
         return true;
     };
-    c.prototype.member10507 = function () {
+    LocType.prototype.member10507 = function () {
         return this.member10504;
     };
-    c.prototype.member8678 = function () {
-        return this.member8653;
+    LocType.prototype.getBackgroundSoundMinRate = function () {
+        return this.bgsound_minrate;
     };
-    c.prototype.member8679 = function () {
-        return this.member8654;
+    LocType.prototype.getBackgroundSoundMaxRate = function () {
+        return this.bgsound_maxrate;
     };
-    c.prototype.member4498 = function () {
+    LocType.prototype.member4498 = function () {
         return this.member2541;
     };
-    c.prototype.member4502 = function () {
+    LocType.prototype.member4502 = function () {
         return this.member2545;
     };
-    c.prototype.member4503 = function () {
+    LocType.prototype.member4503 = function () {
         return this.member2546;
     };
-    c.prototype.member4504 = function () {
+    LocType.prototype.member4504 = function () {
         return this.member2547;
     };
-    c.prototype.member4505 = function () {
+    LocType.prototype.member4505 = function () {
         return this.member2548;
     };
-    c.prototype.member4512 = function () {
-        return this.member2550;
+    LocType.prototype.getBackgroundSoundMinDelay = function () {
+        return this.bgsound_mindelay;
     };
-    c.prototype.member4513 = function () {
-        return this.member2551;
+    LocType.prototype.getBackgroundSoundMaxDelay = function () {
+        return this.bgsound_maxdelay;
     };
-    c.prototype.member4506 = function () {
-        return this.member2549;
+    LocType.prototype.getBackgroundSoundRandom = function () {
+        return this.bgsound_random;
     };
-    c.prototype.member4507 = function () {
+    LocType.prototype.member4507 = function () {
         return this.member2552;
     };
-    c.prototype.member4508 = function () {
+    LocType.prototype.member4508 = function () {
         return this.member2553;
     };
-    c.prototype.member4509 = function () {
+    LocType.prototype.member4509 = function () {
         return this.member2554;
     };
-    c.prototype.member4510 = function () {
+    LocType.prototype.member4510 = function () {
         return this.member2555;
     };
-    c.prototype.member4511 = function () {
+    LocType.prototype.member4511 = function () {
         return this.member2556;
     };
-    c.prototype.decode = function (g) {
+    LocType.prototype.decode = function (g) {
         var e = -1;
         while (true) {
-            var d = g.member609();
+            var d = g.g1();
             if (d === undefined) {
                 throw new Error('1813 ' + e);
                 break;
@@ -307,329 +307,342 @@ export var Class790 = function () {
             if (d === 0) {
                 break;
             }
-            this.member2932(g, d, e);
+            this.decodeNext(g, d, e);
             e = d;
         }
     };
-    c.prototype.member2932 = function (N, i, I) {
-        if (i === 1) {
-            var h = N.member609();
-            this.member10482 = new Int32Array(h);
-            this.member9904 = new Array(h);
-            for (var t = 0; t < h; t++) {
-                this.member10482[t] = N.member1070();
-                var x = N.member609();
-                this.member9904[t] = new Int32Array(x);
-                for (var G = 0; G < x; G++) {
-                    this.member9904[t][G] = N.member1086();
+    LocType.prototype.decodeNext = function (packet, opcode, I) {
+        if (opcode === 1) {
+            var shapeCount = packet.g1();
+            this.model_shape = new Int32Array(shapeCount);
+            this.model = new Array(shapeCount);
+            
+            for (var i = 0; i < shapeCount; i++) {
+                this.model_shape[i] = packet.g1s();
+                var modelCount = packet.g1();
+                this.model[i] = new Int32Array(modelCount);
+                
+                for (var j = 0; j < modelCount; j++) {
+                    this.model[i][j] = packet.gSmart2or4null();
                 }
             }
-        } else if (i === 2) {
-            this.name = N.member1089();
-        } else if (i === 14) {
-            this.member2243 = N.member609();
-        } else if (i === 15) {
-            this.member2244 = N.member609();
-        } else if (i === 17) {
-            this.member10490 = 0;
-            this.member10491 = false;
-        } else if (i === 18) {
-            this.member10491 = false;
-        } else if (i === 19) {
-            this.member2524 = N.member609();
-        } else if (i === 21) {
-            this.member2530 = Class170.member1853;
-        } else if (i === 22) {
-        } else if (i === 23) {
-        } else if (i === 24) {
-            var D = N.member1086();
+        } else if (opcode === 2) {
+            this.name = packet.gjstr();
+        } else if (opcode === 14) {
+            this.width = packet.g1();
+        } else if (opcode === 15) {
+            this.length = packet.g1();
+        } else if (opcode === 17) {
+            this.blockwalk = 0;
+            this.blockrange = false;
+        } else if (opcode === 18) {
+            this.blockrange = false;
+        } else if (opcode === 19) {
+            this.active = packet.g1();
+        } else if (opcode === 21) {
+            this.hillchange_mode = HillChange.FLOOR_SKEW;
+        } else if (opcode === 22) {
+        } else if (opcode === 23) {
+        } else if (opcode === 24) {
+            var D = packet.gSmart2or4null();
             if (D !== -1) {
-                this.member10488 = [D];
+                this.anim = [D];
             }
-        } else if (i === 27) {
-            this.member10490 = 1;
-        } else if (i === 28) {
-            this.member10492 = N.member609() << 2;
-        } else if (i === 29) {
-            this.member8626 = N.member1070() + 64;
-        } else if (i >= 30 && i < 35) {
-            this.member8602[i - 30] = N.member1089();
-        } else if (i === 39) {
-            this.member8627 = N.member1070() * 5;
-        } else if (i === 40) {
-            var y = N.member609();
-            this.member2615 = new Uint32Array(y);
-            this.member2616 = new Uint32Array(y);
+        } else if (opcode === 27) {
+            this.blockwalk = 1;
+        } else if (opcode === 28) {
+            this.wallwidth = packet.g1() << 2;
+        } else if (opcode === 29) {
+            this.ambient = packet.g1s() + 64;
+        } else if (opcode >= 30 && opcode < 35) {
+            this.op[opcode - 30] = packet.gjstr();
+        } else if (opcode === 39) {
+            this.contrast = packet.g1s() * 5;
+        } else if (opcode === 40) {
+            var y = packet.g1();
+            this.recol_s = new Uint32Array(y);
+            this.recol_d = new Uint32Array(y);
             for (var r = 0; r < y; r++) {
-                this.member2615[r] = N.member608();
-                this.member2616[r] = N.member608();
+                this.recol_s[r] = packet.g2();
+                this.recol_d[r] = packet.g2();
             }
-        } else if (i === 41) {
-            var O = N.member609();
-            this.member8619 = new Int32Array(O);
-            this.member8620 = new Int32Array(O);
+        } else if (opcode === 41) {
+            var O = packet.g1();
+            this.retex_s = new Int32Array(O);
+            this.retex_d = new Int32Array(O);
             for (var q = 0; q < O; q++) {
-                this.member8619[q] = N.member1071();
-                this.member8620[q] = N.member1071();
+                this.retex_s[q] = packet.g2s();
+                this.retex_d[q] = packet.g2s();
             }
-        } else if (i === 42) {
-            var d = N.member609();
+        } else if (opcode === 42) {
+            var d = packet.g1();
             this.member8617 = new Int32Array(d);
             for (var m = 0; m < d; m++) {
-                this.member8617[m] = N.member1070();
+                this.member8617[m] = packet.g1s();
             }
-        } else if (i === 44) {
-            var M = N.member608();
+        } else if (opcode === 44) {
+            var M = packet.g2();
             var g = 0;
             for (var C = M; C > 0; C = C >> 1) {
                 g++;
             }
-            this.member8618 = new Int32Array(g);
+            this.recolindex = new Int32Array(g);
             var s = 0;
             for (var C = 0; C < g; C++) {
                 if ((M & 1 << C) > 0) {
-                    this.member8618[C] = s++;
+                    this.recolindex[C] = s++;
                 } else {
-                    this.member8618[C] = -1;
+                    this.recolindex[C] = -1;
                 }
             }
-        } else if (i === 45) {
-            var K = N.member608();
+        } else if (opcode === 45) {
+            var K = packet.g2();
             var L = 0;
             for (var C = K; C > 0; C = C >> 1) {
                 L++;
             }
-            this.member8621 = new Int32Array(L);
+            this.retexindex = new Int32Array(L);
             var s = 0;
             for (var C = 0; C < L; C++) {
                 if ((K & 1 << C) > 0) {
-                    this.member8621[C] = s++;
+                    this.retexindex[C] = s++;
                 } else {
-                    this.member8621[C] = -1;
+                    this.retexindex[C] = -1;
                 }
             }
-        } else if (i === 62) {
-            this.member2614 = true;
-        } else if (i === 64) {
-        } else if (i === 65 || i === 66 || i === 67) {
+        } else if (opcode === 62) {
+            this.mirror = true;
+        } else if (opcode === 64) {
+        } else if (opcode === 65 || opcode === 66 || opcode === 67) {
             if (this.resize === null) {
                 this.resize = new Int32Array(3);
                 this.resize[0] = this.resize[1] = this.resize[2] = 128;
             }
-            this.resize[i - 65] = N.member608();
-        } else if (i === 69) {
-            this.member10493 = N.member609();
-        } else if (i === 70 || i === 71 || i === 72) {
+            this.resize[opcode - 65] = packet.g2();
+        } else if (opcode === 69) {
+            this.member10493 = packet.g1();
+        } else if (opcode === 70 || opcode === 71 || opcode === 72) {
             if (this.offset === null) {
                 this.offset = new Int32Array(3);
             }
-            if (i === 71) {
-                this.offset[i - 70] = -(N.member1071() << 2);
+            if (opcode === 71) {
+                this.offset[opcode - 70] = -(packet.g2s() << 2);
             } else {
-                this.offset[i - 70] = N.member1071() << 2;
+                this.offset[opcode - 70] = packet.g2s() << 2;
             }
-        } else if (i === 73) {
-        } else if (i === 74) {
-            this.member10494 = true;
-        } else if (i === 75) {
-            this.member10495 = N.member609();
-        } else if (i === 77 || i === 92) {
-            this.member8644 = N.member608();
-            if (this.member8644 == 65535) {
-                this.member8644 = -1;
+        } else if (opcode === 73) {
+        } else if (opcode === 74) {
+            this.breakroutefinding = true;
+        } else if (opcode === 75) {
+            this.raiseobject = packet.g1();
+        } else if (opcode === 77 || opcode === 92) {
+            this.multivarbit = packet.g2();
+            
+            if (this.multivarbit == 65535) {
+                this.multivarbit = -1;
             }
-            this.member8643 = N.member608();
-            if (this.member8643 === 65535) {
-                this.member8643 = -1;
+            
+            this.multivar = packet.g2();
+            
+            if (this.multivar === 65535) {
+                this.multivar = -1;
             }
-            var B = -1;
-            if (i === 92) {
-                B = N.member1086();
+            
+            var multidefault = -1;
+            
+            if (opcode === 92) {
+                multidefault = packet.gSmart2or4null();
             }
-            var k = N.member609();
-            this.member10503 = new Int32Array(k + 2);
-            for (var j = 0; j <= k; j++) {
-                this.member10503[j] = N.member1086();
+            
+            var count = packet.g1();
+            this.multiloc = new Int32Array(count + 2);
+            
+            for (var i = 0; i <= count; i++) {
+                this.multiloc[i] = packet.gSmart2or4null();
             }
-            this.member10503[k + 1] = B;
-        } else if (i === 78) {
-            this.member2540 = N.member608();
-            this.member8649 = N.member609();
-        } else if (i === 79) {
-            this.member2550 = N.member608() * 10;
-            this.member2551 = N.member608() * 10;
-            this.member8649 = N.member609();
-            var A = N.member609();
-            this.member2549 = new Int32Array(A);
-            for (var z = 0; z < A; z++) {
-                this.member2549[z] = N.member608();
+            
+            this.multiloc[count + 1] = multidefault;
+        } else if (opcode === 78) {
+            this.bgsound = packet.g2();
+            this.bgsound_range = packet.g1();
+        } else if (opcode === 79) {
+            this.bgsound_mindelay = packet.g2() * 10;
+            this.bgsound_maxdelay = packet.g2() * 10;
+            this.bgsound_range = packet.g1();
+            var count = packet.g1();
+            this.bgsound_random = new Int32Array(count);
+            
+            for (var z = 0; z < count; z++) {
+                this.bgsound_random[z] = packet.g2();
             }
-        } else if (i === 81) {
-            this.member2530 = Class170.member1854;
-            this.member2531 = N.member609() * 256;
-        } else if (i === 82) {
+        } else if (opcode === 81) {
+            this.hillchange_mode = HillChange.TREE_SKEW;
+            this.hillchange_value = packet.g1() * 256;
+        } else if (opcode === 82) {
             this.member10484 = true;
-        } else if (i === 88) {
-            this.member10485 = false;
-        } else if (i === 89) {
-            this.member4492 = false;
-        } else if (i === 91) {
-            this.member8376 = true;
-        } else if (i === 93) {
-            this.member2530 = Class170.member1855;
-            this.member2531 = N.member608();
-        } else if (i === 94) {
-            this.member2530 = Class170.member1856;
-        } else if (i === 95) {
-            this.member2530 = Class170.member1857;
-            this.member2531 = N.member1071();
-        } else if (i === 97) {
-            this.member10500 = true;
-        } else if (i === 98) {
-        } else if (i === 101) {
-            this.member10501 = N.member609();
-        } else if (i === 102) {
-            this.member10499 = N.member608();
-        } else if (i === 103) {
-        } else if (i === 104) {
-            this.member8651 = N.member609();
-        } else if (i === 105) {
-            this.member10502 = true;
-        } else if (i === 106) {
-            var H = N.member609();
-            var F = 0;
-            this.member10488 = new Int32Array(H);
-            this.member10489 = new Int32Array(H);
-            for (D = 0; D < H; D++) {
-                this.member10488[D] = N.member1086();
-                F += this.member10489[D] = N.member609();
+        } else if (opcode === 88) {
+            this.hardshadow = false;
+        } else if (opcode === 89) {
+            this.randseq = false;
+        } else if (opcode === 91) {
+            this.members = true;
+        } else if (opcode === 93) {
+            this.hillchange_mode = HillChange.ROTATE;
+            this.hillchange_value = packet.g2();
+        } else if (opcode === 94) {
+            this.hillchange_mode = HillChange.CEILING_SKEW;
+        } else if (opcode === 95) {
+            this.hillchange_mode = HillChange.SKEW_TO_FIT;
+            this.hillchange_value = packet.g2s();
+        } else if (opcode === 97) {
+            this.msirotate = true;
+        } else if (opcode === 98) {
+        } else if (opcode === 101) {
+            this.msiangle = packet.g1();
+        } else if (opcode === 102) {
+            this.msi = packet.g2();
+        } else if (opcode === 103) {
+        } else if (opcode === 104) {
+            this.bgsound_volume = packet.g1();
+        } else if (opcode === 105) {
+            this.msimirror = true;
+        } else if (opcode === 106) {
+            var count = packet.g1();
+            var totalWeight = 0;
+            this.anim = new Int32Array(count);
+            this.anim_weight = new Int32Array(count);
+            
+            for (i = 0; i < count; i++) {
+                this.anim[i] = packet.gSmart2or4null();
+                totalWeight += this.anim_weight[i] = packet.g1();
             }
-            for (var D = 0; D < H; D++) {
-                this.member10489[D] = this.member10489[D] * 65535 / F;
+            
+            for (var i = 0; i < count; i++) {
+                this.anim_weight[i] = this.anim_weight[i] * 65535 / totalWeight;
             }
-        } else if (i === 107) {
-            this.member8641 = N.member608();
-        } else if (i >= 150 && i < 155) {
-            this.member8602[i - 150] = N.member1089();
-        } else if (i === 160) {
-            var J = N.member609();
-            this.member8605 = new Int32Array(J);
+        } else if (opcode === 107) {
+            this.mapelement = packet.g2();
+        } else if (opcode >= 150 && opcode < 155) {
+            this.op[opcode - 150] = packet.gjstr();
+        } else if (opcode === 160) {
+            var J = packet.g1();
+            this.quest = new Int32Array(J);
             for (var E = 0; E < J; E++) {
-                this.member8605[E] = N.member608();
+                this.quest[E] = packet.g2();
             }
-        } else if (i === 162) {
-            this.member2530 = Class170.member1855;
-            this.member2531 = N.member1074();
-        } else if (i === 163) {
-            this.member8622 = N.member1070();
-            this.member8623 = N.member1070();
-            this.member8624 = N.member1070();
-            this.member8625 = N.member1070();
-        } else if (i === 164 || i === 165 || i === 166) {
+        } else if (opcode === 162) {
+            this.hillchange_mode = HillChange.ROTATE;
+            this.hillchange_value = packet.g4s();
+        } else if (opcode === 163) {
+            this.tint_hue = packet.g1s();
+            this.tint_saturation = packet.g1s();
+            this.tint_lightness = packet.g1s();
+            this.tint_strength = packet.g1s();
+        } else if (opcode === 164 || opcode === 165 || opcode === 166) {
             if (this.member10483 === null) {
                 this.member10483 = Class41.create();
             }
-            this.member10483[i - 164] = N.member1071();
-        } else if (i === 167) {
-            this.member10496 = N.member608();
-        } else if (i === 168) {
-        } else if (i === 169) {
-        } else if (i === 170) {
-            N.member1080();
-        } else if (i === 171) {
-            N.member1080();
-        } else if (i === 173) {
-            this.member8653 = N.member608();
-            this.member8654 = N.member608();
-        } else if (i === 177) {
-        } else if (i === 178) {
-            this.member8650 = N.member609();
-        } else if (i === 179) {
+            this.member10483[opcode - 164] = packet.g2s();
+        } else if (opcode === 167) {
+            this.member10496 = packet.g2();
+        } else if (opcode === 168) {
+        } else if (opcode === 169) {
+        } else if (opcode === 170) {
+            packet.gSmart1or2s();
+        } else if (opcode === 171) {
+            packet.gSmart1or2s();
+        } else if (opcode === 173) {
+            this.bgsound_minrate = packet.g2();
+            this.bgsound_maxrate = packet.g2();
+        } else if (opcode === 177) {
+        } else if (opcode === 178) {
+            this.bgsound_size = packet.g1();
+        } else if (opcode === 179) {
             this.member10504 = true;
-        } else if (i === 186) {
-            this.member10498 = N.member609();
-        } else if (i === 188) {
+        } else if (opcode === 186) {
+            this.member10498 = packet.g1();
+        } else if (opcode === 188) {
             this.member10497 = true;
-        } else if (i === 189) {
-            this.member8628 = true;
-        } else if (i >= 190 && i < 196) {
-            if (this.member8603 === null) {
-                this.member8603 = new Int32Array(a);
+        } else if (opcode === 189) {
+            this.antimacro = true;
+        } else if (opcode >= 190 && opcode < 196) {
+            if (this.cursor === null) {
+                this.cursor = new Int32Array(a);
                 for (var P = 0; P < a; P++) {
-                    this.member8603[P] = -1;
+                    this.cursor[P] = -1;
                 }
             }
-            this.member8603[i - 190] = N.member608();
-        } else if (i === 196) {
-            this.member10486 = N.member609();
-        } else if (i === 197) {
-            this.member10487 = N.member609();
-        } else if (i === 198) {
+            this.cursor[opcode - 190] = packet.g2();
+        } else if (opcode === 196) {
+            this.member10486 = packet.g1();
+        } else if (opcode === 197) {
+            this.member10487 = packet.g1();
+        } else if (opcode === 198) {
             this.member10481 = true;
-        } else if (i === 199) {
+        } else if (opcode === 199) {
             this.member8611 = false;
-        } else if (i === 200) {
+        } else if (opcode === 200) {
             this.member4479 = true;
-        } else if (i === 201) {
-            this.member8631 = Class166({ member1795: N });
-        } else if (i === 249) {
-            var e = N.member609();
+        } else if (opcode === 201) {
+            this.clickbox = Cuboid({ member1795: packet });
+        } else if (opcode === 249) {
+            var e = packet.g1();
             if (this.params === null) {
                 this.params = {};
             }
             for (var o = 0; o < e; o++) {
-                var v = N.member609() === 1;
-                var u = N.g3();
+                var v = packet.g1() === 1;
+                var u = packet.g3();
                 if (v) {
-                    this.params[u] = N.member1089();
+                    this.params[u] = packet.gjstr();
                 } else {
-                    this.params[u] = N.member1074();
+                    this.params[u] = packet.g4s();
                 }
             }
-        } else if (i === 250) {
-            this.member2541 = N.member609();
-        } else if (i === 251) {
-            this.member2545 = N.member609();
-        } else if (i === 252) {
-            this.member2546 = N.member608();
-            this.member2547 = N.member608();
-            this.member2548 = N.member608() / 1000;
-        } else if (i === 253) {
-            this.member2552 = N.member609();
-        } else if (i === 254) {
-            this.member2553 = N.member609();
-        } else if (i === 255) {
-            this.member2554 = N.member608();
-            this.member2555 = N.member608();
-            this.member2556 = N.member608() / 1000;
+        } else if (opcode === 250) {
+            this.member2541 = packet.g1();
+        } else if (opcode === 251) {
+            this.member2545 = packet.g1();
+        } else if (opcode === 252) {
+            this.member2546 = packet.g2();
+            this.member2547 = packet.g2();
+            this.member2548 = packet.g2() / 1000;
+        } else if (opcode === 253) {
+            this.member2552 = packet.g1();
+        } else if (opcode === 254) {
+            this.member2553 = packet.g1();
+        } else if (opcode === 255) {
+            this.member2554 = packet.g2();
+            this.member2555 = packet.g2();
+            this.member2556 = packet.g2() / 1000;
         } else if (false) {
         }
     };
-    c.prototype.member2934 = function () {
-        if (this.member2524 === -1) {
-            this.member2524 = 0;
-            if (this.member10482 !== null && this.member10482.length === 1 && this.member10482[0] === Class198.member2350) {
-                this.member2524 = 1;
+    LocType.prototype.postDecode = function () {
+        if (this.active === -1) {
+            this.active = 0;
+            if (this.model_shape !== null && this.model_shape.length === 1 && this.model_shape[0] === Class198.member2350) {
+                this.active = 1;
             }
             for (var d = 0; d < 5; d++) {
-                if (this.member8602[d] !== null) {
-                    this.member2524 = 1;
+                if (this.op[d] !== null) {
+                    this.active = 1;
                     break;
                 }
             }
         }
-        if (this.member2524 > 0 || this.member10498 === Class690.member9896) {
+        if (this.active > 0 || this.member10498 === Class690.member9896) {
             this.member10497 = true;
         }
-        if (this.member10495 === -1) {
-            this.member10495 = this.member10490 !== 0 ? 1 : 0;
+        if (this.raiseobject === -1) {
+            this.raiseobject = this.blockwalk !== 0 ? 1 : 0;
         }
     };
-    c.prototype.member4488 = function (s, u, g, e, r, o, m, d) {
+    LocType.prototype.member4488 = function (s, u, g, e, r, o, m, d) {
         var q = r;
-        var i = r + s.member4164(m);
+        var i = r + s.getWidth(m);
         var j = o;
-        var n = o + s.member4165(m);
+        var n = o + s.getLength(m);
         var v = g.member4763(e, q, j, d);
         if (v === -1 || u !== v) {
             return false;
@@ -648,11 +661,11 @@ export var Class790 = function () {
         }
         return true;
     };
-    c.prototype.member4483 = function (s, g, e, q, o, m, d) {
-        var r = q + s.member4164(m) / 2;
+    LocType.prototype.member4483 = function (s, g, e, q, o, m, d) {
+        var r = q + s.getWidth(m) / 2;
         var i = Math.ceil(r);
         r = Math.floor(r);
-        var j = o + s.member4165(m) / 2;
+        var j = o + s.getLength(m) / 2;
         var n = Math.ceil(j);
         j = Math.floor(j);
         var u = g.member4763(e, r, j, d);
@@ -673,11 +686,11 @@ export var Class790 = function () {
         }
         return (u + k + h + t) / 4;
     };
-    c.prototype.member4489 = function (r, g, e, n, m, k, d) {
+    LocType.prototype.member4489 = function (r, g, e, n, m, k, d) {
         var o = {};
-        var j = r.member4164(k);
-        var i = r.member4165(k);
-        if (this.member2530 === Class170.member1855 || this.member2530 === Class170.member1853 || this.member2530 === Class170.member1854 || this.member2530 === Class170.member1857) {
+        var j = r.getWidth(k);
+        var i = r.getLength(k);
+        if (this.hillchange_mode === HillChange.ROTATE || this.hillchange_mode === HillChange.FLOOR_SKEW || this.hillchange_mode === HillChange.TREE_SKEW || this.hillchange_mode === HillChange.SKEW_TO_FIT) {
             o.member2534 = new Array(j + 1);
             for (var q = 0; q < j + 1; q++) {
                 o.member2534[q] = new Int32Array(i + 1);
@@ -689,7 +702,7 @@ export var Class790 = function () {
                 }
             }
         }
-        if (e < Class86.member414 - 1 && (this.member2530 === Class170.member1856 || this.member2530 === Class170.member1857)) {
+        if (e < Class86.member414 - 1 && (this.hillchange_mode === HillChange.CEILING_SKEW || this.hillchange_mode === HillChange.SKEW_TO_FIT)) {
             o.member2371 = new Array(j + 1);
             for (var q = 0; q < j + 1; q++) {
                 o.member2371[q] = new Int32Array(i + 1);
@@ -707,10 +720,10 @@ export var Class790 = function () {
         }
         return o;
     };
-    c.prototype.member4484 = function (o, d, m, k, i) {
+    LocType.prototype.member4484 = function (o, d, m, k, i) {
         for (var j = d - 1; j >= 0; j--) {
-            var h = this.member4164(i);
-            var g = this.member4165(i);
+            var h = this.getWidth(i);
+            var g = this.getLength(i);
             for (var n = m - 1; n < m + h + 1; n++) {
                 for (var e = k - 1; e < k + g + 1; e++) {
                     if (o.member8301(j, n, e)) {
@@ -725,41 +738,41 @@ export var Class790 = function () {
         }
         return undefined;
     };
-    c.prototype.member4481 = function () {
-        return this.member10503 !== null;
+    LocType.prototype.member4481 = function () {
+        return this.multiloc !== null;
     };
-    c.prototype.member4482 = function () {
-        if (this.member10503 === null || this.member2896.member8687() === null) {
+    LocType.prototype.member4482 = function () {
+        if (this.multiloc === null || this.myList.getVarValueProvider() === null) {
             return this;
         }
         var h = -1;
-        if (this.member8644 !== -1) {
-            var g = this.member2896.member7539().member7394(this.member8644);
-            if (g !== member47) {
-                h = this.member2896.member8687().member2950(g);
+        if (this.multivarbit !== -1) {
+            var g = this.myList.getVarTypeProvider().getVarBitType(this.multivarbit);
+            if (g !== NULL) {
+                h = this.myList.getVarValueProvider().getVarBit(g);
             }
-        } else if (this.member8643 !== -1) {
-            var d = this.member2896.member7539().member7393(Class465.member4134, this.member8643);
-            if (d !== member47) {
-                h = this.member2896.member8687().member2943(d);
+        } else if (this.multivar !== -1) {
+            var d = this.myList.getVarTypeProvider().getVarType(VarDomainType.PLAYER, this.multivar);
+            if (d !== NULL) {
+                h = this.myList.getVarValueProvider().getVarInt(d);
             }
         }
-        if (h < 0 || h >= this.member10503.length - 1) {
-            var e = this.member10503[this.member10503.length - 1];
+        if (h < 0 || h >= this.multiloc.length - 1) {
+            var e = this.multiloc[this.multiloc.length - 1];
             if (e !== -1) {
-                return this.member2896.list(e);
+                return this.myList.list(e);
             } else {
                 return undefined;
             }
         }
-        if (this.member10503[h] === -1) {
+        if (this.multiloc[h] === -1) {
             return undefined;
         }
-        return this.member2896.list(this.member10503[h]);
+        return this.myList.list(this.multiloc[h]);
     };
     if (true) {
-        c.prototype.member4487 = function (j, o, k, h, r, n, d) {
-            if (this.member10482 === null) {
+        LocType.prototype.member4487 = function (j, o, k, h, r, n, d) {
+            if (this.model_shape === null) {
                 return undefined;
             }
             if (k === Class198.member2351) {
@@ -772,39 +785,39 @@ export var Class790 = function () {
             if (n !== undefined) {
                 g += n.member6725() * Math.pow(2, 29);
             }
-            var e = this.member2896.member10508().find(g);
+            var e = this.myList.member10508().find(g);
             if (e === null || d && e.member2619 === undefined) {
                 var m = g + (d ? 1 : 0) * Math.pow(2, 28);
-                var i = this.member2896.member10509().find(m);
+                var i = this.myList.member10509().find(m);
                 if (i === null) {
-                    if (j.member4588(o) && this.member2896.member10509().member906() > 0) {
+                    if (j.member4588(o) && this.myList.member10509().getRemaining() > 0) {
                         var i = Class738(o, this, k, h, r, n, d);
                         j.member4589(i);
                         if (!i.member1999()) {
-                            this.member2896.member10509().put(i, 1, m);
+                            this.myList.member10509().put(i, 1, m);
                         }
-                        return member47;
+                        return NULL;
                     } else {
-                        return member47;
+                        return NULL;
                     }
                 } else {
                     if (!i.member1999()) {
-                        return member47;
+                        return NULL;
                     }
                     if (!i.member4242()) {
-                        this.member2896.member10509().remove(m);
+                        this.myList.member10509().remove(m);
                         var q = i.member2893();
                         if (q === Class379.member4232) {
                             if (false) {
                             }
                             return undefined;
                         } else {
-                            return member47;
+                            return NULL;
                         }
                     }
                     e = i.member4241();
-                    this.member2896.member10508().put(e, 1, g);
-                    this.member2896.member10509().remove(m);
+                    this.myList.member10508().put(e, 1, g);
+                    this.myList.member10509().remove(m);
                     i.member2885();
                     return e;
                 }
@@ -812,7 +825,7 @@ export var Class790 = function () {
                 return e;
             }
         };
-        c.prototype.member10510 = function (e) {
+        LocType.prototype.member10510 = function (e) {
             if (e === Class198.member2351) {
                 e = Class198.member2350;
             }
@@ -820,8 +833,8 @@ export var Class790 = function () {
                 e = Class198.member2335;
             }
             var j = -1;
-            for (var d = 0; d < this.member10482.length; d++) {
-                if (this.member10482[d] === e) {
+            for (var d = 0; d < this.model_shape.length; d++) {
+                if (this.model_shape[d] === e) {
                     j = d;
                     break;
                 }
@@ -829,7 +842,7 @@ export var Class790 = function () {
             if (j === -1) {
                 return -1;
             }
-            var g = this.member9904[j];
+            var g = this.model[j];
             var i = 0;
             for (var h = 0; h < g.length; h++) {
                 i += g[h] * Math.pow(2, h * 20);
@@ -838,26 +851,26 @@ export var Class790 = function () {
         };
     } else {
     }
-    c.prototype.member2142 = function () {
-        if (this.member10488 !== null) {
-            if (this.member10488.length > 1) {
+    LocType.prototype.member2142 = function () {
+        if (this.anim !== null) {
+            if (this.anim.length > 1) {
                 var e = Math.floor(Math.random() * 65535);
-                for (var d = 0; d < this.member10488.length; d++) {
-                    if (e <= this.member10489[d]) {
-                        return this.member10488[d];
+                for (var d = 0; d < this.anim.length; d++) {
+                    if (e <= this.anim_weight[d]) {
+                        return this.anim[d];
                     }
-                    e -= this.member10489[d];
+                    e -= this.anim_weight[d];
                 }
             } else {
-                return this.member10488[0];
+                return this.anim[0];
             }
         }
         return -1;
     };
-    c.prototype.member4425 = function () {
-        return this.member10488 !== null && this.member10488.length === 1 ? this.member10488[0] : -1;
+    LocType.prototype.member4425 = function () {
+        return this.anim !== null && this.anim.length === 1 ? this.anim[0] : -1;
     };
-    c.prototype.getParam = function (g, e) {
+    LocType.prototype.getParam = function (g, e) {
         if (this.params === null) {
             return e;
         }
@@ -868,7 +881,7 @@ export var Class790 = function () {
             return d;
         }
     };
-    c.prototype.member2941 = function (g, e) {
+    LocType.prototype.member2941 = function (g, e) {
         if (this.params === null) {
             return e;
         }
@@ -880,6 +893,6 @@ export var Class790 = function () {
         }
     };
     return function (e, d, g) {
-        return new c(e, d, g);
+        return new LocType(e, d, g);
     };
 }();

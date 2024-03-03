@@ -40,11 +40,11 @@ export var Class725 = function () {
     };
     m.member301 = t;
     var j = function (y) {
-        var v = y.member609();
+        var v = y.g1();
         if (v !== i) {
             return false;
         }
-        var x = y.member609() === s;
+        var x = y.g1() === s;
         if (x) {
             k(y);
         }
@@ -53,36 +53,36 @@ export var Class725 = function () {
     };
     m.decode = j;
     var k = function (D) {
-        var B = D.member1078();
+        var B = D.gSmart1or2();
         u = new Array(B);
         for (var v = 0; v < B; v++) {
             u[v] = {
-                member3702: D.member1078(),
-                member7233: D.member1089(true)
+                member3702: D.gSmart1or2(),
+                member7233: D.gjstr(true)
             };
         }
-        g = D.member1078();
-        o = D.member1078();
-        q = D.member1078();
+        g = D.gSmart1or2();
+        o = D.gSmart1or2();
+        q = D.gSmart1or2();
         r = new Array(o - g + 1);
         for (v = 0; v < q; v++) {
-            var C = D.member1078();
-            var A = D.member609();
-            var x = D.member1073();
-            var z = D.member1078();
+            var C = D.gSmart1or2();
+            var A = D.g1();
+            var x = D.g4();
+            var z = D.gSmart1or2();
             var y = undefined;
             if (z !== 0) {
-                y = D.member1089(true);
+                y = D.gjstr(true);
             }
-            r[C] = Class724(A, u[A], x, z, y, C + g, D.member1089(true), D.member1089(true), e);
+            r[C] = Class724(A, u[A], x, z, y, C + g, D.gjstr(true), D.gjstr(true), e);
         }
-        c = D.member1073();
+        c = D.g4();
         d = true;
     };
     var a = function (z) {
         for (var v = 0; v < q; v++) {
-            var y = z.member1078();
-            var x = z.member608();
+            var y = z.gSmart1or2();
+            var x = z.g2();
             if (x === 65535) {
                 x = e;
             }

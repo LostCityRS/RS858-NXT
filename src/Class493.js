@@ -90,7 +90,7 @@ export var Class493 = function () {
                     if (q[n] !== o[n]) {
                         return false;
                     }
-                } else if (!q[n].member2969(o[n])) {
+                } else if (!q[n].equals(o[n])) {
                     return false;
                 }
             }

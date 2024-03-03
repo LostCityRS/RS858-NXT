@@ -25,7 +25,7 @@ export var Class538 = function () {
         this.member3455 = undefined;
         this.member3298;
         this.member8577 = false;
-        this.member8578 = member47;
+        this.member8578 = NULL;
         this.member8579 = Class41.create();
         if (r !== undefined && h !== undefined && q !== undefined && g !== undefined) {
             member46(this, Class372, r, h, q, Class374.member4143, g);
@@ -106,7 +106,7 @@ export var Class538 = function () {
             return;
         }
         var s = Class423.member6130(Class423.member6115.member6112);
-        if (s === member47) {
+        if (s === NULL) {
             this.member4107(false);
             return;
         }
@@ -125,7 +125,7 @@ export var Class538 = function () {
                 return;
             }
         } else if (this.member3701 === Class537.member8571 || this.member3701 === Class537.member8573) {
-            this.member8579[1] += this.member1985().member4186().member4121();
+            this.member8579[1] += this.member1985().member4186().getOverlayHeight();
         }
         var i = true;
         if (this.member3701 === Class537.member8571) {

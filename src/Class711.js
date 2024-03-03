@@ -1,9 +1,9 @@
 import { Class105 } from 'Class105.js';
 import { Class95 } from 'Class95.js';
-import { Class131 } from 'Class131.js';
-import { Class96 } from 'Class96.js';
-import { Class710 } from 'Class710.js';
-export var Class711 = function (k) {
+import { Js5ConfigGroup } from 'Class131.js';
+import { Priority } from 'Class96.js';
+import { HeadbarType } from 'Class710.js';
+export var HeadbarTypeList = function (k) {
     var d = {};
     var m = null;
     d.member7535 = function () {
@@ -28,13 +28,13 @@ export var Class711 = function (k) {
     d.list = function (q) {
         var n = c.find(q);
         if (n === null) {
-            var o = m.getFile(Class95.member807, Class131.member1256.member1204, q, Class96.member840, Class131.member1256.priority);
+            var o = m.getFile(Class95.member807, Js5ConfigGroup.HEADBARTYPE.member1204, q, Priority.member840, Js5ConfigGroup.HEADBARTYPE.priority);
             if (o === null) {
                 return null;
             }
-            n = Class710({
+            n = HeadbarType({
                 member625: q,
-                member2896: d
+                myList: d
             });
             if (o !== undefined) {
                 n.decode(o);

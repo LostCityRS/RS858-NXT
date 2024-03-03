@@ -33,27 +33,27 @@ export var Class676 = function () {
         y.member9552 = function (F) {
             m = F;
         };
-        var o = member47;
+        var o = NULL;
         var D = -1;
         y.member9551 = function (F) {
             D = F;
         };
-        var j = member47;
+        var j = NULL;
         var c = -1;
         y.member9554 = function (F) {
             c = F;
         };
-        var u = member47;
+        var u = NULL;
         var s = -1;
         y.member9553 = function (F) {
             s = F;
         };
-        var B = member47;
+        var B = NULL;
         var d = -1;
         y.member9555 = function (F) {
             d = F;
         };
-        var g = member47;
+        var g = NULL;
         var e = 0;
         y.member9556 = function (F) {
             e = F;
@@ -76,8 +76,8 @@ export var Class676 = function () {
         };
         var E = function (G) {
             var F = Class423.member6131(G, false);
-            if (F === member47) {
-                return member47;
+            if (F === NULL) {
+                return NULL;
             } else {
                 return F[0];
             }
@@ -89,13 +89,13 @@ export var Class676 = function () {
             }
             var K = R | b << 8;
             var N = I.member3598();
-            if (j === member47) {
+            if (j === NULL) {
                 j = E(D);
             }
-            if (o === member47) {
+            if (o === NULL) {
                 o = E(m);
             }
-            if (j === member47 || o === member47) {
+            if (j === NULL || o === NULL) {
                 x.member3796(O, L, H, r, K, R === 255);
             } else {
                 var M = (H - o.width * 2) / j.width;
@@ -113,16 +113,16 @@ export var Class676 = function () {
             x.member3796(O, L + r, H, Q - r, K, R === 255);
         };
         var k = function (M, K, I, N) {
-            if (B === member47) {
+            if (B === NULL) {
                 B = E(s);
             }
-            if (u === member47) {
+            if (u === NULL) {
                 u = E(c);
             }
-            if (g === member47) {
+            if (g === NULL) {
                 g = E(d);
             }
-            if (B !== member47 && u !== member47 && g !== member47) {
+            if (B !== NULL && u !== NULL && g !== NULL) {
                 var L = (I - g.width * 2) / B.width;
                 var H = B.member3606.member1539();
                 var G = H.member1285(B.member3606.member1494());

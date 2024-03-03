@@ -1,4 +1,4 @@
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 export var Class805 = function () {
     var g = {};
     var k;
@@ -13,7 +13,7 @@ export var Class805 = function () {
         b = o;
     };
     var c = g.member25;
-    g.member3590 = function () {
+    g.readyanim = function () {
         if (i !== undefined) {
             return true;
         }
@@ -21,7 +21,7 @@ export var Class805 = function () {
             return false;
         }
         var t = k.member1439(d).member2700(b);
-        var z = k.getFile(d, t, 0, Class96.member841);
+        var z = k.getFile(d, t, 0, Priority.member841);
         if (z === undefined) {
             throw new Error('1301 ');
         }
@@ -29,8 +29,8 @@ export var Class805 = function () {
             return false;
         }
         m = [];
-        while (z.member1047() < z.getSize()) {
-            m.push(z.member609());
+        while (z.getPos() < z.getSize()) {
+            m.push(z.g1());
         }
         var C = m.length;
         i = new Array(C);

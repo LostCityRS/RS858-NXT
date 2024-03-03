@@ -1,11 +1,11 @@
-import { Class122 } from 'Class122.js';
-export var Class550 = function () {
+import { CP1252 } from 'Class122.js';
+export var QuickChatCat = function () {
     var a = function (c, b) {
-        this.member2896;
+        this.myList;
         this.member625 = -1;
         if (c !== undefined && b !== undefined) {
             this.member625 = c;
-            this.member2896 = b;
+            this.myList = b;
         } else {
             throw new Error('1370 ');
         }
@@ -82,7 +82,7 @@ export var Class550 = function () {
     };
     a.prototype.decode = function (c) {
         while (true) {
-            var b = c.member609();
+            var b = c.g1();
             if (b === undefined) {
                 throw new Error('1371 ');
                 break;
@@ -90,37 +90,37 @@ export var Class550 = function () {
             if (b === 0) {
                 break;
             }
-            this.member2932(c, b);
+            this.decodeNext(c, b);
         }
     };
-    a.prototype.member2932 = function (g, e) {
+    a.prototype.decodeNext = function (g, e) {
         if (e === 1) {
-            this.member8736 = g.member1089();
+            this.member8736 = g.gjstr();
         } else if (e === 2) {
-            var d = g.member609();
+            var d = g.g1();
             this.member8737 = new Uint16Array(d);
             this.member8738 = new Uint16Array(d);
             for (var c = 0; c < d; c++) {
-                this.member8737[c] = g.member608();
-                var b = g.member1070();
-                this.member8738[c] = b === 0 ? 0 : Class122.member1036(b);
+                this.member8737[c] = g.g2();
+                var b = g.g1s();
+                this.member8738[c] = b === 0 ? 0 : CP1252.decodeChar(b);
             }
         } else if (e === 3) {
-            var d = g.member609();
+            var d = g.g1();
             this.member8739 = new Uint16Array(d);
             this.member8740 = new Uint16Array(d);
             for (var c = 0; c < d; c++) {
-                this.member8739[c] = g.member608();
-                var b = g.member1070();
-                this.member8740[c] = b === 0 ? 0 : Class122.member1036(b);
+                this.member8739[c] = g.g2();
+                var b = g.g1s();
+                this.member8740[c] = b === 0 ? 0 : CP1252.decodeChar(b);
             }
         } else if (e === 4) {
             this.member8741 = true;
         } else if (false) {
         }
     };
-    a.prototype.member2934 = function () {
-        var c = this.member2896.member8729();
+    a.prototype.postDecode = function () {
+        var c = this.myList.member8729();
         if (this.member625 > c) {
             if (member8739 !== undefined) {
                 for (var b = 0; b < member8739.length; b++) {

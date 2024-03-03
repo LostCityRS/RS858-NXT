@@ -21,14 +21,14 @@ export var Class590 = function () {
             Class49.member347(h, c);
         };
         e.member6219 = function (h) {
-            c = h.member320();
+            c = h.gFloat();
         };
         if (b.member8969 !== undefined && b.member8988 !== undefined) {
             g = b.member8969;
             c = b.member8988;
         } else if (b.member8969 !== undefined && b.member3456 !== undefined) {
             g = b.member8969;
-            c = b.member3456.member320();
+            c = b.member3456.gFloat();
         } else {
             throw new Error('964 ');
         }

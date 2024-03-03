@@ -1,5 +1,5 @@
 import { Class41 } from 'Class41.js';
-import { Class166 } from 'Class166.js';
+import { Cuboid } from 'Class166.js';
 import { Class140 } from 'Class140.js';
 import { Class49 } from 'Class49.js';
 import { Class37 } from 'Class37.js';
@@ -23,7 +23,7 @@ import { Class332 } from 'Class332.js';
 import { Class347 } from 'Class347.js';
 export var Class378 = function () {
     var g = Class41.create();
-    var a = Class166(new Float32Array(3), new Float32Array(3));
+    var a = Cuboid(new Float32Array(3), new Float32Array(3));
     var e = Class140.create();
     var d = [
         0,
@@ -80,7 +80,7 @@ export var Class378 = function () {
             for (var D = 0; D < this.member4203.length; D++) {
                 var C = this.member4203[D];
                 this.member4204[C.member2079] = 0;
-                if (!C.member2524) {
+                if (!C.active) {
                     C.member1794.translate(this.member3320().member4099());
                     continue;
                 }
@@ -98,7 +98,7 @@ export var Class378 = function () {
                 E.member4193(C.member2581);
                 E.member4185(s);
             }
-            this.member4093(Class166(this.member2621.member2098()));
+            this.member4093(Cuboid(this.member2621.member2098()));
             this.member4094(true);
             if (this.member2621.member2101() !== undefined) {
                 if (this.member3434 === undefined) {
@@ -151,7 +151,7 @@ export var Class378 = function () {
     h.prototype.member4216 = function (r, s, q, o, n) {
         for (var k = 0; k < this.member4203.length; k++) {
             var m = this.member4203[k];
-            if (!m.member2524) {
+            if (!m.active) {
                 continue;
             }
             if (!m.member4179.member4159() && (r === -1 || m.member2506 === r) && m.level === s && m.member2514 === q && m.member2515 === o && m.member2519 === n) {
@@ -167,7 +167,7 @@ export var Class378 = function () {
         var q = undefined;
         for (var k = 0; k < this.member4203.length; k++) {
             var m = this.member4203[k];
-            if (!m.member2524) {
+            if (!m.active) {
                 continue;
             }
             if (m.member4179.member4159() && (s === -1 || m.member2506 === s) && m.level === t && m.member2514 === r && m.member2515 === o && m.member2519 === n) {
@@ -185,7 +185,7 @@ export var Class378 = function () {
         this.member4205 = false;
         for (var k = 0; k < this.member4203.length; k++) {
             var m = this.member4203[k];
-            if (!m.member2524) {
+            if (!m.active) {
                 continue;
             }
             m.member4179.member3320().member344(g);
@@ -199,7 +199,7 @@ export var Class378 = function () {
     h.prototype.member4219 = function (r, q, o, n) {
         for (var k = 0; k < this.member4203.length; k++) {
             var m = this.member4203[k];
-            if (!m.member2524) {
+            if (!m.active) {
                 continue;
             }
             if (m.level === r && m.member2514 === q && m.member2515 === o && m.member2519 === n) {
@@ -300,7 +300,7 @@ export var Class378 = function () {
                 return;
             }
         }
-        var u = o.member941(Class72.member498);
+        var u = o.member941(Class72.POINTLIGHT);
         this.member4212 = this.member4211 !== undefined && u.member291() && !s;
         if (this.member4212) {
             var y = this.member4211.member427();
@@ -376,7 +376,7 @@ export var Class378 = function () {
     h.prototype.member952 = function (m, q, v, u, t) {
         var n = Class132.member1266();
         var o = n.member522(Class72.member499);
-        var r = n.member941(Class72.member498);
+        var r = n.member941(Class72.POINTLIGHT);
         var s = this.member4085().member4227();
         var k = this.member4087() >= Class121.member881;
         if (this.member4212) {
@@ -404,7 +404,7 @@ export var Class378 = function () {
     h.prototype.member486 = function (o, u, t, s) {
         var m = Class132.member1266();
         var n = m.member522(Class72.member499);
-        var q = m.member941(Class72.member498);
+        var q = m.member941(Class72.POINTLIGHT);
         var r = this.member4085().member4227();
         var k = this.member4087() >= Class121.member881;
         if (this.member4212) {
@@ -441,7 +441,7 @@ export var Class378 = function () {
             if (u === undefined || this.member4209[q] > 0) {
                 continue;
             }
-            var o = this.member2566[q].member2549;
+            var o = this.member2566[q].bgsound_random;
             if (o !== undefined && o.length > 0) {
                 var s = true;
                 for (var n = 0; n < o.length; n++) {
@@ -461,8 +461,8 @@ export var Class378 = function () {
                             r.member3335(u.member2576, u.member2577, u.member2578, u.member2579);
                             r.start();
                             this.member4128(r, m);
-                            var k = u.member2550;
-                            var t = u.member2551;
+                            var k = u.bgsound_mindelay;
+                            var t = u.bgsound_maxdelay;
                             this.member4209[q] = Math.floor(k + Math.random() * (t - k));
                         }
                     }

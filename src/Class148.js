@@ -1,5 +1,5 @@
 import { Class95 } from 'Class95.js';
-import { Class96 } from 'Class96.js';
+import { Priority } from 'Class96.js';
 import { Class93 } from 'Class93.js';
 import { Class80 } from 'Class80.js';
 import { Class135 } from 'Class135.js';
@@ -44,11 +44,11 @@ export var Class148 = function () {
     };
     u.member1491 = function (F) {
         var E = A(F);
-        if (E === member47) {
+        if (E === NULL) {
             E = o(F);
         }
         var G = D(E, F);
-        if (E === member47) {
+        if (E === NULL) {
             i(F, G);
         }
         return G;
@@ -85,7 +85,7 @@ export var Class148 = function () {
                 return j[E];
             }
         }
-        return member47;
+        return NULL;
     };
     var m = function (L, I) {
         var S = new Uint32Array(L.member546);
@@ -188,15 +188,15 @@ export var Class148 = function () {
     };
     var o = function (E) {
         var G = E & 65535;
-        var I = s.getFile(Class95.member811, G, 0, Class96.member841, Class93.member796);
-        if (I === member47) {
-            return member47;
+        var I = s.getFile(Class95.member811, G, 0, Priority.member841, Class93.member796);
+        if (I === NULL) {
+            return NULL;
         }
         var H = Class80.member605(I);
         var J = {
             width: H.member556(),
             height: H.member557(),
-            member546: H.member600(),
+            member546: H.getColour(),
             member1295: H.member595(),
             member1294: a
         };
@@ -258,10 +258,10 @@ export var Class148 = function () {
         for (var E = 0; E < k.length; E++) {
             var H = k[E].member1280;
             var F = A(H);
-            if (F === member47) {
+            if (F === NULL) {
                 F = o(H);
             }
-            if (F !== member47) {
+            if (F !== NULL) {
                 for (var G = 0; G < n.length; G++) {
                     if (n[G].member1494() === H) {
                         n[G].member1496(F);

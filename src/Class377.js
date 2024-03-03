@@ -1,7 +1,7 @@
 import { Class41 } from 'Class41.js';
 import { Class140 } from 'Class140.js';
 import { Class49 } from 'Class49.js';
-import { Class166 } from 'Class166.js';
+import { Cuboid } from 'Class166.js';
 export var Class377 = function () {
     var b = Class41.create();
     var a = new Float32Array([
@@ -276,7 +276,7 @@ export var Class377 = function () {
         }
         if (this.member1794 !== undefined) {
             if (this.member4178 === undefined) {
-                this.member4178 = Class166(this.member1794);
+                this.member4178 = Cuboid(this.member1794);
             } else {
                 this.member4178.member1797(this.member1794);
             }

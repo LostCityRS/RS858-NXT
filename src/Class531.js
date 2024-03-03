@@ -34,7 +34,7 @@ export var Class531 = function () {
         var j = function (x) {
             var u = m ? new Array() : null;
             for (var v = c.member776(); v !== undefined; v = c.member777()) {
-                if (x.member2969(v.member8493())) {
+                if (x.equals(v.member8493())) {
                     if (m) {
                         u.push(v);
                     } else {
@@ -59,7 +59,7 @@ export var Class531 = function () {
         g.member8496 = function (x) {
             var u = m ? [] : null;
             for (var v = c.member776(); v !== undefined; v = c.member777()) {
-                if (x.member2969(v.member8493())) {
+                if (x.equals(v.member8493())) {
                     c.remove();
                     v.member512();
                     if (m) {

@@ -1,6 +1,6 @@
 import { Class41 } from 'Class41.js';
 import { Class291 } from 'Class291.js';
-import { Class290 } from 'Class290.js';
+import { CoordFine } from 'Class290.js';
 import { Class469 } from 'Class469.js';
 import { Class515 } from 'Class515.js';
 import { Class421 } from 'Class421.js';
@@ -15,7 +15,7 @@ export var Class619 = function () {
     var i = new Float32Array(4);
     var c = Class41.create();
     var b = Class291();
-    var k = Class290();
+    var k = CoordFine();
     var d = Class469.member7449;
     g.member25 = function (n) {
         a = n;
@@ -59,13 +59,13 @@ export var Class619 = function () {
         h(n, n.member8886, j);
     };
     Class421.member5961.member867 = function (n) {
-        n.member6100[n.member6099++] = n.member8883.member4121();
+        n.member6100[n.member6099++] = n.member8883.getOverlayHeight();
     };
     Class421.member5969.member867 = function (n) {
-        n.member6100[n.member6099++] = n.member8884.member4121();
+        n.member6100[n.member6099++] = n.member8884.getOverlayHeight();
     };
     Class421.member5970.member867 = function (n) {
-        n.member6100[n.member6099++] = n.member8886.member4121();
+        n.member6100[n.member6099++] = n.member8886.getOverlayHeight();
     };
     Class421.member5973.member867 = function (n) {
         m(n, n.member8883);
@@ -107,9 +107,9 @@ export var Class619 = function () {
         }
         var o = a.member8252.member8259();
         var n = o.member8260(Class501.member8138);
-        n.member2698.member1105(s);
-        n.member2698.member1114(q.member756);
-        n.member2698.member1113(q.x);
+        n.packet.p1_alt2(s);
+        n.packet.p2_alt2(q.member756);
+        n.packet.p2_alt1(q.x);
         o.member8261(n);
     };
     var e = 0.35;

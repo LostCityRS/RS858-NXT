@@ -1,0 +1,21 @@
+export var Class397 = {
+    member390: 1 << 16,
+    member4393: 1 << 15,
+    member391: 1 << 15,
+    member4394: 1 << 15,
+    member4395: 1 << 15,
+    member4396: 1 << 14,
+    member4397: 1 << 14,
+    member4398: 1 << 14,
+    member4399: 1 << 13,
+    member4400: 1 << 12,
+    member4401: 1 << 12,
+    member4402: 1 << 12,
+    member4403: 1 << 11,
+    member4404: 1 << 10,
+    member104: 1 << 9,
+    member4405: 1 << 3,
+    member4406: 1 << 2,
+    member4407: 1 << 1,
+    member4408: -(1 << 1)
+};

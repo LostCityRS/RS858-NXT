@@ -1,0 +1,23 @@
+export var Class86 = function () {
+    var a = {};
+    a.member414 = 4;
+    a.member716 = 8;
+    a.member717 = 8;
+    a.member718 = 512;
+    a.member719 = 2;
+    a.member720 = 7 + a.member719;
+    a.member721 = 200;
+    a.member722 = 200;
+    a.member723 = a.member721 * a.member716;
+    a.member724 = a.member722 * a.member716;
+    a.member725 = a.member723 * a.member717;
+    a.member726 = a.member724 * a.member717;
+    a.member727 = a.member725 * a.member718;
+    a.member728 = a.member726 * a.member718;
+    a.member729 = a.member716 * a.member717;
+    a.member730 = a.member729 * a.member718;
+    a.member731 = a.member717 * a.member718;
+    a.member732 = a.member718 - 1;
+    a.member733 = a.member718 / 2;
+    return a;
+}();

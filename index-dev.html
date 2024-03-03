@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html xmlns:ie>
+<head>
+    <title>RuneScape - The Number 1 Free Multiplayer Game</title>
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="description"
+          content="Play RuneScape, the world's most popular free MMORPG. Start your adventure, complete quests and win enormous treasures in a 3D world of magic and monsters.">
+    <link href="css/fonts-51.css"
+          rel="stylesheet">
+    <style>
+        html,
+        body,
+        #content,
+        table {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            display: block;
+        }
+
+        body {
+            font-size: 0;
+            background: black;
+            text-align: center;
+            font-family: MuseoSans500, Arial, Times New Roman, serif;
+        }
+
+        #content {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        a img {
+            border: none;
+        }
+
+        .hoverImg {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            font-weight: normal;
+        }
+
+        .hoverImg img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200%;
+            height: 100%;
+        }
+
+        .hoverImg:hover img {
+            left: -100%;
+            text-indent: 100%;
+        }
+
+        .hoverImg:hover {
+            font-weight: bold;
+        }
+
+        #top,
+        #bottom {
+            width: 100%;
+            background-repeat: repeat-x;
+            background-color: black;
+        }
+
+        #top {
+            position: relative;
+            z-index: 1;
+        }
+
+        .no-advert #top {
+            height: 0;
+        }
+
+        .advertTopBar {
+            width: 100%;
+            min-width: 912px;
+            margin: auto;
+            height: 113px;
+            text-align: center;
+            background: url(img/rs3/background-main.jpg) repeat;
+            padding-bottom: 5px;
+            position: relative;
+        }
+
+        .advertTopBar:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 10px;
+            bottom: 0;
+            left: 0;
+            background: url(img/rs3/background-bar-repeat.png) repeat-x;
+        }
+
+        #advert-modal .advertTopBar {
+            height: 70px;
+        }
+
+        .advertLogo {
+            margin: auto;
+            width: 164px;
+            height: 75px;
+            background: url(img/rs3/sprite_main.png?12) no-repeat 0 -754px;
+        }
+
+        #advert iframe {
+            margin: 2px 2px 0 88px;
+            width: 728px;
+            height: 90px;
+            border: 1px solid #326372;
+        }
+
+
+        #advert .advertText {
+            display: inline-block;
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            -webkit-transform-origin: 3% 46%;
+            -moz-transform-origin: 3% 46%;
+            -ms-transform-origin: 3% 46%;
+            -o-transform-origin: 3% 46%;
+            transform-origin: 3% 46%;
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+        }
+
+        #advert .removeAdText {
+            width: 726px;
+            height: 18px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+            background: url(img/rs3/members_icon_small.png) no-repeat 520px 0px;
+            text-align: right;
+            line-height: 1.1em;
+        }
+
+        #advert p {
+            color: #326372;
+            font-size: 0.8em;
+        }
+
+        #advert p a {
+            color: #e1bb34;
+            text-decoration: underline;
+        }
+
+        #advert p a:hover {
+            color: #fff2c5;
+        }
+
+        #advert div {
+            margin: 0 auto;
+            padding-top: 18px;
+        }
+
+        #applet_cell {
+            width: 5000px;
+            height: 100%;
+        }
+
+        #applet {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        #game, #client {
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .nojava {
+            color: white;
+            text-align: left;
+            width: 765px;
+            font-size: 15px;
+            padding-top: 10px;
+            margin: auto;
+        }
+
+        .nojava h1 {
+            color: #f3b13f;
+            font-family: KingthingsPetrockRegular, Times New Roman, serif;
+        }
+
+        .nojava p {
+            color: #b8b8b8;
+            font-family: MuseoSans500, Arial, Times New Roman, serif;
+        }
+
+        .nojava a {
+            color: #DF6E0E;
+            text-decoration: none;
+        }
+
+        .nojava a:hover {
+            text-decoration: underline;
+        }
+
+        #bottom {
+            float: left;
+            height: 120px;
+            background-position: center top;
+            background-image: url(img/game/footer_bg.jpg);
+        }
+
+        #bottom div {
+            margin: 66px auto 0;
+            width: 750px;
+            overflow: hidden;
+        }
+
+        #bottom div span {
+            float: left;
+        }
+
+        #bottom div #terms {
+            font-family: MuseoSans500, Arial, Times New Roman, serif;
+        }
+
+        #bottom div #jagex_link {
+            margin-right: 37px;
+            float: left;
+        }
+
+        #bottom div ul {
+            float: right;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #bottom div li {
+            float: left;
+            margin-left: 10px;
+        }
+
+        #bottom div span {
+            display: block;
+            text-align: left;
+            width: 500px;
+            font-size: 10px;
+            color: #b6b6b6;
+        }
+
+        #bottom div span a {
+            color: #df6e0e;
+            text-decoration: none;
+        }
+
+        #bottom div span a:hover {
+            text-decoration: underline;
+        }
+
+        .members #top,
+        .no-advert #top {
+            display: none;
+        }
+
+        .resize #bottom {
+            display: none;
+        }
+
+        #advert-modal {
+            background: #000;
+            position: relative;
+            left: -99999px;
+            z-index: 11;
+            width: 100%;
+        }
+
+        .corner {
+            position: absolute;
+            background-image: url(img/game/videoads/corners.png);
+            width: 230px;
+            height: 190px;
+            display: block;
+            z-index: 12;
+        }
+
+        .topLeft {
+            left: -57px;
+            top: -23px;
+            background-position: 0 0;
+        }
+
+        .topRight {
+            right: -57px;
+            top: -23px;
+            background-position: -230px 0;
+        }
+
+        .bottomLeft {
+            left: -57px;
+            bottom: -25px;
+            background-position: 0 -190px;
+        }
+
+        .bottomRight {
+            right: -57px;
+            bottom: -25px;
+            background-position: -230px -190px;
+        }
+
+        .border {
+            width: 100%;
+            height: 95px;
+            display: block;
+            background: url(img/rs3/background-main.jpg) repeat;
+            position: absolute;
+            top: -91px;
+            left: 0;
+            z-index: 11;
+        }
+
+        #advert-player {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: relative;
+            z-index: 13;
+        }
+
+        #advert-player_wrapper {
+            z-index: 13;
+        }
+
+        .advertBorderFrame {
+            margin: 30px auto 5px;
+            border-width: 18px;
+            -moz-border-image: url(img/rs3/brick-border.png) 18 18 18 18 repeat;
+            -webkit-border-image: url(img/rs3/brick-border.png) 18 18 18 18 repeat;
+            border-image: url(img/rs3/brick-border.png) 18 18 18 18 repeat;
+            padding: 20px;
+            width: 640px;
+            position: relative;
+        }
+
+        .videoAdMembers {
+            margin: auto;
+            width: 675px;
+            text-align: right;
+            font-size: 1.5em;
+            padding-right: 30px;
+            background: url(img/rs3/members_icon_small.png) no-repeat right center;
+        }
+
+        iframe#advert-iframe {
+            position: absolute;
+            left: -99999px;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            border: none;
+        }
+
+        div#advert-modal a, div#advert-modal a:link, div#advert-modal a:visited, div#advert-modal a:focus, div#advert-modal a:active {
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .qm {
+            bottom: 3px;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            font: bold 12px/16px Arial, Helvetica, FreeSans, sans-serif;
+            height: 16px;
+            position: absolute;
+            right: 10px;
+            text-align: center;
+            text-decoration: none;
+            width: 16px;
+            z-index: 15;
+        }
+
+        .qm:hover {
+            color: #eee;
+        }
+
+        #sb-close-rs {
+            position: absolute;
+            width: 29px;
+            height: 33px;
+            cursor: pointer;
+            background: url(img/game/altCloseButton.png) left top;
+        }
+
+        #sb-close-rs:hover {
+            background-position: right top;
+        }
+
+        #noflash {
+            position: absolute;
+            top: 145px;
+            left: 170px;
+            width: 320px;
+            z-index: 14;
+            display: none;
+        }
+
+        #noflash p {
+            font: bold 12px/25px Arial, Helvetica, FreeSans, sans-serif;
+            color: #fff;
+        }
+
+        #furtherInfo {
+            color: white;
+            height: 20px;
+            position: absolute;
+            z-index: 12;
+            font-size: 12px;
+            width: 655px;
+            left: 0;
+        }
+
+        #thisIsAdvert {
+            float: left;
+            margin: 2px 0 0 11px;
+        }
+
+        #countdownp {
+            float: right;
+            margin: 2px 25px 0 0;
+            display: none;
+        }
+
+        #loadingMessage {
+            color: white;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 40px;
+            font-size: 15px;
+            z-index: 10;
+        }
+
+        .popupBlockMessageContainer {
+            z-index: 10000;
+            width: 100%;
+            background-color: rgb(252, 240, 173);
+            border-bottom: 2px solid rgb(224, 214, 154);
+            margin: 0;
+            padding: 0;
+            min-height: 25px;
+            position: fixed;
+            top: 0;
+            display: none;
+        }
+
+        .popupBlockMessageContainerWrapper {
+            display: table;
+            width: 100%;
+        }
+
+        .popupBlockMessageContainer p {
+            font-size: 14px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: MuseoSans500, Arial, Times New Roman, serif;
+            line-height: 24px;
+            margin: 0;
+            margin-right: 15px;
+            margin-left: 15px;
+            padding: 0;
+            margin-top: 7px;
+            margin-bottom: 5px;
+        }
+
+        .popupBlockMessageContainer a {
+            color: #00f;
+            position: relative;
+        }
+
+        .popupBlockMessageContainerXSpace {
+            background-color: rgb(224, 214, 154);
+            cursor: pointer;
+            color: #BAB280;
+            font-size: 14px;
+            font-weight: bold;
+            display: table-cell;
+            top: 0px;
+            right: 0px;
+            width: 40px;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            user-select: none;
+            vertical-align: middle;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .cssHideAdvert {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript"
+            src="img/game/videoads/jwplayer.js"></script>
+    <script type="text/javascript">
+        // Google DFP adverts
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function () {
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+                'https://www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+        googletag.cmd.push(function () {
+            googletag.defineSlot('/7108/World_Hop_Video', [728, 90], 'advert').addService(googletag.companionAds());
+            googletag.enableServices();
+        });
+    </script>
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write("<script src='https://https://www.jagex.com/a=13/js/jquery/jquery_1_7.js'>\x3C/script>")</script>
+    <ie:clientcaps id="oClientCaps"></ie:clientcaps>
+    <script>
+        // document.domain = 'runescape.com';
+        window.onload = function () {
+            var a = document.getElementsByTagName("a");
+            var exitFunction = function () {
+                if ((this.target == "" || this.target == "_parent" || this.target == "_top") && !this.onclick) {
+                    return confirm("'Please make sure you have logged out of the game before navigating away.'");
+                }
+            }
+            for (var i = 0; i < a.length; i++) {
+                a[i].onclick = exitFunction;
+            }
+        }
+    </script>
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="https://www.runescape.com/a=13/css/rs3/font_fallback-0.css" type="text/css"
+          media="all"/><![endif]-->
+    <!--[if gt IE 8]><!--><!-- x -->
+    <link rel="stylesheet"
+          href="css/rs3/font_base64-0.css"
+          type="text/css" media="all"/> <!--<![endif]-->
+    <link href="css/rs3/styles-0.css"
+          rel="stylesheet"/>
+    <style type="text/css">
+        .fullscreen {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+
+        #localStoragePrompt {
+            display: none;
+        }
+    </style>
+</head>
+<script>
+    var track = new Image(), c = document.cookie.split('; '), cookies = {}, sameDaySet;
+    for (i = c.length - 1; i >= 0; i--) {
+        C = c[i].split('=');
+        cookies[C[0]] = C[1];
+    }
+    $(function () {
+        if (cookies['sameday']) {
+            $('body').addClass('members');
+            sameDaySet = 1;
+        }
+        ;
+    });
+</script>
+<body class=" resize ">
+<div id="content">
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td colspan="2">
+
+                <div id="top">
+
+                    <div id="advert" class="advertTopBar">
+                        <iframe name="tbi" id="advertIframe"
+                                src="advert/advert.ws?placement=206"
+                                allowtransparency="true" width="730" height="100" scrolling="no"
+                                frameborder="0"></iframe>
+                        <p class="advertText">Advertisement</p>
+                        <p class="removeAdText">Become a member to <a target="_blank"
+                                                                      href="members_benefits?jptg=remove_ads&amp;jptv=game_leaderboard">hide
+                            ads</a></p>
+                        <script type="text/javascript">
+                            tb_url = "advert/advert.ws?placement=206";
+                        </script>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="760" height="0" colspan="2"><img
+                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="0"
+                    width="760"></td>
+        </tr>
+        <tr>
+            <td width="0" height="600"><img
+                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="600"
+                    width="0"></td>
+            <td id="applet_cell">
+                <div id="applet">
+                    <script type="text/javascript">
+
+
+                        window.clientParametersObfuscated = {
+
+
+                            35: "localhost",// content.runescape.com
+
+
+                            51: "false",
+
+
+                            38: "81",// 80
+
+
+                            43: "10",
+
+
+                            47: "443",
+
+
+                            15: "0",
+
+
+                            42: "0",
+
+
+                            45: "443",
+
+
+                            22: "z33xEbN0MeaHMY2ka7SLB105r6k9PNOq",
+
+
+                            20: "false",
+
+
+                            7: "localhost",// .runescape.com
+
+
+                            44: "halign=true|valign=true|image=rs_logo.gif,0,-43|rotatingimage=rs3_loading_spinner.gif,0,47,9.6|progress=true,Verdana,13,0xFFFFFF,0,51",
+
+
+                            27: "false",
+
+
+                            18: "localhost",// lobby33.runescape.com
+
+
+                            37: "-732610083",
+
+
+                            48: "undefined",
+
+
+                            24: "13",
+
+
+                            12: "wwGlrZHF5gKN6D3mDdihco3oPeYN2KFybL9hUUFqOvk",
+
+
+                            11: "443",
+
+
+                            3: "0",
+
+
+                            9: "81",// 80
+
+
+                            17: "1792810631",
+
+
+                            2: "0",
+
+
+                            8: "DBXPZaBPotHnzeZldoHBT7FTUcwL-M-nAAAAAAAA",
+
+
+                            25: "5FF7456797AA4E3F32EDA000AEF7F31CCA10104438CFCBC4B85E6DFB7BAD6C5BFA1896146F4A55A2",
+
+
+                            10: "39960",
+
+
+                            13: "0",
+
+
+                            6: "false",
+
+
+                            52: "false",
+
+
+                            40: "",
+
+
+                            33: "-1642713755",
+
+
+                            31: "false",
+
+
+                            49: "81",// 80
+
+
+                            50: "localhost",// content.runescape.com
+
+
+                            23: "81", // 80
+
+
+                            39: "http://localhost/client/html5", // https://web.archive.org/web/20151105224343/https://world10.runescape.com/a=13/html5/client
+
+
+                            28: "http://localhost", // https://web.archive.org/web/20151105224343/https://world10.runescape.com/a=13",
+
+
+                            5: "191",
+
+
+                            19: "0",
+
+
+                            41: "1200",
+
+
+                            32: "0",
+
+
+                            36: "1132",
+
+
+                            4: "false",
+
+
+                            30: "0",
+
+
+                            46: "false",
+
+
+                            14: "",
+
+
+                            16: "false",
+
+
+                            29: "http://localhost/client/html5/clientstats.html?data=",
+
+
+                            1: "443",
+
+                            keyboardLayout: "qwerty"
+                        };
+
+                        if (!window.ArrayBuffer) {
+                            window.ArrayBuffer
+                                = window.ArrayBufferView
+                                = window.Int8Array
+                                = window.Uint8Array
+                                = window.Uint8ClampedArray
+                                = window.Int16Array
+                                = window.Uint16Array
+                                = window.Int32Array
+                                = window.Uint32Array
+                                = window.Float32Array
+                                = window.Float64Array
+                                = window.DataView
+                                = function () {
+                            };
+                        }
+
+                        if (!window.atob) window.atob = function () {
+                            return "";
+                        };
+                    </script>
+                    <img id="loadingImage"
+                         src="img/game/splash6.gif"
+                         alt="RuneScape is loading..."
+                         style="position:absolute;top:50%;margin-top:-88px;left:50%;margin-left:-148px;">
+                    <div class="fullscreen" id="canvasContainer" style="display:none;">
+                        <canvas id="client" style="border:none;" width="512" height="512"></canvas>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+
+                <div id="localStoragePrompt" class="gameFlowOverlay dataStorage">
+                    <div class="wrapper">
+                        <h1><span class="h1Smaller">Accept Data Storage for the</span> Ultimate Experience</h1>
+                        <section class="leftColumn">
+                            <p>
+                                Click <strong>OK</strong> above to save RuneScape data to your hard drive.
+                            </p>
+                            <p>
+                                This will improve loading times and make for smoother gameplay.
+                            </p>
+                        </section>
+                        <div class="divider"></div>
+                        <figure>
+                            <img src="img/rs3/game/chromeBarScreenshot.png"
+                                 alt="Chrome Local Storage Prompt" title="Please accept local storage">
+                        </figure>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    var localStorageEnabled = false,
+                        $overlay = $("#localStoragePrompt"),
+                        firstTimePrompt = false;
+
+                    function hideOverlay() {
+                        $overlay.hide();
+                        console.log('hiding overlay');
+                    }
+
+                    function postMessage(messageText) {
+                        // var message = {
+                        //         type: "TRACKING",
+                        //         text: messageText
+                        //     },
+                        //     messageString = '';
+                        // if (window.JSON) {
+                        //     messageString = JSON.stringify(message);
+                        // }
+                        // window.parent.postMessage(messageString, '*');
+                    }
+
+                    function showOverlay() {
+                        if (!localStorageEnabled) {
+                            $overlay.fadeIn();
+                            firstTimePrompt = true;
+                            postMessage('opened');
+                        }
+                    }
+
+                    function showOverlayAfterDelay() {
+                        setTimeout(showOverlay, 1200);
+                    }
+
+                    $overlay.on('click', hideOverlay);
+                    var request = function () {
+                        showOverlayAfterDelay();
+                    };
+                    var reply = function (reply) {
+                        console.log('about to call hide overlay');
+                        hideOverlay();
+                        if (parseInt(reply) === 0) {
+                            localStorageEnabled = true;
+                        }
+                        if (firstTimePrompt) {
+                            postMessage('reply-' + reply);
+                        }
+                    };
+
+                    var id = setInterval(function () {
+                        if (window.setLocalStorageCallbacks) {
+                            window.setLocalStorageCallbacks(request, reply);
+                            clearInterval(id);
+                        }
+                    }, 100);
+                </script>
+            </td>
+        </tr>
+        <script src="dist/Bootstrap.js"></script>
+    </table>
+</div>
+<script src="js/rs3/modernizr_2_8_3_min-8.js"></script>
+<script type="text/javascript">
+    var tools = {
+        addClass: function (obj, clas) {
+            var new_class = clas + ' ';
+            if (obj.className.indexOf(clas) == '-1') obj.className += new_class;
+        },
+        removeClass: function (obj, clas) {
+            var new_class = clas + ' ';
+            if (obj.className.indexOf(clas) != '-1') obj.className = obj.className.replace(new_class, '');
+        }
+    };
+    var memory = {
+        loggedinstate: false,
+        app: document.getElementById('applet'),
+        advert: document.getElementById('advertIframe'),
+        browser: {
+            agent: navigator.userAgent.toLowerCase(),
+            platform: navigator.platform.toLowerCase()
+        },
+        adv_refresh: 0,
+        adv_refresh_limit: 60000
+    };
+
+    function oul() {
+        if (memory.loggedinstate) {
+            return "'Please make sure you have logged out of the game before navigating away.'";
+        }
+    }
+
+    window.onbeforeunload = oul;
+
+    function loggedout() {
+        memory.loggedinstate = false;
+    }
+
+    window.scroll(0, 0);
+
+    if (memory.browser.platform.indexOf('mac') != -1 && memory.browser.agent.indexOf('firefox') > -1) {
+        document.getElementById('upgrade').onclick = upgradejs;
+        document.getElementById('jagex').onclick = jagexjs;
+    }
+
+    function upgradejs(e) {
+        return openjs(document.getElementById('upgrade').href);
+    }
+
+    function jagexjs(e) {
+        return openjs(document.getElementById('jagex').href);
+    }
+
+    function openjs(href) {
+        return openjs_size(href, 825, 500);
+    }
+
+    function openjs_size(href, width, height) {
+        window.focus();
+        var win = window.open(href, '_blank', 'width=' + width + ',height=' + height + ',scrollbars=yes');
+        if (win) win.focus();
+        return false;
+    }
+
+    function zap() {
+        try {
+            $("body").addClass("members");
+            if (memory.advert) memory.advert.src = 'http://localhost/client/html5/blank.html';
+        } catch (err) {
+        }
+    }
+
+    function unzap() {
+
+        if (!cookies['sameday']) {
+            try {
+                tools.removeClass(document.body, 'members');
+
+                if (memory.advert) {
+                    memory.advert.src = tb_url;
+                }
+            } catch (err) {
+            }
+            removeVideoAdvert();
+        }
+    }
+
+    function removeCSSHide() {
+        insertBannerAd();
+        $("#advert").removeClass("cssHideAdvert");
+    }
+
+    function addCSSHide() {
+        removeBannerAd();
+        $("#advert").addClass("cssHideAdvert");
+    }
+
+    function _1() {
+        memory.loggedinstate = true;
+    }
+
+    function _2(width, height, windowMode, maxRes) {
+        if (windowMode != 1) {
+            $("body").addClass("resize");
+        } else {
+            tools.removeClass(document.body, 'resize');
+        }
+    }
+
+    function _3() {
+        if (countDownTimer) {
+            clearTimeout(countDownTimer);
+        }
+        if (document.getElementById("countdownp")) {
+            document.getElementById("countdownp").innerHTML = '<a href="#" id="worldHopSkip">Continue to game</a>';
+            $('#worldHopSkip').click(function () {
+                removeVideoAdvert();
+                removeCSSHide();
+            });
+        }
+    }
+
+    console.log('video advert play is still firing');
+    var video_advert_play_adNotFound;
+
+    function _4(d, f, t) {
+
+        if (!cookies['sameday']) {
+            video_advert_play_adNotFound = setTimeout(adNotFound, 20000);
+        }
+        try {
+            if (!document.getElementById('advert-iframe')) {
+                var datestamp = new Date(),
+                    timestamp = datestamp.getTime();
+                var tag = "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/7108/Lobby_Video&ciu_szs&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=http://www.runescape.com&correlator=" + timestamp + "&description_url=http://www.runescape.com/game";
+                switch (t) {
+                    case 1:
+
+                        var title = "segment-1";
+                        break;
+                    case 2:
+
+                        var title = "segment-2";
+                        break;
+                    case 3:
+
+                        var title = "segment-3";
+                        break;
+                    case 4:
+
+                        var title = "segment-4";
+                        break;
+                    case 5:
+
+                        var title = "segment-5";
+                        break;
+                    case 6:
+                    default:
+
+                        var tag = "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=%2F7108%2FWorld_Hop_Video&ciu_szs=728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=http://www.runescape.com&correlator=" + timestamp + '%2Fdescription_url%3Dhttp%3A%2F%2Fwww.runescape.com%2Fgame';
+                        var title = "world-hop";
+                        break;
+                }
+                playVideoAdvertFromTag(tag, 640, 360, title);
+                if (t > 0 && t < 6) {
+
+                    removeBannerAd();
+                }
+            }
+            return true;
+        } catch (err) {
+            clearTimeout(video_advert_play_adNotFound);
+            console.log('Error:' + err);
+            removeVideoAdvert();
+            removeCSSHide();
+            return false;
+        }
+    }
+
+    function _5() {
+        var ifrm = document.getElementById("notify");
+        if (ifrm) ifrm.src = "http://localhost/client/html5/applet_created.html";
+        window.google_conversion_id = 1031096559;
+        window.google_conversion_language = "en";
+        window.google_conversion_format = "3";
+        window.google_conversion_color = "ffffff";
+        window.google_conversion_label = "LBGlCLm0lQcQ75HV6wM";
+        window.google_conversion_value = 0;
+        var oldDocWrite = document.write;
+        document.write = function (node) {
+            $("body").append(node)
+        }
+        $.getScript("https://www.googleadservices.com/pagead/conversion.js", function () {
+            setTimeout(function () {
+                document.write = oldDocWrite
+            }, 100)
+        })
+
+
+    }
+
+    function _6() {
+        try {
+            pageTracker._trackPageview("http://localhost/client/html5/applet_start.html")
+        } catch (x) {
+        }
+    }
+
+    function _7(url, title) {
+        $('body').prepend("<div class='popupBlockMessageContainer'><div class='popupBlockMessageContainerWrapper'><p>RuneScape has detected that the popup you tried to access was prevented from opening. Please check your browser allows popups and any 3rd party popup blockers you have installed before trying again. <a href='" + url + "'>Click here to open your page.</a></p><div class='popupBlockMessageContainerXSpace'>X</div></div></div>");
+        $('.popupBlockMessageContainer').fadeIn(250);
+        $('.popupBlockMessageContainerXSpace').on('click', function () {
+            $('.popupBlockMessageContainer').hide();
+        });
+    }
+
+    function _8(href) {
+        return openjs_size(href, 630, 700);
+    }
+
+    function _9() {
+    }
+
+    function _10() {
+        removeVideoAdvert();
+    }
+
+    function _11() {
+        return !advertPlaying;
+    }
+
+    $(window).on("resize", function () {
+        var $billingPopup = $("#billing-popup");
+        if ($billingPopup.length) {
+            var
+                $applet = $('#applet'),
+                applet = {width: $applet.width(), height: $applet.height()},
+                position = $applet.position()
+            ;
+            $billingPopup.css({
+                top: position.top,
+                left: position.left,
+                width: applet.width,
+                height: applet.height
+            });
+            $('#sb-close-rs').css({
+                top: position.top + (applet.height / 2) - 291,
+                left: position.left + (applet.width / 2) + 395
+            });
+        }
+    });
+
+    function _12(url) {
+        var closeButton = true;
+        if (url.indexOf("mod=mtxn_rs_shop") >= 0) return popupMtxnWindow(url);
+        if (url.indexOf("mod=www") >= 0) {
+            closeButton = false;
+        }
+        return popupBillingWindow(url, closeButton, false);
+    }
+
+    function closeBillingWindow() {
+        $("#billing-popup").remove();
+        $("#billing-blackout").remove();
+        $("#sb-close-rs").remove();
+        $('applet').focus();
+        if (self.unshim) self.unshim();
+    }
+
+    function popupBillingWindow(url, closeButton, blackOut) {
+        closeBillingWindow();
+
+
+        var href = 'http://localhost/html5/client/';
+
+
+        var cut = Math.min(Math.max(href.length, href.indexOf("?")), Math.max(href.length, href.indexOf("#")));
+        href = href.substring(0, cut);
+        href = href.substring(0, href.lastIndexOf("/") + 1) + "unshim.ws";
+
+        if (url.indexOf("?") >= 0) {
+            url += '&unshim=' + encodeURIComponent(href);
+        } else {
+            url += '/unshim.ws?unshim=' + encodeURIComponent(href);
+        }
+        $("<iframe/>")
+            .attr({
+                src: url,
+                id: "billing-popup",
+                frameBorder: "0",
+                scrolling: "no"
+            })
+            .css({
+                position: 'absolute',
+                zIndex: 100
+            })
+            .appendTo('body')
+        ;
+        if (closeButton) {
+            $("<a/>")
+                .attr({
+                    id: "sb-close-rs"
+                })
+                .css({
+                    position: "absolute",
+                    zIndex: 200
+                })
+                .click(function () {
+                    closeBillingWindow();
+                })
+                .appendTo('body')
+            ;
+        }
+        if (blackOut) {
+            $("<iframe/>")
+                .attr({
+                    src: 'http:://localhost/html5/client/blank.html',
+                    id: "billing-blackout",
+                    frameBorder: "0",
+                    scrolling: "no"
+                })
+                .css({
+                    position: 'absolute',
+                    zIndex: 99,
+                    top: 0,
+                    left: 0,
+                    height: document.body.clientHeight + 'px',
+                    width: document.body.clientWidth + 'px'
+                })
+                .appendTo('body')
+            ;
+        }
+        $(window).resize();
+        return false;
+    }
+
+    function popupMtxnWindow(url) {
+        closeBillingWindow();
+//
+
+
+        var href = 'http://localhost/client/html5/';
+
+        //TODO: [CS] The following line will only ever make cut=href.length.  Someone who understands the fallout should probably fix it :)
+        var cut = Math.min(Math.max(href.length, href.indexOf("?")), Math.max(href.length, href.indexOf("#")));
+        href = href.substring(0, cut);
+        href = href.substring(0, href.lastIndexOf("/") + 1) + "unshim.ws";
+//
+        var hashIndex = url.indexOf("#");
+        var hash = "";
+        if (hashIndex >= 0) {
+            hash = url.substring(hashIndex, url.length);
+            url = url.substring(0, hashIndex);
+        }
+//
+        var startDest = url.indexOf("&dest=", url.indexOf("?")) + 6;
+        var endDest = url.indexOf("&", startDest);
+        var urlPrefix = url.substring(0, startDest);
+        var urlSuffix = "";
+        var urlDest = "";
+        if (endDest >= 0) {
+            urlSuffix = url.substring(endDest);
+            urlDest = url.substring(startDest, endDest);
+        } else {
+            urlDest = url.substring(startDest);
+        }
+//
+        urlDest = decodeURIComponent(urlDest);
+        var parts = [urlDest];
+        if (urlDest.indexOf("?") >= 0) {
+            parts.push("&unshim=", encodeURIComponent(href));
+        } else {
+            parts.push("?unshim=", encodeURIComponent(href));
+        }
+        urlDest = encodeURIComponent(parts.join(""));
+        url = [urlPrefix, urlDest, urlSuffix, hash].join("");
+//
+        var resize = function () {
+            var a = $("#applet");
+            shopDiv.css({top: a.position().top, left: a.position().left, height: "830px", width: a.width() + "px"});
+        };
+        var shopDiv = $("<div/>").css({
+            "font-size": "10pt",
+            "color": "#FFF",
+            top: 0,
+            left: 0,
+            height: "100%",
+            width: "100%",
+            position: "absolute",
+            zIndex: 100,
+            background: "#000 url('img/global/page/loadingAnimation.gif') no-repeat scroll center"
+        }).appendTo("body");
+        var shopFrame = $("<iframe/>").attr({src: url, frameBorder: "0", scrolling: "no"}).css({
+            top: 0,
+            left: 0,
+            height: "100%",
+            width: "100%",
+            position: "absolute",
+            zIndex: 100,
+            display: "none"
+        }).appendTo(shopDiv);
+        var triggered = false;
+        shopFrame.on("load", function () {
+            if (!triggered) {
+                triggered = true;
+                shopFrame.show();
+            }
+        });
+        window.setTimeout(function () {
+            if (!triggered) {
+                triggered = true;
+                shopFrame.remove();
+                shopDiv.append("<h2>Store Unavailable</h2><p> The store is temporarily unavailable. Click Continue to return to RuneScape.</p><p><a href=\"#\">Continue</a></p>");
+                shopDiv.find("a").click(function (evt) {
+                    evt.preventDefault();
+                    evt.stopPropagation();
+                    self.unshim();
+                });
+            }
+        }, 25000);
+//
+        self.unshim = function () {
+            $(window).off("resize", resize);
+            shopFrame.off("load");
+            shopDiv.find("a").off("click");
+            shopDiv.remove();
+            $("applet").focus();
+        };
+//
+        $(window).on("resize", resize);
+        $(window).resize();
+        return false;
+    }
+
+    function _13() {
+        var current_date = new Date(),
+            current_time = current_date.getTime();
+        if (current_time - memory.adv_refresh >= memory.adv_refresh_limit) {
+            memory.adv_refresh = current_time;
+            try {
+                if (document.getElementById('/7108/World_Hop_Video_0_iframe')) {
+                    memory.advert = document.getElementById('/7108/World_Hop_Video_0_iframe');
+                    memory.advert.src = tb_url;
+                    memory.advert.contentWindow.location = tb_url;
+                } else {
+                    memory.advert.contentWindow.location.reload();
+                }
+            } catch (x) {
+            }
+        }
+    }
+
+
+</script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'googleanalytics');
+    googleanalytics('create', 'UA-2058817-15', 'auto');
+    googleanalytics('send', 'pageview');
+</script>
+<script type="text/javascript">
+    var advertPlaying = false;
+    var bannerCopy = null;
+    var noAdResponseAbort = true;
+    var videoCounter = 35;
+    var currCounter = 35;
+    var countDownTimer = null;
+    var startTimer = null;
+    var hasFlash = true;
+    var playerAndAdReady = 0;
+    var currTag;
+
+    function playVideoAdvertFromTag(advertTag, advertWidth, advertHeight, reportTitle) {
+
+        if (!cookies['sameday']) {
+            console.log('this code is firing and shouldnt be');
+
+            advertPlaying = true;
+            if (!advertWidth) advertWidth = 640;
+            if (!advertHeight) advertHeight = 360;
+            if (!reportTitle) reportTitle = 'world-hop';
+            currTag = reportTitle;
+            var bodyElement = document.getElementsByTagName('body')[0];
+
+            var playerIframe = document.createElement('iframe');
+            playerIframe.setAttribute('id', 'advert-iframe');
+            playerIframe.setAttribute('frameborder', 0);
+            playerIframe.setAttribute('src', 'http://localhost/client/html5/blank.html');
+            playerIframe.style.height = document.body.clientHeight + 'px';
+            playerIframe.style.width = document.body.clientWidth + 'px';
+            bodyElement.appendChild(playerIframe);
+
+            var playerDiv = document.createElement('div');
+            playerDiv.setAttribute('id', 'advert-modal');
+
+            playerDiv.innerHTML = "<div class=\"advertTopBar\"><div class=\"advertLogo\"></div></div><div class=\"advertBorderFrame\"><div id=\"advert-player\"></div><div id=\"furtherInfo\"><p id=\"thisIsAdvert\">Advertisement</p><p id=\"countdownp\">Loading advert</p></div><a title=\"Click here for more information about this advert\" class=\"qm\" onclick=\"reportVideoAdvert('" + reportTitle + "')\">?</a><div id=\"noflash\"><p>Problem viewing this advert? Try enabling the Flash plugin in your browser.</p></div></div><p class=\"videoAdMembers\">RuneScape members don't see this ad</p>";
+            bodyElement.appendChild(playerDiv);
+
+            jwplayer('advert-player').setup({
+                autostart: true,
+                canFireAPICalls: true,
+                playerready: function () {
+                    playerAndAdReady++;
+                    moveInIFrame();
+                },
+
+                file: "img/main/downloads_and_media/video/blank_flv.flv",
+                plugins: {
+                    'img/game/videoads/googima.js': {
+                        ad: {
+                            my_ad: {
+                                tag: advertTag,
+                                type: 'video',
+                                position: 'pre'
+                            }
+                        },
+                        allowadskip: false,
+                        usestaticmessage: true,
+
+
+                        admessagestatic: "Your game will continue after this advertisement",
+
+
+                        click_tracking: true,
+                        allowplayercontrols: true,
+                        allowvolumeslider: true,
+                        events: {
+                            onAdStart: function () {
+                                playerAndAdReady++;
+                                moveInIFrame();
+                                noAdResponseAbort = false;
+
+
+                                clearTimeout(video_advert_play_adNotFound);
+                                $('#loadingMessage').remove();
+                            },
+                            onAdComplete: function () {
+                                removeVideoAdvert();
+                                removeCSSHide();
+                                clearTimeout(video_advert_play_adNotFound);
+                            },
+                            onAdsComplete: function () {
+                                removeVideoAdvert();
+                                removeCSSHide();
+                                clearTimeout(video_advert_play_adNotFound);
+                            },
+                            onAdError: function () {
+                                removeVideoAdvert();
+                                removeCSSHide();
+                                clearTimeout(video_advert_play_adNotFound);
+                            },
+                            onAdNotAvailable: function () {
+                                removeVideoAdvert();
+                                removeCSSHide();
+                                clearTimeout(video_advert_play_adNotFound);
+                            }
+                        },
+                        scaled_ads: false
+                    }
+                },
+                width: advertWidth,
+                height: advertHeight,
+                modes: [
+                    {
+                        type: "flash",
+                        src: "img/game/videoads/player.swf"
+                    }
+                ]
+            });
+            if (jwplayer.utils.hasFlash() === false) {
+                clearTimeout(video_advert_play_adNotFound);
+                handleNoFlash();
+            }
+            return true;
+        } else {
+            console.log('this code isnt the problem');
+        }
+    }
+
+    var previous = window.onresize;
+    window.onresize = function () {
+        if (previous) previous();
+        if (document.getElementById('advert-iframe') && advertPlaying) {
+            var playerIframe = document.getElementById('advert-iframe');
+            playerIframe.style.height = document.body.clientHeight + 'px';
+            playerIframe.style.width = document.body.clientWidth + 'px';
+        }
+    }
+
+    function removeBannerAd() {
+
+        if (!(bannerCopy && bannerCopy.length)) {
+            bannerCopy = $("#top #advert").detach();
+        }
+        $("body").addClass("no-advert");
+    }
+
+    function insertBannerAd() {
+        if ($("#advert").length === 0) {
+            $("#top").append(bannerCopy);
+        }
+        $("body").removeClass("no-advert");
+        $("body").removeClass("members");
+        if (memory.advert) memory.advert.src = tb_url;
+    }
+
+    function handleNoFlash() {
+        hasFlash = false;
+        var advertPlayer = document.getElementById('advert-player');
+        advertPlayer.style.width = "640px";
+        advertPlayer.style.height = "360px";
+        $('#noflash').css('display', 'block');
+        playerAndAdReady = 2;
+        moveInIFrame();
+        $('#countdownp').css('display', 'block');
+    }
+
+    function adVideoStart() {
+        console.log('adVideoStart fired');
+        var advertPlayer = document.getElementById('advert-player');
+        var advertModal = document.getElementById('advert-modal');
+        if (advertModal) {
+            advertModal.style.height = advertPlayer.offsetHeight + 'px';
+            advertModal.style.left = "auto";
+        }
+        var borderTop = document.getElementById('border-top');
+        if (borderTop) {
+            borderTop.style.left = (advertPlayer.offsetWidth / 2) - 256 + 'px';
+        }
+        advertPlaying = true;
+        countDownTimer = setTimeout(videoCountdown, 100);
+        var current_date = new Date();
+        memory.adv_refresh = current_date.getTime();
+        $('#loadingMessage').remove();
+    }
+
+    function moveInIFrame() {
+        console.log('moveInFrame fired');
+        var playerIframe = document.getElementById('advert-iframe');
+        if (playerIframe) {
+            playerIframe.style.left = 0;
+        }
+        if (playerAndAdReady === 2) {
+            adVideoStart();
+        }
+        if ($("#loadingMessage").length === 0) {
+            $("body").append("<div id='loadingMessage'>Video loading...</div>");
+        }
+    }
+
+    function removeVideoAdvert() {
+
+        advertPlaying = false;
+        noAdResponseAbort = true;
+        resetTimer();
+        $('#advert-iframe').remove(); // Remove the iFrame shim
+        $('#advert-modal').fadeOut(1000, function () {
+            $(this).remove();
+            $("#loadingMessage").remove();
+        }); // Fade out the player while playng a blank video, then remove it all in 1s
+    }
+
+    function adNotFound() {
+        if (noAdResponseAbort && hasFlash) {
+            removeVideoAdvert();
+            removeCSSHide();
+        }
+    }
+
+    function reportVideoAdvert(creative) {
+        var newwindow = window.open('http://localhost/client/html5/bannerinfo.html?item=video&creative=' + creative, 'bannerinfo', 'screenX=80,screenY=80,width=400,height=340,toolbar=0,resizable=0');
+        if (newwindow.focus) {
+            newwindow.focus();
+        }
+    }
+
+    function videoCountdown() {
+        if (!startTimer) startTimer = new Date();
+        var actualMillis = new Date() - startTimer;
+        var message = "continue into game - countdown is up";
+        if (!hasFlash) {
+            var message = "continue into game - countdown is up (no flash)";
+        }
+        if (currCounter == 0) {
+            if (document.getElementById("countdownp")) {
+                document.getElementById("countdownp").innerHTML = '<a href="#" id="countDownUp">Continue to game</a>';
+                $("#countDownUp").click(function () {
+                    removeVideoAdvert();
+                    removeCSSHide();
+                });
+            }
+            resetTimer();
+        } else {
+            if (Math.floor(actualMillis / 1000) >= (videoCounter - currCounter)) {
+                if (document.getElementById("countdownp")) document.getElementById("countdownp").innerHTML = 'You will be able to continue into game in 35 seconds'.replace(/35/, currCounter);
+                currCounter--;
+            }
+            countDownTimer = setTimeout(videoCountdown, 100);
+        }
+    }
+
+    function resetTimer() {
+        currCounter = 35;
+        clearTimeout(countDownTimer);
+        startTimer = null;
+        playerAndAdReady = 0;
+        $('#loadingMessage').remove();
+    }
+
+    zap() // TODO(Walied): Hide ads by default
+</script>
+<!--<iframe id="notify"-->
+<!--        src="http://localhost/client/html5/html5game.html?x=,j0,f7700063030718377317,iDBXPZaBPotHnzeZldoHBT7FTUcwL-M-nAAAAAAAA"-->
+<!--        width="0" height="0" style="display: none"></iframe>-->
+</body>
+</html>

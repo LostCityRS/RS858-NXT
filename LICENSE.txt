@@ -1,0 +1,120 @@
+/*!
+     * This software uses a number of 3rd party libraries and
+     * algorithms under various license terms. We are grateful
+     * for the contributions of these 3rd parties and are happy
+     * to include their licenses and acknowledgements below:
+     */
+/*!
+     * General thanks to:
+     *
+     * Webkit/Chromium/Chrome teams and contributors
+     * Mozilla and FireFox teams and contributors
+     * Khronos Group, particularly the WebGL authors and contributors
+     *	- Brandon Jones
+     * 	- Florian Boesch
+     * The W3C, particularly the games working group
+     * Anyone on StackOverflow who has answered any obscure WebGL or HTML5 question :)
+     *
+     * Without their ideas, code or input this project would not have been possible!
+     */
+/*!
+     * require.js deployment system (removed from final builds, but invaluable during development!):
+     *
+     * @license RequireJS 2.0.6 Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.
+     * Available via the MIT or new BSD license.
+     * see: http://github.com/jrburke/requirejs for details
+     */
+/*!
+     * GLMatrix maths library (with modifications):
+     *
+     * Copyright (c) 2011 Brandon Jones
+     *
+     * This software is provided 'as-is', without any express or implied
+     * warranty. In no event will the authors be held liable for any damages
+     * arising from the use of this software.
+     *
+     * Permission is granted to anyone to use this software for any purpose,
+     * including commercial applications, and to alter it and redistribute it
+     * freely, subject to the following restrictions:
+     *
+     * 1. The origin of this software must not be misrepresented; you must not
+     * claim that you wrote the original software. If you use this software
+     * in a product, an acknowledgment in the product documentation would be
+     * appreciated but is not required.
+     *
+     * 2. Altered source versions must be plainly marked as such, and must not
+     * be misrepresented as being the original software.
+     *
+     * 3. This notice may not be removed or altered from any source
+     * distribution.
+     */
+/*!
+     * ZLib decompression library:
+     *
+     * Copyright (c) 2011 Mozilla Foundation
+     *
+     * Contributors: Andreas Gal <gal@mozilla.com>
+     * Chris G Jones <cjones@mozilla.com>
+     * Shaon Barman <shaon.barman@gmail.com>
+     * Vivien Nicolas <21@vingtetun.org>
+     * Justin D'Arcangelo <justindarc@gmail.com>
+     * Yury Delendik
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a
+     * copy of this software and associated documentation files (the "Software"),
+     * to deal in the Software without restriction, including without limitation
+     * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+     * and/or sell copies of the Software, and to permit persons to whom the
+     * Software is furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in
+     * all copies or substantial portions of the Software.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+     * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+     * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+     * DEALINGS IN THE SOFTWARE.
+     */
+/*!
+     * Leemon Baird's BigInt Javascript library (with modifications):
+     *
+     * Big Integer Library v. 5.4
+     * Created 2000, last modified 2009
+     * Leemon Baird
+     * www.leemon.com
+     *
+     * This file is public domain.   You can use it for any purpose without restriction.
+     * I do not guarantee that it is correct, so use it at your own risk.  If you use
+     * it for something interesting, I'd appreciate hearing about it.  If you find
+     * any bugs or make any improvements, I'd appreciate hearing about those too.
+     * It would also be nice if my name and URL were left in the comments.  But none
+     * of that is required.
+     */
+/*!
+     * FXAA algorithm and shader code:
+     *
+     * Based on standard FXAA algorithm by Timothy Lottes at NVIDIA, WebGL GLSL port from
+     * Florian Boesch:
+     * https://github.com/pyalot/webgl-deferred-irradiance-volumes/blob/master/README.md
+     *
+     * MIT Licensed:
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a copy of this
+     * software and associated documentation files (the "Software"), to deal in the Software
+     * without restriction, including without limitation the rights to use, copy, modify,
+     * merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+     * permit persons to whom the Software is furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in all copies
+     * or substantial portions of the Software.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+     * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+     * PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+     * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+     * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+     * OR OTHER DEALINGS IN THE SOFTWARE.
+     */

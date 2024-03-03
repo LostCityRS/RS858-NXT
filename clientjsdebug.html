@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client JS Debug</title>
+    <style>
+        body {
+            background: #999999;
+        }
+
+        #topBar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        #topBar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #topBar a:hover {
+            background-color: #ddd;
+            color: black;
+            cursor: pointer;
+        }
+
+        .ctab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .ctab-content.active {
+            display: block;
+        }
+
+        .status {
+
+        }
+
+        .status:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div>
+    Game Activity: <span id="gameactivity"></span>
+    <br>
+    Builder Activity: <span id="builderactivity"></span>
+    <br>
+    Lobby Activity: <span id="lobbyactivity"></span>
+    <br>
+    World Activity: <span id="worldactivity"></span>
+    <br>
+    Last Centre Build Time: <span id="lastcentrebuildtime"></span>
+    <br>
+    Last Map Build Time: <span id="lastmapbuildtime"></span>
+    <br>
+    JS5 LPS: <span id="js5lps"></span>
+    <br>
+    JS5 Active: <span id="js5active"></span>
+    <br>
+    JS5 Activity: <span id="js5activity"></span>
+    <br>
+    <div id="topBar">
+        <a id="topBarProfilingLink">Profiling</a>
+        <a id="topbarCSErrorsLink">CS Errors</a>
+        <a id="topbarCSProfilingLink">CS Profiling</a>
+        <a id="topbarCSDebugLink">CS Debug</a>
+        <a id="topbarAudioDebugLink">Audio Debug</a>
+        <a id="topbarMiscDebugLink">Misc Debug</a>
+    </div>
+    <div id="tab_profiling" class="ctab-content">
+
+    </div>
+    <div id="tab_cs_errors" class="ctab-content">
+        <table>
+            <tbody id="tab_cs_error_table"></tbody>
+        </table>
+    </div>
+    <div id="tab_cs_profiling" class="ctab-content">
+        <span id="tab_cs_profiling_status" class="status">Status</span>
+        <br>
+        <button id="tab_cs_profiling_recentbutton">Recent</button>
+        <button id="tab_cs_profiling_mostrunbutton">Most Run</button>
+        <button id="tab_cs_profiling_mostcostlybutton">Most Costly</button>
+        <button id="tab_cs_profiling_mostopsbutton">Most Ops</button>
+        <br>
+        <div id="tab_cs_profiling_recentdiv">
+            <table>
+                <tbody id="tab_cs_profiling_recenttable">
+                <tr style='background-color:#555555;color:#FF8000;font-size:medium;'>
+                    <td>Time</td>
+                    <td>Trigger</td>
+                    <td>Execution Time</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab_cs_profiling_mostrundiv">
+            <table>
+                <tbody id="tab_cs_profiling_mostruntable">
+                <tr style='background-color:#555555;color:#FF8000;font-size:medium;'>
+                    <td>Trigger</td>
+                    <td>Trigger starts</td>
+                    <td>Trigger pauses</td>
+                    <td>Trigger finishes</td>
+                    <td>Total time</td>
+                    <td>Average time</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab_cs_profiling_mostcostlydiv">
+            <table>
+                <tbody id="tab_cs_profiling_mostcostlytable">
+                <tr style='background-color:#555555;color:#FF8000;font-size:medium;'>
+                    <td>Trigger</td>
+                    <td>Trigger starts</td>
+                    <td>Trigger pauses</td>
+                    <td>Trigger finishes</td>
+                    <td>Total time</td>
+                    <td>Average time</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab_cs_profiling_mostopsdiv">
+            <table>
+                <tbody id="tab_cs_profiling_mostopstable">
+                <tr style='background-color:#555555;color:#FF8000;font-size:medium;'>
+                    <td>Op Name</td>
+                    <td>Run count</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="tab_cs_debug" class="ctab-content">
+        <span id="tab_cs_debug_status" class="status">Status</span>
+
+    </div>
+    <div id="tab_audio_debug" class="ctab-content">
+        <span id="tab_audio_debug_status" class="status">Status</span>
+        <button id="tab_audio_debug_locations_button"></button>
+        <button id="tab_audio_debug_instances_freeze"></button>
+    </div>
+    <div id="tab_misc_debug" class="ctab-content">
+        <span id="tab_misc_debug_status" class="status">Status</span>
+        <table>
+            <tbody id="tab_misc_debug_table">
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

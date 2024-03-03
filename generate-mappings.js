@@ -69,4 +69,4 @@ for (let scriptName of obfScripts.keys()) {
     generate(intToObfScript.get(scriptName), intToObf.get(scriptName), obfScripts.get(scriptName), namedScripts.get(scriptName))
 }
 
-fs.writeFileSync("mappings.json", JSON.stringify(Object.keys(result).sort(), null, 2), { encoding: "utf8", flag: "w" });
+fs.writeFileSync("mappings.json", JSON.stringify(result, Object.keys(result).sort(), 2), { encoding: "utf8", flag: "w" });

@@ -185,7 +185,7 @@ linkedNames.get("f").set("_bxr", "_gbe") // 90% sure
 linkedNames.get("f").set("_bxs", "_fcc")
 linkedNames.get("f").set("_gpw", "_enk")
 linkedNames.get("f").set("_ero", "_dsd")
-linkedNames.get("f").set("_gpv", "_eis")
+linkedNames.get("f").set("_gpv", "_enj")
 linkedNames.get("f").set("_gpy", "_enm")
 linkedNames.get("f").set("_mme", "_hae")
 linkedNames.get("f").set("_non", "_idy")
@@ -193,6 +193,24 @@ linkedNames.get("f").set("_noq", "_ieb")
 linkedNames.get("f").set("_hnj", "_ffd")
 linkedNames.get("f").set("_rik", "_xdu")
 linkedNames.get("f").set("_ril", "_xdw")
+linkedNames.get("f").set("_mrj", "_hfp")
+linkedNames.get("f").set("_mrl", "_hfv")
+linkedNames.get("f").set("_hzq", "_gbf")
+linkedNames.get("f").set("_nnu", "_ibs")
+linkedNames.get("f").set("_nnw", "_ibt")
+linkedNames.get("f").set("_ccn", "_brd")
+linkedNames.get("f").set("_bxt", "_boh")
+linkedNames.get("f").set("_hzs", "_gbg")
+linkedNames.get("f").set("_nfu", "_hvt");
+linkedNames.get("f").set("_ngb", "_hwc");
+linkedNames.get("f").set("_ngd", "_hwe");
+linkedNames.get("f").set("_cvu", "_dtv");
+linkedNames.get("f").set("_nfy", "_hvz");
+linkedNames.get("f").set("_nga", "_hwb");
+linkedNames.get("f").set("_hnp", "_fqt");
+linkedNames.get("f").set("_nfw", "_hvv");
+linkedNames.get("f").set("_ot", "_nk");
+
 
 // rename to unique names, respecting linkedWorkerNames
 let mappings = new Map()

@@ -31121,6 +31121,26 @@ var dcr = function() {
             v.call(this)
         }
     };
+    J.prototype._jsz = function (N, S) {
+        if (this._pgg === undefined) {
+            return
+        }
+        var Q = false;
+        for (var P = 0; P < this._boj; P++) {
+            var O = this._pgg[P];
+            if (O === N) {
+                var R = S;
+                if (R === undefined) {
+                    R = F
+                }
+                this._pgg[P] = R;
+                Q = true
+            }
+        }
+        if (Q) {
+            v.call(this)
+        }
+    };
     J.prototype._plk = function(O) {
         for (var N = 0; N < this._cab; N++) {
             var M = this._pgc[N];

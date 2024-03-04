@@ -182,16 +182,16 @@ linkedNames.get("f").set("_bxn", "_cvd")
 linkedNames.get("f").set("_bxp", "_cvc")
 linkedNames.get("f").set("_bxw", "_mxy")
 linkedNames.get("f").set("_bxr", "_gbe") // 90% sure
-linkedNames.get("f").set("_bxs", "_fcc") // _fcc/_mxz
+linkedNames.get("f").set("_bxs", "_fcc")
 linkedNames.get("f").set("_gpw", "_enk")
-linkedNames.get("f").set("_ero", "_hsu") // ??
+linkedNames.get("f").set("_ero", "_dsd")
 linkedNames.get("f").set("_gpv", "_eis")
 linkedNames.get("f").set("_gpy", "_enm")
 linkedNames.get("f").set("_mme", "_hae")
 linkedNames.get("f").set("_non", "_idy")
 linkedNames.get("f").set("_noq", "_ieb")
 linkedNames.get("f").set("_hnj", "_ffd")
-linkedNames.get("f").set("_rik", "_fcc")
+linkedNames.get("f").set("_rik", "_xdu")
 linkedNames.get("f").set("_ril", "_xdw")
 
 // rename to unique names, respecting linkedWorkerNames

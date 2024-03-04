@@ -29740,7 +29740,8 @@ var eb = function () {
     var b = function () {
         var y = navigator.getGamepads();
         var x = y[0];
-        if (x !== undefined) {
+        // Note: "&& x !== null" is an addition.
+        if (x !== undefined && x !== null) {
             for (var u = 0; u < x.buttons.length; u++) {
                 var v = x.buttons[u].value;
                 if (u === m._xap) {

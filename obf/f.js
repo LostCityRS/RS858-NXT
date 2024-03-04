@@ -20715,6 +20715,10 @@ var diq = function(m) {
                                 ae._nof = ac._lpl()
                             }
                             ae._nns = ac._ozr() - 1;
+                            // Note: the below check is an addition with its content.
+                            if (ae._noa) {
+                                ac._ozr()
+                            }
                             if (ae._nns !== -1) {
                                 var Z = ac._lpi();
                                 ae._noh = dil.getByID(Z >> 2);

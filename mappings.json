@@ -1030,6 +1030,7 @@
   "bootstrap.bru": "NPCTypeList",
   "bootstrap.bsh": "FloorUnderlayType",
   "bootstrap.bsl": "SeqGroupType",
+  "bootstrap.bso": "WorldScale",
   "bootstrap.btp": "MapElementType",
   "bootstrap.bts": "SubInterfaceActivePlayer",
   "bootstrap.btu": "SoundShape",

@@ -26,7 +26,7 @@ function generate(obfScriptName, obfClassName, obf, named, declarationCounts) {
                     result[intToObf.get(obf.name)] = named.name
                 } else if (obf.name.startsWith("Class") && !named.name.startsWith("Class")) {
                     result[intToObf.get(obf.name)] = named.name
-                } else if (obf.name.length <= 2 && named.name.length > 2) {
+                } else if (obf.name.length <= 2 && named.name !== obf.name) {
                     result[`${obfClassName}.${obf.name}.${declarationCounts.get(obf.name) ?? 0}`] = named.name
                 }
             }

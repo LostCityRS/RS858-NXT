@@ -3195,7 +3195,7 @@
   "bootstrap.ra": "BussType",
   "bootstrap.rc": "HitmarkTypeList",
   "bootstrap.rd.d.1": "init",
-  "bootstrap.th": "Inventories",
+  "bootstrap.th": "InventoryManager",
   "bootstrap.tu": "ClanChannelDelta",
   "bootstrap.tw": "MiniMenuDefaults",
   "bootstrap.ty": "ClanSettingsDelta",

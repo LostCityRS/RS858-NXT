@@ -266,11 +266,7 @@ for (let scriptName of ["bootstrap", "d", "f", "g", "h"]) { // prioritize using 
             body.push({
                 type: "ImportDeclaration",
                 source: {type: "Literal", value: `${name}.js`},
-                specifiers: [{
-                    type: "ImportSpecifier",
-                    imported: {type: "Identifier", name: name},
-                    local: {type: "Identifier", name: name}
-                }]
+                specifiers: []
             })
 
             if (!scripts.has(name)) {
@@ -292,7 +288,6 @@ for (let scriptName of ["bootstrap", "d", "f", "g", "h"]) { // prioritize using 
 
 // add imports
 for (let scriptName of scripts.keys()) {
-    if (["d", "f", "g", "h", "bootstrap"].includes(scriptName)) continue
     let script = scripts.get(scriptName)
     let usedClasses = new Set()
 
@@ -307,6 +302,22 @@ for (let scriptName of scripts.keys()) {
     }
 
     let body = []
+
+    if (script.body[0].type === "ExpressionStatement" && script.body[0].expression.type === "Literal" && script.body[0].expression.value === "use strict") {
+        body.push(script.body.shift())
+    } else {
+        body.push({
+            type: "ExpressionStatement",
+            expression: {
+                type: "Literal",
+                value: "use strict"
+            }
+        })
+    }
+
+    while (script.body[0].type === "ImportDeclaration") {
+        body.push(script.body.shift())
+    }
 
     for (let usedClass of usedClasses) {
         body.push({

@@ -68,16 +68,31 @@ for (let scriptName of fs.readdirSync("deob")) {
 }
 
 let namedScripts = new Map()
+let fileMapping = new Map()
 
-for (let scriptName of fs.readdirSync("src")) {
+for (let scriptName of fs.readdirSync("src", { recursive: true })) {
     if (scriptName.endsWith(".js")) {
+        scriptName = scriptName.replace("\\", "/")
         scriptName = scriptName.substring(0, scriptName.length - 3)
-        namedScripts.set(scriptName, acorn.parse(fs.readFileSync(`src/${scriptName}.js`, {encoding: 'utf8', flag: 'r'}), {ecmaVersion: "latest", sourceType: "module"}))
+        let content = fs.readFileSync(`src/${scriptName}.js`, {encoding: 'utf8', flag: 'r'});
+        let obfId = content.match(/\/\/ (\d+)/)
+        let originalName = obfId != null ? `Class${obfId[1]}` : scriptName
+        fileMapping.set(originalName, scriptName)
+        namedScripts.set(originalName, acorn.parse(content, {ecmaVersion: "latest", sourceType: "module"}))
     }
 }
 
 for (let scriptName of obfScripts.keys()) {
     generate(intToObfScript.get(scriptName), intToObf.get(scriptName), obfScripts.get(scriptName), namedScripts.get(scriptName), new Map())
+}
+
+for (let scriptName of obfScripts.keys()) {
+    let obfClassName = intToObf.get(scriptName)
+    let namedClassName = fileMapping.get(scriptName)
+
+    if (namedClassName && namedClassName.includes("/")) {
+        result[obfClassName] = namedClassName
+    }
 }
 
 fs.writeFileSync("mappings.json", JSON.stringify(result, Object.keys(result).sort(), 2), {encoding: "utf8", flag: "w"});

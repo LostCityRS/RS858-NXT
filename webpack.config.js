@@ -4,7 +4,7 @@ module.exports = [
     {
         name: "worker-d",
         target: "webworker",
-        entry: './src/d.js',
+        entry: 'd.js',
         resolve: {
             extensions: ['.js'],
             modules: [path.resolve(__dirname, 'src')],
@@ -20,7 +20,7 @@ module.exports = [
     {
         name: "worker-f",
         target: "webworker",
-        entry: './src/f.js',
+        entry: 'f.js',
         resolve: {
             extensions: ['.js'],
             modules: [path.resolve(__dirname, 'src')],
@@ -37,7 +37,7 @@ module.exports = [
     {
         name: "worker-g",
         target: "webworker",
-        entry: './src/g.js',
+        entry: 'g.js',
         resolve: {
             extensions: ['.js'],
             modules: [path.resolve(__dirname, 'src')],
@@ -54,7 +54,7 @@ module.exports = [
     {
         name: "worker-h",
         target: "webworker",
-        entry: './src/h.js',
+        entry: 'h.js',
         resolve: {
             extensions: ['.js'],
             modules: [path.resolve(__dirname, 'src')],
@@ -70,7 +70,7 @@ module.exports = [
     },
     {
         dependencies: ["worker-d", "worker-f", "worker-g", "worker-h"],
-        entry: './src/Bootstrap.js',
+        entry: 'Bootstrap.js',
         resolve: {
             extensions: ['.js'],
             modules: [path.resolve(__dirname, 'src')],

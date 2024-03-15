@@ -7,7 +7,7 @@ module.exports = [
         entry: './src/d.js',
         resolve: {
             extensions: ['.js'],
-            preferRelative: true,
+            modules: [path.resolve(__dirname, 'src')],
         },
         optimization: {
             minimize: false,
@@ -15,7 +15,6 @@ module.exports = [
         output: {
             filename: 'd.js',
             path: path.resolve(__dirname, 'dist'),
-            // publicPath: "/dist/"
         },
     },
     {
@@ -24,7 +23,7 @@ module.exports = [
         entry: './src/f.js',
         resolve: {
             extensions: ['.js'],
-            preferRelative: true,
+            modules: [path.resolve(__dirname, 'src')],
         },
         optimization: {
             minimize: false,
@@ -41,7 +40,7 @@ module.exports = [
         entry: './src/g.js',
         resolve: {
             extensions: ['.js'],
-            preferRelative: true,
+            modules: [path.resolve(__dirname, 'src')],
         },
         optimization: {
             minimize: false,
@@ -58,7 +57,7 @@ module.exports = [
         entry: './src/h.js',
         resolve: {
             extensions: ['.js'],
-            preferRelative: true,
+            modules: [path.resolve(__dirname, 'src')],
         },
         optimization: {
             minimize: false,
@@ -74,7 +73,7 @@ module.exports = [
         entry: './src/Bootstrap.js',
         resolve: {
             extensions: ['.js'],
-            preferRelative: true,
+            modules: [path.resolve(__dirname, 'src')],
         },
         output: {
             filename: 'Bootstrap.js',

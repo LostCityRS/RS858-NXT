@@ -3,6 +3,7 @@ let escodegen = require("escodegen");
 let estraverse = require("estraverse");
 let fs = require('fs');
 let lodash = require('lodash');
+let path = require('path');
 
 let scripts = new Map()
 
@@ -265,11 +266,7 @@ for (let scriptName of ["bootstrap", "d", "f", "g", "h"]) { // prioritize using 
             body.push({
                 type: "ImportDeclaration",
                 source: {type: "Literal", value: `${name}.js`},
-                specifiers: [{
-                    type: "ImportSpecifier",
-                    imported: {type: "Identifier", name: name},
-                    local: {type: "Identifier", name: name}
-                }]
+                specifiers: []
             })
 
             if (!scripts.has(name)) {
@@ -291,7 +288,6 @@ for (let scriptName of ["bootstrap", "d", "f", "g", "h"]) { // prioritize using 
 
 // add imports
 for (let scriptName of scripts.keys()) {
-    if (["d", "f", "g", "h", "bootstrap"].includes(scriptName)) continue
     let script = scripts.get(scriptName)
     let usedClasses = new Set()
 
@@ -306,6 +302,22 @@ for (let scriptName of scripts.keys()) {
     }
 
     let body = []
+
+    if (script.body[0].type === "ExpressionStatement" && script.body[0].expression.type === "Literal" && script.body[0].expression.value === "use strict") {
+        body.push(script.body.shift())
+    } else {
+        body.push({
+            type: "ExpressionStatement",
+            expression: {
+                type: "Literal",
+                value: "use strict"
+            }
+        })
+    }
+
+    while (script.body[0].type === "ImportDeclaration") {
+        body.push(script.body.shift())
+    }
 
     for (let usedClass of usedClasses) {
         body.push({
@@ -421,12 +433,29 @@ for (let scriptName of scripts.keys()) {
                     rename = names[intToObf.get(node.name)]
                 } else if (node.name.startsWith("Class")) {
                     rename = names[intToObf.get(node.name)]
+
+                    if (rename && rename.includes("/")) {
+                        rename = rename.substring(rename.lastIndexOf("/") + 1)
+                    }
                 } else if (node.name.length <= 2) {
                     rename = names[`${intToObf.get(scriptName)}.${node.name}.${declarationCounts.get(node.name) ?? 0}`]
                 }
 
                 if (rename !== null && rename !== undefined) {
                     node.name = rename
+                }
+            }
+
+            if (node.type === "ImportDeclaration") {
+                let name = node.source.value.split(".")[0]
+                let rename = null
+
+                if (name.startsWith("Class")) {
+                    rename = names[intToObf.get(name)]
+                }
+
+                if (rename !== null && rename !== undefined) {
+                    node.source.value = `${rename}.js`
                 }
             }
         }
@@ -438,5 +467,8 @@ fs.rmSync("src", {recursive: true, force: true});
 fs.mkdirSync("src")
 
 for (let scriptName of scripts.keys()) {
-    fs.writeFileSync(`src/${scriptName}.js`, escodegen.generate(scripts.get(scriptName)), {encoding: "utf8", flag: "w"});
+    let renamedScript = names[intToObf.get(scriptName)] ?? scriptName
+    let prefix = scriptName.startsWith("Class") ? (`// ${scriptName.substring(5)}\n`) : "";
+    fs.mkdirSync(path.dirname(`src/${renamedScript}.js`), {recursive: true})
+    fs.writeFileSync(`src/${renamedScript}.js`, prefix + escodegen.generate(scripts.get(scriptName)), {encoding: "utf8", flag: "w"});
 }

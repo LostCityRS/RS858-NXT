@@ -70,13 +70,13 @@ module.exports = [
     },
     {
         dependencies: ["worker-d", "worker-f", "worker-g", "worker-h"],
-        entry: 'Bootstrap.js',
+        entry: 'bootstrap.js',
         resolve: {
             extensions: ['.js'],
             modules: [path.resolve(__dirname, 'src')],
         },
         output: {
-            filename: 'Bootstrap.js',
+            filename: 'bootstrap.js',
             path: path.resolve(__dirname, 'dist'),
             // publicPath: "/dist/"
         },

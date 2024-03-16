@@ -72,7 +72,7 @@ let fileMapping = new Map()
 
 for (let scriptName of fs.readdirSync("src", { recursive: true })) {
     if (scriptName.endsWith(".js")) {
-        scriptName = scriptName.replace("\\", "/")
+        scriptName = scriptName.replaceAll("\\", "/")
         scriptName = scriptName.substring(0, scriptName.length - 3)
         let content = fs.readFileSync(`src/${scriptName}.js`, {encoding: 'utf8', flag: 'r'});
         let obfId = content.match(/\/\/ (\d+)/)

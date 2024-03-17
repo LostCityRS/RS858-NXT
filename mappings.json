@@ -3884,7 +3884,7 @@
   "bootstrap.xj": "HillChange",
   "bootstrap.xq": "game/runetek5/compression/huffman/Huffman",
   "bootstrap.xt": "SoundSystem",
-  "bootstrap.yb": "GaussianBlurFS",
+  "bootstrap.yb": "graphics/postprocess/shaders/GaussianBlurFS",
   "bootstrap.yi": "rs2client/clientscript/ops/Camera",
   "bootstrap.yj": "graphics/postprocess/shaders/Class39",
   "bootstrap.yl": "graphics/runetek5/model/Model",

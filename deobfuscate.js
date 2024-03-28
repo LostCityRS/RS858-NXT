@@ -407,12 +407,13 @@ for (let [script, names] of Object.entries(obfToInt)) {
 }
 
 let names = JSON.parse(fs.readFileSync(`mappings.json`, {encoding: 'utf8', flag: 'r'}))
+let shaderNames = JSON.parse(fs.readFileSync(`shader_mappings.json`, {encoding: 'utf8', flag: 'r'}))
 
 for (let scriptName of scripts.keys()) {
     let declarationCounts = new Map()
 
-    estraverse.traverse(scripts.get(scriptName), {
-        enter: node => {
+    scripts[scriptName] = estraverse.replace(scripts.get(scriptName), {
+        enter: (node, parent) => {
             if (node.type === "VariableDeclaration") {
                 for (let declaration of node.declarations) {
                     let name = declaration.id.name
@@ -425,7 +426,6 @@ for (let scriptName of scripts.keys()) {
                     declarationCounts.set(param.name, (declarationCounts.get(param.name) ?? 0) + 1)
                 }
             }
-
             if (node.type === "Identifier") {
                 let rename = null
 
@@ -443,6 +443,24 @@ for (let scriptName of scripts.keys()) {
 
                 if (rename !== null && rename !== undefined) {
                     node.name = rename
+                }
+            }
+            if (node.type === "Literal") {
+                let literal = node.value
+                if (literal == null || typeof literal !== "string") {
+                    return
+                }
+                if (!/\b_[a-zA-Z]{2,3}\b/.test(literal)) {
+                    return
+                }
+                for (let oldName in shaderNames) {
+                    let newName = shaderNames[oldName]
+                    literal = literal.replace(new RegExp(oldName, "g"), newName)
+                }
+                node.value = literal;
+                if (literal.split("\n").length > 2) {
+                    let multiLineString = acorn.parse(`\`${literal}\``);
+                    return multiLineString.body[0].expression;
                 }
             }
 

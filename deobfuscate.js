@@ -450,12 +450,12 @@ for (let scriptName of scripts.keys()) {
                 if (literal == null || typeof literal !== "string") {
                     return
                 }
-                if (!/\b_[a-zA-Z]{2,3}\b/.test(literal)) {
+                if (!/\b_[a-zA-Z]{1,3}\b/.test(literal)) {
                     return
                 }
                 for (let oldName in shaderNames) {
                     let newName = shaderNames[oldName]
-                    literal = literal.replace(new RegExp(oldName, "g"), newName)
+                    literal = literal.replaceAll(new RegExp('\\b' + oldName + '\\b', "g"), newName)
                 }
                 node.value = literal;
                 if (literal.split("\n").length > 2) {

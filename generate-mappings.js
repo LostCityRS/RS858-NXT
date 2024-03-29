@@ -78,7 +78,13 @@ for (let scriptName of fs.readdirSync("src", { recursive: true })) {
         let obfId = content.match(/\/\/ (\d+)/)
         let originalName = obfId != null ? `Class${obfId[1]}` : scriptName
         fileMapping.set(originalName, scriptName)
-        namedScripts.set(originalName, acorn.parse(content, {ecmaVersion: "latest", sourceType: "module"}))
+
+        try {
+            namedScripts.set(originalName, acorn.parse(content, {ecmaVersion: "latest", sourceType: "module"}))
+        } catch (e) {
+            console.error(`error while parsing ${scriptName}`)
+            throw e
+        }
     }
 }
 

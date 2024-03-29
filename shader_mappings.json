@@ -66,5 +66,7 @@
   "_ir": "vWorldPosition",
   "_py": "worldDistance",
   "_sq": "worldDirection",
-  "_c": "uProjectionMatrix"
+  "_c": "uProjectionMatrix",
+  "_bt":  "uPointLightPositions",
+  "_bu": "uPointLightColours"
 }

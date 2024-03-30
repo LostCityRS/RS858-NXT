@@ -100,7 +100,7 @@
   "_s": "uSpecularIntensity",
   "_gw": "uSpecularShininess",
   "_gx": "uSunColour",
-  "_kz": "vWaterPosition",
+  "_kz": "vVertexPosition",
   "_bs": "uPointLightCount",
   "_bbb": "UnpackRGBAToFloat",
   "_bbd": "ColourUnpack",
@@ -109,6 +109,11 @@
   "_jt": "n",
   "_jo": "ShadowMapTap",
   "_jq": "shadowMap",
-  "_jp": "texCoords",
-  "_kl": "ShadowMapFilter2x2Box"
+  "_jp": "shadowTexCoords",
+  "_kl": "ShadowMapFilter2x2Box",
+  "_kg": "shadowFactor",
+  "_ks": "pixelViewSpace",
+  "_kd": "shadowTexelSize",
+  "_km": "shadowTotal",
+  "_bo": "uSunlightViewMatrix"
 }

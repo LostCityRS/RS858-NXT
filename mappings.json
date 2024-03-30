@@ -781,6 +781,7 @@
   "bootstrap._grb": "setOnCameraUpdateTransmit",
   "bootstrap._gse": "MAX_TEXTURE_UNITS",
   "bootstrap._gsi": "textureUnit",
+  "bootstrap._gsz": "SHADOW_MAP",
   "bootstrap._gte": "COLOUR_REMAP_1",
   "bootstrap._gtf": "COLOUR_REMAP_2",
   "bootstrap._gth": "COLOUR_REMAP_3",
@@ -5208,7 +5209,6 @@
   "f.dhj": "graphics/postprocess/shaders/Class30",
   "f.dpu": "graphics/postprocess/shaders/Class15",
   "f.dua": "graphics/postprocess/shaders/Class31",
-  "f.dxz": "graphics/postprocess/shaders/Class14",
   "f.dzp": "graphics/postprocess/shaders/Class21",
   "f.egt": "graphics/postprocess/shaders/Class26"
 }

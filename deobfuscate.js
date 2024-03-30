@@ -7,6 +7,10 @@ let path = require('path');
 
 let scripts = new Map()
 
+const SHADER_VAR_REGEX = /\b_[a-zA-Z]{1,3}\b/g
+// _bootstrap=10
+const SHADER_REMAPPED_VAR_REGEX = /\b_\w+_[a-zA-Z]{1,3}\b/g
+
 for (let scriptName of ["bootstrap", "d", "f", "g", "h"]) {
     scripts.set(scriptName, acorn.parse(fs.readFileSync(`obf/${scriptName}.js`, {encoding: 'utf8', flag: 'r'}), {ecmaVersion: "latest"}))
 }
@@ -37,7 +41,7 @@ function compare(a, b, classNamesA, classNamesB, matches) {
             return true // error
         }
 
-        if (a.type === "Literal" && /^_[a-z]{1,2}$/.test(a.value) && /^_[a-z]{1,2}$/.test(b.value)) {
+        if (a.type === "Literal" && SHADER_VAR_REGEX.test(a.value) && SHADER_VAR_REGEX.test(b.value)) {
             return true // shader
         }
 
@@ -255,6 +259,8 @@ for (let scriptName of ["d", "f", "g", "h", "bootstrap"]) {
     })
 }
 
+let originalFileLookup = new Map()
+
 // split into one file per class
 for (let scriptName of ["bootstrap", "d", "f", "g", "h"]) { // prioritize using classes from bootstrap
     let body = []
@@ -270,6 +276,7 @@ for (let scriptName of ["bootstrap", "d", "f", "g", "h"]) { // prioritize using 
             })
 
             if (!scripts.has(name)) {
+                originalFileLookup.set(name, scriptName)
                 scripts.set(name, {
                     "type": "Program",
                     body: [{
@@ -284,6 +291,25 @@ for (let scriptName of ["bootstrap", "d", "f", "g", "h"]) { // prioritize using 
     }
 
     scripts.get(scriptName).body = body
+}
+
+// prefix shader variables
+for (let scriptName of scripts.keys()) {
+    estraverse.traverse(scripts.get(scriptName), {
+        enter: (node) => {
+            if (node.type === "Literal") {
+                let literal = node.value
+                if (literal == null || typeof literal !== "string") {
+                    return
+                }
+                if (!SHADER_VAR_REGEX.test(literal)) {
+                    return
+                }
+                let originalName = originalFileLookup.get(scriptName)
+                node.value = literal.replaceAll(SHADER_VAR_REGEX, (name) => `_${originalName}_${name.substring(1)}`);
+            }
+        }
+    })
 }
 
 // add imports
@@ -450,13 +476,10 @@ for (let scriptName of scripts.keys()) {
                 if (literal == null || typeof literal !== "string") {
                     return
                 }
-                if (!/\b_[a-zA-Z]{1,3}\b/.test(literal)) {
+                if (!SHADER_REMAPPED_VAR_REGEX.test(literal)) {
                     return
                 }
-                for (let oldName in shaderNames) {
-                    let newName = shaderNames[oldName]
-                    literal = literal.replaceAll(new RegExp('\\b' + oldName + '\\b', "g"), newName)
-                }
+                literal = literal.replaceAll(SHADER_REMAPPED_VAR_REGEX, (oldName) => shaderNames[oldName] ?? oldName);
                 node.value = literal;
                 if (literal.split("\n").length > 2) {
                     let multiLineString = acorn.parse(`\`${literal}\``);

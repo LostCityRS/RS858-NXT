@@ -3139,7 +3139,7 @@
   "bootstrap._wux": "isWallDecor",
   "bootstrap._wuy": "isRoof",
   "bootstrap._wuz": "isRoofEdge",
-  "bootstrap._wvb": "isWallDecor",
+  "bootstrap._wvb": "isWallDecorOffset",
   "bootstrap._wve": "isCentrepiece",
   "bootstrap._wvr": "toRotationMat",
   "bootstrap._wvs": "toInverseMat3",

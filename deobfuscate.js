@@ -443,6 +443,21 @@ for (let [script, names] of Object.entries(obfToInt)) {
 }
 
 let names = JSON.parse(fs.readFileSync(`mappings.json`, {encoding: 'utf8', flag: 'r'}))
+if (true) {
+    let nonLocalNames = new Map()
+    for (let [key, value] of Object.entries(names)) {
+        if (value.match(/.*\.\d+$/)) {
+            continue
+        }
+        nonLocalNames.set(key, value)
+    }
+    for (let [key, value] of Object.entries(nonLocalNames)) {
+        if (Object.values(nonLocalNames).filter(v => v === value).length > 1) {
+            throw new Error(`Duplicate value ${value} for key: ${key}`)
+        }
+    }
+}
+
 let shaderNames = JSON.parse(fs.readFileSync(`shader_mappings.json`, {encoding: 'utf8', flag: 'r'}))
 
 for (let scriptName of scripts.keys()) {

@@ -5205,10 +5205,5 @@
   "bootstrap.zl.E.1": "formatObjCount",
   "bootstrap.zl.z.1": "createColourTag",
   "bootstrap.zs": "graphics/runetek5/MaterialRawLoader",
-  "bootstrap.zx": "Bz2Decoder",
-  "f.dhj": "graphics/postprocess/shaders/Class30",
-  "f.dpu": "graphics/postprocess/shaders/Class15",
-  "f.dua": "graphics/postprocess/shaders/Class31",
-  "f.dzp": "graphics/postprocess/shaders/Class21",
-  "f.egt": "graphics/postprocess/shaders/Class26"
+  "bootstrap.zx": "Bz2Decoder"
 }

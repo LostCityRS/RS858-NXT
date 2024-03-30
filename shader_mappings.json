@@ -104,5 +104,11 @@
   "_bs": "uPointLightCount",
   "_bbb": "UnpackRGBAToFloat",
   "_bbd": "ColourUnpack",
-  "_bbf": "unpackedColour"
+  "_bbf": "unpackedColour",
+  "_js": "nrand",
+  "_jt": "n",
+  "_jo": "ShadowMapTap",
+  "_jq": "shadowMap",
+  "_jp": "texCoords",
+  "_kl": "ShadowMapFilter2x2Box"
 }

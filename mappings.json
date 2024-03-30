@@ -3249,7 +3249,7 @@
   "bootstrap._xqb": "hardshadow",
   "bootstrap._xqf": "anim",
   "bootstrap._xqg": "anim_weight",
-  "bootstrap._xqh": "randomanimframe",
+  "bootstrap._xqh": "randseq",
   "bootstrap._xqk": "wallwidth",
   "bootstrap._xqm": "breakroutefinding",
   "bootstrap._xqn": "raiseobject",

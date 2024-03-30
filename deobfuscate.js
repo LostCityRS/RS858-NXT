@@ -8,8 +8,6 @@ let path = require('path');
 let scripts = new Map()
 
 const SHADER_VAR_REGEX = /\b_[a-zA-Z]{1,3}\b/g
-// _bootstrap=10
-const SHADER_REMAPPED_VAR_REGEX = /\b_\w+_[a-zA-Z]{1,3}\b/g
 
 for (let scriptName of ["bootstrap", "d", "f", "g", "h"]) {
     scripts.set(scriptName, acorn.parse(fs.readFileSync(`obf/${scriptName}.js`, {encoding: 'utf8', flag: 'r'}), {ecmaVersion: "latest"}))
@@ -17,6 +15,17 @@ for (let scriptName of ["bootstrap", "d", "f", "g", "h"]) {
 
 function isMemberName(name) {
     return /^_[a-z]{2,3}$/.test(name)
+}
+
+function disambiguateShaderVar(value) {
+    let counter = 0
+    let mapped = new Map()
+    return value.replace(SHADER_VAR_REGEX, (name) => {
+        if (!mapped.has(name)) {
+            mapped.set(name, "var_" + counter++)
+        }
+        return `_${mapped.get(name)}`
+    });
 }
 
 function compare(a, b, classNamesA, classNamesB, matches) {
@@ -41,8 +50,8 @@ function compare(a, b, classNamesA, classNamesB, matches) {
             return true // error
         }
 
-        if (a.type === "Literal" && SHADER_VAR_REGEX.test(a.value) && SHADER_VAR_REGEX.test(b.value)) {
-            return true // shader
+        if (a.type === "Literal" && typeof a.value == "string" && typeof b.value == "string") {
+            return disambiguateShaderVar(a.value) === disambiguateShaderVar(b.value)
         }
 
         for (let key in a) {
@@ -293,8 +302,8 @@ for (let scriptName of ["bootstrap", "d", "f", "g", "h"]) { // prioritize using 
     scripts.get(scriptName).body = body
 }
 
-// prefix shader variables
-for (let scriptName of scripts.keys()) {
+// ensure all shader variables live in bootstrap.js
+if (false) for (let scriptName of scripts.keys()) {
     estraverse.traverse(scripts.get(scriptName), {
         enter: (node) => {
             if (node.type === "Literal") {
@@ -305,8 +314,9 @@ for (let scriptName of scripts.keys()) {
                 if (!SHADER_VAR_REGEX.test(literal)) {
                     return
                 }
-                let originalName = originalFileLookup.get(scriptName)
-                node.value = literal.replaceAll(SHADER_VAR_REGEX, (name) => `_${originalName}_${name.substring(1)}`);
+                if (originalFileLookup.get(scriptName) !== "bootstrap") {
+                    throw new Error("Shader variable in non-bootstrap file")
+                }
             }
         }
     })
@@ -476,10 +486,10 @@ for (let scriptName of scripts.keys()) {
                 if (literal == null || typeof literal !== "string") {
                     return
                 }
-                if (!SHADER_REMAPPED_VAR_REGEX.test(literal)) {
+                if (!SHADER_VAR_REGEX.test(literal)) {
                     return
                 }
-                literal = literal.replaceAll(SHADER_REMAPPED_VAR_REGEX, (oldName) => shaderNames[oldName] ?? oldName);
+                literal = literal.replaceAll(SHADER_VAR_REGEX, (oldName) => shaderNames[oldName] ?? oldName);
                 node.value = literal;
                 if (literal.split("\n").length > 2) {
                     let multiLineString = acorn.parse(`\`${literal}\``);

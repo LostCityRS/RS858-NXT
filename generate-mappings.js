@@ -101,4 +101,36 @@ for (let scriptName of obfScripts.keys()) {
     }
 }
 
+let reverse = new Map()
+
+for (let key in result) {
+    if (key.startsWith("bootstrap._")) {
+        let name = result[key]
+
+        if (name.includes("$")) {
+            name = name.substring(0, name.lastIndexOf("$"))
+            result[key] = name
+        }
+
+        if (!reverse.has(name)) {
+            reverse.set(name, new Set())
+        }
+
+        reverse.get(name).add(key)
+    }
+}
+
+for (let name of reverse.keys()) {
+    let set = reverse.get(name)
+
+    if (set.size > 1) {
+        console.warn(`duplicate ${name}: ${[...set].join(", ")}`)
+        let i = 0
+
+        for (let x of set) {
+            result[x] = name + "$" + i++
+        }
+    }
+}
+
 fs.writeFileSync("mappings.json", JSON.stringify(result, Object.keys(result).sort(), 2), {encoding: "utf8", flag: "w"});

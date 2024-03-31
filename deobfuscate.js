@@ -224,7 +224,10 @@ linkedNames.get("f").set("_nga", "_hwb");
 linkedNames.get("f").set("_hnp", "_fqt");
 linkedNames.get("f").set("_nfw", "_hvv");
 linkedNames.get("f").set("_ot", "_nk");
-
+linkedNames.get("f").set("_mqg", "_heu");
+linkedNames.get("f").set("_omv", "_vgi");
+linkedNames.get("f").set("_omw", "_vgj");
+linkedNames.get("f").set("_mqj", "_hex");
 
 // rename to unique names, respecting linkedWorkerNames
 let mappings = new Map()

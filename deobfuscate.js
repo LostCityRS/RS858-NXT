@@ -477,7 +477,7 @@ for (let scriptName of scripts.keys()) {
                         rename = rename.substring(rename.lastIndexOf("/") + 1)
                     }
                 } else if (node.name.length <= 2) {
-                    rename = names[`${intToObf.get(scriptName)}.${node.name}.${declarationCounts.get(node.name) ?? 0}`]
+                    rename = names[`${intToObf.get(scriptName) ?? scriptName}.${node.name}.${declarationCounts.get(node.name) ?? 0}`]
                 }
 
                 if (rename !== null && rename !== undefined) {

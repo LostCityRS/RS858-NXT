@@ -89,7 +89,7 @@ for (let scriptName of fs.readdirSync("src", { recursive: true })) {
 }
 
 for (let scriptName of obfScripts.keys()) {
-    generate(intToObfScript.get(scriptName), intToObf.get(scriptName), obfScripts.get(scriptName), namedScripts.get(scriptName), new Map())
+    generate(intToObfScript.get(scriptName) ?? scriptName, intToObf.get(scriptName) ?? scriptName, obfScripts.get(scriptName), namedScripts.get(scriptName), new Map())
 }
 
 for (let scriptName of obfScripts.keys()) {

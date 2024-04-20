@@ -115,5 +115,19 @@
   "_ks": "pixelViewSpace",
   "_kd": "shadowTexelSize",
   "_km": "shadowTotal",
-  "_bo": "uSunlightViewMatrix"
+  "_bo": "uSunlightViewMatrix",
+  "_sv": "A",
+  "_sx": "B",
+  "_sz": "C",
+  "_tb": "D",
+  "_td": "E",
+  "_tf": "F",
+  "_ti": "x",
+  "_tj": "y",
+  "_fh": "uTime",
+  "_oh": "diffuseColour",
+  "_tl": "wobblyUv",
+  "_de": "uWobbleTexture",
+  "_jf": "uTextureUv",
+  "_tg": "wobbleFactor"
 }

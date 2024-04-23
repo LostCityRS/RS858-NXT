@@ -129,5 +129,6 @@
   "_tl": "wobblyUv",
   "_de": "uWobbleTexture",
   "_jf": "uTextureUv",
-  "_tg": "wobbleFactor"
+  "_tg": "wobbleFactor",
+  "_hx": "_hx"
 }

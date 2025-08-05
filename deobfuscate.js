@@ -477,7 +477,11 @@ for (let scriptName of scripts.keys()) {
                         rename = rename.substring(rename.lastIndexOf("/") + 1)
                     }
                 } else if (node.name.length <= 2) {
-                    rename = names[`${intToObf.get(scriptName) ?? scriptName}.${node.name}.${declarationCounts.get(node.name) ?? 0}`]
+                    if (parent && parent.type === "MemberExpression" && parent.property === node && !parent.computed) {
+                        rename = names[`${intToObf.get(scriptName) ?? scriptName}.${node.name}}`]
+                    } else {
+                        rename = names[`${intToObf.get(scriptName) ?? scriptName}.${node.name}.${declarationCounts.get(node.name) ?? 0}`]
+                    }
                 }
 
                 if (rename !== null && rename !== undefined) {
